@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VL.ImGui.Skia": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\vvvv\\vvvv_gamma_2021.4.8\\vvvv.exe"
+    }
+  }
+}

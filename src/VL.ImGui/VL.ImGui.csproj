@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Widgets\SliderFloat.Observable.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Widgets\SliderFloat.Observable.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ImGui.NET" Version="1.87.3" />
+    <PackageReference Include="VL.Core" Version="2021.4.8" />
+  </ItemGroup>
+
+</Project>
