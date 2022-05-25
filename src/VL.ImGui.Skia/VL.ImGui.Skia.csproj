@@ -8,6 +8,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<OutputPath>..\..\lib</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,5 +18,13 @@
   <ItemGroup>
     <ProjectReference Include="..\VL.ImGui\VL.ImGui.csproj" />
   </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+	  <Exec Command="mkdir &quot;$(SolutionDir)..\lib-native\x64&quot;" />
+  </Target>
+	
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="copy &quot;$(TargetDir)..\net472\cimgui.dll&quot; &quot;$(SolutionDir)..\lib-native\x64&quot;" />
+  </Target>
 
 </Project>
