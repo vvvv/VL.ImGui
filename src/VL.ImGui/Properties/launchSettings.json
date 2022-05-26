@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VL.ImGui": {
+      "commandName": "Executable",
+      "executablePath": "$(VLInstallPath)\\vvvv.exe"
+    }
+  }
+}

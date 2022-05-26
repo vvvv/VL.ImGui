@@ -7,15 +7,10 @@ using SkiaSharp;
 using System.Runtime.InteropServices;
 using Stride.Core.Mathematics;
 
-#if NET6_0_OR_GREATER
 using MouseButtons = VL.Lib.IO.MouseButtons;
 using Keys = VL.Lib.IO.Keys;
-#else
-using MouseButtons = System.Windows.Forms.MouseButtons;
-using Keys = System.Windows.Forms.Keys;
-#endif
 
-namespace VL.ImGui.Skia
+namespace VL.ImGui
 {
     using ImGui = ImGuiNET.ImGui;
     using Vector2 = System.Numerics.Vector2;
@@ -428,9 +423,7 @@ namespace VL.ImGui.Skia
             }
         }
 
-#if NET6_0_OR_GREATER
         public RectangleF? Bounds => default;
-#endif
 
         public void Dispose()
         {

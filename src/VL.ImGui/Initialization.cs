@@ -11,7 +11,6 @@ using VL.ImGui.Widgets;
 using VL.ImGui.Windows;
 
 [assembly: AssemblyInitializer(typeof(VL.ImGui.Initialization))]
-[assembly: InternalsVisibleTo("VL.ImGui.Skia")]
 
 namespace VL.ImGui
 {
@@ -35,6 +34,8 @@ namespace VL.ImGui
 
             yield return SliderFloat.GetNodeDescription(factory);
             yield return Inspector.GetNodeDescription(factory);
+
+            yield return SkiaWidget.GetNodeDescription(factory);
         }
     }
 
