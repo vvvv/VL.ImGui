@@ -1,12 +1,7 @@
 ﻿using Stride.Core.Mathematics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace VL.ImGui.Skia
+namespace VL.ImGui
 {
     using ImGui = ImGuiNET.ImGui;
 

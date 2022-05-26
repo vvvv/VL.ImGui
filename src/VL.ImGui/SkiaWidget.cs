@@ -4,7 +4,7 @@ using System;
 using VL.Core;
 using VL.Skia;
 
-namespace VL.ImGui.Skia
+namespace VL.ImGui
 {
     public sealed class SkiaWidget : Widget
     {

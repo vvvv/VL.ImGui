@@ -1,7 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <OutputPath>..\..\lib</OutputPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>    
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <VLVersion>2022.5.0-0095-gaf5968b65d</VLVersion>
+    <VLInstallPath>$(ProgramFiles)\vvvv\vvvv_gamma_$(VLVersion)</VLInstallPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,7 +23,8 @@
 
   <ItemGroup>
     <PackageReference Include="ImGui.NET" Version="1.87.3" />
-    <PackageReference Include="VL.Core" Version="2021.4.8" />
+    <PackageReference Include="VL.Skia" Version="2022.5.0-0095-gaf5968b65d" />
   </ItemGroup>
+  
 
 </Project>
