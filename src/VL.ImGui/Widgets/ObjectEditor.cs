@@ -3,15 +3,18 @@
 namespace VL.ImGui.Widgets
 {
     [GenerateNode]
-    internal partial class Inspector : Widget
+    internal partial class ObjectEditor : Widget
     {
+        object _value;
+
         public object Value
         {
             get => ObservableValue.Value;
             set
             {
-                if (!Equals(value, ObservableValue.Value))
+                if (!Equals(value, _value))
                 {
+                    _value = value;
                     ObservableValue.OnNext(value);
                 }
             }

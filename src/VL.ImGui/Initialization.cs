@@ -33,7 +33,7 @@ namespace VL.ImGui
             yield return Group.GetNodeDescription(factory);
 
             yield return SliderFloat.GetNodeDescription(factory);
-            yield return Inspector.GetNodeDescription(factory);
+            yield return ObjectEditor.GetNodeDescription(factory);
 
             yield return SkiaWidget.GetNodeDescription(factory);
         }
