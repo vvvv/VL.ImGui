@@ -9,8 +9,13 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    
     <VLVersion>2022.5.0-0095-gaf5968b65d</VLVersion>
     <VLInstallPath>$(ProgramFiles)\vvvv\vvvv_gamma_$(VLVersion)</VLInstallPath>
+
+    <DebugGenerator>true</DebugGenerator>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +30,20 @@
     <PackageReference Include="ImGui.NET" Version="1.87.3" />
     <PackageReference Include="VL.Skia" Version="2022.5.0-0095-gaf5968b65d" />
   </ItemGroup>
-  
 
+  <ItemGroup>
+    <ProjectReference Include="..\VL.ImGui.Generator\VL.ImGui.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(DebugGenerator)'  == 'true' ">
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Exclude the output of source generators from the compilation -->
+    <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+    <Content Include="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+  </ItemGroup>
+  
 </Project>

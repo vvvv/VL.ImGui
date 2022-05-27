@@ -6,7 +6,8 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    internal sealed class Group : Widget
+    [GenerateNode]
+    internal sealed partial class Group : Widget
     {
         public IEnumerable<Widget> Children { get; set; }
 
@@ -38,37 +39,6 @@ namespace VL.ImGui.Widgets
                     ImGuiNET.ImGui.EndGroup();
                 }
             }
-        }
-
-        internal static IVLNodeDescription GetNodeDescription(IVLNodeDescriptionFactory factory)
-        {
-            return factory.NewNodeDescription("Group", "ImGui", fragmented: true, _c =>
-            {
-                var _w = new Group();
-                var _inputs = new[]
-                {
-                    _c.Input("Input", _w.Input),
-                    _c.Input("Children", _w.Children)
-                };
-                var _outputs = new[]
-                {
-                    _c.Output<Widget>("Output"),
-                };
-                return _c.NewNode(_inputs, _outputs, c =>
-                {
-                    var s = new Group();
-                    var inputs = new IVLPin[]
-                    {
-                        c.Input(v => s.Input = v, s.Input),
-                        c.Input(v => s.Children = v, s.Children)
-                    };
-                    var outputs = new IVLPin[]
-                    {
-                        c.Output(() => s)
-                    };
-                    return c.Node(inputs, outputs);
-                });
-            });
         }
     }
 }

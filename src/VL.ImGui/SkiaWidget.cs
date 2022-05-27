@@ -4,9 +4,10 @@ using System;
 using VL.Core;
 using VL.Skia;
 
-namespace VL.ImGui
+namespace VL.ImGui.Widgets
 {
-    public sealed class SkiaWidget : Widget
+    [GenerateNode]
+    public sealed partial class SkiaWidget : Widget
     {
         private readonly InViewportUpstream _transformLayer = new InViewportUpstream();
 
@@ -28,35 +29,6 @@ namespace VL.ImGui
         {
             _transformLayer.Update(Layer, clipRect, Space, out _);
             _transformLayer.Render(caller);
-        }
-
-        internal static IVLNodeDescription GetNodeDescription(IVLNodeDescriptionFactory factory)
-        {
-            return factory.NewNodeDescription(nameof(SkiaWidget), "ImGui", fragmented: true, _c =>
-            {
-                var _w = new SkiaWidget();
-                var _inputs = new[]
-                {
-                    _c.Input("Layer", _w.Layer),
-                    _c.Input("Size", _w.Size),
-                    _c.Input("Space", _w.Space)
-                };
-                var _outputs = new[]
-                {
-                    _c.Pin("Output", typeof(Widget))
-                };
-                return _c.NewNode(_inputs, _outputs, c =>
-                {
-                    var s = new SkiaWidget();
-                    var inputs = new IVLPin[]
-                    {
-                        c.Input(v => s.Layer = v, s.Layer),
-                        c.Input(v => s.Size = v, s.Size),
-                        c.Input(v => s.Space = v, s.Space)
-                    };
-                    return c.Node(inputs, new[] { c.Output(() => s) });
-                });
-            });
         }
     }
 }

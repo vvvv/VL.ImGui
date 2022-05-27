@@ -8,7 +8,8 @@ namespace VL.ImGui.Windows
 {
     using ImGui = ImGuiNET.ImGui;
 
-    internal sealed class Window : Widget
+    [GenerateNode]
+    internal sealed partial class Window : Widget
     {
         public Widget Content { get; set; }
 
@@ -61,47 +62,6 @@ namespace VL.ImGui.Windows
         {
             Closing = false;
             IsVisible = false;
-        }
-
-        internal static IVLNodeDescription GetNodeDescription(IVLNodeDescriptionFactory factory)
-        {
-            return factory.NewNodeDescription(nameof(Window), "ImGui", fragmented: true, _c =>
-            {
-                var _w = new Window();
-                var _inputs = new[]
-                {
-                    _c.Input("Content", _w.Content),
-                    _c.Input("Name", _w.Name),
-                    _c.Input("Has Close Button", _w.HasCloseButton),
-                    _c.Input("Fullscreen", _w.Fullscreen),
-                    _c.Input("Window Flags", _w.WindowFlags),
-                };
-                var _outputs = new[]
-                {
-                    _c.Output<Widget>("Output"),
-                    _c.Output("Closing", _w.Closing),
-                    _c.Output("Is Visible", _w.IsVisible)
-                };
-                return _c.NewNode(_inputs, _outputs, c =>
-                {
-                    var s = new Window();
-                    var inputs = new IVLPin[]
-                    {
-                        c.Input(v => s.Content = v, s.Content),
-                        c.Input(v => s.Name = v, s.Name),
-                        c.Input(v => s.HasCloseButton = v, s.HasCloseButton),
-                        c.Input(v => s.Fullscreen = v, s.Fullscreen),
-                        c.Input(v => s.WindowFlags = v, s.WindowFlags)
-                    };
-                    var outputs = new IVLPin[]
-                    {
-                        c.Output(() => s),
-                        c.Output(() => s.Closing),
-                        c.Output(() => s.IsVisible)
-                    };
-                    return c.Node(inputs, outputs);
-                });
-            });
         }
     }
 }

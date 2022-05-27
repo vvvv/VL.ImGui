@@ -401,3 +401,4 @@ FodyWeavers.xsd
 # vvvv gamma
 
 /.vl/
+/src/VL.ImGui/Generated/
