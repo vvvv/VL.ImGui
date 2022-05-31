@@ -35,7 +35,7 @@ namespace VL.ImGui
             return new Frame(_context);
         }
 
-        public void Update(Widget widget)
+        public void Update(Widget? widget)
         {
             if (widget is null)
                 return;

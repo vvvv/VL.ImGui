@@ -11,7 +11,7 @@ namespace VL.ImGui.Windows
     [GenerateNode]
     internal sealed partial class Window : Widget
     {
-        public Widget Content { get; set; }
+        public Widget? Content { get; set; }
 
         public string Name { get; set; } = "Window";
 

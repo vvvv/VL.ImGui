@@ -41,12 +41,12 @@ namespace VL.ImGui
 
     internal static class NodeBuildingUtils
     {
-        public static IVLPinDescription Input<T>(this NodeBuilding.NodeDescriptionBuildContext c, string name, T defaultValue, string summary = null, string remarks = null)
+        public static IVLPinDescription Input<T>(this NodeBuilding.NodeDescriptionBuildContext c, string name, T defaultValue, string? summary = null, string? remarks = null)
         {
             return c.Pin(name, typeof(T), defaultValue, summary, remarks);
         }
 
-        public static IVLPinDescription Output<T>(this NodeBuilding.NodeDescriptionBuildContext c, string name, T witness = default, string summary = null, string remarks = null)
+        public static IVLPinDescription Output<T>(this NodeBuilding.NodeDescriptionBuildContext c, string name, T? witness = default, string? summary = null, string? remarks = null)
         {
             return c.Pin(name, typeof(T), summary, remarks);
         }

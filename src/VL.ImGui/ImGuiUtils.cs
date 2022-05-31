@@ -15,7 +15,7 @@ namespace VL.ImGui
 
     internal static class ImGuiUtils
     {
-        public static bool InputObject(string label, ref object value)
+        public static bool InputObject(string label, ref object? value)
         {
             bool isModified = false;
 
@@ -171,16 +171,19 @@ namespace VL.ImGui
             return isModified;
         }
 
-        static IDictionary SetItem(IDictionary dict, object key, object value)
+        static IDictionary SetItem(IDictionary dict, object key, object? value)
         {
             var dictType = dict.GetType();
             var toBuilderMethod = dictType.GetMethod(nameof(ImmutableDictionary<string, object>.ToBuilder));
             if (toBuilderMethod != null)
             {
-                var builder = toBuilderMethod.Invoke(dict, null) as IDictionary;
-                builder[key] = value;
-                var toImmutableMethod = builder.GetType().GetMethod(nameof(ImmutableDictionary<string, object>.Builder.ToImmutable));
-                return toImmutableMethod.Invoke(builder, null) as IDictionary;
+                if (toBuilderMethod.Invoke(dict, null) is IDictionary builder)
+                {
+                    builder[key] = value;
+                    var toImmutableMethod = builder.GetType().GetMethod(nameof(ImmutableDictionary<string, object>.Builder.ToImmutable));
+                    return toImmutableMethod?.Invoke(builder, null) as IDictionary ?? dict;
+                }
+                return dict;
             }
             else
             {

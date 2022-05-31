@@ -6,6 +6,6 @@ namespace VL.ImGui
 {
     public class GenerateNodeAttribute : Attribute
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 }

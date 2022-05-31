@@ -9,7 +9,7 @@ namespace VL.ImGui.Widgets
     [GenerateNode]
     internal sealed partial class Group : Widget
     {
-        public IEnumerable<Widget> Children { get; set; }
+        public IEnumerable<Widget> Children { get; set; } = Enumerable.Empty<Widget>();
 
         internal override void Update(Context context)
         {

@@ -5,9 +5,9 @@ namespace VL.ImGui.Widgets
     [GenerateNode]
     internal partial class ObjectEditor : Widget
     {
-        object _value;
+        object? _value;
 
-        public object Value
+        public object? Value
         {
             get => ObservableValue.Value;
             set
@@ -20,7 +20,7 @@ namespace VL.ImGui.Widgets
             }
         }
 
-        public BehaviorSubject<object> ObservableValue { get; } = new BehaviorSubject<object>(null);
+        public BehaviorSubject<object?> ObservableValue { get; } = new BehaviorSubject<object?>(null);
 
         internal override void Update(Context context)
         {
