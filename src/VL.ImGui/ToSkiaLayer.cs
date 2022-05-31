@@ -58,8 +58,11 @@ namespace VL.ImGui
 
             _renderContext = RenderContext.ForCurrentThread();
 
+            var scaling = VL.UI.Core.DIPHelpers.DIPFactor();
             _fontPaint = new Handle<SKPaint>(new SKPaint());
-            build_ImFontAtlas(_io.Fonts, _fontPaint);
+            BuildImFontAtlas(_io.Fonts, _fontPaint, scaling);
+            UpdateUIScaling(scaling);
+            
         }
 
         public ILayer Update(Widget widget)
@@ -93,23 +96,23 @@ namespace VL.ImGui
             }
         }
 
-        static void build_ImFontAtlas(ImFontAtlasPtr atlas, Handle<SKPaint> paintHandle)
+        static void BuildImFontAtlas(ImFontAtlasPtr atlas, Handle<SKPaint> paintHandle, float scaling = 1f)
         {
-            atlas.AddFontDefault();
+            //atlas.AddFontDefault();
 
             var fontsfolder = Environment.GetFolderPath(Environment.SpecialFolder.Fonts);
             using var defaultTypeFace = SKTypeface.CreateDefault();
             var names = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
             {
                 defaultTypeFace.FamilyName.Replace(" ", ""),
-                "arial",
-                "tahoma"
+                //"arial",
+                //"tahoma"
             };
             foreach (var fontPath in Directory.GetFiles(fontsfolder, "*.ttf").Where(p => names.Contains(Path.GetFileNameWithoutExtension(p))))
             {
                 ImFontConfig cfg = new ImFontConfig()
                 {
-                    SizePixels = 16f,
+                    SizePixels = 16f * scaling,
                     FontDataOwnedByAtlas = 1,
                     EllipsisChar = 0x0085,
                     OversampleH = 1,
@@ -139,6 +142,30 @@ namespace VL.ImGui
                 paint.Color = SKColors.White;
                 atlas.TexID = paintHandle.Ptr;
             }
+        }
+
+        static unsafe void UpdateUIScaling(float scaling = 1f)
+        {
+            var style = ImGui.GetStyle();
+            style.ScaleAllSizes(scaling);
+
+            // From https://github.com/ocornut/imgui/discussions/3925
+            //ImGuiStyle* p = style;
+            //ImGuiStyle styleold = *p; // Backup colors
+            //var style = new ImGuiStyle(); // IMPORTANT: ScaleAllSizes will change the original size, so we should reset all style config
+            //style.WindowBorderSize = 1.0f;
+            //style.ChildBorderSize = 1.0f;
+            //style.PopupBorderSize = 1.0f;
+            //style.FrameBorderSize = 1.0f;
+            //style.TabBorderSize = 1.0f;
+            //style.WindowRounding = 0.0f;
+            //style.ChildRounding = 0.0f;
+            //style.PopupRounding = 0.0f;
+            //style.FrameRounding = 0.0f;
+            //style.ScrollbarRounding = 0.0f;
+            //style.GrabRounding = 0.0f;
+            //style.TabRounding = 0.0f;
+            //style.ScaleAllSizes(scale);
         }
 
         // From https://github.com/google/skia/blob/main/tools/viewer/ImGuiLayer.cpp
