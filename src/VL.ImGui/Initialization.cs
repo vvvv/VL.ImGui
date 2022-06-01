@@ -36,6 +36,8 @@ namespace VL.ImGui
             yield return ObjectEditor.GetNodeDescription(factory);
 
             yield return SkiaWidget.GetNodeDescription(factory);
+
+            yield return Combo.GetNodeDescription(factory);
         }
     }
 
