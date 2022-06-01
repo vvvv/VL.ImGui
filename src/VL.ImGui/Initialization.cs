@@ -36,6 +36,12 @@ namespace VL.ImGui
             yield return ObjectEditor.GetNodeDescription(factory);
 
             yield return SkiaWidget.GetNodeDescription(factory);
+
+            // Observable In, Subject Out
+            yield return SliderFloatObservable.GetNodeDescription(factory);
+
+            // Subjct in
+            yield return SliderFloatSubject.GetNodeDescription(factory);
         }
     }
 
