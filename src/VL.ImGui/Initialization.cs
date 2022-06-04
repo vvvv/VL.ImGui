@@ -38,6 +38,53 @@ namespace VL.ImGui
             yield return SkiaWidget.GetNodeDescription(factory);
 
             yield return Combo.GetNodeDescription(factory);
+
+            // Observable In, Subject Out
+            yield return SliderFloatObservable.GetNodeDescription(factory);
+
+            // Subjct in
+            yield return SliderFloatSubject.GetNodeDescription(factory);
+
+            // Subjct in, Value Out
+            yield return SliderFloatSubjectValueOutput.GetNodeDescription(factory);
+
+            // Button
+            yield return Button.GetNodeDescription(factory);
+
+            // Arrow Button
+            yield return ArrowButton.GetNodeDescription(factory);
+
+            // Checkbox
+            yield return Checkbox.GetNodeDescription(factory);
+
+            // Separator
+            yield return Separator.GetNodeDescription(factory);
+
+            // Separator
+            yield return Dummy.GetNodeDescription(factory);
+
+            // Input
+            yield return InputFloat.GetNodeDescription(factory);
+            yield return InputInt.GetNodeDescription(factory);
+
+            // Layout
+            yield return SetNextItemWidth.GetNodeDescription(factory);
+            yield return PushItemWidth.GetNodeDescription(factory);
+            yield return PopItemWidth.GetNodeDescription(factory);
+            yield return Row.GetNodeDescription(factory);
+            yield return Column.GetNodeDescription(factory);
+            yield return SameLine.GetNodeDescription(factory);
+            yield return Indent.GetNodeDescription(factory);
+            yield return Unindent.GetNodeDescription(factory);
+            yield return GetContentRegionAvail.GetNodeDescription(factory);
+            yield return CalcTextSize.GetNodeDescription(factory);
+            yield return CalcItemWidth.GetNodeDescription(factory);
+            yield return GetItemRectSize.GetNodeDescription(factory);
+            yield return GetItemRectMin.GetNodeDescription(factory);
+            yield return GetItemRectMax.GetNodeDescription(factory);
+
+            // Text
+            yield return TextColored.GetNodeDescription(factory);
         }
     }
 
