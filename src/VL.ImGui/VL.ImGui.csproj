@@ -19,14 +19,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Widgets\SliderFloat.Observable.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Widgets\SliderFloat.Observable.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="ImGui.NET" Version="1.87.3" />
     <PackageReference Include="VL.Skia" Version="2022.5.0-0095-gaf5968b65d" />
   </ItemGroup>
