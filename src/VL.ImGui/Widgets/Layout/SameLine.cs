@@ -11,9 +11,12 @@ namespace VL.ImGui.Widgets
     internal partial class SameLine : Widget
     {
 
+        public float Offset { private get; set; } = 0f;
+        public float Spacing { private get; set; } = -1f;
+
         internal override void Update(Context context)
         {
-            ImGuiNET.ImGui.SameLine();
+            ImGuiNET.ImGui.SameLine(Offset, Spacing);
         }
     }
 }

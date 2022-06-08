@@ -9,15 +9,14 @@ using Stride.Core.Mathematics;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode]
-    internal partial class GetItemRectSize : Widget
-    {
 
-        public Vector2 Value { get; private set; }
+    internal partial class PopStyleColor : Widget
+    {
+        public int Count { private get; set; } = 1;
 
         internal override void Update(Context context)
         {
-            var size = ImGuiNET.ImGui.GetItemRectSize();
-            Value = ImGuiConversion.ToVector2(size);
+            ImGuiNET.ImGui.PopStyleColor(Count);
         }
     }
 }

@@ -9,15 +9,15 @@ using Stride.Core.Mathematics;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode]
-    internal partial class GetItemRectSize : Widget
-    {
 
-        public Vector2 Value { get; private set; }
+    internal partial class SetNextWindowPos : Widget
+    {
+        public Vector2 Position { private get; set; }
 
         internal override void Update(Context context)
         {
-            var size = ImGuiNET.ImGui.GetItemRectSize();
-            Value = ImGuiConversion.ToVector2(size);
+            var pos = ImGuiConversion.FromVector2(Position);
+            ImGuiNET.ImGui.SetNextWindowPos (pos);
         }
     }
 }

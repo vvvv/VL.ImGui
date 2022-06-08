@@ -28,7 +28,6 @@ namespace VL.ImGui
         static IEnumerable<IVLNodeDescription> GetNodes(IVLNodeDescriptionFactory factory)
         {
             yield return DemoWindow.GetNodeDescription(factory);
-            yield return Window.GetNodeDescription(factory);
 
             yield return Group.GetNodeDescription(factory);
 
@@ -38,6 +37,11 @@ namespace VL.ImGui
             yield return SkiaWidget.GetNodeDescription(factory);
 
             yield return Combo.GetNodeDescription(factory);
+
+            // Windows
+            yield return Window.GetNodeDescription(factory);
+            yield return ChildWindow.GetNodeDescription(factory);
+
 
             // Observable In, Subject Out
             yield return SliderFloatObservable.GetNodeDescription(factory);
@@ -60,15 +64,20 @@ namespace VL.ImGui
             // Separator
             yield return Separator.GetNodeDescription(factory);
 
-            // Separator
+            // Dummy
             yield return Dummy.GetNodeDescription(factory);
 
             // Input
             yield return InputFloat.GetNodeDescription(factory);
             yield return InputInt.GetNodeDescription(factory);
 
+            // Style
+            yield return PushStyleColor.GetNodeDescription(factory);
+            yield return PopStyleColor.GetNodeDescription(factory);
+
             // Layout
             yield return SetNextItemWidth.GetNodeDescription(factory);
+            yield return SetNextWindowContentSize.GetNodeDescription(factory);
             yield return PushItemWidth.GetNodeDescription(factory);
             yield return PopItemWidth.GetNodeDescription(factory);
             yield return Row.GetNodeDescription(factory);
@@ -82,9 +91,26 @@ namespace VL.ImGui
             yield return GetItemRectSize.GetNodeDescription(factory);
             yield return GetItemRectMin.GetNodeDescription(factory);
             yield return GetItemRectMax.GetNodeDescription(factory);
+            yield return GetWindowSize.GetNodeDescription(factory);
+            yield return SetNextWindowPos.GetNodeDescription(factory);
+            yield return GetCursorPos.GetNodeDescription(factory);
+            yield return PushID.GetNodeDescription(factory);
+            yield return PopID.GetNodeDescription(factory);
+            yield return AlignTextToFramePadding.GetNodeDescription(factory);
+            
 
             // Text
             yield return TextColored.GetNodeDescription(factory);
+            yield return PushTextWrapPos.GetNodeDescription(factory);
+            yield return PopTextWrapPos.GetNodeDescription(factory);
+
+            // Table
+            yield return Table.GetNodeDescription(factory);
+            yield return TableNextRow.GetNodeDescription(factory);
+            yield return TableNextColumn.GetNodeDescription(factory);
+            yield return TableSetColumnIndex.GetNodeDescription(factory);
+            yield return TableSetupColumn.GetNodeDescription(factory);
+
         }
     }
 
