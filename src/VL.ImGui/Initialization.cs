@@ -54,6 +54,8 @@ namespace VL.ImGui
 
             // Button
             yield return Button.GetNodeDescription(factory);
+            yield return InvisibleButton.GetNodeDescription(factory);
+            yield return Selectable.GetNodeDescription(factory);
 
             // Arrow Button
             yield return ArrowButton.GetNodeDescription(factory);
@@ -97,7 +99,12 @@ namespace VL.ImGui
             yield return PushID.GetNodeDescription(factory);
             yield return PopID.GetNodeDescription(factory);
             yield return AlignTextToFramePadding.GetNodeDescription(factory);
-            
+            yield return PushStyleVarFloat.GetNodeDescription(factory);
+            yield return PushStyleVarVector.GetNodeDescription(factory);
+            yield return PopStyleVar.GetNodeDescription(factory);
+            yield return GetContentRegionMax.GetNodeDescription(factory);
+            yield return Bullet.GetNodeDescription(factory);
+
 
             // Text
             yield return TextColored.GetNodeDescription(factory);
@@ -110,6 +117,10 @@ namespace VL.ImGui
             yield return TableNextColumn.GetNodeDescription(factory);
             yield return TableSetColumnIndex.GetNodeDescription(factory);
             yield return TableSetupColumn.GetNodeDescription(factory);
+
+            // Behaviour
+            yield return IsItemClicked.GetNodeDescription(factory);
+            yield return IsItemHovered.GetNodeDescription(factory);
 
         }
     }
