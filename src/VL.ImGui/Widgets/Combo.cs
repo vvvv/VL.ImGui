@@ -10,20 +10,6 @@ namespace VL.ImGui.Widgets
     [GenerateNode(Name = "Combo (String)")]
     internal partial class Combo : Widget
     {
-        private string? _value;
-
-        public string Value
-        {
-            get => ObservableValue.Value;
-            set
-            {
-                if (value != _value)
-                {
-                    _value = value;
-                    ObservableValue.OnNext(value);
-                }
-            }
-        }
 
         public string? Label { get; set; }
 
@@ -34,11 +20,11 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiComboFlags Flags { private get; set; }
 
-        public BehaviorSubject<string> ObservableValue { get; } = new BehaviorSubject<string>("");
+        public BehaviorSubject<string> Value { get; } = new BehaviorSubject<string>("");
 
         internal override void Update(Context context)
         {
-            var value = ObservableValue.Value;
+            var value = Value.Value;
 
             var count = Items.Count();
             if (count > 0)
@@ -53,7 +39,7 @@ namespace VL.ImGui.Widgets
                             bool is_selected = value == item;
                             if (ImGuiNET.ImGui.Selectable(item, is_selected))
                             {
-                                ObservableValue.OnNext(item);
+                                Value.OnNext(item);
                             }
                             if (is_selected)
                             {

@@ -9,13 +9,23 @@ namespace VL.ImGui.Widgets
 {
     [GenerateNode]
 
-    internal partial class PushTextWrapPos : Widget
+    internal partial class SetTextWrapPosition : Widget
     {
+        public Widget? Input { private get; set; }
+
         public float Position { private get; set; } = 0f;
 
         internal override void Update(Context context)
         {
-            ImGuiNET.ImGui.PushTextWrapPos (Position);
+            ImGuiNET.ImGui.PushTextWrapPos(Position);
+            try
+            {
+                context.Update(Input);
+            }
+            finally
+            {
+                ImGuiNET.ImGui.PopTextWrapPos();
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             var pos = ImGuiNET.ImGui.GetCursorPos();
-            Value = ImGuiConversion.ToVector2(pos);
+            Value = ImGuiConversion.ToVL(pos);
         }
     }
 }

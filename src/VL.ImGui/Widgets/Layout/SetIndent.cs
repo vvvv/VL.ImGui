@@ -8,15 +8,23 @@ using VL.Core;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode]
-    internal partial class Unindent : Widget
+    internal partial class SetIndent : Widget
     {
+        public Widget? Input { private get; set; }
 
         public float Value { private get; set; }
 
-
         internal override void Update(Context context)
         {
-            ImGuiNET.ImGui.Unindent(Value);
+            ImGuiNET.ImGui.Indent(Value);
+            try
+            {
+                context.Update(Input);
+            }
+            finally
+            {
+                ImGuiNET.ImGui.Unindent(Value);
+            }
         }
     }
 }

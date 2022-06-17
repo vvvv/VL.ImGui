@@ -12,10 +12,10 @@ namespace VL.ImGui.Widgets
     internal partial class Dummy : Widget
     {
         public Vector2 Size { private get; set; }
+
         internal override void Update(Context context)
         {
-            var size = ImGuiConversion.FromVector2 (Size);
-            ImGuiNET.ImGui.Dummy(size);
+            ImGuiNET.ImGui.Dummy(Size.ToImGui());
         }
     }
 }

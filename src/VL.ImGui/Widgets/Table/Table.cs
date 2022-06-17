@@ -29,8 +29,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
 
-            var size = ImGuiConversion.FromVector2(Size);
-            IsVisible = ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, Columns, Flags, size, InnerWidth);
+            IsVisible = ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, Columns, Flags, Size.ToImGui(), InnerWidth);
             
             try
             {

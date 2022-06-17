@@ -18,7 +18,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             var size = ImGuiNET.ImGui.GetContentRegionMax();
-            Size = ImGuiConversion.ToVector2(size);
+            Size = ImGuiConversion.ToVL(size);
         }
     }
 }

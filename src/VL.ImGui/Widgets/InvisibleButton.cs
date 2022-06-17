@@ -18,13 +18,12 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiButtonFlags Flags { private get; set; }
 
-        public BehaviorSubject<bool> ObservableValue { get; } = new BehaviorSubject<bool>(false);
+        public BehaviorSubject<bool> Value { get; } = new BehaviorSubject<bool>(false);
 
         internal override void Update(Context context)
         {
-            var size = ImGuiConversion.FromVector2(Size);
-            if (ImGuiNET.ImGui.InvisibleButton(Label?? String.Empty, size, Flags))
-                ObservableValue.OnNext(true);
+            if (ImGuiNET.ImGui.InvisibleButton(Label?? String.Empty, Size.ToImGui(), Flags))
+                Value.OnNext(true);
         }
     }
 }

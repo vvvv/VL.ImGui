@@ -10,20 +10,6 @@ namespace VL.ImGui.Widgets
     [GenerateNode(Name = "Input (Int)")]
     internal partial class InputInt : Widget
     {
-        private int _value;
-
-        public int Value
-        {
-            get => ObservableValue.Value;
-            set
-            {
-                if (value != _value)
-                {
-                    _value = value;
-                    ObservableValue.OnNext(value);
-                }
-            }
-        }
 
         public string? Label { get; set; }
 
@@ -33,13 +19,13 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiInputTextFlags Flags { private get; set; }
 
-        public BehaviorSubject<int> ObservableValue { get; } = new BehaviorSubject<int>(0);
+        public BehaviorSubject<int> Value { get; } = new BehaviorSubject<int>(0);
 
         internal override void Update(Context context)
         {
-            var value = ObservableValue.Value;
+            var value = Value.Value;
             if (ImGuiNET.ImGui.InputInt(Label ?? string.Empty, ref value, Step, StepFast, Flags))
-                ObservableValue.OnNext(value);
+                Value.OnNext(value);
         }
     }
 }

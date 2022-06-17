@@ -116,9 +116,8 @@ namespace {typeSymbol.ContainingNamespace}
             return factory.NewNodeDescription(""{name ?? typeSymbol.Name}"", ""ImGui"", fragmented: true, _c =>
             {{
                 var _w = new {typeSymbol.Name}();
-                var _inputs = new[]
+                var _inputs = new IVLPinDescription[]
                 {{
-                    _c.Input(""Input"", _w.Input),
                     { string.Join($"{Environment.NewLine}{indent}", inputDescriptions)}
                 }};
                 var _outputs = new[]
@@ -131,7 +130,6 @@ namespace {typeSymbol.ContainingNamespace}
                     var s = new {typeSymbol.Name}();
                     var inputs = new IVLPin[]
                     {{
-                        c.Input(v => s.Input = v, s.Input),
                         {string.Join($"{Environment.NewLine}{indent2}", inputs)}
                     }};
                     var outputs = new IVLPin[]

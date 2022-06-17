@@ -20,7 +20,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             var width = ImGuiNET.ImGui.CalcTextSize(Text ?? string.Empty);
-            Value = ImGuiConversion.ToVector2(width);
+            Value = ImGuiConversion.ToVL(width);
         }
     }
 }

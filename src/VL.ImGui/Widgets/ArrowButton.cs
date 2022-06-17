@@ -14,12 +14,12 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiDir Direction { private get; set; }
 
-        public BehaviorSubject<bool> ObservableValue { get; } = new BehaviorSubject<bool>(false);
+        public BehaviorSubject<bool> Value { get; } = new BehaviorSubject<bool>(false);
 
         internal override void Update(Context context)
         {
             if (ImGuiNET.ImGui.ArrowButton(Label ?? string.Empty, Direction))
-                ObservableValue.OnNext(true);
+                Value.OnNext(true);
         }
     }
 }

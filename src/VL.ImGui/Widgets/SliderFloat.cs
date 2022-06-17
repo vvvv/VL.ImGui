@@ -10,21 +10,6 @@ namespace VL.ImGui.Widgets
     [GenerateNode(Name = "Slider (Float)")]
     internal partial class SliderFloat : Widget
     {
-        private float _value;
-
-        public float Value
-        {
-            get => ObservableValue.Value;
-            set
-            {
-                if (value != _value)
-                {
-                    _value = value;
-                    ObservableValue.OnNext(value);
-                }
-            }
-        }
-
         public string? Label { get; set; }
 
         public float Min { private get; set; } = 0f;
@@ -36,13 +21,13 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public BehaviorSubject<float> ObservableValue { get; } = new BehaviorSubject<float>(0f);
+        public BehaviorSubject<float> Value { get; } = new BehaviorSubject<float>(0f);
 
         internal override void Update(Context context)
         {
-            var value = ObservableValue.Value;
+            var value = Value.Value;
             if (ImGuiNET.ImGui.SliderFloat(Label ?? string.Empty, ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                ObservableValue.OnNext(value);
+                Value.OnNext(value);
         }
     }
 }

@@ -27,7 +27,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="840, 156, 1044, 684" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1144, 172, 1044, 684" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
             <Pin Id="SN9Sy5tUeJRL75k6d5gCaB" Name="Clear" Kind="InputPin" DefaultValue="True" />
@@ -99,6 +99,63 @@
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="DvANoEQIz8zNDIsaTBYFaV" Comment="" Bounds="130,590,35,35" ShowValueBox="true" isIOBox="true" />
+          <!--
+
+    ************************ LayerButton ************************
+
+-->
+          <Node Name="LayerButton" Bounds="748,316" Id="PU5nYD5F6cTMHsWsHxCKWz">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+              <Choice Kind="ContainerDefinition" Name="Process" />
+            </p:NodeReference>
+            <Patch Id="UFGnz8Odp5lOK4zW1AewXj">
+              <Canvas Id="Pxu0RmF2FdJQHwez99szKT" CanvasType="Group">
+                <Node Bounds="568,459,66,19" Id="KE3ftetQ4RBMTC5IrIZNug">
+                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="ProcessNode" Name="SkiaWidget" />
+                  </p:NodeReference>
+                  <Pin Id="F9ncKLglXgxMdXcRL7YbPO" Name="Input" Kind="InputPin" />
+                  <Pin Id="OtACeByP77KMybRroEJfbW" Name="Layer" Kind="InputPin" />
+                  <Pin Id="CNwwfpF8cHONuwLtX8TlMh" Name="Size" Kind="InputPin" />
+                  <Pin Id="V8IMU14gqoJL9PhDNOuqFL" Name="Space" Kind="InputPin" />
+                  <Pin Id="DN5uxuinZvhOwETgrgAxd8" Name="Output" Kind="OutputPin" />
+                </Node>
+                <ControlPoint Id="BFlyOA7NdAPMFhyvgJySyW" Bounds="520,402" />
+                <ControlPoint Id="R897be4PLCcPvG2LkOJGD5" Bounds="584,400" />
+                <ControlPoint Id="NaYJUiUTXERLn5V7k7yMay" Bounds="651,396" />
+                <ControlPoint Id="K67h3WRQmXKMb9VaPnDk3y" Bounds="707,393" />
+                <ControlPoint Id="DV8L0QD54OYOjjzOpfbq1h" Bounds="569,536" />
+              </Canvas>
+              <Patch Id="Jh3FnUCK35OLjGYf4k0Z6O" Name="Create" />
+              <Patch Id="Vuu9epWJPANPkMmvKJ1Jy2" Name="Update">
+                <Pin Id="AF6jS5lZZrYMTvnYGTDbFx" Name="Input" Kind="InputPin" Bounds="520,402" />
+                <Pin Id="BG04WfzfEBmN1n4cyaZPZs" Name="Layer" Kind="InputPin" Bounds="584,400" />
+                <Pin Id="BgE6vcEDaB7O9rDSyPR6nR" Name="Size" Kind="InputPin" Bounds="649,397" />
+                <Pin Id="DhsTKL5DHQ6PBu4UNqgTWK" Name="Space" Kind="InputPin" Bounds="707,393" />
+                <Pin Id="K58LFpnXpy1OoQefvJvPEN" Name="Output" Kind="OutputPin" Bounds="569,512" />
+              </Patch>
+              <!--
+
+    ************************  ************************
+
+-->
+              <ProcessDefinition Id="ECxsQoqc64UMyJXA8J0qDZ">
+                <Fragment Id="MWbgB75gZ7uPhgxkHovdYB" Patch="Jh3FnUCK35OLjGYf4k0Z6O" Enabled="true" />
+                <Fragment Id="BjvPEL4ckcrLpeFsoGBZx3" Patch="Vuu9epWJPANPkMmvKJ1Jy2" Enabled="true" />
+              </ProcessDefinition>
+              <Link Id="G8WVOIe7mbgOUCdFkXozGr" Ids="BFlyOA7NdAPMFhyvgJySyW,F9ncKLglXgxMdXcRL7YbPO" />
+              <Link Id="AuKXeNnLyIeLKMbqAYKMuy" Ids="AF6jS5lZZrYMTvnYGTDbFx,BFlyOA7NdAPMFhyvgJySyW" IsHidden="true" />
+              <Link Id="GOkU5muCWr8LJUABI4i1Bn" Ids="R897be4PLCcPvG2LkOJGD5,OtACeByP77KMybRroEJfbW" />
+              <Link Id="IgHgdMIPZpvOAupA8o2pHX" Ids="BG04WfzfEBmN1n4cyaZPZs,R897be4PLCcPvG2LkOJGD5" IsHidden="true" />
+              <Link Id="GVQvF4uVP6KNrxY5qgRjEj" Ids="NaYJUiUTXERLn5V7k7yMay,CNwwfpF8cHONuwLtX8TlMh" />
+              <Link Id="IhXhJbWDNJ2PfZViOYswVt" Ids="BgE6vcEDaB7O9rDSyPR6nR,NaYJUiUTXERLn5V7k7yMay" IsHidden="true" />
+              <Link Id="PdpcVCCDy7yLtyQqtpUjYu" Ids="K67h3WRQmXKMb9VaPnDk3y,V8IMU14gqoJL9PhDNOuqFL" />
+              <Link Id="Hk9efI49RXTOMh08ICZBaD" Ids="DhsTKL5DHQ6PBu4UNqgTWK,K67h3WRQmXKMb9VaPnDk3y" IsHidden="true" />
+              <Link Id="VNT8xkEmuC8OCr7OcKas5A" Ids="DN5uxuinZvhOwETgrgAxd8,DV8L0QD54OYOjjzOpfbq1h" />
+              <Link Id="IeBohLKdxQQNdUjyJr68xu" Ids="DV8L0QD54OYOjjzOpfbq1h,K58LFpnXpy1OoQefvJvPEN" IsHidden="true" />
+            </Patch>
+          </Node>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" ParticipatingElements="HbYsEJCgb9SP3TzwA8bp6n" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />

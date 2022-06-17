@@ -7,9 +7,10 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "PushStyleVar (Float)")]
-    internal partial class PushStyleVarFloat : Widget
+    [GenerateNode(Name = "SetStyle (Float)")]
+    internal partial class SetStyleVarFloat : Widget
     {
+        public Widget? Input { private get; set; }
 
         public ImGuiNET.ImGuiStyleVar Key { private get; set; }
 
@@ -18,6 +19,14 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             ImGuiNET.ImGui.PushStyleVar(Key, Value);
+            try
+            {
+                context.Update(Input);
+            }
+            finally
+            {
+                ImGuiNET.ImGui.PopStyleVar();
+            }
         }
     }
 }

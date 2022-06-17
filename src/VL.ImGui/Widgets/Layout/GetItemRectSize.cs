@@ -17,7 +17,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             var size = ImGuiNET.ImGui.GetItemRectSize();
-            Value = ImGuiConversion.ToVector2(size);
+            Value = ImGuiConversion.ToVL(size);
         }
     }
 }

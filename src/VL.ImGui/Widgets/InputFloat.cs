@@ -10,20 +10,6 @@ namespace VL.ImGui.Widgets
     [GenerateNode(Name = "Input (Float)")]
     internal partial class InputFloat : Widget
     {
-        private float _value;
-
-        public float Value
-        {
-            get => ObservableValue.Value;
-            set
-            {
-                if (value != _value)
-                {
-                    _value = value;
-                    ObservableValue.OnNext(value);
-                }
-            }
-        }
 
         public string? Label { get; set; }
 
@@ -36,13 +22,13 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiInputTextFlags Flags { private get; set; }
 
-        public BehaviorSubject<float> ObservableValue { get; } = new BehaviorSubject<float>(0f);
+        public BehaviorSubject<float> Value { get; } = new BehaviorSubject<float>(0f);
 
         internal override void Update(Context context)
         {
-            var value = ObservableValue.Value;
+            var value = Value.Value;
             if (ImGuiNET.ImGui.InputFloat(Label ?? string.Empty, ref value, Step, StepFast, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                ObservableValue.OnNext(value);
+                Value.OnNext(value);
         }
     }
 }

@@ -40,33 +40,8 @@ namespace VL.ImGui
             if (widget is null)
                 return;
 
-            // Collect upstream widgets
-            var stack = new Stack<Widget>();
-            var w = widget;
-            while (w != null)
-            {
-                stack.Push(w);
-                w = w.Input;
-            }
-
-            var isGroup = stack.Count > 1;
-            if (isGroup)
-                ImGui.BeginGroup();
-
-            try
-            {
-                while (stack.Count > 0)
-                {
-                    var c = stack.Pop();
-                    c.Update(this);
-                    _widgetsToReset.Add(c);
-                }
-            }
-            finally
-            {
-                if (isGroup)
-                    ImGui.EndGroup();
-            }
+            widget.Update(this);
+            _widgetsToReset.Add(widget);
         }
 
         public void Dispose()

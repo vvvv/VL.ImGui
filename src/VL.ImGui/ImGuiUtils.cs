@@ -195,17 +195,26 @@ namespace VL.ImGui
 
     public static class ImGuiConversion
     {
-        public static System.Numerics.Vector4 FromColor4(Color4 v)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static System.Numerics.Vector4 ToImGui(this Color4 v)
         {
             return Unsafe.As<Color4, System.Numerics.Vector4>(ref v);
         }
 
-        public static System.Numerics.Vector2 FromVector2(Vector2 v)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static System.Numerics.Vector2 ToImGui(this Vector2 v)
         {
             return Unsafe.As<Vector2, System.Numerics.Vector2>(ref v);
         }
 
-        public static Vector2 ToVector2(System.Numerics.Vector2 v)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static System.Numerics.Vector2 ToImGui(this Size2F v)
+        {
+            return Unsafe.As<Size2F, System.Numerics.Vector2>(ref v);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector2 ToVL(this System.Numerics.Vector2 v)
         {
             return Unsafe.As<System.Numerics.Vector2, Vector2>(ref v);
         }

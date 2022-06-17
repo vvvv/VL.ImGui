@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using ImGuiNET;
+using Stride.Core.Mathematics;
 using VL.Core;
 
 namespace VL.ImGui.Windows
@@ -19,6 +20,10 @@ namespace VL.ImGui.Windows
 
         public bool Fullscreen { get; set; } = false;
 
+        public RectangleF Bounds { get; set; }
+
+        public bool SetBounds { get; set; }
+
         public ImGuiWindowFlags WindowFlags { get; set; }
 
         public bool Closing { get; private set; }
@@ -32,6 +37,11 @@ namespace VL.ImGui.Windows
                 var viewPort = ImGui.GetMainViewport();
                 ImGui.SetNextWindowPos(viewPort.WorkPos);
                 ImGui.SetNextWindowSize(viewPort.WorkSize);
+            } 
+            else if (SetBounds)
+            {
+                ImGui.SetNextWindowPos(Bounds.TopLeft.ToImGui());
+                ImGui.SetNextWindowSize(Bounds.Size.ToImGui());
             }
 
             if (HasCloseButton)

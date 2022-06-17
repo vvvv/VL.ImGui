@@ -13,27 +13,13 @@ namespace VL.ImGui.Widgets
 
         public string? Label { get; set; }
 
-        private bool _value;
-        public bool Value
-        {
-            get => ObservableValue.Value;
-            set
-            {
-                if (value != _value)
-                {
-                    _value = value;
-                    ObservableValue.OnNext(value);
-                }
-            }
-        }
-
-        public BehaviorSubject<Boolean> ObservableValue { get; } = new BehaviorSubject<Boolean>(false);
+        public BehaviorSubject<Boolean> Value { get; } = new BehaviorSubject<Boolean>(false);
 
         internal override void Update(Context context)
         {
-            var value = ObservableValue.Value;
+            var value = Value.Value;
             if (ImGuiNET.ImGui.Checkbox(Label ?? string.Empty, ref value))
-                ObservableValue.OnNext(value);
+                Value.OnNext(value);
         }
     }
 }

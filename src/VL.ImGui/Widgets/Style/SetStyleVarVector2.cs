@@ -8,9 +8,10 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "PushStyleVar (Vector)")]
-    internal partial class PushStyleVarVector : Widget
+    [GenerateNode(Name = "SetStyle (Vector2)")]
+    internal partial class SetStyleVarVector : Widget
     {
+        public Widget? Input { private get; set; }
 
         public ImGuiNET.ImGuiStyleVar Key { private get; set; }
 
@@ -18,8 +19,15 @@ namespace VL.ImGui.Widgets
 
         internal override void Update(Context context)
         {
-            var val = ImGuiConversion.FromVector2(Value);
-            ImGuiNET.ImGui.PushStyleVar(Key, val);
+            ImGuiNET.ImGui.PushStyleVar(Key, Value.ToImGui());
+            try
+            {
+                context.Update(Input);
+            }
+            finally
+            {
+                ImGuiNET.ImGui.PopStyleVar();
+            }
         }
     }
 }

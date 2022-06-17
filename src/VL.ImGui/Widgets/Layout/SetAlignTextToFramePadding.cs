@@ -8,12 +8,23 @@ using VL.Core;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode]
-    internal partial class AlignTextToFramePadding : Widget
+    internal partial class SetAlignTextToFramePadding : Widget
     {
+        public Widget? Input { private get; set; }
+
+        public float Position { private get; set; } = 0f;
 
         internal override void Update(Context context)
         {
             ImGuiNET.ImGui.AlignTextToFramePadding();
+            try
+            {
+                context.Update(Input);
+            }
+            finally
+            {
+                // TODO: Empty Finally?
+            }
         }
     }
 }
