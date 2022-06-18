@@ -8,6 +8,8 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
+    using ImGui = ImGuiNET.ImGui;
+
     [GenerateNode]
     internal sealed partial class ChildWindow : Widget
     {
@@ -17,7 +19,9 @@ namespace VL.ImGui.Widgets
 
         public bool HasBorder { get; set; }
 
-        public Vector2 Size { private get; set; }
+        public RectangleF Bounds { get; set; }
+
+        public Vector2 Pivot { get; set; }
 
         public bool IsVisible { get; private set; }
 
@@ -27,7 +31,9 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
 
-            IsVisible = ImGuiNET.ImGui.BeginChild(Label ?? string.Empty, Size.ToImGui(), HasBorder, Flags);
+            ImGui.SetNextWindowPos(Bounds.TopLeft.ToImGui(), 0, Pivot.ToImGui());
+
+            IsVisible = ImGuiNET.ImGui.BeginChild(Label ?? string.Empty, Bounds.Size.ToImGui(), HasBorder, Flags);
             
             try
             {

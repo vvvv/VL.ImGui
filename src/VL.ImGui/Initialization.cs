@@ -93,9 +93,7 @@ namespace VL.ImGui
 
             // Table
             yield return Table.GetNodeDescription(factory);
-            yield return TableNextRow.GetNodeDescription(factory);
             yield return TableNextColumn.GetNodeDescription(factory);
-            yield return TableSetColumnIndex.GetNodeDescription(factory);
             yield return TableSetupColumn.GetNodeDescription(factory);
 
             // Behaviour

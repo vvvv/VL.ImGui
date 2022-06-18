@@ -299,6 +299,24 @@
           <ProcessDefinition Id="QYNA2eD9JleOcMAKJZFLjN" IsHidden="true" />
         </Patch>
       </Node>
+      <!--
+
+    ************************ ImGuiWindowFlags ************************
+
+-->
+      <Node Name="ImGuiWindowFlags" Bounds="567,498" Id="PgU652NQzLINbP8Z6un4eL">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+          <Choice Kind="TypeFlag" Name="ImGuiWindowFlags" />
+        </p:TypeAnnotation>
+        <Patch Id="VV5S3RP0ikZLLPVKyiC4Ul">
+          <Canvas Id="DbHhRG9h2GzPeB0I0LSMCo" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="O5OY6ig4yISLt0U88jvl8q" IsHidden="true" />
+        </Patch>
+      </Node>
     </Canvas>
     <!--
 

@@ -11,7 +11,11 @@ namespace VL.ImGui.Widgets
     [GenerateNode]
     internal sealed partial class Table : Widget
     {
-        public Widget? Content { get; set; }
+
+
+        public IEnumerable<Widget> ColumnDescriptions { get; set; } = Enumerable.Empty<Widget>();
+
+        public IEnumerable<Widget> Columns { get; set; } = Enumerable.Empty<Widget>();
 
         public string? Label { get; set; }
 
@@ -21,26 +25,48 @@ namespace VL.ImGui.Widgets
 
         public bool IsVisible { get; private set; }
 
-        public int Columns { private get; set; }
-
         public ImGuiNET.ImGuiTableFlags Flags { private get; set; }
 
 
         internal override void Update(Context context)
         {
+            var count = ColumnDescriptions.Count(x => x != null);
 
-            IsVisible = ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, Columns, Flags, Size.ToImGui(), InnerWidth);
-            
-            try
+            if (count > 0)
             {
-                if (IsVisible)
+
+                IsVisible = ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, count, Flags, Size.ToImGui(), InnerWidth);
+
+                try
                 {
-                    context.Update(Content);
+                    if (IsVisible)
+                    {
+                        foreach (var desc in ColumnDescriptions)
+                        {
+                            if (desc is null)
+                                continue;
+                            else
+                                context.Update(desc);
+
+                        }
+
+                        foreach (var col in Columns)
+                        {
+                            if (col is null)
+                                continue;
+                            else
+                            {
+                                ImGuiNET.ImGui.TableNextColumn();
+                                context.Update(col);
+                            }
+                        }
+                    }
                 }
-            }
-            finally
-            {
-                ImGuiNET.ImGui.EndTable();
+                finally
+                {
+                    ImGuiNET.ImGui.EndTable();
+                }
+
             }
         }
     }
