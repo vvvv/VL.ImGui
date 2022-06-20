@@ -208,15 +208,41 @@ namespace VL.ImGui
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static System.Numerics.Vector3 ToImGui(this Vector3 v)
+        {
+            return Unsafe.As<Vector3, System.Numerics.Vector3>(ref v);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static System.Numerics.Vector4 ToImGui(this Vector4 v)
+        {
+            return Unsafe.As<Vector4, System.Numerics.Vector4>(ref v);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static System.Numerics.Vector2 ToImGui(this Size2F v)
         {
             return Unsafe.As<Size2F, System.Numerics.Vector2>(ref v);
         }
 
+        //TO VL
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector2 ToVL(this System.Numerics.Vector2 v)
         {
             return Unsafe.As<System.Numerics.Vector2, Vector2>(ref v);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector3 ToVL(this System.Numerics.Vector3 v)
+        {
+            return Unsafe.As<System.Numerics.Vector3, Vector3>(ref v);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector4 ToVL(this System.Numerics.Vector4 v)
+        {
+            return Unsafe.As<System.Numerics.Vector4, Vector4>(ref v);
         }
     }
 
