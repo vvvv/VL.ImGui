@@ -317,6 +317,24 @@
           <ProcessDefinition Id="O5OY6ig4yISLt0U88jvl8q" IsHidden="true" />
         </Patch>
       </Node>
+      <!--
+
+    ************************ ImGuiTableColumnFlags ************************
+
+-->
+      <Node Name="ImGuiTableColumnFlags" Bounds="560,542" Id="QCblDvNm5BsMmUujha4tOY">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+          <Choice Kind="TypeFlag" Name="ImGuiTableColumnFlags" />
+        </p:TypeAnnotation>
+        <Patch Id="Ennp1KtgXv8O9XOeJ97DHM">
+          <Canvas Id="Gmq3cpiNZshPKRD890dtFZ" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="HX5AvRUrPfJQEk5jYZWPdZ" IsHidden="true" />
+        </Patch>
+      </Node>
     </Canvas>
     <!--
 

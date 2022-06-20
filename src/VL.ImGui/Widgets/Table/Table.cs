@@ -25,8 +25,9 @@ namespace VL.ImGui.Widgets
 
         public bool IsVisible { get; private set; }
 
-        public ImGuiNET.ImGuiTableFlags Flags { private get; set; }
+        public bool ShowHeader { get; set; }
 
+        public ImGuiNET.ImGuiTableFlags Flags { private get; set; }
 
         internal override void Update(Context context)
         {
@@ -49,6 +50,9 @@ namespace VL.ImGui.Widgets
                                 context.Update(desc);
 
                         }
+
+                        if (ShowHeader)
+                            ImGuiNET.ImGui.TableHeadersRow();
 
                         foreach (var col in Columns)
                         {
