@@ -57,6 +57,9 @@ namespace VL.ImGui
             // Checkbox
             yield return Checkbox.GetNodeDescription(factory);
 
+            // Radiobutton
+            yield return RadioButton.GetNodeDescription(factory);
+
             // Separator
             yield return Separator.GetNodeDescription(factory);
 
@@ -92,6 +95,7 @@ namespace VL.ImGui
             yield return GetContentRegionMax.GetNodeDescription(factory);
             yield return Bullet.GetNodeDescription(factory);
             yield return SetPosition.GetNodeDescription(factory);
+            yield return Spacing.GetNodeDescription(factory);
 
             // Text
             yield return TextWidget.GetNodeDescription(factory);

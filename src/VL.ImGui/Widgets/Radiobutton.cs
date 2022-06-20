@@ -8,7 +8,7 @@ using VL.Core;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode]
-    internal partial class Checkbox : Widget
+    internal partial class RadioButton : Widget
     {
 
         public string? Label { get; set; }
@@ -18,7 +18,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             var value = Value.Value;
-            if (ImGuiNET.ImGui.Checkbox(Label ?? string.Empty, ref value))
+            if (ImGuiNET.ImGui.RadioButton(Label ?? string.Empty, value))
                 Value.OnNext(value);
         }
     }
