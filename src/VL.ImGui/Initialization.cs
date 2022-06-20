@@ -86,10 +86,20 @@ namespace VL.ImGui
             yield return GetContentRegionAvail.GetNodeDescription(factory);
             yield return GetContentRegionMax.GetNodeDescription(factory);
             yield return Bullet.GetNodeDescription(factory);
+            yield return SetPosition.GetNodeDescription(factory);
 
             // Text
             yield return TextWidget.GetNodeDescription(factory);
             yield return SetTextWrapPosition.GetNodeDescription(factory);
+
+            // Input
+            yield return InputText.GetNodeDescription(factory);
+            yield return InputTextMultiline.GetNodeDescription(factory);
+            yield return InputTextWithHint.GetNodeDescription(factory);
+
+            //Tooltips
+            yield return SetTooltipText.GetNodeDescription(factory);
+            yield return SetTooltipWidget.GetNodeDescription(factory);
 
             // Table
             yield return Table.GetNodeDescription(factory);
