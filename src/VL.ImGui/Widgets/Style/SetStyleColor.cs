@@ -14,7 +14,7 @@ namespace VL.ImGui.Widgets
         public Widget? Input { private get; set; }
 
         public ImGuiNET.ImGuiCol Type { private get; set; }
-        public Color4 Color { private get; set; } = new Color4(Stride.Core.Mathematics.Color.White);
+        public Color4 Color { private get; set; } = new Color4 (Stride.Core.Mathematics.Color.White);
 
         internal override void Update(Context context)
         {

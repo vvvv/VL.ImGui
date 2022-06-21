@@ -244,6 +244,12 @@ namespace VL.ImGui
         {
             return Unsafe.As<System.Numerics.Vector4, Vector4>(ref v);
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Color4 ToVLColor4(this System.Numerics.Vector4 v)
+        {
+            return Unsafe.As<System.Numerics.Vector4, Color4>(ref v);
+        }
     }
 
 }
