@@ -9,7 +9,7 @@ using Stride.Core.Mathematics;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode]
-    internal partial class PlotHistogram : Widget
+    internal partial class PlotLines : Widget
     {
 
         public string? Label { get; set; }
@@ -31,7 +31,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             var values = Values.ToArray();
-            ImGuiNET.ImGui.PlotHistogram(Label ?? string.Empty, ref values[0], VisibleCount, Offset, OverlayText, ScaleMin, ScaleMax, Size.ToImGui());
+            ImGuiNET.ImGui.PlotLines(Label ?? string.Empty, ref values[0], VisibleCount, Offset, OverlayText, ScaleMin, ScaleMax, Size.ToImGui());
         }
     }
 }
