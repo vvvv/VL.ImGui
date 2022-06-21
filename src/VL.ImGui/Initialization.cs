@@ -119,6 +119,15 @@ namespace VL.ImGui
             yield return IsItemClicked.GetNodeDescription(factory);
             yield return IsItemHovered.GetNodeDescription(factory);
 
+            // Color
+            yield return ColorEdit.GetNodeDescription(factory);
+            yield return ColorPicker.GetNodeDescription(factory);
+
+            //Plotting
+            yield return PlotHistogram.GetNodeDescription(factory);
+            yield return PlotLines.GetNodeDescription(factory);
+            yield return ProgressBar.GetNodeDescription(factory);
+
         }
     }
 
