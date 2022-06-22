@@ -16,8 +16,6 @@ namespace VL.ImGui.Widgets
 
         public IEnumerable<float> Values { get; set; } = Enumerable.Empty<float>();
 
-        public int VisibleCount { get; set; }
-
         public int Offset { get; set; }
 
         public string OverlayText { get; set; } = String.Empty;
@@ -31,7 +29,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             var values = Values.ToArray();
-            ImGuiNET.ImGui.PlotHistogram(Label ?? string.Empty, ref values[0], VisibleCount, Offset, OverlayText, ScaleMin, ScaleMax, Size.ToImGui());
+            ImGuiNET.ImGui.PlotHistogram(Label ?? string.Empty, ref values[0], values.Count(), Offset, OverlayText, ScaleMin, ScaleMax, Size.ToImGui());
         }
     }
 }
