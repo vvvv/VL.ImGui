@@ -74,6 +74,7 @@ namespace VL.ImGui
             yield return SetStyleColor.GetNodeDescription(factory);
             yield return SetStyleVarFloat.GetNodeDescription(factory);
             yield return SetStyleVarVector.GetNodeDescription(factory);
+            yield return Styling.SetFrameStyle.GetNodeDescription(factory);
 
             // Layout
             yield return Row.GetNodeDescription(factory);

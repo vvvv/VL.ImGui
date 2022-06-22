@@ -84,6 +84,9 @@ namespace VL.ImGui.Generator
             var name = attrData.GetValueOrDefault("Name").Value as string ?? typeSymbol.Name;
             var category = attrData.GetValueOrDefault("Category").Value as string ?? "ImGui";
             var tags = attrData.GetValueOrDefault("Tags").Value as string;
+            var fragmented = "true";
+            if (attrData.GetValueOrDefault("Fragmented").Value is bool f)
+                fragmented = f ? "true" : "false";
 
             var root = declarationSyntax.SyntaxTree.GetCompilationUnitRoot();
             var declaredUsings = root.Usings;
@@ -123,7 +126,7 @@ namespace {typeSymbol.ContainingNamespace}
     {{
         internal static IVLNodeDescription GetNodeDescription(IVLNodeDescriptionFactory factory)
         {{
-            return factory.NewNodeDescription(""{name}"", ""{category}"", fragmented: true, invalidated: default, init: _c =>
+            return factory.NewNodeDescription(""{name}"", ""{category}"", fragmented: {fragmented}, invalidated: default, init: _c =>
             {{
                 var _w = new {typeSymbol.Name}();
                 var _inputs = new IVLPinDescription[]

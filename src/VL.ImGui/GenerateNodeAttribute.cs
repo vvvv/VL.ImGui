@@ -11,5 +11,7 @@ namespace VL.ImGui
         public string? Category { get; set; }
 
         public string? Tags { get; set; }
+
+        public bool Fragmented { get; set; }
     }
 }

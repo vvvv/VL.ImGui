@@ -5,7 +5,12 @@ VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VL.ImGui", "VL.ImGui\VL.ImGui.csproj", "{9B536FAF-7132-4DEC-9E0B-0F31DF542007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.ImGui.Generator", "VL.ImGui.Generator\VL.ImGui.Generator.csproj", "{6A9E0F1F-F2CF-4DF4-B087-0D686182BCE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VL.ImGui.Generator", "VL.ImGui.Generator\VL.ImGui.Generator.csproj", "{6A9E0F1F-F2CF-4DF4-B087-0D686182BCE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DEBF62DC-670E-44C4-B4EC-BF55AE853100}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
