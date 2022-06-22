@@ -17,14 +17,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             ImGuiNET.ImGui.SetTooltip(Text ?? string.Empty);
-            try
-            {
-                context.Update(Input);
-            }
-            finally
-            {
-                // TODO: Finally?
-            }
+            context.Update(Input);
         }
     }
 }

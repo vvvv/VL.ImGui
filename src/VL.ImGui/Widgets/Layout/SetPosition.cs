@@ -19,14 +19,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             ImGuiNET.ImGui.SetCursorPos(Position.ToImGui());
-            try
-            {
-                context.Update(Input);
-            }
-            finally
-            {
-                // TODO: Finally?
-            }
+            context.Update(Input);
         }
     }
 }

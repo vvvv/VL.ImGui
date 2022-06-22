@@ -17,14 +17,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             ImGuiNET.ImGui.AlignTextToFramePadding();
-            try
-            {
-                context.Update(Input);
-            }
-            finally
-            {
-                // TODO: Empty Finally?
-            }
+            context.Update(Input);
         }
     }
 }
