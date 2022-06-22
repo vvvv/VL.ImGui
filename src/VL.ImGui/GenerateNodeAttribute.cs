@@ -7,5 +7,9 @@ namespace VL.ImGui
     public class GenerateNodeAttribute : Attribute
     {
         public string? Name { get; set; }
+
+        public string? Category { get; set; }
+
+        public string? Tags { get; set; }
     }
 }

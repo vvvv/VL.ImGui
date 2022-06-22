@@ -66,21 +66,32 @@ namespace VL.ImGui.Generator
             {
                 var semanticModel = compilation.GetSemanticModel(syntax.SyntaxTree);
                 var classSymbol = semanticModel.GetDeclaredSymbol(syntax);
-                var attributeData = classSymbol?.GetAttributes().FirstOrDefault(d => d.AttributeClass?.Equals(attributeSymbol, SymbolEqualityComparer.Default) == true);
-                var data = attributeData.NamedArguments.ToImmutableDictionary(kv => kv.Key, kv => kv.Value);
-                var source = CreateSource(context, syntax, semanticModel, classSymbol, data.GetValueOrDefault("Name").Value as string);
+                var data = GetAttributeData(attributeSymbol, classSymbol);
+                var source = CreateSource(context, syntax, semanticModel, classSymbol, data);
                 context.AddSource($"{syntax.Identifier}.g.cs", source);
             }
         }
 
-        private static string CreateSource(SourceProductionContext context, ClassDeclarationSyntax declarationSyntax, SemanticModel semanticModel, INamedTypeSymbol typeSymbol, string name)
+        private static ImmutableDictionary<string, TypedConstant> GetAttributeData(INamedTypeSymbol attributeSymbol, INamedTypeSymbol classSymbol)
         {
+            var attributeData = classSymbol?.GetAttributes().FirstOrDefault(d => d.AttributeClass?.Equals(attributeSymbol, SymbolEqualityComparer.Default) == true);
+            var data = attributeData.NamedArguments.ToImmutableDictionary(kv => kv.Key, kv => kv.Value);
+            return data;
+        }
+
+        private static string CreateSource(SourceProductionContext context, ClassDeclarationSyntax declarationSyntax, SemanticModel semanticModel, INamedTypeSymbol typeSymbol, ImmutableDictionary<string, TypedConstant> attrData)
+        {
+            var name = attrData.GetValueOrDefault("Name").Value as string ?? typeSymbol.Name;
+            var category = attrData.GetValueOrDefault("Category").Value as string ?? "ImGui";
+            var tags = attrData.GetValueOrDefault("Tags").Value as string;
+
             var root = declarationSyntax.SyntaxTree.GetCompilationUnitRoot();
             var declaredUsings = root.Usings;
             foreach (var ns in root.Members.OfType<NamespaceDeclarationSyntax>())
                 declaredUsings = declaredUsings.AddRange(ns.Usings);
 
             var documentationAttributeSymbol = semanticModel.Compilation.GetTypeByMetadataName(DocumentationAttributeMetadataName);
+            var summary = GetSummary(documentationAttributeSymbol, typeSymbol);
 
             var indent = "                    ";
             var indent2 = "                        ";
@@ -90,11 +101,10 @@ namespace VL.ImGui.Generator
             var outputs = new List<string>();
             foreach (var property in typeSymbol.GetMembers().OfType<IPropertySymbol>())
             {
-                var attributeData = property.GetAttributes().FirstOrDefault(d => d.AttributeClass.Equals(documentationAttributeSymbol, SymbolEqualityComparer.Default));
-                var summary = (attributeData?.ConstructorArguments[0].Value as string)?.Replace("\"", "\\\"");
+                string propertySummary = GetSummary(documentationAttributeSymbol, property);
                 if (property.SetMethod != null && property.SetMethod.DeclaredAccessibility == Accessibility.Public)
                 {
-                    inputDescriptions.Add($"_c.Input(\"{ToUserName(property.Name)}\", _w.{property.Name}, summary: \"{summary}\"),");
+                    inputDescriptions.Add($"_c.Input(\"{ToUserName(property.Name)}\", _w.{property.Name}, summary: \"{propertySummary}\"),");
                     inputs.Add($"c.Input(v => s.{property.Name} = v, s.{property.Name}),");
                 }
                 else if (property.GetMethod != null && property.GetMethod.DeclaredAccessibility == Accessibility.Public)
@@ -113,7 +123,7 @@ namespace {typeSymbol.ContainingNamespace}
     {{
         internal static IVLNodeDescription GetNodeDescription(IVLNodeDescriptionFactory factory)
         {{
-            return factory.NewNodeDescription(""{name ?? typeSymbol.Name}"", ""ImGui"", fragmented: true, _c =>
+            return factory.NewNodeDescription(""{name}"", ""{category}"", fragmented: true, invalidated: default, init: _c =>
             {{
                 var _w = new {typeSymbol.Name}();
                 var _inputs = new[]
@@ -140,12 +150,19 @@ namespace {typeSymbol.ContainingNamespace}
                         {string.Join($"{Environment.NewLine}{indent2}", outputs)}
                     }};
                     return c.Node(inputs, outputs);
-                }});
-            }});
+                }}, summary: ""{summary}"");
+            }}, tags: ""{tags}"");
         }}
     }}
 }}
 ";
+        }
+
+        private static string GetSummary(INamedTypeSymbol documentationAttributeSymbol, ISymbol property)
+        {
+            var attributeData = property.GetAttributes().FirstOrDefault(d => d.AttributeClass.Equals(documentationAttributeSymbol, SymbolEqualityComparer.Default));
+            var summary = (attributeData?.ConstructorArguments[0].Value as string)?.Replace("\"", "\\\"");
+            return summary;
         }
 
         // Doesn't work :( It seems VS is not passing that information in
