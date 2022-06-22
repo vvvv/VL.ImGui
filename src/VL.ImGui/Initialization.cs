@@ -28,20 +28,106 @@ namespace VL.ImGui
         static IEnumerable<IVLNodeDescription> GetNodes(IVLNodeDescriptionFactory factory)
         {
             yield return DemoWindow.GetNodeDescription(factory);
-            yield return Window.GetNodeDescription(factory);
 
-            yield return Group.GetNodeDescription(factory);
-
-            yield return SliderFloat.GetNodeDescription(factory);
             yield return ObjectEditor.GetNodeDescription(factory);
 
             yield return SkiaWidget.GetNodeDescription(factory);
 
-            // Observable In, Subject Out
-            yield return SliderFloatObservable.GetNodeDescription(factory);
+            //Slider
+            yield return SliderFloat.GetNodeDescription(factory);
+            yield return SliderFloatVertical.GetNodeDescription(factory);
+            yield return SliderInt.GetNodeDescription(factory);
+            yield return SliderIntVertical.GetNodeDescription(factory);
+            yield return SliderVector2.GetNodeDescription(factory);
+            yield return SliderVector3.GetNodeDescription(factory);
+            yield return SliderVector4.GetNodeDescription(factory);
+            //Dropdown
+            yield return Combo.GetNodeDescription(factory);
 
-            // Subjct in
-            yield return SliderFloatSubject.GetNodeDescription(factory);
+            // Windows
+            yield return Window.GetNodeDescription(factory);
+            yield return ChildWindow.GetNodeDescription(factory);
+
+            // Buttons
+            yield return Button.GetNodeDescription(factory);
+            yield return InvisibleButton.GetNodeDescription(factory);
+            yield return Selectable.GetNodeDescription(factory);
+            yield return ArrowButton.GetNodeDescription(factory);
+
+            // Checkbox
+            yield return Checkbox.GetNodeDescription(factory);
+
+            // Radiobutton
+            yield return RadioButton.GetNodeDescription(factory);
+
+            // Separator
+            yield return Separator.GetNodeDescription(factory);
+
+            // Dummy
+            yield return Dummy.GetNodeDescription(factory);
+
+            // Input
+            yield return InputFloat.GetNodeDescription(factory);
+            yield return InputInt.GetNodeDescription(factory);
+
+            // Style
+            yield return SetStyleColor.GetNodeDescription(factory);
+            yield return SetStyleVarFloat.GetNodeDescription(factory);
+            yield return SetStyleVarVector.GetNodeDescription(factory);
+
+            // Layout
+            yield return Row.GetNodeDescription(factory);
+            yield return Column.GetNodeDescription(factory);
+            yield return SameLine.GetNodeDescription(factory);
+            yield return SetIndent.GetNodeDescription(factory);
+            yield return SetWidth.GetNodeDescription(factory);
+            yield return SetNextWindowContentSize.GetNodeDescription(factory);
+            yield return SetID.GetNodeDescription(factory);
+            yield return SetAlignTextToFramePadding.GetNodeDescription(factory);
+            yield return CalcTextSize.GetNodeDescription(factory);
+            yield return CalcItemWidth.GetNodeDescription(factory);
+            yield return GetItemRectSize.GetNodeDescription(factory);
+            yield return GetItemRectMin.GetNodeDescription(factory);
+            yield return GetItemRectMax.GetNodeDescription(factory);
+            yield return GetWindowSize.GetNodeDescription(factory);
+            yield return GetCursorPos.GetNodeDescription(factory);
+            yield return GetContentRegionAvail.GetNodeDescription(factory);
+            yield return GetContentRegionMax.GetNodeDescription(factory);
+            yield return Bullet.GetNodeDescription(factory);
+            yield return SetPosition.GetNodeDescription(factory);
+            yield return Spacing.GetNodeDescription(factory);
+
+            // Text
+            yield return TextWidget.GetNodeDescription(factory);
+            yield return SetTextWrapPosition.GetNodeDescription(factory);
+
+            // Input
+            yield return InputText.GetNodeDescription(factory);
+            yield return InputTextMultiline.GetNodeDescription(factory);
+            yield return InputTextWithHint.GetNodeDescription(factory);
+
+            //Tooltips
+            yield return SetTooltipText.GetNodeDescription(factory);
+            yield return SetTooltipWidget.GetNodeDescription(factory);
+
+            // Table
+            yield return Table.GetNodeDescription(factory);
+            yield return TableNextColumn.GetNodeDescription(factory);
+            yield return TableSetupColumn.GetNodeDescription(factory);
+
+            // Behaviour
+            yield return IsItemClicked.GetNodeDescription(factory);
+            yield return IsItemHovered.GetNodeDescription(factory);
+
+            // Color
+            yield return ColorEdit.GetNodeDescription(factory);
+            yield return ColorPicker.GetNodeDescription(factory);
+
+            //Plotting
+            yield return PlotHistogram.GetNodeDescription(factory);
+            yield return PlotLines.GetNodeDescription(factory);
+            yield return ProgressBar.GetNodeDescription(factory);
+
         }
     }
 

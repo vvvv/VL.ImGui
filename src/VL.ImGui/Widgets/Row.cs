@@ -7,13 +7,13 @@ using VL.Core;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode]
-    internal sealed partial class Group : Widget
+    internal sealed partial class Row : Widget
     {
         public IEnumerable<Widget> Children { get; set; } = Enumerable.Empty<Widget>();
 
         internal override void Update(Context context)
         {
-            var count = Children.Count();
+            var count = Children.Count(x => x != null);
             if (count > 0)
             {
                 var width = ImGuiNET.ImGui.GetContentRegionAvail().X / count;
@@ -28,7 +28,7 @@ namespace VL.ImGui.Widgets
                         if (i++ > 0)
                             ImGuiNET.ImGui.SameLine();
                         if (child is null)
-                            ImGuiNET.ImGui.Dummy(new System.Numerics.Vector2(width, 0.1f));
+                            continue;
                         else
                             context.Update(child);
                     }

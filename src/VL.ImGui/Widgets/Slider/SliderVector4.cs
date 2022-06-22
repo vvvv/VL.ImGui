@@ -4,27 +4,13 @@ using System.Reactive.Disposables;
 using System.Reactive.Subjects;
 using System.Text;
 using VL.Core;
+using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Slider (Float)")]
-    internal partial class SliderFloat : Widget
+    [GenerateNode(Name = "Slider (Vector4)")]
+    internal partial class SliderVector4 : Widget
     {
-        private float _value;
-
-        public float Value
-        {
-            get => ObservableValue.Value;
-            set
-            {
-                if (value != _value)
-                {
-                    _value = value;
-                    ObservableValue.OnNext(value);
-                }
-            }
-        }
-
         public string? Label { get; set; }
 
         public float Min { private get; set; } = 0f;
@@ -36,13 +22,13 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public BehaviorSubject<float> ObservableValue { get; } = new BehaviorSubject<float>(0f);
+        public BehaviorSubject<Vector4> Value { get; } = new BehaviorSubject<Vector4>(Vector4.Zero);
 
         internal override void Update(Context context)
         {
-            var value = ObservableValue.Value;
-            if (ImGuiNET.ImGui.SliderFloat(Label ?? string.Empty, ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                ObservableValue.OnNext(value);
+            var value = Value.Value.ToImGui();
+            if (ImGuiNET.ImGui.SliderFloat4(Label ?? string.Empty, ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
+                Value.OnNext(value.ToVL());
         }
     }
 }
