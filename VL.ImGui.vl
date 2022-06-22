@@ -335,6 +335,24 @@
           <ProcessDefinition Id="HX5AvRUrPfJQEk5jYZWPdZ" IsHidden="true" />
         </Patch>
       </Node>
+      <!--
+
+    ************************ ImGuiInputTextFlags ************************
+
+-->
+      <Node Name="ImGuiInputTextFlags" Bounds="834,489" Id="IUvIDbJaknkMwiZ4C8A3Zf">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+          <Choice Kind="TypeFlag" Name="ImGuiInputTextFlags" />
+        </p:TypeAnnotation>
+        <Patch Id="BtN8TZO0A3dO3CxRebnTGt">
+          <Canvas Id="AmnJFEPJ93ZOgApeRJnzvg" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="TZdywBIJiXcNtHvGnVaDrp" IsHidden="true" />
+        </Patch>
+      </Node>
     </Canvas>
     <!--
 
