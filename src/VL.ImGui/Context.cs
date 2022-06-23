@@ -6,7 +6,7 @@ namespace VL.ImGui
 {
     using ImGui = ImGuiNET.ImGui;
 
-    internal class Context : IDisposable
+    public class Context : IDisposable
     {
         private readonly IntPtr _context;
         private readonly List<Widget> _widgetsToReset = new List<Widget>();

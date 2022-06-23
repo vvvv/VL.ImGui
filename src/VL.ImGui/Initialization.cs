@@ -25,110 +25,223 @@ namespace VL.ImGui
             }));
         }
 
+    
+
         static IEnumerable<IVLNodeDescription> GetNodes(IVLNodeDescriptionFactory factory)
         {
-            yield return DemoWindow.GetNodeDescription(factory);
+            yield return DemoWindow.GetNodeDescription_RetainedMode(factory);
 
-            yield return ObjectEditor.GetNodeDescription(factory);
+            yield return ObjectEditor.GetNodeDescription_RetainedMode(factory);
 
-            yield return SkiaWidget.GetNodeDescription(factory);
+            yield return SkiaWidget.GetNodeDescription_RetainedMode(factory);
 
             //Slider
-            yield return SliderFloat.GetNodeDescription(factory);
-            yield return SliderFloatVertical.GetNodeDescription(factory);
-            yield return SliderInt.GetNodeDescription(factory);
-            yield return SliderIntVertical.GetNodeDescription(factory);
-            yield return SliderVector2.GetNodeDescription(factory);
-            yield return SliderVector3.GetNodeDescription(factory);
-            yield return SliderVector4.GetNodeDescription(factory);
+            yield return SliderFloat.GetNodeDescription_RetainedMode(factory);
+            yield return SliderFloatVertical.GetNodeDescription_RetainedMode(factory);
+            yield return SliderInt.GetNodeDescription_RetainedMode(factory);
+            yield return SliderIntVertical.GetNodeDescription_RetainedMode(factory);
+            yield return SliderVector2.GetNodeDescription_RetainedMode(factory);
+            yield return SliderVector3.GetNodeDescription_RetainedMode(factory);
+            yield return SliderVector4.GetNodeDescription_RetainedMode(factory);
             //Dropdown
-            yield return Combo.GetNodeDescription(factory);
+            yield return Combo.GetNodeDescription_RetainedMode(factory);
 
             // Windows
-            yield return Window.GetNodeDescription(factory);
-            yield return ChildWindow.GetNodeDescription(factory);
+            yield return Window.GetNodeDescription_RetainedMode(factory);
+            yield return ChildWindow.GetNodeDescription_RetainedMode(factory);
 
             // Buttons
-            yield return Button.GetNodeDescription(factory);
-            yield return InvisibleButton.GetNodeDescription(factory);
-            yield return Selectable.GetNodeDescription(factory);
-            yield return ArrowButton.GetNodeDescription(factory);
+            yield return Button.GetNodeDescription_RetainedMode(factory);
+            yield return InvisibleButton.GetNodeDescription_RetainedMode(factory);
+            yield return Selectable.GetNodeDescription_RetainedMode(factory);
+            yield return ArrowButton.GetNodeDescription_RetainedMode(factory);
 
             // Checkbox
-            yield return Checkbox.GetNodeDescription(factory);
+            yield return Checkbox.GetNodeDescription_RetainedMode(factory);
 
             // Radiobutton
-            yield return RadioButton.GetNodeDescription(factory);
+            yield return RadioButton.GetNodeDescription_RetainedMode(factory);
 
             // Separator
-            yield return Separator.GetNodeDescription(factory);
+            yield return Separator.GetNodeDescription_RetainedMode(factory);
 
             // Dummy
-            yield return Dummy.GetNodeDescription(factory);
+            yield return Dummy.GetNodeDescription_RetainedMode(factory);
 
             // Input
-            yield return InputFloat.GetNodeDescription(factory);
-            yield return InputInt.GetNodeDescription(factory);
+            yield return InputFloat.GetNodeDescription_RetainedMode(factory);
+            yield return InputInt.GetNodeDescription_RetainedMode(factory);
 
             // Style
-            yield return SetStyleColor.GetNodeDescription(factory);
-            yield return SetStyleVarFloat.GetNodeDescription(factory);
-            yield return SetStyleVarVector.GetNodeDescription(factory);
-            yield return Styling.SetFrameStyle.GetNodeDescription(factory);
+            yield return SetStyleColor.GetNodeDescription_RetainedMode(factory);
+            yield return SetStyleVarFloat.GetNodeDescription_RetainedMode(factory);
+            yield return SetStyleVarVector.GetNodeDescription_RetainedMode(factory);
+            yield return Styling.SetFrameStyle.GetNodeDescription_RetainedMode(factory);
 
             // Layout
-            yield return Row.GetNodeDescription(factory);
-            yield return Column.GetNodeDescription(factory);
-            yield return SameLine.GetNodeDescription(factory);
-            yield return SetIndent.GetNodeDescription(factory);
-            yield return SetWidth.GetNodeDescription(factory);
-            yield return SetNextWindowContentSize.GetNodeDescription(factory);
-            yield return SetID.GetNodeDescription(factory);
-            yield return SetAlignTextToFramePadding.GetNodeDescription(factory);
-            yield return CalcTextSize.GetNodeDescription(factory);
-            yield return CalcItemWidth.GetNodeDescription(factory);
-            yield return GetItemRectSize.GetNodeDescription(factory);
-            yield return GetItemRectMin.GetNodeDescription(factory);
-            yield return GetItemRectMax.GetNodeDescription(factory);
-            yield return GetWindowSize.GetNodeDescription(factory);
-            yield return GetCursorPos.GetNodeDescription(factory);
-            yield return GetContentRegionAvail.GetNodeDescription(factory);
-            yield return GetContentRegionMax.GetNodeDescription(factory);
-            yield return Bullet.GetNodeDescription(factory);
-            yield return SetPosition.GetNodeDescription(factory);
-            yield return Spacing.GetNodeDescription(factory);
+            yield return Row.GetNodeDescription_RetainedMode(factory);
+            yield return Column.GetNodeDescription_RetainedMode(factory);
+            yield return SameLine.GetNodeDescription_RetainedMode(factory);
+            yield return SetIndent.GetNodeDescription_RetainedMode(factory);
+            yield return SetWidth.GetNodeDescription_RetainedMode(factory);
+            yield return SetNextWindowContentSize.GetNodeDescription_RetainedMode(factory);
+            yield return SetID.GetNodeDescription_RetainedMode(factory);
+            yield return SetAlignTextToFramePadding.GetNodeDescription_RetainedMode(factory);
+            yield return CalcTextSize.GetNodeDescription_RetainedMode(factory);
+            yield return CalcItemWidth.GetNodeDescription_RetainedMode(factory);
+            yield return GetItemRectSize.GetNodeDescription_RetainedMode(factory);
+            yield return GetItemRectMin.GetNodeDescription_RetainedMode(factory);
+            yield return GetItemRectMax.GetNodeDescription_RetainedMode(factory);
+            yield return GetWindowSize.GetNodeDescription_RetainedMode(factory);
+            yield return GetCursorPos.GetNodeDescription_RetainedMode(factory);
+            yield return GetContentRegionAvail.GetNodeDescription_RetainedMode(factory);
+            yield return GetContentRegionMax.GetNodeDescription_RetainedMode(factory);
+            yield return Bullet.GetNodeDescription_RetainedMode(factory);
+            yield return SetPosition.GetNodeDescription_RetainedMode(factory);
+            yield return Spacing.GetNodeDescription_RetainedMode(factory);
 
             // Text
-            yield return TextWidget.GetNodeDescription(factory);
-            yield return SetTextWrapPosition.GetNodeDescription(factory);
+            yield return TextWidget.GetNodeDescription_RetainedMode(factory);
+            yield return SetTextWrapPosition.GetNodeDescription_RetainedMode(factory);
 
             // Input
-            yield return InputText.GetNodeDescription(factory);
-            yield return InputTextMultiline.GetNodeDescription(factory);
-            yield return InputTextWithHint.GetNodeDescription(factory);
+            yield return InputText.GetNodeDescription_RetainedMode(factory);
+            yield return InputTextMultiline.GetNodeDescription_RetainedMode(factory);
+            yield return InputTextWithHint.GetNodeDescription_RetainedMode(factory);
 
             //Tooltips
-            yield return SetTooltipText.GetNodeDescription(factory);
-            yield return SetTooltipWidget.GetNodeDescription(factory);
+            yield return SetTooltipText.GetNodeDescription_RetainedMode(factory);
+            yield return SetTooltipWidget.GetNodeDescription_RetainedMode(factory);
 
             // Table
-            yield return Table.GetNodeDescription(factory);
-            yield return TableNextColumn.GetNodeDescription(factory);
-            yield return TableSetupColumn.GetNodeDescription(factory);
+            yield return Table.GetNodeDescription_RetainedMode(factory);
+            yield return TableNextColumn.GetNodeDescription_RetainedMode(factory);
+            yield return TableSetupColumn.GetNodeDescription_RetainedMode(factory);
 
             // Behaviour
-            yield return IsItemClicked.GetNodeDescription(factory);
-            yield return IsItemHovered.GetNodeDescription(factory);
+            yield return IsItemClicked.GetNodeDescription_RetainedMode(factory);
+            yield return IsItemHovered.GetNodeDescription_RetainedMode(factory);
 
             // Color
-            yield return ColorEdit.GetNodeDescription(factory);
-            yield return ColorPicker.GetNodeDescription(factory);
+            yield return ColorEdit.GetNodeDescription_RetainedMode(factory);
+            yield return ColorPicker.GetNodeDescription_RetainedMode(factory);
 
             //Plotting
-            yield return PlotHistogram.GetNodeDescription(factory);
-            yield return PlotLines.GetNodeDescription(factory);
-            yield return ProgressBar.GetNodeDescription(factory);
+            yield return PlotHistogram.GetNodeDescription_RetainedMode(factory);
+            yield return PlotLines.GetNodeDescription_RetainedMode(factory);
+            yield return ProgressBar.GetNodeDescription_RetainedMode(factory);
 
+
+
+
+            //////
+            yield return ImmediateModeWidget.GetNodeDescription_RetainedMode(factory);
+            //////
+
+
+
+
+            yield return DemoWindow.GetNodeDescription_ImmediateMode(factory);
+
+            yield return ObjectEditor.GetNodeDescription_ImmediateMode(factory);
+
+            yield return SkiaWidget.GetNodeDescription_ImmediateMode(factory);
+
+            //Slider
+            yield return SliderFloat.GetNodeDescription_ImmediateMode(factory);
+            yield return SliderFloatVertical.GetNodeDescription_ImmediateMode(factory);
+            yield return SliderInt.GetNodeDescription_ImmediateMode(factory);
+            yield return SliderIntVertical.GetNodeDescription_ImmediateMode(factory);
+            yield return SliderVector2.GetNodeDescription_ImmediateMode(factory);
+            yield return SliderVector3.GetNodeDescription_ImmediateMode(factory);
+            yield return SliderVector4.GetNodeDescription_ImmediateMode(factory);
+            //Dropdown
+            yield return Combo.GetNodeDescription_ImmediateMode(factory);
+
+            // Windows
+            yield return Window.GetNodeDescription_ImmediateMode(factory);
+            yield return ChildWindow.GetNodeDescription_ImmediateMode(factory);
+
+            // Buttons
+            yield return Button.GetNodeDescription_ImmediateMode(factory);
+            yield return InvisibleButton.GetNodeDescription_ImmediateMode(factory);
+            yield return Selectable.GetNodeDescription_ImmediateMode(factory);
+            yield return ArrowButton.GetNodeDescription_ImmediateMode(factory);
+
+            // Checkbox
+            yield return Checkbox.GetNodeDescription_ImmediateMode(factory);
+
+            // Radiobutton
+            yield return RadioButton.GetNodeDescription_ImmediateMode(factory);
+
+            // Separator
+            yield return Separator.GetNodeDescription_ImmediateMode(factory);
+
+            // Dummy
+            yield return Dummy.GetNodeDescription_ImmediateMode(factory);
+
+            // Input
+            yield return InputFloat.GetNodeDescription_ImmediateMode(factory);
+            yield return InputInt.GetNodeDescription_ImmediateMode(factory);
+
+            // Style
+            yield return SetStyleColor.GetNodeDescription_ImmediateMode(factory);
+            yield return SetStyleVarFloat.GetNodeDescription_ImmediateMode(factory);
+            yield return SetStyleVarVector.GetNodeDescription_ImmediateMode(factory);
+            yield return Styling.SetFrameStyle.GetNodeDescription_ImmediateMode(factory);
+
+            // Layout
+            yield return Row.GetNodeDescription_ImmediateMode(factory);
+            yield return Column.GetNodeDescription_ImmediateMode(factory);
+            yield return SameLine.GetNodeDescription_ImmediateMode(factory);
+            yield return SetIndent.GetNodeDescription_ImmediateMode(factory);
+            yield return SetWidth.GetNodeDescription_ImmediateMode(factory);
+            yield return SetNextWindowContentSize.GetNodeDescription_ImmediateMode(factory);
+            yield return SetID.GetNodeDescription_ImmediateMode(factory);
+            yield return SetAlignTextToFramePadding.GetNodeDescription_ImmediateMode(factory);
+            yield return CalcTextSize.GetNodeDescription_ImmediateMode(factory);
+            yield return CalcItemWidth.GetNodeDescription_ImmediateMode(factory);
+            yield return GetItemRectSize.GetNodeDescription_ImmediateMode(factory);
+            yield return GetItemRectMin.GetNodeDescription_ImmediateMode(factory);
+            yield return GetItemRectMax.GetNodeDescription_ImmediateMode(factory);
+            yield return GetWindowSize.GetNodeDescription_ImmediateMode(factory);
+            yield return GetCursorPos.GetNodeDescription_ImmediateMode(factory);
+            yield return GetContentRegionAvail.GetNodeDescription_ImmediateMode(factory);
+            yield return GetContentRegionMax.GetNodeDescription_ImmediateMode(factory);
+            yield return Bullet.GetNodeDescription_ImmediateMode(factory);
+            yield return SetPosition.GetNodeDescription_ImmediateMode(factory);
+            yield return Spacing.GetNodeDescription_ImmediateMode(factory);
+
+            // Text
+            yield return TextWidget.GetNodeDescription_ImmediateMode(factory);
+            yield return SetTextWrapPosition.GetNodeDescription_ImmediateMode(factory);
+
+            // Input
+            yield return InputText.GetNodeDescription_ImmediateMode(factory);
+            yield return InputTextMultiline.GetNodeDescription_ImmediateMode(factory);
+            yield return InputTextWithHint.GetNodeDescription_ImmediateMode(factory);
+
+            //Tooltips
+            yield return SetTooltipText.GetNodeDescription_ImmediateMode(factory);
+            yield return SetTooltipWidget.GetNodeDescription_ImmediateMode(factory);
+
+            // Table
+            yield return Table.GetNodeDescription_ImmediateMode(factory);
+            yield return TableNextColumn.GetNodeDescription_ImmediateMode(factory);
+            yield return TableSetupColumn.GetNodeDescription_ImmediateMode(factory);
+
+            // Behaviour
+            yield return IsItemClicked.GetNodeDescription_ImmediateMode(factory);
+            yield return IsItemHovered.GetNodeDescription_ImmediateMode(factory);
+
+            // Color
+            yield return ColorEdit.GetNodeDescription_ImmediateMode(factory);
+            yield return ColorPicker.GetNodeDescription_ImmediateMode(factory);
+
+            //Plotting
+            yield return PlotHistogram.GetNodeDescription_ImmediateMode(factory);
+            yield return PlotLines.GetNodeDescription_ImmediateMode(factory);
+            yield return ProgressBar.GetNodeDescription_ImmediateMode(factory);
         }
     }
 
