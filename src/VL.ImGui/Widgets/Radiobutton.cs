@@ -10,16 +10,18 @@ namespace VL.ImGui.Widgets
     [GenerateNode]
     internal partial class RadioButton : Widget
     {
-
         public string? Label { get; set; }
 
-        public BehaviorSubject<Boolean> Value { get; } = new BehaviorSubject<Boolean>(false);
+        public int Index { get; set; }
+
+        public BehaviorSubject<int> Value { get; set; } = new BehaviorSubject<int>(-1);
 
         internal override void Update(Context context)
         {
             var value = Value.Value;
-            if (ImGuiNET.ImGui.RadioButton(Label ?? string.Empty, value))
-                Value.OnNext(value);
+            if (ImGuiNET.ImGui.RadioButton(Label ?? string.Empty, ref value, Index))
+                if (value == Index) // radio button not only changed but got turned on
+                    Value.OnNext(value);
         }
     }
 }
