@@ -81,6 +81,7 @@ namespace VL.ImGui
             // Layout
             yield return Row.GetNodeDescription_RetainedMode(factory);
             yield return Column.GetNodeDescription_RetainedMode(factory);
+            yield return Fold.GetNodeDescription_RetainedMode(factory);
             yield return SameLine.GetNodeDescription_RetainedMode(factory);
             yield return SetIndent.GetNodeDescription_RetainedMode(factory);
             yield return SetWidth.GetNodeDescription_RetainedMode(factory);
@@ -139,6 +140,12 @@ namespace VL.ImGui
             //////
 
 
+            //////
+            yield return RetainedModeWidget.GetNodeDescription_ImmediateMode(factory);
+            //////
+
+
+
 
 
             yield return DemoWindow.GetNodeDescription_ImmediateMode(factory);
@@ -159,8 +166,8 @@ namespace VL.ImGui
             yield return Combo.GetNodeDescription_ImmediateMode(factory);
 
             // Windows
-            yield return Window.GetNodeDescription_ImmediateMode(factory);
-            yield return ChildWindow.GetNodeDescription_ImmediateMode(factory);
+            //yield return Window.GetNodeDescription_ImmediateMode(factory);
+            //yield return ChildWindow.GetNodeDescription_ImmediateMode(factory);
 
             // Buttons
             yield return Button.GetNodeDescription_ImmediateMode(factory);
@@ -191,8 +198,9 @@ namespace VL.ImGui
             yield return Styling.SetFrameStyle.GetNodeDescription_ImmediateMode(factory);
 
             // Layout
-            yield return Row.GetNodeDescription_ImmediateMode(factory);
-            yield return Column.GetNodeDescription_ImmediateMode(factory);
+            //yield return Row.GetNodeDescription_ImmediateMode(factory);
+            //yield return Column.GetNodeDescription_ImmediateMode(factory);
+            //yield return Fold.GetNodeDescription_ImmediateMode(factory);
             yield return SameLine.GetNodeDescription_ImmediateMode(factory);
             yield return SetIndent.GetNodeDescription_ImmediateMode(factory);
             yield return SetWidth.GetNodeDescription_ImmediateMode(factory);
@@ -222,11 +230,11 @@ namespace VL.ImGui
             yield return InputTextWithHint.GetNodeDescription_ImmediateMode(factory);
 
             //Tooltips
-            yield return SetTooltipText.GetNodeDescription_ImmediateMode(factory);
-            yield return SetTooltipWidget.GetNodeDescription_ImmediateMode(factory);
+            //yield return SetTooltipText.GetNodeDescription_ImmediateMode(factory);
+            //yield return SetTooltipWidget.GetNodeDescription_ImmediateMode(factory);
 
             // Table
-            yield return Table.GetNodeDescription_ImmediateMode(factory);
+            //yield return Table.GetNodeDescription_ImmediateMode(factory);
             yield return TableNextColumn.GetNodeDescription_ImmediateMode(factory);
             yield return TableSetupColumn.GetNodeDescription_ImmediateMode(factory);
 
