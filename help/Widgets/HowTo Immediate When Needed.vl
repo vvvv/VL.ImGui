@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0101-f1a20d5b10" Version="0.128">
+<Document xmlns:p="property" Id="A8kL3B3HhB1LSuNYt30zFO" LanguageVersion="2022.5.0-0101-f1a20d5b10" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -27,7 +27,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1354, 294, 426, 658" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1652, 382, 426, 658" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -177,7 +177,7 @@
             <ControlPoint Id="QYGYHnrJwBHOExk4CTcjWY" Bounds="211,238" Alignment="Top" />
             <Pin Id="Hnt7HbHom4WLOe7vwez2y3" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="759,372,214,138" Id="AdpGoLWRYSTNHSjZwCGG8V">
+          <Node Bounds="759,362,230,148" Id="AdpGoLWRYSTNHSjZwCGG8V">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImmediateMode" />
@@ -218,6 +218,16 @@
                 <Pin Id="CiXtDzJWXhuNslLXZ9ajyV" Name="Enabled" Kind="InputPin" />
                 <Pin Id="S8F0rmafQ7ZQVO5lkUvtWP" Name="Output" Kind="OutputPin" />
               </Node>
+              <Node Bounds="916,385,61,19" Id="M4rAPZXynVWOoUZiU40Fi8">
+                <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Rectangle (Join)" />
+                </p:NodeReference>
+                <Pin Id="P7GAxLj4jepM949LLriwhY" Name="Position" Kind="InputPin" />
+                <Pin Id="JF4e7FrkI3kQW7eRJ4SZJQ" Name="Size" Kind="InputPin" DefaultValue="2, 2" />
+                <Pin Id="VXdnTBW8g6fNsS7QsfeXBt" Name="Anchor" Kind="InputPin" DefaultValue="Center" />
+                <Pin Id="LL5Y59AHDsmPb21H1qw8sM" Name="Output" Kind="OutputPin" />
+              </Node>
             </Patch>
             <ControlPoint Id="V6OMxZVJebdMeYxW2Q6kKm" Bounds="772,378" Alignment="Top" />
             <Pin Id="TtL9imejCNYO69NCtqK6cu" Name="Output" Kind="OutputPin" />
@@ -251,6 +261,7 @@
         <Link Id="R7JGwaRb5mwL9vNAvYsgQJ" Ids="V6OMxZVJebdMeYxW2Q6kKm,OULDwaBP8WoLx44iP2KIBN" />
         <Link Id="NEII6w2iyLDPrHEu46Kmc5" Ids="Hnt7HbHom4WLOe7vwez2y3,UV3U4EYMtMQLgH6FLAhVUR" />
         <Link Id="Rk6VI9LyvSsMbCRtHOl9yP" Ids="TtL9imejCNYO69NCtqK6cu,ATETxQTajGiNklcDQ4p9WS" />
+        <Link Id="S9pgDsZPOf6QC2MuEj5peR" Ids="LL5Y59AHDsmPb21H1qw8sM,HF7zZSgrAEiMMqrpse54Bk" />
       </Patch>
     </Node>
   </Patch>
