@@ -19,7 +19,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1282, 26, 426, 658" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1210, 142, 426, 658" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -32,7 +32,7 @@
             <Pin Id="VtCD3TojbCZNIE3ICe23l6" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="Fi9FymljmNXQYNmU2h76Xz" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="254,272,779,536" Id="G8xiQW5JE0eOj79Avkuv7R">
+          <Node Bounds="254,272,550,536" Id="G8xiQW5JE0eOj79Avkuv7R">
             <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ToSkiaLayer" />
@@ -208,13 +208,17 @@
                 </Patch>
                 <ControlPoint Id="NVeg6TiLkDOMafDhJwoQrT" Bounds="360,334" Alignment="Top" />
               </Node>
-              <Pad Id="HNId2jVhNdjLe1cgdHqiKC" Comment="Window Flags" Bounds="789,300,148,15" ShowValueBox="true" isIOBox="true" Value="NoTitleBar">
-                <p:TypeAnnotation LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
-                  <Choice Kind="TypeFlag" Name="ImGuiWindowFlags" />
-                </p:TypeAnnotation>
-              </Pad>
             </Patch>
           </Node>
+          <Pad Id="QpQiV4ZMYjFLcsLxoQ1hSb" Bounds="858,90,251,177" ShowValueBox="true" isIOBox="true" Value="collapse the Window by clicking that small triangle before &quot;Window&quot;&gt;&gt;&#xD;&#xA;&#xD;&#xA;=&gt; Window region won't execute any more. This is HUGE in terms of performance of bigger applications.">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
@@ -234,7 +238,6 @@
         <Link Id="D8zjCvhTeZnNapgAw5kdOk" Ids="HuvRYWtGXfKL7BaRHKpyHa,PHbzYjcEgxkLVZTDNFciPQ" />
         <Link Id="FHpsi23PqQCOXDKVYD13HK" Ids="V1ivUba1bHZLxW5nD1mMAS,O9zvaK9CmqFLBcLwc6og9k" />
         <Link Id="Jnnm2l6LV01NyX77rZXSTG" Ids="Hnt7HbHom4WLOe7vwez2y3,FEmprmZSMXGOZ6BLW3yl3J" />
-        <Link Id="LqlgRfCJernOggRDUo9jRX" Ids="HNId2jVhNdjLe1cgdHqiKC,HHyqWIRh6ovODxmtWVsBB3" />
         <Link Id="G9Cg6Eo3qHpO8p3OKAfplw" Ids="Iyr0wSDmBGPONVb4F2U3q0,Ud8fxU6vFPtOJL2qBfrfz6" />
         <Link Id="HJtRJo5VtMGNYsIkhpoV3P" Ids="LpneE1vZ6L0MQw2Gn5a2ea,HOdGtGEVJhVOGRyP8adLfk" />
         <Link Id="MKGfDM4GpW9LCfCpTxyjeJ" Ids="LBaYg1uTTmfPnGUwB7zT3D,QGWhYBxJOYXNc3dLhISNcc" />
