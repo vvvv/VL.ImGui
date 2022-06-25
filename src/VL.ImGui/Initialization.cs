@@ -124,10 +124,16 @@ namespace VL.ImGui
             yield return ColorEdit.GetNodeDescription(factory);
             yield return ColorPicker.GetNodeDescription(factory);
 
-            //Plotting
+            // Plotting
             yield return PlotHistogram.GetNodeDescription(factory);
             yield return PlotLines.GetNodeDescription(factory);
             yield return ProgressBar.GetNodeDescription(factory);
+
+            // Menus
+            yield return MenuItem.GetNodeDescription(factory);
+            yield return Menu.GetNodeDescription(factory);
+            yield return MainMenuBar.GetNodeDescription(factory);
+            yield return WindowMenuBar.GetNodeDescription(factory);
 
         }
     }
