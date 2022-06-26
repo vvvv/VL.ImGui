@@ -25,21 +25,15 @@ namespace VL.ImGui.Widgets
 
                 IsVisible = ImGuiNET.ImGui.BeginMainMenuBar();
 
-                try
+                if (IsVisible)
                 {
-                    if (IsVisible)
+                    foreach (var item in Items)
                     {
-                        foreach (var item in Items)
-                        {
-                            if (item is null)
-                                continue;
-                            else
-                                context.Update(item);
-                        }
+                        if (item is null)
+                            continue;
+                        else
+                            context.Update(item);
                     }
-                }
-                finally
-                {
                     ImGuiNET.ImGui.EndMainMenuBar();
                 }
 

@@ -135,6 +135,10 @@ namespace VL.ImGui
             yield return MainMenuBar.GetNodeDescription(factory);
             yield return WindowMenuBar.GetNodeDescription(factory);
 
+            //Popup
+            yield return PopupWindow.GetNodeDescription(factory);
+            yield return OpenPopup.GetNodeDescription(factory);
+
         }
     }
 
