@@ -13,15 +13,15 @@ namespace VL.ImGui.Styling
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false)]
-    internal partial class SetFrameStyle : Widget
+    internal partial class SetWindowStyle : Widget
     {
         public Widget? Input { private get; set; }
 
         public Optional<Color4> Background { private get; set; }
 
-        public Optional<Color4> Hovered { private get; set; }
+        public Optional<Vector2> MinSize { private get; set; }
 
-        public Optional<Color4> Active { private get; set; }
+        public Optional<Vector2> TitleAlign { private get; set; }
 
         public Optional<Vector2> Padding { private get; set; }
 
@@ -41,33 +41,32 @@ namespace VL.ImGui.Styling
                 if (Background.HasValue)
                 {
                     colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.FrameBg, Background.Value.ToImGui());
+                    ImGui.PushStyleColor(ImGuiCol.WindowBg, Background.Value.ToImGui());
                 }
-                if (Active.HasValue)
+                if (MinSize.HasValue)
                 {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.FrameBgActive, Active.Value.ToImGui());
+                    valueCount++;
+                    ImGui.PushStyleVar(ImGuiStyleVar.WindowMinSize, MinSize.Value.ToImGui());
                 }
-                if (Hovered.HasValue)
+                if (TitleAlign.HasValue)
                 {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.FrameBgHovered, Hovered.Value.ToImGui());
+                    valueCount++;
+                    ImGui.PushStyleVar(ImGuiStyleVar.WindowTitleAlign, TitleAlign.Value.ToImGui());
                 }
-
                 if (Padding.HasValue)
                 {
                     valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.FramePadding, Padding.Value.ToImGui());
+                    ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, Padding.Value.ToImGui());
                 }
                 if (Rounding.HasValue)
                 {
                     valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.FrameRounding, Rounding.Value);
+                    ImGui.PushStyleVar(ImGuiStyleVar.WindowRounding, Rounding.Value);
                 }
                 if (BorderSize.HasValue)
                 {
                     valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.FrameBorderSize, BorderSize.Value);
+                    ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, BorderSize.Value);
                 }
 
                 context.Update(Input);

@@ -74,7 +74,13 @@ namespace VL.ImGui
             yield return SetStyleColor.GetNodeDescription(factory);
             yield return SetStyleVarFloat.GetNodeDescription(factory);
             yield return SetStyleVarVector.GetNodeDescription(factory);
+            yield return Styling.SetAlphaStyle.GetNodeDescription(factory);
             yield return Styling.SetFrameStyle.GetNodeDescription(factory);
+            yield return Styling.SetPopupStyle.GetNodeDescription(factory);
+            yield return Styling.SetChildWindowStyle.GetNodeDescription(factory);
+            yield return Styling.SetWindowStyle.GetNodeDescription(factory);
+            yield return Styling.SetIndentStyle.GetNodeDescription(factory);
+            yield return Styling.SetSpacingStyle.GetNodeDescription(factory);
 
             // Layout
             yield return Row.GetNodeDescription(factory);
@@ -143,6 +149,9 @@ namespace VL.ImGui
             yield return TabBar.GetNodeDescription(factory);
             yield return TabItem.GetNodeDescription(factory);
             yield return TabItemButton.GetNodeDescription(factory);
+
+            //Disabling
+            yield return Disabled.GetNodeDescription(factory);
 
         }
     }

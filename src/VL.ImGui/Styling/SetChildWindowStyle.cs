@@ -13,17 +13,11 @@ namespace VL.ImGui.Styling
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false)]
-    internal partial class SetFrameStyle : Widget
+    internal partial class SetChildWindowStyle : Widget
     {
         public Widget? Input { private get; set; }
 
         public Optional<Color4> Background { private get; set; }
-
-        public Optional<Color4> Hovered { private get; set; }
-
-        public Optional<Color4> Active { private get; set; }
-
-        public Optional<Vector2> Padding { private get; set; }
 
         public Optional<float> Rounding { private get; set; }
 
@@ -41,33 +35,17 @@ namespace VL.ImGui.Styling
                 if (Background.HasValue)
                 {
                     colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.FrameBg, Background.Value.ToImGui());
-                }
-                if (Active.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.FrameBgActive, Active.Value.ToImGui());
-                }
-                if (Hovered.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.FrameBgHovered, Hovered.Value.ToImGui());
-                }
-
-                if (Padding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.FramePadding, Padding.Value.ToImGui());
+                    ImGui.PushStyleColor(ImGuiCol.ChildBg, Background.Value.ToImGui());
                 }
                 if (Rounding.HasValue)
                 {
                     valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.FrameRounding, Rounding.Value);
+                    ImGui.PushStyleVar(ImGuiStyleVar.ChildRounding, Rounding.Value);
                 }
                 if (BorderSize.HasValue)
                 {
                     valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.FrameBorderSize, BorderSize.Value);
+                    ImGui.PushStyleVar(ImGuiStyleVar.ChildBorderSize, BorderSize.Value);
                 }
 
                 context.Update(Input);
