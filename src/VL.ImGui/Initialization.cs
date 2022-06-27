@@ -139,6 +139,11 @@ namespace VL.ImGui
             yield return PopupWindow.GetNodeDescription(factory);
             yield return OpenPopup.GetNodeDescription(factory);
 
+            //Tabs
+            yield return TabBar.GetNodeDescription(factory);
+            yield return TabItem.GetNodeDescription(factory);
+            yield return TabItemButton.GetNodeDescription(factory);
+
         }
     }
 
