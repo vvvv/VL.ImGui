@@ -13,7 +13,7 @@ namespace VL.ImGui.Widgets
 
         public string? Label { get; set; }
 
-        public BehaviorSubject<Boolean> Value { get; } = new BehaviorSubject<Boolean>(false);
+        public BehaviorSubject<bool> Value { get; } = new BehaviorSubject<bool>(false);
 
         internal override void Update(Context context)
         {

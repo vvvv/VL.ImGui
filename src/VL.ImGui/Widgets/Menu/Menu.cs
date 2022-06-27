@@ -31,16 +31,22 @@ namespace VL.ImGui.Widgets
 
                 if (IsVisible)
                 {
-                    foreach (var item in Items)
+                    try
                     {
-                        if (item is null)
-                            continue;
-                        else
-                            context.Update(item);
+                        foreach (var item in Items)
+                        {
+                            if (item is null)
+                                continue;
+                            else
+                                context.Update(item);
 
+                        }
                     }
-
-                    ImGuiNET.ImGui.EndMenu();
+                    finally
+                    {
+                        ImGuiNET.ImGui.EndMenu();
+                    }
+                    
                 }
             }
         }

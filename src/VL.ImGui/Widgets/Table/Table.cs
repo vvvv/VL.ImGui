@@ -38,9 +38,9 @@ namespace VL.ImGui.Widgets
 
                 IsVisible = ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, count, Flags, Size.ToImGui(), InnerWidth);
 
-                try
+                if (IsVisible)
                 {
-                    if (IsVisible)
+                    try
                     {
                         foreach (var desc in ColumnDescriptions)
                         {
@@ -65,12 +65,11 @@ namespace VL.ImGui.Widgets
                             }
                         }
                     }
+                    finally
+                    {
+                        ImGuiNET.ImGui.EndTable();
+                    }
                 }
-                finally
-                {
-                    ImGuiNET.ImGui.EndTable();
-                }
-
             }
         }
     }

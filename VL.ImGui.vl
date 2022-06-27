@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0101-f1a20d5b10" Version="0.128">
   <Patch Id="FqV6a8uF6wBNEsSb65h9jq">
     <Canvas Id="CiUOvKtIpncPRBZwoQzisM" DefaultCategory="ImGui" CanvasType="FullCategory">
@@ -424,11 +424,6 @@
             <Pin Id="SFT5fGKPvQHLN4s83ZIR0Q" Name="Labels" Kind="InputPin" Bounds="375,373" />
             <Pin Id="U2HfVVEnxJ1Nbuz93mzr3L" Name="Value" Kind="OutputPin" Bounds="711,647" />
           </Patch>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="S2Mt5V09aFsLJDYNRecv40">
             <Fragment Id="UK5IRY7jXMmOffBe6QQCTD" Patch="GTNsu9kCuCANJ8cHd1yaON" Enabled="true" />
             <Fragment Id="DvAek2K5Uo3QdQvqTRbPaP" Patch="I1kJGwWyAKLM7cwqQ3DGTI" Enabled="true" />
@@ -450,6 +445,42 @@
           <Link Id="APdhg9hknUBNWTyY7exipf" Ids="MloBxJ9E9AELLzfBLR5KFp,U2HfVVEnxJ1Nbuz93mzr3L" IsHidden="true" />
           <Link Id="AhQqzDkie62NS8hdOZ6Zxq" Ids="Rcper0NeWocOt3mnYA95lT,G12VlsBeTv8O0xSlNpkVo9" />
           <Link Id="Kz6Pt9iWB8rODmYLhlL2if" Ids="JmpFhfqkKTlMrxODVahaKc,Rcper0NeWocOt3mnYA95lT" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ ImGuiTabBarFlags ************************
+
+-->
+      <Node Name="ImGuiTabBarFlags" Bounds="584,740" Id="IfsCkxcrg77L6g2yaG14Tl">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+          <Choice Kind="TypeFlag" Name="ImGuiTabBarFlags" />
+        </p:TypeAnnotation>
+        <Patch Id="IioTMOVLUiHO4bswo94K19">
+          <Canvas Id="GORQk84hr8dOIJqzIwaHr9" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="VLndQ279z1XQdqr5cRi1aM" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ ImGuiTabItemFlags ************************
+
+-->
+      <Node Name="ImGuiTabItemFlags" Bounds="584,790" Id="CYZnCxAgnDUMIy50uLcae6">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+          <Choice Kind="TypeFlag" Name="ImGuiTabItemFlags" />
+        </p:TypeAnnotation>
+        <Patch Id="MF0XuQClsbXP2cnVccNkwe">
+          <Canvas Id="HEXHkimeYJCMeyEd9coRZn" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="CG6wU85d8hqQUAGuuhiKeH" IsHidden="true" />
         </Patch>
       </Node>
     </Canvas>
