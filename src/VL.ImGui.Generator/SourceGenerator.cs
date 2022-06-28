@@ -4,6 +4,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -17,7 +18,6 @@ namespace VL.ImGui.Generator
     public class SourceGenerator : IIncrementalGenerator
     {
         private const string GenerateImmutableAttributeMetadataName = "VL.ImGui.GenerateNodeAttribute";
-        private const string DocumentationAttributeMetadataName = "VL.ImGui.DocumentationAttribute";
 
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
@@ -93,8 +93,7 @@ namespace VL.ImGui.Generator
             foreach (var ns in root.Members.OfType<NamespaceDeclarationSyntax>())
                 declaredUsings = declaredUsings.AddRange(ns.Usings);
 
-            var documentationAttributeSymbol = semanticModel.Compilation.GetTypeByMetadataName(DocumentationAttributeMetadataName);
-            var summary = GetSummary(documentationAttributeSymbol, typeSymbol);
+            var summary = GetDocEntry(typeSymbol);
 
             var indent = "                    ";
             var indent2 = "                        ";
@@ -104,10 +103,10 @@ namespace VL.ImGui.Generator
             var outputs = new List<string>();
             foreach (var property in typeSymbol.GetMembers().OfType<IPropertySymbol>())
             {
-                string propertySummary = GetSummary(documentationAttributeSymbol, property);
+                string propertySummary = GetDocEntry(property);
                 if (property.SetMethod != null && property.SetMethod.DeclaredAccessibility == Accessibility.Public)
                 {
-                    inputDescriptions.Add($"_c.Input(\"{ToUserName(property.Name)}\", _w.{property.Name}, summary: \"{propertySummary}\"),");
+                    inputDescriptions.Add($"_c.Input(\"{ToUserName(property.Name)}\", _w.{property.Name}, summary: @\"{propertySummary}\"),");
                     inputs.Add($"c.Input(v => s.{property.Name} = v, s.{property.Name}),");
                 }
                 else if (property.GetMethod != null && property.GetMethod.DeclaredAccessibility == Accessibility.Public)
@@ -159,27 +158,30 @@ namespace {typeSymbol.ContainingNamespace}
 ";
         }
 
-        private static string GetSummary(INamedTypeSymbol documentationAttributeSymbol, ISymbol property)
+        private static string GetDocEntry(ISymbol symbol, string tag = "summary", string name = null)
         {
-            var attributeData = property.GetAttributes().FirstOrDefault(d => d.AttributeClass.Equals(documentationAttributeSymbol, SymbolEqualityComparer.Default));
-            var summary = (attributeData?.ConstructorArguments[0].Value as string)?.Replace("\"", "\\\"");
-            return summary;
-        }
+            var rawComment = new StringBuilder();
+            foreach (var s in symbol.DeclaringSyntaxReferences)
+            {
+                foreach (var t in s.GetSyntax().GetLeadingTrivia())
+                {
+                    if (t.IsKind(SyntaxKind.SingleLineCommentTrivia))
+                    {
+                        rawComment.AppendLine(t.ToString().TrimStart('/', ' '));
+                    }
+                }
+            }
 
-        // Doesn't work :( It seems VS is not passing that information in
-        private static string GetDocEntry(ISymbol symbol, string tag, string name = null)
-        {
+            if (rawComment.Length == 0)
+                return null;
+
             try
             {
-                var rawComment = symbol.GetDocumentationCommentXml();
-                if (string.IsNullOrWhiteSpace(rawComment))
-                    return null;
-
                 var x = XElement.Parse($"<X>{rawComment}</X>");
                 if (name != null)
                     return x.Elements(tag).FirstOrDefault(e => e.Attribute("name")?.Value == name)?.ToString();
                 else
-                    return x.Element(tag)?.ToString();
+                    return x.Element(tag)?.Value.ToString().Trim('\n').Replace("\"", "\"\"");
             }
             catch (Exception)
             {

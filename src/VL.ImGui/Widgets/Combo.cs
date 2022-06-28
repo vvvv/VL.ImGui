@@ -13,7 +13,6 @@ namespace VL.ImGui.Widgets
 
         public string? Label { get; set; }
 
-        [Documentation(@"Dropdown")]
         public string? Format { private get; set; }
 
         public IEnumerable<string> Items { get; set; } = Enumerable.Empty<string>();

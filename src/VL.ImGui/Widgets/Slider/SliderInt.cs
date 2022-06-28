@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Reactive.Disposables;
 using System.Reactive.Subjects;
 using System.Text;
-using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
@@ -16,7 +15,9 @@ namespace VL.ImGui.Widgets
 
         public int Max { private get; set; } = 100;
 
-        [Documentation(@"Adjust format string to decorate the value with a prefix, a suffix, or adapt the editing and display precision e.g. "" % .3f"" -> 1.234; "" % 5.2f secs"" -> 01.23 secs; ""Biscuit: % .0f"" -> Biscuit: 1; etc.")]
+        /// <summary>
+        /// Adjust format string to decorate the value with a prefix, a suffix, or adapt the editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs; "Biscuit: % .0f" -> Biscuit: 1; etc.
+        /// </summary>
         public string? Format { private get; set; }
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
