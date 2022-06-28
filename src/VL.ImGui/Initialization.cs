@@ -84,6 +84,9 @@ namespace VL.ImGui
             // Dummy
             yield return Dummy.GetNodeDescription(factory);
 
+            // Tree
+            yield return TreeNode.GetNodeDescription(factory);
+
             // Input
             yield return InputFloat.GetNodeDescription(factory);
             yield return InputVector2.GetNodeDescription(factory);
