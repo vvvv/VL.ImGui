@@ -7,7 +7,7 @@
     ************************ ToSkiaLayer ************************
 
 -->
-      <Node Name="ToSkiaLayer" Bounds="464,207" Id="S905duhnYEWLVozBap0dXQ">
+      <Node Name="ToSkiaLayer" Bounds="357,178" Id="S905duhnYEWLVozBap0dXQ">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
@@ -70,7 +70,7 @@
     ************************ ImGuiBackendFlags ************************
 
 -->
-      <Node Name="ImGuiBackendFlags" Bounds="275,294" Id="G06PC6gojFGNZTI7lDVKAP">
+      <Node Name="ImGuiBackendFlags" Bounds="345,411" Id="G06PC6gojFGNZTI7lDVKAP">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -88,7 +88,7 @@
     ************************ ImGuiButtonFlags ************************
 
 -->
-      <Node Name="ImGuiButtonFlags" Bounds="555,294" Id="BeOLioiMsgRO9PwDbwsdYU">
+      <Node Name="ImGuiButtonFlags" Bounds="625,411" Id="BeOLioiMsgRO9PwDbwsdYU">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -106,7 +106,7 @@
     ************************ ImGuiCol ************************
 
 -->
-      <Node Name="ImGuiCol" Bounds="835,294" Id="ICrBBgql9pmP6fNdd6T9Kb">
+      <Node Name="ImGuiCol" Bounds="1339,379" Id="ICrBBgql9pmP6fNdd6T9Kb">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -124,7 +124,7 @@
     ************************ ImGuiColorEditFlags ************************
 
 -->
-      <Node Name="ImGuiColorEditFlags" Bounds="275,344" Id="LPgyOxe1g2VMa8yXdBvW3G">
+      <Node Name="ImGuiColorEditFlags" Bounds="345,461" Id="LPgyOxe1g2VMa8yXdBvW3G">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -142,7 +142,7 @@
     ************************ ImGuiComboFlags ************************
 
 -->
-      <Node Name="ImGuiComboFlags" Bounds="555,344" Id="AwItCdgGdnqLjGWL5ssQUV">
+      <Node Name="ImGuiComboFlags" Bounds="625,461" Id="AwItCdgGdnqLjGWL5ssQUV">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -160,7 +160,7 @@
     ************************ ImGuiCond ************************
 
 -->
-      <Node Name="ImGuiCond" Bounds="835,344" Id="PGH6lAoTlz5OsGeArjy1Cv">
+      <Node Name="ImGuiCond" Bounds="1339,429" Id="PGH6lAoTlz5OsGeArjy1Cv">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -178,7 +178,7 @@
     ************************ ImGuiConfigFlags ************************
 
 -->
-      <Node Name="ImGuiConfigFlags" Bounds="275,394" Id="Uxxsx5uLaZkNmgmbnuzlxM">
+      <Node Name="ImGuiConfigFlags" Bounds="345,511" Id="Uxxsx5uLaZkNmgmbnuzlxM">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -196,7 +196,7 @@
     ************************ ImGuiDataType ************************
 
 -->
-      <Node Name="ImGuiDataType" Bounds="555,394" Id="HDBfDcthTm7Lf2RFwYbSnP">
+      <Node Name="ImGuiDataType" Bounds="625,511" Id="HDBfDcthTm7Lf2RFwYbSnP">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -214,7 +214,7 @@
     ************************ ImGuiDir ************************
 
 -->
-      <Node Name="ImGuiDir" Bounds="835,394" Id="ChA9zH1fBzvLPgmW9fvPeK">
+      <Node Name="ImGuiDir" Bounds="1339,479" Id="ChA9zH1fBzvLPgmW9fvPeK">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -232,7 +232,7 @@
     ************************ ImGuiDockNodeFlags ************************
 
 -->
-      <Node Name="ImGuiDockNodeFlags" Bounds="275,444" Id="HBQevBl1inMNGDu3RJdPYZ">
+      <Node Name="ImGuiDockNodeFlags" Bounds="345,561" Id="HBQevBl1inMNGDu3RJdPYZ">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -250,7 +250,7 @@
     ************************ ImGuiDragDropFlags ************************
 
 -->
-      <Node Name="ImGuiDragDropFlags" Bounds="555,444" Id="VV0Mb3h7n4CMOObShWK17v">
+      <Node Name="ImGuiDragDropFlags" Bounds="625,561" Id="VV0Mb3h7n4CMOObShWK17v">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -268,7 +268,7 @@
     ************************ ImGuiFocusedFlags ************************
 
 -->
-      <Node Name="ImGuiFocusedFlags" Bounds="835,444" Id="HteVy5SPy5jLjXvRZHfvT9">
+      <Node Name="ImGuiFocusedFlags" Bounds="1339,529" Id="HteVy5SPy5jLjXvRZHfvT9">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -286,7 +286,7 @@
     ************************ ImGuiHoveredFlags ************************
 
 -->
-      <Node Name="ImGuiHoveredFlags" Bounds="275,494" Id="TudpNlL48BDPCfC0JwNGSW">
+      <Node Name="ImGuiHoveredFlags" Bounds="345,611" Id="TudpNlL48BDPCfC0JwNGSW">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -304,7 +304,7 @@
     ************************ ImGuiWindowFlags ************************
 
 -->
-      <Node Name="ImGuiWindowFlags" Bounds="567,498" Id="PgU652NQzLINbP8Z6un4eL">
+      <Node Name="ImGuiWindowFlags" Bounds="342,718" Id="PgU652NQzLINbP8Z6un4eL">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -322,7 +322,7 @@
     ************************ ImGuiTableColumnFlags ************************
 
 -->
-      <Node Name="ImGuiTableColumnFlags" Bounds="560,542" Id="QCblDvNm5BsMmUujha4tOY">
+      <Node Name="ImGuiTableColumnFlags" Bounds="799,795" Id="QCblDvNm5BsMmUujha4tOY">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -340,7 +340,7 @@
     ************************ ImGuiInputTextFlags ************************
 
 -->
-      <Node Name="ImGuiInputTextFlags" Bounds="834,489" Id="IUvIDbJaknkMwiZ4C8A3Zf">
+      <Node Name="ImGuiInputTextFlags" Bounds="1338,574" Id="IUvIDbJaknkMwiZ4C8A3Zf">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -358,7 +358,7 @@
     ************************ RadioButtons ************************
 
 -->
-      <Node Name="RadioButtons" Bounds="585,633" Id="MQniTeo5QFVMo8fNj4BkbN">
+      <Node Name="RadioButtons" Bounds="358,214" Id="MQniTeo5QFVMo8fNj4BkbN">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
@@ -452,7 +452,7 @@
     ************************ ImGuiTabBarFlags ************************
 
 -->
-      <Node Name="ImGuiTabBarFlags" Bounds="584,740" Id="IfsCkxcrg77L6g2yaG14Tl">
+      <Node Name="ImGuiTabBarFlags" Bounds="592,718" Id="IfsCkxcrg77L6g2yaG14Tl">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -470,7 +470,7 @@
     ************************ ImGuiTabItemFlags ************************
 
 -->
-      <Node Name="ImGuiTabItemFlags" Bounds="584,790" Id="CYZnCxAgnDUMIy50uLcae6">
+      <Node Name="ImGuiTabItemFlags" Bounds="592,768" Id="CYZnCxAgnDUMIy50uLcae6">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -483,6 +483,87 @@
           <ProcessDefinition Id="CG6wU85d8hqQUAGuuhiKeH" IsHidden="true" />
         </Patch>
       </Node>
+      <!--
+
+    ************************ ImGuiTableFlags ************************
+
+-->
+      <Node Name="ImGuiTableFlags" Bounds="799,723" Id="Deasml2T05CLry0gIQl0Tj">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+          <Choice Kind="TypeFlag" Name="ImGuiTableFlags" />
+        </p:TypeAnnotation>
+        <Patch Id="OX8thlzluaeLkmyvLbZZ5A">
+          <Canvas Id="HOPnzGpyYBnOaGbAGTVOEu" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="MQBKx1yMqA6Mg6jkPzw5Wx" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ ImGuiTableRowFlags ************************
+
+-->
+      <Node Name="ImGuiTableRowFlags" Bounds="798,760" Id="ViVessH3pvFN1NT1ktpVbA">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+          <Choice Kind="TypeFlag" Name="ImGuiTableRowFlags" />
+        </p:TypeAnnotation>
+        <Patch Id="LwmNrwokpEGL5HjLZW6gtx">
+          <Canvas Id="JXlAA3xeC1oMFAiMpqhJ7R" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="LcvWL1CQPBRMSi29E2JiUX" IsHidden="true" />
+        </Patch>
+      </Node>
+      <Pad Id="Nx0A0gwiu4KLJdVFTg5k9i" Bounds="581,648,47,31" ShowValueBox="true" isIOBox="true" Value="Tab">
+        <p:TypeAnnotation>
+          <Choice Kind="TypeFlag" Name="String" />
+        </p:TypeAnnotation>
+        <p:ValueBoxSettings>
+          <p:fontsize p:Type="Int32">15</p:fontsize>
+          <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+        </p:ValueBoxSettings>
+      </Pad>
+      <Pad Id="Bs9um7Am5ahK96figPagCx" Bounds="784,657,74,31" ShowValueBox="true" isIOBox="true" Value="Table">
+        <p:TypeAnnotation>
+          <Choice Kind="TypeFlag" Name="String" />
+        </p:TypeAnnotation>
+        <p:ValueBoxSettings>
+          <p:fontsize p:Type="Int32">15</p:fontsize>
+          <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+        </p:ValueBoxSettings>
+      </Pad>
+      <Pad Id="GwxAyvls3DhMZmwL8WtQd4" Bounds="330,649,121,31" ShowValueBox="true" isIOBox="true" Value="Window">
+        <p:TypeAnnotation>
+          <Choice Kind="TypeFlag" Name="String" />
+        </p:TypeAnnotation>
+        <p:ValueBoxSettings>
+          <p:fontsize p:Type="Int32">15</p:fontsize>
+          <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+        </p:ValueBoxSettings>
+      </Pad>
+      <Pad Id="F88JVxvRlPKPoqQtHRwU0t" Bounds="344,91,150,52" ShowValueBox="true" isIOBox="true" Value="Widgets">
+        <p:TypeAnnotation>
+          <Choice Kind="TypeFlag" Name="String" />
+        </p:TypeAnnotation>
+        <p:ValueBoxSettings>
+          <p:fontsize p:Type="Int32">25</p:fontsize>
+          <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+        </p:ValueBoxSettings>
+      </Pad>
+      <Pad Id="Mxm74StqMWFMNWs8D7Vctu" Bounds="325,311,184,52" ShowValueBox="true" isIOBox="true" Value="Forwards">
+        <p:TypeAnnotation>
+          <Choice Kind="TypeFlag" Name="String" />
+        </p:TypeAnnotation>
+        <p:ValueBoxSettings>
+          <p:fontsize p:Type="Int32">25</p:fontsize>
+          <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+        </p:ValueBoxSettings>
+      </Pad>
     </Canvas>
     <!--
 
