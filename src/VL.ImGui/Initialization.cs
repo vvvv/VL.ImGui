@@ -68,6 +68,9 @@ namespace VL.ImGui
 
             // Input
             yield return InputFloat.GetNodeDescription(factory);
+            yield return InputVector2.GetNodeDescription(factory);
+            yield return InputVector3.GetNodeDescription(factory);
+            yield return InputVector4.GetNodeDescription(factory);
             yield return InputInt.GetNodeDescription(factory);
 
             // Style
@@ -139,6 +142,7 @@ namespace VL.ImGui
             // Color
             yield return ColorEdit.GetNodeDescription(factory);
             yield return ColorPicker.GetNodeDescription(factory);
+            yield return ColorButton.GetNodeDescription(factory);
 
             // Plotting
             yield return PlotHistogram.GetNodeDescription(factory);

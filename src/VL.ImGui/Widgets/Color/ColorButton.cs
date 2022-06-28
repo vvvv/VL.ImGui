@@ -9,17 +9,21 @@ using Stride.Core.Mathematics;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode]
-    internal partial class Button : Widget
+    internal partial class ColorButton : Widget
     {
         public string? Label { get; set; }
 
+        public Color4 Color { private get; set; }
+
         public Vector2 Size { private get; set; }
+
+        public ImGuiNET.ImGuiColorEditFlags Flags { private get; set; }
 
         public BehaviorSubject<bool> Value { get; } = new BehaviorSubject<bool>(false);
 
         internal override void Update(Context context)
         {
-            if (ImGuiNET.ImGui.Button(Label ?? string.Empty, Size.ToImGui()))
+            if (ImGuiNET.ImGui.ColorButton(Label ?? string.Empty, Color.ToImGui(), Flags, Size.ToImGui()))
                 Value.OnNext(true);
         }
     }
