@@ -35,13 +35,15 @@ namespace VL.ImGui
 
             //Slider
             yield return SliderFloat.GetNodeDescription(factory);
-            yield return SliderFloatVertical.GetNodeDescription(factory);
-            yield return SliderInt.GetNodeDescription(factory);
-            yield return SliderInt2.GetNodeDescription(factory);
-            yield return SliderIntVertical.GetNodeDescription(factory);
             yield return SliderVector2.GetNodeDescription(factory);
             yield return SliderVector3.GetNodeDescription(factory);
             yield return SliderVector4.GetNodeDescription(factory);
+            yield return SliderFloatVertical.GetNodeDescription(factory);
+            yield return SliderInt.GetNodeDescription(factory);
+            yield return SliderInt2.GetNodeDescription(factory);
+            yield return SliderInt3.GetNodeDescription(factory);
+            yield return SliderInt4.GetNodeDescription(factory);
+            yield return SliderIntVertical.GetNodeDescription(factory);
             
             //Dropdown
             yield return Combo.GetNodeDescription(factory);
