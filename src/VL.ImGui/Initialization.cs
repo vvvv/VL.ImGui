@@ -42,8 +42,12 @@ namespace VL.ImGui
             yield return SliderVector2.GetNodeDescription(factory);
             yield return SliderVector3.GetNodeDescription(factory);
             yield return SliderVector4.GetNodeDescription(factory);
+            
             //Dropdown
             yield return Combo.GetNodeDescription(factory);
+
+            //ListBox
+            yield return ListBox.GetNodeDescription(factory);
 
             // Windows
             yield return Window.GetNodeDescription(factory);
@@ -51,6 +55,7 @@ namespace VL.ImGui
 
             // Buttons
             yield return Button.GetNodeDescription(factory);
+            yield return ButtonSmall.GetNodeDescription(factory);
             yield return InvisibleButton.GetNodeDescription(factory);
             yield return Selectable.GetNodeDescription(factory);
             yield return ArrowButton.GetNodeDescription(factory);
@@ -73,6 +78,9 @@ namespace VL.ImGui
             yield return InputVector3.GetNodeDescription(factory);
             yield return InputVector4.GetNodeDescription(factory);
             yield return InputInt.GetNodeDescription(factory);
+            yield return InputInt2.GetNodeDescription(factory);
+            yield return InputInt3.GetNodeDescription(factory);
+            yield return InputInt4.GetNodeDescription(factory);
 
             // Style
             yield return SetStyleColor.GetNodeDescription(factory);
@@ -120,6 +128,8 @@ namespace VL.ImGui
 
             // Text
             yield return TextWidget.GetNodeDescription(factory);
+            yield return TextLabel.GetNodeDescription(factory);
+            yield return TextBullet.GetNodeDescription(factory);
             yield return SetTextWrapPosition.GetNodeDescription(factory);
 
             // Input

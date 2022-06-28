@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Reactive.Disposables;
 using System.Reactive.Subjects;
 using System.Text;
-using VL.Core;
 using Stride.Core.Mathematics;
 using System.Runtime.CompilerServices;
 

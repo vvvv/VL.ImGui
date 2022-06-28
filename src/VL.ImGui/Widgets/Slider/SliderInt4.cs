@@ -4,6 +4,7 @@ using System.Reactive.Disposables;
 using System.Reactive.Subjects;
 using System.Text;
 using Stride.Core.Mathematics;
+using System.Runtime.CompilerServices;
 
 namespace VL.ImGui.Widgets
 {
@@ -28,8 +29,10 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             var value = Value.Value;
-            if (ImGuiNET.ImGui.SliderInt4(Label ?? string.Empty, ref value.X, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Value.OnNext(value);
+
+            ref var x = ref value.X;
+            if (ImGuiNET.ImGui.SliderInt4(Label ?? string.Empty, ref x, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
+                Value.OnNext(Unsafe.As<int, Int4>(ref x));
         }
     }
 }
