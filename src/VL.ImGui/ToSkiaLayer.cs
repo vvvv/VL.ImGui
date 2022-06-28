@@ -196,12 +196,12 @@ namespace VL.ImGui
                 // ImGui colors are RGBA
                 SKSwizzle.SwapRedBlue(MemoryMarshal.AsBytes(color.AsSpan()), MemoryMarshal.AsBytes(color.AsSpan()), color.Length);
 
-                int indexOffset = 0;
 
                 // Draw everything with canvas.drawVertices...
                 for (int j = 0; j < drawList.CmdBuffer.Size; ++j)
                 {
                     var drawCmd = drawList.CmdBuffer[j];
+                    var indexOffset = (int)drawCmd.IdxOffset;
                     var clipRect = new SKRect(drawCmd.ClipRect.X, drawCmd.ClipRect.Y, drawCmd.ClipRect.Z, drawCmd.ClipRect.W);
 
                     //using var _ = new SKAutoCanvasRestore(canvas, true);
@@ -250,12 +250,8 @@ namespace VL.ImGui
                             for (int k = 0; k < indices.Length; k++)
                                 indices[k] = drawList.IdxBuffer[indexOffset + k];
 
-                            var vertices = SKVertices.CreateCopy(SKVertexMode.Triangles, pos, uv, color, indices);
-
-                            canvas.DrawVertices(vertices, SKBlendMode.Modulate, paint);
+                            canvas.DrawVertices(SKVertexMode.Triangles, pos, uv, color, SKBlendMode.Modulate, indices, paint);
                         }
-
-                        indexOffset += (int)drawCmd.ElemCount;
                     }
 
                     canvas.Restore();
