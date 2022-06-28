@@ -85,6 +85,12 @@ namespace VL.ImGui
             yield return Styling.SetTabStyle.GetNodeDescription(factory);
             yield return Styling.SetButtonStyle.GetNodeDescription(factory);
             yield return Styling.SetTextStyle.GetNodeDescription(factory);
+            yield return Styling.SetSliderStyle.GetNodeDescription(factory);
+            yield return Styling.SetGrabStyle.GetNodeDescription(factory);
+            yield return Styling.SetScrollStyle.GetNodeDescription(factory);
+            yield return Styling.SetResizeGripStyle.GetNodeDescription(factory);
+            yield return Styling.SetBorderStyle.GetNodeDescription(factory);
+            yield return Styling.SetTitleStyle.GetNodeDescription(factory);
 
             // Layout
             yield return Row.GetNodeDescription(factory);

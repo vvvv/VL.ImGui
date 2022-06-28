@@ -19,8 +19,10 @@ namespace VL.ImGui.Widgets
 
         public bool HasBorder { get; set; }
 
-        public RectangleF Bounds { get; set; }
+        public Vector2 Size { get; set; }
 
+        public Optional<Vector2> Position { get; set; }
+                
         public Vector2 Pivot { get; set; }
 
         public bool IsVisible { get; private set; }
@@ -31,9 +33,13 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
 
-            ImGui.SetNextWindowPos(Bounds.TopLeft.ToImGui(), 0, Pivot.ToImGui());
+            if (Position.HasValue)
+            {
+                ImGui.SetNextWindowPos(Position.Value.ToImGui(), 0, Pivot.ToImGui());
+            }
+                
 
-            IsVisible = ImGuiNET.ImGui.BeginChild(Label ?? string.Empty, Bounds.Size.ToImGui(), HasBorder, Flags);
+            IsVisible = ImGui.BeginChild(Label ?? string.Empty, Size.ToImGui(), HasBorder, Flags);
             
             try
             {
@@ -44,7 +50,7 @@ namespace VL.ImGui.Widgets
             }
             finally
             {
-                ImGuiNET.ImGui.EndChild();
+                ImGui.EndChild();
             }
         }
     }

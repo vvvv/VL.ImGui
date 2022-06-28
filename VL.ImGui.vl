@@ -564,6 +564,68 @@
           <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
         </p:ValueBoxSettings>
       </Pad>
+      <!--
+
+    ************************ Text (Multiline) ************************
+
+-->
+      <Node Name="Text (Multiline)" Bounds="359,250" Id="DpzskXATrEaPlya3OJeplz">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="ASTye7AoeQPOIX8OsYSD8L">
+          <Canvas Id="VmOnvFGI5r2NFAAEXYHizU" CanvasType="Group">
+            <Node Bounds="442,262,10,19" Id="GIja0vZYCZ6P5Yb0xXNv3w">
+              <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="Category" Name="ImGui" />
+                <Choice Kind="ProcessNode" Name="Text" />
+              </p:NodeReference>
+              <Pin Id="BYuq5Hm1kGqLhNmXnIA88V" Name="Text" Kind="InputPin" />
+              <Pin Id="CPakVlp4ZahPLk5iQU34W5" Name="Disabled" Kind="InputPin" />
+              <Pin Id="Gs8HdR4TLSzNgDF90AkikR" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="442,336,109,19" Id="VhYBuCmS1gdLDK6rqvvnUx">
+              <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessNode" Name="SetTextWrapPosition" />
+              </p:NodeReference>
+              <Pin Id="QPoNispn83xQDYAqEtA7HO" Name="Input" Kind="InputPin" />
+              <Pin Id="Fn3Fs26fcKFODhqJi11ZwJ" Name="Position" Kind="InputPin" />
+              <Pin Id="HZupzLLnRfjPdDZTuCuWPv" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="Kd5rU7NylV6PcCXq5Eck7C" Bounds="444,227" />
+            <ControlPoint Id="NlrEQ4fDb93P0wBiV5Nk5Q" Bounds="647,225" />
+            <ControlPoint Id="I8kmjYdQ1N7LWw5gJGAqvs" Bounds="547,227" />
+            <ControlPoint Id="Vhs0TRs9rdhQVEkUjMW6U9" Bounds="444,414" />
+          </Canvas>
+          <!--
+
+    ************************  ************************
+
+-->
+          <ProcessDefinition Id="DJGUVqlxjxRNWJqNuMGdCV">
+            <Fragment Id="VFnu6nkvWnXMtb96rTOZDx" Patch="AnFuo4CjrCfNCihJfs5st1" Enabled="true" />
+            <Fragment Id="T7lQcdA9c3GNCKYwpduZxc" Patch="Ie3UUe8SydOQYZfR8eALEG" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="EvL42Kcjak9OoZNfJlPg0b" Ids="Gs8HdR4TLSzNgDF90AkikR,QPoNispn83xQDYAqEtA7HO" />
+          <Link Id="D3l6XOMGfdwLADdX2q0cOm" Ids="Kd5rU7NylV6PcCXq5Eck7C,BYuq5Hm1kGqLhNmXnIA88V" />
+          <Link Id="SKVNGqtmxZcQTsQPIlwyNZ" Ids="CAxLsW37fvMNXpULSs8rgB,Kd5rU7NylV6PcCXq5Eck7C" IsHidden="true" />
+          <Link Id="SU9BlA4kpKTOXzVuOMHuvg" Ids="NlrEQ4fDb93P0wBiV5Nk5Q,CPakVlp4ZahPLk5iQU34W5" />
+          <Link Id="IIFeMUo9RpEOkYUXXUqB3c" Ids="UMpW2v0CuDDL3JHSXYI789,NlrEQ4fDb93P0wBiV5Nk5Q" IsHidden="true" />
+          <Link Id="Muou8s7eCg8Mb64Wox33lg" Ids="I8kmjYdQ1N7LWw5gJGAqvs,Fn3Fs26fcKFODhqJi11ZwJ" />
+          <Link Id="NwZ4dfcpDN8LC1qKZoRVw9" Ids="VxmUTazvTsaLHQZcCWpxAA,I8kmjYdQ1N7LWw5gJGAqvs" IsHidden="true" />
+          <Patch Id="AnFuo4CjrCfNCihJfs5st1" Name="Create" />
+          <Patch Id="Ie3UUe8SydOQYZfR8eALEG" Name="Update">
+            <Pin Id="CAxLsW37fvMNXpULSs8rgB" Name="Text" Kind="InputPin" Bounds="441,210" />
+            <Pin Id="VxmUTazvTsaLHQZcCWpxAA" Name="Width" Kind="InputPin" Bounds="506,224" DefaultValue="100" />
+            <Pin Id="UMpW2v0CuDDL3JHSXYI789" Name="Disabled" Kind="InputPin" Bounds="600,225" />
+            <Pin Id="PP8F7wdPB8iMZUUPF19cr7" Name="Output" Kind="OutputPin" Bounds="451,392" />
+          </Patch>
+          <Link Id="HFNRACfM7W5OHh7BxdGni7" Ids="HZupzLLnRfjPdDZTuCuWPv,Vhs0TRs9rdhQVEkUjMW6U9" />
+          <Link Id="T2xK07qgb8SPHpA9hdpLai" Ids="Vhs0TRs9rdhQVEkUjMW6U9,PP8F7wdPB8iMZUUPF19cr7" IsHidden="true" />
+        </Patch>
+      </Node>
     </Canvas>
     <!--
 
