@@ -44,7 +44,17 @@ namespace VL.ImGui
             yield return SliderInt3.GetNodeDescription(factory);
             yield return SliderInt4.GetNodeDescription(factory);
             yield return SliderIntVertical.GetNodeDescription(factory);
-            
+
+            //Drag
+            yield return DragFloat.GetNodeDescription(factory);
+            yield return DragVector2.GetNodeDescription(factory);
+            yield return DragVector3.GetNodeDescription(factory);
+            yield return DragVector4.GetNodeDescription(factory);
+            yield return DragInt.GetNodeDescription(factory);
+            yield return DragInt2.GetNodeDescription(factory);
+            yield return DragInt3.GetNodeDescription(factory);
+            yield return DragInt4.GetNodeDescription(factory);
+
             //Dropdown
             yield return Combo.GetNodeDescription(factory);
 

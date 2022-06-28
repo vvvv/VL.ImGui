@@ -6,10 +6,12 @@ using System.Text;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Slider (Int)")]
-    internal partial class SliderInt : Widget
+    [GenerateNode(Name = "Drag (Int)")]
+    internal partial class DragInt : Widget
     {
         public string? Label { get; set; }
+
+        public int Speed { private get; set; } = 1;
 
         public int Min { private get; set; } = 0;
 
@@ -24,7 +26,7 @@ namespace VL.ImGui.Widgets
         internal override void Update(Context context)
         {
             var value = Value.Value;
-            if (ImGuiNET.ImGui.SliderInt(Label ?? string.Empty, ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
+            if (ImGuiNET.ImGui.DragInt(Label ?? string.Empty, ref value, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
                 Value.OnNext(value);
         }
     }
