@@ -14,7 +14,7 @@
       </p:NodeReference>
       <Patch Id="RxrvDdUu4cvOBXbi4KngKc">
         <Canvas Id="PuJjSWeZNf5OSPyulV1tEs" CanvasType="Group">
-          <Node Bounds="299,880,70,19" Id="Lt5jBqy5ocHQLwBmIb8mt0">
+          <Node Bounds="301,639,70,19" Id="Lt5jBqy5ocHQLwBmIb8mt0">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ToSkiaLayer" />
@@ -22,7 +22,7 @@
             <Pin Id="OuxuxmOwAWSLY7F6norUZK" Name="Input" Kind="InputPin" />
             <Pin Id="Tsi6F5g1cOCQK44SVRexGG" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="260,936,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
+          <Node Bounds="262,695,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
@@ -40,7 +40,7 @@
             <Pin Id="VtCD3TojbCZNIE3ICe23l6" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="Fi9FymljmNXQYNmU2h76Xz" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="299,842,125,19" Id="GqYvADtffT7LKqHhwhHks9">
+          <Node Bounds="301,601,125,19" Id="GqYvADtffT7LKqHhwhHks9">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Window" />
@@ -56,7 +56,7 @@
             <Pin Id="O1Cf93jaX8dNBUPUZLJKMq" Name="Closing" Kind="OutputPin" />
             <Pin Id="LpmPlo8y6SZNwVJbqWvlwa" Name="Is Visible" Kind="OutputPin" />
           </Node>
-          <Pad Id="HNId2jVhNdjLe1cgdHqiKC" Comment="Window Flags" Bounds="421,825,148,15" ShowValueBox="true" isIOBox="true" Value="NoTitleBar">
+          <Pad Id="HNId2jVhNdjLe1cgdHqiKC" Comment="Window Flags" Bounds="423,584,148,15" ShowValueBox="true" isIOBox="true" Value="NoTitleBar">
             <p:TypeAnnotation LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="TypeFlag" Name="ImGuiWindowFlags" />
             </p:TypeAnnotation>
@@ -352,50 +352,6 @@
               <Link Id="E4e5Or0RjN8P3sqQqxoMei" Ids="KK3wXY05VLLNklmnGUAfyH,CLLkLoDxPbSMYZr3QvhVU3" IsHidden="true" />
             </Patch>
           </Node>
-          <Node Bounds="298,759,125,19" Id="SfTDH7RNL39NtM0RJBY3ZA">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="SetTabStyle" />
-            </p:NodeReference>
-            <Pin Id="QdRV8E1w8rdPnbyPTk2S6g" Name="Input" Kind="InputPin" />
-            <Pin Id="QmfYWdwCOyhMD4Hilzc8T6" Name="Background" Kind="InputPin" />
-            <Pin Id="HVfnKhmtgURLksns1t87M7" Name="Hovered" Kind="InputPin" />
-            <Pin Id="GzPGT3blrdsMw2EIwSUIU1" Name="Active" Kind="InputPin" />
-            <Pin Id="IS1AGWUMEr0NlTjK8yckIR" Name="Unfocused" Kind="InputPin" />
-            <Pin Id="O50DyIzuitUP7ywoWqggdx" Name="Unfocused Active" Kind="InputPin" />
-            <Pin Id="SKI9AzWqxaGLBKbrJEpKnM" Name="Rounding" Kind="InputPin" />
-            <Pin Id="OnZ7OdIKS3iMZKfc0BpnIJ" Name="Output" Kind="OutputPin" />
-          </Node>
-          <Pad Id="AeEHbxUMQERLsIBuGGSb0e" Comment="Background" Bounds="320,610,20,15" ShowValueBox="true" isIOBox="true" Value="0.24000005, 0.24000005, 0.24000005, 1">
-            <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="RGBA" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="QtGd005jmA7OgBzq8o6guL" Comment="Hovered" Bounds="341,633,20,15" ShowValueBox="true" isIOBox="true" Value="0.5133438, 0.4991998, 0.5199998, 1">
-            <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="RGBA" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="MVxjgh7EqG3OjmSMA8UV8t" Comment="Active" Bounds="361,656,20,15" ShowValueBox="true" isIOBox="true" Value="1, 0.54920155, 0.02000022, 1">
-            <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="RGBA" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="KAnkzIEZZ4UQHjp1KzDAvk" Comment="Unfocused" Bounds="381,679,20,15" ShowValueBox="true" isIOBox="true" Value="0, 0, 0, 0.96000004">
-            <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="RGBA" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="O9DmQn8EZQ8Lt7xASKVe7I" Comment="Unfocused Active" Bounds="401,707,20,15" ShowValueBox="true" isIOBox="true" Value="0.31000006, 0.31000006, 0.31000006, 0.97">
-            <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="RGBA" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="D9gQGo7fnONM926PsfYiX9" Comment="Rounding" Bounds="420,736,35,15" ShowValueBox="true" isIOBox="true" Value="0">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="Float32" />
-            </p:TypeAnnotation>
-          </Pad>
           <Node Bounds="301,348,65,19" Id="Q1iYfmnZnUwOZUqQA0qaYg">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -476,25 +432,18 @@
         <Link Id="GDuxgyWYyCkNCjIwkNZprj" Ids="Tsi6F5g1cOCQK44SVRexGG,FEmprmZSMXGOZ6BLW3yl3J" />
         <Link Id="QR0JDDukvtMMiDHPp5rBl9" Ids="HNId2jVhNdjLe1cgdHqiKC,ET6rC6nRBXLNrxrT00jzC1" />
         <Link Id="NmQd6ShRYGrNhHl6Hg1Y40" Ids="VOjeHD5PpJCOPUJVAaWJDa,OuxuxmOwAWSLY7F6norUZK" />
-        <Link Id="NltuM31I1FVO2eDWDR4N0Z" Ids="AeEHbxUMQERLsIBuGGSb0e,QmfYWdwCOyhMD4Hilzc8T6" />
-        <Link Id="SELm8Lh3OVELqgLYPNOr5N" Ids="QtGd005jmA7OgBzq8o6guL,HVfnKhmtgURLksns1t87M7" />
-        <Link Id="UE1oGxzfptnOeXYGjshk59" Ids="MVxjgh7EqG3OjmSMA8UV8t,GzPGT3blrdsMw2EIwSUIU1" />
-        <Link Id="Dg7PwTEm5dsPwinoBORiDo" Ids="KAnkzIEZZ4UQHjp1KzDAvk,IS1AGWUMEr0NlTjK8yckIR" />
-        <Link Id="KS7zFzs9QDPNLlpfDOJc3W" Ids="O9DmQn8EZQ8Lt7xASKVe7I,O50DyIzuitUP7ywoWqggdx" />
-        <Link Id="UclM3nqysGzM2ZGJVUkBda" Ids="D9gQGo7fnONM926PsfYiX9,SKI9AzWqxaGLBKbrJEpKnM" />
-        <Link Id="PU4V4hOqZk5OFt3t2muALO" Ids="OnZ7OdIKS3iMZKfc0BpnIJ,OWreEyOzfwgLRTHUvSpcng" />
         <Link Id="RhExw84jH45Njwc2jy6sXi" Ids="SeaUQjPTXYrOIJWg2K2as3,BuSV5UyBV0AMmA1abeZnKU" />
         <Link Id="KpyN4aWMM9ZMLz66IZYzcK" Ids="R4M4xYo6xjgPq9HiYW6IEX,EnDb4E10fhfQEaQKYJ3gAU" />
         <Link Id="MfKi98NWusLOVNbGLG0CJH" Ids="BX2pDohUSeINtgz4rpz0TE,E0JL8i2W47qNl5Kh3p7aDP" />
         <Link Id="FLGxh5ymtAJNCTH9T75WH2" Ids="SoybIQt8F0vNoHI8u9r0S5,DoIcdLedL2uOziVEZ0PuYo" />
         <Link Id="Pq1qI9NmB60QdkFsK4ogS9" Ids="BX2pDohUSeINtgz4rpz0TE,LhHAdeiW2KROm1HOrafykV" />
         <Link Id="KhQi1xhEFEoObcilu3kfSk" Ids="SoybIQt8F0vNoHI8u9r0S5,Aku28xv8tflO515oBpJuOf" />
-        <Link Id="EDrAT3k9E50Mrb9CoclaS3" Ids="Mq99inFsMZAPbpxCcXCuJu,QdRV8E1w8rdPnbyPTk2S6g" />
         <Link Id="RBG7afI0wrfMkCnSTKPhEK" Ids="C7KbAilzekaMPi8APFHaVg,K81q4TFuI4bOcEqPBHWeIz" />
         <Link Id="QgVaoZ5OJhfNxE3muar9EQ" Ids="TLRNr073gAULdvb55RojGO,N6LIE3dEmDiLp6OHxzY1Jo" />
         <Link Id="AZtGDvKEYrdMinovhEpk53" Ids="BX2pDohUSeINtgz4rpz0TE,LGEkPdZzWstLWM8vAMkIp6" />
         <Link Id="ESiBSDsQ6GPLxHbtNizrRH" Ids="U3d0IFMzeRjNskLcp3kbhc,EMO4xWyQMMVQH1vBuC0LyF" />
         <Link Id="PHffWaIWIniOL0y3foDu25" Ids="HPbi8dtfbfmOQfrywON1Ft,PokB0z0RL6yOb9rwC5zxnx" />
+        <Link Id="CiEbWSmuaNOPy2KhrDIqZ5" Ids="Mq99inFsMZAPbpxCcXCuJu,OWreEyOzfwgLRTHUvSpcng" />
       </Patch>
     </Node>
   </Patch>
