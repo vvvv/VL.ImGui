@@ -118,6 +118,7 @@ namespace VL.ImGui
             yield return Styling.SetResizeGripStyle.GetNodeDescription(factory);
             yield return Styling.SetBorderStyle.GetNodeDescription(factory);
             yield return Styling.SetTitleStyle.GetNodeDescription(factory);
+            yield return Styling.SetPlotStyle.GetNodeDescription(factory);
 
             // Layout
             yield return Row.GetNodeDescription(factory);

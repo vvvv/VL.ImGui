@@ -12,7 +12,11 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false)]
+
+    /// <summary>
+    /// The style applies to a Resize grip in lower-right and lower-left corners of windows.
+    /// </summary>
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "ResizeGrip ResizeGripHovered ResizeGripActive")]
     internal partial class SetResizeGripStyle : Widget
     {
         public Widget? Input { private get; set; }

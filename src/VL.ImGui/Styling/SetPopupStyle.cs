@@ -12,15 +12,28 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false)]
+
+    /// <summary>
+    /// This style applies to popups, menus, tooltips windows.
+    /// </summary>
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "Menu Tooltip PopupBg PopupRounding PopupBorderSize")]
     internal partial class SetPopupStyle : Widget
     {
         public Widget? Input { private get; set; }
 
+        /// <summary>
+        /// Background of popups, menus, tooltips windows
+        /// </summary>
         public Optional<Color4> Background { private get; set; }
 
+        /// <summary>
+        /// Radius of popup window corners rounding.
+        /// </summary>
         public Optional<float> Rounding { private get; set; }
 
+        /// <summary>
+        /// Thickness of border around popup/tooltip windows. Generally set to 0.0 or 1.0. (Other values are not well tested and more CPU/GPU costly).
+        /// </summary>
         public Optional<float> BorderSize { private get; set; }
 
         internal override void Update(Context context)

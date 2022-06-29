@@ -12,7 +12,7 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false)]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "ButtonHovered ButtonActive")]
     internal partial class SetButtonStyle : Widget
     {
         public Widget? Input { private get; set; }
@@ -23,6 +23,9 @@ namespace VL.ImGui.Styling
 
         public Optional<Color4> Active { private get; set; }
 
+        /// <summary>
+        /// Alignment of button text when button is larger than text. Defaults to (0.5, 0.5) (centered).
+        /// </summary>
         public Optional<Vector2> TextAlign { private get; set; }
 
         internal override void Update(Context context)

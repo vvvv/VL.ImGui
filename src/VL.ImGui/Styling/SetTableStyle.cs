@@ -12,21 +12,36 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false)]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "TableHeaderBg TableRowBg TableRowBgAlt TableBorderStrong TableBorderLight CellPadding")]
     internal partial class SetTableStyle : Widget
     {
         public Widget? Input { private get; set; }
 
         public Optional<Color4> HeaderBackground { private get; set; }
 
+        /// <summary>
+        /// Table row background (even rows)
+        /// </summary>
         public Optional<Color4> RowBackground { private get; set; }
 
+        /// <summary>
+        /// Table row background (odd rows)
+        /// </summary>
         public Optional<Color4> RowBackgroundAlt { private get; set; }
 
+        /// <summary>
+        /// Table outer and header borders (prefer using Alpha=1.0 here)
+        /// </summary>
         public Optional<Color4> BorderStrongColor { private get; set; }
 
+        /// <summary>
+        /// Table inner borders (prefer using Alpha=1.0 here)
+        /// </summary>
         public Optional<Color4> BorderLightColor { private get; set; }
 
+        /// <summary>
+        /// Padding within a table cell.
+        /// </summary>
         public Optional<Vector2> CellPadding { private get; set; }
 
         internal override void Update(Context context)

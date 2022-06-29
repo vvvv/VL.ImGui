@@ -12,12 +12,19 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false)]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "ItemSpacing ItemInnerSpacing")]
     internal partial class SetSpacingStyle : Widget
     {
         public Widget? Input { private get; set; }
 
+        /// <summary>
+        /// Horizontal and vertical spacing between widgets/lines.
+        /// </summary>
         public Optional<Vector2> ItemSpacing { private get; set; }
+
+        /// <summary>
+        /// Horizontal and vertical spacing between within elements of a composed widget (e.g. a slider and its label).
+        /// </summary>
         public Optional<Vector2> InnerSpacing { private get; set; }
 
         internal override void Update(Context context)

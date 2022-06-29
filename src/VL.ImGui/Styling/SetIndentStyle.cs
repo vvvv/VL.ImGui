@@ -12,11 +12,14 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false)]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "IndentSpacing")]
     internal partial class SetIndentStyle : Widget
     {
         public Widget? Input { private get; set; }
 
+        /// <summary>
+        /// Horizontal indentation when e.g. entering a tree node. Generally == (FontSize + FramePadding.x*2).
+        /// </summary>
         public Optional<float> Indent { private get; set; }
 
         internal override void Update(Context context)

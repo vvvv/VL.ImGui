@@ -12,7 +12,7 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false)]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "Color DisabledColor")]
     internal partial class SetTextStyle : Widget
     {
         public Widget? Input { private get; set; }
