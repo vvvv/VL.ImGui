@@ -7,7 +7,9 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Separator")]
+    [GenerateNode]
+
+    
     internal partial class Separator : Widget
     {
 
