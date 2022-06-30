@@ -12,12 +12,14 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "WindowBg WindowMinSize WindowTitleAlign WindowPadding WindowRounding WindowBorderSize")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "WindowBg MenuBarBg WindowMinSize WindowTitleAlign WindowPadding WindowRounding WindowBorderSize")]
     internal partial class SetWindowStyle : Widget
     {
         public Widget? Input { private get; set; }
 
         public Optional<Color4> Background { private get; set; }
+
+        public Optional<Color4> MenuBarBackground { private get; set; }
 
         /// <summary>
         /// Minimum window size.
@@ -54,6 +56,11 @@ namespace VL.ImGui.Styling
                 {
                     colorCount++;
                     ImGui.PushStyleColor(ImGuiCol.WindowBg, Background.Value.ToImGui());
+                }
+                if (MenuBarBackground.HasValue)
+                {
+                    colorCount++;
+                    ImGui.PushStyleColor(ImGuiCol.MenuBarBg, MenuBarBackground.Value.ToImGui());
                 }
                 if (MinSize.HasValue)
                 {
