@@ -16,7 +16,7 @@ namespace VL.ImGui.Styling
     /// <summary>
     /// Header colors are used for CollapsingHeader, TreeNode, Selectable, MenuItem
     /// </summary>
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "Selectable CollapsingHeader TreeNode MenuItem")]
     internal partial class SetHeaderStyle : Widget
     {
         public Widget? Input { private get; set; }

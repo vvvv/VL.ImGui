@@ -26,26 +26,22 @@ namespace VL.ImGui.Widgets
 
         internal override void Update(Context context)
         {
+            var value = Value.Value;
+            IsVisible = ImGuiNET.ImGui.CollapsingHeader(Label ?? string.Empty, ref value, Flags);
+
+            if (value != Value.Value)
+                Value.OnNext(value);
+
             var count = Items.Count(x => x != null);
 
-            if (count > 0)
+            if (count > 0 && IsVisible)
             {
-                var value = Value.Value;
-                IsVisible = ImGuiNET.ImGui.CollapsingHeader(Label ?? string.Empty, ref value, Flags);
-
-                if (value != Value.Value)
-                    Value.OnNext(value);
-
-                if (IsVisible)
+                foreach (var item in Items)
                 {
-                    foreach (var item in Items)
-                    {
-                        if (item is null)
-                            continue;
-                        else
-                            context.Update(item);
-
-                    }
+                    if (item is null)
+                        continue;
+                    else
+                        context.Update(item);
                 }
             }
         }

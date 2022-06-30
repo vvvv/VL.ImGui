@@ -122,6 +122,7 @@ namespace VL.ImGui
             yield return Styling.SetPlotStyle.GetNodeDescription(factory);
             yield return Styling.SetSeparatorStyle.GetNodeDescription(factory);
             yield return Styling.SetHeaderStyle.GetNodeDescription(factory);
+            yield return Styling.SetSelectableStyle.GetNodeDescription(factory);
 
             // Layout
             yield return Row.GetNodeDescription(factory);
