@@ -99,9 +99,6 @@ namespace VL.ImGui
             yield return InputInt4.GetNodeDescription(factory);
 
             // Style
-            yield return SetStyleColor.GetNodeDescription(factory);
-            yield return SetStyleVarFloat.GetNodeDescription(factory);
-            yield return SetStyleVarVector.GetNodeDescription(factory);
             yield return Styling.SetAlphaStyle.GetNodeDescription(factory);
             yield return Styling.SetFrameStyle.GetNodeDescription(factory);
             yield return Styling.SetPopupStyle.GetNodeDescription(factory);
