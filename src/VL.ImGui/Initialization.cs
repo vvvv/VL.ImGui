@@ -86,6 +86,7 @@ namespace VL.ImGui
 
             // Tree
             yield return TreeNode.GetNodeDescription(factory);
+            yield return CollapsingHeader.GetNodeDescription(factory);
 
             // Input
             yield return InputFloat.GetNodeDescription(factory);
@@ -120,6 +121,7 @@ namespace VL.ImGui
             yield return Styling.SetTitleStyle.GetNodeDescription(factory);
             yield return Styling.SetPlotStyle.GetNodeDescription(factory);
             yield return Styling.SetSeparatorStyle.GetNodeDescription(factory);
+            yield return Styling.SetHeaderStyle.GetNodeDescription(factory);
 
             // Layout
             yield return Row.GetNodeDescription(factory);
