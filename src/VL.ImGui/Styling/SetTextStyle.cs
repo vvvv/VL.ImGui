@@ -12,7 +12,7 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "Color DisabledColor")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "Color DisabledColor SelectedTextBg")]
     internal partial class SetTextStyle : Widget
     {
         public Widget? Input { private get; set; }
@@ -20,6 +20,9 @@ namespace VL.ImGui.Styling
         public Optional<Color4> Color { private get; set; }
 
         public Optional<Color4> DisabledColor { private get; set; }
+
+        public Optional<Color4> SelectedTextBackground { private get; set; }
+
 
         internal override void Update(Context context)
         {
@@ -38,6 +41,11 @@ namespace VL.ImGui.Styling
                 {
                     colorCount++;
                     ImGui.PushStyleColor(ImGuiCol.TextDisabled, DisabledColor.Value.ToImGui());
+                }
+                if (SelectedTextBackground.HasValue)
+                {
+                    colorCount++;
+                    ImGui.PushStyleColor(ImGuiCol.TextSelectedBg, SelectedTextBackground.Value.ToImGui());
                 }
 
                 context.Update(Input);
