@@ -8,7 +8,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Slider (Vector2)")]
+    [GenerateNode(Name = "Slider (Vector2)", Category = "ImGui.Widgets")]
     internal partial class SliderVector2 : Widget
     {
         public string? Label { get; set; }

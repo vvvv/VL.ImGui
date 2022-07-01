@@ -9,7 +9,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Text")]
+    [GenerateNode(Name = "Text", Category = "ImGui.Widgets")]
     internal partial class TextWidget : Widget
     {
         public string? Text { private get; set; }

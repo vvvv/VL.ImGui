@@ -9,7 +9,7 @@ using Stride.Core.Mathematics;
 namespace VL.ImGui.Widgets
 {
 
-    [GenerateNode]
+    [GenerateNode(Category = "ImGui.Widgets")]
     internal sealed partial class TabItem : Widget
     {
         public Widget? Content { get; set; }

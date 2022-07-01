@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Tags = "tree")]
+    [GenerateNode(Category = "ImGui.Widgets", Tags = "tree")]
     internal sealed partial class CollapsingHeader : Widget
     {
 

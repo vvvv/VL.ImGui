@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Input (Int4)")]
+    [GenerateNode(Name = "Input (Int4)", Category = "ImGui.Widgets")]
     internal partial class InputInt4 : Widget
     {
 

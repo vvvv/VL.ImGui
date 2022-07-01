@@ -20,9 +20,11 @@ namespace VL.ImGui.Windows
 
         public bool Fullscreen { get; set; } = false;
 
-        public RectangleF Bounds { get; set; }
+        public RectangleF Bounds { get; set; } // TODO: will be done with setters below the window
 
-        public bool SetBounds { get; set; }
+        public bool SetBounds { get; set; } // TODO: will be done with setters below the window
+
+        public IEnumerable<Widget> MenuBar { get; set; } = Enumerable.Empty<Widget>();
 
         public ImGuiWindowFlags WindowFlags { get; set; }
 
@@ -32,6 +34,14 @@ namespace VL.ImGui.Windows
 
         internal override void Update(Context context)
         {
+
+            var menuBarCount = MenuBar.Count(x => x != null);
+
+            if (menuBarCount > 0)
+            {
+                WindowFlags |= ImGuiWindowFlags.MenuBar;
+            }
+
             if (Fullscreen)
             {
                 var viewPort = ImGui.GetMainViewport();
@@ -60,6 +70,29 @@ namespace VL.ImGui.Windows
                 if (IsVisible)
                 {
                     context.Update(Content);
+
+                    // Add Menu Bar
+                    if (menuBarCount > 0)
+                    {
+                        if (ImGui.BeginMenuBar())
+                        {
+                            try
+                            {
+                                foreach (var item in MenuBar)
+                                {
+                                    if (item is null)
+                                        continue;
+                                    else
+                                        context.Update(item);
+                                }
+                            }
+                            finally
+                            {
+                                ImGuiNET.ImGui.EndMenuBar();
+                            }
+                        }
+
+                    }
                 }
             }
             finally

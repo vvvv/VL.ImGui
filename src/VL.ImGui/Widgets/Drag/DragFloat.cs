@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Drag (Float)")]
+    [GenerateNode(Name = "Drag (Float)", Category = "ImGui.Widgets")]
     internal partial class DragFloat : Widget
     {
         public string? Label { get; set; }

@@ -6,7 +6,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode]
+    [GenerateNode(Category = "ImGui.Widgets")]
     internal sealed partial class Row : Widget
     {
         public IEnumerable<Widget> Children { get; set; } = Enumerable.Empty<Widget>();

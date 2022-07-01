@@ -8,7 +8,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode]
+    [GenerateNode(Category = "ImGui.Widgets")]
     internal partial class PlotLines : Widget
     {
 
@@ -20,9 +20,9 @@ namespace VL.ImGui.Widgets
 
         public string OverlayText { get; set; } = String.Empty;
 
-        public float ScaleMin { get; set; }
+        public float ScaleMin { get; set; } = -1.0f;
 
-        public float ScaleMax { get; set; }
+        public float ScaleMax { get; set; } = 1.0f;
 
         public Vector2 Size { get; set; }
 

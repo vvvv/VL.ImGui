@@ -11,7 +11,7 @@ namespace VL.ImGui.Widgets
     /// <summary>
     /// A selectable highlights when hovered, and can display another color when selected. Neighbors selectable extend their highlight bounds in order to leave no gap between them. This is so a series of selected Selectable appear contiguous.
     /// </summary>
-    [GenerateNode]
+    [GenerateNode(Category = "ImGui.Widgets")]
     internal partial class Selectable : Widget
     {
 

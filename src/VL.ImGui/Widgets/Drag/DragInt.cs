@@ -6,7 +6,7 @@ using System.Text;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Drag (Int)")]
+    [GenerateNode(Name = "Drag (Int)", Category = "ImGui.Widgets")]
     internal partial class DragInt : Widget
     {
         public string? Label { get; set; }

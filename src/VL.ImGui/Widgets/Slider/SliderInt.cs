@@ -6,7 +6,7 @@ using System.Text;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Slider (Int)")]
+    [GenerateNode(Name = "Slider (Int)", Category = "ImGui.Widgets")]
     internal partial class SliderInt : Widget
     {
         public string? Label { get; set; }

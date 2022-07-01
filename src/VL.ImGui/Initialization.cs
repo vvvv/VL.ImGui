@@ -27,11 +27,18 @@ namespace VL.ImGui
 
         static IEnumerable<IVLNodeDescription> GetNodes(IVLNodeDescriptionFactory factory)
         {
+
+            //Windows
             yield return DemoWindow.GetNodeDescription(factory);
+            yield return MetricsWindow.GetNodeDescription(factory);
+            yield return StackToolWindow.GetNodeDescription(factory);
+            yield return AboutWindow.GetNodeDescription(factory);
 
             yield return ObjectEditor.GetNodeDescription(factory);
 
             yield return SkiaWidget.GetNodeDescription(factory);
+
+            yield return UserGuide.GetNodeDescription(factory);
 
             //Slider
             yield return SliderFloat.GetNodeDescription(factory);
@@ -68,7 +75,6 @@ namespace VL.ImGui
             // Buttons
             yield return Button.GetNodeDescription(factory);
             yield return ButtonSmall.GetNodeDescription(factory);
-            yield return InvisibleButton.GetNodeDescription(factory);
             yield return Selectable.GetNodeDescription(factory);
             yield return ArrowButton.GetNodeDescription(factory);
 
@@ -121,6 +127,8 @@ namespace VL.ImGui
             yield return Styling.SetHeaderStyle.GetNodeDescription(factory);
             yield return Styling.SetSelectableStyle.GetNodeDescription(factory);
             yield return Styling.SetCheckboxStyle.GetNodeDescription(factory);
+            yield return StyleSelector.GetNodeDescription(factory);
+            yield return StyleEditor.GetNodeDescription(factory);
 
             // Layout
             yield return Row.GetNodeDescription(factory);
@@ -181,8 +189,6 @@ namespace VL.ImGui
             // Menus
             yield return MenuItem.GetNodeDescription(factory);
             yield return Menu.GetNodeDescription(factory);
-            yield return MainMenuBar.GetNodeDescription(factory);
-            yield return WindowMenuBar.GetNodeDescription(factory);
 
             //Popup
             yield return PopupWindow.GetNodeDescription(factory);

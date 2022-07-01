@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Slider (Int4)")]
+    [GenerateNode(Name = "Slider (Int4)", Category = "ImGui.Widgets")]
     internal partial class SliderInt4 : Widget
     {
         public string? Label { get; set; }

@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "SetTooltip (Text)")]
+    [GenerateNode(Category = "ImGui.Widgets", Name = "Tooltip (String)")]
     internal partial class SetTooltipText : Widget
     {
         public Widget? Input { private get; set; }

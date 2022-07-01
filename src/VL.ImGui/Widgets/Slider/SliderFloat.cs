@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Slider (Float)")]
+    [GenerateNode(Name = "Slider (Float)", Category = "ImGui.Widgets")]
     internal partial class SliderFloat : Widget
     {
         public string? Label { get; set; }

@@ -8,8 +8,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name ="Button (Small)")]
-
+    [GenerateNode(Name ="Button (Small)", Category = "ImGui.Widgets")]
     internal partial class ButtonSmall : Widget
     {
         public string? Label { get; set; }

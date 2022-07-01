@@ -8,7 +8,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Input (Float)")]
+    [GenerateNode(Name = "Input (Float)", Category = "ImGui.Widgets")]
     internal partial class InputFloat : Widget
     {
 

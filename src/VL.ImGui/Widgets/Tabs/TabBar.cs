@@ -9,7 +9,7 @@ using Stride.Core.Mathematics;
 namespace VL.ImGui.Widgets
 {
 
-    [GenerateNode]
+    [GenerateNode(Category = "ImGui.Widgets")]
     internal sealed partial class TabBar : Widget
     {
         public IEnumerable<Widget> Items { get; set; } = Enumerable.Empty<Widget>();

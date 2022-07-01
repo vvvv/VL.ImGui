@@ -8,7 +8,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "ListBox")]
+    [GenerateNode(Category = "ImGui.Widgets")]
     internal partial class ListBox : Widget
     {
 

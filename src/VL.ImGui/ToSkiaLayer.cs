@@ -42,6 +42,7 @@ namespace VL.ImGui
         readonly ImGuiIOPtr _io;
 
         Widget? _widget;
+        public IEnumerable<Widget> MenuBar { get; set; } = Enumerable.Empty<Widget>();
 
         // OpenGLES rendering (https://github.com/dotnet/Silk.NET/tree/v2.15.0/src/OpenGL/Extensions/Silk.NET.OpenGL.Extensions.ImGui)
         private readonly SkiaContext _context;
@@ -65,8 +66,9 @@ namespace VL.ImGui
             
         }
 
-        public ILayer Update(Widget widget)
+        public ILayer Update(Widget widget, IEnumerable<Widget> menuBar)
         {
+            MenuBar = menuBar;
             _widget = widget;
             return this;
         }
@@ -81,6 +83,30 @@ namespace VL.ImGui
                 _context.NewFrame();
                 try
                 {
+                    // Add Menu Bar
+                    var menuBarCount = MenuBar.Count(x => x != null);
+
+                    if (menuBarCount > 0)
+                    {
+                        if (ImGui.BeginMainMenuBar())
+                        {
+                            try
+                            {
+                                foreach (var item in MenuBar)
+                                {
+                                    if (item is null)
+                                        continue;
+                                    else
+                                        _context.Update(item);
+                                }
+                            }
+                            finally
+                            {
+                                ImGui.EndMainMenuBar();
+                            }
+                        }
+
+                    }
                     // ImGui.ShowDemoWindow();
                     _context.Update(_widget);
                 }

@@ -6,7 +6,7 @@ using VL.Skia;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode]
+    [GenerateNode(Category = "ImGui.Widgets")]
     public sealed partial class SkiaWidget : Widget
     {
         private readonly InViewportUpstream _transformLayer = new InViewportUpstream();

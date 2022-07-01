@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "InputText (Hint)")]
+    [GenerateNode(Name = "Input (String Hint)", Category = "ImGui.Widgets")]
     internal partial class InputTextWithHint : Widget
     {
 

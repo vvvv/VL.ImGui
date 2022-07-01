@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Combo (String)")]
+    [GenerateNode(Name = "Combo (String)", Category = "ImGui.Widgets")]
     internal partial class Combo : Widget
     {
 
