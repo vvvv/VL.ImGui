@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0101-f1a20d5b10" Version="0.128">
+<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0103-51dfa27dea" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -17,9 +17,10 @@
           <Node Bounds="462,768,70,19" Id="Lt5jBqy5ocHQLwBmIb8mt0">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ToSkiaLayer" />
+              <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
             </p:NodeReference>
             <Pin Id="OuxuxmOwAWSLY7F6norUZK" Name="Input" Kind="InputPin" />
+            <Pin Id="IgrX05T3jgiO9RYYxzTZZW" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="Tsi6F5g1cOCQK44SVRexGG" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="423,824,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
@@ -27,7 +28,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="850, 170, 676, 613" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="770, 226, 676, 612" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -51,6 +52,7 @@
             <Pin Id="USGBm3YlCLfLSkhMwPy8Kr" Name="Fullscreen" Kind="InputPin" DefaultValue="True" />
             <Pin Id="GR2j31thqmAPZpgmXxATSX" Name="Bounds" Kind="InputPin" />
             <Pin Id="BPPSStUpi5WNwyxBOb8f3Z" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="DUO8WQjR3qQPFQIZhP1Bxz" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="ET6rC6nRBXLNrxrT00jzC1" Name="Window Flags" Kind="InputPin" />
             <Pin Id="VOjeHD5PpJCOPUJVAaWJDa" Name="Output" Kind="OutputPin" />
             <Pin Id="O1Cf93jaX8dNBUPUZLJKMq" Name="Closing" Kind="OutputPin" />
@@ -368,6 +370,7 @@
             <Pin Id="PsjlDPaAFRQLO2e2pGLZXX" Name="Input" Kind="InputPin" />
             <Pin Id="SNbMjjuvDzdPiljco3Yht0" Name="Color" Kind="InputPin" />
             <Pin Id="KKzNJaa9ziILHdQtIGl2e1" Name="Disabled Color" Kind="InputPin" />
+            <Pin Id="C43J0XD6L6NO0NW04khxYA" Name="Selected Text Background" Kind="InputPin" />
             <Pin Id="E27qBkAbxCdMj5Die3ZvmO" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="TQktJHdIJPKNjo8iW6Oyhl" Comment="Color" Bounds="497,641,20,15" ShowValueBox="true" isIOBox="true" Value="1, 0.7800025, 0, 1">
@@ -375,7 +378,7 @@
               <Choice Kind="TypeFlag" Name="RGBA" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="RT8zUxigeFbOJv0rDH57In" Bounds="462,115,80,100" ShowValueBox="true" isIOBox="true">
+          <Pad Id="RT8zUxigeFbOJv0rDH57In" Bounds="463,101,80,100" ShowValueBox="true" isIOBox="true">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>
@@ -384,12 +387,16 @@
                 </TypeReference>
               </p:TypeArguments>
             </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">6</p:maxvisibleentries>
+            </p:ValueBoxSettings>
             <p:Value>
               <Item>Everything</Item>
               <Item>You</Item>
               <Item>Know</Item>
               <Item>Is</Item>
               <Item>Wrong</Item>
+              <Item>ClickMe</Item>
             </p:Value>
           </Pad>
           <Node Bounds="448,238,146,112" Id="QuVp94ej8w3NCV4bBNhVOh">
@@ -434,7 +441,11 @@
               <Choice Kind="TypeFlag" Name="ImGuiSelectableFlags" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="AiS8sGHfv5GNEvkmhguhxj" Comment="" Bounds="627,312,35,95" ShowValueBox="true" isIOBox="true" Value="False" />
+          <Pad Id="AiS8sGHfv5GNEvkmhguhxj" Comment="" Bounds="627,312,41,103" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">6</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+          </Pad>
           <Node Bounds="461,479,97,19" Id="FMvVsgLZl67MmwWHdKDDCj">
             <p:NodeReference LastCategoryFullName="ImGui.Styling" LastSymbolSource="VL.ImGUI.Nodes">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />

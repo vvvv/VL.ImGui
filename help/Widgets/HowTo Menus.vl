@@ -18,7 +18,7 @@
           <Node Bounds="251,932,70,19" Id="HTNOL00ofCINm54ov25km3">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ToSkiaLayer" />
+              <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
             </p:NodeReference>
             <Pin Id="VptbbhjucD5O9BuF9knpC2" Name="Input" Kind="InputPin" />
             <Pin Id="BHjPmhjLNzCOIEpjCAnhye" Name="Menu Bar" Kind="InputPin" />
@@ -29,7 +29,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="PuG0bcB8eqxPck4ITinMmc" Name="Bounds" Kind="InputPin" DefaultValue="825, 100, 638, 464" />
+            <Pin Id="PuG0bcB8eqxPck4ITinMmc" Name="Bounds" Kind="InputPin" DefaultValue="824, 100, 637, 464" />
             <Pin Id="ULoEM54zl1XLu2jmN2I37Q" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="OVbx8n9RLE5MRe7klfFFDr" Name="Input" Kind="InputPin" />
             <Pin Id="UloK2vQ640GMvmFoNudSeE" Name="Color" Kind="InputPin" />

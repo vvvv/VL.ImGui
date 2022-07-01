@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0101-f1a20d5b10" Version="0.128">
+<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0103-51dfa27dea" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -17,9 +17,10 @@
           <Node Bounds="473,731,70,19" Id="Lt5jBqy5ocHQLwBmIb8mt0">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ToSkiaLayer" />
+              <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
             </p:NodeReference>
             <Pin Id="OuxuxmOwAWSLY7F6norUZK" Name="Input" Kind="InputPin" />
+            <Pin Id="KHyYKjDD2NWN8i3QeqTEHC" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="Tsi6F5g1cOCQK44SVRexGG" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="434,771,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
@@ -27,7 +28,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1128, 61, 445, 515" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="836, 28, 444, 514" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -51,6 +52,7 @@
             <Pin Id="USGBm3YlCLfLSkhMwPy8Kr" Name="Fullscreen" Kind="InputPin" DefaultValue="True" />
             <Pin Id="GR2j31thqmAPZpgmXxATSX" Name="Bounds" Kind="InputPin" />
             <Pin Id="BPPSStUpi5WNwyxBOb8f3Z" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="ETWjyRkNQR1P5z57Wv3Jcv" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="ET6rC6nRBXLNrxrT00jzC1" Name="Window Flags" Kind="InputPin" />
             <Pin Id="VOjeHD5PpJCOPUJVAaWJDa" Name="Output" Kind="OutputPin" />
             <Pin Id="O1Cf93jaX8dNBUPUZLJKMq" Name="Closing" Kind="OutputPin" />
@@ -137,12 +139,13 @@
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="63,329,37,19" Id="QGJ8O9cGPCaOZjpMIAnrEw">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+            <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Text" />
-              <CategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="GXe6yIJgQ91NUTs28H19MC" Name="Text" Kind="InputPin" />
+            <Pin Id="F3iLmc4bzmlQE1wS2p0t5W" Name="Disabled" Kind="InputPin" />
             <Pin Id="QO7i2k2IQH5NUoPQngEYxF" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="FvgXUV8jEoHPCUEZ5nvLIJ" Comment="Text" Bounds="65,278,195,45" ShowValueBox="true" isIOBox="true" Value="This is the ColorEdit.&#xD;&#xA;Leftclick on Color in Color Edit widget to bring up the Colorpicker window. &#xD;&#xA;Rightclick to bring up context menu.">
@@ -151,12 +154,13 @@
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="561,329,37,19" Id="TsfFUrdWYnvOZZ7T8U7Tri">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+            <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Text" />
-              <CategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="QvoXv49nxG7MCKsubnfXpd" Name="Text" Kind="InputPin" />
+            <Pin Id="NsPWehC61XyOwWL2dX7vJq" Name="Disabled" Kind="InputPin" />
             <Pin Id="SqHhsSYgjEIMup9zNGLGnH" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="SX5HDXzOt7mMiyqnnUgEuR" Comment="Text" Bounds="563,266,135,53" ShowValueBox="true" isIOBox="true" Value="This is the Standalone Colorpicker.&#xD;&#xA;Check all the Flags.">
