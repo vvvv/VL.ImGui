@@ -134,7 +134,7 @@ namespace {typeSymbol.ContainingNamespace}
                 }};
                 var _outputs = new[]
                 {{
-                    _c.Output<Widget>(""Output""),
+                    _c.Output<{(typeSymbol.DeclaredAccessibility == Accessibility.Public ? typeSymbol.Name : "Widget")}>(""Output""),
                     {string.Join($"{Environment.NewLine}{indent}", outputDescriptions)}
                 }};
                 return _c.NewNode(_inputs, _outputs, c =>

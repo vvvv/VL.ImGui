@@ -17,8 +17,6 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiTreeNodeFlags Flags { private get; set; }
 
-        public bool IsVisible { get; private set; }
-
         internal override void Update(Context context)
         {
             var count = Items.Count(x => x != null);
@@ -26,9 +24,7 @@ namespace VL.ImGui.Widgets
             if (count > 0)
             {
 
-                IsVisible = ImGuiNET.ImGui.TreeNodeEx(Label ?? string.Empty, Flags);
-
-                if (IsVisible)
+                if (ImGuiNET.ImGui.TreeNodeEx(Label ?? string.Empty, Flags))
                 {
                     try
                     {

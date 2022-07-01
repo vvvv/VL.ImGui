@@ -30,12 +30,12 @@ namespace VL.ImGui.Windows
 
         public bool Closing { get; private set; }
 
-        public bool IsVisible { get; private set; }
-
         internal override void Update(Context context)
         {
 
             var menuBarCount = MenuBar.Count(x => x != null);
+
+            bool isVisible;
 
             if (menuBarCount > 0)
             {
@@ -57,17 +57,17 @@ namespace VL.ImGui.Windows
             if (HasCloseButton)
             {
                 var open = true;
-                IsVisible = ImGuiNET.ImGui.Begin(Name, ref open, WindowFlags);
+                isVisible = ImGui.Begin(Name, ref open, WindowFlags);
                 Closing = !open;
             }
             else
             {
-                IsVisible = ImGuiNET.ImGui.Begin(Name, WindowFlags);
+                isVisible = ImGui.Begin(Name, WindowFlags);
             }
 
             try
             {
-                if (IsVisible)
+                if (isVisible)
                 {
                     context.Update(Content);
 
@@ -88,23 +88,21 @@ namespace VL.ImGui.Windows
                             }
                             finally
                             {
-                                ImGuiNET.ImGui.EndMenuBar();
+                                ImGui.EndMenuBar();
                             }
                         }
-
                     }
                 }
             }
             finally
             {
-                ImGuiNET.ImGui.End();
+                ImGui.End();
             }
         }
 
         internal override void Reset()
         {
             Closing = false;
-            IsVisible = false;
         }
     }
 }

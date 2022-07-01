@@ -16,8 +16,6 @@ namespace VL.ImGui.Widgets
 
         public string? Label { get; set; }
 
-        public bool IsVisible { get; private set; }
-
         public ImGuiNET.ImGuiTabBarFlags Flags { private get; set; }
 
         internal override void Update(Context context)
@@ -26,9 +24,7 @@ namespace VL.ImGui.Widgets
 
             if (count > 0)
             {
-                IsVisible = ImGuiNET.ImGui.BeginTabBar(Label ?? string.Empty, Flags);
-
-                if (IsVisible)
+                if (ImGuiNET.ImGui.BeginTabBar(Label ?? string.Empty, Flags))
                 {
                     try
                     {
@@ -38,7 +34,6 @@ namespace VL.ImGui.Widgets
                                 continue;
                             else
                                 context.Update(item);
-
                         }
                     }
                     finally

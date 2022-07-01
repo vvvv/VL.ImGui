@@ -30,7 +30,6 @@ namespace VL.ImGui.Widgets
             {
                 if (ImGuiNET.ImGui.BeginCombo(Label ?? string.Empty, value, Flags))
                 {
-
                     try
                     {
                         foreach (var item in Items)

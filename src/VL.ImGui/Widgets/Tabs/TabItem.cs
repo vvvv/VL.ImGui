@@ -16,8 +16,6 @@ namespace VL.ImGui.Widgets
 
         public string? Label { get; set; }
 
-        public bool IsVisible { get; private set; }
-
         public ImGuiNET.ImGuiTabItemFlags Flags { private get; set; }
 
         public BehaviorSubject<bool> Value { get; } = new BehaviorSubject<bool>(true);
@@ -26,9 +24,8 @@ namespace VL.ImGui.Widgets
         {
 
             var value = Value.Value;
-            IsVisible = ImGuiNET.ImGui.BeginTabItem(Label ?? string.Empty, ref value, Flags);
 
-            if (IsVisible)
+            if (ImGuiNET.ImGui.BeginTabItem(Label ?? string.Empty, ref value, Flags))
             {
                 try
                 {

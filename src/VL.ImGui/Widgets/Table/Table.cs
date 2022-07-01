@@ -21,8 +21,6 @@ namespace VL.ImGui.Widgets
 
         public float InnerWidth { private get; set; }
 
-        public bool IsVisible { get; private set; }
-
         public bool ShowHeader { get; set; }
 
         public ImGuiNET.ImGuiTableFlags Flags { private get; set; }
@@ -33,10 +31,7 @@ namespace VL.ImGui.Widgets
 
             if (count > 0)
             {
-
-                IsVisible = ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, count, Flags, Size.ToImGui(), InnerWidth);
-
-                if (IsVisible)
+                if (ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, count, Flags, Size.ToImGui(), InnerWidth))
                 {
                     try
                     {
@@ -46,7 +41,6 @@ namespace VL.ImGui.Widgets
                                 continue;
                             else
                                 context.Update(desc);
-
                         }
 
                         if (ShowHeader)

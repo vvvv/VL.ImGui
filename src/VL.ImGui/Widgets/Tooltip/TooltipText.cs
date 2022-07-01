@@ -8,16 +8,13 @@ using VL.Core;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Category = "ImGui.Widgets", Name = "Tooltip (String)")]
-    internal partial class SetTooltipText : Widget
+    internal partial class TooltipText : Widget
     {
-        public Widget? Input { private get; set; }
-
-        public string? Text{ private get; set; }
+        public string? Content { private get; set; }
 
         internal override void Update(Context context)
         {
-            ImGuiNET.ImGui.SetTooltip(Text ?? string.Empty);
-            context.Update(Input);
+            ImGuiNET.ImGui.SetTooltip(Content ?? string.Empty);
         }
     }
 }

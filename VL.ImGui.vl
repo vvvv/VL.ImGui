@@ -627,6 +627,86 @@
             <Link Id="LBRXkU9wnWNPwlTDuP5sDA" Ids="FdFodMXdMX7L5WshPsBqku,VOqE4lkMcOxOUemIwm3WiE" IsHidden="true" />
           </Patch>
         </Node>
+        <Canvas Id="GyOZNNp2rjhNTGWKHjGmzR" Name="PopupWindow" Position="225,242">
+          <!--
+
+    ************************ Close ************************
+
+-->
+          <Node Name="Close" Bounds="408,149,150,111" Id="F6JySFMxGQwMWrn7NX3ikh">
+            <p:NodeReference>
+              <Choice Kind="OperationDefinition" Name="Operation" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+            <Patch Id="FGAKB31cuXnPGHyrOGDt3z">
+              <Node Bounds="420,214,10,10" AutoConnect="true" Id="HNdXnfYUqSLMavCCPe15Yc">
+                <p:NodeReference LastCategoryFullName="VL.ImGui.Widgets.PopupWindow" LastSymbolSource="VL.ImGui.dll">
+                  <Choice Kind="OperationNode" Name="Close" />
+                  <FullNameCategoryReference ID="VL.ImGui.Widgets.PopupWindow" />
+                </p:NodeReference>
+                <Pin Id="D4d9FBhFIGnNeJiJWR7DYL" Name="Input" Kind="StateInputPin" />
+                <Pin Id="RwrOib2irl9L28tv0TF24O" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="U4MN5EXSLMNNN91ML9IAbq" Name="Apply" Kind="InputPin" />
+              </Node>
+              <Node Bounds="481,183,65,19" Id="Hk9U0ySfM6pME8XFeV1Zmi">
+                <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="IsAssigned" />
+                </p:NodeReference>
+                <Pin Id="S5N9yNZzRj1QUcJEyaUrBQ" Name="X" Kind="InputPin" />
+                <Pin Id="Aj9qx43zfTYL8OKIsjFXNs" Name="Result" Kind="OutputPin" />
+                <Pin Id="F672hZESPA8OnjOHQozh3b" Name="Not Assigned" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="Rv9DGHvsjY6LCFLIauLriM" Bounds="423,167" />
+              <Link Id="UIT7BKAYhY6MT92XW2P7KG" Ids="Rv9DGHvsjY6LCFLIauLriM,D4d9FBhFIGnNeJiJWR7DYL" />
+              <Link Id="Lvdwckp5cGZMdlwZObJd89" Ids="F7fASDNgt8UOmwCmhCMEgm,Rv9DGHvsjY6LCFLIauLriM" IsHidden="true" />
+              <Link Id="U9bGFa7eTJRPajVIT1ZlZ5" Ids="Rv9DGHvsjY6LCFLIauLriM,S5N9yNZzRj1QUcJEyaUrBQ" />
+              <Link Id="H9ICbRGQzpUNEQrZ68x0kn" Ids="Aj9qx43zfTYL8OKIsjFXNs,U4MN5EXSLMNNN91ML9IAbq" />
+              <Pin Id="MyvP9mJ2c5pLoqgEB8ReVi" Name="Output" Kind="OutputPin" />
+              <Pin Id="F7fASDNgt8UOmwCmhCMEgm" Name="Input" Kind="InputPin" Bounds="429,166" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ Open ************************
+
+-->
+          <Node Name="Open" Bounds="406,326,149,110" Id="EW15oUjhl79LSirXtBnI3v">
+            <p:NodeReference>
+              <Choice Kind="OperationDefinition" Name="Operation" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+            <Patch Id="IYBLK18hQpEMVofaNbnxxR">
+              <Node Bounds="418,390,67,26" AutoConnect="true" Id="CSt1irKmARcNXoVRj69wRp">
+                <p:NodeReference LastCategoryFullName="VL.ImGui.Widgets.PopupWindow" LastSymbolSource="VL.ImGui.dll">
+                  <Choice Kind="OperationNode" Name="Open" />
+                  <FullNameCategoryReference ID="VL.ImGui.Widgets.PopupWindow" />
+                </p:NodeReference>
+                <Pin Id="LP4qze0Zcq3OFkVAj5ktMU" Name="Input" Kind="StateInputPin" />
+                <Pin Id="D6mR8NrK42MNOVcZtv7HPI" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="Lw1SoUI8yN2NCqNtliZ30X" Name="Apply" Kind="InputPin" />
+              </Node>
+              <Node Bounds="478,359,65,19" Id="PJAYKdHhirRLVOXoROHdN1">
+                <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="IsAssigned" />
+                </p:NodeReference>
+                <Pin Id="Jm82py0TmUrPgug7cowghU" Name="X" Kind="InputPin" />
+                <Pin Id="KabXfLLsM1LPPc6CjwZNxl" Name="Result" Kind="OutputPin" />
+                <Pin Id="R5EfQR8w1DSPwEqzMRy3T8" Name="Not Assigned" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="JMWT9F1fJwELFKvUZSV7r1" Bounds="421,344" />
+              <Link Id="M5dNnMsvUMPPctlk6jthDQ" Ids="JMWT9F1fJwELFKvUZSV7r1,LP4qze0Zcq3OFkVAj5ktMU" />
+              <Link Id="EOpWMdrAlGxMp19hgNRAF5" Ids="Mf9KgJQLBXjOc3eai3V8jI,JMWT9F1fJwELFKvUZSV7r1" IsHidden="true" />
+              <Link Id="TeHntulviUVLjsz1hMHHvk" Ids="JMWT9F1fJwELFKvUZSV7r1,Jm82py0TmUrPgug7cowghU" />
+              <Link Id="QAAou7EF1d6L0ey1t2JgnR" Ids="KabXfLLsM1LPPc6CjwZNxl,Lw1SoUI8yN2NCqNtliZ30X" />
+              <Pin Id="OavXcQM6oE5QNJIcylzXba" Name="Output" Kind="OutputPin" />
+              <Pin Id="Mf9KgJQLBXjOc3eai3V8jI" Name="Input" Kind="InputPin" Bounds="433,342" />
+            </Patch>
+          </Node>
+        </Canvas>
       </Canvas>
     </Canvas>
     <!--

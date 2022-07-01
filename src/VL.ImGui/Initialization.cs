@@ -164,8 +164,8 @@ namespace VL.ImGui
             yield return InputTextWithHint.GetNodeDescription(factory);
 
             //Tooltips
-            yield return SetTooltipText.GetNodeDescription(factory);
-            yield return SetTooltipWidget.GetNodeDescription(factory);
+            yield return TooltipText.GetNodeDescription(factory);
+            yield return TooltipWidget.GetNodeDescription(factory);
 
             // Table
             yield return Table.GetNodeDescription(factory);

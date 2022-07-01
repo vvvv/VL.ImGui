@@ -10,38 +10,61 @@ namespace VL.ImGui.Widgets
     [GenerateNode(Category = "ImGui.Widgets", Tags = "tree")]
     internal sealed partial class CollapsingHeader : Widget
     {
-
         public IEnumerable<Widget> Items { get; set; } = Enumerable.Empty<Widget>();
 
         public string? Label { get; set; }
 
         /// <summary>
-        /// If Visible is true: display an additional small close button on upper right of the header which will set the bool to false when clicked, if Value is false don't display the header.
+        /// Display an additional small close button on upper right of the header
         /// </summary>
-        public BehaviorSubject<bool> Value { get; } = new BehaviorSubject<bool>(false);
+        public bool HasCloseButton { get; set; } = true;
+
+        /// <summary>
+        /// Returns true if the header is displayed. Set to true to display the header.
+        /// </summary>
+        public BehaviorSubject<bool> IsVisible { get; } = new BehaviorSubject<bool>(true);
+
+        /// <summary>
+        /// Returns true if the Header is open (not collapsed). Set to true to open the header.
+        /// </summary>
+        public BehaviorSubject<bool> IsOpen { get; } = new BehaviorSubject<bool>(true);
 
         public ImGuiNET.ImGuiTreeNodeFlags Flags { private get; set; }
 
-        public bool IsVisible { get; private set; }
-
         internal override void Update(Context context)
         {
-            var value = Value.Value;
-            IsVisible = ImGuiNET.ImGui.CollapsingHeader(Label ?? string.Empty, ref value, Flags);
+            var value = IsVisible.Value;
+            bool isOpen;
 
-            if (value != Value.Value)
-                Value.OnNext(value);
+            ImGuiNET.ImGui.SetNextItemOpen(IsOpen.Value);
 
-            var count = Items.Count(x => x != null);
-
-            if (count > 0 && IsVisible)
+            if (HasCloseButton)
             {
-                foreach (var item in Items)
+                isOpen = ImGuiNET.ImGui.CollapsingHeader(Label ?? string.Empty, ref value, Flags);
+                if (IsVisible.Value != value)
+                    IsVisible.OnNext(value);
+            }
+            else
+            {
+                isOpen = ImGuiNET.ImGui.CollapsingHeader(Label ?? string.Empty, Flags);
+            }
+
+            if (isOpen != IsOpen.Value)
+                IsOpen.OnNext(isOpen);
+
+            if (isOpen)
+            {
+                var count = Items.Count(x => x != null);
+
+                if (count > 0)
                 {
-                    if (item is null)
-                        continue;
-                    else
-                        context.Update(item);
+                    foreach (var item in Items)
+                    {
+                        if (item is null)
+                            continue;
+                        else
+                            context.Update(item);
+                    }
                 }
             }
         }

@@ -28,7 +28,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="ErSzIKprDkMMT8JzYXHqL3" Name="Bounds" Kind="InputPin" DefaultValue="1220, 232, 532, 792" />
+            <Pin Id="ErSzIKprDkMMT8JzYXHqL3" Name="Bounds" Kind="InputPin" DefaultValue="839, 166, 532, 792" />
             <Pin Id="MDGtB6wxyfIOZeWuSoryyx" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="EOevDdL1eIxQVphZqMaMtt" Name="Input" Kind="InputPin" />
             <Pin Id="KRobVvdjTWWL0sSj7TlloY" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -64,7 +64,6 @@
             <Pin Id="FiCthLiw2rKPsnt0JEBmCL" Name="Window Flags" Kind="InputPin" DefaultValue="NoTitleBar" />
             <Pin Id="Vsjz6oKw27JMyKSgvBzeaM" Name="Output" Kind="OutputPin" />
             <Pin Id="Od2stmgdnMlMmWrWsqBaIj" Name="Closing" Kind="OutputPin" />
-            <Pin Id="AOOMUuxvoHhOVBA6Etidjw" Name="Is Visible" Kind="OutputPin" />
           </Node>
           <Node Bounds="345,287,105,19" Id="L0IkUkaSo6OPpCrMyWNLfJ">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">

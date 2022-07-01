@@ -18,18 +18,13 @@ namespace VL.ImGui.Widgets
 
         public bool Enabled { get; set; } = true;
 
-        public bool IsVisible { get; private set; }
-
         internal override void Update(Context context)
         {
             var count = Items.Count(x => x != null);
 
             if (count > 0)
             {
-
-                IsVisible = ImGuiNET.ImGui.BeginMenu(Label ?? string.Empty, Enabled);
-
-                if (IsVisible)
+                if (ImGuiNET.ImGui.BeginMenu(Label ?? string.Empty, Enabled))
                 {
                     try
                     {

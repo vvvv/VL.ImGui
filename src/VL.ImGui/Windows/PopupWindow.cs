@@ -11,47 +11,59 @@ namespace VL.ImGui.Widgets
     using ImGui = ImGuiNET.ImGui;
 
     [GenerateNode]
-    internal sealed partial class PopupWindow : Widget
+    public sealed partial class PopupWindow : Widget
     {
+        int _openCloseCount;
+
         public Widget? Content { get; set; }
 
         public string? Label { get; set; }
 
-        public bool Open { get; set; } = false;
-
         public RectangleF Bounds { get; set; }
-
-        public bool IsVisible { get; private set; }
 
         public ImGuiNET.ImGuiWindowFlags Flags { private get; set; }
 
+        public void Open()
+        {
+            _openCloseCount++;
+        }
+
+        public void Close()
+        {
+            _openCloseCount--;
+        }
+
         internal override void Update(Context context)
         {
-            if (Open)
-                ImGuiNET.ImGui.OpenPopup(Label ?? String.Empty);
+            if (_openCloseCount > 0)
+            {
+                ImGui.OpenPopup(Label ?? string.Empty);
+            }
 
             ImGui.SetNextWindowPos(Bounds.TopLeft.ToImGui(), 0);
             ImGui.SetNextWindowSize(Bounds.Size.ToImGui());
 
-            IsVisible = ImGuiNET.ImGui.BeginPopup (Label ?? string.Empty, Flags);
-
-            if (IsVisible)
+            if (ImGui.BeginPopup(Label ?? string.Empty, Flags))
             {
-                context.Update(Content);
-                ImGuiNET.ImGui.EndPopup();
+                try
+                {
+                    if (_openCloseCount < 0)
+                    {
+                        ImGui.CloseCurrentPopup();
+                    }
+                    else
+                    {
+                        context.Update(Content);
+                    }
+                }
+                finally
+                {
+                    ImGui.EndPopup();
+                }
+
             }
 
-            //try
-            //{
-            //    if (IsVisible)
-            //    {
-            //        context.Update(Content);    
-            //    }
-            //}
-            //finally
-            //{
-            //    ImGuiNET.ImGui.EndPopup();
-            //}
+            _openCloseCount = 0;
         }
     }
 }

@@ -29,7 +29,6 @@ namespace VL.ImGui.Widgets
             {
                 if (ImGuiNET.ImGui.BeginListBox(Label ?? string.Empty, Size.ToImGui()))
                 {
-
                     try
                     {
                         foreach (var item in Items)
