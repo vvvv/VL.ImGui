@@ -27,7 +27,7 @@ namespace VL.ImGui.Widgets
         /// <summary>
         /// Returns true if the Header is open (not collapsed). Set to true to open the header.
         /// </summary>
-        public BehaviorSubject<bool> IsOpen { get; } = new BehaviorSubject<bool>(true);
+        public BehaviorSubject<bool> IsOpen { get; } = new BehaviorSubject<bool>(false);
 
         public ImGuiNET.ImGuiTreeNodeFlags Flags { private get; set; }
 
