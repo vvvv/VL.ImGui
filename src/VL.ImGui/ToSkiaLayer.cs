@@ -42,7 +42,7 @@ namespace VL.ImGui
         readonly ImGuiIOPtr _io;
 
         Widget? _widget;
-        public IEnumerable<Widget> MenuBar { get; set; } = Enumerable.Empty<Widget>();
+        private IEnumerable<Widget> MenuBar = Enumerable.Empty<Widget>();
 
         // OpenGLES rendering (https://github.com/dotnet/Silk.NET/tree/v2.15.0/src/OpenGL/Extensions/Silk.NET.OpenGL.Extensions.ImGui)
         private readonly SkiaContext _context;
