@@ -21,6 +21,27 @@ namespace VL.ImGui.Styling
 
         public Optional<Color4> MenuBarBackground { private get; set; }
 
+        public Optional<Color4> TitleBackground { private get; set; }
+
+        public Optional<Color4> TitleBackgroundActive { private get; set; }
+
+        public Optional<Color4> TitleBackgroundCollapsed { private get; set; }
+
+        /// <summary>
+        /// Color of the Resize grip in lower-right and lower-left corners of windows.
+        /// </summary>
+        public Optional<Color4> ResizeGripColor { private get; set; }
+
+        /// <summary>
+        /// Hovered Color of the Resize grip.
+        /// </summary>
+        public Optional<Color4> ResizeGripHovered { private get; set; }
+
+        /// <summary>
+        /// Active Color of the Resize grip.
+        /// </summary>
+        public Optional<Color4> ResizeGripActive { private get; set; }
+
         /// <summary>
         /// Minimum window size.
         /// </summary>
@@ -61,6 +82,36 @@ namespace VL.ImGui.Styling
                 {
                     colorCount++;
                     ImGui.PushStyleColor(ImGuiCol.MenuBarBg, MenuBarBackground.Value.ToImGui());
+                }
+                if (ResizeGripColor.HasValue)
+                {
+                    colorCount++;
+                    ImGui.PushStyleColor(ImGuiCol.ResizeGrip, ResizeGripColor.Value.ToImGui());
+                }
+                if (ResizeGripHovered.HasValue)
+                {
+                    colorCount++;
+                    ImGui.PushStyleColor(ImGuiCol.ResizeGripHovered, ResizeGripHovered.Value.ToImGui());
+                }
+                if (ResizeGripActive.HasValue)
+                {
+                    colorCount++;
+                    ImGui.PushStyleColor(ImGuiCol.ResizeGripActive, ResizeGripActive.Value.ToImGui());
+                }
+                if (TitleBackground.HasValue)
+                {
+                    colorCount++;
+                    ImGui.PushStyleColor(ImGuiCol.TitleBg, TitleBackground.Value.ToImGui());
+                }
+                if (TitleBackgroundActive.HasValue)
+                {
+                    colorCount++;
+                    ImGui.PushStyleColor(ImGuiCol.TitleBgActive, TitleBackgroundActive.Value.ToImGui()); ;
+                }
+                if (TitleBackgroundCollapsed.HasValue)
+                {
+                    colorCount++;
+                    ImGui.PushStyleColor(ImGuiCol.TitleBgCollapsed, TitleBackgroundCollapsed.Value.ToImGui());
                 }
                 if (MinSize.HasValue)
                 {

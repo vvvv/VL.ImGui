@@ -119,9 +119,7 @@ namespace VL.ImGui
             yield return Styling.SetSliderStyle.GetNodeDescription(factory);
             yield return Styling.SetGrabStyle.GetNodeDescription(factory);
             yield return Styling.SetScrollStyle.GetNodeDescription(factory);
-            yield return Styling.SetResizeGripStyle.GetNodeDescription(factory);
             yield return Styling.SetBorderStyle.GetNodeDescription(factory);
-            yield return Styling.SetTitleStyle.GetNodeDescription(factory);
             yield return Styling.SetPlotStyle.GetNodeDescription(factory);
             yield return Styling.SetSeparatorStyle.GetNodeDescription(factory);
             yield return Styling.SetHeaderStyle.GetNodeDescription(factory);
