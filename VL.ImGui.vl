@@ -79,7 +79,7 @@
           <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
         </p:ValueBoxSettings>
       </Pad>
-      <Pad Id="Mxm74StqMWFMNWs8D7Vctu" Bounds="325,311,184,52" ShowValueBox="true" isIOBox="true" Value="Forwards">
+      <Pad Id="Mxm74StqMWFMNWs8D7Vctu" Bounds="335,419,184,52" ShowValueBox="true" isIOBox="true" Value="Forwards">
         <p:TypeAnnotation>
           <Choice Kind="TypeFlag" Name="String" />
         </p:TypeAnnotation>
@@ -321,7 +321,7 @@
           </Node>
         </Canvas>
       </Canvas>
-      <Canvas Id="JibPGqoc81gN2MV4HVKbMh" Name="Flags" Position="337,388">
+      <Canvas Id="JibPGqoc81gN2MV4HVKbMh" Name="Flags" Position="347,496">
         <!--
 
     ************************ ImGuiBackendFlags ************************
@@ -769,11 +769,6 @@
             </Pin>
             <Pin Id="SnGEpuaFvbNOjIbUCZU8t3" Name="Save" Kind="InputPin" Bounds="766,282" />
           </Patch>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="JoGi1COarnYLNCr9X31BWq">
             <Fragment Id="LXfhAv1LpIgP4jWzC1NA7b" Patch="HXBRjSDDWolQPNJljt9JgO" Enabled="true" />
             <Fragment Id="J8Oit05y3TLPG3R4a7GKJi" Patch="EXB0NlnFdH4NToIPHJ4EPr" Enabled="true" />
@@ -840,11 +835,6 @@
             <Pin Id="NJFXjdncB2DP5yrr1cVFYg" Name="Filename" Kind="InputPin" Bounds="597,171" />
             <Pin Id="K6lzjZ9NwUpLGUcTkKatHi" Name="Load" Kind="InputPin" Bounds="712,169" />
           </Patch>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="I9ACianZpwULII9rN9GYtQ">
             <Fragment Id="HXeHUQCNq7gPS8LKdMPXNs" Patch="IZdXRQa9Wi4Nhk5J8m18IH" Enabled="true" />
             <Fragment Id="UXCYHgqtSUpMdQNCkdYrNb" Patch="Ce7PbKlTMWFQHoN2C3bbSv" Enabled="true" />
@@ -858,6 +848,30 @@
           <Link Id="PEQkP15JJLNLhdkmEQLNq3" Ids="D7P10rekGaEPHQ5yzkzD3z,Oj9OwSwN2ZPOTKu7h6u0X5" />
         </Patch>
       </Node>
+      <Canvas Id="Me66aGO8BvkPhyMP8jSOon" Name="Debug" Position="356,255">
+        <!--
+
+    ************************ Version ************************
+
+-->
+        <Node Name="Version" Bounds="496,238,112,82" Id="IlQEqv9eaR8NbHw71s5KEW">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <FullNameCategoryReference ID="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="F0nmhgsApnyP2gRvzVd8IP">
+            <Node Bounds="508,270,66,19" AutoConnect="true" Id="PQQUXjSUyv5NMNg0WhDi6i">
+              <p:NodeReference LastCategoryFullName="ImGuiNET.ImGui" LastSymbolSource="ImGui.NET.dll">
+                <Choice Kind="OperationNode" Name="GetVersion" />
+                <FullNameCategoryReference ID="ImGuiNET.ImGui" />
+              </p:NodeReference>
+              <Pin Id="OETHHg1ctxCM7VGJtWpfAz" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="IRm7zaXEE1KLysA1X04xXL" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+      </Canvas>
     </Canvas>
     <!--
 
