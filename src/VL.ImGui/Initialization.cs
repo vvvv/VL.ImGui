@@ -191,6 +191,7 @@ namespace VL.ImGui
             //Popup
             yield return PopupWindow.GetNodeDescription(factory);
             yield return OpenPopup.GetNodeDescription(factory);
+            yield return ModalWindow.GetNodeDescription(factory);
 
             //Tabs
             yield return TabBar.GetNodeDescription(factory);

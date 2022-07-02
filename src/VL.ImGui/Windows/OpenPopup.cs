@@ -8,7 +8,6 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    using ImGui = ImGuiNET.ImGui;
 
     [GenerateNode]
     internal sealed partial class OpenPopup : Widget
