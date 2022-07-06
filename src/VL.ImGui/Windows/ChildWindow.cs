@@ -10,7 +10,7 @@ namespace VL.ImGui.Widgets
 {
     using ImGui = ImGuiNET.ImGui;
 
-    [GenerateNode]
+    [GenerateNode(GenerateImmediate = false)]
     internal sealed partial class ChildWindow : Widget
     {
         public Widget? Content { get; set; }

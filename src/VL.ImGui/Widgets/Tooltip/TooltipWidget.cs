@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets", Name = "Tooltip (Widget)")]
+    [GenerateNode(Category = "ImGui.Widgets", Name = "Tooltip (Widget)", GenerateImmediate = false)]
     internal partial class TooltipWidget : Widget
     {
         public Widget? Content { private get; set; }

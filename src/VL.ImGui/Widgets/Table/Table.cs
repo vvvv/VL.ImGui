@@ -8,7 +8,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets")]
+    [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
     internal sealed partial class Table : Widget
     {
         public IEnumerable<Widget> ColumnDescriptions { get; set; } = Enumerable.Empty<Widget>();

@@ -62,13 +62,21 @@ namespace VL.ImGui.Generator
             var attributeSymbol = compilation.GetTypeByMetadataName(GenerateImmutableAttributeMetadataName)
                 ?? throw new InvalidOperationException("Symbol not found: " + GenerateImmutableAttributeMetadataName);
 
+            //Debugger.Launch();
+
             foreach (var syntax in classes.Distinct())
             {
                 var semanticModel = compilation.GetSemanticModel(syntax.SyntaxTree);
                 var classSymbol = semanticModel.GetDeclaredSymbol(syntax);
                 var data = GetAttributeData(attributeSymbol, classSymbol);
-                var source = CreateSource(context, syntax, semanticModel, classSymbol, data);
-                context.AddSource($"{syntax.Identifier}.g.cs", source);
+                build(Mode.RetainedMode);
+                build(Mode.ImmediateMode);
+
+                void build(Mode mode)
+                {
+                    var source = CreateSource(context, syntax, semanticModel, classSymbol, data, mode);
+                    context.AddSource($"{syntax.Identifier}.{mode}.g.cs", source);
+                }
             }
         }
 
@@ -79,12 +87,38 @@ namespace VL.ImGui.Generator
             return data;
         }
 
-        private static string CreateSource(SourceProductionContext context, ClassDeclarationSyntax declarationSyntax, SemanticModel semanticModel, INamedTypeSymbol typeSymbol, ImmutableDictionary<string, TypedConstant> attrData)
+        internal enum Mode 
         {
-            var name = attrData.GetValueOrDefault("Name").Value as string ?? typeSymbol.Name;
+            DownStreamParentFlag = 1<<0,
+            RegionParentFlag = 1<<1,
+            ParentsComeAsBeginEndCouplesFlag = 1<<2,    
+
+            RetainedMode = 1 << 5 | DownStreamParentFlag,
+            ImmediateMode = 1 << 6 | RegionParentFlag,
+        }
+
+        private static string CreateSource(SourceProductionContext context, ClassDeclarationSyntax declarationSyntax, SemanticModel semanticModel, 
+            INamedTypeSymbol typeSymbol, ImmutableDictionary<string, TypedConstant> attrData, Mode mode = Mode.RetainedMode)
+        {
             var category = attrData.GetValueOrDefault("Category").Value as string ?? "ImGui";
+            string nodeDecl = default;
+            switch (mode)
+            {
+                case Mode.RetainedMode:
+                    nodeDecl = "return c.Node(inputs, outputs);";
+                    break;
+                case Mode.ImmediateMode:
+                    category += ".Immediate";
+                    nodeDecl = "return c.Node(inputs, outputs, () => { if (ctx != null) s.Update(ctx); });";
+                    break;
+                default:
+                    break;
+            }
+            var name = attrData.GetValueOrDefault("Name").Value as string ?? typeSymbol.Name;
             var tags = attrData.GetValueOrDefault("Tags").Value as string;
             var fragmented = "true";
+            if (mode == Mode.ImmediateMode)
+                fragmented = "false";   
             if (attrData.GetValueOrDefault("Fragmented").Value is bool f)
                 fragmented = f ? "true" : "false";
 
@@ -101,6 +135,8 @@ namespace VL.ImGui.Generator
             var outputDescriptions = new List<string>();
             var inputs = new List<string>();
             var outputs = new List<string>();
+
+            var ctx = "var ctx = default(Context);";
             foreach (var property in typeSymbol.GetMembers().OfType<IPropertySymbol>())
             {
                 string propertySummary = GetDocEntry(property);
@@ -116,6 +152,21 @@ namespace VL.ImGui.Generator
                 }
             }
 
+            if (mode == Mode.ImmediateMode)
+            {
+                inputDescriptions.Insert(0, "_c.Input(\"Context\", default(Context)),");
+                inputs.Insert(0, "c.Input(v => ctx = v, ctx),");
+
+                outputDescriptions.Insert(0, "_c.Output<Context>(\"Context\"),");
+                outputs.Insert(0, "c.Output(() => ctx),");
+            }
+            else
+            {
+                var type = typeSymbol.DeclaredAccessibility == Accessibility.Public ? typeSymbol.Name : "Widget";
+                outputDescriptions.Insert(0, $"_c.Output<{type}>(\"Output\"),");
+                outputs.Insert(0, "c.Output(() => s),");
+            }
+
             return $@"
 using VL.Core;
 
@@ -123,7 +174,7 @@ namespace {typeSymbol.ContainingNamespace}
 {{
     partial class {typeSymbol.Name}
     {{
-        internal static IVLNodeDescription GetNodeDescription(IVLNodeDescriptionFactory factory)
+        internal static IVLNodeDescription GetNodeDescription_{mode}(IVLNodeDescriptionFactory factory)
         {{
             return factory.NewNodeDescription(""{name}"", ""{category}"", fragmented: {fragmented}, invalidated: default, init: _c =>
             {{
@@ -133,23 +184,22 @@ namespace {typeSymbol.ContainingNamespace}
                     { string.Join($"{Environment.NewLine}{indent}", inputDescriptions)}
                 }};
                 var _outputs = new[]
-                {{
-                    _c.Output<{(typeSymbol.DeclaredAccessibility == Accessibility.Public ? typeSymbol.Name : "Widget")}>(""Output""),
+                {{                    
                     {string.Join($"{Environment.NewLine}{indent}", outputDescriptions)}
                 }};
                 return _c.NewNode(_inputs, _outputs, c =>
                 {{
                     var s = new {typeSymbol.Name}();
+                    {ctx}
                     var inputs = new IVLPin[]
                     {{
                         {string.Join($"{Environment.NewLine}{indent2}", inputs)}
                     }};
                     var outputs = new IVLPin[]
                     {{
-                        c.Output(() => s),
                         {string.Join($"{Environment.NewLine}{indent2}", outputs)}
                     }};
-                    return c.Node(inputs, outputs);
+                    {nodeDecl}
                 }}, summary: ""{summary}"");
             }}, tags: ""{tags}"");
         }}

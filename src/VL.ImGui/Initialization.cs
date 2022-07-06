@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 using VL.Core;
 using VL.Core.CompilerServices;
 using VL.ImGui.Widgets;
@@ -27,180 +28,21 @@ namespace VL.ImGui
 
         static IEnumerable<IVLNodeDescription> GetNodes(IVLNodeDescriptionFactory factory)
         {
+            var result = new List<MethodInfo>();
+            foreach (var type in typeof(Initialization).Assembly.GetTypes())
+            {
+                var attr = type.GetCustomAttribute<GenerateNodeAttribute>();
+                if (attr is null)
+                    continue;
 
-            //Windows
-            yield return DemoWindow.GetNodeDescription(factory);
-            yield return MetricsWindow.GetNodeDescription(factory);
-            yield return StackToolWindow.GetNodeDescription(factory);
-            yield return AboutWindow.GetNodeDescription(factory);
+                if (attr.GenerateRetained)
+                    result.Add(type.GetMethod("GetNodeDescription_RetainedMode", BindingFlags.Static | BindingFlags.NonPublic));
+                if (attr.GenerateImmediate)
+                    result.Add(type.GetMethod("GetNodeDescription_ImmediateMode", BindingFlags.Static | BindingFlags.NonPublic));
+            }
 
-            yield return ObjectEditor.GetNodeDescription(factory);
-
-            yield return SkiaWidget.GetNodeDescription(factory);
-
-            yield return UserGuide.GetNodeDescription(factory);
-
-            //Slider
-            yield return SliderFloat.GetNodeDescription(factory);
-            yield return SliderVector2.GetNodeDescription(factory);
-            yield return SliderVector3.GetNodeDescription(factory);
-            yield return SliderVector4.GetNodeDescription(factory);
-            yield return SliderFloatVertical.GetNodeDescription(factory);
-            yield return SliderInt.GetNodeDescription(factory);
-            yield return SliderInt2.GetNodeDescription(factory);
-            yield return SliderInt3.GetNodeDescription(factory);
-            yield return SliderInt4.GetNodeDescription(factory);
-            yield return SliderIntVertical.GetNodeDescription(factory);
-
-            //Drag
-            yield return DragFloat.GetNodeDescription(factory);
-            yield return DragVector2.GetNodeDescription(factory);
-            yield return DragVector3.GetNodeDescription(factory);
-            yield return DragVector4.GetNodeDescription(factory);
-            yield return DragInt.GetNodeDescription(factory);
-            yield return DragInt2.GetNodeDescription(factory);
-            yield return DragInt3.GetNodeDescription(factory);
-            yield return DragInt4.GetNodeDescription(factory);
-
-            //Dropdown
-            yield return Combo.GetNodeDescription(factory);
-
-            //ListBox
-            yield return ListBox.GetNodeDescription(factory);
-
-            // Windows
-            yield return Window.GetNodeDescription(factory);
-            yield return ChildWindow.GetNodeDescription(factory);
-
-            // Buttons
-            yield return Button.GetNodeDescription(factory);
-            yield return ButtonSmall.GetNodeDescription(factory);
-            yield return Selectable.GetNodeDescription(factory);
-            yield return ArrowButton.GetNodeDescription(factory);
-
-            // Checkbox
-            yield return Checkbox.GetNodeDescription(factory);
-
-            // Radiobutton
-            yield return RadioButton.GetNodeDescription(factory);
-
-            // Separator
-            yield return Separator.GetNodeDescription(factory);
-
-            // Dummy
-            yield return Dummy.GetNodeDescription(factory);
-
-            // Tree
-            yield return TreeNode.GetNodeDescription(factory);
-            yield return CollapsingHeader.GetNodeDescription(factory);
-
-            // Input
-            yield return InputFloat.GetNodeDescription(factory);
-            yield return InputVector2.GetNodeDescription(factory);
-            yield return InputVector3.GetNodeDescription(factory);
-            yield return InputVector4.GetNodeDescription(factory);
-            yield return InputInt.GetNodeDescription(factory);
-            yield return InputInt2.GetNodeDescription(factory);
-            yield return InputInt3.GetNodeDescription(factory);
-            yield return InputInt4.GetNodeDescription(factory);
-
-            // Style
-            yield return Styling.SetAlphaStyle.GetNodeDescription(factory);
-            yield return Styling.SetFrameStyle.GetNodeDescription(factory);
-            yield return Styling.SetPopupStyle.GetNodeDescription(factory);
-            yield return Styling.SetChildWindowStyle.GetNodeDescription(factory);
-            yield return Styling.SetWindowStyle.GetNodeDescription(factory);
-            yield return Styling.SetIndentStyle.GetNodeDescription(factory);
-            yield return Styling.SetSpacingStyle.GetNodeDescription(factory);
-            yield return Styling.SetTableStyle.GetNodeDescription(factory);
-            yield return Styling.SetTabStyle.GetNodeDescription(factory);
-            yield return Styling.SetButtonStyle.GetNodeDescription(factory);
-            yield return Styling.SetTextStyle.GetNodeDescription(factory);
-            yield return Styling.SetSliderStyle.GetNodeDescription(factory);
-            yield return Styling.SetGrabStyle.GetNodeDescription(factory);
-            yield return Styling.SetScrollStyle.GetNodeDescription(factory);
-            yield return Styling.SetBorderStyle.GetNodeDescription(factory);
-            yield return Styling.SetPlotStyle.GetNodeDescription(factory);
-            yield return Styling.SetSeparatorStyle.GetNodeDescription(factory);
-            yield return Styling.SetHeaderStyle.GetNodeDescription(factory);
-            yield return Styling.SetSelectableStyle.GetNodeDescription(factory);
-            yield return Styling.SetCheckboxStyle.GetNodeDescription(factory);
-            yield return StyleSelector.GetNodeDescription(factory);
-            yield return StyleEditor.GetNodeDescription(factory);
-
-            // Layout
-            yield return Row.GetNodeDescription(factory);
-            yield return Column.GetNodeDescription(factory);
-            yield return SameLine.GetNodeDescription(factory);
-            yield return SetIndent.GetNodeDescription(factory);
-            yield return SetWidth.GetNodeDescription(factory);
-            yield return SetNextWindowContentSize.GetNodeDescription(factory);
-            yield return SetID.GetNodeDescription(factory);
-            yield return SetAlignTextToFramePadding.GetNodeDescription(factory);
-            yield return CalcTextSize.GetNodeDescription(factory);
-            yield return CalcItemWidth.GetNodeDescription(factory);
-            yield return GetItemRectSize.GetNodeDescription(factory);
-            yield return GetItemRectMin.GetNodeDescription(factory);
-            yield return GetItemRectMax.GetNodeDescription(factory);
-            yield return GetWindowSize.GetNodeDescription(factory);
-            yield return GetCursorPos.GetNodeDescription(factory);
-            yield return GetContentRegionAvail.GetNodeDescription(factory);
-            yield return GetContentRegionMax.GetNodeDescription(factory);
-            yield return Bullet.GetNodeDescription(factory);
-            yield return SetPosition.GetNodeDescription(factory);
-            yield return Spacing.GetNodeDescription(factory);
-
-            // Text
-            yield return TextWidget.GetNodeDescription(factory);
-            yield return TextLabel.GetNodeDescription(factory);
-            yield return TextBullet.GetNodeDescription(factory);
-            yield return SetTextWrapPosition.GetNodeDescription(factory);
-
-            // Input
-            yield return InputText.GetNodeDescription(factory);
-            yield return InputTextMultiline.GetNodeDescription(factory);
-            yield return InputTextWithHint.GetNodeDescription(factory);
-
-            //Tooltips
-            yield return TooltipText.GetNodeDescription(factory);
-            yield return TooltipWidget.GetNodeDescription(factory);
-
-            // Table
-            yield return Table.GetNodeDescription(factory);
-            yield return TableNextColumn.GetNodeDescription(factory);
-            yield return TableSetupColumn.GetNodeDescription(factory);
-
-            // Behaviour
-            yield return IsItemClicked.GetNodeDescription(factory);
-            yield return IsItemHovered.GetNodeDescription(factory);
-
-            // Color
-            yield return ColorEdit.GetNodeDescription(factory);
-            yield return ColorPicker.GetNodeDescription(factory);
-            yield return ColorButton.GetNodeDescription(factory);
-
-            // Plotting
-            yield return PlotHistogram.GetNodeDescription(factory);
-            yield return PlotLines.GetNodeDescription(factory);
-            yield return ProgressBar.GetNodeDescription(factory);
-
-            // Menus
-            yield return MenuItem.GetNodeDescription(factory);
-            yield return Menu.GetNodeDescription(factory);
-
-            //Popup
-            yield return PopupWindow.GetNodeDescription(factory);
-            yield return OpenPopup.GetNodeDescription(factory);
-            yield return ModalWindow.GetNodeDescription(factory);
-
-            //Tabs
-            yield return TabBar.GetNodeDescription(factory);
-            yield return TabItem.GetNodeDescription(factory);
-            yield return TabItemButton.GetNodeDescription(factory);
-
-            //Disabling
-            yield return Disabled.GetNodeDescription(factory);
-
+            foreach (var m in result)
+                yield return (IVLNodeDescription)m.Invoke(null, new[] { factory });
         }
     }
 

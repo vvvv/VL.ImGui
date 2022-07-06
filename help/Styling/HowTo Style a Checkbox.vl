@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0103-51dfa27dea" Version="0.128">
+<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -56,7 +56,6 @@
             <Pin Id="ET6rC6nRBXLNrxrT00jzC1" Name="Window Flags" Kind="InputPin" />
             <Pin Id="VOjeHD5PpJCOPUJVAaWJDa" Name="Output" Kind="OutputPin" />
             <Pin Id="O1Cf93jaX8dNBUPUZLJKMq" Name="Closing" Kind="OutputPin" />
-            <Pin Id="LpmPlo8y6SZNwVJbqWvlwa" Name="Is Visible" Kind="OutputPin" />
           </Node>
           <Pad Id="HNId2jVhNdjLe1cgdHqiKC" Comment="Window Flags" Bounds="426,623,148,15" ShowValueBox="true" isIOBox="true" Value="NoTitleBar">
             <p:TypeAnnotation LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
@@ -355,17 +354,19 @@
             </Patch>
           </Node>
           <Node Bounds="303,318,52,19" Id="MMjLhZfOuvKPO4Vbfhn9V5">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+            <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Column" />
+              <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="HbOOo8btDF2Qac9GZco7kU" Name="Children" Kind="InputPin" />
             <Pin Id="GSkbaG2ZahJOOqojseI9O3" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="304,577,72,19" Id="TXleHdZbysFLGnCJUuhztM">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+            <p:NodeReference LastCategoryFullName="ImGui.Styling" LastSymbolSource="VL.ImGUI.Nodes">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="SetTextStyle" />
+              <CategoryReference Kind="Category" Name="Styling" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="PsjlDPaAFRQLO2e2pGLZXX" Name="Input" Kind="InputPin" />
             <Pin Id="SNbMjjuvDzdPiljco3Yht0" Name="Color" Kind="InputPin" />
@@ -410,9 +411,10 @@
               <Patch Id="QEOnr1VCHFXPLg1YknTzdq" Name="Update" ManuallySortedPins="true" />
               <Patch Id="JaSx8sfhH6wQBnbh40X6V5" Name="Dispose" ManuallySortedPins="true" />
               <Node Bounds="302,217,62,19" Id="T5Gd2VYLaBVPXRSZ9RdiWx">
-                <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+                <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessNode" Name="Checkbox" />
+                  <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                 </p:NodeReference>
                 <Pin Id="KUGNGr5f4NRNqUbZFmAlBK" Name="Label" Kind="InputPin" />
                 <Pin Id="GrF8Y7JI5nANjuOrvkrQzs" Name="Output" Kind="OutputPin" />
@@ -491,7 +493,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0095-gaf5968b65d" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0108-ga77655f3ae" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0095-gaf5968b65d" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0108-ga77655f3ae" />
 </Document>
