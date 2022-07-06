@@ -1067,6 +1067,16 @@
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
+            <ControlPoint Id="IPXzzciAtsTOQQgOtsuouS" Bounds="447,291" />
+            <Node Bounds="445,259,39,19" Id="HCbLN6cJNU8QSn0HcM60fN">
+              <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Cons" />
+                <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="LRaEO56fhwcOSe2rFuSq2n" Name="Input" Kind="InputPin" />
+              <Pin Id="LAGg4TTtGcBQIYYutIoOmx" Name="Result" Kind="OutputPin" />
+            </Node>
           </Canvas>
           <ProcessDefinition Id="M9yRqm3JLXnN3enRSZtyyY">
             <Fragment Id="N9ndHnhU5GgOds2jdTfoDn" Patch="HEMPLrpPVQVPcxo5SLfA82" Enabled="true" />
@@ -1081,10 +1091,14 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="Qh1zvOnMtYyQRW9cNIbVoN" Name="Output" Kind="OutputPin" Bounds="488,520" />
+            <Pin Id="VjqzWKI3kI8PFa520o8RLN" Name="As Sequence" Kind="OutputPin" />
           </Patch>
           <Link Id="UtJIbCQ3XIyMSjlcf060a9" Ids="BAIPfG7uhlSLSDLWCcWyvu,Qh1zvOnMtYyQRW9cNIbVoN" IsHidden="true" />
           <Link Id="QSEsoLAZXhaPRUPuZDzCsH" Ids="QhvuG6QGc02M9FJYqwfu5N,Reb2LXLclxgLJ7otOYDULS" />
           <Link Id="ErMp3jYiaGaLIWrTSPo9Rd" Ids="VZ5GJEc6mlJL9O27Dovc6x,BAIPfG7uhlSLSDLWCcWyvu" />
+          <Link Id="E5uek5nwRuKNZsDMdl7sSO" Ids="IPXzzciAtsTOQQgOtsuouS,VjqzWKI3kI8PFa520o8RLN" IsHidden="true" />
+          <Link Id="Rrziv3LlTv5NbMMq8RgYcB" Ids="VZ5GJEc6mlJL9O27Dovc6x,LRaEO56fhwcOSe2rFuSq2n" />
+          <Link Id="DMc6t1IhGx5MIgOAhhLghQ" Ids="LAGg4TTtGcBQIYYutIoOmx,IPXzzciAtsTOQQgOtsuouS" />
         </Patch>
       </Node>
       <!--
