@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0103-51dfa27dea" Version="0.128">
+<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0109-c3426c2fbf" Version="0.128">
   <Patch Id="FqV6a8uF6wBNEsSb65h9jq">
     <Canvas Id="CiUOvKtIpncPRBZwoQzisM" DefaultCategory="ImGui" CanvasType="FullCategory">
       <!--
@@ -31,6 +31,7 @@
               <Pin Id="SUprsIt3UBoPtxwfKawOnm" Name="Input" Kind="StateInputPin" />
               <Pin Id="HjdVnpq2xrNPPt5NQwTM48" Name="Widget" Kind="InputPin" />
               <Pin Id="UnmXoMAFFNuOv1aV2XwTHL" Name="Menu Bar" Kind="InputPin" />
+              <Pin Id="FMpLysH4Xb1NAwU16RBFK7" Name="Docking Enabled" Kind="InputPin" />
               <Pin Id="G3JO979DlprMxWeCeB0zUh" Name="Output" Kind="StateOutputPin" />
               <Pin Id="IVsN0Mg7DQ7L5yYtTDHl9I" Name="Result" Kind="OutputPin" />
             </Node>
@@ -46,12 +47,14 @@
               <Pin Id="Fk5Kvn5ojrlN7UgT5pabfR" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="LyFl0fI8iSmLIv9zLQ5RP8" Bounds="568,238" />
+            <ControlPoint Id="RAz0ClVFXUTM9h7eP0GDd0" Bounds="637,237" />
           </Canvas>
           <Patch Id="IOh8QLvXArDNt71fCJSYpN" Name="Create" ParticipatingElements="IXuw94IQMouOz0JkorUqMM" />
           <Patch Id="CRy260gIQ7DNtuhJ5HISvw" Name="Update">
             <Pin Id="UFueU1XisT8QT5ivgOQG6C" Name="Input" Kind="InputPin" Bounds="580,242" />
             <Pin Id="ANqGMMGazSOQP1G7ge45i2" Name="Output" Kind="OutputPin" Bounds="526,424" />
             <Pin Id="SXpbdZWj3GSNHlWmRODqRU" Name="Menu Bar" Kind="InputPin" Bounds="593,183" />
+            <Pin Id="GhXCfOEzzslON1U2TMcf4v" Name="Docking Enabled" Kind="InputPin" Bounds="661,236" />
           </Patch>
           <ProcessDefinition Id="Du9wC7lbilyPoZl55CkSnv">
             <Fragment Id="FgQ4TTGd6rgQO5zXM3Y1yr" Patch="IOh8QLvXArDNt71fCJSYpN" Enabled="true" />
@@ -68,6 +71,8 @@
           <Link Id="HJ2PAxwAhzDL2fXu7XnQb3" Ids="SvDQmk6nh3DOEuY0K57una,HjdVnpq2xrNPPt5NQwTM48" />
           <Link Id="OU8LCWIuBMMLzE3vzNIiCc" Ids="LyFl0fI8iSmLIv9zLQ5RP8,UnmXoMAFFNuOv1aV2XwTHL" />
           <Link Id="K0N8wYcGIS2PB0sNMqQAY2" Ids="SXpbdZWj3GSNHlWmRODqRU,LyFl0fI8iSmLIv9zLQ5RP8" IsHidden="true" />
+          <Link Id="VIYPlRWqwcWOCIfFOZifGw" Ids="RAz0ClVFXUTM9h7eP0GDd0,FMpLysH4Xb1NAwU16RBFK7" />
+          <Link Id="EjPz6r0FG7uM6MobhQn2mz" Ids="GhXCfOEzzslON1U2TMcf4v,RAz0ClVFXUTM9h7eP0GDd0" IsHidden="true" />
         </Patch>
       </Node>
       <Pad Id="F88JVxvRlPKPoqQtHRwU0t" Bounds="344,91,150,52" ShowValueBox="true" isIOBox="true" Value="Widgets">

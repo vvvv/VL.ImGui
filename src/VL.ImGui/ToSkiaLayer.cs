@@ -43,6 +43,7 @@ namespace VL.ImGui
 
         Widget? _widget;
         private IEnumerable<Widget> MenuBar = Enumerable.Empty<Widget>();
+        private bool DockingEnabled = false;
 
         // OpenGLES rendering (https://github.com/dotnet/Silk.NET/tree/v2.15.0/src/OpenGL/Extensions/Silk.NET.OpenGL.Extensions.ImGui)
         private readonly SkiaContext _context;
@@ -66,9 +67,10 @@ namespace VL.ImGui
             
         }
 
-        public ILayer Update(Widget widget, IEnumerable<Widget> menuBar)
+        public ILayer Update(Widget widget, IEnumerable<Widget> menuBar, bool dockingEnabled)
         {
             MenuBar = menuBar;
+            DockingEnabled = dockingEnabled;
             _widget = widget;
             return this;
         }
@@ -79,6 +81,10 @@ namespace VL.ImGui
             {
                 var bounds = caller.ViewportBounds;
                 _io.DisplaySize = new Vector2(bounds.Width, bounds.Height);
+
+                // Enable Docking
+                if (DockingEnabled)
+                    _io.ConfigFlags |= ImGuiConfigFlags.DockingEnable;
 
                 _context.NewFrame();
                 try
