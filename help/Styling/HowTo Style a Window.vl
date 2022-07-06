@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0109-c3426c2fbf" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -21,6 +21,7 @@
             </p:NodeReference>
             <Pin Id="OuxuxmOwAWSLY7F6norUZK" Name="Input" Kind="InputPin" />
             <Pin Id="OUA64rDd2nbMEYpMLutIPR" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="I0h0sW5WmbJPYfol9zLfVR" Name="Docking Enabled" Kind="InputPin" />
             <Pin Id="Tsi6F5g1cOCQK44SVRexGG" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="415,1020,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
@@ -198,11 +199,10 @@
             <Pin Id="LiOKdNHYj7jOlcOLlXs93I" Name="Input 2" Kind="InputPin" />
             <Pin Id="MIos19p3MXRODDHKgEn4z3" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="456,916,52,19" Id="JxJqAEiYOA3PV42tp9sNnB">
-            <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+          <Node Bounds="456,916,8,19" Id="JxJqAEiYOA3PV42tp9sNnB">
+            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="Column" />
-              <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessNode" Name="Fold" />
             </p:NodeReference>
             <Pin Id="U7miTXMBG0CMyoy3Mm0iWd" Name="Children" Kind="InputPin" />
             <Pin Id="JTBYiysFdlHNxYGRXIVdgK" Name="Output" Kind="OutputPin" />

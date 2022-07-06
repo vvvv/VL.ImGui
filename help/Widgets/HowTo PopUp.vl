@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
+<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0109-c3426c2fbf" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -21,14 +21,15 @@
             </p:NodeReference>
             <Pin Id="OuxuxmOwAWSLY7F6norUZK" Name="Input" Kind="InputPin" />
             <Pin Id="ADNFQIYetCBMvhf5K2Hr2F" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="TvbKgc9zhMkPfl3tQxwCJc" Name="Docking Enabled" Kind="InputPin" />
             <Pin Id="Tsi6F5g1cOCQK44SVRexGG" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="108,817,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
+          <Node Bounds="108,839,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="932, 204, 372, 308" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1095, 269, 372, 308" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -41,7 +42,7 @@
             <Pin Id="VtCD3TojbCZNIE3ICe23l6" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="Fi9FymljmNXQYNmU2h76Xz" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="148,724,145,19" Id="GqYvADtffT7LKqHhwhHks9">
+          <Node Bounds="148,746,145,19" Id="GqYvADtffT7LKqHhwhHks9">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Window" />
@@ -57,7 +58,7 @@
             <Pin Id="VOjeHD5PpJCOPUJVAaWJDa" Name="Output" Kind="OutputPin" />
             <Pin Id="O1Cf93jaX8dNBUPUZLJKMq" Name="Closing" Kind="OutputPin" />
           </Node>
-          <Pad Id="HNId2jVhNdjLe1cgdHqiKC" Comment="Window Flags" Bounds="290,704,148,15" ShowValueBox="true" isIOBox="true" Value="NoTitleBar">
+          <Pad Id="HNId2jVhNdjLe1cgdHqiKC" Comment="Window Flags" Bounds="290,726,148,15" ShowValueBox="true" isIOBox="true" Value="NoTitleBar">
             <p:TypeAnnotation LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="TypeFlag" Name="ImGuiWindowFlags" />
             </p:TypeAnnotation>
@@ -322,7 +323,7 @@
             <Pin Id="AvQrA2Mxj84OuAXmhWEw6O" Name="Output" Kind="OutputPin" />
             <Pin Id="B6suNBft6wTMk1RhmOHjmJ" Name="Value" Kind="OutputPin" />
           </Node>
-          <Node Bounds="148,648,85,19" Id="Qt227GPCImQLtzg58xceSl">
+          <Node Bounds="148,648,-66,19" Id="Qt227GPCImQLtzg58xceSl">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Cons" />
@@ -332,14 +333,11 @@
             <Pin Id="RsPWJYRMVlHP4dWlRUxDUA" Name="Input 2" Kind="InputPin" />
             <Pin Id="COLrNrhEODIQBVqom9Hm39" Name="Result" Kind="OutputPin" />
             <Pin Id="QmwIdYlJ8EWMKa7jTssWjT" Name="Input 3" Kind="InputPin" />
-            <Pin Id="RZN7Gg5Y8jMQFfFiFseojM" Name="Input 4" Kind="InputPin" />
-            <Pin Id="SFjU8LPbjQfQaxaIJbXwrk" Name="Input 5" Kind="InputPin" />
           </Node>
-          <Node Bounds="148,683,52,19" Id="KmhgcZLT33pLbvUa46HWZ9">
-            <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+          <Node Bounds="148,683,-20,19" Id="KmhgcZLT33pLbvUa46HWZ9">
+            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="Column" />
-              <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessNode" Name="Fold" />
             </p:NodeReference>
             <Pin Id="PxhebTbObA8LVa9GNnVe9l" Name="Children" Kind="InputPin" />
             <Pin Id="JFVGp5kiVTDN7d8XCFq34t" Name="Output" Kind="OutputPin" />
