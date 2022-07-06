@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets", Tags = "tree")]
+    [GenerateNode(Category = "ImGui.Widgets", Tags = "tree", GenerateImmediate = false)]
     internal sealed partial class TreeNode : Widget
     {
 

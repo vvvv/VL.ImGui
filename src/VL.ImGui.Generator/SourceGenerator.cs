@@ -162,7 +162,8 @@ namespace VL.ImGui.Generator
             }
             else
             {
-                outputDescriptions.Insert(0, "_c.Output<Widget>(\"Output\"),");
+                var type = typeSymbol.DeclaredAccessibility == Accessibility.Public ? typeSymbol.Name : "Widget";
+                outputDescriptions.Insert(0, $"_c.Output<{type}>(\"Output\"),");
                 outputs.Insert(0, "c.Output(() => s),");
             }
 
@@ -183,8 +184,7 @@ namespace {typeSymbol.ContainingNamespace}
                     { string.Join($"{Environment.NewLine}{indent}", inputDescriptions)}
                 }};
                 var _outputs = new[]
-                {{
-                    _c.Output<{(typeSymbol.DeclaredAccessibility == Accessibility.Public ? typeSymbol.Name : "Widget")}>(""Output""),
+                {{                    
                     {string.Join($"{Environment.NewLine}{indent}", outputDescriptions)}
                 }};
                 return _c.NewNode(_inputs, _outputs, c =>
