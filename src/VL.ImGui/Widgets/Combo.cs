@@ -7,13 +7,12 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Combo (String)")]
+    [GenerateNode(Name = "Combo (String)", Category = "ImGui.Widgets")]
     internal partial class Combo : Widget
     {
 
         public string? Label { get; set; }
 
-        [Documentation(@"Dropdown")]
         public string? Format { private get; set; }
 
         public IEnumerable<string> Items { get; set; } = Enumerable.Empty<string>();
@@ -31,7 +30,6 @@ namespace VL.ImGui.Widgets
             {
                 if (ImGuiNET.ImGui.BeginCombo(Label ?? string.Empty, value, Flags))
                 {
-
                     try
                     {
                         foreach (var item in Items)

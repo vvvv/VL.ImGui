@@ -7,13 +7,13 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode]
+    [GenerateNode(Category = "ImGui.Widgets")]
     internal partial class Checkbox : Widget
     {
 
         public string? Label { get; set; }
 
-        public BehaviorSubject<Boolean> Value { get; } = new BehaviorSubject<Boolean>(false);
+        public BehaviorSubject<bool> Value { get; } = new BehaviorSubject<bool>(false);
 
         internal override void Update(Context context)
         {

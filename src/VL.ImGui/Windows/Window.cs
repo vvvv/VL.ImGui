@@ -20,18 +20,28 @@ namespace VL.ImGui.Windows
 
         public bool Fullscreen { get; set; } = false;
 
-        public RectangleF Bounds { get; set; }
+        public RectangleF Bounds { get; set; } // TODO: will be done with setters below the window
 
-        public bool SetBounds { get; set; }
+        public bool SetBounds { get; set; } // TODO: will be done with setters below the window
+
+        public IEnumerable<Widget> MenuBar { get; set; } = Enumerable.Empty<Widget>();
 
         public ImGuiWindowFlags WindowFlags { get; set; }
 
         public bool Closing { get; private set; }
 
-        public bool IsVisible { get; private set; }
-
         internal override void Update(Context context)
         {
+
+            var menuBarCount = MenuBar.Count(x => x != null);
+
+            bool isVisible;
+
+            if (menuBarCount > 0)
+            {
+                WindowFlags |= ImGuiWindowFlags.MenuBar;
+            }
+
             if (Fullscreen)
             {
                 var viewPort = ImGui.GetMainViewport();
@@ -47,31 +57,52 @@ namespace VL.ImGui.Windows
             if (HasCloseButton)
             {
                 var open = true;
-                IsVisible = ImGuiNET.ImGui.Begin(Name, ref open, WindowFlags);
+                isVisible = ImGui.Begin(Name, ref open, WindowFlags);
                 Closing = !open;
             }
             else
             {
-                IsVisible = ImGuiNET.ImGui.Begin(Name, WindowFlags);
+                isVisible = ImGui.Begin(Name, WindowFlags);
             }
 
             try
             {
-                if (IsVisible)
+                if (isVisible)
                 {
                     context.Update(Content);
+
+                    // Add Menu Bar
+                    if (menuBarCount > 0)
+                    {
+                        if (ImGui.BeginMenuBar())
+                        {
+                            try
+                            {
+                                foreach (var item in MenuBar)
+                                {
+                                    if (item is null)
+                                        continue;
+                                    else
+                                        context.Update(item);
+                                }
+                            }
+                            finally
+                            {
+                                ImGui.EndMenuBar();
+                            }
+                        }
+                    }
                 }
             }
             finally
             {
-                ImGuiNET.ImGui.End();
+                ImGui.End();
             }
         }
 
         internal override void Reset()
         {
             Closing = false;
-            IsVisible = false;
         }
     }
 }

@@ -42,6 +42,7 @@ namespace VL.ImGui
         readonly ImGuiIOPtr _io;
 
         Widget? _widget;
+        private IEnumerable<Widget> MenuBar = Enumerable.Empty<Widget>();
 
         // OpenGLES rendering (https://github.com/dotnet/Silk.NET/tree/v2.15.0/src/OpenGL/Extensions/Silk.NET.OpenGL.Extensions.ImGui)
         private readonly SkiaContext _context;
@@ -65,8 +66,9 @@ namespace VL.ImGui
             
         }
 
-        public ILayer Update(Widget widget)
+        public ILayer Update(Widget widget, IEnumerable<Widget> menuBar)
         {
+            MenuBar = menuBar;
             _widget = widget;
             return this;
         }
@@ -81,6 +83,30 @@ namespace VL.ImGui
                 _context.NewFrame();
                 try
                 {
+                    // Add Menu Bar
+                    var menuBarCount = MenuBar.Count(x => x != null);
+
+                    if (menuBarCount > 0)
+                    {
+                        if (ImGui.BeginMainMenuBar())
+                        {
+                            try
+                            {
+                                foreach (var item in MenuBar)
+                                {
+                                    if (item is null)
+                                        continue;
+                                    else
+                                        _context.Update(item);
+                                }
+                            }
+                            finally
+                            {
+                                ImGui.EndMainMenuBar();
+                            }
+                        }
+
+                    }
                     // ImGui.ShowDemoWindow();
                     _context.Update(_widget);
                 }
@@ -196,12 +222,12 @@ namespace VL.ImGui
                 // ImGui colors are RGBA
                 SKSwizzle.SwapRedBlue(MemoryMarshal.AsBytes(color.AsSpan()), MemoryMarshal.AsBytes(color.AsSpan()), color.Length);
 
-                int indexOffset = 0;
 
                 // Draw everything with canvas.drawVertices...
                 for (int j = 0; j < drawList.CmdBuffer.Size; ++j)
                 {
                     var drawCmd = drawList.CmdBuffer[j];
+                    var indexOffset = (int)drawCmd.IdxOffset;
                     var clipRect = new SKRect(drawCmd.ClipRect.X, drawCmd.ClipRect.Y, drawCmd.ClipRect.Z, drawCmd.ClipRect.W);
 
                     //using var _ = new SKAutoCanvasRestore(canvas, true);
@@ -250,12 +276,8 @@ namespace VL.ImGui
                             for (int k = 0; k < indices.Length; k++)
                                 indices[k] = drawList.IdxBuffer[indexOffset + k];
 
-                            var vertices = SKVertices.CreateCopy(SKVertexMode.Triangles, pos, uv, color, indices);
-
-                            canvas.DrawVertices(vertices, SKBlendMode.Modulate, paint);
+                            canvas.DrawVertices(SKVertexMode.Triangles, pos, uv, color, SKBlendMode.Modulate, indices, paint);
                         }
-
-                        indexOffset += (int)drawCmd.ElemCount;
                     }
 
                     canvas.Restore();

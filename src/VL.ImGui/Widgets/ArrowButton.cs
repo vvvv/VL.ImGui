@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "ArrowButton")]
+    [GenerateNode(Category = "ImGui.Widgets")]
     internal partial class ArrowButton : Widget
     {
         public string? Label { private get; set; }

@@ -8,7 +8,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "InputText (Multiline)")]
+    [GenerateNode(Name = "Input (String Multiline)", Category = "ImGui.Widgets")]
     internal partial class InputTextMultiline : Widget
     {
 

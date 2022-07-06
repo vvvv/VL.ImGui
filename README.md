@@ -33,4 +33,4 @@ In any case this approach would follow the original design principles much more 
 
 Most of the nodes get generated with a [C# source generator](https://docs.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview).
 It can be configured with the `GenerateNode` attribute.
-Help texts can be added to nodes and pins via the `Documentation` attribute. Would be much nicer to use the C# XML doc file (through Roslyn), but didn't get any output in the source generator. Needs to be investigated.
+Help texts can be added to nodes and pins via `summary` XML comments.

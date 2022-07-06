@@ -12,21 +12,34 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false)]
+
+    /// <summary>
+    /// The style applies to checkboxes, radio buttons, plots, sliders, text inputs
+    /// </summary>
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "FrameBg FrameBgActive FrameBgHovered")]
     internal partial class SetFrameStyle : Widget
     {
         public Widget? Input { private get; set; }
 
         public Optional<Color4> Background { private get; set; }
 
-        public Optional<Color4> Active { private get; set; }
-
         public Optional<Color4> Hovered { private get; set; }
 
+        public Optional<Color4> Active { private get; set; }
+
+        /// <summary>
+        /// Padding within a framed rectangle (used by most widgets).
+        /// </summary>
         public Optional<Vector2> Padding { private get; set; }
 
+        /// <summary>
+        /// Radius of frame corners rounding. Set to 0.0 to have rectangular frame (used by most widgets).
+        /// </summary>
         public Optional<float> Rounding { private get; set; }
 
+        /// <summary>
+        /// Thickness of border around frames. Generally set to 0.0 or 1.0. (Other values are not well tested and more CPU/GPU costly).
+        /// </summary>
         public Optional<float> BorderSize { private get; set; }
 
         internal override void Update(Context context)

@@ -8,11 +8,9 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(GenerateImmediate = false)]
+    [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
     internal sealed partial class Table : Widget
     {
-
-
         public IEnumerable<Widget> ColumnDescriptions { get; set; } = Enumerable.Empty<Widget>();
 
         public IEnumerable<Widget> Columns { get; set; } = Enumerable.Empty<Widget>();
@@ -22,8 +20,6 @@ namespace VL.ImGui.Widgets
         public Vector2 Size { private get; set; }
 
         public float InnerWidth { private get; set; }
-
-        public bool IsVisible { get; private set; }
 
         public bool ShowHeader { get; set; }
 
@@ -35,12 +31,9 @@ namespace VL.ImGui.Widgets
 
             if (count > 0)
             {
-
-                IsVisible = ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, count, Flags, Size.ToImGui(), InnerWidth);
-
-                try
+                if (ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, count, Flags, Size.ToImGui(), InnerWidth))
                 {
-                    if (IsVisible)
+                    try
                     {
                         foreach (var desc in ColumnDescriptions)
                         {
@@ -48,7 +41,6 @@ namespace VL.ImGui.Widgets
                                 continue;
                             else
                                 context.Update(desc);
-
                         }
 
                         if (ShowHeader)
@@ -65,12 +57,11 @@ namespace VL.ImGui.Widgets
                             }
                         }
                     }
+                    finally
+                    {
+                        ImGuiNET.ImGui.EndTable();
+                    }
                 }
-                finally
-                {
-                    ImGuiNET.ImGui.EndTable();
-                }
-
             }
         }
     }

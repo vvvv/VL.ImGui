@@ -1,4 +1,5 @@
 ﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reactive.Disposables;
 using System.Reactive.Subjects;
@@ -7,7 +8,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Input (Float)")]
+    [GenerateNode(Name = "Input (Float)", Category = "ImGui.Widgets")]
     internal partial class InputFloat : Widget
     {
 
@@ -17,7 +18,9 @@ namespace VL.ImGui.Widgets
 
         public float StepFast { private get; set; } = 0f;
 
-        [Documentation(@"Adjust format string to decorate the value with a prefix, a suffix, or adapt the editing and display precision e.g. "" % .3f"" -> 1.234; "" % 5.2f secs"" -> 01.23 secs; ""Biscuit: % .0f"" -> Biscuit: 1; etc.")]
+        /// <summary>
+        /// Adjust format string to decorate the value with a prefix, a suffix, or adapt the editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs; "Biscuit: % .0f" -> Biscuit: 1; etc.
+        /// </summary>
         public string? Format { private get; set; } = "%.3f";
 
         public ImGuiNET.ImGuiInputTextFlags Flags { private get; set; }
