@@ -6,7 +6,7 @@ using VL.Skia;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode]
+    [GenerateNode(GenerateImmediate = false)]
     public sealed partial class ImmediateModeWidget : Widget
     {
         public Action<Context>? Updator { get; set; }

@@ -6,7 +6,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode]
+    [GenerateNode(GenerateImmediate = false)]
     internal sealed partial class Fold : Widget
     {
         public IEnumerable<Widget> Children { get; set; } = Enumerable.Empty<Widget>();

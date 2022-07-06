@@ -9,7 +9,7 @@ namespace VL.ImGui.Windows
 {
     using ImGui = ImGuiNET.ImGui;
 
-    [GenerateNode]
+    [GenerateNode(GenerateImmediate = false)]
     internal sealed partial class Window : Widget
     {
         public Widget? Content { get; set; }

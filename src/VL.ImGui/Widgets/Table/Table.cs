@@ -8,7 +8,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode]
+    [GenerateNode(GenerateImmediate = false)]
     internal sealed partial class Table : Widget
     {
 
