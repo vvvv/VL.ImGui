@@ -19,7 +19,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1325, 236, 424, 708" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1324, 236, 424, 708" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -40,8 +40,6 @@
             </p:NodeReference>
             <ControlPoint Id="B1HV9aZyBX4N7whLK0qOYG" Bounds="163,232" Alignment="Top" />
             <ControlPoint Id="BokwfTYrPvbO5I8kmXrjzq" Bounds="504,833" Alignment="Bottom" />
-            <Pin Id="KDNflnHLKdaPpOV00DC00H" Name="Menu Bar" Kind="InputPin" />
-            <Pin Id="Hnt7HbHom4WLOe7vwez2y3" Name="Output" Kind="OutputPin" />
             <Patch Id="DiSAogM01V2PtHeb7EDsUs" ManuallySortedPins="true">
               <Patch Id="KZoprZhx008ONt4GyYjsMs" Name="Create" ManuallySortedPins="true" />
               <Patch Id="InTSJk4ETDfMoNS4ziramL" Name="Update" ParticipatingElements="LrfQATXadbHQEsiiaKk1ov" ManuallySortedPins="true" />
@@ -228,6 +226,9 @@
               </Node>
               <Pad Id="SpWktkrnHUVOmW5oI5StKL" Comment="" Bounds="542,791,35,35" ShowValueBox="true" isIOBox="true" />
             </Patch>
+            <Pin Id="KDNflnHLKdaPpOV00DC00H" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="O15i8CXIVENLZbRVTOLUeU" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="Hnt7HbHom4WLOe7vwez2y3" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="QpQiV4ZMYjFLcsLxoQ1hSb" Bounds="713,44,251,177" ShowValueBox="true" isIOBox="true" Value="collapse the Window by clicking that small triangle before &quot;Window&quot;&gt;&gt;&#xD;&#xA;&#xD;&#xA;=&gt; Window region won't execute any more. This is HUGE in terms of performance of bigger applications.">
             <p:TypeAnnotation>

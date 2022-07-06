@@ -1,12 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0109-c3426c2fbf" Version="0.128">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
   <Patch Id="FqV6a8uF6wBNEsSb65h9jq">
     <Canvas Id="CiUOvKtIpncPRBZwoQzisM" DefaultCategory="ImGui" CanvasType="FullCategory">
-      <!--
-
-    ************************ ImGui (Skia) ************************
-
--->
       <!--
 
     ************************ ImGui (Skia) ************************
@@ -99,11 +94,6 @@
         </p:ValueBoxSettings>
       </Pad>
       <Canvas Id="BNcFAAN7XnGNewM0vXuGUA" Name="Widgets" Position="356,220">
-        <!--
-
-    ************************ RadioButtons ************************
-
--->
         <!--
 
     ************************ RadioButtons ************************
@@ -204,11 +194,6 @@
     ************************ Text (Multiline) ************************
 
 -->
-        <!--
-
-    ************************ Text (Multiline) ************************
-
--->
         <Node Name="Text (Multiline)" Bounds="231,175" Id="P58iHaKRdFJQOtIYpcCg4K">
           <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
@@ -268,11 +253,6 @@
     ************************ Close ************************
 
 -->
-          <!--
-
-    ************************ Close ************************
-
--->
           <Node Name="Close" Bounds="408,149,150,111" Id="F6JySFMxGQwMWrn7NX3ikh">
             <p:NodeReference>
               <Choice Kind="OperationDefinition" Name="Operation" />
@@ -307,11 +287,6 @@
               <Pin Id="F7fASDNgt8UOmwCmhCMEgm" Name="Input" Kind="InputPin" Bounds="429,166" />
             </Patch>
           </Node>
-          <!--
-
-    ************************ Open ************************
-
--->
           <!--
 
     ************************ Open ************************
@@ -358,11 +333,6 @@
     ************************ Close ************************
 
 -->
-          <!--
-
-    ************************ Close ************************
-
--->
           <Node Name="Close" Bounds="443,139,156,116" Id="L3rORUB257BPs4d0hU1VnM">
             <p:NodeReference>
               <Choice Kind="OperationDefinition" Name="Operation" />
@@ -397,11 +367,6 @@
               <Pin Id="C4ttMBUarwvPI1AGRZ0MXf" Name="Output" Kind="OutputPin" />
             </Patch>
           </Node>
-          <!--
-
-    ************************ Open ************************
-
--->
           <!--
 
     ************************ Open ************************
@@ -481,14 +446,13 @@
                   <Pin Id="BnB7eme6nFkNcK9UnlJV6s" Name="Input" Kind="InputPin" />
                   <Pin Id="RSSrzfLA5RxPBxhH2CXpM6" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="310,471,112,19" Id="PwpUaUVuE3LODH1CQkkqA9">
+                <Node Bounds="310,471,25,19" Id="PwpUaUVuE3LODH1CQkkqA9">
                   <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessNode" Name="RetainedModeWidget" />
+                    <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
                   <Pin Id="AZRdrKEjB6PObD7kDSU4cj" Name="Context" Kind="InputPin" />
                   <Pin Id="PMzPB9Q1mqSMYXqWjwPOdr" Name="Widget" Kind="InputPin" />
-                  <Pin Id="OSO5uEXbUL6LiS4hasobwt" Name="Output" Kind="OutputPin" />
                   <Pin Id="JrvhJFcE70IPPwC2IqKGco" Name="Context" Kind="OutputPin" />
                 </Node>
                 <ControlPoint Id="H6fQHsK4W03PDcvBafLWYA" Bounds="289,552" />
@@ -527,11 +491,6 @@
     ************************ ImGuiBackendFlags ************************
 
 -->
-        <!--
-
-    ************************ ImGuiBackendFlags ************************
-
--->
         <Node Name="ImGuiBackendFlags" Bounds="502,266" Id="NppHTNCwteJOgecrwjvUYJ">
           <p:NodeReference>
             <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
@@ -545,11 +504,6 @@
             <ProcessDefinition Id="UnaI8fpUCVdMAlRqAGLqMO" IsHidden="true" />
           </Patch>
         </Node>
-        <!--
-
-    ************************ ImGuiButtonFlags ************************
-
--->
         <!--
 
     ************************ ImGuiButtonFlags ************************
@@ -573,11 +527,6 @@
     ************************ ImGuiCol ************************
 
 -->
-        <!--
-
-    ************************ ImGuiCol ************************
-
--->
         <Node Name="ImGuiCol" Bounds="1007,260" Id="DsJOB9Qboo3MNKMiXrP5tR">
           <p:NodeReference>
             <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
@@ -591,11 +540,6 @@
             <ProcessDefinition Id="NE0gk7yHMbHLaFF2wcEUOZ" IsHidden="true" />
           </Patch>
         </Node>
-        <!--
-
-    ************************ ImGuiColorEditFlags ************************
-
--->
         <!--
 
     ************************ ImGuiColorEditFlags ************************
@@ -619,11 +563,6 @@
     ************************ ImGuiComboFlags ************************
 
 -->
-        <!--
-
-    ************************ ImGuiComboFlags ************************
-
--->
         <Node Name="ImGuiComboFlags" Bounds="782,316" Id="A7il4GaX3XxPzkAS2ZYY4K">
           <p:NodeReference>
             <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
@@ -637,11 +576,6 @@
             <ProcessDefinition Id="M3FBbrJIv7YQFz3PCNEWMk" IsHidden="true" />
           </Patch>
         </Node>
-        <!--
-
-    ************************ ImGuiCond ************************
-
--->
         <!--
 
     ************************ ImGuiCond ************************
@@ -665,11 +599,6 @@
     ************************ ImGuiConfigFlags ************************
 
 -->
-        <!--
-
-    ************************ ImGuiConfigFlags ************************
-
--->
         <Node Name="ImGuiConfigFlags" Bounds="502,366" Id="DmMUrRTLM4RNlARx909zVF">
           <p:NodeReference>
             <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
@@ -683,11 +612,6 @@
             <ProcessDefinition Id="RX2Mrd8exS0PufHa6z5zne" IsHidden="true" />
           </Patch>
         </Node>
-        <!--
-
-    ************************ ImGuiDataType ************************
-
--->
         <!--
 
     ************************ ImGuiDataType ************************
@@ -711,11 +635,6 @@
     ************************ ImGuiDir ************************
 
 -->
-        <!--
-
-    ************************ ImGuiDir ************************
-
--->
         <Node Name="ImGuiDir" Bounds="1007,360" Id="PElb8Lciz0MLFaQ4MyqCh7">
           <p:NodeReference>
             <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
@@ -729,11 +648,6 @@
             <ProcessDefinition Id="AfMqwB1LyO8Mv5JYf41pEO" IsHidden="true" />
           </Patch>
         </Node>
-        <!--
-
-    ************************ ImGuiDockNodeFlags ************************
-
--->
         <!--
 
     ************************ ImGuiDockNodeFlags ************************
@@ -757,11 +671,6 @@
     ************************ ImGuiDragDropFlags ************************
 
 -->
-        <!--
-
-    ************************ ImGuiDragDropFlags ************************
-
--->
         <Node Name="ImGuiDragDropFlags" Bounds="782,416" Id="AKxZ1fhoWd9Orc9vgRCoii">
           <p:NodeReference>
             <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
@@ -775,11 +684,6 @@
             <ProcessDefinition Id="UVdj6cQeH4KOl8Wu8QoYgl" IsHidden="true" />
           </Patch>
         </Node>
-        <!--
-
-    ************************ ImGuiFocusedFlags ************************
-
--->
         <!--
 
     ************************ ImGuiFocusedFlags ************************
@@ -803,11 +707,6 @@
     ************************ ImGuiHoveredFlags ************************
 
 -->
-        <!--
-
-    ************************ ImGuiHoveredFlags ************************
-
--->
         <Node Name="ImGuiHoveredFlags" Bounds="502,466" Id="Ha4kr4WTHjlNGDQK3jHlVi">
           <p:NodeReference>
             <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
@@ -821,11 +720,6 @@
             <ProcessDefinition Id="UweCCIeECg6MUXXuoOQsXa" IsHidden="true" />
           </Patch>
         </Node>
-        <!--
-
-    ************************ ImGuiInputTextFlags ************************
-
--->
         <!--
 
     ************************ ImGuiInputTextFlags ************************
@@ -849,11 +743,6 @@
     ************************ ImGuiWindowFlags ************************
 
 -->
-        <!--
-
-    ************************ ImGuiWindowFlags ************************
-
--->
         <Node Name="ImGuiWindowFlags" Bounds="501,585" Id="OT6EDfixE4wNCo1u12gOhG">
           <p:NodeReference>
             <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
@@ -867,11 +756,6 @@
             <ProcessDefinition Id="UkT8wsjex0lLpcmcsPzutz" IsHidden="true" />
           </Patch>
         </Node>
-        <!--
-
-    ************************ ImGuiTableColumnFlags ************************
-
--->
         <!--
 
     ************************ ImGuiTableColumnFlags ************************
@@ -895,11 +779,6 @@
     ************************ ImGuiTabBarFlags ************************
 
 -->
-        <!--
-
-    ************************ ImGuiTabBarFlags ************************
-
--->
         <Node Name="ImGuiTabBarFlags" Bounds="751,585" Id="CE53HsF8uR6NUBA1ss4itY">
           <p:NodeReference>
             <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
@@ -913,11 +792,6 @@
             <ProcessDefinition Id="LRrenwof86LL1YSVe30zfC" IsHidden="true" />
           </Patch>
         </Node>
-        <!--
-
-    ************************ ImGuiTabItemFlags ************************
-
--->
         <!--
 
     ************************ ImGuiTabItemFlags ************************
@@ -941,11 +815,6 @@
     ************************ ImGuiTableFlags ************************
 
 -->
-        <!--
-
-    ************************ ImGuiTableFlags ************************
-
--->
         <Node Name="ImGuiTableFlags" Bounds="958,590" Id="MShDdkCWmxjLcM9Pq69n78">
           <p:NodeReference>
             <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
@@ -959,11 +828,6 @@
             <ProcessDefinition Id="CvzE97EAZ43M5ZIK4dMZDQ" IsHidden="true" />
           </Patch>
         </Node>
-        <!--
-
-    ************************ ImGuiTableRowFlags ************************
-
--->
         <!--
 
     ************************ ImGuiTableRowFlags ************************
@@ -1019,11 +883,6 @@
           <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
         </p:ValueBoxSettings>
       </Pad>
-      <!--
-
-    ************************ SaveSettings ************************
-
--->
       <!--
 
     ************************ SaveSettings ************************
@@ -1085,11 +944,6 @@
           <Link Id="Fz3Uug88nNsPdiKkt3MO51" Ids="JpMVy6GjkwNOvFWAi2SZUf,D910RQwGZ9OLP8mRyXB2fD" />
         </Patch>
       </Node>
-      <!--
-
-    ************************ LoadSettings ************************
-
--->
       <!--
 
     ************************ LoadSettings ************************
@@ -1164,11 +1018,6 @@
     ************************ Version ************************
 
 -->
-        <!--
-
-    ************************ Version ************************
-
--->
         <Node Name="Version" Bounds="496,238,112,82" Id="IlQEqv9eaR8NbHw71s5KEW">
           <p:NodeReference>
             <Choice Kind="OperationDefinition" Name="Operation" />
@@ -1187,11 +1036,6 @@
           </Patch>
         </Node>
       </Canvas>
-      <!--
-
-    ************************ ImmediateMode ************************
-
--->
       <!--
 
     ************************ ImmediateMode ************************
@@ -1243,11 +1087,6 @@
           <Link Id="ErMp3jYiaGaLIWrTSPo9Rd" Ids="VZ5GJEc6mlJL9O27Dovc6x,BAIPfG7uhlSLSDLWCcWyvu" />
         </Patch>
       </Node>
-      <!--
-
-    ************************ CustomRegionPatch ************************
-
--->
       <!--
 
     ************************ CustomRegionPatch ************************
@@ -1438,14 +1277,13 @@
               <ControlPoint Id="Nmg8KKy3PSJLxhA3k4hHxH" Bounds="733,307" />
               <ControlPoint Id="HiXqArxUFp5MFzyGoEsqgi" Bounds="892,309" />
               <ControlPoint Id="Sidazv3c1c0NbMea3nthAA" Bounds="613,561" />
-              <Node Bounds="250,488,112,19" Id="VoGVEHMGOL0LeBR83HIgmL">
+              <Node Bounds="250,488,-17,19" Id="VoGVEHMGOL0LeBR83HIgmL">
                 <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessNode" Name="RetainedModeWidget" />
+                  <Choice Kind="ProcessNode" Name="RetainedMode" />
                 </p:NodeReference>
                 <Pin Id="RKjyrldik9XPh2pQAHkb0H" Name="Context" Kind="InputPin" />
                 <Pin Id="OP9oygoZGIMMIqlvMNkx2E" Name="Widget" Kind="InputPin" />
-                <Pin Id="O8er4HB9cdDMGU4E9QVs6Y" Name="Output" Kind="OutputPin" />
                 <Pin Id="KOGUODZXtrvMUG2csAAu79" Name="Context" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="KgCHdemPDqiPDV4Bdjv2c2" Bounds="229,569" />
@@ -1519,6 +1357,7 @@
                 </p:NodeReference>
                 <Pin Id="NCzLyYz4azXLtGFY5UpRVB" Name="Input" Kind="InputPin" />
                 <Pin Id="H5JqHjnVbHJPBVQjqGI5ky" Name="Menu Bar" Kind="InputPin" />
+                <Pin Id="EDKDp5hfjhNMbb5cUTHtEp" Name="Docking Enabled" Kind="InputPin" />
                 <Pin Id="SQ5JGcbfFtVP4CXT3BQhaM" Name="Output" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="HGPaKZoxWO0MOLfWbFtDVc" Bounds="407,249" />
@@ -1532,6 +1371,7 @@
                 <Pin Id="BuzfRmlzjxkMMmRUoXftOI" Name="Output" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="NIQOmUcRlSZLCAjB0nAa58" Bounds="573,281" />
+              <ControlPoint Id="JChEMUvSXZCOHR4sevHsUj" Bounds="665,283" />
             </Canvas>
             <Patch Id="LrQztSzwhjVQRoyO0xBgLp" Name="Create" />
             <Patch Id="QS9mCnNavUTOB5t8E6zU1F" Name="Update">
@@ -1542,6 +1382,7 @@
               </Pin>
               <Pin Id="BkOsA5OZvjaLk8ZzQ6E08e" Name="Output" Kind="OutputPin" Bounds="488,520" />
               <Pin Id="NgMC8NsJ08cQcowIKSZ3rV" Name="Menu Bar" Kind="InputPin" Bounds="573,281" />
+              <Pin Id="B3iZOjsswa9OVueOz3rDJk" Name="Docking Enabled" Kind="InputPin" Bounds="666,278" />
             </Patch>
             <ProcessDefinition Id="Jzd8Mdme8zsL81j3yQeoYw">
               <Fragment Id="DFS1DGobJtVOaVAyOkqSkE" Patch="LrQztSzwhjVQRoyO0xBgLp" Enabled="true" />
@@ -1554,14 +1395,11 @@
             <Link Id="IX5CNXy6W2wMKk955GOM3A" Ids="BuzfRmlzjxkMMmRUoXftOI,NCzLyYz4azXLtGFY5UpRVB" />
             <Link Id="MbR1Dihs1oQMGWepVDx27x" Ids="NIQOmUcRlSZLCAjB0nAa58,H5JqHjnVbHJPBVQjqGI5ky" />
             <Link Id="NwLhcwvjsRiO5bG7xOEc3y" Ids="NgMC8NsJ08cQcowIKSZ3rV,NIQOmUcRlSZLCAjB0nAa58" IsHidden="true" />
+            <Link Id="NpTFkGreXKBLXzBbD2Laap" Ids="JChEMUvSXZCOHR4sevHsUj,EDKDp5hfjhNMbb5cUTHtEp" />
+            <Link Id="FPG6qKY5A7AOyY77nfT5eJ" Ids="B3iZOjsswa9OVueOz3rDJk,JChEMUvSXZCOHR4sevHsUj" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>
-      <!--
-
-    ************************ ImmediateModeNode (Internal) ************************
-
--->
       <!--
 
     ************************ ImmediateModeNode (Internal) ************************
@@ -1699,11 +1537,6 @@
         </Patch>
       </Node>
     </Canvas>
-    <!--
-
-    ************************ Application ************************
-
--->
     <!--
 
     ************************ Application ************************
