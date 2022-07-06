@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0101-f1a20d5b10" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0109-c3426c2fbf" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -17,12 +17,14 @@
           <Node Bounds="381,487,70,19" Id="SWEJo8yVaFzN5DRUohBK2W">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ToSkiaLayer" />
+              <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
             </p:NodeReference>
             <Pin Id="RvPSnMmitACMThhv3g4wvf" Name="Input" Kind="InputPin" />
+            <Pin Id="EVU9LppmGHAOq4YxDrT1cL" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="HaqIyOMNdsNP7vqY4gnL9c" Name="Docking Enabled" Kind="InputPin" />
             <Pin Id="Rfmtujjd0vpP8UPzDHU3bY" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="316,584,165,19" Id="V3S5ZK9GpzrQHHTsE1YCVU">
+          <Node Bounds="314,569,165,19" Id="V3S5ZK9GpzrQHHTsE1YCVU">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
@@ -40,7 +42,7 @@
             <Pin Id="CKwUuBnVBdZNFpO6MDpcWY" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="LcaKA0y2StiOxJw7AEm6yd" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="356,551,85,19" Id="BoWffvyEN8pL3uG3QLWuZF">
+          <Node Bounds="354,536,85,19" Id="BoWffvyEN8pL3uG3QLWuZF">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Group" />
@@ -70,10 +72,10 @@
             <Pin Id="SmshHnSCSCRMAtKV8EB5yn" Name="Fullscreen" Kind="InputPin" DefaultValue="True" />
             <Pin Id="R3hwhAKZDNCMisWLXXyr01" Name="Bounds" Kind="InputPin" />
             <Pin Id="JNgXmF4Jsg9O7tl68ZLkR3" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="R7yAlRfeiXNMpC2Sdb9P7K" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="FiCthLiw2rKPsnt0JEBmCL" Name="Window Flags" Kind="InputPin" DefaultValue="NoTitleBar" />
             <Pin Id="Vsjz6oKw27JMyKSgvBzeaM" Name="Output" Kind="OutputPin" />
             <Pin Id="Od2stmgdnMlMmWrWsqBaIj" Name="Closing" Kind="OutputPin" />
-            <Pin Id="AOOMUuxvoHhOVBA6Etidjw" Name="Is Visible" Kind="OutputPin" />
           </Node>
           <Node Bounds="101,197,85,19" Id="L0IkUkaSo6OPpCrMyWNLfJ">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
