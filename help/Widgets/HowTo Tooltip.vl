@@ -21,6 +21,7 @@
             </p:NodeReference>
             <Pin Id="OuxuxmOwAWSLY7F6norUZK" Name="Input" Kind="InputPin" />
             <Pin Id="EUcMVXeoW1ZPt0MBWlvaD3" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="VPVIZfw5VmsMERsYdoa4M2" Name="Docking Enabled" Kind="InputPin" />
             <Pin Id="Tsi6F5g1cOCQK44SVRexGG" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="370,869,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
@@ -275,9 +276,10 @@
             <Pin Id="LeAtGV9t48fPUvnxwdVZ3l" Name="Input 3" Kind="InputPin" />
           </Node>
           <Node Bounds="408,667,52,19" Id="ThJENVRycC0PJ4SL0IZDDD">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+            <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Column" />
+              <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="SF1LM6JqzUqQa4UOTL01ab" Name="Children" Kind="InputPin" />
             <Pin Id="LtQlOtVv163NC6m95MXkTv" Name="Output" Kind="OutputPin" />
@@ -344,9 +346,10 @@
                 </p:TypeAnnotation>
               </Pad>
               <Node Bounds="932,407,66,19" Id="DSyh29vDNUDLHovKq520y9">
-                <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+                <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessNode" Name="SkiaWidget" />
+                  <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                 </p:NodeReference>
                 <Pin Id="EJ9GmLCSgttNGMhAg9mc87" Name="Layer" Kind="InputPin" />
                 <Pin Id="PD0JlqoyI4pMcRVpLgJBw6" Name="Size" Kind="InputPin" />
@@ -354,9 +357,10 @@
                 <Pin Id="IsaQ3SfQb9lOXWeoHzmN9q" Name="Output" Kind="OutputPin" />
               </Node>
               <Node Bounds="833,482,52,19" Id="BHvGTAjteymL093hS1ajzr">
-                <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+                <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessNode" Name="Column" />
+                  <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                 </p:NodeReference>
                 <Pin Id="IkO6h21g3XCPKAFrEo2r8P" Name="Children" Kind="InputPin" />
                 <Pin Id="Nbsq6A2Er5MOWxJILnwX3I" Name="Output" Kind="OutputPin" />
