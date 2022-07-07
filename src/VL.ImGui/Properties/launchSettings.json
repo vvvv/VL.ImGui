@@ -2,7 +2,8 @@
   "profiles": {
     "VL.ImGui": {
       "commandName": "Executable",
-      "executablePath": "$(VLInstallPath)\\vvvv.exe"
+      "executablePath": "$(VLInstallPath)\\vvvv.exe",
+      "commandLineArgs": "--package-repositories $(PackageRepositories)"
     }
   }
 }

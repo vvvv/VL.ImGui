@@ -11,16 +11,16 @@
     <Nullable>enable</Nullable>
 
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    
-    <VLVersion>2022.5.0-0095-gaf5968b65d</VLVersion>
+    <VLVersion>2022.5.0-0118-g05f38ab35b</VLVersion>
     <VLInstallPath>$(ProgramFiles)\vvvv\vvvv_gamma_$(VLVersion)</VLInstallPath>
+    <PackageRepositories>$(MsBuildThisFileDirectory)..\..\..</PackageRepositories>
 
     <DebugGenerator>true</DebugGenerator>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ImGui.NET" Version="1.87.3" />
-    <PackageReference Include="VL.Skia" Version="2022.5.0-0095-gaf5968b65d" />
+    <PackageReference Include="VL.Skia" Version="$(VLVersion)" />
   </ItemGroup>
 
   <ItemGroup>
