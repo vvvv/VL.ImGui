@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Spc0ANcyIbJOrMJ6qKrUgb" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
-  <NugetDependency Id="LMYmLodTRU4OJSkcyn6bho" Location="VL.CoreLib" Version="2022.5.0-0108-ga77655f3ae" />
+<Document xmlns:p="property" Id="MyhpKc7fQ0zPyGlrwkEiIs" LanguageVersion="2022.5.0-0118-05f38ab35b" Version="0.128">
+  <NugetDependency Id="LMYmLodTRU4OJSkcyn6bho" Location="VL.CoreLib" Version="2022.5.0-0118-g05f38ab35b" />
   <Patch Id="J92awyuxkXVOwzHOcsjJG3">
     <Canvas Id="OJeuTPRYJUeOVmkqxCSEoA" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -54,9 +54,10 @@
             <Pin Id="DxkEyN4eohyLs4MWjVTN1u" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="618,474,125,19" Id="OWZUmEfsYBWLV5ANyKObwz">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+            <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="Table" />
+              <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Table" />
             </p:NodeReference>
             <Pin Id="C6AXHWhdV27Okh7GGmJd2j" Name="Column Descriptions" Kind="InputPin" />
             <Pin Id="NFERs1yQpVINd1qB9Hd7U9" Name="Columns" Kind="InputPin" />
@@ -94,6 +95,8 @@
             </p:NodeReference>
             <Pin Id="VptbbhjucD5O9BuF9knpC2" Name="Input" Kind="InputPin" />
             <Pin Id="BaMtWjGitPFMoGvJWnoRC2" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="NxWu8i0WODFNCass85a2RH" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="AYpEtSWbhNTMFbv0rHOIOK" Name="Default Window" Kind="InputPin" />
             <Pin Id="OL3fYg7jqOrPSr9W8Gy6RL" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="576,720,165,19" Id="Qbw97xhQSR1N6heVdYlyXv">
@@ -101,7 +104,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="PuG0bcB8eqxPck4ITinMmc" Name="Bounds" Kind="InputPin" DefaultValue="1168, 168, 376, 348" />
+            <Pin Id="PuG0bcB8eqxPck4ITinMmc" Name="Bounds" Kind="InputPin" DefaultValue="1160, 248, 376, 348" />
             <Pin Id="ULoEM54zl1XLu2jmN2I37Q" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="OVbx8n9RLE5MRe7klfFFDr" Name="Input" Kind="InputPin" />
             <Pin Id="UloK2vQ640GMvmFoNudSeE" Name="Color" Kind="InputPin" />
@@ -267,5 +270,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="NDjkHiKFDFSLSs7Gt0A9Wo" Location="VL.ImGui" Version="0.0.0" />
-  <NugetDependency Id="BWbPcu3gOceP62y0FxGINV" Location="VL.Skia" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="BWbPcu3gOceP62y0FxGINV" Location="VL.Skia" Version="2022.5.0-0118-g05f38ab35b" />
 </Document>

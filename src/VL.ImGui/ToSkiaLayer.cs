@@ -44,6 +44,7 @@ namespace VL.ImGui
         Widget? _widget;
         private IEnumerable<Widget> MenuBar = Enumerable.Empty<Widget>();
         private bool DockingEnabled = false;
+        private bool DefaultWindow = false;
 
         // OpenGLES rendering (https://github.com/dotnet/Silk.NET/tree/v2.15.0/src/OpenGL/Extensions/Silk.NET.OpenGL.Extensions.ImGui)
         private readonly SkiaContext _context;
@@ -67,10 +68,11 @@ namespace VL.ImGui
             
         }
 
-        public ILayer Update(Widget widget, IEnumerable<Widget> menuBar, bool dockingEnabled)
+        public ILayer Update(Widget widget, IEnumerable<Widget> menuBar, bool dockingEnabled, bool defaultWindow)
         {
             MenuBar = menuBar;
             DockingEnabled = dockingEnabled;
+            DefaultWindow = defaultWindow;
             _widget = widget;
             return this;
         }
@@ -89,6 +91,15 @@ namespace VL.ImGui
                 _context.NewFrame();
                 try
                 {
+                    if (DefaultWindow)
+                    {
+                        var viewPort = ImGui.GetMainViewport();
+                        ImGui.SetNextWindowPos(viewPort.WorkPos);
+                        ImGui.SetNextWindowSize(viewPort.WorkSize);
+
+                        ImGui.Begin("", ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoBringToFrontOnFocus | ImGuiWindowFlags.NoNavFocus | ImGuiWindowFlags.NoFocusOnAppearing);
+                    }
+
                     // Add Menu Bar
                     var menuBarCount = MenuBar.Count(x => x != null);
 
@@ -118,6 +129,11 @@ namespace VL.ImGui
                 }
                 finally
                 {
+                    if (DefaultWindow)
+                    {
+                        ImGui.End();
+                    }
+
                     // Render (builds mesh with texture coordinates)
                     ImGui.Render();
                 }
