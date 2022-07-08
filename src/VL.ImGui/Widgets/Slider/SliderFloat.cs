@@ -23,13 +23,14 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public BehaviorSubject<float> Value { get; } = new BehaviorSubject<float>(0f);
+        public Channel<float>? Channel { private get; set; }
 
+        private Channel<float> fallback = new Channel<float>();
         internal override void Update(Context context)
         {
-            var value = Value.Value;
+            var value = (Channel ?? fallback).Value;
             if (ImGuiNET.ImGui.SliderFloat(Label ?? string.Empty, ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Value.OnNext(value);
+                Channel?.OnNext(value);
         }
     }
 }
