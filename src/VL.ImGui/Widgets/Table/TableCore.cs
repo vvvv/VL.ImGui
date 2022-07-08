@@ -8,8 +8,8 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets.Internal", Name = "TableCore", GenerateRetained = false)]
-    internal sealed partial class TableImmediate : Widget
+    [GenerateNode(Category = "ImGui.Widgets.Internal", GenerateRetained = false)]
+    internal sealed partial class TableCore : Widget
     {
         public int Count { get; set; }
 
