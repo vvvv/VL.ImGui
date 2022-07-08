@@ -51,12 +51,13 @@ namespace VL.ImGui
         private readonly RenderContext _renderContext;
         private readonly Handle<SKPaint> _fontPaint;
 
-        public ToSkiaLayer()
+        public unsafe ToSkiaLayer()
         {
             _context = new SkiaContext();
             using (_context.MakeCurrent())
             {
                 _io = ImGui.GetIO();
+                _io.NativePtr->IniFilename = null;
             }
 
             _renderContext = RenderContext.ForCurrentThread();
