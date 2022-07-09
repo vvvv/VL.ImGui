@@ -30,9 +30,10 @@ namespace VL.ImGui.Widgets
 
         internal override void Update(Context context)
         {
-            var value = (Channel ?? fallback).Value.ToImGui();
+            var channel = Channel ?? fallback;
+            var value = channel.Value.ToImGui();
             if (ImGuiNET.ImGui.SliderFloat2(Label ?? string.Empty, ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Channel?.OnNext(value.ToVL());
+                channel.OnNext(value.ToVL());
         }
     }
 }

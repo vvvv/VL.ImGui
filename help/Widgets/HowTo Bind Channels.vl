@@ -179,7 +179,7 @@
             <Pin Id="NaeJBI6saowOqqDZ9gZeb9" Name="Output" Kind="StateOutputPin" />
             <Pin Id="EbCslLqRw36MqBCHcY2U8c" Name="Value" Kind="OutputPin" />
           </Node>
-          <Pad Id="VT57L0o4X3hPmKqY0MbKzG" Comment="" Bounds="85,193,35,15" ShowValueBox="true" isIOBox="true" Value="-0.37">
+          <Pad Id="VT57L0o4X3hPmKqY0MbKzG" Comment="" Bounds="85,193,35,15" ShowValueBox="true" isIOBox="true" Value="0.53999996">
             <p:TypeAnnotation>
               <Choice Kind="ImmutableTypeFlag" Name="Float32" />
               <FullNameCategoryReference ID="Primitive" />
