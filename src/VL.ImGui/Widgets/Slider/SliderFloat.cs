@@ -28,9 +28,10 @@ namespace VL.ImGui.Widgets
         private Channel<float> fallback = new Channel<float>();
         internal override void Update(Context context)
         {
-            var value = (Channel ?? fallback).Value;
+            var channel = Channel ?? fallback;
+            var value = channel.Value;
             if (ImGuiNET.ImGui.SliderFloat(Label ?? string.Empty, ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Channel?.OnNext(value);
+                channel.OnNext(value);
         }
     }
 }
