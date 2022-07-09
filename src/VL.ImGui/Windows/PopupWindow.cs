@@ -10,7 +10,7 @@ namespace VL.ImGui.Widgets
 {
     using ImGui = ImGuiNET.ImGui;
 
-    [GenerateNode]
+    [GenerateNode(GenerateImmediate = false)]
     public sealed partial class PopupWindow : Widget
     {
         int _openCloseCount;
@@ -53,7 +53,7 @@ namespace VL.ImGui.Widgets
                     }
                     else
                     {
-                        context.Update(Content);
+                        context?.Update(Content);
                     }
                 }
                 finally

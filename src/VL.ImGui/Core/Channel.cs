@@ -1,7 +1,9 @@
 ﻿using System.Reactive.Subjects;
+using VL.Core;
 
 namespace VL.ImGui
 {
+    [Monadic(typeof(Monadic.ChannelFactory<>))]
     public class Channel<T> : IDisposable, ISubject<T>
     {
         Subject<T> Subject = new Subject<T>();
