@@ -24,16 +24,15 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public Channel<Vector2>? Channel { private get; set; }
-
-        private Channel<Vector2> fallback = new Channel<Vector2>();
+        public IObservable<Vector2>? Channel { private get; set; }
+        ChannelFlange<Vector2> channelFlange = new ChannelFlange<Vector2>();
 
         internal override void Update(Context context)
         {
-            var channel = Channel ?? fallback;
-            var value = channel.Value.ToImGui();
+            var value = channelFlange.Update(Channel).ToImGui();
             if (ImGuiNET.ImGui.SliderFloat2(Label ?? string.Empty, ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                channel.OnNext(value.ToVL());
+                channelFlange.Value = value.ToVL();
         }
+
     }
 }
