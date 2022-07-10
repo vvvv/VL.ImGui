@@ -23,7 +23,7 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public IObservable<float>? Channel { private get; set; }
+        public Channel<float>? Channel { private get; set; }
         ChannelFlange<float> channelFlange = new ChannelFlange<float>(); 
 
         internal override void Update(Context context)

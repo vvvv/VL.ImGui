@@ -177,7 +177,7 @@
             </p:NodeReference>
             <Pin Id="AE8ZQQgps3QPIv8bhJUFrt" Name="Value" Kind="InputPin" />
             <Pin Id="NaeJBI6saowOqqDZ9gZeb9" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="EbCslLqRw36MqBCHcY2U8c" Name="Value" Kind="OutputPin" />
+            <Pin Id="Sn1TuPGpy65PAJ6DmqGZr3" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="VT57L0o4X3hPmKqY0MbKzG" Comment="" Bounds="85,193,35,15" ShowValueBox="true" isIOBox="true" Value="0.53999996">
             <p:TypeAnnotation>
@@ -185,11 +185,11 @@
               <FullNameCategoryReference ID="Primitive" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="794,368,36,19" Id="QqXKA8S0AqYQSAinPh0yKW">
+          <Node Bounds="794,366,36,19" Id="QqXKA8S0AqYQSAinPh0yKW">
             <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Bind" />
               <CategoryReference Kind="RecordType" Name="Channel" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Merge" />
             </p:NodeReference>
             <Pin Id="Do5sUTN4cl1NIDqZH6sth4" Name="Channel A" Kind="InputPin" />
             <Pin Id="NXs37F0jaVFMeqFbSfrSiJ" Name="Channel B" Kind="InputPin" />
@@ -201,9 +201,9 @@
             </p:NodeReference>
             <Pin Id="RkRkAmyahE5NhlSURFcf1a" Name="Value" Kind="InputPin" />
             <Pin Id="J0WuBnqKrDtPGUMf0OMVnC" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="MFGekw4vz3fOAOdLOM5hRM" Name="Value" Kind="OutputPin" />
+            <Pin Id="KIPuAh1qkcUPcSxh1czsvu" Name="Value" Kind="OutputPin" />
           </Node>
-          <Node Bounds="974,250,79,19" Id="Q6CNHsMtE6aPPjgPfuF1L2">
+          <Node Bounds="974,282,79,19" Id="Q6CNHsMtE6aPPjgPfuF1L2">
             <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ToObservable" />
@@ -213,7 +213,7 @@
             <Pin Id="Nnd3nj3gJgROpZZBcxg2O6" Name="Send" Kind="InputPin" />
             <Pin Id="OD3tMJHIQvZNo4muN3rx05" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="988,198,57,19" Id="JIOOlFQM6VHMmV2b1yNYg7">
+          <Node Bounds="988,230,57,19" Id="JIOOlFQM6VHMmV2b1yNYg7">
             <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Changed" />
@@ -222,22 +222,22 @@
             <Pin Id="NttLwsB4smNP5K2yrm2Hz2" Name="Result" Kind="OutputPin" />
             <Pin Id="NKoHrKdvt2kNhC9eiBVDOC" Name="Unchanged" Kind="OutputPin" />
           </Node>
-          <Pad Id="R4O6V8GMkpNOuHLSSt86E8" Comment="Message" Bounds="976,163,35,15" ShowValueBox="true" isIOBox="true" Value="0.21">
+          <Pad Id="R4O6V8GMkpNOuHLSSt86E8" Comment="Message" Bounds="976,195,35,15" ShowValueBox="true" isIOBox="true" Value="0.81">
             <p:TypeAnnotation>
               <Choice Kind="ImmutableTypeFlag" Name="Float32" />
               <FullNameCategoryReference ID="Primitive" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="925,368,36,19" Id="OeAsYJ9fURpQHWkhC7DKYO">
+          <Node Bounds="896,368,36,19" Id="OeAsYJ9fURpQHWkhC7DKYO">
             <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Bind" />
               <CategoryReference Kind="RecordType" Name="Channel" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Consume" />
             </p:NodeReference>
             <Pin Id="SSeKnX1kCuON4jCPZcnSsz" Name="Channel A" Kind="InputPin" />
             <Pin Id="A5OZfQlOnS1MePn9zrIVz1" Name="Channel B" Kind="InputPin" />
           </Node>
-          <Node Bounds="1021,294,65,19" Id="DigVKEReHfQP4PdeHjtBAQ">
+          <Node Bounds="1021,326,65,19" Id="DigVKEReHfQP4PdeHjtBAQ">
             <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <FullNameCategoryReference ID="Reactive" />
@@ -248,7 +248,7 @@
             <Pin Id="VicXcuP6Q2YOYCMsAQ1Vdm" Name="Value" Kind="OutputPin" />
             <Pin Id="RFqL8boaaQsNFZZwOhRtrc" Name="On Data" Kind="OutputPin" />
           </Node>
-          <Pad Id="FsbH7Ollft5QSoAxqkict7" Comment="" Bounds="1023,367,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="FsbH7Ollft5QSoAxqkict7" Comment="" Bounds="1023,369,35,15" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="55,345,55,26" Id="Uc2ickOILpHPwPRSQ3P93D">
             <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -276,7 +276,7 @@
             </p:NodeReference>
             <Pin Id="F1jk1H70oAxLIxvZGKxRu8" Name="Value" Kind="InputPin" />
             <Pin Id="TuUWkNLIhMIQRg7xF4DhDV" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="KB79NWv98yxPodA4vj3SOv" Name="Value" Kind="OutputPin" />
+            <Pin Id="C6CzMPqYvY6OHHcnw46yuS" Name="Value" Kind="OutputPin" />
           </Node>
           <Node Bounds="376,244,84,95" Id="BDrcdv04yffQIbsWs0uBeQ">
             <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
@@ -307,11 +307,10 @@
               </Node>
             </Patch>
           </Node>
-          <Node Bounds="330,368,36,19" Id="C6ytNGVQKRzPLbQeOACJwS">
+          <Node Bounds="315,366,36,19" Id="C6ytNGVQKRzPLbQeOACJwS">
             <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="ImGui.Channel" />
-              <Choice Kind="ProcessAppFlag" Name="Bind" />
+              <Choice Kind="ProcessAppFlag" Name="Consume" />
             </p:NodeReference>
             <Pin Id="R3qEZMpdFTuMG8uQ6vFmqX" Name="Channel A" Kind="InputPin" />
             <Pin Id="RCD19IOitxgNhzaxJ17AcQ" Name="Channel B" Kind="InputPin" />
@@ -365,16 +364,15 @@
               </Node>
             </Patch>
           </Node>
-          <Node Bounds="519,368,36,19" Id="Rcy39ehAJEWOnmcOSxB8AS">
+          <Node Bounds="504,366,36,19" Id="Rcy39ehAJEWOnmcOSxB8AS">
             <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="ImGui.Channel" />
-              <Choice Kind="ProcessAppFlag" Name="Bind" />
+              <Choice Kind="ProcessAppFlag" Name="Consume" />
             </p:NodeReference>
             <Pin Id="T9e0oBFpcMMOuOrYdJMqCb" Name="Channel A" Kind="InputPin" />
             <Pin Id="UwnTmOjB497NbcMptWux4P" Name="Channel B" Kind="InputPin" />
           </Node>
-          <Node Bounds="82,141,45,19" Id="F1F5SlVRwq6Ls6ld67C0W5">
+          <Node Bounds="82,145,45,19" Id="F1F5SlVRwq6Ls6ld67C0W5">
             <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="LFO" />
@@ -387,6 +385,11 @@
             <Pin Id="ELjXte9zMLuLpGHGyijMke" Name="Cycles" Kind="OutputPin" />
           </Node>
           <ControlPoint Id="I1u8GPCgwgJOd56htzB5bA" Bounds="799,163" />
+          <Pad Id="EJKUwk7OHq4Ml9GsmBEYVB" Comment="" Bounds="208,58,36,15" ShowValueBox="true" isIOBox="true" Value="0.88">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
@@ -443,6 +446,7 @@
         <Link Id="GpfTunDAyA1L6zNmFyV6Ih" Ids="TuUWkNLIhMIQRg7xF4DhDV,VAcUNScWGt2OCg3V2jluyj" />
         <Link Id="Ou9GG4mfWlVL41kGRefOjd" Ids="OdVdekHeaYMLl7FMQiEbmQ,VCLPAo0ttJVQF8MjGOPyiY" />
         <Link Id="FYsVPL9nemlNwesI8zvyYJ" Ids="J0WuBnqKrDtPGUMf0OMVnC,Ubii0XtrYiXPTCXu4zrRYJ" />
+        <Link Id="NEAYEMWvzxuOiDK1M8Ekv4" Ids="EJKUwk7OHq4Ml9GsmBEYVB,AE8ZQQgps3QPIv8bhJUFrt" />
       </Patch>
     </Node>
   </Patch>

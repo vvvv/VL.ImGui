@@ -24,7 +24,7 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public IObservable<Vector2>? Channel { private get; set; }
+        public Channel<Vector2>? Channel { private get; set; }
         ChannelFlange<Vector2> channelFlange = new ChannelFlange<Vector2>();
 
         internal override void Update(Context context)

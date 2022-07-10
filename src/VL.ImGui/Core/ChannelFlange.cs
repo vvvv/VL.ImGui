@@ -5,15 +5,13 @@ namespace VL.ImGui
     class ChannelFlange<T>
     {
         T value;
-        IObservable<T>? channel;
+        Channel<T>? channel;
 
-        internal T Update(IObservable<T>? channel)
+        internal T Update(Channel<T>? channel)
         {
             this.channel = channel;
-            if (channel is BehaviorSubject<T> s)
-                value = s.Value;
-            if (channel is Channel<T> c)
-                value = c.Value;
+            if (channel != null)
+                value = channel.Value;
             return value;
         }
 
@@ -23,8 +21,7 @@ namespace VL.ImGui
             set
             {
                 this.value = value;
-                if (channel is IObserver<T> o)
-                    o.OnNext(value);
+                channel?.OnNext(value);
             }
         }
     }
