@@ -3484,6 +3484,101 @@
           </Patch>
         </Patch>
       </Node>
+      <Canvas Id="ErwZ5s9lkoaPHnMdfbbsCQ" Name="Styling" Position="359,302">
+        <Canvas Id="Co17v33qqEhMHqouo3swT8" Name="Immediate" Position="373,312">
+          <!--
+
+    ************************ SetWindowStyle ************************
+
+-->
+          <Node Name="SetWindowStyle" Bounds="389,316" Id="Rn8TI3iParzOlYrEylS9dT">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+              <Choice Kind="ContainerDefinition" Name="Process" />
+            </p:NodeReference>
+            <Patch Id="RGHenb52BQoLOMm7cJCoUm">
+              <Canvas Id="BcTe3GP7ckHOavxbOs91Sk" CanvasType="Group">
+                <Node Bounds="406,409,-122,19" AutoConnect="true" Id="M3um7kaW2Z2Pqw49QziGJx">
+                  <p:NodeReference LastCategoryFullName="ImGui.Styling" LastSymbolSource="VL.ImGUI.Nodes">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="ProcessNode" Name="SetWindowStyle" />
+                    <CategoryReference Kind="Category" Name="Styling" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="LmlPDFxGfiOPqdVIB5dtqv" Name="Input" Kind="InputPin" />
+                  <Pin Id="PsRGYOQQ60HL8DBKMgaJTc" Name="Background" Kind="InputPin" />
+                  <Pin Id="RlreGklMjgFLVgD23FCycK" Name="Menu Bar Background" Kind="InputPin" />
+                  <Pin Id="Kg6CZGwHI5OOTEsSiNLRqa" Name="Title Background" Kind="InputPin" />
+                  <Pin Id="EHugfGC4hBhMunYzVX9DnA" Name="Title Background Active" Kind="InputPin" />
+                  <Pin Id="E5IeHkaMtlbLDp57jIufQU" Name="Title Background Collapsed" Kind="InputPin" />
+                  <Pin Id="F3RkoBg9X1gLsrs6BqUC2H" Name="Resize Grip Color" Kind="InputPin" />
+                  <Pin Id="OyXUbUDyiglNiZO5oS2F8F" Name="Resize Grip Hovered" Kind="InputPin" />
+                  <Pin Id="MfhkElAU8OuPRrFKL3tb11" Name="Resize Grip Active" Kind="InputPin" />
+                  <Pin Id="NSq1mNCXetiOAc2ae7E5JZ" Name="Min Size" Kind="InputPin" />
+                  <Pin Id="RTqTRJgaoPzLZRL3uPd1do" Name="Title Align" Kind="InputPin" />
+                  <Pin Id="UvdcZHUHD9OOpRotR4HM0m" Name="Padding" Kind="InputPin" />
+                  <Pin Id="OUddJxI0OjYOFp1mAfV9xj" Name="Rounding" Kind="InputPin" />
+                  <Pin Id="SRxAfHoWfEeP0hNFxwV7yD" Name="Border Size" Kind="InputPin" />
+                  <Pin Id="H3KZCsCO0iJLi0fuLuMaYO" Name="Output" Kind="OutputPin" />
+                </Node>
+                <ControlPoint Id="QVQrID1CF9PN705dB0gSy5" Bounds="259,278" />
+                <Node Bounds="255,324,113,19" Id="UeE1bNf2sLMOcBq2Ekl0JF">
+                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
+                  </p:NodeReference>
+                  <Pin Id="VajyjsHhlc9OL6hr5z0EzD" Name="Region" Kind="InputPin" />
+                  <Pin Id="CIW4QMwBxEVM5LMCFSw78u" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="250,488,-17,19" Id="HLVxQafDuB4LUT5pVnH9hV">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="ProcessNode" Name="RetainedMode" />
+                  </p:NodeReference>
+                  <Pin Id="OI9mJICIsWiPPM0ILvqrZY" Name="Context" Kind="InputPin" />
+                  <Pin Id="R7P1SkViBnMLTsqIxReL0V" Name="Widget" Kind="InputPin" />
+                  <Pin Id="Ns7ydD9qsmGL7TQB8ZxKls" Name="Context" Kind="OutputPin" />
+                </Node>
+                <ControlPoint Id="ADBOLF130oNOgPM7QnwY8j" Bounds="229,569" />
+                <ControlPoint Id="NUTQPEWeYmBP7Q5z6j42ef" Bounds="194,419" />
+              </Canvas>
+              <ProcessDefinition Id="F2WSOE9hyTcOPtvZeeH0D4">
+                <Fragment Id="VBnyDaGxNbsNwYxlIvHkbu" Patch="EBVkVWQEjWMP4cKjrAFwcn" Enabled="true" />
+                <Fragment Id="A1FoX4iJAsEQQf1FcE0xTB" Patch="FtP5wz9besQLaU1aqs252N" Enabled="true" />
+              </ProcessDefinition>
+              <Link Id="VpiQN81kRtsNp12ciIHZoh" Ids="O2MA4q790tOPHOfguDRpX7,QVQrID1CF9PN705dB0gSy5" IsHidden="true" />
+              <Link Id="Q1WO8A0I9aALTdBn20uMHm" Ids="QVQrID1CF9PN705dB0gSy5,VajyjsHhlc9OL6hr5z0EzD" />
+              <Link Id="BpuBAgeCiSQM8Tn2DFhFJw" Ids="H3KZCsCO0iJLi0fuLuMaYO,R7P1SkViBnMLTsqIxReL0V" />
+              <Link Id="Pd7VzbxW0VgLUZThOYNDvB" Ids="Ns7ydD9qsmGL7TQB8ZxKls,ADBOLF130oNOgPM7QnwY8j" />
+              <Link Id="L00OF4teW00LpDHiATIonn" Ids="ADBOLF130oNOgPM7QnwY8j,HN3gLVLdncCM3vZXXPk7lR" IsHidden="true" />
+              <Link Id="Rm4LhgmXJTdOcnii8H8j4p" Ids="NUTQPEWeYmBP7Q5z6j42ef,OI9mJICIsWiPPM0ILvqrZY" />
+              <Link Id="GxsOZdOtTDqMJfO5fgt74M" Ids="QO0NfjnMtffLntQuNu7aXj,NUTQPEWeYmBP7Q5z6j42ef" IsHidden="true" />
+              <Link Id="VUhWLG6ZVlhN39s2wEro1y" Ids="CIW4QMwBxEVM5LMCFSw78u,LmlPDFxGfiOPqdVIB5dtqv" />
+              <Patch Id="EBVkVWQEjWMP4cKjrAFwcn" Name="Create" />
+              <Patch Id="FtP5wz9besQLaU1aqs252N" Name="Update" ManuallySortedPins="true">
+                <Pin Id="QO0NfjnMtffLntQuNu7aXj" Name="Context" Kind="InputPin" Bounds="239,440" />
+                <Pin Id="O2MA4q790tOPHOfguDRpX7" Name="Region" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                    <Choice Kind="TypeFlag" Name="ICustomRegion" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="HN3gLVLdncCM3vZXXPk7lR" Name="Context" Kind="OutputPin" Bounds="266,552" />
+                <Pin Id="K3ax6HpGTzoN4dgU6LuH6P" Name="Background" Kind="InputPin" />
+                <Pin Id="PVDJ3rj0n6xO8IWnYYQQK2" Name="Menu Bar Background" Kind="InputPin" />
+                <Pin Id="OgqLnKgNllrLNyMR37tjzR" Name="Title Background" Kind="InputPin" />
+                <Pin Id="OQNZuRwApDLPL23YYoVay5" Name="Title Background Active" Kind="InputPin" />
+                <Pin Id="DZd7sDLL4k8MGVV0nDTtEP" Name="Title Background Collapsed" Kind="InputPin" />
+                <Pin Id="KgDWuY9dFDQMsaGuXJkLXP" Name="Resize Grip Color" Kind="InputPin" />
+                <Pin Id="MuGR5JQLHQHOBag0GhWFUR" Name="Resize Grip Hovered" Kind="InputPin" />
+                <Pin Id="Qdk6BJiD9RNLDkKTaE503E" Name="Resize Grip Active" Kind="InputPin" />
+                <Pin Id="I9fLa9w5fqFMdAaVhgoVZl" Name="Min Size" Kind="InputPin" />
+                <Pin Id="NU5NXbr7kcyPYufBHjWLhz" Name="Title Align" Kind="InputPin" />
+                <Pin Id="SMFOpcgkolLMopag6zf4XT" Name="Padding" Kind="InputPin" />
+                <Pin Id="QOlBdRutYwzMrQi9xiLVyU" Name="Rounding" Kind="InputPin" />
+                <Pin Id="BU2SSq5BcAILPeCgsxDlDG" Name="Border Size" Kind="InputPin" />
+              </Patch>
+            </Patch>
+          </Node>
+        </Canvas>
+      </Canvas>
     </Canvas>
     <!--
 

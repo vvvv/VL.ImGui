@@ -12,7 +12,8 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "WindowBg MenuBarBg WindowMinSize WindowTitleAlign WindowPadding WindowRounding WindowBorderSize")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
+        Tags = "WindowBg MenuBarBg WindowMinSize WindowTitleAlign WindowPadding WindowRounding WindowBorderSize")]
     internal partial class SetWindowStyle : Widget
     {
         public Widget? Input { private get; set; }
