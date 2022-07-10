@@ -3215,7 +3215,7 @@
               </Patch>
             </Node>
           </Canvas>
-          <ProcessDefinition Id="H9cpmGeAmvmO0L4K22aBsu" HasStateOut="true" IsHidden="true">
+          <ProcessDefinition Aspects="Internal" Id="H9cpmGeAmvmO0L4K22aBsu" HasStateOut="true" IsHidden="true">
             <Fragment Id="EKgpEkZnKHaOuy82HCV77A" Patch="LMe6XzPR9jNPqI724nuLT1" Enabled="true" />
             <Fragment Id="MQcjl8ryNLCOghiAmjRJXG" Patch="PCD1zhDM2jBNonhj4Qc4kl" Enabled="true" />
             <Fragment Id="CLjgsYviaELLDWQRREk5Ix" Patch="RPFvR3fE4HNMxtgjzVjMAs" Enabled="true" />
@@ -3438,6 +3438,15 @@
               <Pin Id="NqT9khRVBa1OTTUAWB2R8P" Name="Value" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="QnFxbRk5JGSPcMnqVq5wfc" Bounds="516,534" />
+            <Pad Id="Fjnsju2cSe0N6yzUDD4KAe" Bounds="241,576,146,100" ShowValueBox="true" isIOBox="true" Value="again: we dearly miss a proper state output that directly points to the field">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
           </Canvas>
           <ProcessDefinition Id="ATqEMcZR7kcMZtmg6aTUNh">
             <Fragment Id="FXY0KqQhW4rMxI8gd8USLw" Patch="JGwmXTEFGLVMm6Ls7rnNhU" Enabled="true" />
