@@ -2142,12 +2142,12 @@
     ************************ Create ************************
 
 -->
-            <Node Name="Create" Bounds="426,232,80,80" Id="LMe6XzPR9jNPqI724nuLT1">
+            <Node Name="Create" Bounds="221,349,80,80" Id="LMe6XzPR9jNPqI724nuLT1">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="OperationDefinition" Name="Operation" />
               </p:NodeReference>
               <Patch Id="OMQiqQLzxs8PLwS9xIgVBH" IsGeneric="true">
-                <Node Bounds="439,260,55,26" AutoConnect="true" Id="VLJXcvCRanyNnv4noTTAmQ">
+                <Node Bounds="234,377,55,26" AutoConnect="true" Id="VLJXcvCRanyNnv4noTTAmQ">
                   <p:NodeReference LastCategoryFullName="VL.ImGui.Channel`1" LastSymbolSource="VL.ImGui.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="Channel`1" />
@@ -2163,12 +2163,12 @@
     ************************ Value ************************
 
 -->
-            <Node Name="Value" Bounds="426,512,80,80" Id="RPFvR3fE4HNMxtgjzVjMAs">
+            <Node Name="Value" Bounds="221,629,80,80" Id="RPFvR3fE4HNMxtgjzVjMAs">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="OperationDefinition" Name="Operation" />
               </p:NodeReference>
               <Patch Id="AxlaHBADycoPhcwL4RZcjh" IsGeneric="true">
-                <Node Bounds="439,540,55,26" AutoConnect="true" Id="P1JU7otc94UNxYYvoPoAmr">
+                <Node Bounds="234,657,55,26" AutoConnect="true" Id="P1JU7otc94UNxYYvoPoAmr">
                   <p:NodeReference LastCategoryFullName="VL.ImGui.Channel`1" LastSymbolSource="VL.ImGui.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="Channel`1" />
@@ -2186,12 +2186,12 @@
     ************************ SetValue ************************
 
 -->
-            <Node Name="SetValue" Bounds="426,376,80,80" Id="PCD1zhDM2jBNonhj4Qc4kl">
+            <Node Name="SetValue" Bounds="221,493,80,80" Id="PCD1zhDM2jBNonhj4Qc4kl">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="OperationDefinition" Name="Operation" />
               </p:NodeReference>
               <Patch Id="S77RUbVc9XwLVW8Wi6Ppim" IsGeneric="true">
-                <Node Bounds="439,404,55,26" AutoConnect="true" Id="StFXLIQrsfqOq6iP2fAkCA">
+                <Node Bounds="234,521,55,26" AutoConnect="true" Id="StFXLIQrsfqOq6iP2fAkCA">
                   <p:NodeReference LastCategoryFullName="VL.ImGui.Channel`1" LastSymbolSource="VL.ImGui.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetValue" />
@@ -2211,7 +2211,7 @@
     ************************ Bind (Agressive Experimental) ************************
 
 -->
-            <Node Name="Bind (Agressive Experimental)" Bounds="894,171" Id="UsVdoErfA8ILkREyKA1lJP">
+            <Node Name="Bind (Agressive Experimental)" Bounds="427,290" Id="UsVdoErfA8ILkREyKA1lJP">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="ContainerDefinition" Name="Process" />
               </p:NodeReference>
@@ -2419,12 +2419,12 @@
     ************************ Observable ************************
 
 -->
-            <Node Name="Observable" Bounds="596,467,91,80" Id="Vzqmq1lFBmNMm4MJGNYrjc">
+            <Node Name="Observable" Bounds="391,583,91,80" Id="Vzqmq1lFBmNMm4MJGNYrjc">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="OperationDefinition" Name="Operation" />
               </p:NodeReference>
               <Patch Id="U8zVq7OPwKWPGbYqM7zUDE" IsGeneric="true">
-                <Node Bounds="608,495,67,26" AutoConnect="true" Id="VieLLZtr0knNpqYqdx39L0">
+                <Node Bounds="403,612,67,26" AutoConnect="true" Id="VieLLZtr0knNpqYqdx39L0">
                   <p:NodeReference LastCategoryFullName="VL.ImGui.Channel`1" LastSymbolSource="VL.ImGui.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="Channel`1" />
@@ -2442,12 +2442,12 @@
     ************************ IsBusy ************************
 
 -->
-            <Node Name="IsBusy" Bounds="723,465,80,80" Id="KjHofVk6xpKPSKy2LgjwYV">
+            <Node Name="IsBusy" Bounds="518,582,80,80" Id="KjHofVk6xpKPSKy2LgjwYV">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="OperationDefinition" Name="Operation" />
               </p:NodeReference>
               <Patch Id="DY9vuKUKv09PYhP3ZxZAMg" IsGeneric="true">
-                <Node Bounds="736,494,55,26" AutoConnect="true" Id="Foz2SYEYrbSLyiVqGVskmT">
+                <Node Bounds="531,611,55,26" AutoConnect="true" Id="Foz2SYEYrbSLyiVqGVskmT">
                   <p:NodeReference LastCategoryFullName="VL.ImGui.Channel`1" LastSymbolSource="VL.ImGui.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="Channel`1" />
@@ -2465,7 +2465,7 @@
     ************************ Merge (Selector) ************************
 
 -->
-            <Node Name="Merge (Selector)" Bounds="893,232" Id="NJpGTkNuzLyPFJtAuPgZpN">
+            <Node Name="Merge (Selector)" Bounds="427,347" Id="NJpGTkNuzLyPFJtAuPgZpN">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="ContainerDefinition" Name="Process" />
               </p:NodeReference>
@@ -2705,7 +2705,7 @@
     ************************ Select (ByPath) ************************
 
 -->
-            <Node Name="Select (ByPath)" Bounds="896,285" Id="V7lqXSgTCqpMmHMasyRbyr">
+            <Node Name="Select (ByPath)" Bounds="427,404" Id="V7lqXSgTCqpMmHMasyRbyr">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="ContainerDefinition" Name="Process" />
               </p:NodeReference>
@@ -2887,7 +2887,7 @@
     ************************ Merge ************************
 
 -->
-            <Node Name="Merge" Bounds="896,60" Id="RGskFNYXgFqONJ6VNgUsNn">
+            <Node Name="Merge" Bounds="427,176" Id="RGskFNYXgFqONJ6VNgUsNn">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="ContainerDefinition" Name="Process" />
               </p:NodeReference>
@@ -3073,7 +3073,7 @@
     ************************ Consume ************************
 
 -->
-            <Node Name="Consume" Bounds="897,108" Id="Nd97cHxvar7NXip4uqU5p7">
+            <Node Name="Consume" Bounds="427,233" Id="Nd97cHxvar7NXip4uqU5p7">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="ContainerDefinition" Name="Process" />
               </p:NodeReference>
@@ -3185,7 +3185,7 @@
     ************************ ToChannel ************************
 
 -->
-            <Node Name="ToChannel" Bounds="891,347" Id="UundBTsXIwcLkc8lBu9K3M">
+            <Node Name="ToChannel" Bounds="427,461" Id="UundBTsXIwcLkc8lBu9K3M">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
                 <Choice Kind="ContainerDefinition" Name="Process" />
               </p:NodeReference>

@@ -28,7 +28,7 @@ namespace VL.ImGui.Widgets
 
         internal override void Update(Context context)
         {
-            Update();
+            var value = Update();
             if (ImGuiNET.ImGui.VSliderFloat(Label ?? string.Empty, Size.ToImGui(), ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
                 Value = value;
         }
