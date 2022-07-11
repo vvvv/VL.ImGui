@@ -2,7 +2,17 @@
 {
     internal abstract class ChannelWidget<T> : Widget
     {
-        public Channel<T>? Channel { get; set; }
+        Channel<T>? channel;
+        Channel<T> fallbackChannel = new Channel<T>();
+
+        public Channel<T> Channel 
+        {
+            get => channel ?? fallbackChannel;
+            set
+            {
+                channel = value;
+            }
+        }
 
         protected T value;
         public T Value
@@ -17,8 +27,7 @@
 
         protected T Update()
         {
-            if (Channel != null)
-                value = Channel.Value;
+            value = Channel.Value;
             return value;
         }
     }
