@@ -136,16 +136,33 @@ namespace VL.ImGui.Generator
             var inputs = new List<string>();
             var outputs = new List<string>();
 
-            var ctx = "var ctx = default(Context);";
-            foreach (var property in typeSymbol.GetMembers().OfType<IPropertySymbol>())
+            List<ITypeSymbol> types = new List<ITypeSymbol>();
+            ITypeSymbol ct = typeSymbol;
+            while(ct != null)
             {
+                types.Add(ct);
+                ct = ct.BaseType;
+            }
+            var properties = ((IEnumerable<ITypeSymbol>)types).Reverse().SelectMany(t => t.GetMembers().OfType<IPropertySymbol>());
+
+            var ctx = "var ctx = default(Context);";
+            foreach (var property in properties)
+            {
+                bool doOutput = false;
+
                 string propertySummary = GetDocEntry(property);
                 if (property.SetMethod != null && property.SetMethod.DeclaredAccessibility == Accessibility.Public)
                 {
                     inputDescriptions.Add($"_c.Input(\"{ToUserName(property.Name)}\", _w.{property.Name}, summary: @\"{propertySummary}\"),");
                     inputs.Add($"c.Input(v => s.{property.Name} = v, s.{property.Name}),");
                 }
-                else if (property.GetMethod != null && property.GetMethod.DeclaredAccessibility == Accessibility.Public)
+                else
+                    doOutput = property.GetMethod != null && property.GetMethod.DeclaredAccessibility == Accessibility.Public; ;
+
+                if (property.Name == "Channel")
+                    doOutput = true;
+
+                if (doOutput)
                 {
                     outputDescriptions.Add($"_c.Output(\"{ToUserName(property.Name)}\", _w.{property.Name}),");
                     outputs.Add($"c.Output(() => s.{property.Name}),");

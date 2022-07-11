@@ -9,7 +9,7 @@ using Stride.Core.Mathematics;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Slider (Vector2)", Category = "ImGui.Widgets")]
-    internal partial class SliderVector2 : Widget
+    internal partial class SliderVector2 : ChannelWidget<Vector2>
     {
         public string? Label { get; set; }
 
@@ -24,14 +24,11 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public Channel<Vector2>? Channel { private get; set; }
-        ChannelFlange<Vector2> channelFlange = new ChannelFlange<Vector2>();
-
         internal override void Update(Context context)
         {
-            var value = channelFlange.Update(Channel).ToImGui();
+            var value = Update().ToImGui();
             if (ImGuiNET.ImGui.SliderFloat2(Label ?? string.Empty, ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                channelFlange.Value = value.ToVL();
+                Value = value.ToVL();
         }
 
     }

@@ -3153,6 +3153,7 @@
                   </Node>
                   <ControlPoint Id="VwbMw3dewvoMT5DicnBq29" Bounds="496,278" />
                   <ControlPoint Id="TjKGYnGRA7FQR1rmQIEbGF" Bounds="588,278" />
+                  <ControlPoint Id="JjAuDmcLuhnLpNRw1T9Rdi" Bounds="625,310" />
                 </Canvas>
                 <ProcessDefinition Id="G1FhqO6a4ihPy9CAcDtQHl">
                   <Fragment Id="S1DVtWyqCJ9PH2WkkoVCUL" Patch="E2Rs1MUg7WIPfSikhpx47N" Enabled="true" />
@@ -3162,6 +3163,7 @@
                 <Patch Id="P5VsesucuW6NQLMZibIsJT" Name="Update" ManuallySortedPins="true">
                   <Pin Id="RHrcWhBUxsGMF8x0828eMz" Name="Channel A" Kind="InputPin" Bounds="169,250" />
                   <Pin Id="KajvQPG8561MtjSR8WVSyX" Name="Channel B" Kind="InputPin" Bounds="349,234" />
+                  <Pin Id="So6ozFxpOdpPNjNMT02hPj" Name="Output" Kind="OutputPin" Bounds="625,310" />
                 </Patch>
                 <Link Id="Ddi1o9tuyNYQRtaUgTykzx" Ids="J6Pl9tFUnP2Obe9GCDM5H4,G9HmN69q5HqOshwibS8Wsi" IsHidden="true" />
                 <Link Id="Dk2DoQFRJcPLcLXtQWD3O9" Ids="KmEKM1oVoJ8OeFnq11rKtc,JlfD3aO6IlbNxmY3nUBNj0" IsHidden="true" />
@@ -3174,6 +3176,8 @@
                 <Link Id="MNqCaOjiLZuMbiYN3wtlAW" Ids="Inkzp5l8bX2MGALslmn4m9,PFFC8uwkH11NnGnkAlBMEF" />
                 <Link Id="HKCEwFr9y3LMSGDOz8O1cM" Ids="TjKGYnGRA7FQR1rmQIEbGF,OXsvhmnLcsYNQuMMEZmkMU" />
                 <Link Id="UifxJIMKLDxLjxDjXeJfQT" Ids="TjKGYnGRA7FQR1rmQIEbGF,CVXQNSRngD1NwS42CQKRAM" />
+                <Link Id="EGAOf5gmi68MK6lzNpH1p1" Ids="TjKGYnGRA7FQR1rmQIEbGF,JjAuDmcLuhnLpNRw1T9Rdi" />
+                <Link Id="SKW6tIwqjofM7WITNBfgJI" Ids="JjAuDmcLuhnLpNRw1T9Rdi,So6ozFxpOdpPNjNMT02hPj" IsHidden="true" />
               </Patch>
             </Node>
             <!--
@@ -3194,6 +3198,7 @@
                     </p:NodeReference>
                     <Pin Id="OWuKCq6dFmOMYAtFdWNwZf" Name="Channel A" Kind="InputPin" />
                     <Pin Id="CmBvhqn6X41LbeMByI2Gpz" Name="Channel B" Kind="InputPin" />
+                    <Pin Id="ULkE7fN9Ae3QRUduXKMO75" Name="Output" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="440,228,53,19" Id="NQq7zmmkTFELRjA5xbO4CX">
                     <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">

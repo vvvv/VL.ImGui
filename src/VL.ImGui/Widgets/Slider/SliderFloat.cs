@@ -8,7 +8,7 @@ using VL.Core;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Slider (Float)", Category = "ImGui.Widgets")]
-    internal partial class SliderFloat : Widget
+    internal partial class SliderFloat : ChannelWidget<float>
     {
         public string? Label { get; set; }
 
@@ -23,14 +23,11 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public Channel<float>? Channel { private get; set; }
-        ChannelFlange<float> channelFlange = new ChannelFlange<float>(); 
-
         internal override void Update(Context context)
         {
-            var value = channelFlange.Update(Channel);
+            Update();
             if (ImGuiNET.ImGui.SliderFloat(Label ?? string.Empty, ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                channelFlange.Value = value;
+                Value = value;
         }
     }
 }
