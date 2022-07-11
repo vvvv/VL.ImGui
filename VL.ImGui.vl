@@ -1776,6 +1776,15 @@
               <ControlPoint Id="KgCHdemPDqiPDV4Bdjv2c2" Bounds="229,569" />
               <ControlPoint Id="Ix83ARuLco9LtKxxQdlaPm" Bounds="223,434" />
               <ControlPoint Id="P80BBJVUGcfLExXAJkuOcE" Bounds="821,308" />
+              <Pad Id="RKDhc5DLcClOHIEOJ1S6IE" Bounds="797,209,128,92" ShowValueBox="true" isIOBox="true" Value="todo: get rid of this widget input.&#xD;&#xA;&#xD;&#xA;see how table did it">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:fontsize p:Type="Int32">9</p:fontsize>
+                  <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                </p:ValueBoxSettings>
+              </Pad>
             </Canvas>
             <ProcessDefinition Id="NBkTqWsEPZcQV0aLhKVeYk">
               <Fragment Id="RsOLGBQLqyAOXaCowS7kf0" Patch="NbVFhBeKeKvPJumpw19kpf" Enabled="true" />
