@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode]
+    [GenerateNode(GenerateImmediate = false)]
     internal partial class SetAlignTextToFramePadding : Widget
     {
         public Widget? Input { private get; set; }

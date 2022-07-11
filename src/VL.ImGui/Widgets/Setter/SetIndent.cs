@@ -7,7 +7,7 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode]
+    [GenerateNode(GenerateImmediate = false)]
     internal partial class SetIndent : Widget
     {
         public Widget? Input { private get; set; }

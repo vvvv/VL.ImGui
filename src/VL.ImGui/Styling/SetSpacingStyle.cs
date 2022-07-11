@@ -12,7 +12,8 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "ItemSpacing ItemInnerSpacing")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
+        Tags = "ItemSpacing ItemInnerSpacing")]
     internal partial class SetSpacingStyle : Widget
     {
         public Widget? Input { private get; set; }

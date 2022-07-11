@@ -13,7 +13,8 @@ namespace VL.ImGui.Styling
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
 
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "PlotLines PlotLinesHovered PlotHistogram PlotHistogramHovered")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
+        Tags = "PlotLines PlotLinesHovered PlotHistogram PlotHistogramHovered")]
     internal partial class SetPlotStyle : Widget
     {
         public Widget? Input { private get; set; }

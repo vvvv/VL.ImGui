@@ -12,7 +12,8 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "Checkmark")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
+        Tags = "Checkmark")]
     internal partial class SetCheckboxStyle : Widget
     {
         public Widget? Input { private get; set; }

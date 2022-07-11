@@ -16,7 +16,8 @@ namespace VL.ImGui.Styling
     /// <summary>
     /// This style applies to popups, menus, tooltips windows.
     /// </summary>
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "Menu Tooltip PopupBg PopupRounding PopupBorderSize")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
+        Tags = "Menu Tooltip PopupBg PopupRounding PopupBorderSize")]
     internal partial class SetPopupStyle : Widget
     {
         public Widget? Input { private get; set; }

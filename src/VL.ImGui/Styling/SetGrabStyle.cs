@@ -12,7 +12,8 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "GrabMinSize GrabRounding")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
+        Tags = "GrabMinSize GrabRounding")]
     internal partial class SetGrabStyle : Widget
     {
         public Widget? Input { private get; set; }

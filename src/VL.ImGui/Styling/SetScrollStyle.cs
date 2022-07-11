@@ -12,7 +12,8 @@ namespace VL.ImGui.Styling
     using ImGui = ImGuiNET.ImGui;
 
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "ScrollbarBg ScrollbarGrab ScrollbarGrabHovered ScrollbarGrabActive ScrollbarSize ScrollbarRounding")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
+        Tags = "ScrollbarBg ScrollbarGrab ScrollbarGrabHovered ScrollbarGrabActive ScrollbarSize ScrollbarRounding")]
     internal partial class SetScrollStyle : Widget
     {
         public Widget? Input { private get; set; }

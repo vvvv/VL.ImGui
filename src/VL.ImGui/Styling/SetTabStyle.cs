@@ -16,7 +16,8 @@ namespace VL.ImGui.Styling
     /// <summary>
     /// The style applies to TabItems in a TabBar.
     /// </summary>
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "TabHovered TabActive TabUnfocused TabUnfocusedActive TabRounding")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false, 
+        Tags = "TabHovered TabActive TabUnfocused TabUnfocusedActive TabRounding")]
     internal partial class SetTabStyle : Widget
     {
         public Widget? Input { private get; set; }

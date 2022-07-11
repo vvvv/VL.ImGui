@@ -16,7 +16,8 @@ namespace VL.ImGui.Styling
     /// <summary>
     /// The style applies to checkboxes, radio buttons, plots, sliders, text inputs
     /// </summary>
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", Tags = "FrameBg FrameBgActive FrameBgHovered")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
+        Tags = "FrameBg FrameBgActive FrameBgHovered")]
     internal partial class SetFrameStyle : Widget
     {
         public Widget? Input { private get; set; }

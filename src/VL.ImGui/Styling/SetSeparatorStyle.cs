@@ -16,7 +16,7 @@ namespace VL.ImGui.Styling
     /// <summary>
     /// Separator, generally horizontal. inside a menu bar or in horizontal layout mode, this becomes a vertical separator.
     /// </summary>
-    [GenerateNode(Fragmented = false, Category = "ImGui.Styling")]
+    [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false)]
     internal partial class SetSeparatorStyle : Widget
     {
         public Widget? Input { private get; set; }
