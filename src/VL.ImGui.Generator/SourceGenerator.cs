@@ -159,8 +159,8 @@ namespace VL.ImGui.Generator
                 else
                     doOutput = property.GetMethod != null && property.GetMethod.DeclaredAccessibility == Accessibility.Public; ;
 
-                if (property.Name == "Channel")
-                    doOutput = true;
+                //if (property.Name == "Channel")
+                //    doOutput = true;
 
                 if (doOutput)
                 {

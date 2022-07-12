@@ -1,13 +1,13 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    internal abstract class ChannelWidget<T> : Widget
+    internal abstract class ChannelWidget<T> : Widget//, IDisposable
     {
         Channel<T>? channel;
-        Channel<T> fallbackChannel = new Channel<T>();
+        //Channel<T> fallbackChannel = new Channel<T>();
 
-        public Channel<T> Channel 
+        public Channel<T>? Channel 
         {
-            get => channel ?? fallbackChannel;
+            protected get => channel; // ?? fallbackChannel;
             set
             {
                 channel = value;
@@ -27,8 +27,14 @@
 
         protected T Update()
         {
-            value = Channel.Value;
+            if (channel != null)
+                value = channel.Value;
             return value;
         }
+
+        //public void Dispose()
+        //{
+        //    fallbackChannel.Dispose();
+        //}
     }
 }
