@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
-
-namespace VL.ImGui.Widgets
+﻿namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Input (String)", Category = "ImGui.Widgets")]
-    internal partial class InputText : Widget
+    internal partial class InputText : ChannelWidget<string>
     {
 
         public string? Label { get; set; }
@@ -17,13 +10,11 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiInputTextFlags Flags { private get; set; }
 
-        public BehaviorSubject<string> Text { get; } = new BehaviorSubject<string>(String.Empty);
-
         internal override void Update(Context context)
         {
-            var value = Text.Value;
+            var value = Update();
             if (ImGuiNET.ImGui.InputText(Label ?? string.Empty, ref value, (uint)MaxLength, Flags))
-                Text.OnNext(value);
+                Value = value;
         }
     }
 }

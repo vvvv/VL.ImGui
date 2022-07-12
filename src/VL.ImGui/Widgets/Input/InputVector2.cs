@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Input (Vector2)", Category = "ImGui.Widgets")]
-    internal partial class InputVector2 : Widget
+    internal partial class InputVector2 : ChannelWidget<Vector2>
     {
 
         public string? Label { get; set; }
@@ -21,13 +15,11 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiInputTextFlags Flags { private get; set; }
 
-        public BehaviorSubject<Vector2> Value { get; } = new BehaviorSubject<Vector2>(Vector2.Zero);
-
         internal override void Update(Context context)
         {
-            var value = Value.Value.ToImGui();
+            var value = Update().ToImGui();
             if (ImGuiNET.ImGui.InputFloat2(Label ?? string.Empty, ref value, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Value.OnNext(value.ToVL());
+                Value = value.ToVL();
         }
     }
 }

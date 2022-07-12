@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 using System.Runtime.CompilerServices;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Input (Int4)", Category = "ImGui.Widgets")]
-    internal partial class InputInt4 : Widget
+    internal partial class InputInt4 : ChannelWidget<Int4>
     {
 
         public string? Label { get; set; }
@@ -21,15 +15,13 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiInputTextFlags Flags { private get; set; }
 
-        public BehaviorSubject<Int4> Value { get; } = new BehaviorSubject<Int4>(Int4.Zero);
-
         internal override void Update(Context context)
         {
-            var value = Value.Value;
+            var value = Update();
 
             ref var x = ref value.X;
             if (ImGuiNET.ImGui.InputInt4(Label ?? string.Empty, ref x, Flags))
-                Value.OnNext(Unsafe.As<int, Int4>(ref x));
+                Value = Unsafe.As<int, Int4>(ref x);
         }
     }
 }
