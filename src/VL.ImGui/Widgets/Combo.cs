@@ -1,29 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
-
-namespace VL.ImGui.Widgets
+﻿namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Combo (String)", Category = "ImGui.Widgets")]
-    internal partial class Combo : Widget
+    internal partial class Combo : ChannelWidget<string>
     {
 
         public string? Label { get; set; }
 
-        public string? Format { private get; set; }
-
         public IEnumerable<string> Items { get; set; } = Enumerable.Empty<string>();
+
+        public string? Format { private get; set; }
 
         public ImGuiNET.ImGuiComboFlags Flags { private get; set; }
 
-        public BehaviorSubject<string> Value { get; } = new BehaviorSubject<string>("");
-
         internal override void Update(Context context)
         {
-            var value = Value.Value;
+            var value = Update();
 
             var count = Items.Count();
             if (count > 0)
@@ -37,7 +28,7 @@ namespace VL.ImGui.Widgets
                             bool is_selected = value == item;
                             if (ImGuiNET.ImGui.Selectable(item, is_selected))
                             {
-                                Value.OnNext(item);
+                                Value = item;
                             }
                             if (is_selected)
                             {
