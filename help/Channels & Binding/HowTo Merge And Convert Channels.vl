@@ -92,7 +92,6 @@
             <Pin Id="VaYSmyZBRA1MAkLm4Mg2QP" Name="Format" Kind="InputPin" />
             <Pin Id="R2HvXjpFE1ZPFoFWqrxzMY" Name="Flags" Kind="InputPin" />
             <Pin Id="BRd9yebgxOoMD3RPbNezRI" Name="Output" Kind="OutputPin" />
-            <Pin Id="QI9lccGvlPkPCxlxp6PRAj" Name="Channel" Kind="OutputPin" />
             <Pin Id="NxlDBV5CmIiPWPKwNOQH5n" Name="Value" Kind="OutputPin" />
           </Node>
           <Node Bounds="399,782,105,19" Id="BndEfH6zgosMLhXUNdV4lK">
@@ -133,7 +132,6 @@
             <Pin Id="HABfYXUZ9duO2MMELL5Ew4" Name="Format" Kind="InputPin" />
             <Pin Id="Tmb3Gr9vvKjPCATOxihW4v" Name="Flags" Kind="InputPin" DefaultValue="None" />
             <Pin Id="D8cs7jCKkzzM8uzEnwyuDX" Name="Output" Kind="OutputPin" />
-            <Pin Id="IbR6Gy0CaSYM1JDRIIh55H" Name="Channel" Kind="OutputPin" />
             <Pin Id="U7i9MXeMNUdL4ku8yLnHM5" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="NPul5raOhJAMyBbYGPA6vy" Comment="Label" Bounds="791,502,50,15" ShowValueBox="true" isIOBox="true" Value="Vector2">
@@ -155,7 +153,6 @@
             <Pin Id="QAdhi3pE5wsMGqbG9DQ78N" Name="Format" Kind="InputPin" />
             <Pin Id="VKej62DPM2RNamYXmGCvfT" Name="Flags" Kind="InputPin" />
             <Pin Id="HVybwP8R1ruNbE75kzvnLg" Name="Output" Kind="OutputPin" />
-            <Pin Id="NRd7H6cjDXCOnP1rnhFOq3" Name="Channel" Kind="OutputPin" />
             <Pin Id="BX62U4F3F4FLN0FcYYdHdx" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="VQRJZt2Zyb2OasJ4rFL0Dg" Comment="Label" Bounds="478,493,78,15" ShowValueBox="true" isIOBox="true" Value="Y">
@@ -388,25 +385,6 @@
           <Pad Id="Cf2BVecFLOZMI1RmJV7Zl3" Comment="" Bounds="183,610,35,15" ShowValueBox="true" isIOBox="true" />
           <Pad Id="EjBcrkj8nQ0NJhQPEmXxwR" Comment="" Bounds="870,622,35,28" ShowValueBox="true" isIOBox="true" />
           <Pad Id="AoGPP856QbDQdz74ZvN6E6" Comment="" Bounds="578,605,35,15" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="818,678,45,26" Id="UkvkFcpJAyfQXM3zCU3dPZ">
-            <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="RecordType" Name="Channel" />
-              <Choice Kind="OperationCallFlag" Name="Value" />
-            </p:NodeReference>
-            <Pin Id="KR2xHYKozDfOJ9fWvOHNSU" Name="Input" Kind="StateInputPin" />
-            <Pin Id="SGb6hJUFZsFMrU2YzXFQvx" Name="Value" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="818,715,57,19" Id="LfQ82ykFX8KPqx2aI7XUL3">
-            <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Changed" />
-            </p:NodeReference>
-            <Pin Id="CcekO99zxKDPRZpEHZ2r8e" Name="Value" Kind="InputPin" />
-            <Pin Id="NyMRt3FfLL0NMjYuxC62xI" Name="Result" Kind="OutputPin" />
-            <Pin Id="D6PsGL4SHdTPXFB6I4Z1i3" Name="Unchanged" Kind="OutputPin" />
-          </Node>
-          <Pad Id="HuBeFWavVeIMEH41xpsanZ" Comment="" Bounds="820,762,35,35" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" ParticipatingElements="Pcbu6lKvgDNPVoWacqDILR,VZXlyAe2XoIOF2rceWEyLc,M2k9QDimFltN47byLDrH3k,GnpUWXsGAM1PyeV5ueOx4t" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
@@ -465,9 +443,6 @@
         <Link Id="I8Bg4A6rIcdNIcULN05WxH" Ids="U7i9MXeMNUdL4ku8yLnHM5,EjBcrkj8nQ0NJhQPEmXxwR" />
         <Link Id="L7kTJi9lR5RMGcgV4JMrSi" Ids="BX62U4F3F4FLN0FcYYdHdx,AoGPP856QbDQdz74ZvN6E6" />
         <Link Id="NbgdUspv1NzOq5RENorwDL" Ids="TuUWkNLIhMIQRg7xF4DhDV,NyHk9xCrUlXQDtHw6dEdtO" />
-        <Link Id="BO1OObBEHhkMQFLj15eq3E" Ids="SGb6hJUFZsFMrU2YzXFQvx,CcekO99zxKDPRZpEHZ2r8e" />
-        <Link Id="Tx8ALVxSVy6LpqrzZgGtki" Ids="IbR6Gy0CaSYM1JDRIIh55H,KR2xHYKozDfOJ9fWvOHNSU" />
-        <Link Id="GVH7PQdh3BoPJs0XQkoXf6" Ids="NyMRt3FfLL0NMjYuxC62xI,HuBeFWavVeIMEH41xpsanZ" />
       </Patch>
     </Node>
   </Patch>

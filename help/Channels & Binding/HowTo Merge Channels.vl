@@ -92,7 +92,6 @@
             <Pin Id="VaYSmyZBRA1MAkLm4Mg2QP" Name="Format" Kind="InputPin" />
             <Pin Id="R2HvXjpFE1ZPFoFWqrxzMY" Name="Flags" Kind="InputPin" />
             <Pin Id="BRd9yebgxOoMD3RPbNezRI" Name="Output" Kind="OutputPin" />
-            <Pin Id="AGroYX0nOQLMVwmISLTu4q" Name="Channel" Kind="OutputPin" />
             <Pin Id="IV6aYy4oxOmObKfXEkzErI" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="HGQTs9OPVwTLZvLCi7zNER" Comment="Label" Bounds="265,508,35,15" ShowValueBox="true" isIOBox="true" Value="A">
@@ -124,7 +123,6 @@
             <Pin Id="QAdhi3pE5wsMGqbG9DQ78N" Name="Format" Kind="InputPin" />
             <Pin Id="VKej62DPM2RNamYXmGCvfT" Name="Flags" Kind="InputPin" />
             <Pin Id="HVybwP8R1ruNbE75kzvnLg" Name="Output" Kind="OutputPin" />
-            <Pin Id="UWYGz3JJqi3MJef6E6LaNh" Name="Channel" Kind="OutputPin" />
             <Pin Id="QVAGpb6AQfBQZeGJyNDmjN" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="VQRJZt2Zyb2OasJ4rFL0Dg" Comment="Label" Bounds="625,504,78,15" ShowValueBox="true" isIOBox="true" Value="B">
@@ -142,7 +140,7 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="242,408,45,19" Id="F1F5SlVRwq6Ls6ld67C0W5">
+          <Node Bounds="241,246,45,19" Id="F1F5SlVRwq6Ls6ld67C0W5">
             <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="LFO" />
@@ -164,7 +162,7 @@
             <Pin Id="JoOfy3qMJPnQQ9JQuRBSXJ" Name="Input 2" Kind="InputPin" />
             <Pin Id="RgzMsNCuvezM8mQcuRWIXr" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="525,628,45,19" Id="MkDl5qKUazJORGFGhUWdsw">
+          <Node Bounds="441,426,45,19" Id="MkDl5qKUazJORGFGhUWdsw">
             <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Merge" />
@@ -173,7 +171,24 @@
             <Pin Id="KojOZyuCjH0QdOTeoD0lBX" Name="Channel A" Kind="InputPin" />
             <Pin Id="K02rDWucL4QPRw9oEvzBV6" Name="Channel B" Kind="InputPin" />
           </Node>
-          <Pad Id="G23yo4mHjrsPlORA3Rv6a6" Comment="" Bounds="749,625,35,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="241,294,53,19" Id="GUM2fdMsodiN3Fl6HEM4vs">
+            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Channel" />
+            </p:NodeReference>
+            <Pin Id="SHwiIMUAHmzLlXnVizHs7U" Name="Value" Kind="InputPin" />
+            <Pin Id="PCFz5bAPKuOO3YbFWxrCNS" Name="Output" Kind="OutputPin" />
+            <Pin Id="MKEIha4O0OKMUzsG6J508q" Name="Value" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="603,283,53,19" Id="QFxY9gXdub3MI6pQ86rxOT">
+            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Channel" />
+            </p:NodeReference>
+            <Pin Id="Ae7dp9fWhFxPAenC2T3ITe" Name="Value" Kind="InputPin" />
+            <Pin Id="DbPa1VsWn91OlaaSZNW7FO" Name="Output" Kind="OutputPin" />
+            <Pin Id="MrjDsoqoKmHPspA0qNQNSk" Name="Value" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
@@ -194,10 +209,11 @@
         <Link Id="LtwQMnEtFJHN2gnoNu7Tva" Ids="BRd9yebgxOoMD3RPbNezRI,O6jaZG7HqwEN9kZ2RJ3AW1" />
         <Link Id="MXRzESEUlYDNP12N4zsel6" Ids="HVybwP8R1ruNbE75kzvnLg,JoOfy3qMJPnQQ9JQuRBSXJ" />
         <Link Id="PoUYQTc7ceNNTgNkiHQepl" Ids="RgzMsNCuvezM8mQcuRWIXr,FfM6nYYt7SlMkSFo9TdMPe" />
-        <Link Id="LFfMwCVejS5NU66Y8dNArB" Ids="AGroYX0nOQLMVwmISLTu4q,KojOZyuCjH0QdOTeoD0lBX" />
-        <Link Id="DYh7YDAo1GfM1XjFgTrUUN" Ids="UWYGz3JJqi3MJef6E6LaNh,K02rDWucL4QPRw9oEvzBV6" />
-        <Link Id="GrjjYKdAEp1QCOJJe3sWBM" Ids="BUTRSUc8rylPGwOTRWVNt2,VbBFRx2Ls1SPPEULiRLi8B" />
-        <Link Id="GNh7aBc4R6WMTHbRPvZsVP" Ids="QVAGpb6AQfBQZeGJyNDmjN,G23yo4mHjrsPlORA3Rv6a6" />
+        <Link Id="EdCejkj20kCMsvkl5uryzf" Ids="BUTRSUc8rylPGwOTRWVNt2,SHwiIMUAHmzLlXnVizHs7U" />
+        <Link Id="McNdqK4TQ7VLmhmg5FKx96" Ids="PCFz5bAPKuOO3YbFWxrCNS,VbBFRx2Ls1SPPEULiRLi8B" />
+        <Link Id="T4wkWSunrG6NtaDkqD7kTx" Ids="PCFz5bAPKuOO3YbFWxrCNS,KojOZyuCjH0QdOTeoD0lBX" />
+        <Link Id="EvOZafg9er0NRRb9d8hBMP" Ids="DbPa1VsWn91OlaaSZNW7FO,K02rDWucL4QPRw9oEvzBV6" />
+        <Link Id="T9dQOExLeIrMAfUc4WhExz" Ids="DbPa1VsWn91OlaaSZNW7FO,Ubii0XtrYiXPTCXu4zrRYJ" />
       </Patch>
     </Node>
   </Patch>
