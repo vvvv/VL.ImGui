@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
+﻿using Stride.Core.Mathematics;
+using System.Reactive;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets")]
-    internal partial class ArrowButton : Widget
+    [GenerateNode(Category = "ImGui.Widgets", Button = true)]
+    internal partial class ArrowButton : ChannelWidget<Unit>
     {
         public string? Label { private get; set; }
 
         public ImGuiNET.ImGuiDir Direction { private get; set; }
 
-        public BehaviorSubject<bool> Value { get; } = new BehaviorSubject<bool>(false);
-
         internal override void Update(Context context)
         {
+            Update();
             if (ImGuiNET.ImGui.ArrowButton(Label ?? string.Empty, Direction))
-                Value.OnNext(true);
+                Value = Unit.Default;
         }
     }
 }
