@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Category = "ImGui.Widgets")]
-    internal partial class ListBox : Widget
+    internal partial class ListBox : ChannelWidget<string>
     {
 
         public string? Label { get; set; }
@@ -18,11 +12,9 @@ namespace VL.ImGui.Widgets
 
         public IEnumerable<string> Items { get; set; } = Enumerable.Empty<string>();
 
-        public BehaviorSubject<string> Value { get; } = new BehaviorSubject<string>("");
-
         internal override void Update(Context context)
         {
-            var value = Value.Value;
+            var value = Update();
 
             var count = Items.Count();
             if (count > 0)
@@ -36,7 +28,7 @@ namespace VL.ImGui.Widgets
                             bool is_selected = value == item;
                             if (ImGuiNET.ImGui.Selectable(item, is_selected))
                             {
-                                Value.OnNext(item);
+                                Value = item;
                             }
                             if (is_selected)
                             {
