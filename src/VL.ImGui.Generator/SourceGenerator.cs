@@ -178,8 +178,6 @@ namespace VL.ImGui.Generator
                         doOutput = false;
                 }
 
-                if (button)
-
                 if (doOutput)
                 {
                     outputDescriptions.Add($"_c.Output(\"{ToUserName(property.Name)}\", _w.{property.Name}),");
