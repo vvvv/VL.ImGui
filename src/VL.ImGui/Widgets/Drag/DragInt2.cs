@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 using System.Runtime.CompilerServices;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Drag (Int2)", Category = "ImGui.Widgets")]
-    internal partial class DragInt2 : Widget
+    internal partial class DragInt2 : ChannelWidget<Int2>
     {
         public string? Label { get; set; }
 
@@ -23,15 +18,13 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public BehaviorSubject<Int2> Value { get; } = new BehaviorSubject<Int2>(Int2.Zero);
-
         internal override void Update(Context context)
         {
-            var value = Value.Value;
+            var value = Update();
 
             ref var x = ref value.X;
             if (ImGuiNET.ImGui.DragInt2(Label ?? string.Empty, ref x, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Value.OnNext(Unsafe.As<int, Int2>(ref x));
+                Value = Unsafe.As<int, Int2>(ref x);
         }
     }
 }

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Drag (Vector4)", Category = "ImGui.Widgets")]
-    internal partial class DragVector4 : Widget
+    internal partial class DragVector4 : ChannelWidget<Vector4>
     {
         public string? Label { get; set; }
 
@@ -26,13 +20,11 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public BehaviorSubject<Vector4> Value { get; } = new BehaviorSubject<Vector4>(Vector4.Zero);
-
         internal override void Update(Context context)
         {
-            var value = Value.Value.ToImGui();
+            var value = Update().ToImGui();
             if (ImGuiNET.ImGui.DragFloat4(Label ?? string.Empty, ref value, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Value.OnNext(value.ToVL());
+                Value = value.ToVL();
         }
     }
 }

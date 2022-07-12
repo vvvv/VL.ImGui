@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-
-namespace VL.ImGui.Widgets
+﻿namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Drag (Int)", Category = "ImGui.Widgets")]
-    internal partial class DragInt : Widget
+    internal partial class DragInt : ChannelWidget<int>
     {
         public string? Label { get; set; }
 
@@ -21,13 +15,11 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        public BehaviorSubject<int> Value { get; } = new BehaviorSubject<int>(0);
-
         internal override void Update(Context context)
         {
-            var value = Value.Value;
+            var value = Update();
             if (ImGuiNET.ImGui.DragInt(Label ?? string.Empty, ref value, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Value.OnNext(value);
+                Value = value;
         }
     }
 }
