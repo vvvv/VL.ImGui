@@ -21,12 +21,16 @@
             protected set
             {
                 this.value = value;
+                Bang = true;
                 Channel?.OnNext(value);
             }
         }
 
+        public bool Bang { private set; get; }
+
         protected T Update()
         {
+            Bang = false;
             if (channel != null)
                 value = channel.Value;
             return value;

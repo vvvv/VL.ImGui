@@ -121,6 +121,9 @@ namespace VL.ImGui.Generator
                 fragmented = "false";   
             if (attrData.GetValueOrDefault("Fragmented").Value is bool f)
                 fragmented = f ? "true" : "false";
+            var button = false;
+            if (attrData.GetValueOrDefault("Button").Value is bool b)
+                button = b;
 
             var root = declarationSyntax.SyntaxTree.GetCompilationUnitRoot();
             var declaredUsings = root.Usings;
@@ -148,10 +151,18 @@ namespace VL.ImGui.Generator
             var ctx = "var ctx = default(Context);";
             foreach (var property in properties)
             {
+                string propertySummary = GetDocEntry(property);
+
+                bool doInput = property.SetMethod != null && property.SetMethod.DeclaredAccessibility == Accessibility.Public;
                 bool doOutput = false;
 
-                string propertySummary = GetDocEntry(property);
-                if (property.SetMethod != null && property.SetMethod.DeclaredAccessibility == Accessibility.Public)
+                if (button)
+                {
+                    if (property.Name == "Channel")
+                        doInput = false;
+                }
+
+                if (doInput)
                 {
                     inputDescriptions.Add($"_c.Input(\"{ToUserName(property.Name)}\", _w.{property.Name}, summary: @\"{propertySummary}\"),");
                     inputs.Add($"c.Input(v => s.{property.Name} = v, s.{property.Name}),");
@@ -161,6 +172,13 @@ namespace VL.ImGui.Generator
 
                 //if (property.Name == "Channel")
                 //    doOutput = true;
+                if (button)
+                {
+                    if (property.Name == "Value")
+                        doOutput = false;
+                }
+
+                if (button)
 
                 if (doOutput)
                 {

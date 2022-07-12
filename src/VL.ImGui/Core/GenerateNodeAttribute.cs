@@ -13,6 +13,7 @@ namespace VL.ImGui
         public string? Tags { get; set; }
 
         public bool Fragmented { get; set; }
+        public bool Button { get; set; }
 
         public bool GenerateRetained = true;
 
