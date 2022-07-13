@@ -13,6 +13,7 @@
                 channel = value;
             }
         }
+        public bool Bang { private set; get; }
 
         protected T value;
         public T Value
@@ -25,8 +26,6 @@
                 Channel?.OnNext(value);
             }
         }
-
-        public bool Bang { private set; get; }
 
         protected T Update()
         {
