@@ -21,6 +21,8 @@
             </p:NodeReference>
             <Pin Id="OuxuxmOwAWSLY7F6norUZK" Name="Input" Kind="InputPin" />
             <Pin Id="KEjdacbu9fWPPrwS8Is471" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="Nn0Ph9DVsMFMD7c4Ntvj6m" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="V2ypQZmioUeMnlwvAdoKWJ" Name="Default Window" Kind="InputPin" />
             <Pin Id="Tsi6F5g1cOCQK44SVRexGG" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="484,461,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
@@ -28,7 +30,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1125, 176, 444, 513" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1124, 176, 444, 512" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -68,12 +70,13 @@
               <Choice Kind="ProcessNode" Name="ColorButton" />
               <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
+            <Pin Id="Pf6KmwRQ2ieN05qp37PhZA" Name="Channel" Kind="InputPin" />
             <Pin Id="BvxiZSHMNtfPTWLF6PmAap" Name="Label" Kind="InputPin" />
             <Pin Id="DZDvgnjhF3cLcM8G7j6L4A" Name="Color" Kind="InputPin" />
             <Pin Id="MkLWbfwZQUbLPz13ncbDEa" Name="Size" Kind="InputPin" />
             <Pin Id="OoN8yaqJ09dLy9wDJdPaRk" Name="Flags" Kind="InputPin" />
             <Pin Id="BFpJmaNzpLGNr5AZUOhA8D" Name="Output" Kind="OutputPin" />
-            <Pin Id="LgaLcGne12eNttFtNqUuTo" Name="Value" Kind="OutputPin" />
+            <Pin Id="A4dnwousQIUM29S6q0QGne" Name="Bang" Kind="OutputPin" />
           </Node>
           <Pad Id="CW5ffduyYtUOMbWZr0EJAW" Comment="Label" Bounds="336,143,86,15" ShowValueBox="true" isIOBox="true" Value="My Color">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -118,6 +121,31 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
+          <Node Bounds="174,126,53,19" Id="LQ4ZpKuZATPMNAFPZ83csg">
+            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Channel" />
+            </p:NodeReference>
+            <Pin Id="OVSUGIjE4kcQUqlZAXOghn" Name="Value" Kind="InputPin" />
+            <Pin Id="RHrNVHQRHsqNKuxMhILy77" Name="Output" Kind="OutputPin" />
+            <Pin Id="GpQqoDuQa9XMnsiGcp5jJh" Name="Value" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="179,476" Id="Bq0VY8cU5VqNlZvubnFcNP">
+            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="FHGsDe3HyqUMuQQWsb2scM" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="Ra2wxcWoLZxMDR7Z0n9GEM" Name="Reset" Kind="InputPin" />
+            <Pin Id="VcxOQ9WwSLULz015rwz9sJ" Name="Value" Kind="OutputPin" />
+            <Pin Id="HaQUe8BbRDLOOfScWhEX14" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="QtJbKfJ4uXVPed7JfX5Gwb" Comment="" Bounds="241,524,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+              <p:showvalue p:Type="Boolean">false</p:showvalue>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
@@ -135,6 +163,9 @@
         <Link Id="PaxJjDltQA6L6K7ekKT37C" Ids="UxB8FUenOfnK9l8c7q7PPy,MkLWbfwZQUbLPz13ncbDEa" />
         <Link Id="REYHmE0B48vLBeeLnl4bfy" Ids="UitgiLmIsRzONTH7mjL32j,OoN8yaqJ09dLy9wDJdPaRk" />
         <Link Id="J5YJj9G3QwgNYFrZGHYfR3" Ids="FcF7chN77lRLTGl9HYGX7p,U6KJxcaGZZgNCA4Fp83PHq" />
+        <Link Id="TDeToLNQIsPNX5GGAlnlVn" Ids="RHrNVHQRHsqNKuxMhILy77,Pf6KmwRQ2ieN05qp37PhZA" />
+        <Link Id="GyUVgXjtNbpMy3WljmIH3M" Ids="RHrNVHQRHsqNKuxMhILy77,FHGsDe3HyqUMuQQWsb2scM" />
+        <Link Id="JwmTEbFXtHiOZqQUTcBI69" Ids="HaQUe8BbRDLOOfScWhEX14,QtJbKfJ4uXVPed7JfX5Gwb" />
       </Patch>
     </Node>
   </Patch>

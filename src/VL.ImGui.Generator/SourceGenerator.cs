@@ -156,11 +156,11 @@ namespace VL.ImGui.Generator
                 bool doInput = property.SetMethod != null && property.SetMethod.DeclaredAccessibility == Accessibility.Public;
                 bool doOutput = false;
 
-                if (button)
-                {
-                    if (property.Name == "Channel")
-                        doInput = false;
-                }
+                //if (button)
+                //{
+                //    if (property.Name == "Channel")
+                //        doInput = false;
+                //}
 
                 if (doInput)
                 {
