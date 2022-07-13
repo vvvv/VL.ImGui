@@ -9,6 +9,11 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiColorEditFlags Flags { private get; set; }
 
+        public ColorEdit()
+        {
+            Value = Color4.White;
+        }
+
         internal override void Update(Context context)
         {
             var value = Update().ToImGui();
