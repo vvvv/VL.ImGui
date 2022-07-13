@@ -12,7 +12,7 @@
 
         internal override void Update(Context context)
         {
-            var value = Update();
+            var value = Update() ?? string.Empty;
             if (ImGuiNET.ImGui.InputText(Label ?? string.Empty, ref value, (uint)MaxLength, Flags))
                 Value = value;
         }
