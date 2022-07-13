@@ -12,7 +12,7 @@ namespace VL.ImGui.Widgets
     [GenerateNode(Category = "ImGui.Widgets")]
     internal sealed partial class TabBar : Widget
     {
-        public IEnumerable<Widget> Items { get; set; } = Enumerable.Empty<Widget>();
+        public Widget? Content { get; set; }
 
         public string? Label { get; set; }
 
@@ -20,27 +20,15 @@ namespace VL.ImGui.Widgets
 
         internal override void Update(Context context)
         {
-            var count = Items.Count(x => x != null);
-
-            if (count > 0)
+            if (ImGuiNET.ImGui.BeginTabBar(Label ?? string.Empty, Flags))
             {
-                if (ImGuiNET.ImGui.BeginTabBar(Label ?? string.Empty, Flags))
+                try
                 {
-                    try
-                    {
-                        foreach (var item in Items)
-                        {
-                            if (item is null)
-                                continue;
-                            else
-                                context.Update(item);
-                        }
-                    }
-                    finally
-                    {
-                        ImGuiNET.ImGui.EndTabBar();
-                    }
-                    
+                    context.Update(Content);
+                }
+                finally
+                {
+                    ImGuiNET.ImGui.EndTabBar();
                 }
             }
         }

@@ -361,12 +361,12 @@
               <Choice Kind="ProcessNode" Name="TabBar" />
               <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
-            <Pin Id="AricYmxqWclN8qRIapoBIB" Name="Items" Kind="InputPin" />
+            <Pin Id="QBhmP1G5m5qPLd51UyQt7L" Name="Content" Kind="InputPin" />
             <Pin Id="H6jO2qhfM0qLARsise5CBG" Name="Label" Kind="InputPin" />
             <Pin Id="Jcv0YRozc2AMeHXrSG51nE" Name="Flags" Kind="InputPin" />
             <Pin Id="SK86HYXSFfXMI4w38DOTVA" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="ETMUuwpn3rvNipfkYcn9On" Comment="Label" Bounds="322,502,35,15" ShowValueBox="true" isIOBox="true" Value="Tabs">
+          <Pad Id="ETMUuwpn3rvNipfkYcn9On" Comment="Label" Bounds="331,516,35,15" ShowValueBox="true" isIOBox="true" Value="Tabs">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -494,6 +494,14 @@
               <Choice Kind="TypeFlag" Name="ImGuiTabBarFlags" />
             </p:TypeAnnotation>
           </Pad>
+          <Node Bounds="297,470,36,19" Id="T5xITGVdSfOOvHghklw684">
+            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessNode" Name="Fold" />
+            </p:NodeReference>
+            <Pin Id="NjEw4NYo1LnOS1QRNhUzDD" Name="Children" Kind="InputPin" />
+            <Pin Id="GtYPgrb4unVP3li4gjinIe" Name="Output" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
@@ -510,7 +518,7 @@
         <Link Id="NU1vtwndTC0OCELSLqOkGn" Ids="UK58QkkFhuEOraqjriOGq4,G7OsGPcDLkUNldyfGuM2CJ" IsHidden="true" />
         <Link Id="PFpUYze2pT4OOgKTNCI8Yy" Ids="G7OsGPcDLkUNldyfGuM2CJ,GM7GRpiDCIsMShEipPGPUU" />
         <Link Id="V3B38pyPkwLOjfIK66mTog" Ids="Qw7YMuYpMbVOiNVgFdFXjD,SzQFwJzAeVmMCgUyc8rgSB" />
-        <Link Id="KbaHtk8pWJEMTkuSCisGSu" Ids="SzQFwJzAeVmMCgUyc8rgSB,AricYmxqWclN8qRIapoBIB" />
+        <Link Id="KbaHtk8pWJEMTkuSCisGSu" Ids="SzQFwJzAeVmMCgUyc8rgSB,NjEw4NYo1LnOS1QRNhUzDD" />
         <Link Id="HDiK6TfjgPpP3UgdxhjzSW" Ids="DFMVN741F1hM4Oi9hekNNv,CoUXFm4LZXkP290I7OowiG" />
         <Link Id="NltuM31I1FVO2eDWDR4N0Z" Ids="AeEHbxUMQERLsIBuGGSb0e,QmfYWdwCOyhMD4Hilzc8T6" />
         <Link Id="SELm8Lh3OVELqgLYPNOr5N" Ids="QtGd005jmA7OgBzq8o6guL,HVfnKhmtgURLksns1t87M7" />
@@ -524,6 +532,7 @@
         <Link Id="PU4V4hOqZk5OFt3t2muALO" Ids="OnZ7OdIKS3iMZKfc0BpnIJ,OWreEyOzfwgLRTHUvSpcng" />
         <Link Id="FahP9cMPHTCPG7Rx9tDaLA" Ids="Mvmb3iQ34VDQKG7B5gGErJ,Jcv0YRozc2AMeHXrSG51nE" />
         <Link Id="TpJAiTBdzFAN34ObyN9Uvi" Ids="QBbEUM5IHBkO9SuEVKSRWt,UJkF0nMu3zlNs3VfejTP2q" />
+        <Link Id="LWk87Te3hmAN7VyUd2T79y" Ids="GtYPgrb4unVP3li4gjinIe,QBhmP1G5m5qPLd51UyQt7L" />
       </Patch>
     </Node>
   </Patch>

@@ -10,7 +10,7 @@ namespace VL.ImGui.Widgets
     [GenerateNode(Category = "ImGui.Widgets", Tags = "tree")]
     internal sealed partial class CollapsingHeader : Widget
     {
-        public IEnumerable<Widget> Items { get; set; } = Enumerable.Empty<Widget>();
+        public Widget? Content { get; set; }
 
         public string? Label { get; set; }
 
@@ -33,6 +33,7 @@ namespace VL.ImGui.Widgets
 
         internal override void Update(Context context)
         {
+
             var value = IsVisible.Value;
             bool isOpen;
 
@@ -54,18 +55,7 @@ namespace VL.ImGui.Widgets
 
             if (isOpen)
             {
-                var count = Items.Count(x => x != null);
-
-                if (count > 0)
-                {
-                    foreach (var item in Items)
-                    {
-                        if (item is null)
-                            continue;
-                        else
-                            context.Update(item);
-                    }
-                }
+                context?.Update(Content);
             }
         }
     }
