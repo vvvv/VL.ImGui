@@ -10,7 +10,7 @@ namespace VL.ImGui.Widgets
 {
 
     [GenerateNode(Category = "ImGui.Widgets")]
-    internal sealed partial class TabItem : Widget
+    internal sealed partial class TabItem : ChannelWidget<bool>
     {
         public Widget? Content { get; set; }
 
@@ -18,20 +18,23 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiTabItemFlags Flags { private get; set; }
 
-        public BehaviorSubject<bool> Value { get; } = new BehaviorSubject<bool>(true);
+        public TabItem()
+        {
+            Value = true;
+        }
 
         internal override void Update(Context context)
         {
 
-            var value = Value.Value;
+            var value = Update();
 
             if (ImGuiNET.ImGui.BeginTabItem(Label ?? string.Empty, ref value, Flags))
             {
                 try
                 {
                     context.Update(Content);
-                    if (value != Value.Value) 
-                        Value.OnNext(value);
+                    if (Value != value) 
+                        Value = value;
                 }
                 finally
                 {

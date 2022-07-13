@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
+<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0118-05f38ab35b" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -21,6 +21,8 @@
             </p:NodeReference>
             <Pin Id="OuxuxmOwAWSLY7F6norUZK" Name="Input" Kind="InputPin" />
             <Pin Id="EblXwVCsep9MRsvZemqca0" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="VILCtXF7u0lPMMZuG9jSiq" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="ViWCQfptBpVPZa1UBxcC3u" Name="Default Window" Kind="InputPin" />
             <Pin Id="Tsi6F5g1cOCQK44SVRexGG" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="260,936,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
@@ -28,7 +30,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1136, 216, 676, 613" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1136, 216, 676, 612" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -374,7 +376,7 @@
               <Choice Kind="TypeFlag" Name="ImGuiTabBarFlags" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="285,271,138,177" Id="P2Sd8fjfPFDMxMaSouoPhh">
+          <Node Bounds="285,300,151,148" Id="P2Sd8fjfPFDMxMaSouoPhh">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="Repeat" />
@@ -395,14 +397,16 @@
                   <Choice Kind="ProcessNode" Name="TabItem" />
                   <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                 </p:NodeReference>
+                <Pin Id="Oxv59omS5YDQRrs3IyjWa5" Name="Channel" Kind="InputPin" />
                 <Pin Id="DLU3haDIIDFQJJ0xe5plEk" Name="Content" Kind="InputPin" />
                 <Pin Id="Gy84gUOsI2QLSgv5xd9trv" Name="Label" Kind="InputPin" />
                 <Pin Id="EWCNsY3QRbHQKkRq9868XC" Name="Flags" Kind="InputPin" DefaultValue="None" />
                 <Pin Id="Qw7YMuYpMbVOiNVgFdFXjD" Name="Output" Kind="OutputPin" />
+                <Pin Id="Q9dcyayV3TULzQvjW4aHvu" Name="Bang" Kind="OutputPin" />
                 <Pin Id="F1S6vUSDiKPLnNGmZa8F0O" Name="Value" Kind="OutputPin" />
               </Node>
-              <ControlPoint Id="G7OsGPcDLkUNldyfGuM2CJ" Bounds="358,289" />
-              <Node Bounds="356,307,55,19" Id="PPhtFQWUTGEMwyZpMTBTjb">
+              <ControlPoint Id="G7OsGPcDLkUNldyfGuM2CJ" Bounds="371,318" />
+              <Node Bounds="369,336,55,19" Id="PPhtFQWUTGEMwyZpMTBTjb">
                 <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="ToString" />
@@ -410,7 +414,7 @@
                 <Pin Id="GM7GRpiDCIsMShEipPGPUU" Name="Input" Kind="InputPin" />
                 <Pin Id="GzZE89hmPslM9w3mN8lJqR" Name="Result" Kind="OutputPin" />
               </Node>
-              <Node Bounds="324,343" Id="Jqnpm8EEeAzLrT90QuiNnj">
+              <Node Bounds="337,372,25,19" Id="Jqnpm8EEeAzLrT90QuiNnj">
                 <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="+" />
@@ -419,14 +423,14 @@
                 <Pin Id="U5Y9Z3gUvaDMwFyrm2P1Yi" Name="Input 2" Kind="InputPin" />
                 <Pin Id="VvaqtCS0tIeNHPX8eZarLt" Name="Output" Kind="OutputPin" />
               </Node>
-              <Pad Id="DdyL579vHvOMq4XnuDvSqp" Comment="" Bounds="306,318,35,15" ShowValueBox="true" isIOBox="true" Value="Tab ">
+              <Pad Id="DdyL579vHvOMq4XnuDvSqp" Comment="" Bounds="319,347,35,15" ShowValueBox="true" isIOBox="true" Value="Tab ">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
               </Pad>
             </Patch>
           </Node>
-          <Pad Id="DFMVN741F1hM4Oi9hekNNv" Comment="Iteration Count" Bounds="288,216,35,15" ShowValueBox="true" isIOBox="true" Value="5">
+          <Pad Id="DFMVN741F1hM4Oi9hekNNv" Comment="Iteration Count" Bounds="288,272,35,15" ShowValueBox="true" isIOBox="true" Value="5">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
@@ -523,7 +527,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0118-g05f38ab35b" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0118-g05f38ab35b" />
 </Document>
