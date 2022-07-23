@@ -2,7 +2,7 @@
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Commands")]
+    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
     internal partial class SetNextWindowSizeConstraints : Widget
     {
         public Vector2 Min { private get; set; }

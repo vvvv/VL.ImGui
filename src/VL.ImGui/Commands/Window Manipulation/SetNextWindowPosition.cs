@@ -2,7 +2,7 @@
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Commands")]
+    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
     internal partial class SetNextWindowPosition : Widget
     {
         public Vector2 Position { private get; set; }

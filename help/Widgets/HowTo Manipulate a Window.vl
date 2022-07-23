@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0118-05f38ab35b" Version="0.128">
+  <Patch Id="K6jOtX5z4AOM2g6L5teo07">
+    <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="G89IB23HEWkOBWX66mkkHL">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="RxrvDdUu4cvOBXbi4KngKc">
+        <Canvas Id="PuJjSWeZNf5OSPyulV1tEs" CanvasType="Group">
+          <Node Bounds="343,562,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Renderer" />
+            </p:NodeReference>
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="916, 52, 432, 460" />
+            <Pin Id="RFO0WCwgClPLtuurXsd6KH" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
+            <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
+            <Pin Id="SN9Sy5tUeJRL75k6d5gCaB" Name="Clear" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="EOF5QMXbGKtO1Eeh1MzQnf" Name="Space" Kind="InputPin" DefaultValue="Normalized" />
+            <Pin Id="Unrsb70U6iePtOM6HMRzfV" Name="Show Cursor" Kind="InputPin" />
+            <Pin Id="UA8COiWD2ghPmN4LAZoDDV" Name="VSync" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="BGs1SpulZeMPbcit3peXa1" Name="Enabled" Kind="InputPin" />
+            <Pin Id="IEolNxvy8ieOHWXoXnUqwO" Name="Form" Kind="OutputPin" />
+            <Pin Id="VtCD3TojbCZNIE3ICe23l6" Name="ClientBounds" Kind="OutputPin" />
+            <Pin Id="Fi9FymljmNXQYNmU2h76Xz" Name="Render Time" Kind="OutputPin" />
+          </Node>
+          <Pad Id="TaMQlku23WmQVo2CUQzIWo" Bounds="64,85,411,37" ShowValueBox="true" isIOBox="true" Value="Window Manipulation Commands">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">18</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="81,151,124,19" Id="BjljL1SnsAMLHqw2TAQgOH">
+            <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="ImGui" />
+              <CategoryReference Kind="Category" Name="Commands" />
+              <Choice Kind="ProcessNode" Name="SetNextWindowBgAlpha" />
+            </p:NodeReference>
+            <Pin Id="Gx7opEdfoIgPXDEmSvXNJD" Name="Context" Kind="InputPin" />
+            <Pin Id="Ebn0Oha5IQIOC2P3tDwgHl" Name="Alpha" Kind="InputPin" />
+            <Pin Id="N5i5PyKWvnpQcGTbZvzzhd" Name="Context" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="81,203,141,19" Id="T2ggrlAtD8DPExMlTyhVmP">
+            <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="ImGui" />
+              <CategoryReference Kind="Category" Name="Commands" />
+              <Choice Kind="ProcessNode" Name="SetNextWindowContentSize" />
+            </p:NodeReference>
+            <Pin Id="Bc63pyhfoMiPktoXAfu3Xw" Name="Context" Kind="InputPin" />
+            <Pin Id="VP1EeRsOJzaPnkmFRshUPb" Name="Size" Kind="InputPin" />
+            <Pin Id="JENUURthYNdPrmot2IkHW3" Name="Context" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="81,229,113,19" Id="QU0BOKI1TWOMlhSBXR6QQK">
+            <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="ImGui" />
+              <CategoryReference Kind="Category" Name="Commands" />
+              <Choice Kind="ProcessNode" Name="SetNextWindowFocus" />
+            </p:NodeReference>
+            <Pin Id="T8ZDcl5CQnyMUrQWaIAxMK" Name="Context" Kind="InputPin" />
+            <Pin Id="FXre2i09LrgPKd1FnEjptW" Name="Context" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="81,255,123,19" Id="V7g0tj0GHBEMSAM68T6wjO">
+            <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="ImGui" />
+              <CategoryReference Kind="Category" Name="Commands" />
+              <Choice Kind="ProcessNode" Name="SetNextWindowPosition" />
+            </p:NodeReference>
+            <Pin Id="VYC38DgNOaJPusv7GriSSV" Name="Context" Kind="InputPin" />
+            <Pin Id="Rh5djCcYtCSPRkSoFs9Fj6" Name="Position" Kind="InputPin" />
+            <Pin Id="N4rtjU6EkrUPemLyD8ZRvi" Name="Context" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="81,281,105,19" Id="SyK0DzFOAU0OzpvC4s0XCz">
+            <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="ImGui" />
+              <Choice Kind="ProcessNode" Name="SetNextWindowSize" />
+            </p:NodeReference>
+            <Pin Id="Ivozo14G8AhLLdffgntbX7" Name="Context" Kind="InputPin" />
+            <Pin Id="Ix9bNdrcz8LMM6BgOURQgV" Name="Size" Kind="InputPin" />
+            <Pin Id="Jcr9nXOJIEyPVRFtjp8TwN" Name="Context" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="81,307,157,19" Id="LWcHj4zpQP7NIKi84CgDLu">
+            <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="ImGui" />
+              <CategoryReference Kind="Category" Name="Commands" />
+              <Choice Kind="ProcessNode" Name="SetNextWindowSizeConstraints" />
+            </p:NodeReference>
+            <Pin Id="HD45tua17mxN4Gzy6Xm09d" Name="Context" Kind="InputPin" />
+            <Pin Id="DHkOKdN7mcJLzw5YM7aOxp" Name="Min" Kind="InputPin" />
+            <Pin Id="OjflOU8m2JzLplUMxpsxJ2" Name="Max" Kind="InputPin" />
+            <Pin Id="BE39JEii9xjPCsrCiB57wV" Name="Context" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="81,177,131,19" Id="Fz7Pr1CweKcQT9O4TeG3j9">
+            <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="ImGui" />
+              <CategoryReference Kind="Category" Name="Commands" />
+              <Choice Kind="ProcessNode" Name="SetNextWindowCollapsed" />
+            </p:NodeReference>
+            <Pin Id="Fl1Er3wG0shOOU7Ix3llNz" Name="Context" Kind="InputPin" />
+            <Pin Id="OFx8CrlZBfTQFCzV9nV6FM" Name="Collapsed" Kind="InputPin" />
+            <Pin Id="DYv7tc4WeC8NQYXyeTDS7H" Name="Context" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="383,150,296,356" Id="GLXvgqSf3hJPgreK6Yc3w0">
+            <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
+              <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
+                <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+              </CategoryReference>
+            </p:NodeReference>
+            <Pin Id="NRlcURvbNM4MFcYO2GZSbG" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="QpgLapI5zDxPOzGRPcwG5j" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="QYV6IvNmSVtMsW7NpVxU8J" Name="Default Window" Kind="InputPin" />
+            <Pin Id="QcQXTQIKrE4Lctbv3yl4HS" Name="Output" Kind="OutputPin" />
+            <Patch Id="OULFnoaA6CGM9ogOBcyw6g" ManuallySortedPins="true">
+              <Patch Id="BKdfb4ldad4PB7v54JDFqH" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="JwDc4Yj5HDFL54OfZDrvOi" Name="Update" ParticipatingElements="FUIGqzPoK3CMjEtyYZrfYn,JTCuqjVShUSMm9VEV0w9c6,Az0UkMiszyhM7VONPCsc4q" ManuallySortedPins="true" />
+              <Node Bounds="435,406,146,71" Id="KQ74gY5GSfhLrZlQ6BHSEc">
+                <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="Window" />
+                  <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
+                </p:NodeReference>
+                <Patch Id="VavAQWxEYwWO9PliJy6Ovz" ManuallySortedPins="true">
+                  <Patch Id="N8Jet9TpT7nP2dfbKg2tIi" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="NTTyvngQwhvMt2hCKS5DcB" Name="Update" ManuallySortedPins="true" />
+                </Patch>
+                <Pin Id="DQ620Uh7J3hLo25BVPqwEz" Name="Context" Kind="InputPin" />
+                <Pin Id="CVhExTquGt8P4efarcvaQz" Name="Name" Kind="InputPin" />
+                <Pin Id="CvwpV6w8lttLGcLfQzhGau" Name="Has Close Button" Kind="InputPin" />
+                <Pin Id="ESBHvNGcpvhM9TA9OOawMk" Name="Fullscreen" Kind="InputPin" />
+                <Pin Id="QGj1MuzDvfsNb5Q864nZRh" Name="Bounds" Kind="InputPin" />
+                <Pin Id="NEdYh8YfqWLLkE31JFzWy9" Name="Set Bounds" Kind="InputPin" DefaultValue="False" />
+                <Pin Id="N8fF8MJ18zPO9NNEQEvWLH" Name="Menu Bar" Kind="InputPin" />
+                <Pin Id="QjApb6443CxMuHyqrcTtOU" Name="Window Flags" Kind="InputPin" />
+                <Pin Id="LvZf2AFAnJuPhiyTZ5E0mc" Name="Context" Kind="OutputPin" />
+                <Pin Id="S8Aja4lb4pIO7eRQS6gdB8" Name="Closing" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="434,224,131,19" Id="S3mAJLYcYzMMynecAVn2DU">
+                <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessNode" Name="SetNextWindowCollapsed" />
+                </p:NodeReference>
+                <Pin Id="JuVyz9uj8WjNlp2Botjdjb" Name="Context" Kind="InputPin" />
+                <Pin Id="ANAkouvKO6kM2imQPXffrC" Name="Collapsed" Kind="InputPin" />
+                <Pin Id="VVLI3HB5j8PNXTovHhiJiR" Name="Context" Kind="OutputPin" />
+              </Node>
+              <Pad Id="MrTf4zKpxAINcp10wG5WQx" Comment="Collapsed" Bounds="562,188,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+                <p:TypeAnnotation>
+                  <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+                  <FullNameCategoryReference ID="Primitive" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+                </p:ValueBoxSettings>
+              </Pad>
+              <Node Bounds="515,366,61,19" Id="EzZPBeJGC5OOgMkZNcvwU5">
+                <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Rectangle (Join)" />
+                </p:NodeReference>
+                <Pin Id="NLZVtagmwRYLxWZobQ1e50" Name="Position" Kind="InputPin" />
+                <Pin Id="QPUA34EECehMZIoAl7OzB2" Name="Size" Kind="InputPin" />
+                <Pin Id="Lq52xIPYvyELhrtowkAY07" Name="Anchor" Kind="InputPin" />
+                <Pin Id="Dkct8JfdtNBQFi3YwPBLwR" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Pad Id="CjR2jbEEzQjMSOLPWwrbpd" Comment="Size" Bounds="545,334,35,28" ShowValueBox="true" isIOBox="true" Value="300, 300">
+                <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Vector2" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Node Bounds="434,289,124,19" Id="Kaj5V5qKHRfOJOYgOMwiIl">
+                <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessNode" Name="SetNextWindowBgAlpha" />
+                </p:NodeReference>
+                <Pin Id="MVbpePndICGPUYf1FTH88U" Name="Context" Kind="InputPin" />
+                <Pin Id="CJmGGcRO4wrPEe6NdF2wOi" Name="Alpha" Kind="InputPin" />
+                <Pin Id="Qbca7IbI8uJPwPERYqNkv8" Name="Context" Kind="OutputPin" />
+              </Node>
+              <Pad Id="EJwSVTl1MKoQUehSCGumlM" Comment="Alpha" Bounds="555,268,35,15" ShowValueBox="true" isIOBox="true" Value="0.5">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
+                  <Choice Kind="TypeFlag" Name="Float32" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Node Bounds="613,366,54,19" Id="UJwSyJbJBGNMhGbFqkwGtA">
+                <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="OnOpen" />
+                </p:NodeReference>
+                <Pin Id="PnodDRUMIZYLWYUrpd5TJl" Name="Simulate" Kind="InputPin" />
+                <Pin Id="K0vRicDCEfWNDMugvUwbXj" Name="Output" Kind="OutputPin" />
+              </Node>
+            </Patch>
+            <ControlPoint Id="SxqmgVeWox9MqI21wY0yvY" Bounds="436,156" Alignment="Top" />
+          </Node>
+        </Canvas>
+        <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
+        <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
+        <ProcessDefinition Id="TbLshxqQ0NYLMv4XQKLpRK">
+          <Fragment Id="AO76J1FPnh9PIV7botvebO" Patch="DOR8YfYVKNAOTpcsIcbHHK" Enabled="true" />
+          <Fragment Id="CA5NL4bFZyAQRQRLNsMjeJ" Patch="RYcSdMgjOSHMTo1e9h0RjC" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="Mz2xLoUkarSOHRJuJlqzH4" Ids="QcQXTQIKrE4Lctbv3yl4HS,FEmprmZSMXGOZ6BLW3yl3J" />
+        <Link Id="QF4Xxe8y1qVPwq35iIv758" Ids="SxqmgVeWox9MqI21wY0yvY,JuVyz9uj8WjNlp2Botjdjb" />
+        <Link Id="FUIGqzPoK3CMjEtyYZrfYn" Ids="VVLI3HB5j8PNXTovHhiJiR,MVbpePndICGPUYf1FTH88U" />
+        <Link Id="JTCuqjVShUSMm9VEV0w9c6" Ids="MrTf4zKpxAINcp10wG5WQx,ANAkouvKO6kM2imQPXffrC" />
+        <Link Id="KT3yeZDPMEAO1aIBfw5X1u" Ids="CjR2jbEEzQjMSOLPWwrbpd,QPUA34EECehMZIoAl7OzB2" />
+        <Link Id="K9LTA4UnwEAPJfgUa3E0fe" Ids="Dkct8JfdtNBQFi3YwPBLwR,QGj1MuzDvfsNb5Q864nZRh" />
+        <Link Id="EjlkoFxD1IvNLkhPR4fJdn" Ids="Qbca7IbI8uJPwPERYqNkv8,DQ620Uh7J3hLo25BVPqwEz" />
+        <Link Id="CMT46PSktUeLgWZ2VHg87x" Ids="EJwSVTl1MKoQUehSCGumlM,CJmGGcRO4wrPEe6NdF2wOi" />
+        <Link Id="Az0UkMiszyhM7VONPCsc4q" Ids="K0vRicDCEfWNDMugvUwbXj,NEdYh8YfqWLLkE31JFzWy9" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0118-g05f38ab35b" />
+  <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0118-g05f38ab35b" />
+</Document>

@@ -14,17 +14,17 @@
         public bool HasCloseButton { get; set; } = true;
 
         /// <summary>
-        /// Returns true if the header is displayed. Set to true to display the header.
+        /// Returns true if the Tab is displayed. Set to true to display the Tab.
         /// </summary>
         public Channel<bool>? IsVisible { private get; set; }
         ChannelFlange<bool> IsVisibleFlange = new ChannelFlange<bool>(true);
         /// <summary>
-        /// Returns true if the header is displayed.
+        /// Returns true if the Tab is displayed.
         /// </summary>
         public bool _IsVisible => IsVisibleFlange.Value;
 
         /// <summary>
-        /// Returns true if the Header is activated/selected. Set to true to activate the tab.
+        /// Returns true if the Tab is activated/selected. Set to true to activate the Tab.
         /// </summary>
         public Channel<bool>? IsActive { private get; set; }
         ChannelFlange<bool> IsActiveFlange = new ChannelFlange<bool>(false);
