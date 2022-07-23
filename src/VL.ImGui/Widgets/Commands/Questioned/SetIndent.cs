@@ -7,23 +7,23 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(GenerateImmediate = false)]
-    internal partial class SetID : Widget
+    //[GenerateNode(GenerateImmediate = false)]
+    internal partial class SetIndent : Widget
     {
         public Widget? Input { private get; set; }
 
-        public string? Label { private get; set; }
+        public float Value { private get; set; }
 
         internal override void Update(Context context)
         {
-            ImGuiNET.ImGui.PushID(Label ?? string.Empty);
+            ImGuiNET.ImGui.Indent(Value);
             try
             {
                 context.Update(Input);
             }
             finally
             {
-                ImGuiNET.ImGui.PopID();
+                ImGuiNET.ImGui.Unindent(Value);
             }
         }
     }

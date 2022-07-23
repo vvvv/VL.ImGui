@@ -12,7 +12,7 @@ namespace VL.ImGui.Widgets
     /// A selectable highlights when hovered, and can display another color when selected. Neighbors selectable extend their highlight bounds in order to leave no gap between them. This is so a series of selected Selectable appear contiguous.
     /// </summary>
     [GenerateNode(Category = "ImGui.Widgets")]
-    internal partial class Selectable : Widget
+    internal partial class Selectable : ChannelWidget<bool>
     {
 
         public string? Label { get; set; }
@@ -21,13 +21,11 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSelectableFlags Flags { private get; set; }
 
-        public BehaviorSubject<bool> Value { get; } = new BehaviorSubject<bool>(false);
-
         internal override void Update(Context context)
         {
-            var value = Value.Value;
+            var value = Update();
             if (ImGuiNET.ImGui.Selectable(Label ?? string.Empty, ref value, Flags, Size.ToImGui()))
-                Value.OnNext(value);
+                Value = value;
         }
     }
 }
