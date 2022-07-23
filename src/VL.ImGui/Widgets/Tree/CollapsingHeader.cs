@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
-
-namespace VL.ImGui.Widgets
+﻿namespace VL.ImGui.Widgets
 {
     [GenerateNode(Category = "ImGui.Widgets", Tags = "tree")]
     internal sealed partial class CollapsingHeader : Widget
@@ -22,36 +15,41 @@ namespace VL.ImGui.Widgets
         /// <summary>
         /// Returns true if the header is displayed. Set to true to display the header.
         /// </summary>
-        public BehaviorSubject<bool> IsVisible { get; } = new BehaviorSubject<bool>(true);
+        public Channel<bool>? IsVisible { private get; set; } 
+        ChannelFlange<bool> IsVisibleFlange = new ChannelFlange<bool>(true);
+        /// <summary>
+        /// Returns true if the header is displayed.
+        /// </summary>
+        public bool _IsVisible => IsVisibleFlange.Value;
 
         /// <summary>
         /// Returns true if the Header is open (not collapsed). Set to true to open the header.
         /// </summary>
-        public BehaviorSubject<bool> IsOpen { get; } = new BehaviorSubject<bool>(false);
+        public Channel<bool>? IsOpen { private get; set; }
+        ChannelFlange<bool> IsOpenFlange = new ChannelFlange<bool>(false);
+        /// <summary>
+        /// Returns true if the Header is open (not collapsed). 
+        /// </summary>
+        public bool _IsOpen => IsOpenFlange.Value;
 
         public ImGuiNET.ImGuiTreeNodeFlags Flags { private get; set; }
 
         internal override void Update(Context context)
         {
+            var isVisible = IsVisibleFlange.Update(IsVisible);
+            var isOpen = IsOpenFlange.Update(IsOpen);
 
-            var value = IsVisible.Value;
-            bool isOpen;
-
-            ImGuiNET.ImGui.SetNextItemOpen(IsOpen.Value);
+            ImGuiNET.ImGui.SetNextItemOpen(isOpen);
 
             if (HasCloseButton)
             {
-                isOpen = ImGuiNET.ImGui.CollapsingHeader(Label ?? string.Empty, ref value, Flags);
-                if (IsVisible.Value != value)
-                    IsVisible.OnNext(value);
+                isOpen = ImGuiNET.ImGui.CollapsingHeader(Label ?? string.Empty, ref isVisible, Flags);
+                IsVisibleFlange.Value = isVisible; // close button might have been pressed
             }
             else
-            {
                 isOpen = ImGuiNET.ImGui.CollapsingHeader(Label ?? string.Empty, Flags);
-            }
 
-            if (isOpen != IsOpen.Value)
-                IsOpen.OnNext(isOpen);
+            IsOpenFlange.Value = isOpen;
 
             if (isOpen)
             {

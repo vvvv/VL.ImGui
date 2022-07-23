@@ -276,6 +276,7 @@ namespace {typeSymbol.ContainingNamespace}
 
         private static string ToUserName(string name)
         {
+            name = name.Trim('_');
             var userName = FCamelCasePattern.Replace(name, match => $"{match.Value[0]} {match.Value[1]}");
             if (userName.Length > 0)
                 return char.ToUpper(userName[0]) + userName.Substring(1);

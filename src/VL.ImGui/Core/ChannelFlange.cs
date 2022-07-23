@@ -2,10 +2,15 @@
 
 namespace VL.ImGui
 {
-    class ChannelFlange<T>
+    class ChannelFlange<T> where T: struct
     {
         T value;
         Channel<T>? channel;
+
+        public ChannelFlange(T initialValue)
+        {
+            value = initialValue;
+        }
 
         internal T Update(Channel<T>? channel)
         {
@@ -14,14 +19,34 @@ namespace VL.ImGui
                 value = channel.Value;
             return value;
         }
+        internal T Update(Channel<T>? channel, out bool hasChanged)
+        {
+            hasChanged = false;
+            this.channel = channel;
+            hasChanged = CopyFromUpstream();
+            return value;
+        }
+
+        bool CopyFromUpstream()
+        {
+            if (channel != null && !channel.Value.Equals(value))
+            {
+                value = channel.Value;
+                return true;
+            }
+            return false;
+        }
 
         public T Value
         {
             get => value;
             set
             {
-                this.value = value;
-                channel?.OnNext(value);
+                if (!value.Equals(this.value))
+                {
+                    this.value = value;
+                    channel?.OnNext(value);
+                }
             }
         }
     }
