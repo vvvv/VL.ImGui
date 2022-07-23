@@ -48,7 +48,7 @@
 
             if (HasCloseButton || flags != ImGuiNET.ImGuiTabItemFlags.None)
             {
-                isActive = ImGuiNET.ImGui.BeginTabItem(Label ?? string.Empty, ref isVisible, Flags);
+                isActive = ImGuiNET.ImGui.BeginTabItem(Label ?? string.Empty, ref isVisible, flags);
                 IsVisibleFlange.Value = isVisible; // close button might have been pressed
             }
             else
