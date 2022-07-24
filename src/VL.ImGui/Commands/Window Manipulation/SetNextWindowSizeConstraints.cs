@@ -9,9 +9,12 @@ namespace VL.ImGui.Widgets
 
         public Vector2 Max { private get; set; }
 
+        public bool Enabled { private get; set; } = true;
+
         internal override void Update(Context context)
         {
-            ImGuiNET.ImGui.SetNextWindowSizeConstraints(Min.ToImGui(), Max.ToImGui());
+            if (Enabled)
+                ImGuiNET.ImGui.SetNextWindowSizeConstraints(Min.ToImGui(), Max.ToImGui());
         }
     }
 }

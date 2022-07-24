@@ -3,9 +3,12 @@
     [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
     internal partial class SetNextWindowFocus : Widget
     {
+        public bool Enabled { private get; set; } = true;
+
         internal override void Update(Context context)
-        {
-            ImGuiNET.ImGui.SetNextWindowFocus();
+        {   
+            if (Enabled)
+                ImGuiNET.ImGui.SetNextWindowFocus();
         }
     }
 }

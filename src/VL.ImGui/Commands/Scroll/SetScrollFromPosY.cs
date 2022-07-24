@@ -13,9 +13,12 @@
         /// </summary>
         public float Ratio { private get; set; }
 
+        public bool Enabled { private get; set; } = true;
+
         internal override void Update(Context context)
         {
-            ImGuiNET.ImGui.SetScrollFromPosY(Value, Ratio);
+            if (Enabled)
+                ImGuiNET.ImGui.SetScrollFromPosY(Value, Ratio);
         }
     }
 }

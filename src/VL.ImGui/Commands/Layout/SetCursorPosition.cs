@@ -2,17 +2,17 @@
 
 namespace VL.ImGui.Widgets
 {
+    /// <summary>
+    /// Cursor position in window coordinates (relative to window position)
+    /// </summary>
     [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
-    internal partial class SetNextWindowPosition : Widget
+    internal partial class SetCursorPosition : Widget
     {
         public Vector2 Position { private get; set; }
 
-        public bool Enabled { private get; set; } = true;
-
         internal override void Update(Context context)
         {
-            if (Enabled)
-                ImGuiNET.ImGui.SetNextWindowPos(Position.ToImGui());
+            ImGuiNET.ImGui.SetCursorPos(Position.ToImGui());
         }
     }
 }

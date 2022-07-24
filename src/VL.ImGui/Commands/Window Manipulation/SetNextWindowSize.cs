@@ -7,9 +7,12 @@ namespace VL.ImGui.Widgets
     {
         public Vector2 Size { private get; set; }
 
+        public bool Enabled { private get; set; } = true;
+
         internal override void Update(Context context)
         {
-            ImGuiNET.ImGui.SetNextWindowSize(Size.ToImGui());
+            if (Enabled)
+                ImGuiNET.ImGui.SetNextWindowSize(Size.ToImGui());
         }
     }
 }

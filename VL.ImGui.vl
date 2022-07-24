@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
+<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0118-05f38ab35b" Version="0.128">
   <Patch Id="FqV6a8uF6wBNEsSb65h9jq">
     <Canvas Id="CiUOvKtIpncPRBZwoQzisM" DefaultCategory="ImGui" CanvasType="FullCategory">
       <!--
@@ -460,7 +460,7 @@
     ************************ ChildWindow ************************
 
 -->
-          <Node Name="ChildWindow" Bounds="457,460" Id="KqmTxPZDuRbPc3e20BKAei">
+          <Node Name="ChildWindow" Bounds="455,499" Id="KqmTxPZDuRbPc3e20BKAei">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -520,7 +520,7 @@
     ************************ Text (Multiline) ************************
 
 -->
-          <Node Name="Text (Multiline)" Bounds="458,500" Id="HdY8o9Bl02aNj01nc41CcQ">
+          <Node Name="Text (Multiline)" Bounds="456,539" Id="HdY8o9Bl02aNj01nc41CcQ">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -586,6 +586,58 @@
               <Link Id="D8venx6J2zfLwjppWJxLOw" Ids="DW52PLiXJqsLWDOLGMzdUG,HfNovWRAaYGPZ4ho022BO8" />
               <Link Id="KN8sJuBmG5IMHkTSRXIxPi" Ids="Fyfc7TJKGbELWNuKkGNsnj,QIGA9x0LIRALFh2fRhcIAZ" />
               <Link Id="KVTxjBTp6qlMjHDdCRj21W" Ids="DGb38kX0eIXN1dR3Cxxgn3,Jqp7yhFrahRMckgenh6UrY" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ Group ************************
+
+-->
+          <Node Name="Group" Bounds="455,455" Id="GB99NbBFAYqNv4aDvhG6aX">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+              <Choice Kind="ContainerDefinition" Name="Process" />
+            </p:NodeReference>
+            <Patch Id="B6eM2ckfPb8NLoq38wiUHm">
+              <Canvas Id="DFqNV6XrSSILsW4nLHLJbU" CanvasType="Group">
+                <ControlPoint Id="PvIkzoNsIcpPyiuq4qzmv6" Bounds="613,150" />
+                <Node Bounds="611,176,113,19" Id="OTgAUBw6SDzNx76uQAxQTz">
+                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
+                  </p:NodeReference>
+                  <Pin Id="TUQVJk2y0m1PZ6p0IuBHvK" Name="Region" Kind="InputPin" />
+                  <Pin Id="KlwM0JUjRpROp04IqYy4gd" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="550,211,45,19" AutoConnect="true" Id="MK7DSEyxozxNLoUmOO8Z37">
+                  <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="Category" Name="ImGui" />
+                    <CategoryReference Kind="Category" Name="Commands" />
+                    <CategoryReference Kind="Category" Name="Immediate" />
+                    <Choice Kind="ProcessNode" Name="GroupCore" />
+                  </p:NodeReference>
+                  <Pin Id="NQozjgDBV33MhZIHQVMMnb" Name="Context" Kind="InputPin" />
+                  <Pin Id="Az3sB26NWdsM2HcOo4dR9E" Name="Input" Kind="InputPin" />
+                  <Pin Id="T9WrUoutVg1Pkc9tnhdfcm" Name="Context" Kind="OutputPin" />
+                </Node>
+              </Canvas>
+              <ProcessDefinition Id="TDXabiV5K6SNEVDToQUlHN">
+                <Fragment Id="IuZQOa6q9gAOhP5VRGmdDC" Patch="HhAxuCTneIqPcD56BgazeQ" Enabled="true" />
+                <Fragment Id="Ozjshog2Z3COLi3dSTre6A" Patch="QPbtZ9MAncKOlaN90IjrQx" Enabled="true" />
+              </ProcessDefinition>
+              <Link Id="AcjclsV7dGtOUJM6HS47ak" Ids="CGaI4OjxooSOrJq2No3CYf,PvIkzoNsIcpPyiuq4qzmv6" IsHidden="true" />
+              <Link Id="Pnn4x4y0mQSM7zNdy8vOVr" Ids="PvIkzoNsIcpPyiuq4qzmv6,TUQVJk2y0m1PZ6p0IuBHvK" />
+              <Link Id="JTjLz6kgCc8NkpVpoedq0p" Ids="KlwM0JUjRpROp04IqYy4gd,Az3sB26NWdsM2HcOo4dR9E" />
+              <Patch Id="HhAxuCTneIqPcD56BgazeQ" Name="Create" />
+              <Patch Id="QPbtZ9MAncKOlaN90IjrQx" Name="Update">
+                <Pin Id="ImSRVmYFoRqMCJA5SqLAAm" Name="Context" Kind="InputPin" />
+                <Pin Id="CGaI4OjxooSOrJq2No3CYf" Name="Region" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                    <Choice Kind="TypeFlag" Name="ICustomRegion" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="RK7Q3l6PuiRQFbV3ZRph7i" Name="Context" Kind="OutputPin" />
+              </Patch>
             </Patch>
           </Node>
         </Canvas>
@@ -3432,13 +3484,13 @@
     <Pin Id="LTHtzo5PZrjLG5KRONXJVL" Name="Disabled" Kind="InputPin" Bounds="600,225" />
     <Pin Id="APZcWGVgTL8OdyDleFSjIh" Name="Output" Kind="OutputPin" Bounds="451,392" />
   </Patch>
-  <NugetDependency Id="Vz3cwZrBJTGLAh6YbNZBCx" Location="VL.CoreLib" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="Vz3cwZrBJTGLAh6YbNZBCx" Location="VL.CoreLib" Version="2022.5.0-0118-g05f38ab35b" />
   <PlatformDependency Id="PSyqO1CCWQcNb5qk90CsPv" Location="./src/VL.ImGui.Skia/bin/Debug/net472/VL.ImGui.dll" />
-  <NugetDependency Id="IlyAlr1qck7MKce1nxRCT3" Location="VL.Skia" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="IlyAlr1qck7MKce1nxRCT3" Location="VL.Skia" Version="2022.5.0-0118-g05f38ab35b" />
   <NodeFactoryDependency Id="EZrT1oic5elOOa9FLEPEW3" Location="VL.ImGUI.Skia.Nodes" />
   <NodeFactoryDependency Id="Hfw4AALyIQnO78LAfR0CeH" Location="VL.ImGUI.Nodes" IsForward="true" />
   <NugetDependency Id="MeUDYJGMy2LPYXKkJ8W8Bv" Location="ImGui.NET" Version="1.87.3" />
-  <NugetDependency Id="V0AMJMebwb1MdDcUXBVZz9" Location="VL.Core" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="V0AMJMebwb1MdDcUXBVZz9" Location="VL.Core" Version="2022.5.0-0118-g05f38ab35b" />
   <PlatformDependency Id="CvXrXMnLWMoOojP8pgvTAW" Location="./lib/net6.0-windows/System.Reactive.dll" />
   <PlatformDependency Id="FMhM3OZ4I3EPu5LYkrAMdV" Location="System.Runtime" />
 </Document>

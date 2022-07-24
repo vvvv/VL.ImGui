@@ -8,9 +8,12 @@
     {
         public float Value { private get; set; }
 
+        public bool Enabled { private get; set; } = true;
+
         internal override void Update(Context context)
         {
-            ImGuiNET.ImGui.SetScrollX(Value);
+            if (Enabled)
+                ImGuiNET.ImGui.SetScrollX(Value);
         }
     }
 }

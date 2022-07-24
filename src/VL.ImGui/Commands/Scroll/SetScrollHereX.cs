@@ -6,15 +6,17 @@
     [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
     internal partial class SetScrollHereX : Widget
     {
-
         /// <summary>
         /// 0.0 - Left, 0.5 - Center, 1.0 - Right.
         /// </summary>
         public float Ratio { private get; set; }
 
+        public bool Enabled { private get; set; } = true;
+
         internal override void Update(Context context)
         {
-            ImGuiNET.ImGui.SetScrollHereX(Ratio);
+            if (Enabled)
+                ImGuiNET.ImGui.SetScrollHereX(Ratio);
         }
     }
 }
