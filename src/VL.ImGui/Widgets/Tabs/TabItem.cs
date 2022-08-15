@@ -1,7 +1,7 @@
 ﻿namespace VL.ImGui.Widgets
 {
 
-    [GenerateNode(Category = "ImGui.Widgets")]
+    [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
     internal sealed partial class TabItem : Widget
     {
         public Widget? Content { get; set; }

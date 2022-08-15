@@ -1,6 +1,6 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets", Tags = "tree")]
+    [GenerateNode(Category = "ImGui.Widgets", Tags = "tree", GenerateImmediate = false)]
     internal sealed partial class CollapsingHeader : Widget
     {
         public Widget? Content { get; set; }

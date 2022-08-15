@@ -7,20 +7,32 @@
 
         public string? Label { get; set; }
 
+        /// <summary>
+        /// Returns true if the TreeNode is open (not collapsed). Set to true to open the TreeNode.
+        /// </summary>
+        public Channel<bool>? IsOpen { private get; set; }
+        ChannelFlange<bool> IsOpenFlange = new ChannelFlange<bool>(false);
+        /// <summary>
+        /// Returns true if the TreeNode is open (not collapsed). 
+        /// </summary>
+        public bool _IsOpen => IsOpenFlange.Value;
+
         public ImGuiNET.ImGuiTreeNodeFlags Flags { private get; set; }
 
         internal override void Update(Context context)
         {
-            if (ImGuiNET.ImGui.TreeNodeEx(Label ?? string.Empty, Flags))
+            var isOpen = IsOpenFlange.Update(IsOpen);
+
+            ImGuiNET.ImGui.SetNextItemOpen(isOpen);
+
+            isOpen = ImGuiNET.ImGui.TreeNodeEx(Label ?? string.Empty, Flags);
+
+            IsOpenFlange.Value = isOpen;
+
+            if (isOpen)
             {
-                try
-                {
-                    context?.Update(Content);
-                }
-                finally
-                {
-                    ImGuiNET.ImGui.TreePop();
-                }
+                context?.Update(Content);
+                ImGuiNET.ImGui.TreePop();
             }
         }
     }
