@@ -707,12 +707,9 @@
                           <Patch Id="TnaMJeJCGJIMIWAI5dzxDJ" Name="Create" ManuallySortedPins="true" />
                           <Patch Id="Q1HSGv1LZeFPE8OGcWxicn" Name="Then" ManuallySortedPins="true" />
                           <Node Bounds="385,508,97,19" Id="IpEmrWkzKnALRBGJundUOd">
-                            <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                            <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <Choice Kind="ProcessAppFlag" Name="TableHeadersRow" />
-                              <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                                <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
-                              </CategoryReference>
                             </p:NodeReference>
                             <Pin Id="SvRXBaH7gC0NSgrWg9DTFD" Name="Context" Kind="InputPin" />
                             <Pin Id="AyHtT32Q42VQI4bGshunPV" Name="Context" Kind="OutputPin" />
@@ -742,12 +739,9 @@
                             <Pin Id="Vt37jNp3D0wPMLIVjxyTR5" Name="Output" Kind="StateOutputPin" />
                           </Node>
                           <Node Bounds="397,614,98,19" Id="TgoTfzetr2zQbXATBnd9KY">
-                            <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                            <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <Choice Kind="ProcessAppFlag" Name="TableNextColumn" />
-                              <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                                <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
-                              </CategoryReference>
                             </p:NodeReference>
                             <Pin Id="VtiBjYimNDsNs3Y8NFCtBC" Name="Context" Kind="InputPin" />
                             <Pin Id="LHhvsf6WBbtOcmgcqTPrfy" Name="Context" Kind="OutputPin" />
