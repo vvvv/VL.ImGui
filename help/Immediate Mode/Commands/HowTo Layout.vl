@@ -375,18 +375,6 @@
             <Pin Id="D6vTUqzcBCzNEpfIYhyyOS" Name="Position" Kind="InputPin" />
             <Pin Id="LjoJQ6t5kWULumY8EZ48LK" Name="Context" Kind="OutputPin" />
           </Node>
-          <Node Bounds="71,415,44,19" Id="B4EPicxsoKJL6LB7L0PeTn">
-            <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Group" />
-              <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                <p:OuterCategoryReference Kind="Category" Name="Commands" NeedsToBeDirectParent="true" />
-              </CategoryReference>
-            </p:NodeReference>
-            <Pin Id="E4nrUUfvRjLPZCluqiYvW3" Name="Context" Kind="InputPin" />
-            <Pin Id="MkCQGe4IW1UNIbBRo6CbXI" Name="Input" Kind="InputPin" />
-            <Pin Id="LAJZCzye0jsQLZacuXFS23" Name="Context" Kind="OutputPin" />
-          </Node>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />

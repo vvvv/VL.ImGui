@@ -80,11 +80,11 @@
                   <Patch Id="N8Jet9TpT7nP2dfbKg2tIi" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="NTTyvngQwhvMt2hCKS5DcB" Name="Update" ParticipatingElements="EoheeflKn17MOoGhUG0Yfx,OAgizRS9FN5O0QoYTF5Qks,QVPChdaWfRgN0senaExp8G,ICEFiOUalEPM2NqFwPcUQU,PASnuCkojc7LpHnwFM99y1,NGxIQkXiTRDMHedaa05FHe,RM0hlCPQw4GOoQIk4CQupP" ManuallySortedPins="true" />
                   <Node Bounds="285,483,269,98" Id="CpFZtS5i4FzPHhkLQMRhjH">
-                    <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="CollapsingHeader" />
                       <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                        <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                        <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                       </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="UIu4cU0OsunNvsDEFmWGwT" Name="Context" Kind="InputPin" />
@@ -142,11 +142,11 @@
                   <Pad Id="I0cv9DCcu5pNPKhj3DZIas" Comment="Is Visible" Bounds="419,621,35,35" ShowValueBox="true" isIOBox="true" />
                   <Pad Id="APVPCQlMT6AODQR6EEhOQ3" Comment="Is Open" Bounds="551,615,35,35" ShowValueBox="true" isIOBox="true" />
                   <Node Bounds="285,681,166,100" Id="UhF6gr74BTZMLyhJ9vQeiB">
-                    <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="CollapsingHeader" />
                       <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                        <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                        <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                       </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="KdmMXIpm2NxMGQaUbGJSP3" Name="Context" Kind="InputPin" />

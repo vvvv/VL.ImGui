@@ -141,11 +141,11 @@
                 <Pin Id="K0vRicDCEfWNDMugvUwbXj" Name="Output" Kind="OutputPin" />
               </Node>
               <Node Bounds="587,362,175,140" Id="GPKQ56XEhvMNOmhBww7tjW">
-                <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="PopupWindow" />
                   <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                    <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                    <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                   </CategoryReference>
                 </p:NodeReference>
                 <Patch Id="Q8TgJWOo469L9duMGMgJy0" ManuallySortedPins="true">

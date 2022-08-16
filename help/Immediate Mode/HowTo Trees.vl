@@ -80,22 +80,22 @@
                   <Patch Id="N8Jet9TpT7nP2dfbKg2tIi" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="NTTyvngQwhvMt2hCKS5DcB" Name="Update" ParticipatingElements="AYQ6qpftmDSNBNg7RN1Rc4,LlDSVfDAECyLUxwBZyU3l2" ManuallySortedPins="true" />
                   <Node Bounds="289,425,350,523" Id="I21fdtkdjmNMxsCNJiZpW3">
-                    <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="TreeNode" />
                       <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                        <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                        <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                       </CategoryReference>
                     </p:NodeReference>
                     <Patch Id="Bg6Zs3zxrNuMT4HWCvbTSf" ManuallySortedPins="true">
                       <Patch Id="GDZblv28mZ8PWElDVtmbwv" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="NQsXI99PZfwPws9cmHU7pB" Name="Update" ParticipatingElements="JL2Pe3Mj9vlLU0101UuKnZ,Fo6HHiGvwCmMBNCeLqZlO6,DG2bf6kzU3CNwz7YLwB64z" ManuallySortedPins="true" />
                       <Node Bounds="349,480,236,292" Id="KuabkinxQ5VN8R2XjJ3AJ8">
-                        <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                        <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                           <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                           <Choice Kind="ProcessAppFlag" Name="TreeNode" />
                           <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                            <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                            <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                           </CategoryReference>
                         </p:NodeReference>
                         <Patch Id="HG4QDo867LJMM0pEPNp0za" ManuallySortedPins="true">
@@ -136,11 +136,11 @@
                             </p:TypeAnnotation>
                           </Pad>
                           <Node Bounds="409,658,149,94" Id="EKFWKhm7BFeLusJOsc3etd">
-                            <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                            <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                               <Choice Kind="ProcessAppFlag" Name="TreeNode" />
                               <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                                <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                                <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                               </CategoryReference>
                             </p:NodeReference>
                             <Patch Id="JTHtnsEchv7PEpo8CEwpvo" ManuallySortedPins="true">
@@ -199,11 +199,11 @@
                         </p:TypeAnnotation>
                       </Pad>
                       <Node Bounds="349,836,278,92" Id="UxmloAVjykUPElF2wCyhrf">
-                        <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                        <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                           <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                           <Choice Kind="ProcessAppFlag" Name="TreeNode" />
                           <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                            <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                            <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                           </CategoryReference>
                         </p:NodeReference>
                         <Patch Id="Q9Hc4MaTXeaPAtivwEEQ82" ManuallySortedPins="true">

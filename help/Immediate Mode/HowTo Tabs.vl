@@ -80,11 +80,11 @@
                   <Patch Id="N8Jet9TpT7nP2dfbKg2tIi" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="NTTyvngQwhvMt2hCKS5DcB" Name="Update" ManuallySortedPins="true" />
                   <Node Bounds="273,386,682,883" Id="VQUjk8FguiKPeC6SCHq6vH">
-                    <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="TabBar" />
                       <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                        <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                        <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                       </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="MqK22CagO6cLoikFKajgwK" Name="Context" Kind="InputPin" />
@@ -96,11 +96,11 @@
                       <Patch Id="C3h8PpEjZIwMBm4hguUy03" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="Nazx1dUCqy4NqOW8JBAB0Q" Name="Update" ParticipatingElements="A6Zw0XYwlTBOhPwik2rIF8,A2xK5uH4djmP0x73NKxGFc,JzzssrbyJeeNAwA4q5oeJn,FtSlJ8vjrvnOvNVc6hM1mE,EAriomNoDFuNQTIkD3SjHT,CrzUzFpFNStQIlYRXuFIuM,PINAduWDtLbNpPQ3KKhbor,Srr3LJDDI5aNJrM2n4rAxV,AlEcoxbCAHWN7agLIrcRTV,DpB763j2zw1POHJiBiCXYr" ManuallySortedPins="true" />
                       <Node Bounds="349,666,198,86" Id="TcWp3IychqePOGiNE11f6o">
-                        <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                        <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                           <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                           <Choice Kind="ProcessAppFlag" Name="TabItem" />
                           <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                            <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                            <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                           </CategoryReference>
                         </p:NodeReference>
                         <Patch Id="AQpdjuRYncTL2jN78YDdVm" ManuallySortedPins="true">
@@ -163,11 +163,11 @@
                           <Patch Id="CJoPLNQRQDzMHbWLlFCnaE" Name="Create" ManuallySortedPins="true" />
                           <Patch Id="GiVyjCTD0xJNZI1Q3kqtOY" Name="Then" ManuallySortedPins="true" />
                           <Node Bounds="350,1074,228,99" Id="OabsYhnuShnLdyfQLmAZfz">
-                            <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
+                            <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                               <Choice Kind="ProcessAppFlag" Name="TabItem" />
                               <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
-                                <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                                <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                               </CategoryReference>
                             </p:NodeReference>
                             <Patch Id="CIp9tJuLvBnL6HC2cvXuMq" ManuallySortedPins="true">
