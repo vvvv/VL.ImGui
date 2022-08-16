@@ -1,6 +1,4 @@
-﻿using Stride.Core.Mathematics;
-
-namespace VL.ImGui.Widgets
+﻿namespace VL.ImGui.Widgets
 {
     [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
     /// <summary>
