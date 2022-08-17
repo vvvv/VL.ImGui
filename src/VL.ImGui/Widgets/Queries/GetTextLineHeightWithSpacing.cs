@@ -1,8 +1,7 @@
 ﻿namespace VL.ImGui.Widgets
 {
     /// <summary>
-    /// Distance in pixels between 2 consecutive lines of text.
-    /// Approx. FontSize + style.ItemSpacing.y
+    /// Distance in pixels between 2 consecutive lines of text. Approx. FontSize + style.ItemSpacing.y
     /// </summary>
     [GenerateNode(Category = "ImGui.Queries")]
     internal partial class GetTextLineHeightWithSpacing : Widget
