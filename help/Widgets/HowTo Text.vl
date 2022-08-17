@@ -94,7 +94,7 @@
             <Pin Id="VJx92GTNAmQOIX58xmunzk" Name="Value" Kind="InputPin" />
             <Pin Id="GO58XJwBhlyP1A2Ko4Z7u5" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="773,320,45,19" Id="URrk82uZKkLLv2uADT6nxO">
+          <Node Bounds="936,321,45,19" Id="URrk82uZKkLLv2uADT6nxO">
             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
@@ -116,6 +116,7 @@
             <Pin Id="LpU0t1KgyZ0OAYcL5VvKJW" Name="Result" Kind="OutputPin" />
             <Pin Id="JyA4tEEgqnvNMtuqOcPQK5" Name="Input 3" Kind="InputPin" />
             <Pin Id="IuYNJyffNTIPvKsLqeYPKl" Name="Input 4" Kind="InputPin" />
+            <Pin Id="TmXUD4bpbj8LMXd7arRIvw" Name="Input 5" Kind="InputPin" />
           </Node>
           <Node Bounds="508,618,52,19" Id="EDUkeLlZ7brMC4shsx7N0d">
             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
@@ -200,17 +201,17 @@
             <Pin Id="KvdjL2BQ3FmPuiim0WXbXN" Name="Children" Kind="InputPin" />
             <Pin Id="IIMlPO5qCSlOQI3vZWX1vp" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="UkNJT0K4ycaNTMnb2aJqhH" Comment="Text" Bounds="775,226,145,59" ShowValueBox="true" isIOBox="true" Value="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.">
+          <Pad Id="UkNJT0K4ycaNTMnb2aJqhH" Comment="Text" Bounds="938,233,145,59" ShowValueBox="true" isIOBox="true" Value="This text is wrapped to the defined Width:&#xD;&#xA;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="KNHkKF3LRMdLliuvDbIwQm" Comment="Width" Bounds="954,275,41,15" ShowValueBox="true" isIOBox="true" Value="150">
+          <Pad Id="KNHkKF3LRMdLliuvDbIwQm" Comment="Width" Bounds="1117,282,41,15" ShowValueBox="true" isIOBox="true" Value="250">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="774,419,145,19" Id="UGhYQIDS39NOq9lbAJebOF">
+          <Node Bounds="937,426,145,19" Id="UGhYQIDS39NOq9lbAJebOF">
             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="ChildWindow" />
@@ -223,9 +224,23 @@
             <Pin Id="LHgnJF7g9nXLFWTYEOKIda" Name="Flags" Kind="InputPin" />
             <Pin Id="MGK5ZzAnsKINpH8sDFrWdL" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="T9aUkLSO2ZXNnL9AgitvsH" Comment="Size" Bounds="881,385,35,28" ShowValueBox="true" isIOBox="true" Value="180, 100">
+          <Pad Id="T9aUkLSO2ZXNnL9AgitvsH" Comment="Size" Bounds="1044,392,35,28" ShowValueBox="true" isIOBox="true" Value="300, 100">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Vector2" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="769,322,45,19" Id="CQlJKhOhQJhLwGOqmduRLU">
+            <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessNode" Name="Text (Wrapped)" />
+            </p:NodeReference>
+            <Pin Id="SWySi1dYtGpOvyKCo0umeJ" Name="Text" Kind="InputPin" />
+            <Pin Id="MqSwQ2ps0hKLIN1TOO6NkT" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="OabZ6JnTjlNPAQC73TVz05" Comment="Text" Bounds="771,236,98,69" ShowValueBox="true" isIOBox="true" Value="This text is wrapped to the Window:&#xD;&#xA;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
         </Canvas>
@@ -257,7 +272,9 @@
         <Link Id="FYQnMPSu3pvOYQtMlKNsAn" Ids="KNHkKF3LRMdLliuvDbIwQm,F2iSGsbxGQnPTqP4V6pFMz" />
         <Link Id="Mc5te2gCTkOLUwi4702exb" Ids="T9aUkLSO2ZXNnL9AgitvsH,GLKBZ90uT54LS54ygjUrJ6" />
         <Link Id="UBdkp75S0CcLMvvtxUfduF" Ids="IQeX67dNakZK9b3ZVwUS12,F1oTUrN2Q42QMiZPJRqlpf" />
-        <Link Id="H53BXTdzUcXN58PVagzeV1" Ids="MGK5ZzAnsKINpH8sDFrWdL,IuYNJyffNTIPvKsLqeYPKl" />
+        <Link Id="GEpDQiEW5jUPHM3SWL8nO7" Ids="MqSwQ2ps0hKLIN1TOO6NkT,IuYNJyffNTIPvKsLqeYPKl" />
+        <Link Id="PmRyhFzmQBuMRrgx5bZ4qL" Ids="MGK5ZzAnsKINpH8sDFrWdL,TmXUD4bpbj8LMXd7arRIvw" />
+        <Link Id="VwotkqGYThiNvKXv53AN5A" Ids="OabZ6JnTjlNPAQC73TVz05,SWySi1dYtGpOvyKCo0umeJ" />
       </Patch>
     </Node>
   </Patch>
