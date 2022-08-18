@@ -1,22 +1,16 @@
 ﻿namespace VL.ImGui.Widgets
 {
     /// <summary>
-    /// Create a Menu. You can call Menu multiple time with the same Label to append more items to it.
+    /// Create a MenuBar of current window.
     /// </summary>
     [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
-    internal sealed partial class Menu : Widget
+    internal partial class MenuBar : Widget
     {
-
         public Widget? Content { private get; set; }
-
-        public string? Label { get; set; }
-
-        public bool Enabled { get; set; } = true;
 
         internal override void Update(Context context)
         {
-
-            if (ImGuiNET.ImGui.BeginMenu(Label ?? string.Empty, Enabled))
+            if (ImGuiNET.ImGui.BeginMenuBar())
             {
                 try
                 {
@@ -24,9 +18,8 @@
                 }
                 finally
                 {
-                    ImGuiNET.ImGui.EndMenu();
+                    ImGuiNET.ImGui.EndMenuBar();
                 }
-                    
             }
         }
     }

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 using ImGuiNET;
 using Stride.Core.Mathematics;
-using VL.Core;
 
 namespace VL.ImGui.Windows
 {
     using ImGui = ImGuiNET.ImGui;
 
-    [GenerateNode(GenerateImmediate = false)]
     internal sealed partial class Window : Widget
     {
         public Widget? Content { get; set; }
@@ -47,7 +43,7 @@ namespace VL.ImGui.Windows
                 var viewPort = ImGui.GetMainViewport();
                 ImGui.SetNextWindowPos(viewPort.WorkPos);
                 ImGui.SetNextWindowSize(viewPort.WorkSize);
-            } 
+            }
             else if (SetBounds)
             {
                 ImGui.SetNextWindowPos(Bounds.TopLeft.ToImGui());

@@ -1,5 +1,8 @@
 ﻿namespace VL.ImGui.Widgets
 {
+    /// <summary>
+    /// Create a MenuItem. Keyboardshortcuts are displayed as a convenience but not processed by Dear ImGui at the moment.
+    /// </summary>
     [GenerateNode(Category = "ImGui.Widgets")]
     internal partial class MenuItem : ChannelWidget<bool>
     {
