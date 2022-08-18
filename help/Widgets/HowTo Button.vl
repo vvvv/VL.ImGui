@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0118-05f38ab35b" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -53,12 +53,12 @@
             <Pin Id="Ux7CvDiVrHVMzRfc7A4U8d" Name="Name" Kind="InputPin" />
             <Pin Id="OSC8ymwenowNmhJSsjjWRv" Name="Has Close Button" Kind="InputPin" />
             <Pin Id="TgYBalEbFBuPPIglnpGTdO" Name="Fullscreen" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="RRKSlcCEjg6OxTTO4WMpww" Name="Bounds" Kind="InputPin" />
-            <Pin Id="QT4KGP463VBMfomUlFDlwn" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="R1sSnFSp7u9PyuPs7iUhBq" Name="Bounds" Kind="InputPin" />
+            <Pin Id="Qe7egXW46TGLnxWcr51vmc" Name="Is Open" Kind="InputPin" />
             <Pin Id="EfEGPFXfK8FLayFtqgiqt0" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="PjJ79W5pmaiMeH75HsThP9" Name="Window Flags" Kind="InputPin" />
             <Pin Id="HWmfrSEG4FeNPcXEybIDag" Name="Output" Kind="OutputPin" />
-            <Pin Id="GIC54wiMUHHMQc4QpKVJwj" Name="Closing" Kind="OutputPin" />
+            <Pin Id="OZHI0Ebl33TQW0Zn1Ppy87" Name="Is Open" Kind="OutputPin" />
           </Node>
           <Pad Id="IEhyCPloDfDPv7e0s3sgMC" Comment="Window Flags" Bounds="581,479,148,15" ShowValueBox="true" isIOBox="true" Value="NoTitleBar">
             <p:TypeAnnotation LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
@@ -310,7 +310,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0118-g05f38ab35b" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0118-g05f38ab35b" />
 </Document>

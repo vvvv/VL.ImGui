@@ -15,12 +15,13 @@
       </p:NodeReference>
       <Patch Id="FR79O2RiNooQQRpHiBNo5l">
         <Canvas Id="REzIjdmDimpMW6b1J5FNHV" CanvasType="Group">
-          <Node Bounds="447,574,145,19" Id="DFqZiFWV4mhOCkGTadBokP">
+          <Node Bounds="427,581,165,19" Id="DFqZiFWV4mhOCkGTadBokP">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
             <Pin Id="Pmf26iGqzuDOKg6Nw99oqw" Name="Bounds" Kind="InputPin" DefaultValue="1074, 159, 299, 413" />
+            <Pin Id="Nm18vNKnqAVNjqzGJLfHk9" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="AllB0VJErBMP3uo5ccdtxQ" Name="Input" Kind="InputPin" />
             <Pin Id="FmTqLSPb25MOXjwebQr5xG" Name="Color" Kind="InputPin" />
             <Pin Id="Ej5FvUf4BqoQJ9A8pQVNNb" Name="Clear" Kind="InputPin" />
@@ -53,11 +54,11 @@
             <Pin Id="BRVhpSwo2hrMGtdqZkoy5D" Name="Has Close Button" Kind="InputPin" />
             <Pin Id="LAbKO653gC1OMNy7xSpyNo" Name="Fullscreen" Kind="InputPin" />
             <Pin Id="N6hvwxTe6PiOkcUhyGV8g7" Name="Bounds" Kind="InputPin" />
-            <Pin Id="DTkV86eWkqULmx6X8ORtRL" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="K1IFpXkwAfkNTWnonBkudp" Name="Is Open" Kind="InputPin" />
             <Pin Id="FmG9GrOACLcLjh2JJ3WCzk" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="Pe4dHx3IH1INRTUkoPHvqH" Name="Window Flags" Kind="InputPin" />
             <Pin Id="A3RJ7baFXO3LlMo0A4e9Fx" Name="Output" Kind="OutputPin" />
-            <Pin Id="PQ3KxlUNmqJNfiqgfplJfM" Name="Closing" Kind="OutputPin" />
+            <Pin Id="SuWyXaA8XeEMUp22FhWxzW" Name="Is Open" Kind="OutputPin" />
           </Node>
           <Node Bounds="505,303,145,19" Id="UD821SbrdKNMydUxzjraJv">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
@@ -69,11 +70,11 @@
             <Pin Id="MLBJ55St02FNW3QxcVQXkc" Name="Has Close Button" Kind="InputPin" />
             <Pin Id="RVraZbZJn8DNaDcgfFOSuY" Name="Fullscreen" Kind="InputPin" />
             <Pin Id="SvDeQQJhfiOO3L9tAhNMN6" Name="Bounds" Kind="InputPin" />
-            <Pin Id="TnXHZkGSYgcO0vfPNhe9zk" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="Lf5ff1meMEOOMebeKgN47m" Name="Is Open" Kind="InputPin" />
             <Pin Id="F6ED5HGDG6CMTRwijVG6LI" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="NMkUv4F17g7NzbCjIDID52" Name="Window Flags" Kind="InputPin" />
             <Pin Id="P4jrctTVkusQL2U0YBZJKv" Name="Output" Kind="OutputPin" />
-            <Pin Id="N21g9XsK4jWPRFlTt9XGCY" Name="Closing" Kind="OutputPin" />
+            <Pin Id="He6bye44tjSPYokDELtYDr" Name="Is Open" Kind="OutputPin" />
           </Node>
           <Node Bounds="467,470,65,19" Id="AIH5XKOszQVPly7zSiMcGp">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">

@@ -2,7 +2,8 @@
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
+    //[GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
+    //TODO: This functionality is part of the window. Remove the Command?
     internal partial class SetNextWindowSize : Widget
     {
         public Vector2 Size { private get; set; }

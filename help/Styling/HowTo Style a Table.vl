@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Spc0ANcyIbJOrMJ6qKrUgb" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
-  <NugetDependency Id="LMYmLodTRU4OJSkcyn6bho" Location="VL.CoreLib" Version="2022.5.0-0108-ga77655f3ae" />
+<Document xmlns:p="property" Id="Spc0ANcyIbJOrMJ6qKrUgb" LanguageVersion="2022.5.0-0118-05f38ab35b" Version="0.128">
+  <NugetDependency Id="LMYmLodTRU4OJSkcyn6bho" Location="VL.CoreLib" Version="2022.5.0-0118-g05f38ab35b" />
   <Patch Id="J92awyuxkXVOwzHOcsjJG3">
     <Canvas Id="OJeuTPRYJUeOVmkqxCSEoA" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -27,9 +27,10 @@
             <Pin Id="LOHfZBUSGHoLJTLYdxYIH7" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="521,366,125,19" Id="OWZUmEfsYBWLV5ANyKObwz">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+            <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Table" />
+              <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="C6AXHWhdV27Okh7GGmJd2j" Name="Column Descriptions" Kind="InputPin" />
             <Pin Id="NFERs1yQpVINd1qB9Hd7U9" Name="Columns" Kind="InputPin" />
@@ -52,6 +53,8 @@
             </p:NodeReference>
             <Pin Id="VptbbhjucD5O9BuF9knpC2" Name="Input" Kind="InputPin" />
             <Pin Id="SaiU95kFYsPNaWMxle4Ltg" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="AoFr9IqHDU9PdgvsmtMdQR" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="T9oODNwFnC7MJSB2N61kVj" Name="Default Window" Kind="InputPin" />
             <Pin Id="OL3fYg7jqOrPSr9W8Gy6RL" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="485,870,165,19" Id="Qbw97xhQSR1N6heVdYlyXv">
@@ -59,7 +62,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="PuG0bcB8eqxPck4ITinMmc" Name="Bounds" Kind="InputPin" DefaultValue="744, 230, 352, 325" />
+            <Pin Id="PuG0bcB8eqxPck4ITinMmc" Name="Bounds" Kind="InputPin" DefaultValue="1100, 276, 352, 325" />
             <Pin Id="ULoEM54zl1XLu2jmN2I37Q" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="OVbx8n9RLE5MRe7klfFFDr" Name="Input" Kind="InputPin" />
             <Pin Id="UloK2vQ640GMvmFoNudSeE" Name="Color" Kind="InputPin" />
@@ -93,11 +96,11 @@
             <Pin Id="J5zHlUwvTZmO1BpKdZyBQy" Name="Has Close Button" Kind="InputPin" />
             <Pin Id="UDIjQu7iVGcOKMLmT2PS17" Name="Fullscreen" Kind="InputPin" DefaultValue="True" />
             <Pin Id="DJLhS43OboqPc2h54WuQBk" Name="Bounds" Kind="InputPin" />
-            <Pin Id="JjaLyLXAYHfPBQZfcEYQdD" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="BvZaSPSRGEDPzpo868S9GR" Name="Is Open" Kind="InputPin" />
             <Pin Id="KDiXePXUOhdOHyJadKcATi" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="HMQ2bqejK1BLKaZh8Fm2cN" Name="Window Flags" Kind="InputPin" DefaultValue="NoTitleBar" />
             <Pin Id="KFPOsx7WQyOMQlzl7mTaah" Name="Output" Kind="OutputPin" />
-            <Pin Id="Jmu5NzAZtACP7wPT2Ai46g" Name="Closing" Kind="OutputPin" />
+            <Pin Id="LNpuVRLc3jCNZa3pqrx6M9" Name="Is Open" Kind="OutputPin" />
           </Node>
           <Pad Id="ELBSdqdfXAROX045nNWKxs" Comment="Window Flags" Bounds="635,743,148,15" ShowValueBox="true" isIOBox="true" Value="NoTitleBar">
             <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
@@ -272,5 +275,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="NDjkHiKFDFSLSs7Gt0A9Wo" Location="VL.ImGui" Version="0.0.0" />
-  <NugetDependency Id="BWbPcu3gOceP62y0FxGINV" Location="VL.Skia" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="BWbPcu3gOceP62y0FxGINV" Location="VL.Skia" Version="2022.5.0-0118-g05f38ab35b" />
 </Document>

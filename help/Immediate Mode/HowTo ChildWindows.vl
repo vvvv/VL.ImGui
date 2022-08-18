@@ -27,7 +27,7 @@
             <Pin Id="QOReaQzGX3aMv4GB6AXltH" Name="Docking Enabled" Kind="InputPin" />
             <Pin Id="ScOtqakU2paNbxBrSHXv5E" Name="Default Window" Kind="InputPin" DefaultValue="True" />
             <Pin Id="M65a1SMYaDpQIUgQEia4rG" Name="Output" Kind="OutputPin" />
-            <ControlPoint Id="SGuzGv67ThROTPpeLZf0qW" Bounds="180,274" Alignment="Top" />
+            <ControlPoint Id="SGuzGv67ThROTPpeLZf0qW" Bounds="185,274" Alignment="Top" />
             <Patch Id="I56gOXbv1CgM9eNdmddnMO" ManuallySortedPins="true">
               <Patch Id="VjBCgJmxQiRLDW1aIRN7qG" Name="Create" ManuallySortedPins="true" />
               <Patch Id="H0QG5byf7aJOuOTyp8mmgY" Name="Update" ManuallySortedPins="true" />
@@ -57,16 +57,16 @@
                   <Node Bounds="194,600,65,19" Id="RkN1N5wx1eWM62vvTYWoQP">
                     <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <Choice Kind="ProcessAppFlag" Name="Text (Multiline)" />
                       <CategoryReference Kind="Category" Name="Immediate" NeedsToBeDirectParent="true">
                         <p:OuterCategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                       </CategoryReference>
+                      <Choice Kind="ProcessAppFlag" Name="Text (Multiline)" />
                     </p:NodeReference>
                     <Pin Id="VeYgtGrBIxiMWvz0esXpIL" Name="Context" Kind="InputPin" />
                     <Pin Id="Kgqjpy6ZrBEM1d1FQc5dt2" Name="Text" Kind="InputPin" />
                     <Pin Id="OmwiPgoMFJmNlMSs3Zb932" Name="Width" Kind="InputPin" />
                     <Pin Id="EsuMNzhNNfQLRUyR5oEg5Z" Name="Disabled" Kind="InputPin" DefaultValue="False" />
-                    <Pin Id="PtSuJsaI5VuLAitC3UKBw4" Name="Output" Kind="OutputPin" />
+                    <Pin Id="QYVjJnCoVZtP8l9TxY5gNz" Name="Context" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="288,508,44,26" Id="Dk5Wbj8cIMENOW2hG9lirF">
                     <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="CoreLibBasics.vl">
@@ -162,12 +162,13 @@
               </Pad>
             </Patch>
           </Node>
-          <Node Bounds="88,925,145,19" Id="SBsCLQEvY7WNI0DDnQYX4V">
+          <Node Bounds="67,916,165,19" Id="SBsCLQEvY7WNI0DDnQYX4V">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="SJiFLfKQHbjParXtpVjsW8" Name="Bounds" Kind="InputPin" DefaultValue="812, 188, 612, 436" />
+            <Pin Id="SJiFLfKQHbjParXtpVjsW8" Name="Bounds" Kind="InputPin" DefaultValue="1051, 326, 612, 436" />
+            <Pin Id="UPpRwSimdjvO8zldX98Res" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="KViqEDtGyuYMyhlMLjKCFn" Name="Input" Kind="InputPin" />
             <Pin Id="IguqyjIpC9jQMBOekTFZEa" Name="Color" Kind="InputPin" />
             <Pin Id="UHGgJDLwaohMb5hjxNhBtI" Name="Clear" Kind="InputPin" />

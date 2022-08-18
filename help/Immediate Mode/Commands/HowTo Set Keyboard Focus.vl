@@ -41,7 +41,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="138,182,323,408" Id="GLXvgqSf3hJPgreK6Yc3w0">
+          <Node Bounds="138,182,350,408" Id="GLXvgqSf3hJPgreK6Yc3w0">
             <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
@@ -56,7 +56,7 @@
             <ControlPoint Id="SxqmgVeWox9MqI21wY0yvY" Bounds="190,189" Alignment="Top" />
             <Patch Id="OULFnoaA6CGM9ogOBcyw6g" ManuallySortedPins="true">
               <Patch Id="BKdfb4ldad4PB7v54JDFqH" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="JwDc4Yj5HDFL54OfZDrvOi" Name="Update" ParticipatingElements="Az0UkMiszyhM7VONPCsc4q" ManuallySortedPins="true" />
+              <Patch Id="JwDc4Yj5HDFL54OfZDrvOi" Name="Update" ManuallySortedPins="true" />
               <Node Bounds="190,300,249,270" Id="KQ74gY5GSfhLrZlQ6BHSEc">
                 <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGui.vl">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -65,16 +65,6 @@
                     <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
                   </CategoryReference>
                 </p:NodeReference>
-                <Pin Id="DQ620Uh7J3hLo25BVPqwEz" Name="Context" Kind="InputPin" />
-                <Pin Id="CVhExTquGt8P4efarcvaQz" Name="Name" Kind="InputPin" />
-                <Pin Id="CvwpV6w8lttLGcLfQzhGau" Name="Has Close Button" Kind="InputPin" />
-                <Pin Id="ESBHvNGcpvhM9TA9OOawMk" Name="Fullscreen" Kind="InputPin" />
-                <Pin Id="QGj1MuzDvfsNb5Q864nZRh" Name="Bounds" Kind="InputPin" />
-                <Pin Id="NEdYh8YfqWLLkE31JFzWy9" Name="Set Bounds" Kind="InputPin" DefaultValue="False" />
-                <Pin Id="N8fF8MJ18zPO9NNEQEvWLH" Name="Menu Bar" Kind="InputPin" />
-                <Pin Id="QjApb6443CxMuHyqrcTtOU" Name="Window Flags" Kind="InputPin" />
-                <Pin Id="LvZf2AFAnJuPhiyTZ5E0mc" Name="Context" Kind="OutputPin" />
-                <Pin Id="S8Aja4lb4pIO7eRQS6gdB8" Name="Closing" Kind="OutputPin" />
                 <ControlPoint Id="EDIlXvGMA1WQB3iuHPpgLx" Bounds="204,307" Alignment="Top" />
                 <Patch Id="VavAQWxEYwWO9PliJy6Ovz" ManuallySortedPins="true">
                   <Patch Id="N8Jet9TpT7nP2dfbKg2tIi" Name="Create" ManuallySortedPins="true" />
@@ -148,8 +138,16 @@
                     </p:ValueBoxSettings>
                   </Pad>
                 </Patch>
+                <Pin Id="DQ620Uh7J3hLo25BVPqwEz" Name="Context" Kind="InputPin" />
+                <Pin Id="CVhExTquGt8P4efarcvaQz" Name="Name" Kind="InputPin" />
+                <Pin Id="CvwpV6w8lttLGcLfQzhGau" Name="Has Close Button" Kind="InputPin" />
+                <Pin Id="QGj1MuzDvfsNb5Q864nZRh" Name="Bounds" Kind="InputPin" />
+                <Pin Id="R6KvpjAC0htONJkYmghaET" Name="Is Open" Kind="InputPin" />
+                <Pin Id="QjApb6443CxMuHyqrcTtOU" Name="Window Flags" Kind="InputPin" />
+                <Pin Id="LvZf2AFAnJuPhiyTZ5E0mc" Name="Context" Kind="OutputPin" />
+                <Pin Id="LmwwJBUGEUoPB8oXs08nwV" Name="Is Open" Kind="OutputPin" />
               </Node>
-              <Node Bounds="322,256,61,19" Id="EzZPBeJGC5OOgMkZNcvwU5">
+              <Node Bounds="358,258,61,19" Id="EzZPBeJGC5OOgMkZNcvwU5">
                 <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="Rectangle (Join)" />
@@ -159,19 +157,11 @@
                 <Pin Id="Lq52xIPYvyELhrtowkAY07" Name="Anchor" Kind="InputPin" />
                 <Pin Id="Dkct8JfdtNBQFi3YwPBLwR" Name="Output" Kind="StateOutputPin" />
               </Node>
-              <Pad Id="CjR2jbEEzQjMSOLPWwrbpd" Comment="Size" Bounds="352,224,35,28" ShowValueBox="true" isIOBox="true" Value="300, 300">
+              <Pad Id="CjR2jbEEzQjMSOLPWwrbpd" Comment="Size" Bounds="388,226,35,28" ShowValueBox="true" isIOBox="true" Value="300, 300">
                 <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
               </Pad>
-              <Node Bounds="395,256,54,19" Id="UJwSyJbJBGNMhGbFqkwGtA">
-                <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="OnOpen" />
-                </p:NodeReference>
-                <Pin Id="PnodDRUMIZYLWYUrpd5TJl" Name="Simulate" Kind="InputPin" />
-                <Pin Id="K0vRicDCEfWNDMugvUwbXj" Name="Output" Kind="OutputPin" />
-              </Node>
             </Patch>
           </Node>
         </Canvas>
@@ -184,7 +174,6 @@
         <Link Id="Mz2xLoUkarSOHRJuJlqzH4" Ids="QcQXTQIKrE4Lctbv3yl4HS,FEmprmZSMXGOZ6BLW3yl3J" />
         <Link Id="KT3yeZDPMEAO1aIBfw5X1u" Ids="CjR2jbEEzQjMSOLPWwrbpd,QPUA34EECehMZIoAl7OzB2" />
         <Link Id="K9LTA4UnwEAPJfgUa3E0fe" Ids="Dkct8JfdtNBQFi3YwPBLwR,QGj1MuzDvfsNb5Q864nZRh" />
-        <Link Id="Az0UkMiszyhM7VONPCsc4q" Ids="K0vRicDCEfWNDMugvUwbXj,NEdYh8YfqWLLkE31JFzWy9" />
         <Link Id="QiWOOOnsGmqL388IqReAKJ" Ids="SxqmgVeWox9MqI21wY0yvY,DQ620Uh7J3hLo25BVPqwEz" />
         <Link Id="AIothfWlz7VOWt8b5xUV0m" Ids="EDIlXvGMA1WQB3iuHPpgLx,LAkqGr8KTSWQO4hV7jqHiM" />
         <Link Id="Q8qH2Gjj95sLrLmNuKwiWM" Ids="PZ62Pbxlq3JQBc4bV8xT3h,Kp4BbkN0A7OORnf3eAeM6n" />

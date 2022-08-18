@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0118-05f38ab35b" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -21,6 +21,8 @@
             </p:NodeReference>
             <Pin Id="RvPSnMmitACMThhv3g4wvf" Name="Input" Kind="InputPin" />
             <Pin Id="FAA1cPiLfJuOkhCElXbWFq" Name="Menu Bar" Kind="InputPin" />
+            <Pin Id="Rx6W4XEsMAeNLfNtFK4UFa" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="ROvu9oE5ErOMomu9wx14A1" Name="Default Window" Kind="InputPin" />
             <Pin Id="Rfmtujjd0vpP8UPzDHU3bY" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="408,863,165,19" Id="V3S5ZK9GpzrQHHTsE1YCVU">
@@ -28,7 +30,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="ErSzIKprDkMMT8JzYXHqL3" Name="Bounds" Kind="InputPin" DefaultValue="876, 248, 268, 792" />
+            <Pin Id="ErSzIKprDkMMT8JzYXHqL3" Name="Bounds" Kind="InputPin" DefaultValue="876, 248, 302, 193" />
             <Pin Id="MDGtB6wxyfIOZeWuSoryyx" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="EOevDdL1eIxQVphZqMaMtt" Name="Input" Kind="InputPin" />
             <Pin Id="KRobVvdjTWWL0sSj7TlloY" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -62,11 +64,11 @@
             <Pin Id="AApFOEcNv4pNgIbI53vDMB" Name="Has Close Button" Kind="InputPin" DefaultValue="False" />
             <Pin Id="SmshHnSCSCRMAtKV8EB5yn" Name="Fullscreen" Kind="InputPin" DefaultValue="True" />
             <Pin Id="R3hwhAKZDNCMisWLXXyr01" Name="Bounds" Kind="InputPin" />
-            <Pin Id="JNgXmF4Jsg9O7tl68ZLkR3" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="V4Z6QaOTwe6QPiYHDeJYDz" Name="Is Open" Kind="InputPin" />
             <Pin Id="VHKLebxcTNJMU5Mm6uRPkD" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="FiCthLiw2rKPsnt0JEBmCL" Name="Window Flags" Kind="InputPin" DefaultValue="NoTitleBar" />
             <Pin Id="Vsjz6oKw27JMyKSgvBzeaM" Name="Output" Kind="OutputPin" />
-            <Pin Id="Od2stmgdnMlMmWrWsqBaIj" Name="Closing" Kind="OutputPin" />
+            <Pin Id="FM3niUspLAnPtfCEnD3oAB" Name="Is Open" Kind="OutputPin" />
           </Node>
           <Node Bounds="477,261,85,19" Id="L0IkUkaSo6OPpCrMyWNLfJ">
             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
@@ -74,12 +76,14 @@
               <Choice Kind="ProcessNode" Name="Slider (Float)" />
               <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
+            <Pin Id="KDHOmed4RdnL3RZp9uTl3T" Name="Channel" Kind="InputPin" />
             <Pin Id="EUMQRMT13VQM0BUR5Wx9N3" Name="Label" Kind="InputPin" />
             <Pin Id="CrNVNPblslzQIiLAgxf1su" Name="Min" Kind="InputPin" />
             <Pin Id="SKj5GkL4ohzOlC8QKK1Biz" Name="Max" Kind="InputPin" />
             <Pin Id="VaYSmyZBRA1MAkLm4Mg2QP" Name="Format" Kind="InputPin" />
             <Pin Id="R2HvXjpFE1ZPFoFWqrxzMY" Name="Flags" Kind="InputPin" />
             <Pin Id="BRd9yebgxOoMD3RPbNezRI" Name="Output" Kind="OutputPin" />
+            <Pin Id="OYxdM3OHneZLTQBHi2XPrL" Name="Bang" Kind="OutputPin" />
             <Pin Id="RIlKu7CW8TpOtsWFhLVXAL" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="HGQTs9OPVwTLZvLCi7zNER" Comment="Label" Bounds="479,195,35,15" ShowValueBox="true" isIOBox="true" Value="Float">
@@ -222,7 +226,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0118-g05f38ab35b" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0118-g05f38ab35b" />
 </Document>

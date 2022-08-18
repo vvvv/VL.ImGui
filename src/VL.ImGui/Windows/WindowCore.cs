@@ -1,4 +1,4 @@
-﻿
+﻿using Stride.Core.Mathematics;
 using ImGuiNET;
 
 namespace VL.ImGui.Windows
@@ -15,6 +15,12 @@ namespace VL.ImGui.Windows
         public bool HasCloseButton { get; set; } = true;
 
         /// <summary>
+        /// Bounds of the Window.
+        /// </summary>
+        public Channel<RectangleF>? Bounds { private get; set; }
+        ChannelFlange<RectangleF> BoundsFlange = new ChannelFlange<RectangleF>(new RectangleF(0f, 0f, 100f, 100f));
+
+        /// <summary>
         /// Returns true if the Window is open (not collapsed or clipped). Set to true to open the window.
         /// </summary>
         public Channel<bool>? IsOpen { private get; set; }
@@ -29,6 +35,15 @@ namespace VL.ImGui.Windows
         internal override void Update(Context context)
         {
             var isOpen = IsOpenFlange.Update(IsOpen);
+
+            bool boundsChanged;
+            var bounds = BoundsFlange.Update(Bounds, out boundsChanged);
+
+            if (boundsChanged)
+            {
+                ImGui.SetNextWindowPos (bounds.TopLeft.ToImGui());
+                ImGui.SetNextWindowSize (bounds.Size.ToImGui());
+            }
 
             ImGui.SetNextWindowCollapsed(!isOpen);
 

@@ -30,7 +30,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1136, 216, 676, 612" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1037, 289, 431, 224" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -53,11 +53,11 @@
             <Pin Id="N37eHX2mPYpLrTejBv6Hd1" Name="Has Close Button" Kind="InputPin" />
             <Pin Id="USGBm3YlCLfLSkhMwPy8Kr" Name="Fullscreen" Kind="InputPin" DefaultValue="True" />
             <Pin Id="GR2j31thqmAPZpgmXxATSX" Name="Bounds" Kind="InputPin" />
-            <Pin Id="BPPSStUpi5WNwyxBOb8f3Z" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="KLl4gjlmFScLVAGNIbBN9M" Name="Is Open" Kind="InputPin" />
             <Pin Id="CSBrqR9NVjzMpHd6k2Cd2Z" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="ET6rC6nRBXLNrxrT00jzC1" Name="Window Flags" Kind="InputPin" />
             <Pin Id="VOjeHD5PpJCOPUJVAaWJDa" Name="Output" Kind="OutputPin" />
-            <Pin Id="O1Cf93jaX8dNBUPUZLJKMq" Name="Closing" Kind="OutputPin" />
+            <Pin Id="Rf4GlSv5CtrO4kut44xVt3" Name="Is Open" Kind="OutputPin" />
           </Node>
           <Pad Id="HNId2jVhNdjLe1cgdHqiKC" Comment="Window Flags" Bounds="421,825,148,15" ShowValueBox="true" isIOBox="true" Value="NoTitleBar">
             <p:TypeAnnotation LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
@@ -397,13 +397,15 @@
                   <Choice Kind="ProcessNode" Name="TabItem" />
                   <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                 </p:NodeReference>
-                <Pin Id="Oxv59omS5YDQRrs3IyjWa5" Name="Channel" Kind="InputPin" />
                 <Pin Id="DLU3haDIIDFQJJ0xe5plEk" Name="Content" Kind="InputPin" />
                 <Pin Id="Gy84gUOsI2QLSgv5xd9trv" Name="Label" Kind="InputPin" />
+                <Pin Id="NphkjI882gPQNRDA3Uuqj9" Name="Has Close Button" Kind="InputPin" />
+                <Pin Id="Pbdl5czU2ClNSmjDVbVeFD" Name="Is Visible" Kind="InputPin" />
+                <Pin Id="HJEJfcRNheXLICNGlBL6ZU" Name="Is Active" Kind="InputPin" />
                 <Pin Id="EWCNsY3QRbHQKkRq9868XC" Name="Flags" Kind="InputPin" DefaultValue="None" />
                 <Pin Id="Qw7YMuYpMbVOiNVgFdFXjD" Name="Output" Kind="OutputPin" />
-                <Pin Id="Q9dcyayV3TULzQvjW4aHvu" Name="Bang" Kind="OutputPin" />
-                <Pin Id="F1S6vUSDiKPLnNGmZa8F0O" Name="Value" Kind="OutputPin" />
+                <Pin Id="MvbSb4VI7voNRoE6KBH4B7" Name="Is Visible" Kind="OutputPin" />
+                <Pin Id="GTYkbrdWjRYL1ifRZtOTBT" Name="Is Active" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="G7OsGPcDLkUNldyfGuM2CJ" Bounds="371,318" />
               <Node Bounds="369,336,55,19" Id="PPhtFQWUTGEMwyZpMTBTjb">
