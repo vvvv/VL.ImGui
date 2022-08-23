@@ -10,8 +10,8 @@ namespace VL.ImGui.Widgets
 {
     using ImGui = ImGuiNET.ImGui;
 
-    [GenerateNode(GenerateImmediate = false)]
-    public sealed partial class PopupWindow : Widget
+    //[GenerateNode(GenerateImmediate = false)]
+    public sealed partial class PopupWindowOriginal : Widget
     {
         int _openCloseCount;
 
