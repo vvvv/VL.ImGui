@@ -1273,6 +1273,7 @@
                   <Pin Id="CUSige1cmpONa6jL9g5xLu" Name="Size" Kind="InputPin" />
                   <Pin Id="SeMPDVMZjdZMq3kiYgYwy7" Name="Flags" Kind="InputPin" />
                   <Pin Id="IcTQ8oNXsOiNea7BQ7NA2J" Name="Output" Kind="OutputPin" />
+                  <Pin Id="QfshuDkxYbEO6UsTBnnitg" Name="Is Open" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="453,374,81,19" Id="DTTilvcSnhXNzRRmtpo8mZ">
                   <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
@@ -1311,6 +1312,7 @@
                 <Pin Id="KoOdV8LNZN8L8ivzOvgRX5" Name="Size" Kind="InputPin" />
                 <Pin Id="VVm04GcPW7kPi1Cl4kXeDo" Name="Flags" Kind="InputPin" />
                 <Pin Id="GorAoF1urihMHPdpGlaok1" Name="Context" Kind="OutputPin" Bounds="266,552" />
+                <Pin Id="Fbl4fLSTrjyMDhmbqLV2h1" Name="Is Open" Kind="OutputPin" />
               </Patch>
             </Patch>
           </Node>
@@ -1365,11 +1367,6 @@
                 </Node>
                 <ControlPoint Id="QHKh5MUONtZOSmw0oCSZSz" Bounds="582,261" />
               </Canvas>
-              <!--
-
-    ************************  ************************
-
--->
               <ProcessDefinition Id="Rd7iPvYIQxNMUDLza14EOE">
                 <Fragment Id="NiIMujTY5gNPZITZOwUB5i" Patch="EgkyWkVkHg0NqIIiLGpr74" Enabled="true" />
                 <Fragment Id="Kj0hq5vUScIMH7iPVnL1lh" Patch="CP8RiEslQxOQIrILXmkwzS" Enabled="true" />

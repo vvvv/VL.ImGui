@@ -17,14 +17,19 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiWindowFlags Flags { private get; set; }
 
+        /// <summary>
+        /// Returns true if the Window is open (not fully clipped). 
+        /// </summary>
+        public bool IsOpen { get;  private set; }
+
         internal override void Update(Context context)
         {
-            
-            var IsVisible = ImGui.BeginChild(Label ?? string.Empty, Size.ToImGui(), HasBorder, Flags);
+
+            IsOpen = ImGui.BeginChild(Label ?? string.Empty, Size.ToImGui(), HasBorder, Flags);
             
             try
             {
-                if (IsVisible)
+                if (IsOpen)
                 {
                     context?.Update(Content);
                 }
