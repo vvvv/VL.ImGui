@@ -13,7 +13,8 @@ namespace VL.ImGui.Widgets
     /// <summary>
     /// Modal Windows block normal mouse hovering detection (and therefore most mouse interactions) behind them. They can't be closed by clicking outside of them.
     /// </summary>
-    [GenerateNode]
+    
+    ///[GenerateNode]
     public sealed partial class ModalWindow : Widget
     {
         int _openCloseCount;
