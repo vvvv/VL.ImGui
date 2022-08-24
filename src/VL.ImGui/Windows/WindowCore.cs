@@ -36,8 +36,7 @@ namespace VL.ImGui.Windows
         {
             var isOpen = IsOpenFlange.Update(IsOpen);
 
-            bool boundsChanged;
-            var bounds = BoundsFlange.Update(Bounds, out boundsChanged);
+            var bounds = BoundsFlange.Update(Bounds, out bool boundsChanged);
 
             if (boundsChanged)
             {

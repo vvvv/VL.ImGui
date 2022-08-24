@@ -53,6 +53,7 @@
             <Pin Id="Ot3RCh4D0E3MqHOjgDSSS2" Name="Name" Kind="InputPin" />
             <Pin Id="J5zHlUwvTZmO1BpKdZyBQy" Name="Has Close Button" Kind="InputPin" />
             <Pin Id="UDIjQu7iVGcOKMLmT2PS17" Name="Fullscreen" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="KKpmRy2tN6NNOYqJgIuRyp" Name="Bounds" Kind="InputPin" />
             <Pin Id="BKPzjoljqhoNJPGIOPIFDI" Name="Is Open" Kind="InputPin" />
             <Pin Id="SaBxJHartSWNK7T5tcxOAY" Name="Menu Bar" Kind="InputPin" />
             <Pin Id="HMQ2bqejK1BLKaZh8Fm2cN" Name="Window Flags" Kind="InputPin" DefaultValue="NoTitleBar" />

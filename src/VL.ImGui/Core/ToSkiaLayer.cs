@@ -42,7 +42,6 @@ namespace VL.ImGui
         readonly ImGuiIOPtr _io;
 
         Widget? _widget;
-        private IEnumerable<Widget> MenuBar = Enumerable.Empty<Widget>();
         private bool DockingEnabled = false;
         private bool DefaultWindow = false;
 
@@ -69,9 +68,8 @@ namespace VL.ImGui
             
         }
 
-        public ILayer Update(Widget widget, IEnumerable<Widget> menuBar, bool dockingEnabled, bool defaultWindow)
+        public ILayer Update(Widget widget, bool dockingEnabled, bool defaultWindow)
         {
-            MenuBar = menuBar;
             DockingEnabled = dockingEnabled;
             DefaultWindow = defaultWindow;
             _widget = widget;
@@ -101,30 +99,6 @@ namespace VL.ImGui
                         ImGui.Begin("Default ImGui Window", ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoBringToFrontOnFocus | ImGuiWindowFlags.NoNavFocus | ImGuiWindowFlags.NoFocusOnAppearing);
                     }
 
-                    // Add Menu Bar
-                    var menuBarCount = MenuBar.Count(x => x != null);
-
-                    if (menuBarCount > 0)
-                    {
-                        if (ImGui.BeginMainMenuBar())
-                        {
-                            try
-                            {
-                                foreach (var item in MenuBar)
-                                {
-                                    if (item is null)
-                                        continue;
-                                    else
-                                        _context.Update(item);
-                                }
-                            }
-                            finally
-                            {
-                                ImGui.EndMainMenuBar();
-                            }
-                        }
-
-                    }
                     // ImGui.ShowDemoWindow();
                     _context.Update(_widget);
                 }

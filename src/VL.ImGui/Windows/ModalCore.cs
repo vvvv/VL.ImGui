@@ -27,12 +27,12 @@ namespace VL.ImGui.Widgets
         ChannelFlange<RectangleF> BoundsFlange = new ChannelFlange<RectangleF>(new RectangleF(0f, 0f, 100f, 100f));
 
         /// <summary>
-        /// Returns true if the Modal Window is open (or not clipped). Set to true to open the Modal Window.
+        /// Returns true if the Modal Window is open. Set to true to open the Modal Window.
         /// </summary>
         public Channel<bool>? IsOpen { private get; set; }
         ChannelFlange<bool> IsOpenFlange = new ChannelFlange<bool>(false);
         /// <summary>
-        /// Returns true if the Modal Window is open (or not clipped). 
+        /// Returns true if the Modal Window is open. 
         /// </summary>
         public bool _IsOpen => IsOpenFlange.Value;
 
