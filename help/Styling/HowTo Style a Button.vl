@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0155-c3dced3a22" Version="0.128">
+<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0175-b796320f18" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -55,7 +55,8 @@
             <Pin Id="GR2j31thqmAPZpgmXxATSX" Name="Bounds" Kind="InputPin" />
             <Pin Id="GIEIJHBz5rnOPzwmda5l5p" Name="Is Open" Kind="InputPin" />
             <Pin Id="Pxtou4XKjQ6NOXbjhY19Rl" Name="Menu Bar" Kind="InputPin" />
-            <Pin Id="ET6rC6nRBXLNrxrT00jzC1" Name="Window Flags" Kind="InputPin" />
+            <Pin Id="Ac4ofgXWmNCPfDH508suvn" Name="Style" Kind="InputPin" />
+            <Pin Id="MBsff97PXdQP0r6mFC69ro" Name="Flags" Kind="InputPin" />
             <Pin Id="VOjeHD5PpJCOPUJVAaWJDa" Name="Output" Kind="OutputPin" />
             <Pin Id="P0gKLBturXDLIZTquQoUBS" Name="Is Open" Kind="OutputPin" />
           </Node>
@@ -488,7 +489,6 @@
           <Fragment Id="CA5NL4bFZyAQRQRLNsMjeJ" Patch="RYcSdMgjOSHMTo1e9h0RjC" Enabled="true" />
         </ProcessDefinition>
         <Link Id="GDuxgyWYyCkNCjIwkNZprj" Ids="Tsi6F5g1cOCQK44SVRexGG,FEmprmZSMXGOZ6BLW3yl3J" />
-        <Link Id="QR0JDDukvtMMiDHPp5rBl9" Ids="HNId2jVhNdjLe1cgdHqiKC,ET6rC6nRBXLNrxrT00jzC1" />
         <Link Id="JGLCQqlCdw4OEWhZ8tzgIk" Ids="AHsUraVOyVGLQ7gv42CE7l,GTiOHwjdTYmLISEYk9fAfv" />
         <Link Id="J1S1fBQlYk6MOlMWfjTVJQ" Ids="ToAO8nbzr3PQQIltX1smKk,BQ6sDOIi6xTN1t6EJO4GFF" />
         <Link Id="Ml2pGIHpAVGQMgIhT68feJ" Ids="JvTAUhMziDENiIqpVTKjkv,L9MFMQr10MEOBhMGAdoQXV" />
@@ -506,10 +506,11 @@
         <Link Id="P1OnpMZYaDUN26gH9Feq0T" Ids="PBgrqdNuic3PLR2WDY2EpO,CnxoTpBXfT2L0pAO1i9Gxf" />
         <Link Id="GrQ85P9qNqKPOpqZ4Qolga" Ids="BKD33qStYVSQNtnWP6C7bA,TlcrxPLmdSUNyZuKEGzQSb" />
         <Link Id="Pt1Hc0dK8LzLA8NhNA4vM4" Ids="AfaP11GZSFYMhumsmLWFeb,OWreEyOzfwgLRTHUvSpcng" />
+        <Link Id="KzPnUOeoWrgNuOaMdmb2dV" Ids="HNId2jVhNdjLe1cgdHqiKC,MBsff97PXdQP0r6mFC69ro" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0155-gc3dced3a22" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0175-gb796320f18" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0155-gc3dced3a22" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0175-gb796320f18" />
 </Document>

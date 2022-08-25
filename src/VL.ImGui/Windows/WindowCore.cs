@@ -30,7 +30,7 @@ namespace VL.ImGui.Windows
         /// </summary>
         public bool _IsOpen => IsOpenFlange.Value;
 
-        public ImGuiWindowFlags WindowFlags { get; set; }
+        public ImGuiWindowFlags Flags { get; set; }
 
         internal override void UpdateCore(Context context)
         {
@@ -49,11 +49,11 @@ namespace VL.ImGui.Windows
             if (HasCloseButton)
             {
                 var closing = true;
-                isOpen = ImGui.Begin(Name, ref closing, WindowFlags);
+                isOpen = ImGui.Begin(Name, ref closing, Flags);
             }
             else
             {
-                isOpen = ImGui.Begin(Name, WindowFlags);
+                isOpen = ImGui.Begin(Name, Flags);
             }
 
             IsOpenFlange.Value = isOpen;

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0118-05f38ab35b" Version="0.128">
+<Document xmlns:p="property" Id="Ei9iE8FWAyHMwfvIhDro6b" LanguageVersion="2022.5.0-0175-b796320f18" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -50,10 +50,11 @@
               <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="FfM6nYYt7SlMkSFo9TdMPe" Name="Children" Kind="InputPin" />
+            <Pin Id="UnJNpQL2MmqO7OSdnH0vRn" Name="Style" Kind="InputPin" />
             <Pin Id="Abxi4hqqx28Li9BZG5Lwpv" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="384,526,145,19" Id="HMOmjYqK5u0NRIfEwJhume">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Window" />
             </p:NodeReference>
@@ -62,11 +63,12 @@
             <Pin Id="AApFOEcNv4pNgIbI53vDMB" Name="Has Close Button" Kind="InputPin" DefaultValue="False" />
             <Pin Id="SmshHnSCSCRMAtKV8EB5yn" Name="Fullscreen" Kind="InputPin" DefaultValue="True" />
             <Pin Id="R3hwhAKZDNCMisWLXXyr01" Name="Bounds" Kind="InputPin" />
-            <Pin Id="JNgXmF4Jsg9O7tl68ZLkR3" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="KcVsIRR0KkSOBSbMARbCvn" Name="Is Open" Kind="InputPin" />
             <Pin Id="HwQpHegqS1BLwc95byS6x9" Name="Menu Bar" Kind="InputPin" />
-            <Pin Id="FiCthLiw2rKPsnt0JEBmCL" Name="Window Flags" Kind="InputPin" DefaultValue="NoTitleBar" />
+            <Pin Id="JjRuTicXkyYOYWRGKMbdkg" Name="Style" Kind="InputPin" />
+            <Pin Id="OqLmLRJfeGmNBxVgfFBWnq" Name="Flags" Kind="InputPin" DefaultValue="NoTitleBar" />
             <Pin Id="Vsjz6oKw27JMyKSgvBzeaM" Name="Output" Kind="OutputPin" />
-            <Pin Id="Od2stmgdnMlMmWrWsqBaIj" Name="Closing" Kind="OutputPin" />
+            <Pin Id="Mc0LxYMFhvPMHxL4cdbNsE" Name="Is Open" Kind="OutputPin" />
           </Node>
           <Node Bounds="177,303,125,19" Id="L0IkUkaSo6OPpCrMyWNLfJ">
             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
@@ -81,12 +83,13 @@
             <Pin Id="SKj5GkL4ohzOlC8QKK1Biz" Name="Max" Kind="InputPin" />
             <Pin Id="VaYSmyZBRA1MAkLm4Mg2QP" Name="Format" Kind="InputPin" />
             <Pin Id="R2HvXjpFE1ZPFoFWqrxzMY" Name="Flags" Kind="InputPin" />
+            <Pin Id="C1pQlJRXkiHQEbHimiwwhT" Name="Style" Kind="InputPin" />
             <Pin Id="BRd9yebgxOoMD3RPbNezRI" Name="Output" Kind="OutputPin" />
-            <Pin Id="RIlKu7CW8TpOtsWFhLVXAL" Name="Value" Kind="OutputPin" />
             <Pin Id="NJ6UainnCX4NZLYfbBjMVr" Name="Bang" Kind="OutputPin" />
+            <Pin Id="RIlKu7CW8TpOtsWFhLVXAL" Name="Value" Kind="OutputPin" />
           </Node>
           <Node Bounds="383,428,105,19" Id="BndEfH6zgosMLhXUNdV4lK">
-            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Cons" />
               <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -116,9 +119,10 @@
             <Pin Id="A6s8PyDDkM1PST00Gt2MJ2" Name="Max" Kind="InputPin" />
             <Pin Id="HABfYXUZ9duO2MMELL5Ew4" Name="Format" Kind="InputPin" />
             <Pin Id="Tmb3Gr9vvKjPCATOxihW4v" Name="Flags" Kind="InputPin" DefaultValue="None" />
+            <Pin Id="IlU2S7Cm6yyOvZfA4JaPAH" Name="Style" Kind="InputPin" />
             <Pin Id="D8cs7jCKkzzM8uzEnwyuDX" Name="Output" Kind="OutputPin" />
-            <Pin Id="LRsEw3p3RlbP3JjO6Iz9mH" Name="Value" Kind="OutputPin" />
             <Pin Id="VI6n4mfxu3bNWpT4ExlWJy" Name="Bang" Kind="OutputPin" />
+            <Pin Id="LRsEw3p3RlbP3JjO6Iz9mH" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="NPul5raOhJAMyBbYGPA6vy" Comment="Label" Bounds="395,255,50,15" ShowValueBox="true" isIOBox="true" Value="Int2">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -138,9 +142,10 @@
             <Pin Id="UCDYVWQhid7MvSdS0HIPTV" Name="Max" Kind="InputPin" />
             <Pin Id="UNw3IP4hnKlNRo0W7oBN6C" Name="Format" Kind="InputPin" />
             <Pin Id="VZ1HDOywyFpQJSRYMVllp7" Name="Flags" Kind="InputPin" />
+            <Pin Id="DPREOYeFQT5OTD59smHzGJ" Name="Style" Kind="InputPin" />
             <Pin Id="TVtP3vNSJGPMoh0d93WOBb" Name="Output" Kind="OutputPin" />
-            <Pin Id="KG0XIeryv4hNB8r1O1Ybur" Name="Value" Kind="OutputPin" />
             <Pin Id="NbA4Ob0Tr04OneIDDEmoZT" Name="Bang" Kind="OutputPin" />
+            <Pin Id="KG0XIeryv4hNB8r1O1Ybur" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="GbAjutaq5biMe58LioHGlO" Comment="Label" Bounds="530,255,50,15" ShowValueBox="true" isIOBox="true" Value="Int3">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -160,9 +165,10 @@
             <Pin Id="RFO96EMafu5PeL31U1R32Y" Name="Max" Kind="InputPin" />
             <Pin Id="Lk4BnVAErhYLWmz38LaI6N" Name="Format" Kind="InputPin" />
             <Pin Id="HhK4ZyAsJ72NxXmsiIE7Zq" Name="Flags" Kind="InputPin" />
+            <Pin Id="UCtJupy2zySPVj2EySnOQX" Name="Style" Kind="InputPin" />
             <Pin Id="STHFQavOnxPNp9tHeA8rsx" Name="Output" Kind="OutputPin" />
-            <Pin Id="VXZNIjGehNMO0Qs9gNkjQs" Name="Value" Kind="OutputPin" />
             <Pin Id="N7b8WvXmy0ALmAbcTx3pvp" Name="Bang" Kind="OutputPin" />
+            <Pin Id="VXZNIjGehNMO0Qs9gNkjQs" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="PkhhMDmEjmrLypDawRI5EA" Comment="Label" Bounds="666,255,50,15" ShowValueBox="true" isIOBox="true" Value="Int4">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -196,9 +202,10 @@
             <Pin Id="NrPGiRuDlKbMvWfNYwghvY" Name="Max" Kind="InputPin" />
             <Pin Id="RIcdzWy5Rp2K9ZdIHrCBRL" Name="Format" Kind="InputPin" />
             <Pin Id="PQ0UEVraOwxLrpJH61dboL" Name="Flags" Kind="InputPin" />
+            <Pin Id="TZUwTrG4HRMO0lHLcKKuZk" Name="Style" Kind="InputPin" />
             <Pin Id="Sr4Lazb9O4TMwZEYrEavQn" Name="Output" Kind="OutputPin" />
-            <Pin Id="FrJRSiGfxJqPqh9GAZnEuy" Name="Value" Kind="OutputPin" />
             <Pin Id="RmvDOObDNJNL8puDJTM6nO" Name="Bang" Kind="OutputPin" />
+            <Pin Id="FrJRSiGfxJqPqh9GAZnEuy" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="R0e8BfU7wHUOBH6jUGn3am" Comment="Label" Bounds="800,255,45,15" ShowValueBox="true" isIOBox="true" Value="Range">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -206,7 +213,7 @@
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="839,348,38,26" Id="K2lxBJYJzCqMYgdLd3zNJw">
-            <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="RecordType" Name="Range" />
               <Choice Kind="OperationCallFlag" Name="Split" />
@@ -249,7 +256,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0118-g05f38ab35b" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0175-gb796320f18" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0118-g05f38ab35b" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0175-gb796320f18" />
 </Document>
