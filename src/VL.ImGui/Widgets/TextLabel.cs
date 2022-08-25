@@ -6,7 +6,7 @@
         public string? Label { private get; set; }
         public string? Value { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.LabelText(Label ?? String.Empty, Value ?? String.Empty);
         }

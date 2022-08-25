@@ -14,10 +14,8 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "GrabMinSize GrabRounding")]
-    internal partial class SetGrabStyle : Widget
+    internal partial class SetGrabStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         /// <summary>
         /// Minimum width/height of a grab box for slider/scrollbar.
         /// </summary>
@@ -28,31 +26,17 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<float> Rounding { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var valueCount = 0;
-            try
+            if (MinSize.HasValue)
             {
-                if (MinSize.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.GrabMinSize, MinSize.Value);
-                }
-                if (Rounding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.GrabRounding, Rounding.Value);
-                }
-
-                context.Update(Input);
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.GrabMinSize, MinSize.Value);
             }
-            finally
+            if (Rounding.HasValue)
             {
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.GrabRounding, Rounding.Value);
             }
         }
     }

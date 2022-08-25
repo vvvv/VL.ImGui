@@ -12,7 +12,7 @@ namespace VL.ImGui.Widgets
     {
         public Widget? Content { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.BeginTooltip();
             try

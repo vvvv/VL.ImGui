@@ -8,7 +8,7 @@
     {
         public bool IsVisible { get; private set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             IsVisible = ImGuiNET.ImGui.TableNextColumn();
         }

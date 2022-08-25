@@ -10,7 +10,7 @@
 
         public float Width { private get; set; } = 100f;
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.PushItemWidth(Width);
             try

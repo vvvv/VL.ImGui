@@ -12,7 +12,7 @@ namespace VL.ImGui.Widgets
     {
         public string? Content { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.SetTooltip(Content ?? string.Empty);
         }

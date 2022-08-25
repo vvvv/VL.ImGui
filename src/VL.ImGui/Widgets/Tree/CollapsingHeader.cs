@@ -34,7 +34,7 @@
 
         public ImGuiNET.ImGuiTreeNodeFlags Flags { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var isVisible = IsVisibleFlange.Update(IsVisible);
             var isOpen = IsOpenFlange.Update(IsOpen);

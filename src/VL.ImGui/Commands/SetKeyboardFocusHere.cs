@@ -10,7 +10,7 @@
 
         public bool Enabled { private get; set; } = true;
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             if (Enabled)
                 ImGuiNET.ImGui.SetKeyboardFocusHere(Offset);

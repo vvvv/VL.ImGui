@@ -14,10 +14,8 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "ChildBg ChildRounding ChildBorderSize")]
-    internal partial class SetChildWindowStyle : Widget
+    internal partial class SetChildWindowStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> Background { private get; set; }
 
         /// <summary>
@@ -30,39 +28,22 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<float> BorderSize { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            var valueCount = 0;
-            try
+            if (Background.HasValue)
             {
-                if (Background.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.ChildBg, Background.Value.ToImGui());
-                }
-                if (Rounding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.ChildRounding, Rounding.Value);
-                }
-                if (BorderSize.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.ChildBorderSize, BorderSize.Value);
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ChildBg, Background.Value.ToImGui());
             }
-            finally
+            if (Rounding.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.ChildRounding, Rounding.Value);
+            }
+            if (BorderSize.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.ChildBorderSize, BorderSize.Value);
             }
         }
     }

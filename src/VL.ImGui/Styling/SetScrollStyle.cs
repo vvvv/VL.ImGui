@@ -14,10 +14,8 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "ScrollbarBg ScrollbarGrab ScrollbarGrabHovered ScrollbarGrabActive ScrollbarSize ScrollbarRounding")]
-    internal partial class SetScrollStyle : Widget
+    internal partial class SetScrollStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> Backgorund { private get; set; }
                
         public Optional<Color4> GrabColor { private get; set; }
@@ -36,56 +34,39 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<float> GrabRounding { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            var valueCount = 0;
-            try
+            if (Backgorund.HasValue)
             {
-                if (Backgorund.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.ScrollbarBg, Backgorund.Value.ToImGui());
-                }
-
-                if (ScrollbarSize.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.ScrollbarSize, ScrollbarSize.Value);
-                }
-
-                if (GrabColor.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.ScrollbarGrab, GrabColor.Value.ToImGui());
-                }
-                if (GrabHovered.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.ScrollbarGrabHovered, GrabHovered.Value.ToImGui());
-                }
-                if (GrabActive.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.ScrollbarGrabActive, GrabActive.Value.ToImGui());
-                }
-                if (GrabRounding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.ScrollbarRounding, GrabRounding.Value);
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ScrollbarBg, Backgorund.Value.ToImGui());
             }
-            finally
+
+            if (ScrollbarSize.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.ScrollbarSize, ScrollbarSize.Value);
+            }
+
+            if (GrabColor.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ScrollbarGrab, GrabColor.Value.ToImGui());
+            }
+            if (GrabHovered.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ScrollbarGrabHovered, GrabHovered.Value.ToImGui());
+            }
+            if (GrabActive.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ScrollbarGrabActive, GrabActive.Value.ToImGui());
+            }
+            if (GrabRounding.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.ScrollbarRounding, GrabRounding.Value);
             }
         }
     }

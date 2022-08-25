@@ -17,7 +17,8 @@ namespace VL.ImGui.Generator
     [Generator]
     public class SourceGenerator : IIncrementalGenerator
     {
-        private const string GenerateImmutableAttributeMetadataName = "VL.ImGui.GenerateNodeAttribute";
+        private const string GenerateNodeAttribute = "VL.ImGui.GenerateNodeAttribute";
+        private const string PinAttribute = "VL.ImGui.PinAttribute";
 
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
@@ -46,7 +47,7 @@ namespace VL.ImGui.Generator
                     var attributeContainingTypeSymbol = attributeSymbol.ContainingType;
                     var fullName = attributeContainingTypeSymbol.ToDisplayString();
 
-                    if (fullName == GenerateImmutableAttributeMetadataName)
+                    if (fullName == GenerateNodeAttribute)
                         return classSyntax;
                 }
             }
@@ -59,8 +60,11 @@ namespace VL.ImGui.Generator
             if (classes.IsDefaultOrEmpty)
                 return;
 
-            var attributeSymbol = compilation.GetTypeByMetadataName(GenerateImmutableAttributeMetadataName)
-                ?? throw new InvalidOperationException("Symbol not found: " + GenerateImmutableAttributeMetadataName);
+            var attributeSymbol = compilation.GetTypeByMetadataName(GenerateNodeAttribute)
+                ?? throw new InvalidOperationException("Symbol not found: " + GenerateNodeAttribute);
+
+            var pinAttributeSymbol = compilation.GetTypeByMetadataName(PinAttribute)
+                ?? throw new InvalidOperationException("Symbol not found: " + PinAttribute);
 
             //Debugger.Launch();
 
@@ -74,17 +78,20 @@ namespace VL.ImGui.Generator
 
                 void build(Mode mode)
                 {
-                    var source = CreateSource(context, syntax, semanticModel, classSymbol, data, mode);
+                    var source = CreateSource(context, syntax, semanticModel, classSymbol, data, pinAttributeSymbol, mode);
                     context.AddSource($"{syntax.Identifier}.{mode}.g.cs", source);
                 }
             }
         }
 
-        private static ImmutableDictionary<string, TypedConstant> GetAttributeData(INamedTypeSymbol attributeSymbol, INamedTypeSymbol classSymbol)
+        private static ImmutableDictionary<string, TypedConstant> GetAttributeData(INamedTypeSymbol attributeSymbol, ISymbol symbol)
         {
-            var attributeData = classSymbol?.GetAttributes().FirstOrDefault(d => d.AttributeClass?.Equals(attributeSymbol, SymbolEqualityComparer.Default) == true);
-            var data = attributeData.NamedArguments.ToImmutableDictionary(kv => kv.Key, kv => kv.Value);
-            return data;
+            var attributeData = symbol?.GetAttributes().FirstOrDefault(d => d.AttributeClass?.Equals(attributeSymbol, SymbolEqualityComparer.Default) == true);
+            
+            if (attributeData == null)
+                return ImmutableDictionary<string, TypedConstant>.Empty;
+
+            return attributeData.NamedArguments.ToImmutableDictionary(kv => kv.Key, kv => kv.Value);
         }
 
         internal enum Mode 
@@ -98,7 +105,7 @@ namespace VL.ImGui.Generator
         }
 
         private static string CreateSource(SourceProductionContext context, ClassDeclarationSyntax declarationSyntax, SemanticModel semanticModel, 
-            INamedTypeSymbol typeSymbol, ImmutableDictionary<string, TypedConstant> attrData, Mode mode = Mode.RetainedMode)
+            INamedTypeSymbol typeSymbol, ImmutableDictionary<string, TypedConstant> attrData, INamedTypeSymbol pinAttributeSymbol, Mode mode = Mode.RetainedMode)
         {
             var category = attrData.GetValueOrDefault("Category").Value as string ?? "ImGui";
             string nodeDecl = default;
@@ -146,10 +153,22 @@ namespace VL.ImGui.Generator
                 types.Add(ct);
                 ct = ct.BaseType;
             }
-            var properties = ((IEnumerable<ITypeSymbol>)types).Reverse().SelectMany(t => t.GetMembers().OfType<IPropertySymbol>());
+            var properties_ = ((IEnumerable<ITypeSymbol>)types).Reverse().SelectMany(t => t.GetMembers().OfType<IPropertySymbol>());
+
+            SortedList<int, IPropertySymbol> properties = new SortedList<int, IPropertySymbol>();
+            int i = 0;
+            foreach (var property in properties_)
+            {
+                var data = GetAttributeData(pinAttributeSymbol, property);
+                if (data.TryGetValue("Priority", out var prio))
+                    properties.Add(((int)prio.Value) * 1000 + i, property);
+                else
+                    properties.Add(i, property);
+                i++;
+            }
 
             var ctx = "var ctx = default(Context);";
-            foreach (var property in properties)
+            foreach (var property in properties.Values)
             {
                 string propertySummary = GetDocEntry(property);
 
@@ -195,7 +214,8 @@ namespace VL.ImGui.Generator
             }
             else
             {
-                var type = typeSymbol.DeclaredAccessibility == Accessibility.Public ? typeSymbol.Name : "Widget";
+                var isStyle = typeSymbol.AllInterfaces.Any(t => t.Name == "IStyle");
+                var type = isStyle ? "IStyle" : typeSymbol.DeclaredAccessibility == Accessibility.Public ? typeSymbol.Name : "Widget";
                 outputDescriptions.Insert(0, $"_c.Output<{type}>(\"Output\"),");
                 outputs.Insert(0, "c.Output(() => s),");
             }

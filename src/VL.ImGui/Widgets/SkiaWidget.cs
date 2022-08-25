@@ -17,7 +17,7 @@ namespace VL.ImGui.Widgets
 
         public CommonSpace Space { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             if (context is SkiaContext skiaContext)
             {

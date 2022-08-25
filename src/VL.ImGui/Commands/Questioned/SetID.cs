@@ -14,7 +14,7 @@ namespace VL.ImGui.Widgets
 
         public string? Label { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.PushID(Label ?? string.Empty);
             try

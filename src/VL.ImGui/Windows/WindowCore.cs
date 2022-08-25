@@ -32,7 +32,7 @@ namespace VL.ImGui.Windows
 
         public ImGuiWindowFlags WindowFlags { get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var isOpen = IsOpenFlange.Update(IsOpen);
 

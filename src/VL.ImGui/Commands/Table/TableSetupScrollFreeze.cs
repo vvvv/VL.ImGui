@@ -9,7 +9,7 @@
         public int NumberOfColumns { private get; set; }
         public int NumberOfRows { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.TableSetupScrollFreeze(NumberOfColumns, NumberOfRows);
         }

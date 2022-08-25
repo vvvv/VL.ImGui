@@ -12,7 +12,7 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiButtonFlags Flags { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             Update();
             if (ImGuiNET.ImGui.InvisibleButton(Label ?? string.Empty, Size.ToImGui(), Flags))

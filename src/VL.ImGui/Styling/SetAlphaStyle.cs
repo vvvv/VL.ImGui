@@ -14,10 +14,8 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "DisabledAlpha")]
-    internal partial class SetAlphaStyle : Widget
+    internal partial class SetAlphaStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         /// <summary>
         /// Global alpha applies to everything in Dear ImGui.
         /// </summary>
@@ -28,31 +26,17 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<float> DisabledAlpha { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var valueCount = 0;
-            try
+            if (Alpha.HasValue)
             {
-                if (Alpha.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.Alpha, Alpha.Value);
-                }
-                if (DisabledAlpha.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.DisabledAlpha, DisabledAlpha.Value);
-                }
-
-                context.Update(Input);
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.Alpha, Alpha.Value);
             }
-            finally
+            if (DisabledAlpha.HasValue)
             {
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.DisabledAlpha, DisabledAlpha.Value);
             }
         }
     }

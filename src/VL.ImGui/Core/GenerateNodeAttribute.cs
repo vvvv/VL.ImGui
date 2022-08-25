@@ -19,4 +19,9 @@ namespace VL.ImGui
 
         public bool GenerateImmediate = true;
     }
+
+    public class PinAttribute : Attribute
+    {
+        public int Priority { get; set; }
+    }
 }

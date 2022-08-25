@@ -13,7 +13,7 @@
 
         public bool Enabled { get; set; } = true;
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var value = Update();
             if (ImGuiNET.ImGui.MenuItem(Label ?? string.Empty, Shortcut, ref value, Enabled))

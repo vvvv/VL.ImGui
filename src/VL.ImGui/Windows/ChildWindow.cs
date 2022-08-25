@@ -22,7 +22,7 @@ namespace VL.ImGui.Widgets
         /// </summary>
         public bool IsOpen { get;  private set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
 
             IsOpen = ImGui.BeginChild(Label ?? string.Empty, Size.ToImGui(), HasBorder, Flags);

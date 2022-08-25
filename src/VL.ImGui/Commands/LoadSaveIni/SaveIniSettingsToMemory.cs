@@ -6,7 +6,7 @@
 
         public bool Enabled { private get; set; } = false;
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             if (Enabled)
                 Value = ImGuiNET.ImGui.SaveIniSettingsToMemory();

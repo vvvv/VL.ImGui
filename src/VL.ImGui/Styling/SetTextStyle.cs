@@ -14,10 +14,8 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false, 
         Tags = "Color DisabledColor SelectedTextBg")]
-    internal partial class SetTextStyle : Widget
+    internal partial class SetTextStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> Color { private get; set; }
 
         public Optional<Color4> DisabledColor { private get; set; }
@@ -25,36 +23,22 @@ namespace VL.ImGui.Styling
         public Optional<Color4> SelectedTextBackground { private get; set; }
 
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            try
+            if (Color.HasValue)
             {
-                if (Color.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.Text, Color.Value.ToImGui());
-                }
-                if (DisabledColor.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TextDisabled, DisabledColor.Value.ToImGui());
-                }
-                if (SelectedTextBackground.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TextSelectedBg, SelectedTextBackground.Value.ToImGui());
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.Text, Color.Value.ToImGui());
             }
-            finally
+            if (DisabledColor.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TextDisabled, DisabledColor.Value.ToImGui());
+            }
+            if (SelectedTextBackground.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TextSelectedBg, SelectedTextBackground.Value.ToImGui());
             }
         }
     }

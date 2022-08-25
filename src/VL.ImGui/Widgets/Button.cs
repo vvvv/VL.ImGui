@@ -4,13 +4,13 @@ using System.Reactive;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Category = "ImGui.Widgets", Button = true)]
-    internal partial class Button : ChannelWidget<Unit>
+    internal partial class Button : StylableChannelWidget<Unit>
     {
         public string? Label { get; set; }
 
         public Vector2 Size { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             Update();
             if (ImGuiNET.ImGui.Button(Label ?? string.Empty, Size.ToImGui()))

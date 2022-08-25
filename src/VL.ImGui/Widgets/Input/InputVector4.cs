@@ -15,7 +15,7 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiInputTextFlags Flags { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var value =Update().ToImGui();
             if (ImGuiNET.ImGui.InputFloat4(Label ?? string.Empty, ref value, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))

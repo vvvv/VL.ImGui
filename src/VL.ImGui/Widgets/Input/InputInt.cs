@@ -12,7 +12,7 @@
 
         public ImGuiNET.ImGuiInputTextFlags Flags { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var value = Update();
             if (ImGuiNET.ImGui.InputInt(Label ?? string.Empty, ref value, Step, StepFast, Flags))

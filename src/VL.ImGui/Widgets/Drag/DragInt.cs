@@ -15,7 +15,7 @@
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var value = Update();
             if (ImGuiNET.ImGui.DragInt(Label ?? string.Empty, ref value, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))

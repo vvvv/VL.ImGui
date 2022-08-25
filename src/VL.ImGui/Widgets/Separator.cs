@@ -14,7 +14,7 @@ namespace VL.ImGui.Widgets
     [GenerateNode(Category = "ImGui.Widgets")]
     internal partial class Separator: Widget
     {
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.Separator();
         }

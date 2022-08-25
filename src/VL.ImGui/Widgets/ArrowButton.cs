@@ -10,7 +10,7 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiDir Direction { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             Update();
             if (ImGuiNET.ImGui.ArrowButton(Label ?? string.Empty, Direction))

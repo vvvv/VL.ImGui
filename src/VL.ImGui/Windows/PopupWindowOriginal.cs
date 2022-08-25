@@ -33,7 +33,7 @@ namespace VL.ImGui.Widgets
             _openCloseCount--;
         }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             if (_openCloseCount > 0)
             {

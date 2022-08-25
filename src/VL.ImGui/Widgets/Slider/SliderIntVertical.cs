@@ -17,7 +17,7 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var value = Update();
             if (ImGuiNET.ImGui.VSliderInt(Label ?? string.Empty, Size.ToImGui(), ref value, Min, Max, Format, Flags))

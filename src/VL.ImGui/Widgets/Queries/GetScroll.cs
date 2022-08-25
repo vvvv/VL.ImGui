@@ -12,7 +12,7 @@ namespace VL.ImGui.Widgets
 
         public Vector2 Value { get; private set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var x = ImGuiNET.ImGui.GetScrollX();
             var y = ImGuiNET.ImGui.GetScrollY();

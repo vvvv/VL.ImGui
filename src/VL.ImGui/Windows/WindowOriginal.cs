@@ -6,7 +6,7 @@ namespace VL.ImGui.Windows
 {
     using ImGui = ImGuiNET.ImGui;
 
-    internal sealed partial class Window : Widget
+    internal sealed partial class Window : StylableWidget
     {
         public Widget? Content { get; set; }
 
@@ -26,7 +26,7 @@ namespace VL.ImGui.Windows
 
         public bool Closing { get; private set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
 
             var menuBarCount = MenuBar.Count(x => x != null);

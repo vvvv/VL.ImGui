@@ -14,35 +14,19 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "IndentSpacing")]
-    internal partial class SetIndentStyle : Widget
+    internal partial class SetIndentStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         /// <summary>
         /// Horizontal indentation when e.g. entering a tree node. Generally == (FontSize + FramePadding.x*2).
         /// </summary>
         public Optional<float> Indent { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var valueCount = 0;
-            try
+            if (Indent.HasValue)
             {
-                if (Indent.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.IndentSpacing, Indent.Value);
-                }
-
-                context.Update(Input);
-            }
-            finally
-            {
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.IndentSpacing, Indent.Value);
             }
         }
     }
