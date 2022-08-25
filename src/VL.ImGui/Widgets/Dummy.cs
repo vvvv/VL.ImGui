@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets")]
+    [GenerateNode(Category = "ImGui.Widgets", IsStylable = false)]
     internal partial class Dummy : Widget
     {
         public Vector2 Size { private get; set; }

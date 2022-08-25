@@ -3,7 +3,7 @@ using System.Reactive;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets", Button = true)]
+    [GenerateNode(Category = "ImGui.Widgets", Button = true, IsStylable = false)]
     internal partial class InvisibleButton : ChannelWidget<Unit>
     {
         public string? Label { get; set; }
