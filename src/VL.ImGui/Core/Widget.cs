@@ -8,9 +8,20 @@ namespace VL.ImGui
 
         internal abstract void UpdateCore(Context context);
 
-        internal virtual void Update(Context context)
+        [Pin(Priority = 10)]
+        public IStyle? Style { set; protected get; }
+
+        internal void Update(Context context)
         {
-            UpdateCore(context);
+            try
+            {
+                Style?.Set();
+                UpdateCore(context);
+            }
+            finally
+            {
+                Style?.Reset();
+            }
         }
     }
 }

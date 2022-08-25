@@ -7,7 +7,7 @@ using VL.Core;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
-    internal sealed partial class Row : StylableWidget
+    internal sealed partial class Row : Widget
     {
         public IEnumerable<Widget> Children { get; set; } = Enumerable.Empty<Widget>();
 

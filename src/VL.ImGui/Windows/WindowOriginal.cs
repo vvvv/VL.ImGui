@@ -6,7 +6,7 @@ namespace VL.ImGui.Windows
 {
     using ImGui = ImGuiNET.ImGui;
 
-    internal sealed partial class Window : StylableWidget
+    internal sealed partial class Window : Widget
     {
         public Widget? Content { get; set; }
 

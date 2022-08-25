@@ -105,9 +105,9 @@ namespace VL.ImGui.Generator
         }
 
         private static string CreateSource(SourceProductionContext context, ClassDeclarationSyntax declarationSyntax, SemanticModel semanticModel, 
-            INamedTypeSymbol typeSymbol, ImmutableDictionary<string, TypedConstant> attrData, INamedTypeSymbol pinAttributeSymbol, Mode mode = Mode.RetainedMode)
+            INamedTypeSymbol typeSymbol, ImmutableDictionary<string, TypedConstant> nodeAttrData, INamedTypeSymbol pinAttributeSymbol, Mode mode = Mode.RetainedMode)
         {
-            var category = attrData.GetValueOrDefault("Category").Value as string ?? "ImGui";
+            var category = nodeAttrData.GetValueOrDefault("Category").Value as string ?? "ImGui";
             string nodeDecl = default;
             switch (mode)
             {
@@ -121,15 +121,15 @@ namespace VL.ImGui.Generator
                 default:
                     break;
             }
-            var name = attrData.GetValueOrDefault("Name").Value as string ?? typeSymbol.Name;
-            var tags = attrData.GetValueOrDefault("Tags").Value as string;
+            var name = nodeAttrData.GetValueOrDefault("Name").Value as string ?? typeSymbol.Name;
+            var tags = nodeAttrData.GetValueOrDefault("Tags").Value as string;
             var fragmented = "true";
             if (mode == Mode.ImmediateMode)
                 fragmented = "false";   
-            if (attrData.GetValueOrDefault("Fragmented").Value is bool f)
+            if (nodeAttrData.GetValueOrDefault("Fragmented").Value is bool f)
                 fragmented = f ? "true" : "false";
             var button = false;
-            if (attrData.GetValueOrDefault("Button").Value is bool b)
+            if (nodeAttrData.GetValueOrDefault("Button").Value is bool b)
                 button = b;
 
             var root = declarationSyntax.SyntaxTree.GetCompilationUnitRoot();
@@ -157,10 +157,14 @@ namespace VL.ImGui.Generator
 
             SortedList<int, IPropertySymbol> properties = new SortedList<int, IPropertySymbol>();
             int i = 0;
+            var showStyleInput = (bool)nodeAttrData.GetValueOrDefault("IsStylable").Value;
             foreach (var property in properties_)
             {
-                var data = GetAttributeData(pinAttributeSymbol, property);
-                if (data.TryGetValue("Priority", out var prio))
+                if (property.Name == "Style" && !showStyleInput)
+                    continue;
+
+                var pinAttrData = GetAttributeData(pinAttributeSymbol, property);
+                if (pinAttrData.TryGetValue("Priority", out var prio))
                     properties.Add(((int)prio.Value) * 1000 + i, property);
                 else
                     properties.Add(i, property);
