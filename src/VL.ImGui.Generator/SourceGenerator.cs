@@ -157,7 +157,8 @@ namespace VL.ImGui.Generator
 
             SortedList<int, IPropertySymbol> properties = new SortedList<int, IPropertySymbol>();
             int i = 0;
-            var showStyleInput = (bool)nodeAttrData.GetValueOrDefault("IsStylable").Value;
+            var showStyleInput = (bool)(nodeAttrData.GetValueOrDefault("IsStylable").Value ?? true);
+
             foreach (var property in properties_)
             {
                 if (property.Name == "Style" && !showStyleInput)
