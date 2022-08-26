@@ -18,10 +18,8 @@ namespace VL.ImGui.Styling
     /// </summary>
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false, 
         Tags = "TabHovered TabActive TabUnfocused TabUnfocusedActive TabRounding")]
-    internal partial class SetTabStyle : Widget
+    internal partial class SetTabStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> Background { private get; set; }
 
         public Optional<Color4> Hovered { private get; set; }
@@ -37,55 +35,38 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<float> Rounding { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            var valueCount = 0;
-            try
+            if (Background.HasValue)
             {
-                if (Background.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.Tab, Background.Value.ToImGui());
-                }
-                if (Hovered.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TabHovered, Hovered.Value.ToImGui());
-                }
-                if (Active.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TabActive, Active.Value.ToImGui());
-                }
-                if (Unfocused.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TabUnfocused, Unfocused.Value.ToImGui());
-                }
-                if (UnfocusedActive.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TabUnfocusedActive, UnfocusedActive.Value.ToImGui());
-                }
-
-                if (Rounding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.TabRounding, Rounding.Value);
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.Tab, Background.Value.ToImGui());
             }
-            finally
+            if (Hovered.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TabHovered, Hovered.Value.ToImGui());
+            }
+            if (Active.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TabActive, Active.Value.ToImGui());
+            }
+            if (Unfocused.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TabUnfocused, Unfocused.Value.ToImGui());
+            }
+            if (UnfocusedActive.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TabUnfocusedActive, UnfocusedActive.Value.ToImGui());
+            }
+
+            if (Rounding.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.TabRounding, Rounding.Value);
             }
         }
     }

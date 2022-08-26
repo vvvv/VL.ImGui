@@ -14,10 +14,8 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "ButtonHovered ButtonActive")]
-    internal partial class SetButtonStyle : Widget
+    internal partial class SetButtonStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> Background { private get; set; }
 
         public Optional<Color4> Hovered { private get; set; }
@@ -29,45 +27,28 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<Vector2> TextAlign { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            var valueCount = 0;
-            try
+            if (Background.HasValue)
             {
-                if (Background.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.Button, Background.Value.ToImGui());
-                }
-                if (Hovered.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.ButtonHovered, Hovered.Value.ToImGui());
-                }
-                if (Active.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.ButtonActive, Active.Value.ToImGui());
-                }
-
-                if (TextAlign.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.ButtonTextAlign, TextAlign.Value.ToImGui());
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.Button, Background.Value.ToImGui());
             }
-            finally
+            if (Hovered.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ButtonHovered, Hovered.Value.ToImGui());
+            }
+            if (Active.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ButtonActive, Active.Value.ToImGui());
+            }
+
+            if (TextAlign.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.ButtonTextAlign, TextAlign.Value.ToImGui());
             }
         }
     }

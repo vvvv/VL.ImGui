@@ -26,7 +26,7 @@ namespace VL.ImGui.Windows
 
         public bool Closing { get; private set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
 
             var menuBarCount = MenuBar.Count(x => x != null);

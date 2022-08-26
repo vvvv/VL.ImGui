@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0118-05f38ab35b" Version="0.128">
+<Document xmlns:p="property" Id="PSYFUSRK9eIP46Dl4RzexX" LanguageVersion="2022.5.0-0175-b796320f18" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -50,10 +50,11 @@
               <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="FfM6nYYt7SlMkSFo9TdMPe" Name="Children" Kind="InputPin" />
+            <Pin Id="Ec4DgHqPrsuOyFvbaY4OMN" Name="Style" Kind="InputPin" />
             <Pin Id="Abxi4hqqx28Li9BZG5Lwpv" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="552,505,125,19" Id="HMOmjYqK5u0NRIfEwJhume">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Window" />
             </p:NodeReference>
@@ -62,11 +63,12 @@
             <Pin Id="AApFOEcNv4pNgIbI53vDMB" Name="Has Close Button" Kind="InputPin" DefaultValue="False" />
             <Pin Id="SmshHnSCSCRMAtKV8EB5yn" Name="Fullscreen" Kind="InputPin" DefaultValue="True" />
             <Pin Id="R3hwhAKZDNCMisWLXXyr01" Name="Bounds" Kind="InputPin" />
-            <Pin Id="JNgXmF4Jsg9O7tl68ZLkR3" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="A010AwQvaaLNyyIZSC8kx7" Name="Is Open" Kind="InputPin" />
             <Pin Id="R6nVtH2e91yNqs5XRv5ciU" Name="Menu Bar" Kind="InputPin" />
-            <Pin Id="FiCthLiw2rKPsnt0JEBmCL" Name="Window Flags" Kind="InputPin" DefaultValue="NoTitleBar" />
+            <Pin Id="MLiz39F2g8EMmWd0ABACOB" Name="Style" Kind="InputPin" />
+            <Pin Id="T4aTCYf3E5qMlHJDHMtcsu" Name="Flags" Kind="InputPin" DefaultValue="NoTitleBar" />
             <Pin Id="Vsjz6oKw27JMyKSgvBzeaM" Name="Output" Kind="OutputPin" />
-            <Pin Id="Od2stmgdnMlMmWrWsqBaIj" Name="Closing" Kind="OutputPin" />
+            <Pin Id="O0NftOf5Uw0NAtdtPwvTIS" Name="Is Open" Kind="OutputPin" />
           </Node>
           <Node Bounds="345,287,105,19" Id="L0IkUkaSo6OPpCrMyWNLfJ">
             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
@@ -81,12 +83,13 @@
             <Pin Id="SKj5GkL4ohzOlC8QKK1Biz" Name="Max" Kind="InputPin" />
             <Pin Id="VaYSmyZBRA1MAkLm4Mg2QP" Name="Format" Kind="InputPin" />
             <Pin Id="R2HvXjpFE1ZPFoFWqrxzMY" Name="Flags" Kind="InputPin" />
+            <Pin Id="CrbWSc6DUzQPckDgx0wVH1" Name="Style" Kind="InputPin" />
             <Pin Id="BRd9yebgxOoMD3RPbNezRI" Name="Output" Kind="OutputPin" />
-            <Pin Id="RIlKu7CW8TpOtsWFhLVXAL" Name="Value" Kind="OutputPin" />
             <Pin Id="G8voeKJ8jojMunAlItXQiM" Name="Bang" Kind="OutputPin" />
+            <Pin Id="RIlKu7CW8TpOtsWFhLVXAL" Name="Value" Kind="OutputPin" />
           </Node>
           <Node Bounds="551,407,105,19" Id="BndEfH6zgosMLhXUNdV4lK">
-            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Cons" />
               <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -125,9 +128,10 @@
             <Pin Id="A6s8PyDDkM1PST00Gt2MJ2" Name="Max" Kind="InputPin" />
             <Pin Id="HABfYXUZ9duO2MMELL5Ew4" Name="Format" Kind="InputPin" />
             <Pin Id="Tmb3Gr9vvKjPCATOxihW4v" Name="Flags" Kind="InputPin" DefaultValue="None" />
+            <Pin Id="QVFvxYgYAVuNSKraUSnpaY" Name="Style" Kind="InputPin" />
             <Pin Id="D8cs7jCKkzzM8uzEnwyuDX" Name="Output" Kind="OutputPin" />
-            <Pin Id="LRsEw3p3RlbP3JjO6Iz9mH" Name="Value" Kind="OutputPin" />
             <Pin Id="Gmti7HUnMFAQZZkjJCM6WB" Name="Bang" Kind="OutputPin" />
+            <Pin Id="LRsEw3p3RlbP3JjO6Iz9mH" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="NPul5raOhJAMyBbYGPA6vy" Comment="Label" Bounds="563,220,50,15" ShowValueBox="true" isIOBox="true" Value="Vector2">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -147,9 +151,10 @@
             <Pin Id="UCDYVWQhid7MvSdS0HIPTV" Name="Max" Kind="InputPin" />
             <Pin Id="UNw3IP4hnKlNRo0W7oBN6C" Name="Format" Kind="InputPin" />
             <Pin Id="VZ1HDOywyFpQJSRYMVllp7" Name="Flags" Kind="InputPin" />
+            <Pin Id="V2F2B5Ez2biMr8Q8SDEiQs" Name="Style" Kind="InputPin" />
             <Pin Id="TVtP3vNSJGPMoh0d93WOBb" Name="Output" Kind="OutputPin" />
-            <Pin Id="KG0XIeryv4hNB8r1O1Ybur" Name="Value" Kind="OutputPin" />
             <Pin Id="Qramrk5dAODMohm0ETTpW8" Name="Bang" Kind="OutputPin" />
+            <Pin Id="KG0XIeryv4hNB8r1O1Ybur" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="GbAjutaq5biMe58LioHGlO" Comment="Label" Bounds="695,221,49,15" ShowValueBox="true" isIOBox="true" Value="Vector3">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -169,9 +174,10 @@
             <Pin Id="RFO96EMafu5PeL31U1R32Y" Name="Max" Kind="InputPin" />
             <Pin Id="Lk4BnVAErhYLWmz38LaI6N" Name="Format" Kind="InputPin" />
             <Pin Id="HhK4ZyAsJ72NxXmsiIE7Zq" Name="Flags" Kind="InputPin" />
+            <Pin Id="KhSMEWv70ZTL1OatdCo8Nz" Name="Style" Kind="InputPin" />
             <Pin Id="STHFQavOnxPNp9tHeA8rsx" Name="Output" Kind="OutputPin" />
-            <Pin Id="VXZNIjGehNMO0Qs9gNkjQs" Name="Value" Kind="OutputPin" />
             <Pin Id="L0XMQUd8Fb1QS542kjdWNI" Name="Bang" Kind="OutputPin" />
+            <Pin Id="VXZNIjGehNMO0Qs9gNkjQs" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="PkhhMDmEjmrLypDawRI5EA" Comment="Label" Bounds="830,220,50,15" ShowValueBox="true" isIOBox="true" Value="Vector4">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -212,7 +218,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0118-g05f38ab35b" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0175-gb796320f18" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0118-g05f38ab35b" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0175-gb796320f18" />
 </Document>

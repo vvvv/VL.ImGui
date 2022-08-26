@@ -22,7 +22,7 @@ namespace VL.ImGui.Widgets
 
         public BehaviorSubject<object?> ObservableValue { get; } = new BehaviorSubject<object?>(null);
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var value = ObservableValue.Value;
             if (ImGuiUtils.InputObject(string.Empty, ref value))

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0118-05f38ab35b" Version="0.128">
+<Document xmlns:p="property" Id="DdlEDPemCj4NrEmp4A0JRO" LanguageVersion="2022.5.0-0175-b796320f18" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -44,7 +44,7 @@
             <Pin Id="LcaKA0y2StiOxJw7AEm6yd" Name="Render Time" Kind="OutputPin" />
           </Node>
           <Node Bounds="483,473,125,19" Id="HMOmjYqK5u0NRIfEwJhume">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Window" />
             </p:NodeReference>
@@ -53,11 +53,12 @@
             <Pin Id="AApFOEcNv4pNgIbI53vDMB" Name="Has Close Button" Kind="InputPin" DefaultValue="False" />
             <Pin Id="SmshHnSCSCRMAtKV8EB5yn" Name="Fullscreen" Kind="InputPin" DefaultValue="True" />
             <Pin Id="R3hwhAKZDNCMisWLXXyr01" Name="Bounds" Kind="InputPin" />
-            <Pin Id="JNgXmF4Jsg9O7tl68ZLkR3" Name="Set Bounds" Kind="InputPin" />
+            <Pin Id="GzND9WX1lUXMsKF1PrYKji" Name="Is Open" Kind="InputPin" />
             <Pin Id="Of8l1JJlrCVQDo88jpk4ca" Name="Menu Bar" Kind="InputPin" />
-            <Pin Id="FiCthLiw2rKPsnt0JEBmCL" Name="Window Flags" Kind="InputPin" DefaultValue="NoTitleBar" />
+            <Pin Id="F7RK6fZtS6sMc2qlm2qBDH" Name="Style" Kind="InputPin" />
+            <Pin Id="BGJVgE8XDdwL0cNfi4yqJx" Name="Flags" Kind="InputPin" DefaultValue="NoTitleBar" />
             <Pin Id="Vsjz6oKw27JMyKSgvBzeaM" Name="Output" Kind="OutputPin" />
-            <Pin Id="Od2stmgdnMlMmWrWsqBaIj" Name="Closing" Kind="OutputPin" />
+            <Pin Id="MusolWPpKMKNk1m86ucTQi" Name="Is Open" Kind="OutputPin" />
           </Node>
           <Node Bounds="483,304,65,19" Id="F5fh2qlcCImOAKyqwUYaIm">
             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
@@ -70,9 +71,10 @@
             <Pin Id="O1zNAt3D7yNNjyGHFOmZ63" Name="Items" Kind="InputPin" />
             <Pin Id="R9ar6eytj4uNmebw5QkIxJ" Name="Format" Kind="InputPin" />
             <Pin Id="SF4fP3ffV4TOPIvgGfW3xe" Name="Flags" Kind="InputPin" />
+            <Pin Id="NVB3Oyrcn2BQc7C817kmkK" Name="Style" Kind="InputPin" />
             <Pin Id="F41NxCcjST2OQB5ZmVgjOZ" Name="Output" Kind="OutputPin" />
-            <Pin Id="FasYjJ8kgOqNvLlrdTNF27" Name="Value" Kind="OutputPin" />
             <Pin Id="J3ypg4pwSByMsbFwjH4EUV" Name="Bang" Kind="OutputPin" />
+            <Pin Id="FasYjJ8kgOqNvLlrdTNF27" Name="Value" Kind="OutputPin" />
           </Node>
           <Pad Id="NGiYrJTB9vrPRz4R8Fddvs" Comment="Label" Bounds="422,255,121,15" ShowValueBox="true" isIOBox="true" Value="Dropdown aka Combo">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -119,7 +121,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0118-g05f38ab35b" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0175-gb796320f18" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0118-g05f38ab35b" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0175-gb796320f18" />
 </Document>

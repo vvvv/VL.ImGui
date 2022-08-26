@@ -5,6 +5,23 @@ namespace VL.ImGui
     public abstract class Widget
     {
         internal virtual void Reset() { }
-        internal abstract void Update(Context context);
+
+        internal abstract void UpdateCore(Context context);
+
+        [Pin(Priority = 10)]
+        public IStyle? Style { set; protected get; }
+
+        internal void Update(Context context)
+        {
+            try
+            {
+                Style?.Set();
+                UpdateCore(context);
+            }
+            finally
+            {
+                Style?.Reset();
+            }
+        }
     }
 }

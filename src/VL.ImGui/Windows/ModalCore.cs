@@ -38,7 +38,7 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiWindowFlags Flags { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var bounds = BoundsFlange.Update(Bounds);
             var isOpen = IsOpenFlange.Update(IsOpen, out bool hasChanged);

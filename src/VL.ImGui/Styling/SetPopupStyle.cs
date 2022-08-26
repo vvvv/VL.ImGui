@@ -18,10 +18,8 @@ namespace VL.ImGui.Styling
     /// </summary>
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "Menu Tooltip PopupBg PopupRounding PopupBorderSize")]
-    internal partial class SetPopupStyle : Widget
+    internal partial class SetPopupStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         /// <summary>
         /// Background of popups, menus, tooltips windows
         /// </summary>
@@ -37,39 +35,22 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<float> BorderSize { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            var valueCount = 0;
-            try
+            if (Background.HasValue)
             {
-                if (Background.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.PopupBg, Background.Value.ToImGui());
-                }
-                if (Rounding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.PopupRounding, Rounding.Value);
-                }
-                if (BorderSize.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.PopupBorderSize, BorderSize.Value);
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.PopupBg, Background.Value.ToImGui());
             }
-            finally
+            if (Rounding.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.PopupRounding, Rounding.Value);
+            }
+            if (BorderSize.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.PopupBorderSize, BorderSize.Value);
             }
         }
     }

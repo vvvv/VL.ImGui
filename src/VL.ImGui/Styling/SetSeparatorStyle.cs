@@ -17,46 +17,30 @@ namespace VL.ImGui.Styling
     /// Separator, generally horizontal. inside a menu bar or in horizontal layout mode, this becomes a vertical separator.
     /// </summary>
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false)]
-    internal partial class SetSeparatorStyle : Widget
+    internal partial class SetSeparatorStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> Color { private get; set; }
 
         public Optional<Color4> Hovered { private get; set; }
 
         public Optional<Color4> Active { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            try
+            if (Color.HasValue)
             {
-                if (Color.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.Separator, Color.Value.ToImGui());
-                }
-                if (Hovered.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.SeparatorHovered, Hovered.Value.ToImGui());
-                }
-                if (Active.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.SeparatorActive, Active.Value.ToImGui());
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.Separator, Color.Value.ToImGui());
             }
-            finally
+            if (Hovered.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.SeparatorHovered, Hovered.Value.ToImGui());
+            }
+            if (Active.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.SeparatorActive, Active.Value.ToImGui());
             }
         }
     }

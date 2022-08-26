@@ -6,7 +6,7 @@
 
         public string? Label { get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var value = Update();
             if (ImGuiNET.ImGui.Checkbox(Label ?? string.Empty, ref value))

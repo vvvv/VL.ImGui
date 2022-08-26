@@ -13,10 +13,18 @@ namespace VL.ImGui
         public string? Tags { get; set; }
 
         public bool Fragmented { get; set; }
+
         public bool Button { get; set; }
 
         public bool GenerateRetained = true;
 
         public bool GenerateImmediate = true;
+
+        public bool IsStylable = true;
+    }
+
+    public class PinAttribute : Attribute
+    {
+        public int Priority { get; set; }
     }
 }

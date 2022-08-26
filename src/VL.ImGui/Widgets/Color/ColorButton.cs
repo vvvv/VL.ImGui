@@ -14,7 +14,7 @@ namespace VL.ImGui.Widgets
 
         public ImGuiNET.ImGuiColorEditFlags Flags { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             Update();
             if (ImGuiNET.ImGui.ColorButton(Label ?? string.Empty, Color.ToImGui(), Flags, Size.ToImGui()))

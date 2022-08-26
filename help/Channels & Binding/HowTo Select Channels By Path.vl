@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="EK6n7r6aiZCOXXSgIxGCrk" LanguageVersion="2022.5.0-0108-a77655f3ae" Version="0.128">
-  <NugetDependency Id="L8Hfsb7umBSNKI8aXoC94i" Location="VL.CoreLib" Version="2022.5.0-0108-ga77655f3ae" />
+<Document xmlns:p="property" Id="EK6n7r6aiZCOXXSgIxGCrk" LanguageVersion="2022.5.0-0175-b796320f18" Version="0.128">
+  <NugetDependency Id="L8Hfsb7umBSNKI8aXoC94i" Location="VL.CoreLib" Version="2022.5.0-0175-gb796320f18" />
   <Patch Id="KGKMsOUCMTPPvneFbJtriV">
     <Canvas Id="J62xMM5D21hQLyTp32nubN" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -57,8 +57,9 @@
             <Pin Id="EhovIqmU4OCOCAo8ph1xTP" Name="Max" Kind="InputPin" />
             <Pin Id="VKMFFD2Cq5eP7LTVihYG7h" Name="Format" Kind="InputPin" />
             <Pin Id="GfPJ3h8887MMc1svhCD8Jg" Name="Flags" Kind="InputPin" />
+            <Pin Id="A2ecHT75bKsMwDRbNllE2M" Name="Style" Kind="InputPin" />
             <Pin Id="VizEArm4ke2Psz2H6ikMIz" Name="Output" Kind="OutputPin" />
-            <Pin Id="Ucej5ntnG8pMsdiTD4w3Hf" Name="Channel" Kind="OutputPin" />
+            <Pin Id="RtkktzB0jWWNCi38uKemXT" Name="Bang" Kind="OutputPin" />
             <Pin Id="NPGqFtc1CKcONLOZChztLR" Name="Value" Kind="OutputPin" />
           </Node>
           <Node Bounds="151,144,53,19" Id="MpFcNWPiY3yP30XZyYjFcM">
@@ -71,12 +72,13 @@
             <Pin Id="DhH8ZvSF513NZVoP6IvK09" Name="Value" Kind="OutputPin" />
           </Node>
           <Node Bounds="554,374,225,26" Id="FDbxskwYZK5NUKwTX7jl9J">
-            <p:NodeReference LastCategoryFullName="Animation.ADSRSettings" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Animation.ADSRSettings" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <FullNameCategoryReference ID="Animation.ADSRSettings" />
               <Choice Kind="OperationCallFlag" Name="Split" />
             </p:NodeReference>
             <Pin Id="NiCUrnLN2NeQZzP4eWPvYb" Name="Input" Kind="StateInputPin" />
+            <Pin Id="NRyS1bqqPcbNmspguCfPLC" Name="Output" Kind="OutputPin" />
             <Pin Id="VJsRTIhDvmiL1XEutM8t8k" Name="Attack Time" Kind="OutputPin" />
             <Pin Id="IdL0hfuKqwWNFh0Z0RA3CJ" Name="Decay Time" Kind="OutputPin" />
             <Pin Id="CUYzvLwmJi2P07OMVuwZPL" Name="Sustain Level" Kind="OutputPin" />
@@ -96,7 +98,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="152,335,45,19" Id="QJPbaYBYialO4grr2c8M4X">
-            <p:NodeReference>
+            <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Select (ByPath)" />
             </p:NodeReference>
@@ -116,12 +118,13 @@
             <Pin Id="IDyv5QlhynJO0nS49rgpPL" Name="Max" Kind="InputPin" />
             <Pin Id="UaHEVN6UNrPLoli0cvmE9Z" Name="Format" Kind="InputPin" />
             <Pin Id="Fbw5zd0sVF2LX0GZ15jiNq" Name="Flags" Kind="InputPin" />
+            <Pin Id="KpaCG96Nm8QPs5HrzkwfoU" Name="Style" Kind="InputPin" />
             <Pin Id="A3znR8b5dLCLpfWLcxHObb" Name="Output" Kind="OutputPin" />
-            <Pin Id="PNgC8c9Hcb2LjXMKDVxy0e" Name="Channel" Kind="OutputPin" />
+            <Pin Id="CokUdVHXvd0OXVcgQyXfoP" Name="Bang" Kind="OutputPin" />
             <Pin Id="H0N3fHgPGFUONvLs1VE4AN" Name="Value" Kind="OutputPin" />
           </Node>
           <Node Bounds="338,336,45,19" Id="QMwGrR7kiOsNntfYTMRRDh">
-            <p:NodeReference>
+            <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Select (ByPath)" />
             </p:NodeReference>
@@ -136,10 +139,11 @@
               <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="KQ2hn8RO1EULoLKAJLOjzS" Name="Children" Kind="InputPin" />
+            <Pin Id="RUnYwFeBlSgMJiXrt0Yvjk" Name="Style" Kind="InputPin" />
             <Pin Id="ExTrmeoogNcLueIS200mqR" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="243,556,39,19" Id="Km1ch6weSciLQ3kBT4OnNS">
-            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Cons" />
               <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -231,7 +235,7 @@
             </Patch>
           </Node>
           <Node Bounds="151,112,69,19" Id="FxuvrXWNgSZL0nApMsAoBr">
-            <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="HowTo Bind Channels By Path.vl">
+            <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="HowTo Select Channels By Path.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SomeModel" />
             </p:NodeReference>
@@ -239,7 +243,7 @@
             <Pin Id="HoY4l1xh9wKL6lGJRPzMB9" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="671,241,58,26" Id="NWaKeoZlvfbPK7cV2x4v2E">
-            <p:NodeReference LastCategoryFullName="Main.SomeModel" LastSymbolSource="HowTo Bind Channels By Path.vl">
+            <p:NodeReference LastCategoryFullName="Main.SomeModel" LastSymbolSource="HowTo Select Channels By Path.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="RecordType" Name="SomeModel" />
               <Choice Kind="OperationCallFlag" Name="Split" />
@@ -248,7 +252,7 @@
             <Pin Id="Q5p5mrNzBWXOpWYLXwfiNH" Name="Items" Kind="OutputPin" />
           </Node>
           <Node Bounds="671,310,50,19" Id="SQqv4D1JdTQMAf10WMczfe">
-            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Decons" />
               <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -257,13 +261,14 @@
             <Pin Id="O2NTehPWJEQO9ozCZp2huR" Name="Result" Kind="OutputPin" />
             <Pin Id="GET9OHsvVSxNd2wdQLINcq" Name="Result 2" Kind="OutputPin" />
           </Node>
-          <Node Bounds="789,376,225,26" Id="OohccL69tuTL3nUyeqaIRx">
-            <p:NodeReference LastCategoryFullName="Animation.ADSRSettings" LastSymbolSource="CoreLibBasics.vl">
+          <Node Bounds="803,377,245,26" Id="OohccL69tuTL3nUyeqaIRx">
+            <p:NodeReference LastCategoryFullName="Animation.ADSRSettings" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <FullNameCategoryReference ID="Animation.ADSRSettings" />
               <Choice Kind="OperationCallFlag" Name="Split" />
             </p:NodeReference>
             <Pin Id="B2T03XcbTZoNmYOnPKCsvU" Name="Input" Kind="StateInputPin" />
+            <Pin Id="QCKK1ASqzq6MHATgyOE6kw" Name="Output" Kind="OutputPin" />
             <Pin Id="SD86RzWQc6LN6S2iWr6jU2" Name="Attack Time" Kind="OutputPin" />
             <Pin Id="VVGtNsf3giWLKTuYuM7PrX" Name="Decay Time" Kind="OutputPin" />
             <Pin Id="Fq1ACH8Iyq6Ovq213E773Q" Name="Sustain Level" Kind="OutputPin" />
@@ -277,7 +282,7 @@
             <Pin Id="TrLuEhcUnCoO0gEB5KNknb" Name="Releae Curve" Kind="OutputPin" />
             <Pin Id="DnWQvt5qwdoMGSOpWXGeUY" Name="Release Mode" Kind="OutputPin" />
           </Node>
-          <Pad Id="GYzRKX0SDalQHut5CvT08v" Comment="Decay Time" Bounds="811,432,50,21" ShowValueBox="true" isIOBox="true">
+          <Pad Id="GYzRKX0SDalQHut5CvT08v" Comment="Decay Time" Bounds="825,433,50,21" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
               <p:fontsize p:Type="Int32">10</p:fontsize>
             </p:ValueBoxSettings>
@@ -325,5 +330,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="LZUyzxJKeMPMECjLpyzavX" Location="VL.ImGui" Version="0.0.0" />
-  <NugetDependency Id="JvyGdDPFdVbNL6ayfyUK7T" Location="VL.Skia" Version="2022.5.0-0108-ga77655f3ae" />
+  <NugetDependency Id="JvyGdDPFdVbNL6ayfyUK7T" Location="VL.Skia" Version="2022.5.0-0175-gb796320f18" />
 </Document>

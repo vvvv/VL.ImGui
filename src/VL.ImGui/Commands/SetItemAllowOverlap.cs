@@ -7,7 +7,7 @@
     internal partial class SetItemAllowOverlap : Widget
     {
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
                 ImGuiNET.ImGui.SetItemAllowOverlap();
         }

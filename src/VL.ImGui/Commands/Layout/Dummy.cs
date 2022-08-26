@@ -10,7 +10,7 @@ namespace VL.ImGui.Widgets
     {
         public Vector2 Size { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.Dummy(Size.ToImGui());
         }

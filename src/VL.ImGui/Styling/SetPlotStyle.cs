@@ -15,10 +15,8 @@ namespace VL.ImGui.Styling
 
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "PlotLines PlotLinesHovered PlotHistogram PlotHistogramHovered")]
-    internal partial class SetPlotStyle : Widget
+    internal partial class SetPlotStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> Line { private get; set; }
 
         public Optional<Color4> LineHovered { private get; set; }
@@ -27,41 +25,27 @@ namespace VL.ImGui.Styling
 
         public Optional<Color4> HistogramHovered { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            try
+            if (Line.HasValue)
             {
-                if (Line.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.PlotLines, Line.Value.ToImGui());
-                }
-                if (LineHovered.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.PlotLinesHovered, LineHovered.Value.ToImGui());
-                }
-                if (Histogram.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.PlotHistogram, Histogram.Value.ToImGui());
-                }
-                if (HistogramHovered.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.PlotHistogramHovered, HistogramHovered.Value.ToImGui());
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.PlotLines, Line.Value.ToImGui());
             }
-            finally
+            if (LineHovered.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.PlotLinesHovered, LineHovered.Value.ToImGui());
+            }
+            if (Histogram.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.PlotHistogram, Histogram.Value.ToImGui());
+            }
+            if (HistogramHovered.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.PlotHistogramHovered, HistogramHovered.Value.ToImGui());
             }
         }
     }

@@ -5,7 +5,7 @@
     {
         public float Alpha { private get; set; } = 1f;
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.SetNextWindowBgAlpha(Alpha);
         }

@@ -14,33 +14,16 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "Checkmark")]
-    internal partial class SetCheckboxStyle : Widget
+    internal partial class SetCheckboxStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> Checkmark { private get; set; }
 
-
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            try
+            if (Checkmark.HasValue)
             {
-                if (Checkmark.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.CheckMark, Checkmark.Value.ToImGui());
-                }
-
-                context.Update(Input);
-            }
-            finally
-            {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.CheckMark, Checkmark.Value.ToImGui());
             }
         }
     }

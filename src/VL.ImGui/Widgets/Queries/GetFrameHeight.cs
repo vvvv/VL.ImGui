@@ -9,7 +9,7 @@
 
         public float Value { get; private set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             Value = ImGuiNET.ImGui.GetFrameHeight();
         }

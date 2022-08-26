@@ -14,10 +14,8 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "TableHeaderBg TableRowBg TableRowBgAlt TableBorderStrong TableBorderLight CellPadding")]
-    internal partial class SetTableStyle : Widget
+    internal partial class SetTableStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> HeaderBackground { private get; set; }
 
         /// <summary>
@@ -45,55 +43,38 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<Vector2> CellPadding { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            var valueCount = 0;
-            try
+            if (HeaderBackground.HasValue)
             {
-                if (HeaderBackground.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TableHeaderBg, HeaderBackground.Value.ToImGui());
-                }
-                if (RowBackground.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TableRowBg, RowBackground.Value.ToImGui());
-                }
-                if (RowBackgroundAlt.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TableRowBgAlt, RowBackgroundAlt.Value.ToImGui());
-                }
-                if (BorderStrongColor.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TableBorderStrong, BorderStrongColor.Value.ToImGui());
-                }
-                if (BorderLightColor.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TableBorderLight, BorderLightColor.Value.ToImGui());
-                }
-
-                if (CellPadding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.CellPadding, CellPadding.Value.ToImGui());
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TableHeaderBg, HeaderBackground.Value.ToImGui());
             }
-            finally
+            if (RowBackground.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TableRowBg, RowBackground.Value.ToImGui());
+            }
+            if (RowBackgroundAlt.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TableRowBgAlt, RowBackgroundAlt.Value.ToImGui());
+            }
+            if (BorderStrongColor.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TableBorderStrong, BorderStrongColor.Value.ToImGui());
+            }
+            if (BorderLightColor.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TableBorderLight, BorderLightColor.Value.ToImGui());
+            }
+
+            if (CellPadding.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.CellPadding, CellPadding.Value.ToImGui());
             }
         }
     }

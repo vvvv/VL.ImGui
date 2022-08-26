@@ -10,7 +10,7 @@ namespace VL.ImGui.Widgets
 
         public string? Text { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var width = ImGuiNET.ImGui.CalcTextSize(Text ?? string.Empty);
             Value = ImGuiConversion.ToVL(width);

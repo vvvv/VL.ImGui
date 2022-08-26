@@ -18,10 +18,8 @@ namespace VL.ImGui.Styling
     /// </summary>
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "FrameBg FrameBgActive FrameBgHovered")]
-    internal partial class SetFrameStyle : Widget
+    internal partial class SetFrameStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> Background { private get; set; }
 
         public Optional<Color4> Hovered { private get; set; }
@@ -43,55 +41,38 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<float> BorderSize { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            var valueCount = 0;
-            try
+            if (Background.HasValue)
             {
-                if (Background.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.FrameBg, Background.Value.ToImGui());
-                }
-                if (Active.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.FrameBgActive, Active.Value.ToImGui());
-                }
-                if (Hovered.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.FrameBgHovered, Hovered.Value.ToImGui());
-                }
-
-                if (Padding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.FramePadding, Padding.Value.ToImGui());
-                }
-                if (Rounding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.FrameRounding, Rounding.Value);
-                }
-                if (BorderSize.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.FrameBorderSize, BorderSize.Value);
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.FrameBg, Background.Value.ToImGui());
             }
-            finally
+            if (Active.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.FrameBgActive, Active.Value.ToImGui());
+            }
+            if (Hovered.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.FrameBgHovered, Hovered.Value.ToImGui());
+            }
+
+            if (Padding.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.FramePadding, Padding.Value.ToImGui());
+            }
+            if (Rounding.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.FrameRounding, Rounding.Value);
+            }
+            if (BorderSize.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.FrameBorderSize, BorderSize.Value);
             }
         }
     }

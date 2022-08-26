@@ -7,14 +7,14 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(GenerateImmediate = false)]
+    [GenerateNode(GenerateImmediate = false, IsStylable = false)]
     internal partial class IndentUnindent : Widget
     {
         public Widget? Input { private get; set; }
 
         public float Value { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.Indent(Value);
             try

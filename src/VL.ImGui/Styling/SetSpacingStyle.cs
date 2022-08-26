@@ -14,10 +14,8 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "ItemSpacing ItemInnerSpacing")]
-    internal partial class SetSpacingStyle : Widget
+    internal partial class SetSpacingStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         /// <summary>
         /// Horizontal and vertical spacing between widgets/lines.
         /// </summary>
@@ -28,31 +26,17 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<Vector2> InnerSpacing { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var valueCount = 0;
-            try
+            if (ItemSpacing.HasValue)
             {
-                if (ItemSpacing.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.ItemSpacing, ItemSpacing.Value.ToImGui());
-                }
-                if (InnerSpacing.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.ItemInnerSpacing, InnerSpacing.Value.ToImGui());
-                }
-
-                context.Update(Input);
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.ItemSpacing, ItemSpacing.Value.ToImGui());
             }
-            finally
+            if (InnerSpacing.HasValue)
             {
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.ItemInnerSpacing, InnerSpacing.Value.ToImGui());
             }
         }
     }

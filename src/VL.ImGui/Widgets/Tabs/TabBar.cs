@@ -9,7 +9,7 @@
 
         public ImGuiNET.ImGuiTabBarFlags Flags { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             if (ImGuiNET.ImGui.BeginTabBar(Label ?? string.Empty, Flags))
             {

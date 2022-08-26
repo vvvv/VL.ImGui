@@ -7,7 +7,7 @@
 
         public int Index { get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var value = Update();
             if (ImGuiNET.ImGui.RadioButton(Label ?? string.Empty, ref value, Index))

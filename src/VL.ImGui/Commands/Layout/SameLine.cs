@@ -11,7 +11,7 @@
 
         public float Spacing { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             ImGuiNET.ImGui.SameLine(Offset, Spacing);
         }

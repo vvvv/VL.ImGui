@@ -14,10 +14,8 @@ namespace VL.ImGui.Styling
     // We decided that the style nodes shall take all the relevant values in one go (= disable fragments).
     [GenerateNode(Fragmented = false, Category = "ImGui.Styling", GenerateImmediate = false,
         Tags = "WindowBg MenuBarBg WindowMinSize WindowTitleAlign WindowPadding WindowRounding WindowBorderSize")]
-    internal partial class SetWindowStyle : Widget
+    internal partial class SetWindowStyle : StyleBase
     {
-        public Widget? Input { private get; set; }
-
         public Optional<Color4> Background { private get; set; }
 
         public Optional<Color4> MenuBarBackground { private get; set; }
@@ -65,89 +63,72 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<float> BorderSize { private get; set; }
 
-        internal override void Update(Context context)
+        internal override void SetCore()
         {
-            if (Input is null)
-                return;
-
-            var colorCount = 0;
-            var valueCount = 0;
-            try
+            if (Background.HasValue)
             {
-                if (Background.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.WindowBg, Background.Value.ToImGui());
-                }
-                if (MenuBarBackground.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.MenuBarBg, MenuBarBackground.Value.ToImGui());
-                }
-                if (ResizeGripColor.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.ResizeGrip, ResizeGripColor.Value.ToImGui());
-                }
-                if (ResizeGripHovered.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.ResizeGripHovered, ResizeGripHovered.Value.ToImGui());
-                }
-                if (ResizeGripActive.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.ResizeGripActive, ResizeGripActive.Value.ToImGui());
-                }
-                if (TitleBackground.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TitleBg, TitleBackground.Value.ToImGui());
-                }
-                if (TitleBackgroundActive.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TitleBgActive, TitleBackgroundActive.Value.ToImGui()); ;
-                }
-                if (TitleBackgroundCollapsed.HasValue)
-                {
-                    colorCount++;
-                    ImGui.PushStyleColor(ImGuiCol.TitleBgCollapsed, TitleBackgroundCollapsed.Value.ToImGui());
-                }
-                if (MinSize.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.WindowMinSize, MinSize.Value.ToImGui());
-                }
-                if (TitleAlign.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.WindowTitleAlign, TitleAlign.Value.ToImGui());
-                }
-                if (Padding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, Padding.Value.ToImGui());
-                }
-                if (Rounding.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.WindowRounding, Rounding.Value);
-                }
-                if (BorderSize.HasValue)
-                {
-                    valueCount++;
-                    ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, BorderSize.Value);
-                }
-
-                context.Update(Input);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.WindowBg, Background.Value.ToImGui());
             }
-            finally
+            if (MenuBarBackground.HasValue)
             {
-                if (colorCount > 0)
-                    ImGui.PopStyleColor(colorCount);
-                if (valueCount > 0)
-                    ImGui.PopStyleVar(valueCount);
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.MenuBarBg, MenuBarBackground.Value.ToImGui());
+            }
+            if (ResizeGripColor.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ResizeGrip, ResizeGripColor.Value.ToImGui());
+            }
+            if (ResizeGripHovered.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ResizeGripHovered, ResizeGripHovered.Value.ToImGui());
+            }
+            if (ResizeGripActive.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ResizeGripActive, ResizeGripActive.Value.ToImGui());
+            }
+            if (TitleBackground.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TitleBg, TitleBackground.Value.ToImGui());
+            }
+            if (TitleBackgroundActive.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TitleBgActive, TitleBackgroundActive.Value.ToImGui()); ;
+            }
+            if (TitleBackgroundCollapsed.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.TitleBgCollapsed, TitleBackgroundCollapsed.Value.ToImGui());
+            }
+            if (MinSize.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowMinSize, MinSize.Value.ToImGui());
+            }
+            if (TitleAlign.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowTitleAlign, TitleAlign.Value.ToImGui());
+            }
+            if (Padding.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, Padding.Value.ToImGui());
+            }
+            if (Rounding.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowRounding, Rounding.Value);
+            }
+            if (BorderSize.HasValue)
+            {
+                valueCount++;
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, BorderSize.Value);
             }
         }
     }

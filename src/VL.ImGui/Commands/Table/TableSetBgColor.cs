@@ -16,7 +16,7 @@ namespace VL.ImGui.Widgets
 
         public int Column { private get; set; } = -1;
 
-        internal override void Update(Context context)
+        internal override void UpdateCore(Context context)
         {
             var uintColor = ImGuiNET.ImGui.GetColorU32(Color.Value.ToImGui());
 
