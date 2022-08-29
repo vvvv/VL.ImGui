@@ -1,6 +1,6 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Commands")]
+    [GenerateNode(Category = "ImGui.Commands", IsStylable = false)]
     internal partial class AlignTextToFramePadding : Widget
     {
 

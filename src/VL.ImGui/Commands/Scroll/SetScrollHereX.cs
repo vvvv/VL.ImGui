@@ -3,7 +3,7 @@
     /// <summary>
     /// Adjust scrolling amount to make current cursor position visible.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false, IsStylable = false)]
     internal partial class SetScrollHereX : Widget
     {
         /// <summary>

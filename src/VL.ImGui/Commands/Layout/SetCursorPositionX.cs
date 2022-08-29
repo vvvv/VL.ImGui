@@ -3,7 +3,7 @@
     /// <summary>
     /// Cursor position in window coordinates (relative to window position)
     /// </summary>
-    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false, IsStylable = false)]
     internal partial class SetCursorPosY : Widget
     {
         public float Position { private get; set; }

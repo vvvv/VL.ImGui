@@ -3,7 +3,7 @@
     /// <summary>
     /// Was the last item just made inactive (item was previously active). Useful for Undo/Redo patterns with widgets that requires continuous editing.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class IsItemDeactivated : Widget
     {
 

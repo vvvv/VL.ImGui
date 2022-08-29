@@ -3,7 +3,7 @@
     /// <summary>
     /// Approx. FontSize + style.FramePadding.y * 2
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetFrameHeight : Widget
     {
 

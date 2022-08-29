@@ -3,7 +3,7 @@
     /// <summary>
     /// Return primary/default viewport.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetMainViewport : Widget
     {
         public ImGuiNET.ImGuiViewportPtr Value { get; private set; }

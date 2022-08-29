@@ -3,7 +3,7 @@
     /// <summary>
     /// Return current column index.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class TableGetColumnIndex : Widget
     {
         public int Value { get; private set; }

@@ -3,7 +3,7 @@
     /// <summary>
     /// Was the last item open state toggled? set by TreeNode.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class IsItemToggledOpen : Widget
     {
 

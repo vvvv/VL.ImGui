@@ -1,6 +1,6 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Commands", Name = "TableSetupColumn", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Commands", Name = "TableSetupColumn", GenerateRetained = false, IsStylable = false)]
     internal partial class TableSetupColumnImmediate : Widget
     {
 

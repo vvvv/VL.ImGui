@@ -6,7 +6,7 @@ namespace VL.ImGui.Widgets
     /// Get scrolling amount [0 .. GetScrollMax]
     /// </summary>
 
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetScroll : Widget
     {
 

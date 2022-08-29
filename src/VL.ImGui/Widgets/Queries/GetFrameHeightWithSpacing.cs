@@ -3,7 +3,7 @@
     /// <summary>
     /// Distance in pixels between 2 consecutive lines of framed widgets. Approx. FontSize + style.FramePadding.y * 2 + style.ItemSpacing.y
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetFrameHeightWithSpacing : Widget
     {
 

@@ -3,7 +3,7 @@
     /// <summary>
     /// Distance in pixels between 2 consecutive lines of text. Approx. FontSize + style.ItemSpacing.y
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetTextLineHeightWithSpacing : Widget
     {
 

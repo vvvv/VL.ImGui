@@ -3,7 +3,7 @@
     /// <summary>
     /// Return number of columns (value passed to BeginTable)
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class TableGetColumnCount : Widget
     {
         public int Value { get; private set; }
