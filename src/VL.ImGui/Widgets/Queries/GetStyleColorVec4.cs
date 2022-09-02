@@ -8,7 +8,7 @@ namespace VL.ImGui.Widgets
     [GenerateNode(Category = "ImGui.Queries")]
     internal partial class GetStyleColor : Widget
     {
-        public ImGuiNET.ImGuiCol Flag { get; private set; }
+        public ImGuiNET.ImGuiCol Flag { private get; set; }
 
         public Color4 Value { get; private set; }
 
