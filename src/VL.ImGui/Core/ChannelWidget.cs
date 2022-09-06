@@ -1,4 +1,6 @@
-﻿namespace VL.ImGui.Widgets
+﻿using VL.Lib.Reactive;
+
+namespace VL.ImGui.Widgets
 {
     internal abstract class ChannelWidget<T> : Widget//, IDisposable
     {

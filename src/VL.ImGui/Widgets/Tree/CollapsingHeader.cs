@@ -1,4 +1,6 @@
-﻿namespace VL.ImGui.Widgets
+﻿using VL.Lib.Reactive;
+
+namespace VL.ImGui.Widgets
 {
     [GenerateNode(Category = "ImGui.Widgets", Tags = "tree", GenerateImmediate = false)]
     internal sealed partial class CollapsingHeader : Widget

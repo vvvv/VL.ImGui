@@ -1,5 +1,6 @@
 ﻿using Stride.Core.Mathematics;
 using ImGuiNET;
+using VL.Lib.Reactive;
 
 namespace VL.ImGui.Windows
 {

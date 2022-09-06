@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="EK6n7r6aiZCOXXSgIxGCrk" LanguageVersion="2022.5.0-0175-b796320f18" Version="0.128">
-  <NugetDependency Id="L8Hfsb7umBSNKI8aXoC94i" Location="VL.CoreLib" Version="2022.5.0-0175-gb796320f18" />
+<Document xmlns:p="property" Id="EK6n7r6aiZCOXXSgIxGCrk" LanguageVersion="2022.5.0-0188-31269d4f1c" Version="0.128">
+  <NugetDependency Id="L8Hfsb7umBSNKI8aXoC94i" Location="VL.CoreLib" Version="2022.5.0-0188-g31269d4f1c" />
   <Patch Id="KGKMsOUCMTPPvneFbJtriV">
     <Canvas Id="J62xMM5D21hQLyTp32nubN" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -20,7 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="MYdAa3OfOvsOmv57qtQEjW" Name="Bounds" Kind="InputPin" DefaultValue="1113, 36, 613, 156" />
+            <Pin Id="MYdAa3OfOvsOmv57qtQEjW" Name="Bounds" Kind="InputPin" DefaultValue="1112, 36, 612, 156" />
             <Pin Id="AHnB9PchxYdPUyNnKNmWVp" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="CBHX6kgBFHHOBT1XSiQ9x2" Name="Input" Kind="InputPin" />
             <Pin Id="Ni4j8uepyREO0cONRKPcEU" Name="Color" Kind="InputPin" />
@@ -63,7 +63,7 @@
             <Pin Id="NPGqFtc1CKcONLOZChztLR" Name="Value" Kind="OutputPin" />
           </Node>
           <Node Bounds="151,144,53,19" Id="MpFcNWPiY3yP30XZyYjFcM">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Channel" />
             </p:NodeReference>
@@ -98,7 +98,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="152,335,45,19" Id="QJPbaYBYialO4grr2c8M4X">
-            <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
+            <p:NodeReference LastCategoryFullName="Reactive.Channel" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Select (ByPath)" />
             </p:NodeReference>
@@ -124,7 +124,7 @@
             <Pin Id="H0N3fHgPGFUONvLs1VE4AN" Name="Value" Kind="OutputPin" />
           </Node>
           <Node Bounds="338,336,45,19" Id="QMwGrR7kiOsNntfYTMRRDh">
-            <p:NodeReference LastCategoryFullName="ImGui.Channel" LastSymbolSource="VL.ImGui.vl">
+            <p:NodeReference LastCategoryFullName="Reactive.Channel" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Select (ByPath)" />
             </p:NodeReference>
@@ -169,7 +169,7 @@
                 <Pad Id="GbpFS77oUk2OeLkkxzC8gz" SlotId="BNiI0zXVXa2P44bYDdX5nR" Bounds="511,304" />
                 <ControlPoint Id="A3YntcyzZZJMU0RfzTIMxr" Bounds="511,409" />
                 <Node Bounds="345,195,105,26" Id="IxTGwbKL6zgMD33go91pXJ">
-                  <p:NodeReference LastCategoryFullName="Animation.ADSRSettings" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Animation.ADSRSettings" LastSymbolSource="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="RecordType" Name="ADSRSettings" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
@@ -183,7 +183,7 @@
                   <Pin Id="Sv6yYybH1ZuMKRhuzvbJaW" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="345,233,39,19" Id="LlivH4CA2Q1NKmtAWU3DNn">
-                  <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Cons" />
                     <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -193,7 +193,7 @@
                   <Pin Id="GF7pN1SEk8TL1y8thpkxps" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="464,196,105,26" Id="AsDKvn7tbsQMoFwYovcK6i">
-                  <p:NodeReference LastCategoryFullName="Animation.ADSRSettings" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Animation.ADSRSettings" LastSymbolSource="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="RecordType" Name="ADSRSettings" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
@@ -287,12 +287,12 @@
               <p:fontsize p:Type="Int32">10</p:fontsize>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="SBOEpq4r5mKNXpwZ71PPf3" Comment="" Bounds="194,313,100,15" ShowValueBox="true" isIOBox="true" Value="Items[0].AttackTime">
+          <Pad Id="SBOEpq4r5mKNXpwZ71PPf3" Comment="" Bounds="194,313,109,11" ShowValueBox="true" isIOBox="true" Value="Items[0].Attack Time">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="IpxaHZS8R6bPVGtgA7jAiW" Comment="" Bounds="380,311,110,15" ShowValueBox="true" isIOBox="true" Value="Items[1].DecayTime">
+          <Pad Id="IpxaHZS8R6bPVGtgA7jAiW" Comment="" Bounds="380,311,110,15" ShowValueBox="true" isIOBox="true" Value="Items[1].Decay Time">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -330,5 +330,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="LZUyzxJKeMPMECjLpyzavX" Location="VL.ImGui" Version="0.0.0" />
-  <NugetDependency Id="JvyGdDPFdVbNL6ayfyUK7T" Location="VL.Skia" Version="2022.5.0-0175-gb796320f18" />
+  <NugetDependency Id="JvyGdDPFdVbNL6ayfyUK7T" Location="VL.Skia" Version="2022.5.0-0188-g31269d4f1c" />
 </Document>
