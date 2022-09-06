@@ -6,7 +6,7 @@ namespace VL.ImGui.Widgets
     /// Calculate unique ID (hash of whole ID stack + given parameter). e.g. if you want to query into ImGuiStorage yourself
     /// </summary>
 
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetID : Widget
     {
 

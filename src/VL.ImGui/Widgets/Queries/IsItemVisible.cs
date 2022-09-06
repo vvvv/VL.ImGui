@@ -3,7 +3,7 @@
     /// <summary>
     /// Is the last item visible? (items may be out of sight because of clipping/scrolling)
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class IsItemVisible : Widget
     {
 

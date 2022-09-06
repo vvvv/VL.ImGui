@@ -6,7 +6,7 @@ namespace VL.ImGui.Widgets
     /// Current content boundaries (typically window boundaries including scrolling, or current column boundaries), in windows coordinates
     /// </summary>
 
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetContentRegionMax : Widget
     {
 

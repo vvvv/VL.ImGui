@@ -6,7 +6,7 @@ namespace VL.ImGui.Widgets
     /// Retrieve available space from a given point. == GetContentRegionMax() - GetCursorPos()
     /// </summary>
 
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetContentRegionAvail : Widget
     {
 

@@ -3,7 +3,7 @@
     /// <summary>
     /// Approx. = FontSize
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetTextLineHeight : Widget
     {
 

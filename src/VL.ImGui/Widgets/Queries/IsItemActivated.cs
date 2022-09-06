@@ -3,7 +3,7 @@
     /// <summary>
     /// Was the last item just made active (item was previously inactive).
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class IsItemActivated : Widget
     {
 

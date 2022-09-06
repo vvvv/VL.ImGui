@@ -3,7 +3,7 @@
 namespace VL.ImGui.Widgets
 {
     //TODO: This functionality is part of the window. Remove the Command?
-    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false, IsStylable = false)]
     internal partial class SetNextWindowPosition : Widget
     {
         public Vector2 Position { private get; set; }

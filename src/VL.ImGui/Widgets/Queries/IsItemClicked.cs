@@ -3,7 +3,7 @@
     /// <summary>
     /// Is the last item hovered and mouse clicked on?
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class IsItemClicked : Widget
     {
 

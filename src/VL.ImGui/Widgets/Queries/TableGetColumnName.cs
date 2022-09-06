@@ -3,7 +3,7 @@
     /// <summary>
     /// Return '' if column didn't have a name declared by TableSetupColumn().
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class TableGetColumnName : Widget
     {
         /// <summary>

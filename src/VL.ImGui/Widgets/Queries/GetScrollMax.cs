@@ -6,7 +6,7 @@ namespace VL.ImGui.Widgets
     /// Get maximum scrolling amount ~~ ContentSize - WindowSize - DecorationsSize
     /// </summary>
 
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetScrollMax : Widget
     {
 

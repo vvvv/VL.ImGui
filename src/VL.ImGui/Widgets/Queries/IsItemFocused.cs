@@ -3,7 +3,7 @@
     /// <summary>
     /// Is the last item focused for keyboard/gamepad navigation?
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class IsItemFocused : Widget
     {
 

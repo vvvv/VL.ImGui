@@ -6,7 +6,7 @@ namespace VL.ImGui.Widgets
     /// Get the compiled version string e.g. '1.80 WIP' (essentially the value for IMGUI_VERSION from the compiled version of imgui.cpp)
     /// </summary>
 
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class GetVersion : Widget
     {
 

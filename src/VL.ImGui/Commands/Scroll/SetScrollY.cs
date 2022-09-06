@@ -3,7 +3,7 @@
     /// <summary>
     /// Set scrolling amount
     /// </summary>
-    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false, IsStylable = false)]
     internal partial class SetScrollY : Widget
     {
         public float Value { private get; set; }

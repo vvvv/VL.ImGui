@@ -3,7 +3,7 @@
     /// <summary>
     /// Is any item focused?
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries")]
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
     internal partial class IsAnyItemFocused : Widget
     {
 
