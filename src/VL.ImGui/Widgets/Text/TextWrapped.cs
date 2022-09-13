@@ -3,7 +3,7 @@
     [GenerateNode(Name = "Text (Wrapped)", Category = "ImGui.Widgets")]
     internal partial class TextWrapped : Widget
     {
-        public string? Text { private get; set; }
+        public string? Text { private get; set; } = "[Text]";
 
         internal override void UpdateCore(Context context)
         {
