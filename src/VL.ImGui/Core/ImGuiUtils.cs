@@ -1,4 +1,5 @@
-﻿using Stride.Core.Mathematics;
+﻿using ImGuiNET;
+using Stride.Core.Mathematics;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -249,6 +250,12 @@ namespace VL.ImGui
         public static Color4 ToVLColor4(this System.Numerics.Vector4 v)
         {
             return Unsafe.As<System.Numerics.Vector4, Color4>(ref v);
+        }
+
+        public static IEnumerable<TOut> Select<T, TOut>(this RangeAccessor<T> range, Func<T, TOut> selector) where T : struct
+        {
+            for (int i = 0; i < range.Count; i++)
+                yield return selector(range[i]);
         }
     }
 
