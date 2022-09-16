@@ -36,13 +36,24 @@ namespace VL.ImGui
                     continue;
 
                 if (attr.GenerateRetained)
-                    result.Add(type.GetMethod("GetNodeDescription_RetainedMode", BindingFlags.Static | BindingFlags.NonPublic));
+                    AddMethod(result, type, "GetNodeDescription_RetainedMode");
                 if (attr.GenerateImmediate)
-                    result.Add(type.GetMethod("GetNodeDescription_ImmediateMode", BindingFlags.Static | BindingFlags.NonPublic));
+                    AddMethod(result, type, "GetNodeDescription_ImmediateMode");
             }
 
             foreach (var m in result)
-                yield return (IVLNodeDescription)m.Invoke(null, new[] { factory });
+            {
+                if (m.Invoke(null, new[] { factory }) is IVLNodeDescription n)
+                    yield return n;
+            }
+
+            static void AddMethod(List<MethodInfo> result, Type type, string methodName)
+            {
+                var m = type.GetMethod(methodName, BindingFlags.Static | BindingFlags.NonPublic);
+                if (m is null)
+                    throw new Exception($"{methodName} not found");
+                result.Add(m);
+            }
         }
     }
 

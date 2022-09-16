@@ -172,7 +172,7 @@ namespace VL.ImGui.Generator
                 i++;
             }
 
-            var ctx = "var ctx = default(Context);";
+            var ctx = mode == Mode.ImmediateMode ? "var ctx = default(Context);" : string.Empty;
             foreach (var property in properties.Values)
             {
                 string propertySummary = GetDocEntry(property);
