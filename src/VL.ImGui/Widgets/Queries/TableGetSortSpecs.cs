@@ -1,20 +1,29 @@
-﻿//using Stride.Core.Mathematics;
+﻿// Works only in Immediate mode, fails if the Table doesn't have `Sortable` flag.
 
-//namespace VL.ImGui.Widgets
-//{
-//    /// <summary>
-//    /// Get latest sort specs for the table.
-//    /// </summary>
-//    [GenerateNode(Category = "ImGui.Queries")]
-//    internal partial class TableGetSortSpecs : Widget
-//    {
-        
-//        public ImGuiNET.ImGuiTableSortSpecsPtr Value { get; private set; }
+using ImGuiNET;
+using VL.Lib.Collections;
 
-//        internal override unsafe void UpdateCore(Context context)
-//        {
-//            var specs = ImGuiNET.ImGui.TableGetSortSpecs();
-//            Value = ImGuiConversion....(specs);
-//        }
-//    }
-//}
+namespace VL.ImGui.Widgets
+{
+    /// <summary>
+    /// Get latest sort specs for the table.
+    /// </summary>
+    [GenerateNode(Category = "ImGui.Queries", IsStylable = false)]
+    internal partial class TableGetSortSpecs : Widget
+    {
+        public Spread<TableColumnSortSpecs> Value { get; private set; } = Spread<TableColumnSortSpecs>.Empty;
+
+        internal override unsafe void UpdateCore(Context context)
+        {
+            var specs = ImGuiNET.ImGui.TableGetSortSpecs();
+
+            var b = Spread.CreateBuilder<TableColumnSortSpecs>(specs.SpecsCount);
+            var x = new ReadOnlySpan<ImGuiTableColumnSortSpecs>(specs.Specs, specs.SpecsCount);
+            foreach (var s in x)
+                b.Add(new TableColumnSortSpecs(s.ColumnUserID, s.ColumnIndex, s.SortOrder, s.SortDirection));
+            Value = b.ToSpread();
+        }
+    }
+
+    public record TableColumnSortSpecs(uint ColumnUserID, short ColumnIndex, short SortOrder, ImGuiSortDirection SortDirection);
+}

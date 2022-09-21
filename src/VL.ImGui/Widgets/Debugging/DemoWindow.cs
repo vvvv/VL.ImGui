@@ -3,7 +3,7 @@
 namespace VL.ImGui.Windows
 {
     [GenerateNode(Category = "ImGui.Debug")]
-    public sealed partial class MetricsWindow : Widget
+    public sealed partial class DemoWindow : Widget
     {
         public bool HasCloseButton { get; set; } = true;
 
@@ -19,12 +19,12 @@ namespace VL.ImGui.Windows
             if (HasCloseButton)
             {
                 var open = true;
-                ImGuiNET.ImGui.ShowMetricsWindow(ref open);
+                ImGuiNET.ImGui.ShowDemoWindow(ref open);
                 Closing = !open;
             }
             else
             {
-                ImGuiNET.ImGui.ShowMetricsWindow();
+                ImGuiNET.ImGui.ShowDemoWindow();
             }
         }
     }

@@ -3,7 +3,7 @@
     [GenerateNode(Name = "Text", Category = "ImGui.Widgets")]
     internal partial class TextWidget : Widget
     {
-        public string? Text { private get; set; }
+        public string? Text { private get; set; } = "[Text]";
 
         public bool Disabled { private get; set; } = false;
 

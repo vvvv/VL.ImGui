@@ -6,9 +6,9 @@
 
         public string? Label { get; set; }
 
-        public ImGuiNET.ImGuiTableColumnFlags Flags { private get; set; }
-
         public float InitWidth { get; set; }
+
+        public ImGuiNET.ImGuiTableColumnFlags Flags { private get; set; }
 
         internal override void UpdateCore(Context context)
         {

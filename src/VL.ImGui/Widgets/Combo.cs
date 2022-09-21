@@ -16,8 +16,7 @@
         {
             var value = Update();
 
-            var count = Items.Count();
-            if (count > 0)
+            if (Items != null && Items.Any())
             {
                 if (ImGuiNET.ImGui.BeginCombo(Label ?? string.Empty, value, Flags))
                 {
