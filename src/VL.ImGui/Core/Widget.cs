@@ -13,14 +13,18 @@ namespace VL.ImGui
 
         internal void Update(Context context)
         {
-            try
+            context = context.Validate();
+            if (context != null)
             {
-                Style?.Set();
-                UpdateCore(context);
-            }
-            finally
-            {
-                Style?.Reset();
+                try
+                {
+                    Style?.Set();
+                    UpdateCore(context);
+                }
+                finally
+                {
+                    Style?.Reset();
+                }
             }
         }
     }

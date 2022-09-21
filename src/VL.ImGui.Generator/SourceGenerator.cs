@@ -120,7 +120,7 @@ namespace VL.ImGui.Generator
                     nodeDecl = "return c.Node(inputs, outputs);";
                     break;
                 case Mode.ImmediateMode:
-                    nodeDecl = "return c.Node(inputs, outputs, () => { if (ctx != null) s.Update(ctx); });";
+                    nodeDecl = "return c.Node(inputs, outputs, () => { s.Update(ctx); });";
                     break;
                 default:
                     break;

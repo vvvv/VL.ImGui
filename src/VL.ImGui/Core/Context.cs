@@ -6,10 +6,19 @@ namespace VL.ImGui
 {
     using ImGui = ImGuiNET.ImGui;
 
+    public static class ContextHelpers
+    {        
+        public static Context Validate(this Context c) => c ?? Context.Current;
+    }
+
+
     public class Context : IDisposable
     {
         private readonly IntPtr _context;
         private readonly List<Widget> _widgetsToReset = new List<Widget>();
+
+        [ThreadStatic]
+        internal static Context Current;
 
         public Context()
         {
@@ -32,6 +41,7 @@ namespace VL.ImGui
 
         public Frame MakeCurrent()
         {
+            Current = this;
             return new Frame(_context);
         }
 
