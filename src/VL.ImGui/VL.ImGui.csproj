@@ -37,5 +37,9 @@
     <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
     <Content Include="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Generated\VL.ImGui.Generator\" />
+  </ItemGroup>
   
 </Project>
