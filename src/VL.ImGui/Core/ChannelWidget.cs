@@ -27,7 +27,8 @@ namespace VL.ImGui.Widgets
             {
                 this.value = value;
                 Bang = true;
-                Channel?.OnNext(value!);
+                if (Channel != null)
+                    Channel.Value = value!;
             }
         }
 
