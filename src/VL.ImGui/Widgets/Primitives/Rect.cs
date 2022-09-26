@@ -3,7 +3,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets.Primitives
 {
-    [GenerateNode(Category = "Primitives")]
+    [GenerateNode(Category = "ImGui.Primitives")]
     internal partial class Rect : PrimitiveWidget
     {
         public Vector2 TopLeft { private get; set; } = Vector2.Zero;

@@ -3,7 +3,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets.Primitives
 {
-    [GenerateNode (Category = "Primitives", Name = "Rect (MultiColor)")]
+    [GenerateNode (Category = "ImGui.Primitives", Name = "Rect (MultiColor)")]
     internal partial class RectMulticolor : PrimitiveWidget
     {
         public Vector2 TopLeft { private get; set; } = Vector2.Zero;

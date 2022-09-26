@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0188-31269d4f1c" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0225-e247e95b60" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -14,7 +14,7 @@
       </p:NodeReference>
       <Patch Id="RxrvDdUu4cvOBXbi4KngKc">
         <Canvas Id="PuJjSWeZNf5OSPyulV1tEs" CanvasType="Group">
-          <Node Bounds="133,1363,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
+          <Node Bounds="96,1185,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
@@ -41,24 +41,22 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="173,228,806,1082" Id="GLXvgqSf3hJPgreK6Yc3w0">
+          <Node Bounds="137,186,806,964" Id="GLXvgqSf3hJPgreK6Yc3w0">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
             </p:NodeReference>
-            <ControlPoint Id="SxqmgVeWox9MqI21wY0yvY" Bounds="228,235" Alignment="Top" />
             <Pin Id="QpgLapI5zDxPOzGRPcwG5j" Name="Docking Enabled" Kind="InputPin" />
             <Pin Id="QYV6IvNmSVtMsW7NpVxU8J" Name="Default Window" Kind="InputPin" />
             <Pin Id="QcQXTQIKrE4Lctbv3yl4HS" Name="Output" Kind="OutputPin" />
             <Patch Id="OULFnoaA6CGM9ogOBcyw6g" ManuallySortedPins="true">
               <Patch Id="BKdfb4ldad4PB7v54JDFqH" Name="Create" ManuallySortedPins="true" />
               <Patch Id="JwDc4Yj5HDFL54OfZDrvOi" Name="Update" ManuallySortedPins="true" />
-              <Node Bounds="227,350,726,805" Id="KQ74gY5GSfhLrZlQ6BHSEc">
+              <Node Bounds="189,206,742,924" Id="KQ74gY5GSfhLrZlQ6BHSEc">
                 <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Window" />
                 </p:NodeReference>
-                <ControlPoint Id="EDIlXvGMA1WQB3iuHPpgLx" Bounds="259,356" Alignment="Top" />
                 <Pin Id="DQ620Uh7J3hLo25BVPqwEz" Name="Context" Kind="InputPin" />
                 <Pin Id="CVhExTquGt8P4efarcvaQz" Name="Name" Kind="InputPin" />
                 <Pin Id="CvwpV6w8lttLGcLfQzhGau" Name="Has Close Button" Kind="InputPin" />
@@ -71,12 +69,11 @@
                 <Patch Id="VavAQWxEYwWO9PliJy6Ovz" ManuallySortedPins="true">
                   <Patch Id="N8Jet9TpT7nP2dfbKg2tIi" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="NTTyvngQwhvMt2hCKS5DcB" Name="Update" ManuallySortedPins="true" />
-                  <Node Bounds="273,386,682,883" Id="VQUjk8FguiKPeC6SCHq6vH">
+                  <Node Bounds="237,273,682,838" Id="VQUjk8FguiKPeC6SCHq6vH">
                     <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="TabBar" />
                     </p:NodeReference>
-                    <ControlPoint Id="BL5cbuE3luPOZVepGv39zu" Bounds="350,404" Alignment="Top" />
                     <Pin Id="MqK22CagO6cLoikFKajgwK" Name="Context" Kind="InputPin" />
                     <Pin Id="EmNxmA6axwXOQxLv44n3S2" Name="Label" Kind="InputPin" />
                     <Pin Id="DboYTMZT5ZXLwmaHu2KhH8" Name="Style" Kind="InputPin" />
@@ -85,12 +82,11 @@
                     <Patch Id="OTWB9v4XjhYPOShDA1ud5m" ManuallySortedPins="true">
                       <Patch Id="C3h8PpEjZIwMBm4hguUy03" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="Nazx1dUCqy4NqOW8JBAB0Q" Name="Update" ParticipatingElements="A6Zw0XYwlTBOhPwik2rIF8,A2xK5uH4djmP0x73NKxGFc,JzzssrbyJeeNAwA4q5oeJn,FtSlJ8vjrvnOvNVc6hM1mE,EAriomNoDFuNQTIkD3SjHT,CrzUzFpFNStQIlYRXuFIuM,PINAduWDtLbNpPQ3KKhbor,Srr3LJDDI5aNJrM2n4rAxV,AlEcoxbCAHWN7agLIrcRTV,DpB763j2zw1POHJiBiCXYr" ManuallySortedPins="true" />
-                      <Node Bounds="349,666,198,86" Id="TcWp3IychqePOGiNE11f6o">
+                      <Node Bounds="313,506,198,85" Id="TcWp3IychqePOGiNE11f6o">
                         <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
                           <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                           <Choice Kind="ProcessAppFlag" Name="TabItem" />
                         </p:NodeReference>
-                        <ControlPoint Id="FgTiRqx5hvhN1YPbD9GoY1" Bounds="363,673" Alignment="Top" />
                         <Pin Id="NwDMln3627nNlcyNmlCzU9" Name="Context" Kind="InputPin" />
                         <Pin Id="TqlZI8djCa6MntonzJxj49" Name="Label" Kind="InputPin" />
                         <Pin Id="Uy6s1RItveQMamzjZUFVTP" Name="Has Close Button" Kind="InputPin" />
@@ -104,7 +100,7 @@
                         <Patch Id="AQpdjuRYncTL2jN78YDdVm" ManuallySortedPins="true">
                           <Patch Id="K60U49zjieIL6vVM37P1no" Name="Create" ManuallySortedPins="true" />
                           <Patch Id="AES6IrmhZcdO1aiG4o7a4p" Name="Update" ParticipatingElements="PUWlufaiHGDPIRpOmmhlQS" ManuallySortedPins="true" />
-                          <Node Bounds="361,712,45,19" Id="DkjzfVnGEihLqfxYeyOXSD">
+                          <Node Bounds="325,552,65,19" Id="DkjzfVnGEihLqfxYeyOXSD">
                             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <Choice Kind="ProcessAppFlag" Name="Text" />
@@ -116,21 +112,21 @@
                             <Pin Id="RuQUNpmlPXiMSWpq9o4Dgs" Name="Style" Kind="InputPin" />
                             <Pin Id="FpvtXWSJ1EjOGJ1e3EruV1" Name="Context" Kind="OutputPin" />
                           </Node>
-                          <Pad Id="FF9EzxWYx2xP17mTOt49J5" Comment="Text" Bounds="383,694,109,15" ShowValueBox="true" isIOBox="true" Value="First Tab's Content">
+                          <Pad Id="FF9EzxWYx2xP17mTOt49J5" Comment="Text" Bounds="347,534,109,15" ShowValueBox="true" isIOBox="true" Value="First Tab's Content">
                             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                               <Choice Kind="TypeFlag" Name="String" />
                             </p:TypeAnnotation>
                           </Pad>
                         </Patch>
                       </Node>
-                      <Pad Id="KYGlfDXaGn5MmioHYfaGXH" Comment="Label" Bounds="389,638,35,15" ShowValueBox="true" isIOBox="true" Value="Tab1">
+                      <Pad Id="KYGlfDXaGn5MmioHYfaGXH" Comment="Label" Bounds="348,480,35,15" ShowValueBox="true" isIOBox="true" Value="Tab1">
                         <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                           <Choice Kind="TypeFlag" Name="String" />
                         </p:TypeAnnotation>
                       </Pad>
-                      <Pad Id="TDZ5TEo61IaMfHZl2fvchI" Comment="Is Active" Bounds="519,786,35,35" ShowValueBox="true" isIOBox="true" />
-                      <Pad Id="Nflei7yPwTeMazYR77cjpc" Comment="Is Visible" Bounds="408,786,35,35" ShowValueBox="true" isIOBox="true" />
-                      <Pad Id="DBFjZUb1T0aLLkJAsT9fxK" Comment="Is Visible" Bounds="586,461,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+                      <Pad Id="TDZ5TEo61IaMfHZl2fvchI" Comment="Is Active" Bounds="522,622,35,35" ShowValueBox="true" isIOBox="true" />
+                      <Pad Id="Nflei7yPwTeMazYR77cjpc" Comment="Is Visible" Bounds="411,622,35,35" ShowValueBox="true" isIOBox="true" />
+                      <Pad Id="DBFjZUb1T0aLLkJAsT9fxK" Comment="Is Visible" Bounds="550,301,35,35" ShowValueBox="true" isIOBox="true" Value="True">
                         <p:TypeAnnotation>
                           <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
                           <FullNameCategoryReference ID="Primitive" />
@@ -139,7 +135,7 @@
                           <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
                         </p:ValueBoxSettings>
                       </Pad>
-                      <Node Bounds="296,966,399,282" Id="EdaF60RfbNZPQ7dx8Nnrw3">
+                      <Node Bounds="260,807,370,284" Id="EdaF60RfbNZPQ7dx8Nnrw3">
                         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
                           <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                           <Choice Kind="ApplicationStatefulRegion" Name="If" />
@@ -149,12 +145,11 @@
                         <Patch Id="EDPPm6DVSXlM1qYoAyKuzN" ManuallySortedPins="true">
                           <Patch Id="CJoPLNQRQDzMHbWLlFCnaE" Name="Create" ManuallySortedPins="true" />
                           <Patch Id="GiVyjCTD0xJNZI1Q3kqtOY" Name="Then" ManuallySortedPins="true" />
-                          <Node Bounds="350,1074,228,99" Id="OabsYhnuShnLdyfQLmAZfz">
+                          <Node Bounds="314,919,197,94" Id="OabsYhnuShnLdyfQLmAZfz">
                             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
                               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                               <Choice Kind="ProcessAppFlag" Name="TabItem" />
                             </p:NodeReference>
-                            <ControlPoint Id="UeZWVvgvTpkNMVYqZp5Oqc" Bounds="365,1081" Alignment="Top" />
                             <Pin Id="OcZ6FkbJGERLk19T3YBm5P" Name="Context" Kind="InputPin" />
                             <Pin Id="OrawITHmKFELgGjJwfUVI7" Name="Label" Kind="InputPin" />
                             <Pin Id="DaptLFYp5WyMSTMog6Qt4H" Name="Has Close Button" Kind="InputPin" />
@@ -168,7 +163,7 @@
                             <Patch Id="CIp9tJuLvBnL6HC2cvXuMq" ManuallySortedPins="true">
                               <Patch Id="TluzYluGPfBNCaUSEhdSbE" Name="Create" ManuallySortedPins="true" />
                               <Patch Id="Q8iH2G4hd6ROgfRcx05ynr" Name="Update" ParticipatingElements="JPZ4iSrwsuGOFFcwbHC8Fc" ManuallySortedPins="true" />
-                              <Node Bounds="362,1134,45,19" Id="OLm6TeoMxSMM0WCBDpt4PL">
+                              <Node Bounds="326,974,65,19" Id="OLm6TeoMxSMM0WCBDpt4PL">
                                 <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
                                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                   <Choice Kind="ProcessAppFlag" Name="Text" />
@@ -180,19 +175,19 @@
                                 <Pin Id="Q4UJVRDvcfAP9MoyKsqavJ" Name="Style" Kind="InputPin" />
                                 <Pin Id="K1aVM1TumMjNg7K1kbIaEU" Name="Context" Kind="OutputPin" />
                               </Node>
-                              <Pad Id="IxgiDuN0SkdO7cKRp8eCRW" Comment="Text" Bounds="385,1107,107,15" ShowValueBox="true" isIOBox="true" Value="Second Tab's Content">
+                              <Pad Id="IxgiDuN0SkdO7cKRp8eCRW" Comment="Text" Bounds="349,947,107,15" ShowValueBox="true" isIOBox="true" Value="Second Tab's Content">
                                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                                   <Choice Kind="TypeFlag" Name="String" />
                                 </p:TypeAnnotation>
                               </Pad>
                             </Patch>
                           </Node>
-                          <Pad Id="CsD7WxG0mMkPj1wicc8kN4" Comment="Label" Bounds="396,994,35,15" ShowValueBox="true" isIOBox="true" Value="Tab2">
+                          <Pad Id="CsD7WxG0mMkPj1wicc8kN4" Comment="Label" Bounds="347,835,35,15" ShowValueBox="true" isIOBox="true" Value="Tab2">
                             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                               <Choice Kind="TypeFlag" Name="String" />
                             </p:TypeAnnotation>
                           </Pad>
-                          <Pad Id="HYYyW8BDJdsOzNoro1vC2t" Comment="Has Close Button" Bounds="441,1024,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+                          <Pad Id="HYYyW8BDJdsOzNoro1vC2t" Comment="Has Close Button" Bounds="380,870,35,35" ShowValueBox="true" isIOBox="true" Value="False">
                             <p:TypeAnnotation>
                               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
                               <FullNameCategoryReference ID="Primitive" />
@@ -201,8 +196,8 @@
                               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
                             </p:ValueBoxSettings>
                           </Pad>
-                          <Pad Id="P7efM3IJ6W3Psn1BGXJdeg" Comment="Is Active" Bounds="575,1201,35,35" ShowValueBox="true" isIOBox="true" />
-                          <Pad Id="IsttRwLt2FuLDUavntgBgD" Comment="Is Visible" Bounds="585,1023,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+                          <Pad Id="P7efM3IJ6W3Psn1BGXJdeg" Comment="Is Active" Bounds="508,1043,35,35" ShowValueBox="true" isIOBox="true" />
+                          <Pad Id="IsttRwLt2FuLDUavntgBgD" Comment="Is Visible" Bounds="520,868,35,35" ShowValueBox="true" isIOBox="true" Value="True">
                             <p:TypeAnnotation>
                               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
                               <FullNameCategoryReference ID="Primitive" />
@@ -213,7 +208,7 @@
                           </Pad>
                         </Patch>
                       </Node>
-                      <Pad Id="AXCbjN7qXgzOc7qPMAX7uz" Bounds="459,574,352,19" ShowValueBox="true" isIOBox="true" Value="https://github.com/ocornut/imgui/blob/2d38bc99b3b0013952d3d390397297083b767972/imgui.h#L779">
+                      <Pad Id="AXCbjN7qXgzOc7qPMAX7uz" Bounds="423,414,352,19" ShowValueBox="true" isIOBox="true" Value="https://github.com/ocornut/imgui/blob/2d38bc99b3b0013952d3d390397297083b767972/imgui.h#L779">
                         <p:TypeAnnotation>
                           <Choice Kind="TypeFlag" Name="String" />
                         </p:TypeAnnotation>
@@ -222,7 +217,7 @@
                           <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
                         </p:ValueBoxSettings>
                       </Pad>
-                      <Pad Id="JfiJVU40jCZMpFPwCzL8Dg" Bounds="710,1090,226,83" ShowValueBox="true" isIOBox="true" Value="&lt; If the TabItem doesn't have `Close Button`, then its 'IsVisible' doesn't work. One should wrap it in the If region instead.">
+                      <Pad Id="JfiJVU40jCZMpFPwCzL8Dg" Bounds="674,930,226,83" ShowValueBox="true" isIOBox="true" Value="&lt; If the TabItem doesn't have `Close Button`, then its 'IsVisible' doesn't work. One should wrap it in the If region instead.">
                         <p:TypeAnnotation>
                           <Choice Kind="TypeFlag" Name="String" />
                         </p:TypeAnnotation>
@@ -231,7 +226,7 @@
                           <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                         </p:ValueBoxSettings>
                       </Pad>
-                      <Pad Id="Pzp31pf8lIONlP0rS8hnck" Comment="Condition" Bounds="298,918,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+                      <Pad Id="Pzp31pf8lIONlP0rS8hnck" Comment="Condition" Bounds="262,758,35,35" ShowValueBox="true" isIOBox="true" Value="True">
                         <p:TypeAnnotation>
                           <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
                           <FullNameCategoryReference ID="Primitive" />
@@ -240,7 +235,7 @@
                           <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
                         </p:ValueBoxSettings>
                       </Pad>
-                      <Node Bounds="348,525,98,19" Id="IicrrTNTNhFOqVgAD1uiMV">
+                      <Node Bounds="312,365,98,19" Id="IicrrTNTNhFOqVgAD1uiMV">
                         <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="ProcessNode" Name="SetTabItemClosed" />
@@ -251,12 +246,12 @@
                         <Pin Id="ELeZFV6P2hiLsmQ1AIi4dx" Name="Style" Kind="InputPin" />
                         <Pin Id="N4eWLSw6wgZNXQNnxe3bM9" Name="Context" Kind="OutputPin" />
                       </Node>
-                      <Pad Id="PqqUQWh6odgM6EO5yfCVDm" Comment="Label" Bounds="394,449,35,15" ShowValueBox="true" isIOBox="true" Value="Tab1">
+                      <Pad Id="PqqUQWh6odgM6EO5yfCVDm" Comment="Label" Bounds="345,301,35,15" ShowValueBox="true" isIOBox="true" Value="Tab1">
                         <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                           <Choice Kind="TypeFlag" Name="String" />
                         </p:TypeAnnotation>
                       </Pad>
-                      <Pad Id="FIoSuht8tFSOJeTI1LAhsf" Bounds="458,530,369,44" ShowValueBox="true" isIOBox="true" Value="&lt; The Tab disappears a bit more smoothly when this node is used. But it's questionable if we need it.">
+                      <Pad Id="FIoSuht8tFSOJeTI1LAhsf" Bounds="422,370,369,44" ShowValueBox="true" isIOBox="true" Value="&lt; The Tab disappears a bit more smoothly when this node is used. But it's questionable if we need it.">
                         <p:TypeAnnotation>
                           <Choice Kind="TypeFlag" Name="String" />
                         </p:TypeAnnotation>
@@ -265,7 +260,7 @@
                           <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                         </p:ValueBoxSettings>
                       </Pad>
-                      <Node Bounds="441,497,37,19" Id="Mds8k7ZjLxtQRyELiYnHm6">
+                      <Node Bounds="374,336,37,19" Id="Mds8k7ZjLxtQRyELiYnHm6">
                         <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="VL.CoreLib.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="NOT" />
@@ -277,21 +272,6 @@
                   </Node>
                 </Patch>
               </Node>
-              <Node Bounds="667,301,61,19" Id="EzZPBeJGC5OOgMkZNcvwU5">
-                <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="VL.CoreLib.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="OperationCallFlag" Name="Rectangle (Join)" />
-                </p:NodeReference>
-                <Pin Id="NLZVtagmwRYLxWZobQ1e50" Name="Position" Kind="InputPin" />
-                <Pin Id="QPUA34EECehMZIoAl7OzB2" Name="Size" Kind="InputPin" />
-                <Pin Id="Lq52xIPYvyELhrtowkAY07" Name="Anchor" Kind="InputPin" />
-                <Pin Id="Dkct8JfdtNBQFi3YwPBLwR" Name="Output" Kind="StateOutputPin" />
-              </Node>
-              <Pad Id="CjR2jbEEzQjMSOLPWwrbpd" Comment="Size" Bounds="697,269,35,28" ShowValueBox="true" isIOBox="true" Value="300, 300">
-                <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="Vector2" />
-                </p:TypeAnnotation>
-              </Pad>
             </Patch>
           </Node>
         </Canvas>
@@ -302,17 +282,11 @@
           <Fragment Id="CA5NL4bFZyAQRQRLNsMjeJ" Patch="RYcSdMgjOSHMTo1e9h0RjC" Enabled="true" />
         </ProcessDefinition>
         <Link Id="Mz2xLoUkarSOHRJuJlqzH4" Ids="QcQXTQIKrE4Lctbv3yl4HS,FEmprmZSMXGOZ6BLW3yl3J" />
-        <Link Id="KT3yeZDPMEAO1aIBfw5X1u" Ids="CjR2jbEEzQjMSOLPWwrbpd,QPUA34EECehMZIoAl7OzB2" />
-        <Link Id="K9LTA4UnwEAPJfgUa3E0fe" Ids="Dkct8JfdtNBQFi3YwPBLwR,QGj1MuzDvfsNb5Q864nZRh" />
-        <Link Id="QiWOOOnsGmqL388IqReAKJ" Ids="SxqmgVeWox9MqI21wY0yvY,DQ620Uh7J3hLo25BVPqwEz" />
-        <Link Id="SrU6xvYikk2NCogKZGElbR" Ids="EDIlXvGMA1WQB3iuHPpgLx,MqK22CagO6cLoikFKajgwK" />
         <Link Id="A6Zw0XYwlTBOhPwik2rIF8" Ids="KYGlfDXaGn5MmioHYfaGXH,TqlZI8djCa6MntonzJxj49" />
-        <Link Id="EbzZ1WchIewOvuk44lidC1" Ids="FgTiRqx5hvhN1YPbD9GoY1,DbTLgur6nIZPtYM0sYqBVX" />
         <Link Id="PUWlufaiHGDPIRpOmmhlQS" Ids="FF9EzxWYx2xP17mTOt49J5,VdGv94B2YkULHiwEdojlrg" />
         <Link Id="FtSlJ8vjrvnOvNVc6hM1mE" Ids="R7Ub5Obu7AaM3AYbSzkFG5,TDZ5TEo61IaMfHZl2fvchI" />
         <Link Id="EAriomNoDFuNQTIkD3SjHT" Ids="PT5nSaK525FNKOosyAvLt6,Nflei7yPwTeMazYR77cjpc" />
         <Link Id="A2xK5uH4djmP0x73NKxGFc" Ids="CsD7WxG0mMkPj1wicc8kN4,OrawITHmKFELgGjJwfUVI7" />
-        <Link Id="NmylY8Kh8wYNtzR7VtQPjO" Ids="UeZWVvgvTpkNMVYqZp5Oqc,E5Fug9UKtykM0dKxaF0wHp" />
         <Link Id="JPZ4iSrwsuGOFFcwbHC8Fc" Ids="IxgiDuN0SkdO7cKRp8eCRW,GGDk9ml19VTLQD3siBEpKB" />
         <Link Id="JzzssrbyJeeNAwA4q5oeJn" Ids="HYYyW8BDJdsOzNoro1vC2t,DaptLFYp5WyMSTMog6Qt4H" />
         <Link Id="CrzUzFpFNStQIlYRXuFIuM" Ids="InIDbj9NJw5PDTrX6vTJ8S,P7efM3IJ6W3Psn1BGXJdeg" />
@@ -320,7 +294,6 @@
         <Link Id="Srr3LJDDI5aNJrM2n4rAxV" Ids="O9j7dEE0ubeOXs3Jjzobwk,OcZ6FkbJGERLk19T3YBm5P" />
         <Link Id="LIKSB3ypJUaMoqMq7ZVCJf" Ids="Pzp31pf8lIONlP0rS8hnck,SPGEbntZVc9LOSt8DknbHa" />
         <Link Id="Jy89I6bYExxPxb5kCHtnJM" Ids="PqqUQWh6odgM6EO5yfCVDm,HmlL7K6f5DHLo1kRIkqrMN" />
-        <Link Id="Ix0phQCB7OiQCeVmBMO2vu" Ids="BL5cbuE3luPOZVepGv39zu,AgHVdhfrC1tQZCdKEVMMvk" />
         <Link Id="AlEcoxbCAHWN7agLIrcRTV" Ids="N4eWLSw6wgZNXQNnxe3bM9,NwDMln3627nNlcyNmlCzU9" />
         <Link Id="DpB763j2zw1POHJiBiCXYr" Ids="DBFjZUb1T0aLLkJAsT9fxK,RKM5gtfKSWqNCcBjBJAJ7w" />
         <Link Id="GyKOAQKT9eJOb5dgGCbiGL" Ids="IKsfcSpRS83MuiiRun3Gs6,Q1bIIVMaHP2M0vsSwWoqSh" />
@@ -328,7 +301,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0188-g31269d4f1c" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0225-ge247e95b60" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0188-g31269d4f1c" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0225-ge247e95b60" />
 </Document>

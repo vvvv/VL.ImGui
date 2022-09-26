@@ -3,7 +3,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets.Primitives
 {
-    [GenerateNode(Category = "Primitives", Name = "Bezier (Quadratic)")]
+    [GenerateNode(Category = "ImGui.Primitives", Name = "Bezier (Quadratic)")]
     internal partial class BezierQuadratic : PrimitiveWidget
     {
         public Vector2 Point1 { private get; set; }

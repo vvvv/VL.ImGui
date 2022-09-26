@@ -4,7 +4,7 @@ using VL.Lib.Collections;
 
 namespace VL.ImGui.Widgets.Primitives
 {
-    [GenerateNode(Category = "Primitives")]
+    [GenerateNode(Category = "ImGui.Primitives", Tags ="Segment")]
     internal partial class NGon : PrimitiveWidget
     {
         public Vector2 Center { private get; set; } = Vector2.Zero;
