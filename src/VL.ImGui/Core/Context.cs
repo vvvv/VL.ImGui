@@ -8,7 +8,7 @@ namespace VL.ImGui
 
     public static class ContextHelpers
     {        
-        public static Context Validate(this Context c) => c ?? Context.Current;
+        public static Context? Validate(this Context? c) => c ?? Context.Current;
     }
 
 
@@ -18,7 +18,7 @@ namespace VL.ImGui
         private readonly List<Widget> _widgetsToReset = new List<Widget>();
 
         [ThreadStatic]
-        internal static Context Current;
+        internal static Context? Current = null;
 
         public Context()
         {
@@ -41,8 +41,7 @@ namespace VL.ImGui
 
         public Frame MakeCurrent()
         {
-            Current = this;
-            return new Frame(_context);
+            return new Frame(_context, this);
         }
 
         public void Update(Widget? widget)
@@ -62,15 +61,19 @@ namespace VL.ImGui
         public readonly struct Frame : IDisposable
         {
             readonly IntPtr previous;
+            readonly Context? previous2;
 
-            public Frame(IntPtr context)
+            public Frame(IntPtr context, Context c)
             {
                 previous = ImGui.GetCurrentContext();
                 ImGui.SetCurrentContext(context);
+                previous2 = Current;
+                Current = c;
             }
 
             public void Dispose()
             {
+                Current = previous2;
                 ImGui.SetCurrentContext(previous);
             }
         }
