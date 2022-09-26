@@ -1,0 +1,4 @@
+[submodule "dependencies/ImGui.NET-nativebuild"]
+	path = dependencies/ImGui.NET-nativebuild
+	url = https://github.com/vvvv/ImGui.NET-nativebuild.git
+	branch = master
