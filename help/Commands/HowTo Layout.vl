@@ -198,7 +198,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="105,188,163,368" Id="Lb3eHoZ71UnPemQkk6ToOR">
+          <Node Bounds="105,188,163,459" Id="Lb3eHoZ71UnPemQkk6ToOR">
             <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Comment" />
@@ -320,7 +320,7 @@
                 <Pin Id="D6vTUqzcBCzNEpfIYhyyOS" Name="Position" Kind="InputPin" />
                 <Pin Id="LjoJQ6t5kWULumY8EZ48LK" Name="Context" Kind="OutputPin" />
               </Node>
-              <Pad Id="PzyfJ1nElumMVpue6SAuQz" Bounds="124,525,35,19" ShowValueBox="true" isIOBox="true" Value="...">
+              <Pad Id="PzyfJ1nElumMVpue6SAuQz" Bounds="124,616,35,19" ShowValueBox="true" isIOBox="true" Value="...">
                 <p:TypeAnnotation>
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
@@ -338,6 +338,15 @@
                   <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                 </p:ValueBoxSettings>
               </Pad>
+              <Node Bounds="130,512,97,19" Id="KUn2ynHdn3wLHmKFimqKyO">
+                <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessNode" Name="SetNextItemWidth" />
+                </p:NodeReference>
+                <Pin Id="CSrLDfwUZ2SLUIbpZLNrRL" Name="Context" Kind="InputPin" />
+                <Pin Id="ITNO6523MhUNQbOLUCruKr" Name="Width" Kind="InputPin" />
+                <Pin Id="DLZke59mJAlPFxv8TxtpGG" Name="Context" Kind="OutputPin" />
+              </Node>
             </Patch>
           </Node>
           <Pad Id="IqHItp5Byw7P9TYKcPWqjn" Comment="Default Window" Bounds="736,136,35,35" ShowValueBox="true" isIOBox="true" Value="True">
