@@ -120,7 +120,7 @@
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="S1Jkpng3G37OK8tHcu3KCl" Comment="Filename" Bounds="413,251,118,15" ShowValueBox="true" isIOBox="true" Value="..\..\ImGuiSettings.ini">
+              <Pad Id="S1Jkpng3G37OK8tHcu3KCl" Comment="Filename" Bounds="413,238,183,15" ShowValueBox="true" isIOBox="true" Value="..\..\ImGuiSettings.ini">
                 <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Path" />
                 </p:TypeAnnotation>
