@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Spc0ANcyIbJOrMJ6qKrUgb" LanguageVersion="2022.5.0-0225-e247e95b60" Version="0.128">
-  <NugetDependency Id="LMYmLodTRU4OJSkcyn6bho" Location="VL.CoreLib" Version="2022.5.0-0225-ge247e95b60" />
+<Document xmlns:p="property" Id="Spc0ANcyIbJOrMJ6qKrUgb" LanguageVersion="2022.5.0-0235-9260b58ac3" Version="0.128">
+  <NugetDependency Id="LMYmLodTRU4OJSkcyn6bho" Location="VL.CoreLib" Version="2022.5.0-0235-g9260b58ac3" />
   <Patch Id="J92awyuxkXVOwzHOcsjJG3">
     <Canvas Id="OJeuTPRYJUeOVmkqxCSEoA" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="PAoFM1rcHGONJqxeGIA5ov">
         <Canvas Id="U584MYbMfzaM37y0t33F1r" CanvasType="Group">
-          <Node Bounds="165,853,165,19" Id="Qbw97xhQSR1N6heVdYlyXv">
+          <Node Bounds="165,913,165,19" Id="Qbw97xhQSR1N6heVdYlyXv">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
@@ -33,7 +33,7 @@
             <Pin Id="GKtzcMPf1KNNwAoiwcQQkO" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="CdTonLn3SQENQrFbbh8P8b" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="205,162,519,659" Id="U6mqOehw0hrLtvRtnqyI3Y">
+          <Node Bounds="205,222,519,659" Id="U6mqOehw0hrLtvRtnqyI3Y">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
@@ -44,7 +44,7 @@
             <Patch Id="TLNP6wCs14mORjcvaeNQjF" ManuallySortedPins="true">
               <Patch Id="I1r4cpLdr5oNl7VRfNZZkw" Name="Create" ManuallySortedPins="true" />
               <Patch Id="KIY5xxE9cgkQO89bmbh0WW" Name="Update" ParticipatingElements="RnXHUenADMrLzDXN7yUwYG" ManuallySortedPins="true" />
-              <Node Bounds="257,228,451,573" Id="L3So1NAVk0jMVJbWRmG30P">
+              <Node Bounds="257,288,451,573" Id="L3So1NAVk0jMVJbWRmG30P">
                 <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Window" />
@@ -61,7 +61,7 @@
                 <Patch Id="CqoHq9haHrkPHLdGhOHl3X" ManuallySortedPins="true">
                   <Patch Id="Sy4DhJAJhvLNxBrk0a9HgR" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="KolUdS98AR8OybGjHxqw53" Name="Update" ParticipatingElements="LJ7K5m7sJidLvegVlLpctx,BR1YtghlwOAPnDwa02D9ND" ManuallySortedPins="true" />
-                  <Node Bounds="313,248,383,461" Id="HJWX9f9cAavND4z4PrCnqp">
+                  <Node Bounds="313,308,383,461" Id="HJWX9f9cAavND4z4PrCnqp">
                     <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="MenuBar" />
@@ -72,7 +72,7 @@
                     <Patch Id="E2CsYNVK8cuMUdgNoPvjz2" ManuallySortedPins="true">
                       <Patch Id="GreJBcbqMGALrljX7Zu5hj" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="UV4d00YtqfAPGHqkvot2sY" Name="Update" ParticipatingElements="MXArGXjdcKELCssoOBIx8v,GNhsXeV4mZSMSCv36t35Th,FLJwKOwxvFcMigYGrKRHNW,SvHNMu3NVl4PpqIb5eElQN" ManuallySortedPins="true" />
-                      <Node Bounds="354,305,330,236" Id="PEKOODWoM06NBQLuddlSWs">
+                      <Node Bounds="354,365,330,236" Id="PEKOODWoM06NBQLuddlSWs">
                         <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                           <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                           <Choice Kind="ProcessAppFlag" Name="Menu" />
@@ -85,7 +85,7 @@
                         <Patch Id="D7TrdJFF932L1pie1xVliU" ManuallySortedPins="true">
                           <Patch Id="MUU3xo8NY5FNj8XSU8GoSH" Name="Create" ManuallySortedPins="true" />
                           <Patch Id="EMcCkQbb9ObQd5K9PICoFy" Name="Update" ParticipatingElements="GL2uTSReXeINswp2xvZmvZ,D78LrMMAbFhNs7xojG7bTB" ManuallySortedPins="true" />
-                          <Node Bounds="395,350,105,19" Id="Npt7APqlYwsL0szfJVpOV4">
+                          <Node Bounds="395,410,105,19" Id="Npt7APqlYwsL0szfJVpOV4">
                             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <Choice Kind="ProcessNode" Name="MenuItem" />
@@ -100,12 +100,12 @@
                             <Pin Id="JPZoXOt98aoMS1nhKqtEVn" Name="Bang" Kind="OutputPin" />
                             <Pin Id="JhMikiyitTiPQYmZmLrIa7" Name="Value" Kind="OutputPin" />
                           </Node>
-                          <Pad Id="OvkTBRgB2L1M0zCUqpAjIp" Comment="Label" Bounds="437,333,57,15" ShowValueBox="true" isIOBox="true" Value="Item1">
+                          <Pad Id="OvkTBRgB2L1M0zCUqpAjIp" Comment="Label" Bounds="437,393,57,15" ShowValueBox="true" isIOBox="true" Value="Item1">
                             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                               <Choice Kind="TypeFlag" Name="String" />
                             </p:TypeAnnotation>
                           </Pad>
-                          <Node Bounds="395,439,83,80" Id="DRajOg5dIjEM2dTsSe0pjW">
+                          <Node Bounds="395,499,83,80" Id="DRajOg5dIjEM2dTsSe0pjW">
                             <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
                               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                               <Choice Kind="ProcessAppFlag" Name="Menu" />
@@ -118,8 +118,8 @@
                             <Patch Id="VLJLUMruozIQALzxmeXm3A" ManuallySortedPins="true">
                               <Patch Id="SNr0PopaNnaNXc0Ix9KkDs" Name="Create" ManuallySortedPins="true" />
                               <Patch Id="NKqHmiTReivOs3Ls0cnzDU" Name="Update" ManuallySortedPins="true" />
-                              <Node Bounds="407,471,59,19" Id="KC723SD1mn6NtdRRns1vLo">
-                                <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="HowTo Add MenuBar To A Window.vl">
+                              <Node Bounds="407,531,59,19" Id="KC723SD1mn6NtdRRns1vLo">
+                                <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="HowTo Menu for a Window.vl">
                                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                   <Choice Kind="ProcessAppFlag" Name="Submenu" />
                                 </p:NodeReference>
@@ -127,12 +127,12 @@
                               </Node>
                             </Patch>
                           </Node>
-                          <Pad Id="Ppil1eU4ciXPW65BJW0PJx" Comment="Label" Bounds="423,412,61,15" ShowValueBox="true" isIOBox="true" Value="Submenu">
+                          <Pad Id="Ppil1eU4ciXPW65BJW0PJx" Comment="Label" Bounds="423,472,61,15" ShowValueBox="true" isIOBox="true" Value="Submenu">
                             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                               <Choice Kind="TypeFlag" Name="String" />
                             </p:TypeAnnotation>
                           </Pad>
-                          <Pad Id="JFjqKkuFzDHQGxJhqOPNHL" Comment="Enabled" Bounds="579,386,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+                          <Pad Id="JFjqKkuFzDHQGxJhqOPNHL" Comment="Enabled" Bounds="579,446,35,35" ShowValueBox="true" isIOBox="true" Value="True">
                             <p:TypeAnnotation>
                               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
                               <FullNameCategoryReference ID="Primitive" />
@@ -141,7 +141,7 @@
                               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
                             </p:ValueBoxSettings>
                           </Pad>
-                          <Pad Id="Lkj8siH9Zv5PNHph4vbR6E" Bounds="484,476,178,53" ShowValueBox="true" isIOBox="true" Value="&lt; Submenu is packed into a separate node, its easier to patch.">
+                          <Pad Id="Lkj8siH9Zv5PNHph4vbR6E" Bounds="484,536,178,53" ShowValueBox="true" isIOBox="true" Value="&lt; Submenu is packed into a separate node, its easier to patch.">
                             <p:TypeAnnotation>
                               <Choice Kind="TypeFlag" Name="String" />
                             </p:TypeAnnotation>
@@ -152,12 +152,12 @@
                           </Pad>
                         </Patch>
                       </Node>
-                      <Pad Id="EsP6I5a4DjCMWnvMlmg28D" Comment="Label" Bounds="464,276,62,15" ShowValueBox="true" isIOBox="true" Value="Menu1">
+                      <Pad Id="EsP6I5a4DjCMWnvMlmg28D" Comment="Label" Bounds="464,336,62,15" ShowValueBox="true" isIOBox="true" Value="Menu1">
                         <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                           <Choice Kind="TypeFlag" Name="String" />
                         </p:TypeAnnotation>
                       </Pad>
-                      <Node Bounds="354,596,105,19" Id="IjLA7WJnqFKMGmmlIRZX2a">
+                      <Node Bounds="354,656,105,19" Id="IjLA7WJnqFKMGmmlIRZX2a">
                         <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="ProcessNode" Name="MenuItem" />
@@ -172,12 +172,12 @@
                         <Pin Id="T0KRzcxXIAPQd6F9GCI6JS" Name="Bang" Kind="OutputPin" />
                         <Pin Id="OyMZCVX0O1ONJauYNlRczy" Name="Value" Kind="OutputPin" />
                       </Node>
-                      <Pad Id="IEaZjAq3zBOQdGGOY7pRYb" Comment="Label" Bounds="396,579,57,15" ShowValueBox="true" isIOBox="true" Value="Menu2">
+                      <Pad Id="IEaZjAq3zBOQdGGOY7pRYb" Comment="Label" Bounds="396,639,57,15" ShowValueBox="true" isIOBox="true" Value="Menu2">
                         <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                           <Choice Kind="TypeFlag" Name="String" />
                         </p:TypeAnnotation>
                       </Pad>
-                      <Node Bounds="353,670,85,19" Id="KvOohUDAg5RMw8EY04D7XL">
+                      <Node Bounds="353,730,85,19" Id="KvOohUDAg5RMw8EY04D7XL">
                         <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="ProcessNode" Name="Button" />
@@ -191,14 +191,14 @@
                         <Pin Id="UH6fCmvfeS1LBsVYfNPC0Z" Name="Context" Kind="OutputPin" />
                         <Pin Id="DsRRmQ20zsPQaa8egAVZck" Name="Bang" Kind="OutputPin" />
                       </Node>
-                      <Pad Id="S4xcBkA73a6QNzoYB8zl7n" Comment="Label" Bounds="396,647,35,15" ShowValueBox="true" isIOBox="true" Value="Just a button">
+                      <Pad Id="S4xcBkA73a6QNzoYB8zl7n" Comment="Label" Bounds="396,707,35,15" ShowValueBox="true" isIOBox="true" Value="Just a button">
                         <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                           <Choice Kind="TypeFlag" Name="String" />
                         </p:TypeAnnotation>
                       </Pad>
                     </Patch>
                   </Node>
-                  <Node Bounds="313,762,65,19" Id="FUoqaDPxCTeNAjsoe1vIV1">
+                  <Node Bounds="313,822,65,19" Id="FUoqaDPxCTeNAjsoe1vIV1">
                     <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="Text" />
@@ -210,14 +210,14 @@
                     <Pin Id="JB6TaU8L4e1OGNrwi6rPna" Name="Style" Kind="InputPin" />
                     <Pin Id="B6FhhIy8eodP9HU7SEfhfU" Name="Context" Kind="OutputPin" />
                   </Node>
-                  <Pad Id="T9FGDv0erKELUfCD4Oqzd2" Comment="Text" Bounds="335,742,127,18" ShowValueBox="true" isIOBox="true" Value="I'm in the Window.">
+                  <Pad Id="T9FGDv0erKELUfCD4Oqzd2" Comment="Text" Bounds="335,802,127,18" ShowValueBox="true" isIOBox="true" Value="I'm in the Window.">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="String" />
                     </p:TypeAnnotation>
                   </Pad>
                 </Patch>
               </Node>
-              <Pad Id="D6UX04A63PZLkb8ekGBPsu" Comment="Window Flags" Bounds="480,190,148,15" ShowValueBox="true" isIOBox="true" Value="MenuBar">
+              <Pad Id="D6UX04A63PZLkb8ekGBPsu" Comment="Window Flags" Bounds="480,250,148,15" ShowValueBox="true" isIOBox="true" Value="MenuBar">
                 <p:TypeAnnotation LastCategoryFullName="ImGui.Flags" LastSymbolSource="VL.ImGui.vl">
                   <Choice Kind="TypeFlag" Name="ImGuiWindowFlags" />
                 </p:TypeAnnotation>
@@ -229,7 +229,7 @@
     ************************ Submenu ************************
 
 -->
-          <Node Name="Submenu" Bounds="760,496" Id="BoNjKBNqpd3QZecJTFwgUx">
+          <Node Name="Submenu" Bounds="760,556" Id="BoNjKBNqpd3QZecJTFwgUx">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -287,7 +287,25 @@
               <Link Id="RB2Ig7lnbZTMrCJL3otGKP" Ids="LX657XzJ8pkQRO3ZGhNVjA,VFr0ElaDfP6QHVc3HByuFo" />
             </Patch>
           </Node>
-          <Pad Id="FxZPP86z6CfLzh5Cy76OYT" Bounds="727,186,151,19" ShowValueBox="true" isIOBox="true" Value="&lt; This flag is important">
+          <Pad Id="FxZPP86z6CfLzh5Cy76OYT" Bounds="727,246,151,19" ShowValueBox="true" isIOBox="true" Value="&lt; This flag is important">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="N3ido0ksLRgLPj6KfQdWDg" Bounds="197,103,181,30" ShowValueBox="true" isIOBox="true" Value="Use MenuBar">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">18</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="LA06nF72asYNaVHQFHmKQ7" Bounds="200,151,199,40" ShowValueBox="true" isIOBox="true" Value="Important:&#xD;&#xA;Set window's `MenuBar` flag.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -320,5 +338,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="NDjkHiKFDFSLSs7Gt0A9Wo" Location="VL.ImGui" Version="0.0.0" />
-  <NugetDependency Id="BWbPcu3gOceP62y0FxGINV" Location="VL.Skia" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="BWbPcu3gOceP62y0FxGINV" Location="VL.Skia" Version="2022.5.0-0235-g9260b58ac3" />
 </Document>

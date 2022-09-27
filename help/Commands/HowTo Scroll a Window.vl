@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0225-e247e95b60" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0235-9260b58ac3" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -57,8 +57,6 @@
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Window" />
                 </p:NodeReference>
-                <ControlPoint Id="BEBlTKjE07YP4Cxzlcnryi" Bounds="494,265" Alignment="Top" />
-                <ControlPoint Id="TmKdwn5TGz5PdeaFphI7v4" Bounds="492,552" Alignment="Bottom" />
                 <Pin Id="DQ620Uh7J3hLo25BVPqwEz" Name="Context" Kind="InputPin" />
                 <Pin Id="CVhExTquGt8P4efarcvaQz" Name="Name" Kind="InputPin" />
                 <Pin Id="CvwpV6w8lttLGcLfQzhGau" Name="Has Close Button" Kind="InputPin" />
@@ -79,7 +77,7 @@
                     </p:NodeReference>
                     <Pin Id="KR0jXxAuYmEOW6P5EPDTbZ" Name="Iteration Count" Kind="InputPin" />
                     <Pin Id="GLyii2JTK7fNnoMI7Jn7pr" Name="Break" Kind="OutputPin" />
-                    <ControlPoint Id="PB6T4WQ217dM6nN3kxVBEO" Bounds="494,344" Alignment="Top" />
+                    <ControlPoint Id="PB6T4WQ217dM6nN3kxVBEO" Bounds="492,344" Alignment="Top" />
                     <ControlPoint Id="Ox3Oj33MHA5LNacvUFLbEd" Bounds="492,518" Alignment="Bottom" />
                     <Patch Id="C7vIOc45JrENxi883P28pi" ManuallySortedPins="true">
                       <Patch Id="SS6aXVGDniHLqvMw3lmosw" Name="Create" ManuallySortedPins="true" />
@@ -294,8 +292,6 @@
         <Link Id="U77IjldwTW1N43BU8MJQjl" Ids="U9Zro0JrIgwNjNn3xG26qT,EIORMUmKLY0N8GDKaizP3m" />
         <Link Id="FMTRUvcPb5kNlnc7MNpyxX" Ids="PB6T4WQ217dM6nN3kxVBEO,Ox3Oj33MHA5LNacvUFLbEd" IsFeedback="true" />
         <Link Id="Qt8OzHe6OyGOgnACvSjeug" Ids="PB6T4WQ217dM6nN3kxVBEO,KNLe7QEP09kM7hJZRP2GwX" />
-        <Link Id="T7XUKK8n04jOzwFpm5TKFg" Ids="BEBlTKjE07YP4Cxzlcnryi,PB6T4WQ217dM6nN3kxVBEO" />
-        <Link Id="TM4w1lGPMW0MoWGYPyypHR" Ids="Ox3Oj33MHA5LNacvUFLbEd,TmKdwn5TGz5PdeaFphI7v4" />
         <Link Id="SqNC5SS81VaOff2NQNuoYu" Ids="GL18Lf4zoUEOIU5ZI2hAb3,KR0jXxAuYmEOW6P5EPDTbZ" />
         <Link Id="FvUfYzMLn2PPBysnjZaxmA" Ids="KRD59NelogSNJprBq6EQYO,L4IViisz2zmL5r4Jiba9YB" />
         <Link Id="KeIAvvdOzVlNhSKAJplx1W" Ids="B2OR2FThhFALPEScwPS0O8,CgPwTcASgQ7P7jh1hc1Jsy" />
@@ -306,7 +302,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0235-g9260b58ac3" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0235-g9260b58ac3" />
 </Document>

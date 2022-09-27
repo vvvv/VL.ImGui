@@ -96,7 +96,9 @@ namespace VL.ImGui
                         ImGui.SetNextWindowPos(viewPort.WorkPos);
                         ImGui.SetNextWindowSize(viewPort.WorkSize);
 
-                        ImGui.Begin("Default ImGui Window", ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoBringToFrontOnFocus | ImGuiWindowFlags.NoNavFocus | ImGuiWindowFlags.NoFocusOnAppearing);
+                        ImGui.Begin("Default ImGui Window", ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoResize | 
+                                                            ImGuiWindowFlags.NoBringToFrontOnFocus | ImGuiWindowFlags.NoNavFocus | 
+                                                            ImGuiWindowFlags.NoFocusOnAppearing | ImGuiWindowFlags.NoDecoration);
                     }
 
                     // ImGui.ShowDemoWindow();

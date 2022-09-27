@@ -6,7 +6,7 @@ namespace VL.ImGui.Widgets
     using ImGui = ImGuiNET.ImGui;
 
     /// <summary>
-    /// Modal Windows block normal mouse hovering detection (and therefore most mouse interactions) behind them. They can't be closed by clicking outside of them.
+    /// Modal Popups block normal mouse hovering detection (and therefore most mouse interactions) behind them. They can't be closed by clicking outside of them.
     /// </summary>
     [GenerateNode(Category = "ImGui.Widgets.Internal", GenerateRetained = false)]
     public sealed partial class ModalCore : Widget
