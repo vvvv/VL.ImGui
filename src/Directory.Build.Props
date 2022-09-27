@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <ImGuiVersion>1.87.3</ImGuiVersion>
+    <VLVersion>2022.5.0-0221-gfbab3bf048</VLVersion>
+    <VLInstallPath>$(ProgramFiles)\vvvv\vvvv_gamma_$(VLVersion)</VLInstallPath>
+    <PackageRepositories>"$(MsBuildThisFileDirectory)..\.."</PackageRepositories>
+
+    <DebugGenerator>true</DebugGenerator>
+  </PropertyGroup>
+</Project>

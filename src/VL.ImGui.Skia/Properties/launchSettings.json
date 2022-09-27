@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "VL.ImGui": {
+    "VL.ImGui.Skia": {
       "commandName": "Executable",
       "executablePath": "$(VLInstallPath)\\vvvv.exe",
       "commandLineArgs": "--package-repositories $(PackageRepositories)"

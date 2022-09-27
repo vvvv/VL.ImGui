@@ -1,8 +1,6 @@
-﻿using SkiaSharp;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 using System;
 using VL.Core;
-using VL.Skia;
 
 namespace VL.ImGui.Widgets
 {

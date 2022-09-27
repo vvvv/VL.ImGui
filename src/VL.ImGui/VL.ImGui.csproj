@@ -1,28 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <OutputPath>..\..\lib</OutputPath>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>    
+    <PackageOutputPath>..\..\bin</PackageOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <VLVersion>2022.5.0-0188-g31269d4f1c</VLVersion>
-    <VLInstallPath>$(ProgramFiles)\vvvv\vvvv_gamma_$(VLVersion)</VLInstallPath>
-    <PackageRepositories>"$(MsBuildThisFileDirectory)..\..\.."</PackageRepositories>
-
-    <DebugGenerator>true</DebugGenerator>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ImGui.NET" Version="1.87.3">
-      <ExcludeAssets>native</ExcludeAssets>
+    <PackageReference Include="ImGui.NET" Version="$(ImGuiVersion)" GeneratePathProperty="true">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>native;build;buildTransitive</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="VL.Skia" Version="$(VLVersion)" />
+    <PackageReference Include="VL.CoreLib" Version="$(VLVersion)" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,7 +31,23 @@
   <ItemGroup>
     <!-- Exclude the output of source generators from the compilation -->
     <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
-    <Content Include="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+    <None Include="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\runtimes\**\*">
+      <LinkBase>runtimes</LinkBase>
+      <Pack>true</Pack>
+      <PackagePath>runtimes\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+      <Visible>false</Visible>
+    </None>
+
+    <None Include="$(PkgImGui_NET)\lib\net6.0\**">
+      <LinkBase>lib\net6.0</LinkBase>
+      <Pack>true</Pack>
+      <PackagePath>lib\net6.0\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+      <Visible>false</Visible>
+    </None>
   </ItemGroup>
   
 </Project>

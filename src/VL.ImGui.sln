@@ -9,8 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VL.ImGui.Generator", "VL.Im
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DEBF62DC-670E-44C4-B4EC-BF55AE853100}"
 	ProjectSection(SolutionItems) = preProject
+		Directory.Build.Props = Directory.Build.Props
 		..\README.md = ..\README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.ImGui.Skia", "VL.ImGui.Skia\VL.ImGui.Skia.csproj", "{AA197D9F-DF5D-4E67-98DA-794B553D41EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +29,10 @@ Global
 		{6A9E0F1F-F2CF-4DF4-B087-0D686182BCE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A9E0F1F-F2CF-4DF4-B087-0D686182BCE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A9E0F1F-F2CF-4DF4-B087-0D686182BCE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA197D9F-DF5D-4E67-98DA-794B553D41EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA197D9F-DF5D-4E67-98DA-794B553D41EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA197D9F-DF5D-4E67-98DA-794B553D41EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA197D9F-DF5D-4E67-98DA-794B553D41EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
