@@ -27,7 +27,7 @@
     ************************ CollapsingHeader ************************
 
 -->
-          <Node Name="CollapsingHeader" Bounds="383,406" Id="N90vPSmLzrEOmc5g18ZmI2">
+          <Node Name="CollapsingHeader" Bounds="375,406" Id="N90vPSmLzrEOmc5g18ZmI2">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -133,7 +133,7 @@
     ************************ TreeNode ************************
 
 -->
-          <Node Name="TreeNode" Bounds="384,441" Id="EjYpTTolO9NPsY4kl9ctGr">
+          <Node Name="TreeNode" Bounds="375,441" Id="EjYpTTolO9NPsY4kl9ctGr">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -221,7 +221,7 @@
     ************************ TabBar ************************
 
 -->
-          <Node Name="TabBar" Bounds="384,480" Id="IUcxZd7L4MJLiHe3Rbg0SN">
+          <Node Name="TabBar" Bounds="375,480" Id="IUcxZd7L4MJLiHe3Rbg0SN">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -299,7 +299,7 @@
     ************************ TabItem ************************
 
 -->
-          <Node Name="TabItem" Bounds="387,515" Id="UoIDsj517RwMacpwR4u3AO">
+          <Node Name="TabItem" Bounds="375,515" Id="UoIDsj517RwMacpwR4u3AO">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -582,7 +582,7 @@
     ************************ SetTextWrapPosition ************************
 
 -->
-          <Node Name="SetTextWrapPosition" Bounds="606,391" Id="OhpoJz5QatQOlAjmvZIJ6q">
+          <Node Name="SetTextWrapPosition" Bounds="603,391" Id="OhpoJz5QatQOlAjmvZIJ6q">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -702,7 +702,7 @@
     ************************ Menu ************************
 
 -->
-          <Node Name="Menu" Bounds="381,323" Id="I6ei7XVh4iEO0cbGSUs52E">
+          <Node Name="Menu" Bounds="375,323" Id="I6ei7XVh4iEO0cbGSUs52E">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -774,7 +774,7 @@
     ************************ Text (Multiline) ************************
 
 -->
-          <Node Name="Text (Multiline)" Bounds="387,552" Id="QdMDkqlAqpnM34Y1xBSRpw">
+          <Node Name="Text (Multiline)" Bounds="375,552" Id="QdMDkqlAqpnM34Y1xBSRpw">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -851,7 +851,7 @@
     ************************ ChildWindow ************************
 
 -->
-          <Node Name="ChildWindow" Bounds="609,431" Id="EFS5Ap5TX0ANFPft4JhnN3">
+          <Node Name="ChildWindow" Bounds="603,431" Id="EFS5Ap5TX0ANFPft4JhnN3">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -929,7 +929,7 @@
     ************************ Popup ************************
 
 -->
-          <Node Name="Popup" Bounds="390,590" Id="OrrDvZnsnnEOtXhQo9ZosA">
+          <Node Name="Popup" Bounds="375,590" Id="OrrDvZnsnnEOtXhQo9ZosA">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -1005,7 +1005,7 @@
     ************************ Popup (Modal) ************************
 
 -->
-          <Node Name="Popup (Modal)" Bounds="392,627" Id="JGtjBEEApdlMejuKHZrrax">
+          <Node Name="Popup (Modal)" Bounds="375,627" Id="JGtjBEEApdlMejuKHZrrax">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -1086,7 +1086,7 @@
     ************************ MainMenuBar ************************
 
 -->
-          <Node Name="MainMenuBar" Bounds="379,289" Id="Cw2FZxDBFWTL9aiaIWX5BJ">
+          <Node Name="MainMenuBar" Bounds="375,289" Id="Cw2FZxDBFWTL9aiaIWX5BJ">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -1130,6 +1130,57 @@
                   </p:TypeAnnotation>
                 </Pin>
                 <Pin Id="KhMqpweso9mMP7xoJN960z" Name="Context" Kind="OutputPin" />
+              </Patch>
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ Tooltip (Widget) ************************
+
+-->
+          <Node Name="Tooltip (Widget)" Bounds="375,663" Id="M3MwuQOA3Y6Pfi3eq7rWFy">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+              <Choice Kind="ContainerDefinition" Name="Process" />
+            </p:NodeReference>
+            <Patch Id="EmxgtT13JblNLwdyWJNkR5">
+              <Canvas Id="MB8WlMapQUUOG1bcV2rnWE" CanvasType="Group">
+                <ControlPoint Id="NgEIbUJph6rLqQZsyxYoQG" Bounds="405,264" />
+                <Node Bounds="403,304,113,19" Id="QPZDJ4sVWIlPgkeaipGwyx">
+                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
+                  </p:NodeReference>
+                  <Pin Id="CA291WSzndZMC91FPZzFAO" Name="Region" Kind="InputPin" />
+                  <Pin Id="JN5ItQSVg1zNBDGPp8dSa2" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="343,344,125,19" AutoConnect="true" Id="BFN6OQBmdKDOILHMH6bD61">
+                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="ProcessNode" Name="TooltipCore" />
+                  </p:NodeReference>
+                  <Pin Id="JvMrV2Ka20ELqoplLGVo70" Name="Context" Kind="InputPin" />
+                  <Pin Id="Uv05LG4tMzoOhSbLfHlMZg" Name="Content" Kind="InputPin" />
+                  <Pin Id="DNukbyLtbdIMv9Ke7Ho9ql" Name="Style" Kind="InputPin" />
+                  <Pin Id="PMp4iIMtqoaPCn1MOrdRmD" Name="Context" Kind="OutputPin" />
+                </Node>
+              </Canvas>
+              <ProcessDefinition Id="InB4MhS0aGGPwkzrFnZ561">
+                <Fragment Id="K83hRe2r4ijMPKPfDWRIUo" Patch="G7C7ZcJipglLETQLStfUHN" Enabled="true" />
+                <Fragment Id="IA0cSDdFCOaPMgHiBLZeez" Patch="QDFR8eym8bYNywT8r3dGF6" Enabled="true" />
+              </ProcessDefinition>
+              <Link Id="SX6pRvaDCHjMtfDnFtw6lC" Ids="FP1b2RjBfLTNN5TOFxuKZS,NgEIbUJph6rLqQZsyxYoQG" IsHidden="true" />
+              <Link Id="E8IpsWVdX87QAdm78OXgUt" Ids="NgEIbUJph6rLqQZsyxYoQG,CA291WSzndZMC91FPZzFAO" />
+              <Link Id="SIptyIBiEBBNhaxFnSh6CK" Ids="JN5ItQSVg1zNBDGPp8dSa2,Uv05LG4tMzoOhSbLfHlMZg" />
+              <Patch Id="G7C7ZcJipglLETQLStfUHN" Name="Create" />
+              <Patch Id="QDFR8eym8bYNywT8r3dGF6" Name="Update" ManuallySortedPins="true">
+                <Pin Id="FP1b2RjBfLTNN5TOFxuKZS" Name="Region" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                    <Choice Kind="TypeFlag" Name="ICustomRegion" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="RA7YuxadzefPIjQQS0B65B" Name="Context" Kind="InputPin" />
+                <Pin Id="LbestBhUoZEMrcZIjk5rCE" Name="Style" Kind="InputPin" />
+                <Pin Id="V3xvDBgEIuLNffFSnv1WLA" Name="Context" Kind="OutputPin" />
               </Patch>
             </Patch>
           </Node>

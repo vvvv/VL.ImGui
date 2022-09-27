@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0225-e247e95b60" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0235-9260b58ac3" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -69,7 +69,7 @@
                 <Patch Id="VavAQWxEYwWO9PliJy6Ovz" ManuallySortedPins="true">
                   <Patch Id="N8Jet9TpT7nP2dfbKg2tIi" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="NTTyvngQwhvMt2hCKS5DcB" Name="Update" ManuallySortedPins="true" />
-                  <Node Bounds="237,273,682,838" Id="VQUjk8FguiKPeC6SCHq6vH">
+                  <Node Bounds="237,273,829,838" Id="VQUjk8FguiKPeC6SCHq6vH">
                     <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="TabBar" />
@@ -268,6 +268,55 @@
                         <Pin Id="VT6z0MU1sAEPuOzDTLhvOM" Name="Input" Kind="StateInputPin" DefaultValue="True" />
                         <Pin Id="IKsfcSpRS83MuiiRun3Gs6" Name="Output" Kind="StateOutputPin" />
                       </Node>
+                      <Overlay Id="VezkMXXP9dyOk6puJmR4m5" Name="Leading and Trailing Buttons" Bounds="694,472,360,247" />
+                      <Node Bounds="726,660,85,19" Id="ApgLSLNIsBuOZKh51DEFfS">
+                        <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <Choice Kind="ProcessNode" Name="TabItemButton" />
+                          <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
+                        </p:NodeReference>
+                        <Pin Id="VDHqa2XH83RNJto4q4GheA" Name="Context" Kind="InputPin" />
+                        <Pin Id="JeHEjXUZfF7MO3kQMLxM52" Name="Channel" Kind="InputPin" />
+                        <Pin Id="UFUkWQMWVm3PvUaNIUdSY7" Name="Label" Kind="InputPin" />
+                        <Pin Id="Hn5ucenJLPTPsukaKAZHhz" Name="Flags" Kind="InputPin" />
+                        <Pin Id="DyVuarHqCAHON3t7rF0n6o" Name="Style" Kind="InputPin" />
+                        <Pin Id="RKH3cjhy98mPg4r7hc13jB" Name="Context" Kind="OutputPin" />
+                        <Pin Id="G9Qt32UQpzROKTr41pgRCd" Name="Bang" Kind="OutputPin" />
+                      </Node>
+                      <Pad Id="HvTfYkQFbUlQUVAiA0Qjk1" Comment="Label" Bounds="768,619,20,15" ShowValueBox="true" isIOBox="true" Value="?">
+                        <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                          <Choice Kind="TypeFlag" Name="String" />
+                        </p:TypeAnnotation>
+                      </Pad>
+                      <Pad Id="OSg4cFJctrgLi7BbQc4UAQ" Comment="Flags" Bounds="788,642,176,15" ShowValueBox="true" isIOBox="true" Value="Trailing">
+                        <p:TypeAnnotation LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                          <Choice Kind="TypeFlag" Name="ImGuiTabItemFlags" />
+                        </p:TypeAnnotation>
+                      </Pad>
+                      <Node Bounds="725,573,85,19" Id="M4dvqQGTWNCMB2HBjBe797">
+                        <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <Choice Kind="ProcessNode" Name="TabItemButton" />
+                          <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
+                        </p:NodeReference>
+                        <Pin Id="Pk1fE4G1drsQDLOvZoARg4" Name="Context" Kind="InputPin" />
+                        <Pin Id="EfnwytFy4b9NtntoaxGzcE" Name="Channel" Kind="InputPin" />
+                        <Pin Id="LITIlJG11bVM5qYvkSpv3y" Name="Label" Kind="InputPin" />
+                        <Pin Id="GTnyVE2LZ2NLwvC8cdILLR" Name="Flags" Kind="InputPin" />
+                        <Pin Id="EUrec2G3cgxLBc7EIDDtkH" Name="Style" Kind="InputPin" />
+                        <Pin Id="IrwEUXvRwxiN34pCb1GBsL" Name="Context" Kind="OutputPin" />
+                        <Pin Id="V8mOZ9oVJGzLMIN88o3EQC" Name="Bang" Kind="OutputPin" />
+                      </Node>
+                      <Pad Id="Pt9C3A04QXzMCVPHQLqB5p" Comment="Label" Bounds="767,536,20,15" ShowValueBox="true" isIOBox="true" Value="+">
+                        <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                          <Choice Kind="TypeFlag" Name="String" />
+                        </p:TypeAnnotation>
+                      </Pad>
+                      <Pad Id="M8Q4FHivt8LQWaQBR4qSmb" Comment="Flags" Bounds="787,557,176,15" ShowValueBox="true" isIOBox="true" Value="Leading">
+                        <p:TypeAnnotation LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                          <Choice Kind="TypeFlag" Name="ImGuiTabItemFlags" />
+                        </p:TypeAnnotation>
+                      </Pad>
                     </Patch>
                   </Node>
                 </Patch>
@@ -298,10 +347,14 @@
         <Link Id="DpB763j2zw1POHJiBiCXYr" Ids="DBFjZUb1T0aLLkJAsT9fxK,RKM5gtfKSWqNCcBjBJAJ7w" />
         <Link Id="GyKOAQKT9eJOb5dgGCbiGL" Ids="IKsfcSpRS83MuiiRun3Gs6,Q1bIIVMaHP2M0vsSwWoqSh" />
         <Link Id="Ju3S4JrzNRFM4di5UrSCrY" Ids="DBFjZUb1T0aLLkJAsT9fxK,VT6z0MU1sAEPuOzDTLhvOM" />
+        <Link Id="TstJ8WKtABSLmPHjjLpjvo" Ids="HvTfYkQFbUlQUVAiA0Qjk1,UFUkWQMWVm3PvUaNIUdSY7" />
+        <Link Id="BguDxITnwT0MSF328UoeJb" Ids="OSg4cFJctrgLi7BbQc4UAQ,Hn5ucenJLPTPsukaKAZHhz" />
+        <Link Id="GktB9W9DArkP5dZO7U7BtQ" Ids="Pt9C3A04QXzMCVPHQLqB5p,LITIlJG11bVM5qYvkSpv3y" />
+        <Link Id="OajqAEPts4GMDpxy5m905d" Ids="M8Q4FHivt8LQWaQBR4qSmb,GTnyVE2LZ2NLwvC8cdILLR" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0235-g9260b58ac3" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0235-g9260b58ac3" />
 </Document>

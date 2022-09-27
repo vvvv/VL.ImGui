@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
-
-namespace VL.ImGui.Widgets
+﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets", Name = "Tooltip (Widget)", GenerateImmediate = false)]
-    internal partial class TooltipWidget : Widget
+    [GenerateNode(Category = "ImGui.Widgets.Internal", GenerateRetained = false)]
+    internal partial class TooltipCore : Widget
     {
         public Widget? Content { private get; set; }
 

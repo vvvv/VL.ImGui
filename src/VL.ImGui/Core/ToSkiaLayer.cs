@@ -98,7 +98,8 @@ namespace VL.ImGui
 
                         ImGui.Begin("Default ImGui Window", ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoResize | 
                                                             ImGuiWindowFlags.NoBringToFrontOnFocus | ImGuiWindowFlags.NoNavFocus | 
-                                                            ImGuiWindowFlags.NoFocusOnAppearing | ImGuiWindowFlags.NoDecoration);
+                                                            ImGuiWindowFlags.NoFocusOnAppearing | ImGuiWindowFlags.NoDecoration | 
+                                                            ImGuiWindowFlags.NoBackground);
                     }
 
                     // ImGui.ShowDemoWindow();
