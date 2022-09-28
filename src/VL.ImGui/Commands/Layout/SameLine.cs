@@ -13,7 +13,7 @@
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.SameLine(Offset, Spacing);
+            ImGuiNET.ImGui.SameLine(Offset.FromHectoToImGui(), Spacing.FromHectoToImGui());
         }
     }
 }

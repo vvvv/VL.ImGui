@@ -9,7 +9,7 @@ namespace VL.ImGui.Widgets.Primitives
     {
         public Vector2 Center { private get; set; } = Vector2.Zero;
 
-        public float Radius { private get; set; } = 100f;
+        public float Radius { private get; set; } = 1f;
 
         public int SegmentsCount { private get; set; } = 3;
 
@@ -25,11 +25,11 @@ namespace VL.ImGui.Widgets.Primitives
 
             if (IsFilled)
             {
-                drawList.AddNgonFilled(Center.FromHectoToImGui(), Radius, color, SegmentsCount);
+                drawList.AddNgonFilled(Center.FromHectoToImGui(), Radius.FromHectoToImGui(), color, SegmentsCount);
             }
             else
             {
-                drawList.AddNgon(Center.FromHectoToImGui(), Radius, color, SegmentsCount, Thickness.FromHectoToImGui());
+                drawList.AddNgon(Center.FromHectoToImGui(), Radius.FromHectoToImGui(), color, SegmentsCount, Thickness.FromHectoToImGui());
             }
         }
     }
