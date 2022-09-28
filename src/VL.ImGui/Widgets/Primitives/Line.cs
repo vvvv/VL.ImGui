@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace VL.ImGui.Widgets.Primitives
 {
-    [GenerateNode (Category = "Primitives")]
+    [GenerateNode (Category = "ImGui.Primitives")]
     internal partial class Line : PrimitiveWidget
     {
         public IReadOnlyList<Vector2> Points { private get; set; } = Array.Empty<Vector2>();

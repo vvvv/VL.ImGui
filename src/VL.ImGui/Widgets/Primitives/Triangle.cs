@@ -3,7 +3,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets.Primitives
 {
-    [GenerateNode(Category = "Primitives")]
+    [GenerateNode(Category = "ImGui.Primitives")]
     internal partial class Triangle : PrimitiveWidget
     {
         public Vector2 Point1 { private get; set; } = new Vector2(0, 100);

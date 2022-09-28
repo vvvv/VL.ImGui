@@ -6,7 +6,7 @@ using VL.Skia;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(GenerateRetained = false)]
+    [GenerateNode(GenerateRetained = false, Category = "ImGui.Internal")]
     public sealed partial class RetainedMode : Widget
     {
         public Widget? Widget { get; set; }
