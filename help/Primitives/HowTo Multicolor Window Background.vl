@@ -19,10 +19,10 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1277, 279, 432, 444" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1276, 278, 432, 444" />
             <Pin Id="RFO0WCwgClPLtuurXsd6KH" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
-            <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
+            <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
             <Pin Id="SN9Sy5tUeJRL75k6d5gCaB" Name="Clear" Kind="InputPin" DefaultValue="True" />
             <Pin Id="EOF5QMXbGKtO1Eeh1MzQnf" Name="Space" Kind="InputPin" DefaultValue="Normalized" />
             <Pin Id="Unrsb70U6iePtOM6HMRzfV" Name="Show Cursor" Kind="InputPin" />

@@ -19,7 +19,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1005, 155, 432, 460" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1004, 154, 432, 460" />
             <Pin Id="RFO0WCwgClPLtuurXsd6KH" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
@@ -41,7 +41,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="379,140,305,438" Id="GLXvgqSf3hJPgreK6Yc3w0">
+          <Node Bounds="379,140,305,437" Id="GLXvgqSf3hJPgreK6Yc3w0">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
@@ -157,6 +157,11 @@
               </Node>
               <Pad Id="CjR2jbEEzQjMSOLPWwrbpd" Comment="Size" Bounds="579,168,35,28" ShowValueBox="true" isIOBox="true" Value="300, 300">
                 <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Vector2" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Pad Id="H2l1vusXmuBOuIsSFh9HlB" Comment="Position" Bounds="463,172,35,28" ShowValueBox="true" isIOBox="true" Value="0, 0">
+                <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="Stride.Core.Mathematics.dll">
                   <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
               </Pad>
@@ -299,6 +304,7 @@
         <Link Id="UR0b36sVbHRMY1nFufN5Ts" Ids="Uxg2RFOrqvcLmnQWjoeV9z,C2Sn1ck64oDL90LUhUDA2X" />
         <Link Id="ErdjqZ980GxOl8fAKGiZfp" Ids="GKddEv6tJmTPGOuCeqVqaL,Ox3Oj33MHA5LNacvUFLbEd" />
         <Link Id="JBmUtR4PVgJOtIykAXXJoO" Ids="OmfpQTa6DqdMMK9gyOXiT5,KUWu5ODXN2AQLUBQJT3jSi" />
+        <Link Id="UybYmVQZJplM2Ifut2Ij7C" Ids="H2l1vusXmuBOuIsSFh9HlB,NLZVtagmwRYLxWZobQ1e50" />
       </Patch>
     </Node>
   </Patch>
