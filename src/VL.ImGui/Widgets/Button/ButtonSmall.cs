@@ -2,7 +2,7 @@
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name ="Button (Small)", Category = "ImGui.Widgets", Button = true)]
+    [GenerateNode(Name ="Button (Small)", Category = "ImGui.Widgets", Button = true, Tags = "bang")]
     internal partial class ButtonSmall : ChannelWidget<Unit>
     {
         public string? Label { get; set; }

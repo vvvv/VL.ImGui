@@ -1,6 +1,6 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Input (String Hint)", Category = "ImGui.Widgets")]
+    [GenerateNode(Name = "Input (String Hint)", Category = "ImGui.Widgets", Tags = "edit")]
     internal partial class InputTextWithHint : ChannelWidget<string>
     {
 

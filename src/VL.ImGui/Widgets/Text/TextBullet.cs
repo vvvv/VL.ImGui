@@ -1,6 +1,6 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Text (Bullet)", Category = "ImGui.Widgets")]
+    [GenerateNode(Name = "Text (Bullet)", Category = "ImGui.Widgets", Tags = "label")]
     internal partial class TextBullet : Widget
     {
         public string? Text { private get; set; } = "[Text]";

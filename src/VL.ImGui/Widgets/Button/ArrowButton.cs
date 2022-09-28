@@ -3,7 +3,7 @@ using System.Reactive;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets", Button = true)]
+    [GenerateNode(Category = "ImGui.Widgets", Button = true, Tags = "bang")]
     internal partial class ArrowButton : ChannelWidget<Unit>
     {
         public string? Label { private get; set; }

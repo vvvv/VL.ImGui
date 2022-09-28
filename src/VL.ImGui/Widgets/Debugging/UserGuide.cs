@@ -8,7 +8,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Debug")]
+    [GenerateNode(Category = "ImGui.Advanced.Debug")]
     internal partial class UserGuide : Widget
     {
 

@@ -2,7 +2,7 @@
 
 namespace VL.ImGui.Windows
 {
-    [GenerateNode(Category = "ImGui.Debug")]
+    [GenerateNode(Category = "ImGui.Advanced.Debug")]
     public sealed partial class AboutWindow : Widget
     {
         public bool HasCloseButton { get; set; } = true;

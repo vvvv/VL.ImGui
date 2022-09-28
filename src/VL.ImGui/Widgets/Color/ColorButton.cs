@@ -3,7 +3,7 @@ using System.Reactive;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets", Button = true)]
+    [GenerateNode(Category = "ImGui.Widgets", Button = true, Tags = "rgba, hsv, hsl")]
     internal partial class ColorButton : ChannelWidget<Unit>
     {
         public string? Label { get; set; }
