@@ -22,6 +22,6 @@ namespace VL.ImGui.Widgets
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.ProgressBar(Fraction, Size.ToImGui(), OverlayText);        }
+            ImGuiNET.ImGui.ProgressBar(Fraction, Size.FromHectoToImGui(), OverlayText);        }
     }
 }

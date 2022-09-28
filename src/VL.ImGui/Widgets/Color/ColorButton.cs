@@ -17,7 +17,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             Update();
-            if (ImGuiNET.ImGui.ColorButton(Label ?? string.Empty, Color.ToImGui(), Flags, Size.ToImGui()))
+            if (ImGuiNET.ImGui.ColorButton(Label ?? string.Empty, Color.ToImGui(), Flags, Size.FromHectoToImGui()))
                 Value = Unit.Default;
         }
     }

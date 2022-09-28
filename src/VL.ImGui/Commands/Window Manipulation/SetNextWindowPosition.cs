@@ -13,7 +13,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             if (Enabled)
-                ImGuiNET.ImGui.SetNextWindowPos(Position.ToImGui());
+                ImGuiNET.ImGui.SetNextWindowPos(Position.FromHectoToImGui());
         }
     }
 }

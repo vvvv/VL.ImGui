@@ -59,7 +59,7 @@ namespace VL.ImGui.Styling
         public Optional<float> Rounding { private get; set; }
 
         /// <summary>
-        /// Thickness of border around windows. Generally set to 0.0 or 1.0. (Other values are not well tested and more CPU/GPU costly).
+        /// Thickness of border around windows. Generally set to 0.0 or 0.01. (Other values are not well tested and more CPU/GPU costly).
         /// </summary>
         public Optional<float> BorderSize { private get; set; }
 
@@ -108,27 +108,27 @@ namespace VL.ImGui.Styling
             if (MinSize.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.WindowMinSize, MinSize.Value.ToImGui());
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowMinSize, MinSize.Value.FromHectoToImGui());
             }
             if (TitleAlign.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.WindowTitleAlign, TitleAlign.Value.ToImGui());
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowTitleAlign, TitleAlign.Value.FromHectoToImGui());
             }
             if (Padding.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, Padding.Value.ToImGui());
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, Padding.Value.FromHectoToImGui());
             }
             if (Rounding.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.WindowRounding, Rounding.Value);
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowRounding, Rounding.Value.FromHectoToImGui());
             }
             if (BorderSize.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, BorderSize.Value);
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, BorderSize.Value.FromHectoToImGui());
             }
         }
     }

@@ -12,7 +12,7 @@ namespace VL.ImGui.Widgets
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.SetCursorScreenPos(Position.ToImGui());
+            ImGuiNET.ImGui.SetCursorScreenPos(Position.FromHectoToImGui());
         }
     }
 }

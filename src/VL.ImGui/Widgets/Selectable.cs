@@ -24,7 +24,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var value = Update();
-            if (ImGuiNET.ImGui.Selectable(Label ?? string.Empty, ref value, Flags, Size.ToImGui()))
+            if (ImGuiNET.ImGui.Selectable(Label ?? string.Empty, ref value, Flags, Size.FromHectoToImGui()))
                 Value = value;
         }
     }

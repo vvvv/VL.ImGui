@@ -19,7 +19,7 @@ namespace VL.ImGui.Widgets.Primitives
         /// </summary>
         public bool IsFilled { private get; set; } = false;
 
-        public float Thickness { private get; set; } = 1f;
+        public float Thickness { private get; set; } = 0.01f;
 
         public ImDrawFlags Flags { private get; set; }
 
@@ -29,11 +29,11 @@ namespace VL.ImGui.Widgets.Primitives
 
             if (IsFilled)
             {
-                drawList.AddRectFilled(TopLeft.ToImGui() + offset, BottomRight.ToImGui() + offset, color, Rounding, Flags);
+                drawList.AddRectFilled(TopLeft.FromHectoToImGui() + offset, BottomRight.FromHectoToImGui() + offset, color, Rounding.FromHectoToImGui(), Flags);
             }
             else
             {
-                drawList.AddRect(TopLeft.ToImGui() + offset, BottomRight.ToImGui() + offset, color, Rounding, Flags, Thickness);
+                drawList.AddRect(TopLeft.FromHectoToImGui() + offset, BottomRight.FromHectoToImGui() + offset, color, Rounding.FromHectoToImGui(), Flags, Thickness.FromHectoToImGui());
             }
         }
     }

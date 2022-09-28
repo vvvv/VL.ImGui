@@ -17,7 +17,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var value = ImGuiNET.ImGui.GetMouseDragDelta(Flags, Threshold);
-            Value = value.ToVL();
+            Value = value.ToVLHecto();
         }
     }
 }

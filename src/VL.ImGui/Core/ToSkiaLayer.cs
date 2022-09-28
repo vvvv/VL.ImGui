@@ -49,6 +49,8 @@ namespace VL.ImGui
         private readonly SkiaContext _context;
         private readonly RenderContext _renderContext;
         private readonly Handle<SKPaint> _fontPaint;
+        float _fontScaling;
+        float _uiScaling;
 
         public unsafe ToSkiaLayer()
         {
@@ -61,11 +63,10 @@ namespace VL.ImGui
 
             _renderContext = RenderContext.ForCurrentThread();
 
-            var scaling = VL.UI.Core.DIPHelpers.DIPFactor();
             _fontPaint = new Handle<SKPaint>(new SKPaint());
-            BuildImFontAtlas(_io.Fonts, _fontPaint, scaling);
-            UpdateUIScaling(scaling);
-            
+
+            var scaling = VL.UI.Core.DIPHelpers.DIPFactor(); 
+            updateScaling(fontScaling: scaling, uiScaling: 1.0f); 
         }
 
         public ILayer Update(Widget widget, bool dockingEnabled, bool defaultWindow)
@@ -74,6 +75,20 @@ namespace VL.ImGui
             DefaultWindow = defaultWindow;
             _widget = widget;
             return this;
+        }
+
+        void updateScaling(float fontScaling, float uiScaling)
+        {
+            if (fontScaling != _fontScaling)
+            {
+                _fontScaling = fontScaling;
+                BuildImFontAtlas(_io.Fonts, _fontPaint, fontScaling);
+            }
+            if (uiScaling != _uiScaling) 
+            {
+                _uiScaling = uiScaling;
+                UpdateUIScaling(uiScaling);
+            }
         }
 
         public unsafe void Render(CallerInfo caller)
@@ -199,90 +214,101 @@ namespace VL.ImGui
         private void Render(CallerInfo caller, ImDrawDataPtr drawData)
         {
             var canvas = caller.Canvas;
-            var callerInfo = caller.WithTransformation(SKMatrix.Identity);
-
-            for (int i = 0; i < drawData.CmdListsCount; ++i)
+            //using var _ = new SKAutoCanvasRestore(canvas, true);
+            canvas.Save();
+            try
             {
-                var drawList = drawData.CmdListsRange[i];
+                var us = PushTransformation(caller, SKMatrix.CreateScale(0.01f, 0.01f));
+                canvas.SetMatrix(us.Transformation);
+                //updateScaling(us.Transformation.ScaleY);
+                //canvas.ClipRect(clipRect);
 
-                // De-interleave all vertex data (sigh), convert to Skia types
-                //pos.Clear(); uv.Clear(); color.Clear();
-                var size = drawList.VtxBuffer.Size;
-                var pos = new SKPoint[size];
-                var uv = new SKPoint[size];
-                var color = new SKColor[size];
-                for (int j = 0; j < size; ++j)
+                for (int i = 0; i < drawData.CmdListsCount; ++i)
                 {
-                    var vert = drawList.VtxBuffer[j];
-                    pos[j] = new SKPoint(vert.pos.X, vert.pos.Y);
-                    uv[j] = new SKPoint(vert.uv.X, vert.uv.Y);
-                    color[j] = vert.col;
-                }
+                    var drawList = drawData.CmdListsRange[i];
 
-                // ImGui colors are RGBA
-                SKSwizzle.SwapRedBlue(MemoryMarshal.AsBytes(color.AsSpan()), MemoryMarshal.AsBytes(color.AsSpan()), color.Length);
-
-
-                // Draw everything with canvas.drawVertices...
-                for (int j = 0; j < drawList.CmdBuffer.Size; ++j)
-                {
-                    var drawCmd = drawList.CmdBuffer[j];
-                    var indexOffset = (int)drawCmd.IdxOffset;
-                    var clipRect = new SKRect(drawCmd.ClipRect.X, drawCmd.ClipRect.Y, drawCmd.ClipRect.Z, drawCmd.ClipRect.W);
-
-                    //using var _ = new SKAutoCanvasRestore(canvas, true);
-                    canvas.Save();
-                    canvas.ResetMatrix();
-                    canvas.ClipRect(clipRect);
-
-                    // TODO: Find min/max index for each draw, so we know how many vertices (sigh)
-                    if (drawCmd.UserCallback != IntPtr.Zero)
+                    // De-interleave all vertex data (sigh), convert to Skia types
+                    //pos.Clear(); uv.Clear(); color.Clear();
+                    var size = drawList.VtxBuffer.Size;
+                    var pos = new SKPoint[size];
+                    var uv = new SKPoint[size];
+                    var color = new SKColor[size];
+                    for (int j = 0; j < size; ++j)
                     {
-                        var handle = GCHandle.FromIntPtr(drawCmd.UserCallback);
-                        try
-                        {
-                            if (handle.Target is DrawCallback callback)
-                                callback(drawList, drawCmd);
-                        }
-                        finally
-                        {
-                            handle.Free();
-                        }
+                        var vert = drawList.VtxBuffer[j];
+                        pos[j] = new SKPoint(vert.pos.X, vert.pos.Y);
+                        uv[j] = new SKPoint(vert.uv.X, vert.uv.Y);
+                        color[j] = vert.col;
                     }
-                    else
-                    {
-                        var idIndex = drawCmd.TextureId.ToInt64();
-                        if (idIndex < _context.WidgetFuncs.Count)
-                        {
-                            // Small image IDs are actually indices into a list of callbacks. We directly
-                            // examing the vertex data to deduce the image rectangle, then reconfigure the
-                            // canvas to be clipped and translated so that the callback code gets to use
-                            // Skia to render a widget in the middle of an ImGui panel.
-                            var rectIndex = drawList.IdxBuffer[indexOffset];
-                            var tl = pos[rectIndex];
-                            var br = pos[rectIndex + 2];
-                            var imageClipRect = new SKRect(tl.X, tl.Y, br.X, br.Y);
-                            canvas.ClipRect(imageClipRect);
-                            canvas.Translate(imageClipRect.Location);
 
-                            _context.WidgetFuncs[(int)idIndex](callerInfo, imageClipRect);
+                    // ImGui colors are RGBA
+                    SKSwizzle.SwapRedBlue(MemoryMarshal.AsBytes(color.AsSpan()), MemoryMarshal.AsBytes(color.AsSpan()), color.Length);
+
+                    // Draw everything with canvas.drawVertices...
+                    for (int j = 0; j < drawList.CmdBuffer.Size; ++j)
+                    {
+                        var drawCmd = drawList.CmdBuffer[j];
+                        var indexOffset = (int)drawCmd.IdxOffset;
+                        var clipRect = new SKRect(drawCmd.ClipRect.X, drawCmd.ClipRect.Y, drawCmd.ClipRect.Z, drawCmd.ClipRect.W);
+
+                        // TODO: Find min/max index for each draw, so we know how many vertices (sigh)
+                        if (drawCmd.UserCallback != IntPtr.Zero)
+                        {
+                            var handle = GCHandle.FromIntPtr(drawCmd.UserCallback);
+                            try
+                            {
+                                if (handle.Target is DrawCallback callback)
+                                    callback(drawList, drawCmd);
+                            }
+                            finally
+                            {
+                                handle.Free();
+                            }
                         }
                         else
                         {
-                            var handle = GCHandle.FromIntPtr(drawCmd.TextureId);
-                            var paint = handle.Target as SKPaint ?? _fontPaint.Target;
+                            var idIndex = drawCmd.TextureId.ToInt64();
+                            if (idIndex < _context.WidgetFuncs.Count)
+                            {
+                                // Small image IDs are actually indices into a list of callbacks. We directly
+                                // examing the vertex data to deduce the image rectangle, then reconfigure the
+                                // canvas to be clipped and translated so that the callback code gets to use
+                                // Skia to render a widget in the middle of an ImGui panel.
+                                var rectIndex = drawList.IdxBuffer[indexOffset];
+                                var tl = pos[rectIndex];
+                                var br = pos[rectIndex + 2];
+                                var imageClipRect = new SKRect(tl.X, tl.Y, br.X, br.Y);
+                                canvas.ClipRect(imageClipRect);
+                                canvas.Translate(imageClipRect.Location);
 
-                            var indices = new ushort[drawCmd.ElemCount];
-                            for (int k = 0; k < indices.Length; k++)
-                                indices[k] = drawList.IdxBuffer[indexOffset + k];
+                                _context.WidgetFuncs[(int)idIndex](us, imageClipRect);
+                            }
+                            else
+                            {
+                                var handle = GCHandle.FromIntPtr(drawCmd.TextureId);
+                                var paint = handle.Target as SKPaint ?? _fontPaint.Target;
 
-                            canvas.DrawVertices(SKVertexMode.Triangles, pos, uv, color, SKBlendMode.Modulate, indices, paint);
+                                var indices = new ushort[drawCmd.ElemCount];
+                                for (int k = 0; k < indices.Length; k++)
+                                    indices[k] = drawList.IdxBuffer[indexOffset + k];
+
+                                canvas.DrawVertices(SKVertexMode.Triangles, pos, uv, color, SKBlendMode.Modulate, indices, paint);
+                            }
                         }
                     }
-
-                    canvas.Restore();
                 }
             }
+            finally
+            {
+                canvas.Restore();
+            }
+        }
+
+        public CallerInfo PushTransformation(CallerInfo caller, SKMatrix relative)
+        {
+            SKMatrix target = caller.Transformation;
+            SKMatrix.PreConcat(ref target, ref relative);
+            return caller.WithTransformation(target);
         }
 
         public bool Notify(INotification notification, CallerInfo caller)
@@ -332,7 +358,8 @@ namespace VL.ImGui
                             _io.AddMouseButtonEvent(button, false);
                             break;
                         case MouseNotificationKind.MouseMove:
-                            _io.AddMousePosEvent(mouseNotification.Position.X, mouseNotification.Position.Y);
+                            var _ = mouseNotification.PositionInWorldSpace.FromHectoToImGui();
+                            _io.AddMousePosEvent(_.X, _.Y);
                             break;
                         case MouseNotificationKind.MouseWheel:
                             if (mouseNotification is MouseWheelNotification wheel)

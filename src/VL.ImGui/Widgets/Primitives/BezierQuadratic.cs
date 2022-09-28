@@ -19,13 +19,14 @@ namespace VL.ImGui.Widgets.Primitives
 
         public Color4 Color { private get; set; } = Color4.White;
 
-        public float Thickness { private get; set; } = 1f;
+        public float Thickness { private get; set; } = 0.01f;
 
         protected override void Draw(Context context, in ImDrawListPtr drawList, in System.Numerics.Vector2 offset)
         {
             var color = (uint)Color.ToRgba();
 
-            drawList.AddBezierQuadratic(Point1.ToImGui() + offset, Point2.ToImGui() + offset, Point3.ToImGui() + offset, color, Thickness, SegmentsCount);
+            drawList.AddBezierQuadratic(Point1.FromHectoToImGui() + offset, Point2.FromHectoToImGui() + offset, Point3.FromHectoToImGui() + offset, color, 
+                Thickness.FromHectoToImGui(), SegmentsCount);
         }
     }
 }

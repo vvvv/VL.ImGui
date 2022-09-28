@@ -41,8 +41,8 @@ namespace VL.ImGui.Windows
 
             if (boundsChanged)
             {
-                ImGui.SetNextWindowPos (bounds.TopLeft.ToImGui());
-                ImGui.SetNextWindowSize (bounds.Size.ToImGui());
+                ImGui.SetNextWindowPos (bounds.TopLeft.FromHectoToImGui());
+                ImGui.SetNextWindowSize (bounds.Size.FromHectoToImGui());
             }
 
             ImGui.SetNextWindowCollapsed(!isOpen);

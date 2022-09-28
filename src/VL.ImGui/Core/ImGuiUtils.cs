@@ -209,6 +209,13 @@ namespace VL.ImGui
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static System.Numerics.Vector2 FromHectoToImGui(this Vector2 v)
+        {
+            v = new Vector2(v.X * 100f, v.Y * 100f);
+            return Unsafe.As<Vector2, System.Numerics.Vector2>(ref v);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static System.Numerics.Vector3 ToImGui(this Vector3 v)
         {
             return Unsafe.As<Vector3, System.Numerics.Vector3>(ref v);
@@ -221,12 +228,25 @@ namespace VL.ImGui
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static System.Numerics.Vector2 ToImGui(this Size2F v)
+        public static System.Numerics.Vector2 FromHectoToImGui(this Size2F v)
         {
+            v = new Size2F(v.Width * 100f, v.Height * 100f);
             return Unsafe.As<Size2F, System.Numerics.Vector2>(ref v);
         }
 
+        public static float FromHectoToImGui(this float v) => v * 100f;
+
         //TO VL
+
+        public static float ToVLHecto(this float v) => v * 0.01f;
+
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector2 ToVLHecto(this System.Numerics.Vector2 v)
+        {
+            v = new System.Numerics.Vector2(v.X * 0.01f, v.Y * 0.01f);
+            return Unsafe.As<System.Numerics.Vector2, Vector2>(ref v);
+        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector2 ToVL(this System.Numerics.Vector2 v)

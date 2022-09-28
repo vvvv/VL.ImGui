@@ -13,7 +13,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var width = ImGuiNET.ImGui.CalcTextSize(Text ?? string.Empty);
-            Value = ImGuiConversion.ToVL(width);
+            Value = ImGuiConversion.ToVLHecto(width);
         }
     }
 }

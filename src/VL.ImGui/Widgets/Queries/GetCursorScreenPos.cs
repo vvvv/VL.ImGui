@@ -13,7 +13,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var pos = ImGuiNET.ImGui.GetCursorStartPos();
-            Value = ImGuiConversion.ToVL(pos);
+            Value = ImGuiConversion.ToVLHecto(pos);
         }
     }
 }

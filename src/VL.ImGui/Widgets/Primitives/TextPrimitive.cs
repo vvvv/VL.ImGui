@@ -16,7 +16,7 @@ namespace VL.ImGui.Widgets.Primitives
         {
             var color = (uint)Color.ToRgba();
 
-            drawList.AddText(Position.ToImGui() + offset, color, Text);
+            drawList.AddText(Position.FromHectoToImGui() + offset, color, Text);
         }
     }
 }

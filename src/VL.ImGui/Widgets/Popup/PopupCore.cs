@@ -35,8 +35,8 @@ namespace VL.ImGui.Widgets
             var bounds = BoundsFlange.Update(Bounds);
             var isOpen = IsOpenFlange.Update(IsOpen, out bool hasChanged);
 
-            ImGui.SetNextWindowPos(bounds.TopLeft.ToImGui());
-            ImGui.SetNextWindowSize(bounds.Size.ToImGui());
+            ImGui.SetNextWindowPos(bounds.TopLeft.FromHectoToImGui());
+            ImGui.SetNextWindowSize(bounds.Size.FromHectoToImGui());
 
             if (isOpen && hasChanged && Label != null)
                 ImGui.OpenPopup(Label);

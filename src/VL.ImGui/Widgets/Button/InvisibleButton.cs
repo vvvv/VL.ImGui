@@ -15,7 +15,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             Update();
-            if (ImGuiNET.ImGui.InvisibleButton(Label ?? string.Empty, Size.ToImGui(), Flags))
+            if (ImGuiNET.ImGui.InvisibleButton(Label ?? string.Empty, Size.FromHectoToImGui(), Flags))
                 Value = Unit.Default;
         }
     }

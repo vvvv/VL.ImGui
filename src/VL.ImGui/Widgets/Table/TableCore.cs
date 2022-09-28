@@ -25,7 +25,7 @@ namespace VL.ImGui.Widgets
 
         internal override void UpdateCore(Context context)
         {
-            if (ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, Math.Max(1, Count), Flags, Size.ToImGui(), InnerWidth))
+            if (ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, Math.Max(1, Count), Flags, Size.FromHectoToImGui(), InnerWidth))
             {
                 try
                 {

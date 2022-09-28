@@ -18,7 +18,7 @@ namespace VL.ImGui.Widgets.Primitives
         protected override void Draw(Context context, in ImDrawListPtr drawList, in System.Numerics.Vector2 offset)
         {
 
-            drawList.AddRectFilledMultiColor(TopLeft.ToImGui() + offset, BottomRight.ToImGui() + offset, 
+            drawList.AddRectFilledMultiColor(TopLeft.FromHectoToImGui() + offset, BottomRight.FromHectoToImGui() + offset, 
                 (uint)TopLeftColor.ToRgba(), (uint)TopRightColor.ToRgba(), 
                 (uint)BottomRightColor.ToRgba(), (uint)BottomLeftColor.ToRgba());
         }

@@ -17,7 +17,7 @@ namespace VL.ImGui.Widgets.Primitives
 
         public bool IsFilled { private get; set; } = false;
 
-        public float Thickness { private get; set; } = 1f;
+        public float Thickness { private get; set; } = 0.01f;
 
         protected override void Draw(Context context, in ImDrawListPtr drawList, in System.Numerics.Vector2 offset)
         {
@@ -25,11 +25,11 @@ namespace VL.ImGui.Widgets.Primitives
 
             if (IsFilled)
             {
-                drawList.AddNgonFilled(Center.ToImGui(), Radius, color, SegmentsCount);
+                drawList.AddNgonFilled(Center.FromHectoToImGui(), Radius, color, SegmentsCount);
             }
             else
             {
-                drawList.AddNgon(Center.ToImGui(), Radius, color, SegmentsCount, Thickness);
+                drawList.AddNgon(Center.FromHectoToImGui(), Radius, color, SegmentsCount, Thickness.FromHectoToImGui());
             }
         }
     }

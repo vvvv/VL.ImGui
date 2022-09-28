@@ -13,7 +13,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             Update();
-            if (ImGuiNET.ImGui.Button(Label ?? string.Empty, Size.ToImGui()))
+            if (ImGuiNET.ImGui.Button(Label ?? string.Empty, Size.FromHectoToImGui()))
                 Value = Unit.Default;
         }
     }

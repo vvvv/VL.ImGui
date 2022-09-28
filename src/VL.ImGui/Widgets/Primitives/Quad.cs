@@ -21,7 +21,7 @@ namespace VL.ImGui.Widgets.Primitives
         /// </summary>
         public bool IsFilled { private get; set; } = false;
 
-        public float Thickness { private get; set; } = 1f;
+        public float Thickness { private get; set; } = 0.01f;
 
         protected override void Draw(Context context, in ImDrawListPtr drawList, in System.Numerics.Vector2 offset)
         {
@@ -30,16 +30,16 @@ namespace VL.ImGui.Widgets.Primitives
             if (IsFilled)
             {
                 drawList.AddQuadFilled(
-                    Point1.ToImGui() + offset, Point2.ToImGui() + offset,
-                    Point3.ToImGui() + offset, Point4.ToImGui() + offset,
+                    Point1.FromHectoToImGui() + offset, Point2.FromHectoToImGui() + offset,
+                    Point3.FromHectoToImGui() + offset, Point4.FromHectoToImGui() + offset,
                     color);
             }
             else
             {
                 drawList.AddQuad(
-                    Point1.ToImGui() + offset, Point2.ToImGui() + offset,
-                    Point3.ToImGui() + offset, Point4.ToImGui() + offset,
-                    color,Thickness);
+                    Point1.FromHectoToImGui() + offset, Point2.FromHectoToImGui() + offset,
+                    Point3.FromHectoToImGui() + offset, Point4.FromHectoToImGui() + offset,
+                    color,Thickness.FromHectoToImGui());
             }
         }
     }
