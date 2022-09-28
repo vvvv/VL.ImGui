@@ -52,6 +52,9 @@ namespace VL.ImGui
         float _fontScaling;
         float _uiScaling;
 
+        public static float ToImGuiScaling = VL.UI.Core.DIPHelpers.DIPFactor() * 100f;
+        public static float FromImGuiScaling = 1.0f / (VL.UI.Core.DIPHelpers.DIPFactor() * 100f);
+
         public unsafe ToSkiaLayer()
         {
             _context = new SkiaContext();
@@ -66,7 +69,7 @@ namespace VL.ImGui
             _fontPaint = new Handle<SKPaint>(new SKPaint());
 
             var scaling = VL.UI.Core.DIPHelpers.DIPFactor(); 
-            updateScaling(fontScaling: scaling, uiScaling: 1.0f); 
+            updateScaling(fontScaling: scaling, uiScaling: scaling); 
         }
 
         public ILayer Update(Widget widget, bool dockingEnabled, bool defaultWindow)
@@ -218,7 +221,7 @@ namespace VL.ImGui
             canvas.Save();
             try
             {
-                var us = PushTransformation(caller, SKMatrix.CreateScale(0.01f, 0.01f));
+                var us = PushTransformation(caller, SKMatrix.CreateScale(FromImGuiScaling, FromImGuiScaling));
                 canvas.SetMatrix(us.Transformation);
                 //updateScaling(us.Transformation.ScaleY);
                 //canvas.ClipRect(clipRect);
