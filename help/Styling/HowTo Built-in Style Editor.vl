@@ -19,7 +19,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="324, 196, 366, 316" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1165, 236, 365, 316" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
@@ -347,10 +347,9 @@
               <Node Bounds="304,335,74,19" Id="UsM0iATXdUHMKUSqOjggsl">
                 <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessNode" Name="StyleSelector" />
+                  <Choice Kind="ProcessNode" Name="StyleEditor" />
                 </p:NodeReference>
                 <Pin Id="FD5ETlzUwcIN2amqL5jWJq" Name="Context" Kind="InputPin" />
-                <Pin Id="Ss01QfsLEyVLUU5kPsuniw" Name="Label" Kind="InputPin" />
                 <Pin Id="AEvGSs2RYQrNwyexkJK5ka" Name="Style" Kind="InputPin" />
                 <Pin Id="VjvW5fySW1tQSoO8ll1hmy" Name="Context" Kind="OutputPin" />
               </Node>

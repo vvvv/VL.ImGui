@@ -19,10 +19,10 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1121, 308, 432, 446" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1120, 308, 432, 445" />
             <Pin Id="RFO0WCwgClPLtuurXsd6KH" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
-            <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" DefaultValue="0.6799998, 0.6799998, 0.6799998, 1" />
+            <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
             <Pin Id="SN9Sy5tUeJRL75k6d5gCaB" Name="Clear" Kind="InputPin" DefaultValue="True" />
             <Pin Id="EOF5QMXbGKtO1Eeh1MzQnf" Name="Space" Kind="InputPin" DefaultValue="Normalized" />
             <Pin Id="Unrsb70U6iePtOM6HMRzfV" Name="Show Cursor" Kind="InputPin" />
@@ -177,15 +177,6 @@
               </Node>
             </Patch>
           </Node>
-          <Pad Id="U5cHAMAPNjYNcXuJXTudFR" Comment="Default Window" Bounds="665,209,35,35" ShowValueBox="true" isIOBox="true" Value="True">
-            <p:TypeAnnotation>
-              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
           <Pad Id="S6faXI81gcvQRek5Oi3ngr" Bounds="68,125,327,91" ShowValueBox="true" isIOBox="true" Value="Popups (not like Tooltips) can contain Interactive elements: buttons, etc.. Popup closes, when its 'IsOpen' is set to false or when the User clicks outside of the Popup.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
@@ -216,7 +207,6 @@
         <Link Id="Kc4PWPMfP2KMHgH5hh3Z6q" Ids="NnYXsYFqbJqNMqqNaoLQMK,JEAL54jinDZNQOAWwPnUEY" />
         <Link Id="QsuMSrJ08qaLI40qg9OWli" Ids="NnkhVRXF4WrPocIiCPgql8,TFfkxQ68JZOP6sP8zVbvMm" />
         <Link Id="U7BjvofjZslLNll4NX60Mc" Ids="Kv7SRcamNgcL945QOVppvd,EuDChxGNfsOQPOvkGDv0lQ" />
-        <Link Id="HuBXgKCcVSdNemN7U2Z9Zd" Ids="U5cHAMAPNjYNcXuJXTudFR,QYV6IvNmSVtMsW7NpVxU8J" />
       </Patch>
     </Node>
   </Patch>

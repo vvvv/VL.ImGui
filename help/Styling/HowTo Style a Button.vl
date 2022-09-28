@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0225-e247e95b60" Version="0.128">
+<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0235-9260b58ac3" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -19,7 +19,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1059, 207, 446, 612" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1058, 206, 445, 612" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
@@ -333,7 +333,7 @@
               <Link Id="E4e5Or0RjN8P3sqQqxoMei" Ids="KK3wXY05VLLNklmnGUAfyH,CLLkLoDxPbSMYZr3QvhVU3" IsHidden="true" />
             </Patch>
           </Node>
-          <Node Bounds="261,162,351,401" Id="TDdVdVetv9wMfe1A4ll6DB">
+          <Node Bounds="261,185,351,378" Id="TDdVdVetv9wMfe1A4ll6DB">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
@@ -343,7 +343,7 @@
             <Pin Id="VhzAjRGcrzlPCmupzmZiOT" Name="Output" Kind="OutputPin" />
             <Patch Id="DKJi5H6kh5XNwMngClHHBr" ManuallySortedPins="true">
               <Patch Id="GLQfOpCjFJjMpcidB1kOlB" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="MqLCdlGEEBWQXAZcrD63aE" Name="Update" ParticipatingElements="CxPwXpgjv94PXZV49zQl8t" ManuallySortedPins="true" />
+              <Patch Id="MqLCdlGEEBWQXAZcrD63aE" Name="Update" ParticipatingElements="CxPwXpgjv94PXZV49zQl8t,EBKnLK7RBEjLhYB4Kxbkxl,UJRe61fUu7QNlId0307RDl" ManuallySortedPins="true" />
               <Node Bounds="273,524,85,19" Id="D2r5nDGRUZ1N74krwgcWCq">
                 <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -391,12 +391,7 @@
                   <Choice Kind="TypeFlag" Name="RGBA" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="AWvGEchXHBcP6i6UWFveXZ" Comment="Text Align" Bounds="435,375,35,28" ShowValueBox="true" isIOBox="true" Value="0, 1">
-                <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="Vector2" />
-                </p:TypeAnnotation>
-              </Pad>
-              <Pad Id="PnPrvvyLN5YNF5bQoEXqKf" Comment="" Bounds="433,190,35,28" ShowValueBox="true" isIOBox="true" Value="10, 10">
+              <Pad Id="AWvGEchXHBcP6i6UWFveXZ" Comment="Text Align" Bounds="435,375,35,28" ShowValueBox="true" isIOBox="true" Value="0.5, 0.5">
                 <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
@@ -416,9 +411,14 @@
                 <Pin Id="INch9UGc0fuP2TAd4K6jO9" Name="Border Size" Kind="InputPin" />
                 <Pin Id="F7DbaQFhVwGM6FZXtA6NCt" Name="Output" Kind="OutputPin" />
               </Node>
-              <Pad Id="Cpi4yAR4OmIMpmRHqe3lth" Comment="Rounding" Bounds="497,201,35,15" ShowValueBox="true" isIOBox="true" Value="5">
+              <Pad Id="Cpi4yAR4OmIMpmRHqe3lth" Comment="Rounding" Bounds="453,213,35,15" ShowValueBox="true" isIOBox="true" Value="5">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Pad Id="PwDD6f3kPfhK9oeZhkrfq7" Comment="Size" Bounds="335,489,35,28" ShowValueBox="true" isIOBox="true" Value="300, 50">
+                <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="Stride.Core.Mathematics.dll">
+                  <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
               </Pad>
             </Patch>
@@ -435,15 +435,15 @@
         <Link Id="TLW3poYUmdMO1LfKUf92Ym" Ids="QNHN8PcOtn5NXI9EQxyT8W,JRMPRg07P9ZN73sqYad8Ba" />
         <Link Id="NrDlLzKeN71OEwPinMahKd" Ids="CPw6eyN9McuMtWnYTR40on,NqRlR0WLcreQVMtNKDKX8s" />
         <Link Id="SfwFwLZzPIALUXk0Ulp0yX" Ids="SypYSthGqglMYolFGlBuPK,BdzL9SrCxzKOIqXdK09TkY" />
-        <Link Id="H1C9qMHxqFBOfGkOLpXYAO" Ids="AWvGEchXHBcP6i6UWFveXZ,D4xeQShhiEFPmFh2YvHBQG" />
         <Link Id="FjYIEVrcH5qOQlPyleGWQe" Ids="QkfjIh7HyGwMecej71m0XB,C8Akza6qnHsN81fxFJH7L0" />
-        <Link Id="L2gv62USmHUL3NMgjwUeqo" Ids="PnPrvvyLN5YNF5bQoEXqKf,E2C0gYTm1vUMI8ELyzwExv" />
         <Link Id="UPsdgOhF4LbOkVEZVdNciX" Ids="Cpi4yAR4OmIMpmRHqe3lth,MHChlEH9VZWPA2luVrooHn" />
         <Link Id="CxPwXpgjv94PXZV49zQl8t" Ids="F7DbaQFhVwGM6FZXtA6NCt,BFdyHhGpVRcLxrTUggYDEo" />
+        <Link Id="EBKnLK7RBEjLhYB4Kxbkxl" Ids="PwDD6f3kPfhK9oeZhkrfq7,DvgcreWQftLNF7j7nxUjZT" />
+        <Link Id="UJRe61fUu7QNlId0307RDl" Ids="AWvGEchXHBcP6i6UWFveXZ,D4xeQShhiEFPmFh2YvHBQG" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0235-g9260b58ac3" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0235-g9260b58ac3" />
 </Document>

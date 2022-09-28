@@ -333,7 +333,7 @@
               <Link Id="E4e5Or0RjN8P3sqQqxoMei" Ids="KK3wXY05VLLNklmnGUAfyH,CLLkLoDxPbSMYZr3QvhVU3" IsHidden="true" />
             </Patch>
           </Node>
-          <Node Bounds="280,174,147,114" Id="TDdVdVetv9wMfe1A4ll6DB">
+          <Node Bounds="280,216,102,80" Id="TDdVdVetv9wMfe1A4ll6DB">
             <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
@@ -341,10 +341,9 @@
             <Pin Id="GxBC24vS73xP5oGNgjarHK" Name="Docking Enabled" Kind="InputPin" />
             <Pin Id="SCLvkZoZUDoNkwihbxQkaT" Name="Default Window" Kind="InputPin" />
             <Pin Id="VhzAjRGcrzlPCmupzmZiOT" Name="Output" Kind="OutputPin" />
-            <ControlPoint Id="I5K877ccviNLntH0Uxdrki" Bounds="294,180" Alignment="Top" />
             <Patch Id="DKJi5H6kh5XNwMngClHHBr" ManuallySortedPins="true">
               <Patch Id="GLQfOpCjFJjMpcidB1kOlB" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="MqLCdlGEEBWQXAZcrD63aE" Name="Update" ParticipatingElements="JL7qXkl94TqLx6SA9Tk8zY" ManuallySortedPins="true" />
+              <Patch Id="MqLCdlGEEBWQXAZcrD63aE" Name="Update" ManuallySortedPins="true" />
               <Node Bounds="292,248,78,19" Id="Ont95NU5lEmQPdw704tipo">
                 <p:NodeReference LastCategoryFullName="ImGui.Debug" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -355,16 +354,6 @@
                 <Pin Id="AzbUW5zW7avNk9P7t2OItF" Name="Style" Kind="InputPin" />
                 <Pin Id="IU9PocdUyJhPerTnGKNsjY" Name="Context" Kind="OutputPin" />
                 <Pin Id="PzOevxm9jKyMW9vJv9C8o1" Name="Closing" Kind="OutputPin" />
-              </Node>
-              <Node Bounds="292,209,123,19" Id="IGU2klok60ENfB0JJCTT83">
-                <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessNode" Name="SetNextWindowPosition" />
-                </p:NodeReference>
-                <Pin Id="IyczoNcPdHBQX2l2TyvmFt" Name="Context" Kind="InputPin" />
-                <Pin Id="TRmMpDUR3PtO0xwUNKCEyG" Name="Position" Kind="InputPin" />
-                <Pin Id="IFoqf1Yoae9PdYya4IaL0L" Name="Enabled" Kind="InputPin" />
-                <Pin Id="KV1PPIXyCAaNJOOVQLQjMl" Name="Context" Kind="OutputPin" />
               </Node>
             </Patch>
           </Node>
@@ -385,8 +374,6 @@
           <Fragment Id="CA5NL4bFZyAQRQRLNsMjeJ" Patch="RYcSdMgjOSHMTo1e9h0RjC" Enabled="true" />
         </ProcessDefinition>
         <Link Id="RFBp91xhuq2PJsSasoz9Oy" Ids="VhzAjRGcrzlPCmupzmZiOT,FEmprmZSMXGOZ6BLW3yl3J" />
-        <Link Id="JL7qXkl94TqLx6SA9Tk8zY" Ids="KV1PPIXyCAaNJOOVQLQjMl,NZixclzZjzZL4tV6bDamM1" />
-        <Link Id="STkFhFfAY9ZOEYcOi8vE78" Ids="I5K877ccviNLntH0Uxdrki,IyczoNcPdHBQX2l2TyvmFt" />
       </Patch>
     </Node>
   </Patch>
