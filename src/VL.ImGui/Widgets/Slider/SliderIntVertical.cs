@@ -11,7 +11,7 @@ namespace VL.ImGui.Widgets
 
         public int Max { private get; set; } = 100;
 
-        public Vector2 Size { get; set; } = new Vector2 (20, 100);
+        public Vector2 Size { get; set; } = new Vector2(.2f, 1f);
 
         public string? Format { private get; set; }
 

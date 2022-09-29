@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Spc0ANcyIbJOrMJ6qKrUgb" LanguageVersion="2022.5.0-0235-9260b58ac3" Version="0.128">
-  <NugetDependency Id="LMYmLodTRU4OJSkcyn6bho" Location="VL.CoreLib" Version="2022.5.0-0235-g9260b58ac3" />
+<Document xmlns:p="property" Id="Spc0ANcyIbJOrMJ6qKrUgb" LanguageVersion="2022.5.0-0242-24c47d850a" Version="0.128">
+  <NugetDependency Id="LMYmLodTRU4OJSkcyn6bho" Location="VL.CoreLib" Version="2022.5.0-0242-g24c47d850a" />
   <Patch Id="J92awyuxkXVOwzHOcsjJG3">
     <Canvas Id="OJeuTPRYJUeOVmkqxCSEoA" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -20,7 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="PuG0bcB8eqxPck4ITinMmc" Name="Bounds" Kind="InputPin" DefaultValue="1018, 204, 636, 464" />
+            <Pin Id="PuG0bcB8eqxPck4ITinMmc" Name="Bounds" Kind="InputPin" DefaultValue="1041, 233, 636, 464" />
             <Pin Id="ULoEM54zl1XLu2jmN2I37Q" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="OVbx8n9RLE5MRe7klfFFDr" Name="Input" Kind="InputPin" />
             <Pin Id="UloK2vQ640GMvmFoNudSeE" Name="Color" Kind="InputPin" />
@@ -34,13 +34,10 @@
             <Pin Id="CdTonLn3SQENQrFbbh8P8b" Name="Render Time" Kind="OutputPin" />
           </Node>
           <Node Bounds="205,222,519,659" Id="U6mqOehw0hrLtvRtnqyI3Y">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
+              <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
-            <Pin Id="Jp4bvVNZMrDOD4nXsuzveJ" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="SBy71irxiEmODWdBFVbLEa" Name="Default Window" Kind="InputPin" DefaultValue="False" />
-            <Pin Id="ErUSU3AlDFUMawqfv24olx" Name="Output" Kind="OutputPin" />
             <Patch Id="TLNP6wCs14mORjcvaeNQjF" ManuallySortedPins="true">
               <Patch Id="I1r4cpLdr5oNl7VRfNZZkw" Name="Create" ManuallySortedPins="true" />
               <Patch Id="KIY5xxE9cgkQO89bmbh0WW" Name="Update" ParticipatingElements="RnXHUenADMrLzDXN7yUwYG" ManuallySortedPins="true" />
@@ -223,6 +220,10 @@
                 </p:TypeAnnotation>
               </Pad>
             </Patch>
+            <Pin Id="Jp4bvVNZMrDOD4nXsuzveJ" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="SBy71irxiEmODWdBFVbLEa" Name="Default Window" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="OfWhAzWcMSUQZki9sbfPv2" Name="Use Skia Space" Kind="InputPin" />
+            <Pin Id="ErUSU3AlDFUMawqfv24olx" Name="Output" Kind="OutputPin" />
           </Node>
           <!--
 
@@ -338,5 +339,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="NDjkHiKFDFSLSs7Gt0A9Wo" Location="VL.ImGui" Version="0.0.0" />
-  <NugetDependency Id="BWbPcu3gOceP62y0FxGINV" Location="VL.Skia" Version="2022.5.0-0235-g9260b58ac3" />
+  <NugetDependency Id="BWbPcu3gOceP62y0FxGINV" Location="VL.Skia" Version="2022.5.0-0242-g24c47d850a" />
 </Document>
