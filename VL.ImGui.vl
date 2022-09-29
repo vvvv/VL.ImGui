@@ -1386,10 +1386,10 @@
             <Patch Id="H5lUT4DsZqnNXJpPsNzqJ1">
               <Canvas Id="Bb0TsYSHGoSP3KSvFfkRRq" CanvasType="Group">
                 <Node Bounds="470,448,131,19" AutoConnect="true" Id="PMDkRYDx4veM5Eh6p23S67">
-                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessNode" Name="SetTextWrapPosition" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
+                    <Choice Kind="ProcessNode" Name="SetTextWrapPositionCore" />
                   </p:NodeReference>
                   <Pin Id="EeZMNcK8wphP8JfgMU1Y3o" Name="Content" Kind="InputPin" />
                   <Pin Id="DEKyaJjbMikOxlUJrDgvMs" Name="Position" Kind="InputPin" />
@@ -2204,10 +2204,10 @@
                   <Pin Id="To716KIM4GYMw1KcbtKhGy" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="438,356,109,19" Id="UvfoXjdahaZOZWHXUEVcAA">
-                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessNode" Name="SetTextWrapPosition" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
+                    <Choice Kind="ProcessNode" Name="SetTextWrapPositionCore" />
                   </p:NodeReference>
                   <Pin Id="A6jCf9FGdSxQQnrw1hyu58" Name="Content" Kind="InputPin" />
                   <Pin Id="POWgLPXnmO3LMLEPGb0VO5" Name="Position" Kind="InputPin" />
