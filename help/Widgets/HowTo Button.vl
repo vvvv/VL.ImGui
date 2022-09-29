@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0225-e247e95b60" Version="0.128">
+<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0235-9260b58ac3" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -14,17 +14,17 @@
       </p:NodeReference>
       <Patch Id="RxrvDdUu4cvOBXbi4KngKc">
         <Canvas Id="PuJjSWeZNf5OSPyulV1tEs" CanvasType="Group">
-          <Node Bounds="356,873,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
+          <Node Bounds="357,915,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1206, 204, 436, 316" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="878, 106, 436, 316" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
             <Pin Id="SN9Sy5tUeJRL75k6d5gCaB" Name="Clear" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="EOF5QMXbGKtO1Eeh1MzQnf" Name="Space" Kind="InputPin" DefaultValue="Normalized" />
+            <Pin Id="EOF5QMXbGKtO1Eeh1MzQnf" Name="Space" Kind="InputPin" DefaultValue="DIPTopLeft" />
             <Pin Id="Unrsb70U6iePtOM6HMRzfV" Name="Show Cursor" Kind="InputPin" />
             <Pin Id="UA8COiWD2ghPmN4LAZoDDV" Name="VSync" Kind="InputPin" DefaultValue="False" />
             <Pin Id="BGs1SpulZeMPbcit3peXa1" Name="Enabled" Kind="InputPin" />
@@ -382,7 +382,7 @@
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="SaYdA5wxoX8MuErJBpyTvU" Comment="Size" Bounds="483,550,52,28" ShowValueBox="true" isIOBox="true" Value="0, 100">
+              <Pad Id="SaYdA5wxoX8MuErJBpyTvU" Comment="Size" Bounds="483,550,52,28" ShowValueBox="true" isIOBox="true" Value="0, 0.39">
                 <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
@@ -437,7 +437,7 @@
                 <Pin Id="UVGVNkX6exSOqDVEF5SMao" Name="Style" Kind="InputPin" />
                 <Pin Id="JPBeAwnQ5BwOnNSp4Eh21W" Name="Context" Kind="OutputPin" />
               </Node>
-              <Pad Id="TjmPyd6YBMjOFmRKt9icni" Comment="Spacing" Bounds="610,636,38,15" ShowValueBox="true" isIOBox="true" Value="20">
+              <Pad Id="TjmPyd6YBMjOFmRKt9icni" Comment="Spacing" Bounds="610,636,38,15" ShowValueBox="true" isIOBox="true" Value="0.099999994">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
@@ -506,7 +506,7 @@
                 <Pin Id="TeeFsjx4slsMPlmP3XpJEq" Name="Style" Kind="InputPin" />
                 <Pin Id="U1pjDU8tYsrOleWwybIZzR" Name="Context" Kind="OutputPin" />
               </Node>
-              <Pad Id="OyG88S1NO7gMOdycUGluB7" Comment="Spacing" Bounds="548,757,38,15" ShowValueBox="true" isIOBox="true" Value="5">
+              <Pad Id="OyG88S1NO7gMOdycUGluB7" Comment="Spacing" Bounds="548,757,38,15" ShowValueBox="true" isIOBox="true" Value="0.05">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
@@ -591,6 +591,11 @@
             </Patch>
           </Node>
           <Overlay Id="SoDrUsdVxaNNNjwzxyuHeR" Name="React to the click in a reactive fashion" Bounds="27,331,235,311" />
+          <Pad Id="F4y7KMxMLH6MHLy4SiBP9x" Comment="Space" Bounds="459,893,85,15" ShowValueBox="true" isIOBox="true" Value="DIPTopLeft">
+            <p:TypeAnnotation LastCategoryFullName="VL.Skia" LastSymbolSource="VL.Skia.dll">
+              <Choice Kind="TypeFlag" Name="CommonSpace" />
+            </p:TypeAnnotation>
+          </Pad>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
@@ -627,10 +632,11 @@
         <Link Id="HnX1EbdciPNQTo5ZYMTY64" Ids="EKAXumTKANDOl51WIJWLYt,OQhG82Vz67XN7Bv6NYWBR2" />
         <Link Id="LZoRTopSpioM2x89MqINGK" Ids="AvwwCnGL0skOrQ63Fo4xkQ,Mgihuzf73sGPHhDwtBvtQE" />
         <Link Id="BeEPQq26RE2LyRPngKNi9q" Ids="QJm5C9alukDOMHmIkAu4jx,QtDeb2Ul0WRK9yjU9Qr3iQ" />
+        <Link Id="TqotFn0LWNBLPouSVUVArX" Ids="F4y7KMxMLH6MHLy4SiBP9x,EOF5QMXbGKtO1Eeh1MzQnf" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0235-g9260b58ac3" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0235-g9260b58ac3" />
 </Document>

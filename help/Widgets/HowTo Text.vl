@@ -19,12 +19,12 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1210, 260, 374, 444" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1148, 60, 373, 444" />
             <Pin Id="RFO0WCwgClPLtuurXsd6KH" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
             <Pin Id="SN9Sy5tUeJRL75k6d5gCaB" Name="Clear" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="EOF5QMXbGKtO1Eeh1MzQnf" Name="Space" Kind="InputPin" DefaultValue="Normalized" />
+            <Pin Id="EOF5QMXbGKtO1Eeh1MzQnf" Name="Space" Kind="InputPin" DefaultValue="DIPTopLeft" />
             <Pin Id="Unrsb70U6iePtOM6HMRzfV" Name="Show Cursor" Kind="InputPin" />
             <Pin Id="UA8COiWD2ghPmN4LAZoDDV" Name="VSync" Kind="InputPin" DefaultValue="False" />
             <Pin Id="BGs1SpulZeMPbcit3peXa1" Name="Enabled" Kind="InputPin" />
@@ -123,7 +123,7 @@
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="EOZVfUBwd74OFsvpZV5Gcn" Comment="Size" Bounds="505,910,35,28" ShowValueBox="true" isIOBox="true" Value="300, 100">
+              <Pad Id="EOZVfUBwd74OFsvpZV5Gcn" Comment="Size" Bounds="505,910,35,28" ShowValueBox="true" isIOBox="true" Value="0.2, 0.1">
                 <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
@@ -178,7 +178,7 @@
                 <Pin Id="KXlfMTUs2zYLaWTDyRBD4L" Name="Width" Kind="InputPin" />
                 <Pin Id="DBECb7JSKwZLfDibsciXvs" Name="Context" Kind="OutputPin" />
               </Node>
-              <Pad Id="Jfl3xY1Koo9ObdfZhSh8Dd" Comment="Width" Bounds="433,408,45,15" ShowValueBox="true" isIOBox="true" Value="100">
+              <Pad Id="Jfl3xY1Koo9ObdfZhSh8Dd" Comment="Width" Bounds="433,408,45,15" ShowValueBox="true" isIOBox="true" Value="0.1">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
@@ -245,7 +245,7 @@
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="UkU1GCZHYgWNoxqvkJA4TS" Comment="Width" Bounds="382,639,41,15" ShowValueBox="true" isIOBox="true" Value="100">
+              <Pad Id="UkU1GCZHYgWNoxqvkJA4TS" Comment="Width" Bounds="382,639,41,15" ShowValueBox="true" isIOBox="true" Value="0.1">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>

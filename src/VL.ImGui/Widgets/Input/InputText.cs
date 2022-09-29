@@ -1,6 +1,6 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Input (String)", Category = "ImGui.Widgets", Tags = "edit")]
+    [GenerateNode(Name = "Input (String)", Category = "ImGui.Widgets", Tags = "edit, textfield")]
     internal partial class InputText : ChannelWidget<string>
     {
 

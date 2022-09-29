@@ -2,7 +2,7 @@
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Input (String Multiline)", Category = "ImGui.Widgets", Tags = "edit")]
+    [GenerateNode(Name = "Input (String Multiline)", Category = "ImGui.Widgets", Tags = "edit, textfield")]
     internal partial class InputTextMultiline : ChannelWidget<string>
     {
 
