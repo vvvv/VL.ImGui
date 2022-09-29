@@ -6,11 +6,11 @@ namespace VL.ImGui.Widgets.Primitives
     [GenerateNode(Category = "ImGui.Primitives", Name = "Bezier (Quadratic)")]
     internal partial class BezierQuadratic : PrimitiveWidget
     {
-        public Vector2 Point1 { private get; set; }
+        public Vector2 Point1 { private get; set; } = new Vector2(0, 0);
 
-        public Vector2 Point2 { private get; set; }
+        public Vector2 Point2 { private get; set; } = new Vector2(1, 0);
 
-        public Vector2 Point3 { private get; set; }
+        public Vector2 Point3 { private get; set; } = new Vector2(1, 1);
 
         /// <summary>
         /// Use 0 to automatically calculate tessellation (preferred).

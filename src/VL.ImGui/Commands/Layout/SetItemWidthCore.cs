@@ -8,11 +8,11 @@
     {
         public Widget? Content { private get; set; }
 
-        public float Width { private get; set; } = 0.1f;
+        public float Width { private get; set; } = 1f;
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.PushItemWidth(Width);
+            ImGuiNET.ImGui.PushItemWidth(Width.FromHectoToImGui());
             try
             {
                 context?.Update(Content);

@@ -18,7 +18,7 @@
         internal override void UpdateCore(Context context)
         {
             if (Enabled)
-                ImGuiNET.ImGui.SetScrollFromPosY(Value, Ratio);
+                ImGuiNET.ImGui.SetScrollFromPosY(Value.FromHectoToImGui(), Ratio);
         }
     }
 }

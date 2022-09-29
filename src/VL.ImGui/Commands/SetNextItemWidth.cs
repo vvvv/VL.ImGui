@@ -6,11 +6,11 @@
     [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false, IsStylable = false)]
     internal partial class SetNextItemWidth : Widget
     {
-        public float Width { private get; set; }
+        public float Width { private get; set; } = 1f;
 
         internal override void UpdateCore(Context context)
         {
-                ImGuiNET.ImGui.SetNextItemWidth(Width);
+                ImGuiNET.ImGui.SetNextItemWidth(Width.FromHectoToImGui());
         }
     }
 }

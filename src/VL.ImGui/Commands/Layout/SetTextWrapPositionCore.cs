@@ -8,11 +8,11 @@
     {
         public Widget? Content { private get; set; }
 
-        public float Position { private get; set; } = 0.1f;
+        public float Position { private get; set; } = 1f;
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.PushTextWrapPos(Position);
+            ImGuiNET.ImGui.PushTextWrapPos(Position.FromHectoToImGui());
             try
             {
                 context?.Update(Content);

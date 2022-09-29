@@ -8,7 +8,7 @@ namespace VL.ImGui.Widgets.Primitives
     {
         public Vector2 TopLeft { private get; set; } = Vector2.Zero;
 
-        public Vector2 BottomRight { private get; set; } = new Vector2(100, 100);
+        public Vector2 BottomRight { private get; set; } = new Vector2(1, 1);
 
         public Color4 TopLeftColor { private get; set; } = Color4.White;
         public Color4 TopRightColor { private get; set; } = Color4.White;

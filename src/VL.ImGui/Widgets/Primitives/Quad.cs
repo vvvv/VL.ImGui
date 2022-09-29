@@ -8,11 +8,11 @@ namespace VL.ImGui.Widgets.Primitives
     {
         public Vector2 Point1 { private get; set; } = Vector2.Zero;
 
-        public Vector2 Point2 { private get; set; } = new Vector2(100, 0);
+        public Vector2 Point2 { private get; set; } = new Vector2(1, 0);
 
-        public Vector2 Point3 { private get; set; } = new Vector2(100, 100);
+        public Vector2 Point3 { private get; set; } = new Vector2(1, 1);
 
-        public Vector2 Point4 { private get; set; } = new Vector2(0, 100);
+        public Vector2 Point4 { private get; set; } = new Vector2(0, 1);
 
         public Color4 Color { private get; set; } = Color4.White;
 

@@ -7,23 +7,23 @@ using VL.Core;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false, IsStylable = false)]
-    internal partial class IndentUnindent : Widget
+    //[GenerateNode(GenerateImmediate = false)]
+    internal partial class SetWidth : Widget
     {
         public Widget? Input { private get; set; }
 
-        public float Value { private get; set; } = 0.5f;
+        public float Width { private get; set; } = 1f;
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.Indent(Value.FromHectoToImGui());
+            ImGuiNET.ImGui.PushItemWidth(Width.FromHectoToImGui());
             try
             {
                 context.Update(Input);
             }
             finally
             {
-                ImGuiNET.ImGui.Unindent(Value.FromHectoToImGui());
+                ImGuiNET.ImGui.PopItemWidth();
             }
         }
     }

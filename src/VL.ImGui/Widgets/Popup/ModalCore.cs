@@ -25,7 +25,7 @@ namespace VL.ImGui.Widgets
         /// Bounds of the Window.
         /// </summary>
         public Channel<RectangleF>? Bounds { private get; set; }
-        ChannelFlange<RectangleF> BoundsFlange = new ChannelFlange<RectangleF>(new RectangleF(0f, 0f, 100f, 100f));
+        ChannelFlange<RectangleF> BoundsFlange = new ChannelFlange<RectangleF>(new RectangleF(0f, 0f, 1f, 1f));
 
         /// <summary>
         /// Returns true if the Modal Window is open. Set to true to open the Modal Window.

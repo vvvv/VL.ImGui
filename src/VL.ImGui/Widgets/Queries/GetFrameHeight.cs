@@ -11,7 +11,7 @@
 
         internal override void UpdateCore(Context context)
         {
-            Value = ImGuiNET.ImGui.GetFrameHeight();
+            Value = ImGuiNET.ImGui.GetFrameHeight().ToVLHecto();
         }
     }
 }

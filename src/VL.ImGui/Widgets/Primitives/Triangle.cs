@@ -6,11 +6,11 @@ namespace VL.ImGui.Widgets.Primitives
     [GenerateNode(Category = "ImGui.Primitives")]
     internal partial class Triangle : PrimitiveWidget
     {
-        public Vector2 Point1 { private get; set; } = new Vector2(0, 100);
+        public Vector2 Point1 { private get; set; } = new Vector2(0, 1);
 
-        public Vector2 Point2 { private get; set; } = new Vector2(50, 0);
+        public Vector2 Point2 { private get; set; } = new Vector2(0.5f, 0);
 
-        public Vector2 Point3 { private get; set; } = new Vector2(100, 100);
+        public Vector2 Point3 { private get; set; } = new Vector2(1, 1);
 
         public Color4 Color { private get; set; } = Color4.White;
 

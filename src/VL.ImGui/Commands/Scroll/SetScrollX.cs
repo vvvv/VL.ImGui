@@ -13,7 +13,7 @@
         internal override void UpdateCore(Context context)
         {
             if (Enabled)
-                ImGuiNET.ImGui.SetScrollX(Value);
+                ImGuiNET.ImGui.SetScrollX(Value.FromHectoToImGui());
         }
     }
 }

@@ -7,11 +7,11 @@
     internal partial class Unindent : Widget
     {
 
-        public float Value { private get; set; }
+        public float Value { private get; set; } = 0.5f;
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.Unindent(Value);
+            ImGuiNET.ImGui.Unindent(Value.FromHectoToImGui());
         }
     }
 }

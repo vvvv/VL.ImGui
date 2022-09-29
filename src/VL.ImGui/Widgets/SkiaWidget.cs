@@ -11,7 +11,7 @@ namespace VL.ImGui.Widgets
 
         public ILayer? Layer { private get; set; }
 
-        public Vector2 Size { private get; set; } = new Vector2(100, 100);
+        public Vector2 Size { private get; set; } = new Vector2(1, 1);
 
         public CommonSpace Space { private get; set; }
 

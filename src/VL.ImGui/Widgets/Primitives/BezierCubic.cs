@@ -6,13 +6,13 @@ namespace VL.ImGui.Widgets.Primitives
     [GenerateNode(Category = "ImGui.Primitives", Name = "Bezier (Cubic)")]
     internal partial class BezierCubic : PrimitiveWidget
     {
-        public Vector2 Point1 { private get; set; }
+        public Vector2 Point1 { private get; set; } = new Vector2(0f, 0.5f);
 
-        public Vector2 Point2 { private get; set; }
+        public Vector2 Point2 { private get; set; } = new Vector2(0.25f, 1f);
 
-        public Vector2 Point3 { private get; set; }
+        public Vector2 Point3 { private get; set; } = new Vector2(0.75f, 0f);
 
-        public Vector2 Point4 { private get; set; }
+        public Vector2 Point4 { private get; set; } = new Vector2(1f, 0.5f);
 
         /// <summary>
         /// Use 0 to automatically calculate tessellation (preferred).

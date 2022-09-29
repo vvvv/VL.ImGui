@@ -14,8 +14,8 @@ namespace VL.ImGui.Widgets
 
         internal override void UpdateCore(Context context)
         {
-            var x = ImGuiNET.ImGui.GetScrollMaxX();
-            var y = ImGuiNET.ImGui.GetScrollMaxY();
+            var x = ImGuiNET.ImGui.GetScrollMaxX().ToVLHecto();
+            var y = ImGuiNET.ImGui.GetScrollMaxY().ToVLHecto();
             Value = new Vector2(x, y);
         }
     }
