@@ -429,7 +429,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="FMQd1aK4nunQEFlf9AUlIO" Comment="Default Window" Bounds="869,179,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="FMQd1aK4nunQEFlf9AUlIO" Comment="Default Window" Bounds="740,175,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation>
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <FullNameCategoryReference ID="Primitive" />
@@ -447,7 +447,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Iid0i2FvaJUPGHr6s82bH3" Bounds="818,178,38,29" ShowValueBox="true" isIOBox="true" Value="3.">
+          <Pad Id="Iid0i2FvaJUPGHr6s82bH3" Bounds="684,180,38,29" ShowValueBox="true" isIOBox="true" Value="3.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -465,7 +465,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="EmLuPNeNdRcMXJF7JvMwML" Bounds="502,231,32,29" ShowValueBox="true" isIOBox="true" Value="1.">
+          <Pad Id="EmLuPNeNdRcMXJF7JvMwML" Bounds="532,234,32,29" ShowValueBox="true" isIOBox="true" Value="1.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>

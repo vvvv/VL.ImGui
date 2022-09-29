@@ -120,6 +120,7 @@ namespace VL.ImGui
                                                             ImGuiWindowFlags.NoBackground);
                     }
 
+                    _context.SetDrawList(DrawList.Window);
                     // ImGui.ShowDemoWindow();
                     _context.Update(_widget);
                 }
