@@ -21,7 +21,7 @@ namespace VL.ImGui.Widgets.Primitives
             // TODO: All points are drawn in the main viewport. In order to have them drawn inside the window without having to transform them manually
             // we should look into the drawList.AddCallback(..., ...) method. It should allow us to modify the transformation matrix and clipping rects.
 
-            var offset = DrawList == DrawList.Window ? ImGuiNET.ImGui.GetCursorScreenPos() : default;
+            var offset = DrawList == DrawList.Window ? ImGuiNET.ImGui.GetWindowPos() : default;
             Draw(context, in drawList, in offset);
         }
 
