@@ -1,16 +1,16 @@
 ﻿namespace VL.ImGui.Widgets
 {
     /// <summary>
-    /// Create a MenuBar of current window.
+    /// Create a MenuBar at the top of the screen.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Widgets.Internal", GenerateRetained = false)]
-    internal partial class MenuBarCore : Widget
+    [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
+    internal partial class MainMenuBar : Widget
     {
         public Widget? Content { private get; set; }
 
         internal override void UpdateCore(Context context)
         {
-            if (ImGuiNET.ImGui.BeginMenuBar())
+            if (ImGuiNET.ImGui.BeginMainMenuBar())
             {
                 try
                 {

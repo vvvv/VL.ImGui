@@ -1,7 +1,7 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets.Internal", GenerateRetained = false)]
-    internal partial class TooltipCore : Widget
+    [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
+    internal partial class Tooltip : Widget
     {
         public Widget? Content { private get; set; }
 

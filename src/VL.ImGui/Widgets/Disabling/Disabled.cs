@@ -1,7 +1,7 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets.Internal", GenerateRetained = false)]
-    internal sealed partial class DisabledCore : Widget
+    [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
+    internal sealed partial class Disabled : Widget
     {
 
         public Widget? Input { private get; set; }
@@ -24,6 +24,10 @@
                     ImGuiNET.ImGui.EndDisabled();
                 }
             }
+            else
+            {
+                context.Update(Input);
+            }    
 
         }
     }

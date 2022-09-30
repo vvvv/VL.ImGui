@@ -1,6 +1,6 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Commands.Internal", GenerateImmediate = false)]
+    [GenerateNode(Category = "ImGui.Commands", GenerateImmediate = false)]
     internal partial class SetIDCore : Widget
     {
         public Widget? Input { private get; set; }

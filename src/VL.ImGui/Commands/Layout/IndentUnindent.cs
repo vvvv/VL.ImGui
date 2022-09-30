@@ -1,7 +1,7 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets.Internal", GenerateRetained = false, IsStylable = false)]
-    internal partial class IndentUnindentCore : Widget
+    [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false, IsStylable = false)]
+    internal partial class IndentUnindent : Widget
     {
         public Widget? Input { private get; set; }
 

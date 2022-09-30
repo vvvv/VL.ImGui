@@ -5,12 +5,21 @@ namespace VL.ImGui.Widgets
 {
     using ImGui = ImGuiNET.ImGui;
 
-    [GenerateNode(Category = "ImGui.Widgets.Internal", GenerateRetained = false)]
-    public sealed partial class PopupCore : Widget
+    /// <summary>
+    /// Modal Popups block normal mouse hovering detection (and therefore most mouse interactions) behind them. They can't be closed by clicking outside of them.
+    /// </summary>
+    [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
+    public sealed partial class Modal : Widget
     {
+
         public Widget? Content { get; set; }
 
         public string? Label { get; set; }
+
+        /// <summary>
+        /// Display a regular close button.
+        /// </summary>
+        public bool HasCloseButton { get; set; } = true;
 
         /// <summary>
         /// Bounds of the Window.
@@ -19,12 +28,12 @@ namespace VL.ImGui.Widgets
         ChannelFlange<RectangleF> BoundsFlange = new ChannelFlange<RectangleF>(new RectangleF(0f, 0f, 1f, 1f));
 
         /// <summary>
-        /// Returns true if the Popup is open. Set to true to open the Popup.
+        /// Returns true if the Modal Window is open. Set to true to open the Modal Window.
         /// </summary>
         public Channel<bool>? IsOpen { private get; set; }
         ChannelFlange<bool> IsOpenFlange = new ChannelFlange<bool>(false);
         /// <summary>
-        /// Returns true if the Popup is open. 
+        /// Returns true if the Modal Window is open. 
         /// </summary>
         public bool _IsOpen => IsOpenFlange.Value;
 
@@ -39,9 +48,25 @@ namespace VL.ImGui.Widgets
             ImGui.SetNextWindowSize(bounds.Size.FromHectoToImGui());
 
             if (isOpen && hasChanged && Label != null)
-                ImGui.OpenPopup(Label);
+                ImGui.OpenPopup(Label ?? string.Empty);
 
-            isOpen = ImGui.BeginPopup(Label ?? string.Empty, Flags);
+
+            if (HasCloseButton)
+            {
+                // From Imgui Demo:
+                // ...Also demonstrate passing a bool* to BeginPopupModal(), this will create a regular close button which
+                // will close the popup. Note that the visibility state of popups is owned by imgui, so the input value
+                // of the bool actually doesn't matter here.
+                /// https://github.com/ocornut/imgui/blob/2d38bc99b3b0013952d3d390397297083b767972/imgui_demo.cpp
+                
+                var unusedOpen = true;
+                isOpen = ImGui.BeginPopupModal(Label ?? string.Empty, ref unusedOpen, Flags);
+            }
+            else
+            {
+                isOpen = ImGui.BeginPopupModal(Label ?? string.Empty);
+            }
+
             IsOpenFlange.Value = isOpen;
 
             if (isOpen)
