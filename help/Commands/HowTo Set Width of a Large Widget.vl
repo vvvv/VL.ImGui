@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0235-9260b58ac3" Version="0.128">
+<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0252-cdda516750" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -14,7 +14,7 @@
       </p:NodeReference>
       <Patch Id="RxrvDdUu4cvOBXbi4KngKc">
         <Canvas Id="PuJjSWeZNf5OSPyulV1tEs" CanvasType="Group">
-          <Node Bounds="382,387,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
+          <Node Bounds="377,393,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
@@ -26,24 +26,39 @@
             <Pin Id="SN9Sy5tUeJRL75k6d5gCaB" Name="Clear" Kind="InputPin" DefaultValue="True" />
             <Pin Id="EOF5QMXbGKtO1Eeh1MzQnf" Name="Space" Kind="InputPin" DefaultValue="Normalized" />
             <Pin Id="Unrsb70U6iePtOM6HMRzfV" Name="Show Cursor" Kind="InputPin" />
-            <Pin Id="UA8COiWD2ghPmN4LAZoDDV" Name="VSync" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="UA8COiWD2ghPmN4LAZoDDV" Name="VSync" Kind="InputPin" />
             <Pin Id="BGs1SpulZeMPbcit3peXa1" Name="Enabled" Kind="InputPin" />
             <Pin Id="IEolNxvy8ieOHWXoXnUqwO" Name="Form" Kind="OutputPin" />
             <Pin Id="VtCD3TojbCZNIE3ICe23l6" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="Fi9FymljmNXQYNmU2h76Xz" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="422,181,207,176" Id="T3GzwlJPlsYMlxeYQQBmPM">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+          <Pad Id="VfUPYpJPvZCLF5agnT19HM" Bounds="114,106,284,34" ShowValueBox="true" isIOBox="true" Value="Use SetNextItemWidth">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">18</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Az9rM31S2QzNDKpQIjyfYe" Bounds="116,187,201,252" ShowValueBox="true" isIOBox="true" Value="To manually set the width of the &quot;large&quot; widgets (widgets, that have item and label). &#xD;&#xA;Label is not included in the width.&#xD;&#xA;&#xD;&#xA;Works for Widgets, like:&#xD;&#xA;Slider, Input,..&#xD;&#xA;&#xD;&#xA;Doesn't work for:&#xD;&#xA;Text, Button,..&#xD;&#xA;&#xD;&#xA;">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="417,186,207,176" Id="KII5zZP1TXEORXMFWR0Quq">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
+              <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
-            <Pin Id="BMkdsn249xwLqJM0WycIuR" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="LeFdINYZDO5Od5UiW4564m" Name="Default Window" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="Tj2OHfCITh2PKCiH0ojQWO" Name="Output" Kind="OutputPin" />
-            <Patch Id="SSiw7cmR6RlPM9h09uLTjQ" ManuallySortedPins="true">
-              <Patch Id="C13Q5BNBkcMPHia8g9SGZb" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="LyxAs3WXyPWOpaqHl9rEUg" Name="Update" ManuallySortedPins="true" />
-              <Node Bounds="434,318,145,19" Id="UA74aVpMxOSMftlmEjWWTT">
+            <Patch Id="RK4VhZmhsKvOTl8863R3Sy" ManuallySortedPins="true">
+              <Patch Id="IpGgnybzuQVOwLk2B5s6rY" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="JdWGeGqxV2CNsz4E1TNvjk" Name="Update" ManuallySortedPins="true" />
+              <Node Bounds="429,323,145,19" Id="UA74aVpMxOSMftlmEjWWTT">
                 <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessNode" Name="Slider (Float)" />
@@ -60,7 +75,7 @@
                 <Pin Id="HANDO2M9SD1Ma6YdjcgQtY" Name="Bang" Kind="OutputPin" />
                 <Pin Id="L0Q3jqHyaEEOdHo7gt1Xhv" Name="Value" Kind="OutputPin" />
               </Node>
-              <Node Bounds="434,237,97,19" Id="BTOEb8N3bbBNxOwO3yaL3z">
+              <Node Bounds="429,242,97,19" Id="BTOEb8N3bbBNxOwO3yaL3z">
                 <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessNode" Name="SetNextItemWidth" />
@@ -69,36 +84,22 @@
                 <Pin Id="MC8FwevOPwuLnVVkbPIY2t" Name="Width" Kind="InputPin" />
                 <Pin Id="TsflDMnUfZnQS0xLFjQBak" Name="Context" Kind="OutputPin" />
               </Node>
-              <Pad Id="Rbq1wCR2MvVLVNWCY9mJzo" Comment="Width" Bounds="528,209,41,15" ShowValueBox="true" isIOBox="true" Value="160">
+              <Pad Id="Rbq1wCR2MvVLVNWCY9mJzo" Comment="Width" Bounds="523,214,41,15" ShowValueBox="true" isIOBox="true" Value="1.6">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="N6BqNtDVsnFN3Av1eKbVbX" Comment="Label" Bounds="476,288,74,15" ShowValueBox="true" isIOBox="true" Value="Optional Label">
+              <Pad Id="N6BqNtDVsnFN3Av1eKbVbX" Comment="Label" Bounds="471,293,74,15" ShowValueBox="true" isIOBox="true" Value="Optional Label">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
               </Pad>
             </Patch>
+            <Pin Id="UlEZ5ARUafsNjaMarAz7XZ" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="TAqiXkuePDaQVzwPY81n6A" Name="Default Window" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="Qoe4TKRa18pPmXMFRm4JXv" Name="Use Skia Space" Kind="InputPin" />
+            <Pin Id="PC9zduzecGmQPBFnlL9S9q" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="VfUPYpJPvZCLF5agnT19HM" Bounds="114,106,292,12" ShowValueBox="true" isIOBox="true" Value="Use SetNextItemWidth">
-            <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">18</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="Az9rM31S2QzNDKpQIjyfYe" Bounds="116,187,199,254" ShowValueBox="true" isIOBox="true" Value="To manually set the width of the &quot;large&quot; widgets (widgets, that have item and label). &#xD;&#xA;Label is not included in the width.&#xD;&#xA;&#xD;&#xA;Works for Widgets, like:&#xD;&#xA;Slider, Input,..&#xD;&#xA;&#xD;&#xA;Doesn't work for:&#xD;&#xA;Text, Button,..&#xD;&#xA;&#xD;&#xA;">
-            <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
@@ -106,14 +107,14 @@
           <Fragment Id="AO76J1FPnh9PIV7botvebO" Patch="DOR8YfYVKNAOTpcsIcbHHK" Enabled="true" />
           <Fragment Id="CA5NL4bFZyAQRQRLNsMjeJ" Patch="RYcSdMgjOSHMTo1e9h0RjC" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="KDqLB9nwZDgQKSsuGkvMYS" Ids="Tj2OHfCITh2PKCiH0ojQWO,FEmprmZSMXGOZ6BLW3yl3J" />
         <Link Id="KZTKRv4lpDrPNr37uYWZ4h" Ids="TsflDMnUfZnQS0xLFjQBak,KYEiCUEYeBTPrVxVU4mLLT" />
         <Link Id="MgMcig8GVtBMCyqFSOhgYw" Ids="Rbq1wCR2MvVLVNWCY9mJzo,MC8FwevOPwuLnVVkbPIY2t" />
         <Link Id="DXOQMmo2ibmPX1R6JL7Nx7" Ids="N6BqNtDVsnFN3Av1eKbVbX,QF8YyfSSpByOO8Zla172uJ" />
+        <Link Id="SXppzIifCDXNmGk1vgDihp" Ids="PC9zduzecGmQPBFnlL9S9q,FEmprmZSMXGOZ6BLW3yl3J" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0235-g9260b58ac3" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0252-gcdda516750" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0235-g9260b58ac3" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0252-gcdda516750" />
 </Document>

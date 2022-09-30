@@ -39,7 +39,7 @@
             </p:NodeReference>
             <Patch Id="Iv0IdOiX4OWOTYEQoL8BVB" ManuallySortedPins="true">
               <Patch Id="PoRtETUOJdrM2tH636CoUq" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="SpmbHHmC5f0PiQXGmfUtTm" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="SpmbHHmC5f0PiQXGmfUtTm" Name="Update" ParticipatingElements="P2kuYJb2BFpNSibTg7HWVS" ManuallySortedPins="true" />
               <Pad Id="Uh5RuNam2fgL3MSIdpgk0c" Comment="Name" Bounds="178,306,93,15" ShowValueBox="true" isIOBox="true" Value="Not Styled Window">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="String" />
@@ -348,7 +348,7 @@
               </Pad>
             </Patch>
             <Pin Id="BsJCPG6eqxQOX12Z6y5NQ6" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="P5NGXsu6xRSLVtshoo8jp3" Name="Default Window" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="P5NGXsu6xRSLVtshoo8jp3" Name="Default Window" Kind="InputPin" DefaultValue="False" />
             <Pin Id="NKsabIMEFT9QBnXyP9bofp" Name="Use Skia Space" Kind="InputPin" />
             <Pin Id="S8HorA54pdKLVTZmoCkexM" Name="Output" Kind="OutputPin" />
           </Node>
@@ -390,11 +390,11 @@
         <Link Id="J4Mb7UWEjLQQFBXcJbzYdo" Ids="IqkT2mp0PxAPsGHwJxQjRl,VNhJgYXX8yDNQUHmJyAdlp" />
         <Link Id="OCAtuJjTr2ONNihbRkPTrg" Ids="SGtPYwkJW3fOy8wMbt5CoE,SVHVrSQPTKJOZ3D1vQUvxJ" />
         <Link Id="SMgF3uycM3IOozmTpiRKhA" Ids="CpJqPkGq0EzLsLsj2VNSsD,MdovjnZbY9IN0CMDNXEj0B" />
-        <Link Id="Tlas2BrGUEmLjyQ34kss1S" Ids="LyQ9msLQGKZOsVWtjqO9CM,Kgpj5nTt0T4QOpa0oom3hk" />
         <Link Id="R1yDTz59DwWLpd2zsmQmty" Ids="OqyRUKpaWk2PEUPFSJebh7,S8Qhsz1xzjZMTkTOlkh3XT" />
         <Link Id="ABzV2yYu2ChNGdKgR1hRu8" Ids="MuC8xR17wtINlDUkDDW6qo,HRGoiyvbPC4NfyMQV4lhcf" />
         <Link Id="KfYs7bFnwY9Pl90JVgXKGB" Ids="S8HorA54pdKLVTZmoCkexM,FEmprmZSMXGOZ6BLW3yl3J" />
         <Link Id="K1mSsvk7XOGPCYLPkcdzHe" Ids="SpqBYEIwGVTMThSZH1kMVp,KVb8kz7seHtODLNzqlsGRh" />
+        <Link Id="P2kuYJb2BFpNSibTg7HWVS" Ids="LyQ9msLQGKZOsVWtjqO9CM,Kgpj5nTt0T4QOpa0oom3hk" />
       </Patch>
     </Node>
   </Patch>
