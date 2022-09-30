@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="TRNAaVyiMyHOL7eFnSjgWr" LanguageVersion="2022.5.0-0242-24c47d850a" Version="0.128">
-  <NugetDependency Id="LMYmLodTRU4OJSkcyn6bho" Location="VL.CoreLib" Version="2022.5.0-0242-g24c47d850a" />
+<Document xmlns:p="property" Id="TRNAaVyiMyHOL7eFnSjgWr" LanguageVersion="2022.5.0-0252-cdda516750" Version="0.128">
+  <NugetDependency Id="LMYmLodTRU4OJSkcyn6bho" Location="VL.CoreLib" Version="2022.5.0-0252-gcdda516750" />
   <Patch Id="J92awyuxkXVOwzHOcsjJG3">
     <Canvas Id="OJeuTPRYJUeOVmkqxCSEoA" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -27,7 +27,7 @@
             <Pin Id="Kdfm01H27mKNtcQ6wfxSPs" Name="Clear" Kind="InputPin" />
             <Pin Id="G06x53T25UnLxhn1cAp2fs" Name="Space" Kind="InputPin" />
             <Pin Id="Kav6rOyzgRaOoI4cssAQPr" Name="Show Cursor" Kind="InputPin" />
-            <Pin Id="FehvmZRbMxeMH7q04HJL7m" Name="VSync" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="FehvmZRbMxeMH7q04HJL7m" Name="VSync" Kind="InputPin" />
             <Pin Id="MsOtBZX0MnvP0ycMkwjay0" Name="Enabled" Kind="InputPin" />
             <Pin Id="Hyo7cpYHBbWLFcUTK8LeRV" Name="Form" Kind="OutputPin" />
             <Pin Id="GKtzcMPf1KNNwAoiwcQQkO" Name="ClientBounds" Kind="OutputPin" />
@@ -180,7 +180,7 @@
               </Node>
             </Patch>
             <Pin Id="Jp4bvVNZMrDOD4nXsuzveJ" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="SBy71irxiEmODWdBFVbLEa" Name="Default Window" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="SBy71irxiEmODWdBFVbLEa" Name="Default Window" Kind="InputPin" DefaultValue="True" />
             <Pin Id="LPfS8Q3xoLUOday1llXcWq" Name="Use Skia Space" Kind="InputPin" />
             <Pin Id="ErUSU3AlDFUMawqfv24olx" Name="Output" Kind="OutputPin" />
           </Node>
@@ -277,5 +277,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="NDjkHiKFDFSLSs7Gt0A9Wo" Location="VL.ImGui" Version="0.0.0" />
-  <NugetDependency Id="BWbPcu3gOceP62y0FxGINV" Location="VL.Skia" Version="2022.5.0-0242-g24c47d850a" />
+  <NugetDependency Id="BWbPcu3gOceP62y0FxGINV" Location="VL.Skia" Version="2022.5.0-0252-gcdda516750" />
 </Document>

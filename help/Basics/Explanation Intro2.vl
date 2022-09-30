@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0242-24c47d850a" Version="0.128">
+<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0252-cdda516750" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -24,7 +24,7 @@
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
             <Pin Id="SN9Sy5tUeJRL75k6d5gCaB" Name="Clear" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="EOF5QMXbGKtO1Eeh1MzQnf" Name="Space" Kind="InputPin" DefaultValue="DIPTopLeft" />
+            <Pin Id="EOF5QMXbGKtO1Eeh1MzQnf" Name="Space" Kind="InputPin" />
             <Pin Id="Unrsb70U6iePtOM6HMRzfV" Name="Show Cursor" Kind="InputPin" />
             <Pin Id="UA8COiWD2ghPmN4LAZoDDV" Name="VSync" Kind="InputPin" DefaultValue="True" />
             <Pin Id="BGs1SpulZeMPbcit3peXa1" Name="Enabled" Kind="InputPin" />
@@ -492,7 +492,6 @@
                 </p:TypeAnnotation>
               </Pad>
             </Patch>
-            <ControlPoint Id="Vu1R5sAS2PXOlBOPmrLXnK" Bounds="627,198" Alignment="Top" />
             <Pin Id="GxBC24vS73xP5oGNgjarHK" Name="Docking Enabled" Kind="InputPin" />
             <Pin Id="SCLvkZoZUDoNkwihbxQkaT" Name="Default Window" Kind="InputPin" DefaultValue="True" />
             <Pin Id="KEO8Gc7jO3fOdHipqylsmM" Name="Use Skia Space" Kind="InputPin" DefaultValue="False" />
@@ -543,7 +542,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Pr3I8ioYZu4MSTKcqHn9K9" Comment="Default Window" Bounds="810,129,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="Pr3I8ioYZu4MSTKcqHn9K9" Comment="Default Window" Bounds="747,147,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation>
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <FullNameCategoryReference ID="Primitive" />
@@ -570,24 +569,6 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="MFLvxWVQ9W2OkuXdB3aG5Z" Bounds="88,359,198,19" ShowValueBox="true" isIOBox="true" Value="All values are defined in pixels.">
-            <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="TF2g50w71fKMiYbWnyhPrH" Bounds="53,354,32,29" ShowValueBox="true" isIOBox="true" Value="4.">
-            <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">14</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
@@ -605,12 +586,11 @@
         <Link Id="HVZVnuWbQEGMrYH16Ajnsl" Ids="G1ELravbyaUL42q7WFztDQ,DeZsFmz7js7MQhSD5CDrtK" />
         <Link Id="UyO5LCAPwQhOki1Ef4ltIN" Ids="JmWwZ407RibPn8ctzeqa3b,CHiJVJmJetrQZXUy0X76Sf" />
         <Link Id="CzY7eMR7v1CLzCxBjV2DHR" Ids="M2HBNfUvPzFLYxlOCFX2kN,UkKW1CSVWrPLnALv7kWszw" />
-        <Link Id="DV6I8X0KSlBNrp3y2aqW2T" Ids="Vu1R5sAS2PXOlBOPmrLXnK,JmYKSYqaWjrOzyuvf3WAP9" />
         <Link Id="KwNwaLTaPvjN2omCUrqHGf" Ids="Gg7vuE6QI77QLFwkLnIZAp,D6XaBoRmbDDMNT6lN72zYI" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0242-g24c47d850a" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0252-gcdda516750" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0242-g24c47d850a" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0252-gcdda516750" />
 </Document>
