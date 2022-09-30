@@ -113,7 +113,7 @@ namespace VL.ImGui.Styling
             if (TitleAlign.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.WindowTitleAlign, TitleAlign.Value.FromHectoToImGui());
+                ImGui.PushStyleVar(ImGuiStyleVar.WindowTitleAlign, TitleAlign.Value.ToImGui());
             }
             if (Padding.HasValue)
             {
