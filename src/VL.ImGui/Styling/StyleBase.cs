@@ -17,7 +17,7 @@
             SetCore();
         }
 
-        public void Reset()
+        public virtual void Reset()
         {
             if (colorCount > 0)
                 ImGui.PopStyleColor(colorCount);

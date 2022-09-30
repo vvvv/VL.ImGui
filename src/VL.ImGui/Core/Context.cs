@@ -1,6 +1,8 @@
-﻿using System;
+﻿using ImGuiNET;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using VL.ImGui.Widgets.Primitives;
 
 namespace VL.ImGui
 {
@@ -19,6 +21,9 @@ namespace VL.ImGui
 
         [ThreadStatic]
         internal static Context? Current = null;
+
+        internal ImDrawListPtr DrawListPtr;
+        internal System.Numerics.Vector2 DrawListOffset;
 
         public Context()
         {
@@ -51,6 +56,22 @@ namespace VL.ImGui
 
             widget.Update(this);
             _widgetsToReset.Add(widget);
+        }
+
+        internal void SetDrawList(DrawList drawList)
+        {
+            DrawListPtr = drawList switch
+            {
+                DrawList.Window => ImGui.GetWindowDrawList(),
+                DrawList.Foreground => ImGui.GetForegroundDrawList(),
+                DrawList.Background => ImGui.GetBackgroundDrawList(),
+                _ => throw new NotImplementedException()
+            };
+
+            DrawListOffset = drawList == DrawList.Window ? ImGui.GetWindowPos() : default;
+
+            // TODO: All points are drawn in the main viewport. In order to have them drawn inside the window without having to transform them manually
+            // we should look into the drawList.AddCallback(..., ...) method. It should allow us to modify the transformation matrix and clipping rects.
         }
 
         public void Dispose()

@@ -1,4 +1,4 @@
-﻿namespace VL.ImGui.Widgets.Primitives
+﻿namespace VL.ImGui
 {
     public enum DrawList
     {

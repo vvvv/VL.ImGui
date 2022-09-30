@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0225-e247e95b60" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0242-24c47d850a" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -19,7 +19,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="941, 361, 432, 444" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1036, 374, 432, 444" />
             <Pin Id="RFO0WCwgClPLtuurXsd6KH" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
@@ -32,7 +32,7 @@
             <Pin Id="VtCD3TojbCZNIE3ICe23l6" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="Fi9FymljmNXQYNmU2h76Xz" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Pad Id="TaMQlku23WmQVo2CUQzIWo" Bounds="67,131,459,37" ShowValueBox="true" isIOBox="true" Value="HowTo work with Collapsing Headers">
+          <Pad Id="TaMQlku23WmQVo2CUQzIWo" Bounds="200,77,459,37" ShowValueBox="true" isIOBox="true" Value="HowTo work with Collapsing Headers">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -41,17 +41,14 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="188,221,553,514" Id="GLXvgqSf3hJPgreK6Yc3w0">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+          <Node Bounds="188,162,553,573" Id="GLXvgqSf3hJPgreK6Yc3w0">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
+              <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
-            <Pin Id="QpgLapI5zDxPOzGRPcwG5j" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="QYV6IvNmSVtMsW7NpVxU8J" Name="Default Window" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="QcQXTQIKrE4Lctbv3yl4HS" Name="Output" Kind="OutputPin" />
             <Patch Id="OULFnoaA6CGM9ogOBcyw6g" ManuallySortedPins="true">
               <Patch Id="BKdfb4ldad4PB7v54JDFqH" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="JwDc4Yj5HDFL54OfZDrvOi" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="JwDc4Yj5HDFL54OfZDrvOi" Name="Update" ParticipatingElements="TszUCtmwMiVPTNkK3ttcUj" ManuallySortedPins="true" />
               <Node Bounds="284,326,269,98" Id="CpFZtS5i4FzPHhkLQMRhjH">
                 <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -90,7 +87,7 @@
                   </Pad>
                 </Patch>
               </Node>
-              <Pad Id="N46LzruvJkcOsRW581xz1w" Comment="Label" Bounds="329,291,99,15" ShowValueBox="true" isIOBox="true" Value="Collapsing Header">
+              <Pad Id="N46LzruvJkcOsRW581xz1w" Comment="" Bounds="329,291,99,15" ShowValueBox="true" isIOBox="true" Value="Header 1">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
@@ -99,15 +96,6 @@
                 <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
                   <Choice Kind="TypeFlag" Name="ImGuiTreeNodeFlags" />
                 </p:TypeAnnotation>
-              </Pad>
-              <Pad Id="QKV4wfwRZNkOPWYoNpZTBX" Comment="Is Open" Bounds="462,249,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-                <p:TypeAnnotation>
-                  <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-                  <FullNameCategoryReference ID="Primitive" />
-                </p:TypeAnnotation>
-                <p:ValueBoxSettings>
-                  <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
-                </p:ValueBoxSettings>
               </Pad>
               <Pad Id="I0cv9DCcu5pNPKhj3DZIas" Comment="Is Visible" Bounds="418,464,35,35" ShowValueBox="true" isIOBox="true" />
               <Pad Id="APVPCQlMT6AODQR6EEhOQ3" Comment="Is Open" Bounds="550,462,35,35" ShowValueBox="true" isIOBox="true" />
@@ -168,17 +156,70 @@
                   <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                 </p:ValueBoxSettings>
               </Pad>
+              <Pad Id="JlqXlg16yA8Oh6U6JrjNkO" Bounds="515,579,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+                <p:TypeAnnotation>
+                  <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+                  <FullNameCategoryReference ID="Primitive" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Press</p:buttonmode>
+                </p:ValueBoxSettings>
+              </Pad>
+              <Node Bounds="461,187,53,19" Id="AIMfFJH8BY9LJneKKcI0jT">
+                <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="Channel" />
+                </p:NodeReference>
+                <Pin Id="T8hx6lymAUfLdQ35SXUyTO" Name="Value" Kind="InputPin" />
+                <Pin Id="VkzuZzgm24oOYQZgvhEH7z" Name="Output" Kind="OutputPin" />
+                <Pin Id="U8LAYdBRPt7Ls18LqmJlNS" Name="Value" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="461,222,55,19" Id="RbHgUfl0qLqPD0biWSwdLw">
+                <p:NodeReference LastCategoryFullName="Reactive.Channel" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="SetValue" />
+                  <CategoryReference Kind="ClassType" Name="Channel" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="UVxTyp1nDZ2NDSEGNX1W9e" Name="Input" Kind="StateInputPin" />
+                <Pin Id="SMAjLlLRtwlPXB2jLyzexM" Name="Value" Kind="InputPin" DefaultValue="True" />
+                <Pin Id="Lny6eGQp7L4PtDjLK6HqjY" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="VsKkLRS4CNWPuDyopweVlc" Name="Apply" Kind="InputPin" />
+              </Node>
+              <Pad Id="IBVYhAFVEJpN2BpUhuyYhN" Comment="open" Bounds="531,190,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+                <p:TypeAnnotation>
+                  <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+                  <FullNameCategoryReference ID="Primitive" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+                </p:ValueBoxSettings>
+              </Pad>
+              <Node Bounds="461,251,55,19" Id="NPbqywX5KgyN1K92CrXFHH">
+                <p:NodeReference LastCategoryFullName="Reactive.Channel" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="SetValue" />
+                  <CategoryReference Kind="ClassType" Name="Channel" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="Tm7gGmcNAqILlBhn3TIRPl" Name="Input" Kind="StateInputPin" />
+                <Pin Id="MvuZ6PD3mVELlwFNxDjRl9" Name="Value" Kind="InputPin" DefaultValue="False" />
+                <Pin Id="H287v9KcY73LBFsM3Rv6mm" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="MHA3mZsja7UL6OAqzNxOzN" Name="Apply" Kind="InputPin" />
+              </Node>
+              <Pad Id="Oa1WHeDTmx1Lzd8J32CcaI" Comment="close" Bounds="614,190,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+                <p:TypeAnnotation>
+                  <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+                  <FullNameCategoryReference ID="Primitive" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+                </p:ValueBoxSettings>
+              </Pad>
             </Patch>
+            <Pin Id="QpgLapI5zDxPOzGRPcwG5j" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="QYV6IvNmSVtMsW7NpVxU8J" Name="Default Window" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="BOOMoUrWx95MlWWQisE8fP" Name="Use Skia Space" Kind="InputPin" />
+            <Pin Id="QcQXTQIKrE4Lctbv3yl4HS" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="FX8IhmS26m8M95cUn2Idst" Comment="Default Window" Bounds="738,180,35,35" ShowValueBox="true" isIOBox="true" Value="True">
-            <p:TypeAnnotation>
-              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
@@ -191,18 +232,22 @@
         <Link Id="UG5L3BKbLZiOgafScmX6wX" Ids="QwDy7bND4NtQHN97gbXJiI,VkBmZ6vaHpcN1pbX5EfvuP" />
         <Link Id="PQaidVpV3tBML7PDruuR5k" Ids="CxSEWvQFRzxPXUpYTvKs1T,OLDSP18Jt99LqiO9Jr5Jxw" />
         <Link Id="OAgizRS9FN5O0QoYTF5Qks" Ids="GqXPNkK54mcQGgxTOZ7gvC,RifKqSYJKK6OVVbtpjp5ok" />
-        <Link Id="QVPChdaWfRgN0senaExp8G" Ids="QKV4wfwRZNkOPWYoNpZTBX,T3iQR9IC9ysL5oSiwC0TAh" />
         <Link Id="ICEFiOUalEPM2NqFwPcUQU" Ids="ExjO3iBlt2WNSkkOHPpeR5,I0cv9DCcu5pNPKhj3DZIas" />
         <Link Id="PASnuCkojc7LpHnwFM99y1" Ids="JPkC3akbGJfP90xkgkaBzp,APVPCQlMT6AODQR6EEhOQ3" />
         <Link Id="NGxIQkXiTRDMHedaa05FHe" Ids="PdUyzF1ICxrPpjCmYPP2e1,KdmMXIpm2NxMGQaUbGJSP3" />
         <Link Id="RM0hlCPQw4GOoQIk4CQupP" Ids="AY6MsO7TFL1QCuv2vlaqgg,JhAZXJCd8MTO8tkKJvCQNn" />
         <Link Id="Kfo182TRKPWOnKHM3GLVZU" Ids="Gj5eulaCsyNLF5MHX5xmhb,AMEI8DdO8V9PTwpSvanvFz" />
         <Link Id="BwwOU3wxWJsMbVW2Dn5k98" Ids="GreHQYHaEdSNiqfjiVJWIF,TTDnyN8aiKDNWVoy6xyZXv" />
-        <Link Id="Ajl4h7IS2fdN6exkhtEyzD" Ids="FX8IhmS26m8M95cUn2Idst,QYV6IvNmSVtMsW7NpVxU8J" />
+        <Link Id="TszUCtmwMiVPTNkK3ttcUj" Ids="JlqXlg16yA8Oh6U6JrjNkO,QcdYDMo9dhEMUXQBq50XKt" />
+        <Link Id="RQMIGpkm9L0Nih6LkNfOqY" Ids="VkzuZzgm24oOYQZgvhEH7z,UVxTyp1nDZ2NDSEGNX1W9e" />
+        <Link Id="Li9BiVzcAO0QQSw6RMgUlQ" Ids="IBVYhAFVEJpN2BpUhuyYhN,VsKkLRS4CNWPuDyopweVlc" />
+        <Link Id="Ope5pTcuRFkQQ08Kdb6jHL" Ids="Oa1WHeDTmx1Lzd8J32CcaI,MHA3mZsja7UL6OAqzNxOzN" />
+        <Link Id="Exs78qzZe6cPa9IHPbnZbd" Ids="Lny6eGQp7L4PtDjLK6HqjY,Tm7gGmcNAqILlBhn3TIRPl" />
+        <Link Id="RHoY3jQC0hjNCmNdO16pbd" Ids="H287v9KcY73LBFsM3Rv6mm,T3iQR9IC9ysL5oSiwC0TAh" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0242-g24c47d850a" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0225-ge247e95b60" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0242-g24c47d850a" />
 </Document>
