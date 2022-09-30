@@ -3,7 +3,7 @@
     /// <summary>
     /// Add vertical spacing.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false, IsStylable = false)]
     internal partial class Spacing : Widget
     {
 

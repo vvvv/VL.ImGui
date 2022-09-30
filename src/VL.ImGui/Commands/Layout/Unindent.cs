@@ -3,7 +3,7 @@
     /// <summary>
     /// Move content position back to the Left, by Value, or style.IndentSpacing if Value <= 0.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false, IsStylable = false)]
     internal partial class Unindent : Widget
     {
 

@@ -3,7 +3,7 @@
     /// <summary>
     /// Call between widgets or groups to layout them horizontally. X position given in window coordinates.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false, IsStylable = false)]
     internal partial class SameLine : Widget
     {
 
