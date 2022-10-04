@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Pack>
     <Topic title="Basics">
-        <UriItem title="Original Library" link="https://github.com/ocornut/imgui" mediaType="text"/>
+        <UriItem title="Reference Original Library" link="https://github.com/ocornut/imgui" mediaType="text"/>
     </Topic>
     <Topic title="Widgets"/>
     <Topic title="Styling"/>
