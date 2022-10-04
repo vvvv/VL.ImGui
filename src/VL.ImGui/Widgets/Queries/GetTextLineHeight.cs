@@ -12,7 +12,7 @@
 
         internal override void UpdateCore(Context context)
         {
-            Value = ImGuiNET.ImGui.GetTextLineHeight();
+            Value = ImGuiNET.ImGui.GetTextLineHeight().ToVLHecto();
         }
     }
 }

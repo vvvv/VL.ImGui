@@ -45,7 +45,7 @@ namespace VL.ImGui.Styling
             if (ScrollbarSize.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.ScrollbarSize, ScrollbarSize.Value);
+                ImGui.PushStyleVar(ImGuiStyleVar.ScrollbarSize, ScrollbarSize.Value.FromHectoToImGui());
             }
 
             if (GrabColor.HasValue)
@@ -66,7 +66,7 @@ namespace VL.ImGui.Styling
             if (GrabRounding.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.ScrollbarRounding, GrabRounding.Value);
+                ImGui.PushStyleVar(ImGuiStyleVar.ScrollbarRounding, GrabRounding.Value.FromHectoToImGui());
             }
         }
     }

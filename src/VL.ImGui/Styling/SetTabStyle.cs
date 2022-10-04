@@ -66,7 +66,7 @@ namespace VL.ImGui.Styling
             if (Rounding.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.TabRounding, Rounding.Value);
+                ImGui.PushStyleVar(ImGuiStyleVar.TabRounding, Rounding.Value.FromHectoToImGui());
             }
         }
     }

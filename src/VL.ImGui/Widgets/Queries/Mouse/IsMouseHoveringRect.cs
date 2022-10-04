@@ -17,7 +17,7 @@ namespace VL.ImGui.Widgets
 
         internal override void UpdateCore(Context context)
         {
-            Value = ImGuiNET.ImGui.IsMouseHoveringRect(Min.ToImGui(), Max.ToImGui(), Clip);
+            Value = ImGuiNET.ImGui.IsMouseHoveringRect(Min.FromHectoToImGui(), Max.FromHectoToImGui(), Clip);
         }
     }
 }

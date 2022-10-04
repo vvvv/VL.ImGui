@@ -11,7 +11,7 @@
 
         internal override void UpdateCore(Context context)
         {
-            Value = ImGuiNET.ImGui.GetFontSize();
+            Value = ImGuiNET.ImGui.GetFontSize().ToVLHecto();
         }
     }
 }

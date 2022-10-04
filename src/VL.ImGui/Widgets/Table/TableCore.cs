@@ -8,7 +8,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets.Internal", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
     internal sealed partial class TableCore : Widget
     {
         public int Count { get; set; }
@@ -25,7 +25,7 @@ namespace VL.ImGui.Widgets
 
         internal override void UpdateCore(Context context)
         {
-            if (ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, Math.Max(1, Count), Flags, Size.ToImGui(), InnerWidth))
+            if (ImGuiNET.ImGui.BeginTable(Label ?? string.Empty, Math.Max(1, Count), Flags, Size.FromHectoToImGui(), InnerWidth))
             {
                 try
                 {

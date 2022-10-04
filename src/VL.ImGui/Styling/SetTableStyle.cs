@@ -74,7 +74,7 @@ namespace VL.ImGui.Styling
             if (CellPadding.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.CellPadding, CellPadding.Value.ToImGui());
+                ImGui.PushStyleVar(ImGuiStyleVar.CellPadding, CellPadding.Value.FromHectoToImGui());
             }
         }
     }

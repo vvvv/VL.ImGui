@@ -2,7 +2,7 @@
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Input (Vector2)", Category = "ImGui.Widgets")]
+    [GenerateNode(Name = "Input (Vector2)", Category = "ImGui.Widgets", Tags = "number, updown")]
     internal partial class InputVector2 : ChannelWidget<Vector2>
     {
 

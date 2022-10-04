@@ -2,7 +2,7 @@
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets")]
+    [GenerateNode(Category = "ImGui.Widgets", Tags = "rgba, hsv, hsl")]
     internal partial class ColorEdit : ChannelWidget<Color4>
     {
         public string? Label { get; set; }

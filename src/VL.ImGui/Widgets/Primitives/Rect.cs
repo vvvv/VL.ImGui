@@ -3,12 +3,12 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets.Primitives
 {
-    [GenerateNode(Category = "Primitives")]
+    [GenerateNode(Category = "ImGui.Primitives")]
     internal partial class Rect : PrimitiveWidget
     {
         public Vector2 TopLeft { private get; set; } = Vector2.Zero;
 
-        public Vector2 BottomRight { private get; set; } = new Vector2(100, 100);
+        public Vector2 BottomRight { private get; set; } = new Vector2(1, 1);
 
         public float Rounding { private get; set; }
 
@@ -19,7 +19,7 @@ namespace VL.ImGui.Widgets.Primitives
         /// </summary>
         public bool IsFilled { private get; set; } = false;
 
-        public float Thickness { private get; set; } = 1f;
+        public float Thickness { private get; set; } = 0.01f;
 
         public ImDrawFlags Flags { private get; set; }
 
@@ -29,11 +29,11 @@ namespace VL.ImGui.Widgets.Primitives
 
             if (IsFilled)
             {
-                drawList.AddRectFilled(TopLeft.ToImGui() + offset, BottomRight.ToImGui() + offset, color, Rounding, Flags);
+                drawList.AddRectFilled(TopLeft.FromHectoToImGui() + offset, BottomRight.FromHectoToImGui() + offset, color, Rounding.FromHectoToImGui(), Flags);
             }
             else
             {
-                drawList.AddRect(TopLeft.ToImGui() + offset, BottomRight.ToImGui() + offset, color, Rounding, Flags, Thickness);
+                drawList.AddRect(TopLeft.FromHectoToImGui() + offset, BottomRight.FromHectoToImGui() + offset, color, Rounding.FromHectoToImGui(), Flags, Thickness.FromHectoToImGui());
             }
         }
     }

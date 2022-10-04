@@ -3,7 +3,7 @@ using System.Reactive;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets", Button = true, IsStylable = false)]
+    [GenerateNode(Category = "ImGui.Widgets", Button = true, IsStylable = false, Tags = "bang")]
     internal partial class InvisibleButton : ChannelWidget<Unit>
     {
         public string? Label { get; set; }
@@ -15,7 +15,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             Update();
-            if (ImGuiNET.ImGui.InvisibleButton(Label ?? string.Empty, Size.ToImGui(), Flags))
+            if (ImGuiNET.ImGui.InvisibleButton(Label ?? string.Empty, Size.FromHectoToImGui(), Flags))
                 Value = Unit.Default;
         }
     }

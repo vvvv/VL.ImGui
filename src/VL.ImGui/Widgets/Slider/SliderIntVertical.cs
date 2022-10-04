@@ -11,7 +11,7 @@ namespace VL.ImGui.Widgets
 
         public int Max { private get; set; } = 100;
 
-        public Vector2 Size { get; set; } = new Vector2 (20, 100);
+        public Vector2 Size { get; set; } = new Vector2(.2f, 1f);
 
         public string? Format { private get; set; }
 
@@ -20,7 +20,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var value = Update();
-            if (ImGuiNET.ImGui.VSliderInt(Label ?? string.Empty, Size.ToImGui(), ref value, Min, Max, Format, Flags))
+            if (ImGuiNET.ImGui.VSliderInt(Label ?? string.Empty, Size.FromHectoToImGui(), ref value, Min, Max, Format, Flags))
                 Value = value;
         }
     }

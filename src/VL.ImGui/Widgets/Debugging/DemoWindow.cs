@@ -1,8 +1,6 @@
-﻿using VL.Core;
-
-namespace VL.ImGui.Windows
+﻿namespace VL.ImGui.Windows
 {
-    [GenerateNode(Category = "ImGui.Debug")]
+    [GenerateNode(Category = "ImGui.Advanced.Debug")]
     public sealed partial class DemoWindow : Widget
     {
         public bool HasCloseButton { get; set; } = true;

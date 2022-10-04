@@ -15,7 +15,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var size = ImGuiNET.ImGui.GetWindowPos();
-            Value = ImGuiConversion.ToVL(size);
+            Value = ImGuiConversion.ToVLHecto(size);
         }
     }
 }

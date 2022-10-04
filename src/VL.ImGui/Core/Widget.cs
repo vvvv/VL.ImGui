@@ -11,16 +11,20 @@ namespace VL.ImGui
         [Pin(Priority = 10)]
         public IStyle? Style { set; protected get; }
 
-        internal void Update(Context context)
+        internal void Update(Context? context)
         {
-            try
+            context = context.Validate();
+            if (context != null)
             {
-                Style?.Set();
-                UpdateCore(context);
-            }
-            finally
-            {
-                Style?.Reset();
+                try
+                {
+                    Style?.Set();
+                    UpdateCore(context);
+                }
+                finally
+                {
+                    Style?.Reset();
+                }
             }
         }
     }

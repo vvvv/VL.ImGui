@@ -5,7 +5,7 @@ namespace VL.ImGui.Widgets
     /// <summary>
     /// Retrieve mouse position at the time of opening popup.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Queries", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Queries", GenerateRetained = false, IsStylable = false)]
     internal partial class GetMousePosOnOpeningCurrentPopup : Widget
     {
         public Vector2 Value { get; private set; }
@@ -13,7 +13,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var value = ImGuiNET.ImGui.GetMousePosOnOpeningCurrentPopup();
-            Value = value.ToVL();
+            Value = value.ToVLHecto();
         }
     }
 }

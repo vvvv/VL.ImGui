@@ -19,7 +19,7 @@ namespace VL.ImGui.Widgets
             var count = Items.Count();
             if (count > 0)
             {
-                if (ImGuiNET.ImGui.BeginListBox(Label ?? string.Empty, Size.ToImGui()))
+                if (ImGuiNET.ImGui.BeginListBox(Label ?? string.Empty, Size.FromHectoToImGui()))
                 {
                     try
                     {

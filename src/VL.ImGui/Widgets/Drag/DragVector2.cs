@@ -2,7 +2,7 @@
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Drag (Vector2)", Category = "ImGui.Widgets")]
+    [GenerateNode(Name = "Drag (Vector2)", Category = "ImGui.Widgets", Tags = "number")]
     internal partial class DragVector2 : ChannelWidget<Vector2>
     {
         public string? Label { get; set; }

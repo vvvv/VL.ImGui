@@ -10,7 +10,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var value = ImGuiNET.ImGui.GetMousePos();
-            Value = value.ToVL();
+            Value = value.ToVLHecto();
         }
     }
 }

@@ -10,7 +10,7 @@
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.SetCursorPosX(Position);
+            ImGuiNET.ImGui.SetCursorPosX(Position.FromHectoToImGui());
         }
     }
 }

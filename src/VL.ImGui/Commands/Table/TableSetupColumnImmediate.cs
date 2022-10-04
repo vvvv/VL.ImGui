@@ -12,7 +12,7 @@
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.TableSetupColumn(Label ?? String.Empty, Flags, InitWidth);
+            ImGuiNET.ImGui.TableSetupColumn(Label ?? String.Empty, Flags, InitWidth.FromHectoToImGui());
         }
     }
 }

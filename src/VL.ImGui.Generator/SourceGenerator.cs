@@ -112,11 +112,15 @@ namespace VL.ImGui.Generator
             switch (mode)
             {
                 case Mode.RetainedMode:
+                    if (category != "ImGui.Styling")
+                    {
+                        category = category.Replace("ImGui", "ReGui");
+                        category += ".Internal";
+                    }
                     nodeDecl = "return c.Node(inputs, outputs);";
                     break;
                 case Mode.ImmediateMode:
-                    category += ".Immediate";
-                    nodeDecl = "return c.Node(inputs, outputs, () => { if (ctx != null) s.Update(ctx); });";
+                    nodeDecl = "return c.Node(inputs, outputs, () => { s.Update(ctx); });";
                     break;
                 default:
                     break;

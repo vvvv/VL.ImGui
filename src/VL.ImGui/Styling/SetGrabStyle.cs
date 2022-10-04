@@ -31,12 +31,12 @@ namespace VL.ImGui.Styling
             if (MinSize.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.GrabMinSize, MinSize.Value);
+                ImGui.PushStyleVar(ImGuiStyleVar.GrabMinSize, MinSize.Value.FromHectoToImGui());
             }
             if (Rounding.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.GrabRounding, Rounding.Value);
+                ImGui.PushStyleVar(ImGuiStyleVar.GrabRounding, Rounding.Value.FromHectoToImGui());
             }
         }
     }

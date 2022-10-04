@@ -15,7 +15,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var size = ImGuiNET.ImGui.GetWindowContentRegionMax();
-            Value = ImGuiConversion.ToVL(size);
+            Value = ImGuiConversion.ToVLHecto(size);
         }
     }
 }

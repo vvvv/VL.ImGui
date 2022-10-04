@@ -19,7 +19,7 @@ namespace VL.ImGui.Windows
         /// Bounds of the Window.
         /// </summary>
         public Channel<RectangleF>? Bounds { private get; set; }
-        ChannelFlange<RectangleF> BoundsFlange = new ChannelFlange<RectangleF>(new RectangleF(0f, 0f, 100f, 100f));
+        ChannelFlange<RectangleF> BoundsFlange = new ChannelFlange<RectangleF>(new RectangleF(0f, 0f, 1f, 1f));
 
         /// <summary>
         /// Returns true if the Window is open (not collapsed or clipped). Set to true to open the window.
@@ -41,8 +41,8 @@ namespace VL.ImGui.Windows
 
             if (boundsChanged)
             {
-                ImGui.SetNextWindowPos (bounds.TopLeft.ToImGui());
-                ImGui.SetNextWindowSize (bounds.Size.ToImGui());
+                ImGui.SetNextWindowPos (bounds.TopLeft.FromHectoToImGui());
+                ImGui.SetNextWindowSize (bounds.Size.FromHectoToImGui());
             }
 
             ImGui.SetNextWindowCollapsed(!isOpen);

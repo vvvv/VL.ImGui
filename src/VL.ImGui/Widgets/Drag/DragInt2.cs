@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Drag (Int2)", Category = "ImGui.Widgets")]
+    [GenerateNode(Name = "Drag (Int2)", Category = "ImGui.Widgets", Tags = "number")]
     internal partial class DragInt2 : ChannelWidget<Int2>
     {
         public string? Label { get; set; }

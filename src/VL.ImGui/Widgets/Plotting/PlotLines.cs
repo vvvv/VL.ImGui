@@ -29,7 +29,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var values = Values.ToArray();
-            ImGuiNET.ImGui.PlotLines(Label ?? string.Empty, ref values[0], values.Count(), Offset, OverlayText, ScaleMin, ScaleMax, Size.ToImGui());
+            ImGuiNET.ImGui.PlotLines(Label ?? string.Empty, ref values[0], values.Count(), Offset, OverlayText, ScaleMin, ScaleMax, Size.FromHectoToImGui());
         }
     }
 }

@@ -9,7 +9,7 @@ namespace VL.ImGui.Widgets
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.Dummy(Size.ToImGui());
+            ImGuiNET.ImGui.Dummy(Size.FromHectoToImGui());
         }
     }
 }

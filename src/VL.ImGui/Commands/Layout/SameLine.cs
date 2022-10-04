@@ -3,7 +3,7 @@
     /// <summary>
     /// Call between widgets or groups to layout them horizontally. X position given in window coordinates.
     /// </summary>
-    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false)]
+    [GenerateNode(Category = "ImGui.Commands", GenerateRetained = false, IsStylable = false)]
     internal partial class SameLine : Widget
     {
 
@@ -13,7 +13,7 @@
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.SameLine(Offset, Spacing);
+            ImGuiNET.ImGui.SameLine(Offset.FromHectoToImGui(), Spacing.FromHectoToImGui());
         }
     }
 }

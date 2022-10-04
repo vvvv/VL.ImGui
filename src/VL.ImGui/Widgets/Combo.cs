@@ -1,6 +1,6 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Combo (String)", Category = "ImGui.Widgets")]
+    [GenerateNode(Name = "Combo (String)", Category = "ImGui.Widgets", Tags = "dropdown, pulldown, enum")]
     internal partial class Combo : ChannelWidget<string>
     {
 

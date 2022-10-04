@@ -11,7 +11,7 @@ namespace VL.ImGui.Widgets
 
         public ILayer? Layer { private get; set; }
 
-        public Vector2 Size { private get; set; } = new Vector2(100, 100);
+        public Vector2 Size { private get; set; } = new Vector2(1f, 1f);
 
         public CommonSpace Space { private get; set; }
 
@@ -19,7 +19,8 @@ namespace VL.ImGui.Widgets
         {
             if (context is SkiaContext skiaContext)
             {
-                skiaContext.Widget(Size, Render);
+                var _ = Size.FromHectoToImGui();
+                skiaContext.Widget(new Vector2(_.X, _.Y), Render);
             }
         }
 

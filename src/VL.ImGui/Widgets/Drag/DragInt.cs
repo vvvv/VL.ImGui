@@ -1,6 +1,6 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Drag (Int)", Category = "ImGui.Widgets")]
+    [GenerateNode(Name = "Drag (Int)", Category = "ImGui.Widgets", Tags = "number")]
     internal partial class DragInt : ChannelWidget<int>
     {
         public string? Label { get; set; }

@@ -2,7 +2,7 @@
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Drag (Int Range)", Category = "ImGui.Widgets")]
+    [GenerateNode(Name = "Drag (Int Range)", Category = "ImGui.Widgets", Tags = "number")]
     internal partial class DragIntRange2 : ChannelWidget<Range<int>>
     {
         public string? Label { get; set; }

@@ -14,7 +14,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             if (Enabled)
-                ImGuiNET.ImGui.SetNextWindowSizeConstraints(Min.ToImGui(), Max.ToImGui());
+                ImGuiNET.ImGui.SetNextWindowSizeConstraints(Min.FromHectoToImGui(), Max.FromHectoToImGui());
         }
     }
 }

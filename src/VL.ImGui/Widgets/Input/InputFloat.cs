@@ -1,6 +1,6 @@
 ﻿namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Name = "Input (Float)", Category = "ImGui.Widgets")]
+    [GenerateNode(Name = "Input (Float)", Category = "ImGui.Widgets", Tags = "number, updown")]
     internal partial class InputFloat : ChannelWidget<float>
     {
 

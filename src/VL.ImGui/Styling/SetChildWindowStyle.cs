@@ -24,7 +24,7 @@ namespace VL.ImGui.Styling
         public Optional<float> Rounding { private get; set; }
 
         /// <summary>
-        /// Thickness of border around child windows. Generally set to 0.0 or 1.0. (Other values are not well tested and more CPU/GPU costly).
+        /// Thickness of border around child windows. Generally set to 0.0 or 0.01. (Other values are not well tested and more CPU/GPU costly).
         /// </summary>
         public Optional<float> BorderSize { private get; set; }
 
@@ -38,12 +38,12 @@ namespace VL.ImGui.Styling
             if (Rounding.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.ChildRounding, Rounding.Value);
+                ImGui.PushStyleVar(ImGuiStyleVar.ChildRounding, Rounding.Value.FromHectoToImGui());
             }
             if (BorderSize.HasValue)
             {
                 valueCount++;
-                ImGui.PushStyleVar(ImGuiStyleVar.ChildBorderSize, BorderSize.Value);
+                ImGui.PushStyleVar(ImGuiStyleVar.ChildBorderSize, BorderSize.Value.FromHectoToImGui());
             }
         }
     }

@@ -2,7 +2,7 @@
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode]
+    [GenerateNode(Category = "ImGui.Widgets.Experimental")]
     internal partial class ObjectEditor : Widget
     {
         object? _value;

@@ -11,7 +11,7 @@ namespace VL.ImGui.Widgets
 
         public float Max { private get; set; } = 1f;
 
-        public Vector2 Size { get; set; } = new Vector2 (40, 100);
+        public Vector2 Size { get; set; } = new Vector2 (.4f, 1f);
 
         /// <summary>
         /// Adjust format string to decorate the value with a prefix, a suffix, or adapt the editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs; "Biscuit: % .0f" -> Biscuit: 1; etc.
@@ -23,7 +23,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var value = Update();
-            if (ImGuiNET.ImGui.VSliderFloat(Label ?? string.Empty, Size.ToImGui(), ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
+            if (ImGuiNET.ImGui.VSliderFloat(Label ?? string.Empty, Size.FromHectoToImGui(), ref value, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
                 Value = value;
         }
     }
