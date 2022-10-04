@@ -329,6 +329,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="LZUyzxJKeMPMECjLpyzavX" Location="VL.ImGui" Version="0.0.0" />
+  <NugetDependency Id="LZUyzxJKeMPMECjLpyzavX" Location="VL.ImGui.Skia" Version="0.0.0" />
   <NugetDependency Id="JvyGdDPFdVbNL6ayfyUK7T" Location="VL.Skia" Version="2022.5.0-0188-g31269d4f1c" />
 </Document>

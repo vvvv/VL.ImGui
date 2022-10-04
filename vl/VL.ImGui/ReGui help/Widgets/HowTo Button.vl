@@ -359,7 +359,7 @@
     </Node>
   </Patch>
   <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0188-g31269d4f1c" />
-  <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
+  <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui.Skia" Version="0.0.0.0" />
   <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0188-g31269d4f1c" />
   <PlatformDependency Id="C3N9Z450wcVO0Z2GvGz0AM" Location="mscorlib" />
 </Document>
