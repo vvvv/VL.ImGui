@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <LangVersion>latest</LangVersion>
-    <OutputPath>..\..\lib</OutputPath>
+    <OutputPath>..\..\vl\VL.ImGui\lib</OutputPath>
     <PackageOutputPath>..\..\bin</PackageOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>

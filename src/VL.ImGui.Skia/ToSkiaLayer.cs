@@ -52,9 +52,6 @@ namespace VL.ImGui
         float _fontScaling;
         float _uiScaling;
 
-        public static float ToImGuiScaling = VL.UI.Core.DIPHelpers.DIPFactor() * 100f;
-        public static float FromImGuiScaling = 1.0f / (VL.UI.Core.DIPHelpers.DIPFactor() * 100f);
-
         public unsafe ToSkiaLayer()
         {
             _context = new SkiaContext();
@@ -221,7 +218,7 @@ namespace VL.ImGui
             canvas.Save();
             try
             {
-                var us = PushTransformation(caller, SKMatrix.CreateScale(FromImGuiScaling, FromImGuiScaling));
+                var us = PushTransformation(caller, SKMatrix.CreateScale(ImGuiConversion.FromImGuiScaling, ImGuiConversion.FromImGuiScaling));
                 canvas.SetMatrix(us.Transformation);
                 //updateScaling(us.Transformation.ScaleY);
 

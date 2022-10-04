@@ -196,6 +196,9 @@ namespace VL.ImGui
 
     public static class ImGuiConversion
     {
+        public static float ToImGuiScaling = VL.UI.Core.DIPHelpers.DIPFactor() * 100f;
+        public static float FromImGuiScaling = 1.0f / (VL.UI.Core.DIPHelpers.DIPFactor() * 100f);
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static System.Numerics.Vector4 ToImGui(this Color4 v)
         {
@@ -211,7 +214,7 @@ namespace VL.ImGui
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static System.Numerics.Vector2 FromHectoToImGui(this Vector2 v)
         {
-            v = new Vector2(v.X * ToSkiaLayer.ToImGuiScaling, v.Y * ToSkiaLayer.ToImGuiScaling);
+            v = new Vector2(v.X * ToImGuiScaling, v.Y * ToImGuiScaling);
             return Unsafe.As<Vector2, System.Numerics.Vector2>(ref v);
         }
 
@@ -230,21 +233,21 @@ namespace VL.ImGui
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static System.Numerics.Vector2 FromHectoToImGui(this Size2F v)
         {
-            v = new Size2F(v.Width * ToSkiaLayer.ToImGuiScaling, v.Height * ToSkiaLayer.ToImGuiScaling);
+            v = new Size2F(v.Width * ToImGuiScaling, v.Height * ToImGuiScaling);
             return Unsafe.As<Size2F, System.Numerics.Vector2>(ref v);
         }
 
-        public static float FromHectoToImGui(this float v) => v * ToSkiaLayer.ToImGuiScaling;
+        public static float FromHectoToImGui(this float v) => v * ToImGuiScaling;
 
         //TO VL
 
-        public static float ToVLHecto(this float v) => v * ToSkiaLayer.FromImGuiScaling;
+        public static float ToVLHecto(this float v) => v * FromImGuiScaling;
 
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector2 ToVLHecto(this System.Numerics.Vector2 v)
         {
-            v = new System.Numerics.Vector2(v.X * ToSkiaLayer.FromImGuiScaling, v.Y * ToSkiaLayer.FromImGuiScaling);
+            v = new System.Numerics.Vector2(v.X * FromImGuiScaling, v.Y * FromImGuiScaling);
             return Unsafe.As<System.Numerics.Vector2, Vector2>(ref v);
         }
 

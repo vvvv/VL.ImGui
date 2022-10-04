@@ -403,3 +403,4 @@ FodyWeavers.xsd
 /.vl/
 /src/VL.ImGui/Generated/
 /src/VL.ImGui.Skia/Generated/
+/vl/*/lib/*
