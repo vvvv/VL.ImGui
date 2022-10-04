@@ -4,10 +4,7 @@ A first sketch of a node set for [vvvv](visualprogramming.net) around [ImGui](ht
 
 ## Installation
 
-- Requires at least vvvv 2021.5.0-0095 installed at it's default location
-- Clone this repository in your `package-repositories` folder (more information in [Contributing to existing libraries](https://thegraybook.vvvv.org/reference/extending/contributing.html#source-package-repositories))
-- Open the solution file and build once
-- Start vvvv with the `--package-repositories` argument and look for "ImGui" in the help browser
+This library is shipped with vvvv itself. Building the repository outside of the vvvv main repo is currently not supported.
 
 ## Design thoughts
 

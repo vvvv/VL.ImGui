@@ -6,17 +6,20 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <OutputPath>..\..\vl\VL.ImGui.Skia\lib</OutputPath>
+    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
+
+    <VLPackageBasePath>..\..\vl\VL.ImGui.Skia\</VLPackageBasePath>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ImGui.NET" Version="$(ImGuiVersion)">
+    <PackageReference Include="ImGui.NET">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>native;build;buildTransitive</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="VL.Skia" Version="$(VLVersion)" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\VL.Skia\src\VL.Skia.csproj" />
     <ProjectReference Include="..\VL.ImGui\VL.ImGui.csproj" />
   </ItemGroup>
 
@@ -26,13 +29,12 @@
 
   <PropertyGroup Condition=" '$(DebugGenerator)'  == 'true' ">
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- Exclude the output of source generators from the compilation -->
-    <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
-    <None Include="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+    <Compile Remove="Generated\**\*.cs" />
+    <None Include="Generated\**\*.cs" />
   </ItemGroup>
 
 </Project>
