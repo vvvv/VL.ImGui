@@ -44,7 +44,7 @@
     </None>
 
     <None Include="$(PkgImGui_NET)\lib\net6.0\**">
-      <LinkBase>lib\net6.0</LinkBase>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Pack>true</Pack>
       <PackagePath>lib\net6.0\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
       <Visible>false</Visible>
