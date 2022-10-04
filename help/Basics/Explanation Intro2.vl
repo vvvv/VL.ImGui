@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0252-cdda516750" Version="0.128">
+<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0242-24c47d850a" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -19,7 +19,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1205, 204, 436, 316" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1204, 204, 436, 316" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
@@ -425,7 +425,6 @@
                 <Pin Id="VcasAplCZLXMtX4BJoxVWY" Name="Context" Kind="InputPin" />
                 <Pin Id="Ecw7T748iufOCI0vKdc6IN" Name="Offset" Kind="InputPin" />
                 <Pin Id="UkKW1CSVWrPLnALv7kWszw" Name="Spacing" Kind="InputPin" />
-                <Pin Id="EkYgtVo97I4NctLci9rtYg" Name="Style" Kind="InputPin" />
                 <Pin Id="G1ELravbyaUL42q7WFztDQ" Name="Context" Kind="OutputPin" />
               </Node>
               <Node Bounds="805,361,65,19" Id="KUdlbuY8dPVOh1iVplRLx6">
@@ -493,7 +492,6 @@
               </Pad>
             </Patch>
             <Pin Id="GxBC24vS73xP5oGNgjarHK" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="SCLvkZoZUDoNkwihbxQkaT" Name="Default Window" Kind="InputPin" DefaultValue="True" />
             <Pin Id="KEO8Gc7jO3fOdHipqylsmM" Name="Use Skia Space" Kind="InputPin" DefaultValue="False" />
             <Pin Id="VhzAjRGcrzlPCmupzmZiOT" Name="Output" Kind="OutputPin" />
           </Node>
@@ -542,15 +540,6 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Pr3I8ioYZu4MSTKcqHn9K9" Comment="Default Window" Bounds="747,147,35,35" ShowValueBox="true" isIOBox="true" Value="True">
-            <p:TypeAnnotation>
-              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
           <Pad Id="I5VOaopH4bNMmCblSYxOx3" Bounds="86,246,364,42" ShowValueBox="true" isIOBox="true" Value="For widgets that are not connected the order is undefined.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
@@ -578,7 +567,6 @@
         </ProcessDefinition>
         <Link Id="RFBp91xhuq2PJsSasoz9Oy" Ids="VhzAjRGcrzlPCmupzmZiOT,FEmprmZSMXGOZ6BLW3yl3J" />
         <Link Id="IrzCEBNWxjRMH7qXGpKGBQ" Ids="OG2KsF2A34bMBwLEffmwas,B4Rw77lkaJbLRAYF429yKY" />
-        <Link Id="MAl8tbRixPFMrEVSPzBHkn" Ids="Pr3I8ioYZu4MSTKcqHn9K9,SCLvkZoZUDoNkwihbxQkaT" />
         <Link Id="KRMzgyP0PCCNDr4xb7L4Fh" Ids="DzLW9LGUXmdQUaDC715NwP,DWWkETPLR9CQJdqLsbP3ao" />
         <Link Id="CD2XsUakCb2LptGE92MUpK" Ids="FF6MOvTn8TrMPb5O4gkYPR,IaAhqWuKMBCNc6CLuzx2sY" />
         <Link Id="Qosu8gcPuZzNAqW9usZyxg" Ids="QqZSyHvRBNcOneUpImIjCX,Sbz8DvWwJ3SO69RD62mOKd" />
@@ -590,7 +578,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0252-gcdda516750" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0242-g24c47d850a" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0252-gcdda516750" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0242-g24c47d850a" />
 </Document>

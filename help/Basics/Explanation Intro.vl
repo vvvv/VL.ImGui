@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0252-cdda516750" Version="0.128">
+<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0242-24c47d850a" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -407,7 +407,6 @@
               </Pad>
             </Patch>
             <Pin Id="GxBC24vS73xP5oGNgjarHK" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="SCLvkZoZUDoNkwihbxQkaT" Name="Default Window" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FufZvhJChlwPg3w6mYPByz" Name="Use Skia Space" Kind="InputPin" />
             <Pin Id="VhzAjRGcrzlPCmupzmZiOT" Name="Output" Kind="OutputPin" />
           </Node>
@@ -429,15 +428,6 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="FMQd1aK4nunQEFlf9AUlIO" Comment="Default Window" Bounds="740,175,35,35" ShowValueBox="true" isIOBox="true" Value="True">
-            <p:TypeAnnotation>
-              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
           <Pad Id="PyJGQXjeBosPyNdy70kGWb" Bounds="84,238,365,24" ShowValueBox="true" isIOBox="true" Value="ImGui (Skia) region is a starting point for every ImGui UI.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
@@ -447,16 +437,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Iid0i2FvaJUPGHr6s82bH3" Bounds="684,180,38,29" ShowValueBox="true" isIOBox="true" Value="3.">
-            <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">14</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="GVbvdzjq32SPCPcGv0dAtb" Bounds="513,586,43,29" ShowValueBox="true" isIOBox="true" Value="4.">
+          <Pad Id="GVbvdzjq32SPCPcGv0dAtb" Bounds="513,586,43,29" ShowValueBox="true" isIOBox="true" Value="3.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -474,7 +455,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="GsSSungGVSnQKNHtshCeuG" Bounds="51,269,32,29" ShowValueBox="true" isIOBox="true" Value="2.">
+          <Pad Id="GsSSungGVSnQKNHtshCeuG" Bounds="51,449,32,29" ShowValueBox="true" isIOBox="true" Value="2.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -483,7 +464,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="HwUwmTf5BIRNhnDKRJKogO" Bounds="84,271,392,23" ShowValueBox="true" isIOBox="true" Value="Every Widget placed into that region becomes a part of the UI.">
+          <Pad Id="HwUwmTf5BIRNhnDKRJKogO" Bounds="84,451,392,23" ShowValueBox="true" isIOBox="true" Value="Every Widget placed into that region becomes a part of the UI.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -492,7 +473,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="NN0x7ULTREtOR7K7lb0j3W" Bounds="51,303,32,29" ShowValueBox="true" isIOBox="true" Value="3.">
+          <Pad Id="VsMigJGha0LMiIvYNnecCC" Bounds="51,575,32,29" ShowValueBox="true" isIOBox="true" Value="3.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -501,25 +482,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="RSBkbs1ljmYPv1OdyBCRfO" Bounds="84,303,369,126" ShowValueBox="true" isIOBox="true" Value="In ImGui widgets live inside Windows. ImGui (Skia) has a Default Window (used in most helppatches), see 'Default Window` pin. The Default Window has no borders and headers, is fullscreen and has no background. If the `Default Window` is turned off, ImGui creates &quot;Debug&quot; Window.">
-            <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="VsMigJGha0LMiIvYNnecCC" Bounds="51,410,32,29" ShowValueBox="true" isIOBox="true" Value="4.">
-            <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">14</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="Bw8Vmi1FLRdMBFBgUqqwQD" Bounds="84,412,359,50" ShowValueBox="true" isIOBox="true" Value="ImGui (Skia) returns a Skia Layer that can be rendered with Skia's Renderer.">
+          <Pad Id="Bw8Vmi1FLRdMBFBgUqqwQD" Bounds="84,577,359,50" ShowValueBox="true" isIOBox="true" Value="ImGui (Skia) returns a Skia Layer that can be rendered with Skia's Renderer.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -541,13 +504,12 @@
         <Link Id="Vy2i7FZruuaP7lJ2IXf5tl" Ids="QKHh1fh39yAOoZuZbdNOzl,JqQBBPS4yBFNsjasFBJiD8" />
         <Link Id="U9TxHED5gTBOtJQght1aUK" Ids="JqQBBPS4yBFNsjasFBJiD8,Jj2GQMPqMIJLpGuL1Shj1q" />
         <Link Id="PaY5DlGrcE1Qc4lq21kkv6" Ids="Qhb9IXijw1CL2YSE8uayrS,CDve57BS5YuPgw0mGf46ik" />
-        <Link Id="OcJEXFogD4OMzmLdBrOL7W" Ids="FMQd1aK4nunQEFlf9AUlIO,SCLvkZoZUDoNkwihbxQkaT" />
         <Link Id="UOhEjsUDs6jQGKVYyan5Tv" Ids="DUViMS0fmXbMYpOqhcWfJR,QO5v4sc9ocHMxUVW19RTnQ" />
         <Link Id="CnpPGhTh2FuQTBSaJf9E1c" Ids="VhzAjRGcrzlPCmupzmZiOT,FEmprmZSMXGOZ6BLW3yl3J" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0252-gcdda516750" />
+  <NugetDependency Id="VCZm9gqYh4TNWNPU7BmXgd" Location="VL.CoreLib" Version="2022.5.0-0242-g24c47d850a" />
   <NugetDependency Id="GdteHj2fJaXPG9ZpnIzSOg" Location="VL.ImGui" Version="0.0.0.0" />
-  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0252-gcdda516750" />
+  <NugetDependency Id="G5uNvJj7sZOOCtalt7jSx4" Location="VL.Skia" Version="2022.5.0-0242-g24c47d850a" />
 </Document>

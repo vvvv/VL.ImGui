@@ -43,7 +43,7 @@ namespace VL.ImGui
 
         Widget? _widget;
         private bool DockingEnabled = false;
-        private bool DefaultWindow = false;
+        public bool DefaultWindow = true;
 
         // OpenGLES rendering (https://github.com/dotnet/Silk.NET/tree/v2.15.0/src/OpenGL/Extensions/Silk.NET.OpenGL.Extensions.ImGui)
         private readonly SkiaContext _context;
@@ -72,10 +72,9 @@ namespace VL.ImGui
             updateScaling(fontScaling: scaling, uiScaling: scaling); 
         }
 
-        public ILayer Update(Widget widget, bool dockingEnabled, bool defaultWindow)
+        public ILayer Update(Widget widget, bool dockingEnabled)
         {
             DockingEnabled = dockingEnabled;
-            DefaultWindow = defaultWindow;
             _widget = widget;
             return this;
         }
@@ -120,7 +119,7 @@ namespace VL.ImGui
                                                             ImGuiWindowFlags.NoBackground);
                     }
 
-                    _context.SetDrawList(DrawList.Window);
+                    _context.SetDrawList(DrawList.Foreground);
                     // ImGui.ShowDemoWindow();
                     _context.Update(_widget);
                 }

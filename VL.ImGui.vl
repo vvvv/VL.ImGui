@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0252-cdda516750" Version="0.128">
+<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0242-24c47d850a" Version="0.128">
   <Patch Id="FqV6a8uF6wBNEsSb65h9jq">
     <Canvas Id="CiUOvKtIpncPRBZwoQzisM" CanvasType="FullCategory">
       <Canvas Id="KTyfvxdYp7wLpquGu2GQq3" Name="ImGui" Position="183,154">
@@ -1557,7 +1557,6 @@
                   </p:NodeReference>
                   <Pin Id="B5oFC40ZPbCLOvBAKKc0vA" Name="Input" Kind="InputPin" />
                   <Pin Id="DPCpoZ1LFQDPk85X5KSKvz" Name="ID" Kind="InputPin" />
-                  <Pin Id="TTlOgxjB1BrNALQULV9EEh" Name="Style" Kind="InputPin" />
                   <Pin Id="J7t5SxrHoBVMrHDIWub0bw" Name="Output" Kind="OutputPin" />
                 </Node>
                 <ControlPoint Id="Eh6G0ljS5WNOmbuvA5JvUq" Bounds="784,239" />
@@ -3751,7 +3750,6 @@
                 </p:NodeReference>
                 <Pin Id="CFOIkt5vUatPKNhZsg9GDx" Name="Input" Kind="InputPin" />
                 <Pin Id="HEjDIqHmFTaNdu4rhVSpwc" Name="Docking Enabled" Kind="InputPin" />
-                <Pin Id="AxggFPuYQfALJJMtFXlWa2" Name="Default Window" Kind="InputPin" />
                 <Pin Id="AuP1YAZs6wUPntqry7AeWe" Name="Output" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="TsQwbb4UajpMDNGsPkHxP7" Bounds="437,249" />
@@ -3765,7 +3763,6 @@
                 <Pin Id="CoeI5W0KETpLTI0lW10aSa" Name="Output" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="Qi1LV2oYapsLLe9rhdOTac" Bounds="602,249" />
-              <ControlPoint Id="LmyvzzySsEtLqbuUrBwjkK" Bounds="709,249" />
               <Node Bounds="617,543,136,80" Id="N1v962fKDzELuRiDMt006p">
                 <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -3808,7 +3805,6 @@
               </Pin>
               <Pin Id="NKg4nYi1XwNN4oqFsgtbFj" Name="Output" Kind="OutputPin" Bounds="488,520" />
               <Pin Id="Es9ROK45a3TLMECbbO6kX4" Name="Docking Enabled" Kind="InputPin" Bounds="666,278" />
-              <Pin Id="RmkgyZwqSH8O1mMX1a4BNh" Name="Default Window" Kind="InputPin" Bounds="772,279" />
               <Pin Id="Qo2qgFekmOsPWGSaw5bHSA" Name="Use Skia Space" Kind="InputPin" Bounds="882,266" />
             </Patch>
             <ProcessDefinition Id="BxpIHOnGwVvQdQj3zh6c8P">
@@ -3821,8 +3817,6 @@
             <Link Id="NROiIqt0qC7NhYzXP4gKvn" Ids="CoeI5W0KETpLTI0lW10aSa,CFOIkt5vUatPKNhZsg9GDx" />
             <Link Id="SBGbS54AfehOVz1Hwcfh8K" Ids="Qi1LV2oYapsLLe9rhdOTac,HEjDIqHmFTaNdu4rhVSpwc" />
             <Link Id="Jq7FMwPzQI4PeQTquG3jj2" Ids="Es9ROK45a3TLMECbbO6kX4,Qi1LV2oYapsLLe9rhdOTac" IsHidden="true" />
-            <Link Id="MjKP0L3oBD2NLzhZH314I2" Ids="LmyvzzySsEtLqbuUrBwjkK,AxggFPuYQfALJJMtFXlWa2" />
-            <Link Id="QM4I7WWED92NU2Yt1dot6A" Ids="RmkgyZwqSH8O1mMX1a4BNh,LmyvzzySsEtLqbuUrBwjkK" IsHidden="true" />
             <Link Id="On6DUo3kXEiP41g2Xtrrv2" Ids="EwQnBrWc3KiOnL3EmfcE9P,Lbm1k6pvNDJQQ6dZPmpckj" />
             <Link Id="L26FJeExhhRPYR3xWhFNhn" Ids="Qo2qgFekmOsPWGSaw5bHSA,EwQnBrWc3KiOnL3EmfcE9P" IsHidden="true" />
             <Link Id="A7LntDQ6HbZM61XeNiHW2q" Ids="QHWZl6TkD4ZMdTW7N0EVwZ,PcWTy6zDI3ANUTmsvmoDA9" />
@@ -3845,7 +3839,6 @@
           <Patch Id="EEYmmonPkBCLXCDRBKN01Z">
             <Canvas Id="M0gS2s5yqfkMS61C3uCeRk" CanvasType="Group">
               <ControlPoint Id="FDsk7PhsvtRQJDS8s8yNTp" Bounds="676,189" />
-              <ControlPoint Id="BsCNeNpzde0L9SbAFl6krV" Bounds="781,188" />
               <Node Bounds="423,266,361,346" Id="BrXPCWG2XlLLMVXwBqmztT">
                 <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.vl">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -3928,22 +3921,20 @@
                   </Node>
                 </Patch>
                 <Pin Id="VFnViFUglhSQaNNTz7nNyX" Name="Docking Enabled" Kind="InputPin" />
-                <Pin Id="Qz4kHlLYQIPLygs6EfoFvJ" Name="Default Window" Kind="InputPin" />
                 <Pin Id="UXSqwUhzNx8Pe4qFMDDAFU" Name="Use Skia Space" Kind="InputPin" />
                 <Pin Id="Sfif8JpvL0FOLh34LWE8Cq" Name="Output" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="NS54WUSQL3jPnlTgOFnU2Z" Bounds="425,656" />
               <ControlPoint Id="CzfqSamcEjDQVfQvDBnACe" Bounds="479,189" />
               <ControlPoint Id="CmNfZ8PobYVNtTqohqzc0F" Bounds="547,185" />
+              <ControlPoint Id="JHHMa7L9YIOOOVkqJaRxDW" Bounds="835,195" />
             </Canvas>
             <ProcessDefinition Id="UxVChC8U9dpLKukWIeZmwJ">
               <Fragment Id="Tmqh1427LHpLvWnFYg5TR1" Patch="G4mpFSxT6m3PnRj7jLaUIV" Enabled="true" />
               <Fragment Id="DIE4o2FOwrAMAwj9yfde9u" Patch="BKxyKaV6dVCLW6IBVicQ5S" Enabled="true" />
             </ProcessDefinition>
             <Link Id="VGCjuzKDovYLNPEUSCIF31" Ids="IJBu3w9XCekPnxuguMKUSH,FDsk7PhsvtRQJDS8s8yNTp" IsHidden="true" />
-            <Link Id="SAD5rmXLqAOMMwdQfzNS79" Ids="EbschHtLOE8M1GJPBbGY9M,BsCNeNpzde0L9SbAFl6krV" IsHidden="true" />
             <Link Id="KXIa0qT82FwP1UQhv651Ou" Ids="FDsk7PhsvtRQJDS8s8yNTp,VFnViFUglhSQaNNTz7nNyX" />
-            <Link Id="P7QKCylPDp0OvmdL0YSyUd" Ids="BsCNeNpzde0L9SbAFl6krV,Qz4kHlLYQIPLygs6EfoFvJ" />
             <Link Id="AyjLK3JJwZYOzqtjSKouDF" Ids="Sfif8JpvL0FOLh34LWE8Cq,NS54WUSQL3jPnlTgOFnU2Z" />
             <Link Id="PAQprJqpmh9O1VEPphykPp" Ids="NS54WUSQL3jPnlTgOFnU2Z,V0GUMmEv0KGN2ZSRAprUPe" IsHidden="true" />
             <Link Id="QyfLiWEwi4zOldQYaRVskz" Ids="CzfqSamcEjDQVfQvDBnACe,CLLw1k2QFS0MvCafRJdl6V" />
@@ -3964,10 +3955,12 @@
               <Pin Id="QZF9U4ZUypdOYF3fGviAAe" Name="Input" Kind="InputPin" Bounds="356,187" />
               <Pin Id="D7m3Dd6Cke8QLrN80uDfFD" Name="Menu Bar" Kind="InputPin" Bounds="731,181" />
               <Pin Id="IJBu3w9XCekPnxuguMKUSH" Name="Docking Enabled" Kind="InputPin" Bounds="661,236" />
-              <Pin Id="EbschHtLOE8M1GJPBbGY9M" Name="Default Window" Kind="InputPin" Bounds="754,237" />
               <Pin Id="V0GUMmEv0KGN2ZSRAprUPe" Name="Output" Kind="OutputPin" Bounds="639,429" />
+              <Pin Id="DW54u5Rq6mNPt91JnMjte2" Name="Use Skia Space" Kind="InputPin" Bounds="835,195" />
             </Patch>
             <Patch Id="Gp1ToIBiduqPVVmv14VLLZ" Name="Dispose" />
+            <Link Id="OvD1Oaba7DJPAX4KnukRit" Ids="JHHMa7L9YIOOOVkqJaRxDW,UXSqwUhzNx8Pe4qFMDDAFU" />
+            <Link Id="Jwdh2rLgUPBPDcNbVrRNnj" Ids="DW54u5Rq6mNPt91JnMjte2,JHHMa7L9YIOOOVkqJaRxDW" IsHidden="true" />
           </Patch>
         </Node>
         <!--
@@ -3999,7 +3992,6 @@
                 <Pin Id="Vxd5CyjbY9JObnBBgHqxqG" Name="Input" Kind="StateInputPin" />
                 <Pin Id="OGUXKrrTkAHN8YmS2dZZrR" Name="Widget" Kind="InputPin" />
                 <Pin Id="M9bvkABaC7wO7PdA0MrntS" Name="Docking Enabled" Kind="InputPin" />
-                <Pin Id="VG8BI57QKKhLOWbdeU4Uzq" Name="Default Window" Kind="InputPin" />
                 <Pin Id="MYmy9VgsPHdPrIhGW0nq39" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="MrKtINJPsGkNSNCda1rKkZ" Name="Result" Kind="OutputPin" />
               </Node>
@@ -4015,14 +4007,12 @@
                 <Pin Id="LYBrbJOV6lZPJbKZ5vkyWW" Name="Output" Kind="StateOutputPin" />
               </Node>
               <ControlPoint Id="QmC4h6ro153LaDN1DL7HWo" Bounds="637,237" />
-              <ControlPoint Id="A720EdTLPDbMFENV5OhjzE" Bounds="738,239" />
             </Canvas>
             <Patch Id="HMoo4F2wPHfOPWis8qiGd4" Name="Create" ParticipatingElements="CcuCrOTvJ7iOxtRm4wo2yY" />
             <Patch Id="TMV2JcMRkLaMHsTwpB1gaI" Name="Update">
               <Pin Id="OOJougZqk9rNGDgHK3SDPd" Name="Input" Kind="InputPin" Bounds="580,242" />
               <Pin Id="F9OcoUxVkkSPPp3yzu8bYY" Name="Output" Kind="OutputPin" Bounds="526,424" />
               <Pin Id="FrYsC2ddtQOLzUNhvAxQi3" Name="Docking Enabled" Kind="InputPin" Bounds="661,236" />
-              <Pin Id="EF6leeqQvRTONjmrJhnmYi" Name="Default Window" Kind="InputPin" Bounds="754,237" />
             </Patch>
             <ProcessDefinition Id="MqBsZKYUbITM5Tpf7KqBaz">
               <Fragment Id="GERVZ1GbJB2OnSuX5ejeEd" Patch="HMoo4F2wPHfOPWis8qiGd4" Enabled="true" />
@@ -4039,8 +4029,6 @@
             <Link Id="LdsBsdD4grTLhbVb3svt7s" Ids="JgkUc7l0O84MozFSqz2EBf,OGUXKrrTkAHN8YmS2dZZrR" />
             <Link Id="OzH6NHdJiUBMIk1tlg3p4R" Ids="QmC4h6ro153LaDN1DL7HWo,M9bvkABaC7wO7PdA0MrntS" />
             <Link Id="TtfEqqnfYAzODLdeN7XPix" Ids="FrYsC2ddtQOLzUNhvAxQi3,QmC4h6ro153LaDN1DL7HWo" IsHidden="true" />
-            <Link Id="JiJ8lFQmSjaMznC6rh24xy" Ids="A720EdTLPDbMFENV5OhjzE,VG8BI57QKKhLOWbdeU4Uzq" />
-            <Link Id="JymlSWuM5O5OgrmmDRl5kI" Ids="EF6leeqQvRTONjmrJhnmYi,A720EdTLPDbMFENV5OhjzE" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>
@@ -4077,13 +4065,13 @@
     </Pin>
     <Pin Id="COXdbyOB14GOVao4fNznRc" Name="Context" Kind="OutputPin" Bounds="266,552" />
   </Patch>
-  <NugetDependency Id="Vz3cwZrBJTGLAh6YbNZBCx" Location="VL.CoreLib" Version="2022.5.0-0252-gcdda516750" />
+  <NugetDependency Id="Vz3cwZrBJTGLAh6YbNZBCx" Location="VL.CoreLib" Version="2022.5.0-0242-g24c47d850a" />
   <PlatformDependency Id="PSyqO1CCWQcNb5qk90CsPv" Location="./lib/net6.0-windows/VL.ImGui.dll" />
-  <NugetDependency Id="IlyAlr1qck7MKce1nxRCT3" Location="VL.Skia" Version="2022.5.0-0252-gcdda516750" />
+  <NugetDependency Id="IlyAlr1qck7MKce1nxRCT3" Location="VL.Skia" Version="2022.5.0-0242-g24c47d850a" />
   <NodeFactoryDependency Id="EZrT1oic5elOOa9FLEPEW3" Location="VL.ImGUI.Skia.Nodes" />
   <NodeFactoryDependency Id="Hfw4AALyIQnO78LAfR0CeH" Location="VL.ImGUI.Nodes" IsForward="true" />
   <NugetDependency Id="MeUDYJGMy2LPYXKkJ8W8Bv" Location="ImGui.NET" Version="1.87.3" />
-  <NugetDependency Id="V0AMJMebwb1MdDcUXBVZz9" Location="VL.Core" Version="2022.5.0-0252-gcdda516750" />
+  <NugetDependency Id="V0AMJMebwb1MdDcUXBVZz9" Location="VL.Core" Version="2022.5.0-0242-g24c47d850a" />
   <PlatformDependency Id="CvXrXMnLWMoOojP8pgvTAW" Location="./lib/net6.0-windows/System.Reactive.dll" />
   <PlatformDependency Id="FMhM3OZ4I3EPu5LYkrAMdV" Location="System.Runtime" />
 </Document>

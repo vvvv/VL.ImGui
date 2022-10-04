@@ -11,7 +11,7 @@
     <Nullable>enable</Nullable>
 
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <VLVersion>2022.5.0-0225-ge247e95b60</VLVersion>
+    <VLVersion>2022.5.0-0242-g24c47d850a</VLVersion>
     <VLInstallPath>$(ProgramFiles)\vvvv\vvvv_gamma_$(VLVersion)</VLInstallPath>
     <PackageRepositories>"$(MsBuildThisFileDirectory)..\..\.."</PackageRepositories>
 
