@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0261-d97a44c3ea" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0263-df497fec92" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -253,6 +253,9 @@
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
+            <Pin Id="Un2TvKpw0KDP6Ga34vGEeP" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="HPv4cEHgeHnN4FZkRFKSk2" Name="Use Skia Space" Kind="InputPin" />
+            <Pin Id="IIXfxwkDw0ILXspNpAHNaY" Name="Output" Kind="OutputPin" />
             <Patch Id="AFHtfL1q0KzLUWBwraAwNZ" ManuallySortedPins="true">
               <Patch Id="Vvmz8Vvhv85NjADmX0FLGJ" Name="Create" ManuallySortedPins="true" />
               <Patch Id="OMd14ZJJauQLYuX18dZZat" Name="Update" ManuallySortedPins="true" />
@@ -355,7 +358,7 @@
                         </p:TypeAnnotation>
                       </Pad>
                       <Node Bounds="381,769,66,19" Id="DY8dUqGW5F8PCIveMBf707">
-                        <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                        <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.Skia.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="ProcessNode" Name="SkiaWidget" />
                           <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
@@ -401,9 +404,6 @@
                 <Pin Id="LOfJTE4YSOXPGaqQA1O4Gz" Name="Value" Kind="OutputPin" />
               </Node>
             </Patch>
-            <Pin Id="Un2TvKpw0KDP6Ga34vGEeP" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="HPv4cEHgeHnN4FZkRFKSk2" Name="Use Skia Space" Kind="InputPin" />
-            <Pin Id="IIXfxwkDw0ILXspNpAHNaY" Name="Output" Kind="OutputPin" />
           </Node>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
