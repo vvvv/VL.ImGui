@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0252-cdda516750" Version="0.128">
+<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0261-d97a44c3ea" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -81,7 +81,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="187,343,510,172" Id="MkLlpmRzALsPgpR9w7KTcW">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.vl">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.Skia.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
@@ -158,7 +158,6 @@
               <Pad Id="LqtVMQzPnSVNWxLUXbsPmd" Comment="" Bounds="631,488,35,15" ShowValueBox="true" isIOBox="true" />
             </Patch>
             <Pin Id="T5hF6TgnVSyN6gCoIObS74" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="QbQlO70Z57EMn6I7baJQck" Name="Default Window" Kind="InputPin" DefaultValue="True" />
             <Pin Id="JwcjT0cBoVhM14fHMXj3U6" Name="Use Skia Space" Kind="InputPin" />
             <Pin Id="HVhqGFxyIHQOGB0VIbxek5" Name="Output" Kind="OutputPin" />
           </Node>

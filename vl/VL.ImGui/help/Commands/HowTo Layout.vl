@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0252-cdda516750" Version="0.128">
+<Document xmlns:p="property" Id="Nd7OkwERbRJPkQ8nosm7Nq" LanguageVersion="2022.5.0-0261-d97a44c3ea" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -42,7 +42,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="321,196,468,428" Id="EYxJoOFEiLfLMO2FFwMZpZ">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.vl">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.Skia.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
@@ -106,7 +106,6 @@
                     <Pin Id="Qo1p7QQdRfmQNwKPLtJjMr" Name="Context" Kind="InputPin" />
                     <Pin Id="JzHUBRbS6ddLd1mIGDWFzw" Name="Offset" Kind="InputPin" />
                     <Pin Id="U53pz3e1f6iQR5JfL56eEW" Name="Spacing" Kind="InputPin" DefaultValue="20" />
-                    <Pin Id="D1yCzAlRDn9O8xvBVqvCPX" Name="Style" Kind="InputPin" />
                     <Pin Id="LOqmPQXElfmOFrMpKBmvHd" Name="Context" Kind="OutputPin" />
                   </Node>
                   <Pad Id="Sj0jHgObCIHNa6eCN1et59" Comment="Spacing" Bounds="578,352,35,15" ShowValueBox="true" isIOBox="true" Value="0.1">
@@ -157,7 +156,6 @@
                 </p:NodeReference>
                 <Pin Id="MthujI9RTlFO8q6YCrWbnd" Name="Context" Kind="InputPin" />
                 <Pin Id="GSaTAcq1TpOMO9Wdk1aW8z" Name="Value" Kind="InputPin" />
-                <Pin Id="PplV2P5vY4mPwboSXqQmxK" Name="Style" Kind="InputPin" />
                 <Pin Id="CVLyS3t2D7xMcLTtG9ZkHc" Name="Context" Kind="OutputPin" />
               </Node>
               <Node Bounds="365,529,97,19" Id="DJKcIWOV0YxO5uACBVbzZQ">
@@ -195,7 +193,6 @@
               </Pad>
             </Patch>
             <Pin Id="M2FIXRj3X9VLMvjoEU6Tnq" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="RkpsU0CA4gJPZco9Xzr2XP" Name="Default Window" Kind="InputPin" DefaultValue="True" />
             <Pin Id="BOdeSUO33FMMqUqLppnzyy" Name="Use Skia Space" Kind="InputPin" />
             <Pin Id="A3wpv1Vi1GaOCxp00XSthG" Name="Output" Kind="OutputPin" />
           </Node>
@@ -207,7 +204,6 @@
               <Choice Kind="ProcessNode" Name="Spacing" />
             </p:NodeReference>
             <Pin Id="MJ0Q0ZNipQdP9YiOPSuoRv" Name="Context" Kind="InputPin" />
-            <Pin Id="UAD46TLRFIDNMD5MiEdiK9" Name="Style" Kind="InputPin" />
             <Pin Id="Vx82KkIfX3UPBbun8ERzq6" Name="Context" Kind="OutputPin" />
           </Node>
           <Node Bounds="85,304,52,19" Id="OZZL43DDZNNMaekvqR0IAZ">
@@ -219,7 +215,6 @@
             </p:NodeReference>
             <Pin Id="GTkrSf9vdWCNuXonjXqOCn" Name="Context" Kind="InputPin" />
             <Pin Id="MwrZ2hjJuHdQPgLs27dZXI" Name="Value" Kind="InputPin" />
-            <Pin Id="UMsx4Gv2HNIPTaxsYROS6H" Name="Style" Kind="InputPin" />
             <Pin Id="DoRIkH55HJSLkz8Le7veJK" Name="Context" Kind="OutputPin" />
           </Node>
           <Node Bounds="85,331,58,19" Id="IiVb9vsAOm8ObPkpTTjbFY">
@@ -231,7 +226,6 @@
             </p:NodeReference>
             <Pin Id="RFPtI0X5gpwLsTQ0w1TKGg" Name="Context" Kind="InputPin" />
             <Pin Id="LmxXWFGqu2PMWNPFzuZhJ8" Name="Value" Kind="InputPin" />
-            <Pin Id="CPn0gAwjp4zLT7mb9ya7bA" Name="Style" Kind="InputPin" />
             <Pin Id="E71L9HbmEomO9mlxIIm6u2" Name="Context" Kind="OutputPin" />
           </Node>
           <Node Bounds="85,250,65,19" Id="U6GUv1rQNgHNC4jVF1A6UX">
@@ -244,7 +238,6 @@
             <Pin Id="HgXcMwri29NNyt9KIjdHy3" Name="Context" Kind="InputPin" />
             <Pin Id="NOAh1LowcvZQM5WKB6dqBk" Name="Offset" Kind="InputPin" />
             <Pin Id="VKpfdSjyCheNBiWT9iH5Fd" Name="Spacing" Kind="InputPin" />
-            <Pin Id="BHxPwKQdlu8MgDWuDDQcOE" Name="Style" Kind="InputPin" />
             <Pin Id="SjcLGRdnoZmLirl8CN4rep" Name="Context" Kind="OutputPin" />
           </Node>
           <Node Bounds="85,277,59,19" Id="JyBt75xg0BFOiRGJxCY3NB">
@@ -255,7 +248,6 @@
               <Choice Kind="ProcessNode" Name="NewLine" />
             </p:NodeReference>
             <Pin Id="GK98QCkRdR9QbWVRcCtBP8" Name="Context" Kind="InputPin" />
-            <Pin Id="VgWskt3nI8BPFuT92sHceY" Name="Style" Kind="InputPin" />
             <Pin Id="JHmkiCSLCmBPvJ3AfMUh3C" Name="Context" Kind="OutputPin" />
           </Node>
           <Node Bounds="85,358,97,19" Id="Kity5irwKcpPrmtuG6lzim">

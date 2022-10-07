@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="REXoQnYkAPpMj5P1YFgzII" LanguageVersion="2022.5.0-0225-e247e95b60" Version="0.128">
+<Document xmlns:p="property" Id="REXoQnYkAPpMj5P1YFgzII" LanguageVersion="2022.5.0-0261-d97a44c3ea" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -41,14 +41,11 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="133,199,250,259" Id="GLXvgqSf3hJPgreK6Yc3w0">
-            <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+          <Node Bounds="133,199,225,259" Id="GLXvgqSf3hJPgreK6Yc3w0">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.Skia.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ImGui (Skia)" />
+              <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
-            <Pin Id="QpgLapI5zDxPOzGRPcwG5j" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="QYV6IvNmSVtMsW7NpVxU8J" Name="Default Window" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="QcQXTQIKrE4Lctbv3yl4HS" Name="Output" Kind="OutputPin" />
             <Patch Id="OULFnoaA6CGM9ogOBcyw6g" ManuallySortedPins="true">
               <Patch Id="BKdfb4ldad4PB7v54JDFqH" Name="Create" ManuallySortedPins="true" />
               <Patch Id="JwDc4Yj5HDFL54OfZDrvOi" Name="Update" ManuallySortedPins="true" />
@@ -63,7 +60,6 @@
                 <Pin Id="MzN2qzfX6dDOenFHvkCAAG" Name="Color" Kind="InputPin" />
                 <Pin Id="DFfHJj0aKZ6Lm0SqoIKDPY" Name="Is Closed" Kind="InputPin" DefaultValue="False" />
                 <Pin Id="Inr9RfvUhKtNlMG6XyaGVv" Name="Thickness" Kind="InputPin" />
-                <Pin Id="P3dnS46SRMMPpdvcQl9DKj" Name="Draw List" Kind="InputPin" />
                 <Pin Id="HLr8B51L0JsOIAhdNpDBqY" Name="Style" Kind="InputPin" />
                 <Pin Id="IugfhXJLOxWQEAvV3TdN7d" Name="Context" Kind="OutputPin" />
               </Node>
@@ -83,17 +79,17 @@
                   <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="HWAnsYwKWLTOwfNWGaieZQ" Comment="" Bounds="222,227,41,28" ShowValueBox="true" isIOBox="true" Value="50, 100">
+              <Pad Id="HWAnsYwKWLTOwfNWGaieZQ" Comment="" Bounds="222,227,41,28" ShowValueBox="true" isIOBox="true" Value="0.5, 1">
                 <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="Stride.Core.Mathematics.dll">
                   <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="ObK1JC15bgZMhwA2JJKoW4" Comment="" Bounds="273,227,41,28" ShowValueBox="true" isIOBox="true" Value="100, 0">
+              <Pad Id="ObK1JC15bgZMhwA2JJKoW4" Comment="" Bounds="273,227,41,28" ShowValueBox="true" isIOBox="true" Value="1, 0">
                 <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="Stride.Core.Mathematics.dll">
                   <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="EGcsbveGWaVMaEnffOoNyy" Comment="Is Closed" Bounds="207,337,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+              <Pad Id="EGcsbveGWaVMaEnffOoNyy" Comment="Is Closed" Bounds="218,348,35,35" ShowValueBox="true" isIOBox="true" Value="False">
                 <p:TypeAnnotation>
                   <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
                   <FullNameCategoryReference ID="Primitive" />
@@ -102,17 +98,20 @@
                   <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
                 </p:ValueBoxSettings>
               </Pad>
-              <Pad Id="R3UYbDVM71uMNk1GfsZKVW" Comment="Color" Bounds="188,314,136,15" ShowValueBox="true" isIOBox="true" Value="1, 1, 1, 1">
+              <Pad Id="R3UYbDVM71uMNk1GfsZKVW" Comment="Color" Bounds="194,324,20,15" ShowValueBox="true" isIOBox="true" Value="1, 1, 1, 1">
                 <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="Stride.Core.Mathematics.dll">
                   <Choice Kind="TypeFlag" Name="RGBA" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="LcUctvINtQ4LP8xFZwUeu8" Comment="Thickness" Bounds="227,379,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+              <Pad Id="LcUctvINtQ4LP8xFZwUeu8" Comment="Thickness" Bounds="243,389,35,15" ShowValueBox="true" isIOBox="true" Value="0.01">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pad>
             </Patch>
+            <Pin Id="QpgLapI5zDxPOzGRPcwG5j" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="Q6DACnrxuX9O7ZbW0GOfVD" Name="Use Skia Space" Kind="InputPin" />
+            <Pin Id="QcQXTQIKrE4Lctbv3yl4HS" Name="Output" Kind="OutputPin" />
           </Node>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
