@@ -9,8 +9,9 @@
     <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
 
     <VLPackageBasePath>..\..\vl\VL.ImGui.Skia\</VLPackageBasePath>
-	<Description>A GUI library for Skia</Description>
-	<PackageTags>widgets, button, slider, layout</PackageTags>
+    
+	  <Description>A GUI library for Skia</Description>
+	  <PackageTags>widgets, button, slider, layout</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

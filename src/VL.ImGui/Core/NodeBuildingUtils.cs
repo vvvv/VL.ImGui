@@ -1,35 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Immutable;
 using System.Reflection;
 using VL.Core;
-using VL.Core.CompilerServices;
-using VL.ImGui.Widgets;
-using VL.ImGui.Windows;
-
-[assembly: AssemblyInitializer(typeof(VL.ImGui.Initialization))]
 
 namespace VL.ImGui
 {
-    public sealed class Initialization : AssemblyInitializer<Initialization>
+    internal static class NodeBuildingUtils
     {
-        protected override void RegisterServices(IVLFactory factory)
+        public static void RegisterGeneratedNodes(IVLFactory factory, string name, Assembly assembly)
         {
-            factory.RegisterNodeFactory(NodeBuilding.NewNodeFactory(factory, "VL.ImGUI.Nodes", f =>
+            factory.RegisterNodeFactory(NodeBuilding.NewNodeFactory(factory, name, f =>
             {
-                var nodes = GetNodes(f).ToImmutableArray();
+                var nodes = GetNodes(f, assembly).ToImmutableArray();
                 return NodeBuilding.NewFactoryImpl(nodes);
             }));
         }
 
-        static IEnumerable<IVLNodeDescription> GetNodes(IVLNodeDescriptionFactory factory)
+        public static IEnumerable<IVLNodeDescription> GetNodes(IVLNodeDescriptionFactory factory, Assembly assembly)
         {
             var result = new List<MethodInfo>();
-            foreach (var type in typeof(Initialization).Assembly.GetTypes())
+            foreach (var type in assembly.GetTypes())
             {
                 var attr = type.GetCustomAttribute<GenerateNodeAttribute>();
                 if (attr is null)
@@ -55,10 +44,7 @@ namespace VL.ImGui
                 result.Add(m);
             }
         }
-    }
 
-    internal static class NodeBuildingUtils
-    {
         public static IVLPinDescription Input<T>(this NodeBuilding.NodeDescriptionBuildContext c, string name, T defaultValue, string? summary = null, string? remarks = null)
         {
             return c.Pin(name, typeof(T), defaultValue, summary, remarks);
