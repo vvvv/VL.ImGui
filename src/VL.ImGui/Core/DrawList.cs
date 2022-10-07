@@ -2,8 +2,9 @@
 {
     public enum DrawList
     {
-        Window,
         Foreground,
-        Background
+        Background,
+        Window,
+        AtCursor,
     }
 }

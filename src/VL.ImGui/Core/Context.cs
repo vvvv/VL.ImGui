@@ -62,13 +62,21 @@ namespace VL.ImGui
         {
             DrawListPtr = drawList switch
             {
+                DrawList.AtCursor => ImGui.GetWindowDrawList(),
                 DrawList.Window => ImGui.GetWindowDrawList(),
                 DrawList.Foreground => ImGui.GetForegroundDrawList(),
                 DrawList.Background => ImGui.GetBackgroundDrawList(),
                 _ => throw new NotImplementedException()
             };
 
-            DrawListOffset = drawList == DrawList.Window ? ImGui.GetWindowPos() : default;
+            DrawListOffset = drawList switch
+            {
+                DrawList.AtCursor => ImGui.GetWindowPos() + ImGui.GetCursorPos(),
+                DrawList.Window => ImGui.GetWindowPos(),
+                DrawList.Foreground => default,
+                DrawList.Background => default,
+                _ => throw new NotImplementedException()
+            };             
 
             // TODO: All points are drawn in the main viewport. In order to have them drawn inside the window without having to transform them manually
             // we should look into the drawList.AddCallback(..., ...) method. It should allow us to modify the transformation matrix and clipping rects.

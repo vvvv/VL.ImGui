@@ -7,7 +7,7 @@ namespace VL.ImGui
 
     internal sealed class SkiaContext : Context
     {
-        public readonly List<WidgetFunc> WidgetFuncs = new List<WidgetFunc>();
+        public readonly List<RenderCallback> WidgetFuncs = new List<RenderCallback>();
 
         public override void NewFrame()
         {
@@ -16,7 +16,7 @@ namespace VL.ImGui
             base.NewFrame();
         }
 
-        internal void Widget(Vector2 size, WidgetFunc widgetFunc)
+        internal void Widget(Vector2 size, RenderCallback widgetFunc)
         {
             var id = WidgetFuncs.Count;
             WidgetFuncs.Add(widgetFunc);

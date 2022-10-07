@@ -15,7 +15,7 @@ namespace VL.ImGui
     using ImGui = ImGuiNET.ImGui;
     using Vector2 = System.Numerics.Vector2;
 
-    internal delegate void WidgetFunc(CallerInfo canvas, SKRect clipBounds);
+    internal delegate void RenderCallback(CallerInfo canvas);
 
     public class ToSkiaLayer : IDisposable, ILayer
     {
@@ -281,10 +281,16 @@ namespace VL.ImGui
                                     var tl = pos[rectIndex];
                                     var br = pos[rectIndex + 2];
                                     var imageClipRect = new SKRect(tl.X, tl.Y, br.X, br.Y);
-                                    canvas.ClipRect(imageClipRect);
-                                    canvas.Translate(imageClipRect.Location);
-
-                                    _context.WidgetFuncs[(int)idIndex](us, imageClipRect);
+                                    
+                                    canvas.SetMatrix(caller.Transformation);
+                                    try
+                                    {
+                                        _context.WidgetFuncs[(int)idIndex](caller);
+                                    }
+                                    finally
+                                    {
+                                        canvas.SetMatrix(us.Transformation);
+                                    }
                                 }
                                 else
                                 {

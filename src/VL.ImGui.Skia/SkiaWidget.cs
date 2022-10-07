@@ -4,16 +4,12 @@ using VL.Skia;
 
 namespace VL.ImGui.Widgets
 {
-    [GenerateNode(Category = "ImGui.Widgets", IsStylable = false)]
+    [GenerateNode(Category = "ImGui.Widgets.Internal", IsStylable = false)]
     public sealed partial class SkiaWidget : Widget
     {
-        private readonly InViewportUpstream _transformLayer = new InViewportUpstream();
-
         public ILayer? Layer { private get; set; }
 
         public Vector2 Size { private get; set; } = new Vector2(1f, 1f);
-
-        public CommonSpace Space { private get; set; }
 
         internal override void UpdateCore(Context context)
         {
@@ -24,10 +20,18 @@ namespace VL.ImGui.Widgets
             }
         }
 
-        void Render(CallerInfo caller, SKRect clipRect)
+        void Render(CallerInfo caller)
         {
-            _transformLayer.Update(Layer, clipRect, Space, out _);
-            _transformLayer.Render(caller);
+            //caller.Canvas.ClipRect(, SKClipOperation.) //would love to clear the clip
+            try
+            {
+                Layer?.Render(caller);
+
+            }
+            finally
+            {
+
+            }
         }
     }
 }
