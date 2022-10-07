@@ -3,7 +3,7 @@ using Stride.Core.Mathematics;
 
 namespace VL.ImGui.Widgets.Primitives
 {
-    internal abstract class PrimitiveWidget : Widget
+    public abstract class PrimitiveWidget : Widget
     {
         internal override sealed void UpdateCore(Context context)
         {
