@@ -269,7 +269,7 @@ namespace VL.ImGui
                             else
                             {
                                 var idIndex = drawCmd.TextureId.ToInt64();
-                                if (idIndex < _context.Layers.Count)
+                                if (0 <= idIndex && idIndex < _context.Layers.Count)
                                 {
                                     // Small image IDs are actually indices into a list of callbacks. We directly
                                     // examing the vertex data to deduce the image rectangle, then reconfigure the

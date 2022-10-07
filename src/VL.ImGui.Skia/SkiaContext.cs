@@ -1,11 +1,28 @@
 ﻿using ImGuiNET;
 using Stride.Core.Mathematics;
 using System.Runtime.CompilerServices;
+using VL.Lib.IO.Notifications;
 using VL.Skia;
 
 namespace VL.ImGui
 {
     using ImGui = ImGuiNET.ImGui;
+
+    class EmptyLayer : ILayer
+    {
+        public static EmptyLayer Instance = new EmptyLayer();
+
+        public RectangleF? Bounds => default;
+
+        public bool Notify(INotification notification, CallerInfo caller)
+        {
+            return false;
+        }
+
+        public void Render(CallerInfo caller)
+        {
+        }
+    }
 
     internal sealed class SkiaContext : Context
     {
@@ -14,7 +31,7 @@ namespace VL.ImGui
         public override void NewFrame()
         {
             Layers.Clear();
-
+            Layers.Add(EmptyLayer.Instance);
             base.NewFrame();
         }
 
@@ -22,7 +39,7 @@ namespace VL.ImGui
         {
             var id = Layers.Count;
             Layers.Add(widgetFunc);
-            ImGui.Image(new IntPtr(id), Unsafe.As<Vector2, System.Numerics.Vector2>(ref size));
+            ImGui.Image(new IntPtr(0), Unsafe.As<Vector2, System.Numerics.Vector2>(ref size));
             drawList.AddImage(new IntPtr(id), default, Unsafe.As<Vector2, System.Numerics.Vector2>(ref size));
         }
     }
