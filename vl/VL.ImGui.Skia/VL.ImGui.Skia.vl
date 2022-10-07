@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="TlT19thZkWBLG3AeB1o51b" LanguageVersion="2022.5.0-0265-da16ac749a" Version="0.128">
+<Document xmlns:p="property" Id="TlT19thZkWBLG3AeB1o51b" LanguageVersion="2022.5.0-0270-1820cad6c8" Version="0.128">
   <NugetDependency Id="VhB7WKzvhePMf39iI7QXfi" Location="VL.CoreLib" Version="2022.5.0-0242-g24c47d850a" />
   <Patch Id="BOyXNpSNoNrL6ruhCCKXUI">
     <Canvas Id="HsOyX1PVDwwNtqm2mCK746" CanvasType="FullCategory">
@@ -67,6 +67,93 @@
                 <Pin Id="VIKPLKRdI1oMqXY8IFpz3K" Name="Input" Kind="StateInputPin" />
                 <Pin Id="DRrNqs32YTNOCgboxTUq1U" Name="Output" Kind="StateOutputPin" />
               </Node>
+              <!--
+
+    ************************ ImGuiLayer ************************
+
+-->
+              <Node Name="ImGuiLayer" Aspects="Internal" Bounds="254,631" Id="EXWQpBXObTmQbcoaqOdIIG">
+                <p:NodeReference>
+                  <Choice Kind="ForwardDefinition" Name="Forward" />
+                  <FullNameCategoryReference ID="Primitive" />
+                </p:NodeReference>
+                <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Skia" LastSymbolSource="VL.ImGui.Skia.dll">
+                  <Choice Kind="TypeFlag" Name="ProxyLayer" />
+                </p:TypeAnnotation>
+                <Patch Id="GiWSUULE3R5N1kdd9FRTky">
+                  <Canvas Id="PJjVu2CRSpyPZlTrPQHXkF" CanvasType="Group">
+                    <!--
+
+    ************************ Create ************************
+
+-->
+                    <Node Name="Create" Bounds="386,306,80,80" Id="LrINVZLFNIBPFkOJXcx5ly">
+                      <p:NodeReference>
+                        <Choice Kind="OperationDefinition" Name="Operation" />
+                        <FullNameCategoryReference ID="Primitive" />
+                      </p:NodeReference>
+                      <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                      <Patch Id="Geh15JraUvTOEYMpe7dY6w">
+                        <Node Bounds="399,334,55,26" AutoConnect="true" Id="JuLUJweScmTQWc2ottm0up">
+                          <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer.ImGui.ProxyLayer" LastSymbolSource="VL.ImGui.Skia.dll">
+                            <Choice Kind="OperationNode" Name="Create" />
+                            <FullNameCategoryReference ID="VL.ImGui.Skia.ProxyLayer" />
+                          </p:NodeReference>
+                          <Pin Id="RQSgY8kJWnGPocCGu9qSZ8" Name="Output" Kind="StateOutputPin" />
+                        </Node>
+                        <Pin Id="ObBqf4gAVNPPidhCCn8sSD" Name="Output" Kind="OutputPin" />
+                      </Patch>
+                    </Node>
+                    <!--
+
+    ************************ SetLayer ************************
+
+-->
+                    <Node Name="SetLayer" Bounds="377,519,100,50" Id="VWXGPHmPZhWMQ147PB5voc">
+                      <p:NodeReference>
+                        <Choice Kind="OperationDefinition" Name="Operation" />
+                        <FullNameCategoryReference ID="Primitive" />
+                      </p:NodeReference>
+                      <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                      <Patch Id="TJ3bUFjnclHQFRmPTBOgHe">
+                        <Node Bounds="377,519,10,10" AutoConnect="true" Id="VSzQl88nkBzOYkm2A7i4c6">
+                          <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer.ImGui.ProxyLayer" LastSymbolSource="VL.ImGui.Skia.dll">
+                            <Choice Kind="OperationNode" Name="SetLayer" />
+                            <FullNameCategoryReference ID="VL.ImGui.Skia.ProxyLayer" />
+                          </p:NodeReference>
+                          <Pin Id="SjuDuqnV1YWL30F67Jth8w" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="FoO49wWkGwOO8GrEbND3Uv" Name="Value" Kind="InputPin" />
+                          <Pin Id="D3VQ2NY72QALjedDPHLqYn" Name="Output" Kind="StateOutputPin" />
+                        </Node>
+                        <Pin Id="HIuDuOGfI3sOT1omsDrcPF" Name="Input" Kind="InputPin" />
+                        <Pin Id="UAbKA1csBjPLX5Bv1L06bt" Name="Value" Kind="InputPin" />
+                        <Pin Id="IpZM51nb5qCP7UizuWRPWI" Name="Output" Kind="OutputPin" />
+                      </Patch>
+                    </Node>
+                  </Canvas>
+                  <ProcessDefinition Id="IDxkknTXPGHOQv64EzWqUP" HasStateOut="true">
+                    <Fragment Id="SjdTsBooJjOOnSgjeTps3P" Patch="LrINVZLFNIBPFkOJXcx5ly" Enabled="true" />
+                    <Fragment Id="HumyP92SFRsOgbWnGrSEAk" Patch="VWXGPHmPZhWMQ147PB5voc" Enabled="true" />
+                  </ProcessDefinition>
+                </Patch>
+              </Node>
+              <Node Bounds="627,649,66,19" Id="OIfX5QwKciuPq1oJ0s3EVr">
+                <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer.ImGui" LastSymbolSource="VL.ImGui.Skia.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="ImGuiLayer" />
+                </p:NodeReference>
+                <Pin Id="HlxLj5Z9WZhOhaOuHihRNv" Name="Value" Kind="InputPin" />
+                <Pin Id="ILdOnFDupLZNw8Fn7MZJZ9" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Pad Id="ETFmWXj3hwJPOk57qlRPqO" Bounds="702,656,133,67" ShowValueBox="true" isIOBox="true" Value="&lt;&lt; in order to be able to register a viewer">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:fontsize p:Type="Int32">9</p:fontsize>
+                  <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                </p:ValueBoxSettings>
+              </Pad>
             </Canvas>
             <Patch Id="DeRedgLKzozMq1PdnBeq1u" Name="Create" />
             <Patch Id="S2hh5ffVUDTLDjFFL0groP" Name="Update">
@@ -96,7 +183,8 @@
             <Link Id="QuaHr29yqYQL2iHmC5n2hx" Ids="HsHudaozVEMNYt7d4miebV,VnoYiefd8SvPerPYQYa5vY" />
             <Link Id="NaeTruiMbfbM3bFRNDxJyO" Ids="VnoYiefd8SvPerPYQYa5vY,HZahd7HfSl0PHG1VqP1O2r" />
             <Link Id="QnIWE4DDdsVNokorJgYxGF" Ids="MNCCJWgebeENhdPqdH53LT,BqCEnIuzDAtNQdbAOKREjM" />
-            <Link Id="ORutgG7qLEAMtQXQ5iybWj" Ids="BqCEnIuzDAtNQdbAOKREjM,U11QKFtFL8MQGiA83iEW3n" />
+            <Link Id="NvousK437ocMmFdHUzYwy6" Ids="BqCEnIuzDAtNQdbAOKREjM,HlxLj5Z9WZhOhaOuHihRNv" />
+            <Link Id="G3yDcuByfrcM9WK0e2Ib62" Ids="ILdOnFDupLZNw8Fn7MZJZ9,U11QKFtFL8MQGiA83iEW3n" />
           </Patch>
         </Node>
         <!--
@@ -324,8 +412,8 @@
                 <Pin Id="SfOQXqq2eeZLhPWNhLf0YV" Name="Context" Kind="InputPin" />
                 <Pin Id="CIGFkVi7UT2MPkFhuV1dv3" Name="Layer" Kind="InputPin" />
                 <Pin Id="QpB1hdQBKY4Mdtt23oHclF" Name="Size" Kind="InputPin" />
-                <Pin Id="O7YtiJQ0o7eQC7S0ABnoOq" Name="Clip" Kind="InputPin" DefaultValue="False" />
                 <Pin Id="Hmzdwex9yjfQFubhW5gXaL" Name="Context" Kind="OutputPin" />
+                <Pin Id="O7YtiJQ0o7eQC7S0ABnoOq" Name="Clip" Kind="InputPin" DefaultValue="False" />
               </Node>
               <Node Bounds="523,364,65,19" Id="B9sgqHYPESxPOy7JN1ui4q">
                 <p:NodeReference LastCategoryFullName="Graphics.Skia.Layers" LastSymbolSource="VL.Skia.vl">

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="GrLBPzx6l8KMui1q8MAbrY" LanguageVersion="2022.5.0-0270-1820cad6c8" Version="0.128">
+  <NugetDependency Id="VhB7WKzvhePMf39iI7QXfi" Location="VL.CoreLib" Version="2022.5.0-0242-g24c47d850a" />
+  <Patch Id="BOyXNpSNoNrL6ruhCCKXUI">
+    <Canvas Id="HsOyX1PVDwwNtqm2mCK746" CanvasType="FullCategory">
+      <!--
+
+    ************************ ImGuiRegionOutputLayerViewer ************************
+
+-->
+      <Node Name="ImGuiRegionOutputLayerViewer" Bounds="436,535" Id="Fg8g6es4W2hN1izYRL07Jt">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:Interfaces>
+          <TypeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
+            <Choice Kind="MutableInterfaceType" Name="IValueViewer" />
+          </TypeReference>
+        </p:Interfaces>
+        <Patch Id="SPYCiAQoNkYOwn414KWRQL">
+          <Canvas Id="BYJ7tITM1HsM9vwBhcv0rM" CanvasType="Group">
+            <ControlPoint Id="POcisOw2SesOozcnxH65MQ" Bounds="348,456" />
+            <ControlPoint Id="FQSWLrfksSELGPqw2D6y5q" Bounds="358,609" />
+            <Node Bounds="326,535,76,19" Id="CACY5rImJ9nQS8ylKhZHMD">
+              <p:NodeReference LastCategoryFullName="HDE.TooltipWidgets" LastSymbolSource="VL.HDE.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="EmptyWidget" />
+                <CategoryReference Kind="Category" Name="TooltipWidgets" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="GsTKtXcBlO5Nha6wBnUdTh" Name="Default Size" Kind="InputPin" />
+              <Pin Id="DHyWpeK7XbdMULKyWHl7oV" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="Iiu2BjVH37oOfszMffujqt" Bounds="413,457,367,19" ShowValueBox="true" isIOBox="true" Value="&lt;&lt; ProxyLayer is the final Layer output type of ImGui Region">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="UOJnnZcTeOjPOPhIF0AgoT" Bounds="435,543,242,19" ShowValueBox="true" isIOBox="true" Value="&lt;&lt; don't call into it. Tooltip is disabled">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+          </Canvas>
+          <ProcessDefinition Id="JJhtUp0mi21MBXsasgVe1g">
+            <Fragment Id="DpCcXqTfWE6NpstMvwN9An" Patch="E758pxuztI8PoBBdacp1Zn" Enabled="true" />
+            <Fragment Id="AgrC8JLPDltLjvUpfDA0OL" Patch="T7Wt7R12DWtQLRBpJpuoNT" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="UG9OoWVDzAEODitzQsNYvU" Ids="HXYdi3cS1AlP1LZ9aaZ5Rg,POcisOw2SesOozcnxH65MQ" IsHidden="true" />
+          <Link Id="UkY2uejkAOXLeDhEDzUold" Ids="FQSWLrfksSELGPqw2D6y5q,TDaz1M5aBqULz90fUnhJYn" IsHidden="true" />
+          <Link Id="LLinjxerQaYPHxt1vZCcyu" Ids="DHyWpeK7XbdMULKyWHl7oV,FQSWLrfksSELGPqw2D6y5q" />
+          <Patch Id="E758pxuztI8PoBBdacp1Zn" Name="Create" />
+          <Patch Id="T7Wt7R12DWtQLRBpJpuoNT" Name="Update">
+            <Pin Id="HXYdi3cS1AlP1LZ9aaZ5Rg" Name="Value" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Skia" LastSymbolSource="VL.ImGui.Skia.dll">
+                <Choice Kind="TypeFlag" Name="ProxyLayer" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="SECl2dxGpN2LUHb6RdGSkp" Name="Context" Kind="InputPin" />
+            <Pin Id="TDaz1M5aBqULz90fUnhJYn" Name="Widget" Kind="OutputPin" />
+          </Patch>
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ RegisterServices ************************
+
+-->
+      <Node Name="RegisterServices" Bounds="428,593,204,195" Id="TCpRM3q8J4zNdR4Lw9Klx2">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+          <Choice Kind="OperationDefinition" Name="Operation" />
+        </p:NodeReference>
+        <Patch Id="K4P620tmROAPGjChKyCEQa">
+          <Pin Id="CBoBuN6FlP4QFyRvfuuSfG" Name="Factory" Kind="InputPin" />
+          <ControlPoint Id="IGk2SMPdPteLvO00p8qzcl" Bounds="442,611" />
+          <Link Id="EGb2bLIflcANQW6FLxPQv8" Ids="CBoBuN6FlP4QFyRvfuuSfG,IGk2SMPdPteLvO00p8qzcl" IsHidden="true" />
+          <Node Bounds="524,675,96,93" Id="VCLyKF1A12vM7FsDjBrKGK">
+            <p:NodeReference LastCategoryFullName="HDE.Viewers" LastSymbolSource="VL.HDE.vl">
+              <Choice Kind="OperationCallFlag" Name="RegisterViewer" />
+              <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+            </p:NodeReference>
+            <Pin Id="V4rj6P7d0CYLNSighCMLRC" Name="Input" Kind="InputPin" />
+            <Pin Id="OFDN1669M9eLf9yp8j0XvQ" Name="Output" Kind="OutputPin" />
+            <Patch Id="Q90nfHU0yvkPVzKe95vVam" Name="Create" ManuallySortedPins="true">
+              <Pin Id="BfzqLmpy7ibNK55HD0iBeo" Name="Result" Kind="OutputPin" />
+              <ControlPoint Id="HAPncs3sqKhMBEk0ntrKKO" Bounds="536,761" />
+              <Node Bounds="536,698,72,26" Id="F7MNnZu71RrNGzDAf8WX2o">
+                <p:NodeReference LastCategoryFullName="ImGuiRegionOutputLayerViewer" LastSymbolSource="VL.ImGui.Skia.HDE.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ClassType" Name="ImGuiRegionOutputLayerViewer" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                </p:NodeReference>
+                <Pin Id="SlnijvJ2SBJOAtcufpmu4L" Name="Output" Kind="StateOutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+          <Link Id="QgEE9I7UYGmOffJmCp2z4N" Ids="HAPncs3sqKhMBEk0ntrKKO,BfzqLmpy7ibNK55HD0iBeo" IsHidden="true" />
+          <Link Id="FZmSGTiILt7NOFNYcZX1PV" Ids="SlnijvJ2SBJOAtcufpmu4L,HAPncs3sqKhMBEk0ntrKKO" />
+          <Link Id="KIkefiEHqEdQInoenJbHZi" Ids="IGk2SMPdPteLvO00p8qzcl,V4rj6P7d0CYLNSighCMLRC" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="OCrgj6QfrptPuGJr6xaSe1">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="Kz0jMTAcgjSOLLlviRF9lG">
+        <Canvas Id="IKgdS1aHPqSN0kcVbUIzTX" CanvasType="Group" />
+        <Patch Id="Jcpjz7Ol8kJMOD8aZHaqfz" Name="Create" />
+        <Patch Id="GiWpq2mzRhBPulv90vf7Jm" Name="Update" />
+        <ProcessDefinition Id="APAhOPiyptKMM85FqSJ72x">
+          <Fragment Id="A18aoXHBpEpL9116u1AoUe" Patch="Jcpjz7Ol8kJMOD8aZHaqfz" Enabled="true" />
+          <Fragment Id="QkrA9LIeDDVQHbeLcWHG9Z" Patch="GiWpq2mzRhBPulv90vf7Jm" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <PlatformDependency Id="DweTkg344VhLZWJYKmaS53" Location="./lib/net6.0-windows/VL.ImGui.Skia.dll" />
+  <NugetDependency Id="La4TQsK9mgxO0Swi203V6l" Location="VL.ImGui" IsForward="true" IsFriend="true" Version="0.0.0" />
+  <NugetDependency Id="Tm5Lx0IKxtwPxFKbbEKCZV" Location="VL.Skia" Version="2022.5.0-0242-g24c47d850a" />
+  <NodeFactoryDependency Id="Gb2cV4BUUiPNx37ap3F2Jj" Location="VL.ImGUI.Skia.Nodes" IsForward="true" />
+  <NugetDependency Id="VT04cThXaH5ObV1kV3dUXJ" Location="VL.ImGui.Skia" Version="0.0.0" />
+  <NugetDependency Id="NLIiCnCWb44LSyC8uapgD1" Location="VL.HDE" Version="0.0.0" />
+</Document>
