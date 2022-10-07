@@ -1,5 +1,6 @@
 ﻿using Stride.Core.Mathematics;
 using System.Runtime.CompilerServices;
+using VL.Skia;
 
 namespace VL.ImGui
 {
@@ -7,19 +8,19 @@ namespace VL.ImGui
 
     internal sealed class SkiaContext : Context
     {
-        public readonly List<RenderCallback> WidgetFuncs = new List<RenderCallback>();
+        public readonly List<ILayer> Layers = new List<ILayer>();
 
         public override void NewFrame()
         {
-            WidgetFuncs.Clear();
+            Layers.Clear();
 
             base.NewFrame();
         }
 
-        internal void Widget(Vector2 size, RenderCallback widgetFunc)
+        internal void AddLayer(Vector2 size, ILayer widgetFunc)
         {
-            var id = WidgetFuncs.Count;
-            WidgetFuncs.Add(widgetFunc);
+            var id = Layers.Count;
+            Layers.Add(widgetFunc);
             ImGui.Image(new IntPtr(id), Unsafe.As<Vector2, System.Numerics.Vector2>(ref size));
         }
     }

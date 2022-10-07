@@ -15,8 +15,6 @@ namespace VL.ImGui
     using ImGui = ImGuiNET.ImGui;
     using Vector2 = System.Numerics.Vector2;
 
-    internal delegate void RenderCallback(CallerInfo canvas);
-
     public class ToSkiaLayer : IDisposable, ILayer
     {
         readonly struct Handle<T> : IDisposable
@@ -271,7 +269,7 @@ namespace VL.ImGui
                             else
                             {
                                 var idIndex = drawCmd.TextureId.ToInt64();
-                                if (idIndex < _context.WidgetFuncs.Count)
+                                if (idIndex < _context.Layers.Count)
                                 {
                                     // Small image IDs are actually indices into a list of callbacks. We directly
                                     // examing the vertex data to deduce the image rectangle, then reconfigure the
@@ -285,7 +283,7 @@ namespace VL.ImGui
                                     canvas.SetMatrix(caller.Transformation);
                                     try
                                     {
-                                        _context.WidgetFuncs[(int)idIndex](caller);
+                                        _context.Layers[(int)idIndex].Render(caller);
                                     }
                                     finally
                                     {
@@ -395,6 +393,12 @@ namespace VL.ImGui
                 {
                     // TODO
                 }
+
+                foreach (var layer in _context.Layers)
+                {
+                    layer.Notify(notification, caller);
+                }
+
                 return false;
             }
         }

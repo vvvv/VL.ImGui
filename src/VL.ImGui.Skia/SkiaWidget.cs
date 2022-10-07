@@ -16,21 +16,8 @@ namespace VL.ImGui.Widgets
             if (context is SkiaContext skiaContext)
             {
                 var _ = Size.FromHectoToImGui();
-                skiaContext.Widget(new Vector2(_.X, _.Y), Render);
-            }
-        }
-
-        void Render(CallerInfo caller)
-        {
-            //caller.Canvas.ClipRect(, SKClipOperation.) //would love to clear the clip
-            try
-            {
-                Layer?.Render(caller);
-
-            }
-            finally
-            {
-
+                if (Layer != null)
+                    skiaContext.AddLayer(new Vector2(_.X, _.Y), Layer);
             }
         }
     }
