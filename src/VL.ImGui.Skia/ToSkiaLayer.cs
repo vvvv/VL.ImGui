@@ -90,6 +90,9 @@ namespace VL.ImGui
 
         public unsafe void Render(CallerInfo caller)
         {
+            if (caller.IsTooltip)
+                return;
+
             using (_context.MakeCurrent())
             {
                 var bounds = caller.ViewportBounds;
