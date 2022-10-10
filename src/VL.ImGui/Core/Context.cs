@@ -23,6 +23,7 @@ namespace VL.ImGui
         internal static Context? Current = null;
 
         internal ImDrawListPtr DrawListPtr;
+        internal DrawList DrawList;
         internal System.Numerics.Vector2 DrawListOffset;
 
         public Context()
@@ -60,6 +61,8 @@ namespace VL.ImGui
 
         internal void SetDrawList(DrawList drawList)
         {
+            DrawList = drawList;
+
             DrawListPtr = drawList switch
             {
                 DrawList.AtCursor => ImGui.GetWindowDrawList(),

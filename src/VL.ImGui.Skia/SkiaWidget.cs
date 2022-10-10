@@ -19,7 +19,7 @@ namespace VL.ImGui.Widgets
             {
                 var _ = Size.FromHectoToImGui();
                 if (Layer != null)
-                    skiaContext.AddLayer(new Vector2(_.X, _.Y), Layer, in drawList);
+                    skiaContext.AddLayer(new Vector2(_.X, _.Y), Layer);
             }
         }
     }

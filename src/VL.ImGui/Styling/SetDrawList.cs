@@ -17,12 +17,14 @@ namespace VL.ImGui.Styling
     internal partial class SetDrawList : StyleBase
     {
         public DrawList DrawList { protected get; set; }
-        ImDrawListPtr previousDrawList;
+        ImDrawListPtr previousDrawListPtr;
         System.Numerics.Vector2 previousOffset;
+        DrawList previousDrawList;
 
         internal override void SetCore()
         {
-            previousDrawList = Context.Current.DrawListPtr;
+            previousDrawList = Context.Current.DrawList;
+            previousDrawListPtr = Context.Current.DrawListPtr;
             previousOffset = Context.Current.DrawListOffset;
 
             Context.Current.SetDrawList(DrawList);
@@ -30,7 +32,8 @@ namespace VL.ImGui.Styling
 
         public override void Reset()
         {
-            Context.Current.DrawListPtr = previousDrawList;
+            Context.Current.DrawList = previousDrawList;
+            Context.Current.DrawListPtr = previousDrawListPtr;
             Context.Current.DrawListOffset = previousOffset;
             base.Reset();
         }

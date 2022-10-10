@@ -35,12 +35,13 @@ namespace VL.ImGui
             base.NewFrame();
         }
 
-        internal void AddLayer(Vector2 size, ILayer widgetFunc, in ImDrawListPtr drawList)
+        internal void AddLayer(Vector2 size, ILayer layer)
         {
             var id = Layers.Count;
-            Layers.Add(widgetFunc);
-            ImGui.Image(new IntPtr(0), Unsafe.As<Vector2, System.Numerics.Vector2>(ref size));
-            drawList.AddImage(new IntPtr(id), default, Unsafe.As<Vector2, System.Numerics.Vector2>(ref size));
+            Layers.Add(layer);
+            DrawListPtr.AddImage(new IntPtr(id), default, Unsafe.As<Vector2, System.Numerics.Vector2>(ref size));
+            if (DrawList == DrawList.AtCursor)
+                ImGui.Image(new IntPtr(0), Unsafe.As<Vector2, System.Numerics.Vector2>(ref size));
         }
     }
 }
