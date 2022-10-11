@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0253-c85d53df15" Version="0.128">
+<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0274-e117370dce" Version="0.128">
   <Patch Id="FqV6a8uF6wBNEsSb65h9jq">
     <Canvas Id="CiUOvKtIpncPRBZwoQzisM" CanvasType="FullCategory">
       <Canvas Id="KTyfvxdYp7wLpquGu2GQq3" Name="ImGui" Position="183,154">
@@ -1401,6 +1401,33 @@
         </Canvas>
         <Canvas Id="V6syaQ9XeuWNMbQ9Aan3W7" Name="Styling" Position="323,482">
           <Canvas Id="Brb8OYZTemdM4QyNbZC8Po" Name="Immediate" Position="373,312" />
+          <!--
+
+    ************************ StyleSnapshot ************************
+
+-->
+          <Node Name="StyleSnapshot" Bounds="549,312" Id="FZfpsbb40q8MzDsvEnhVam">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Widgets" LastSymbolSource="VL.ImGui.dll">
+              <Choice Kind="TypeFlag" Name="StyleSnapshot" />
+            </p:TypeAnnotation>
+            <Patch Id="STmx7az0xk9PzJvUMgjhRv">
+              <Canvas Id="OLXvLKZOZTwPZ8IEF6hxcs" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="Hjra5Cz5lmYMKHUvXBrLXX" IsHidden="true" />
+            </Patch>
+          </Node>
+          <Pad Id="GMJhfQr8Vo0OpeIjHAJSWc" Bounds="523,255,86,19" ShowValueBox="true" isIOBox="true" Value="//Forward">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Canvas Id="NIVmQVW7WQlLjfCwP1vHug" Name="Commands" Position="421,446">
           <!--
