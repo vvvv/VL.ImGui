@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Disposables;
-using System.Reactive.Subjects;
-using System.Text;
-using VL.Core;
-
-namespace VL.ImGui.Widgets
+﻿namespace VL.ImGui.Widgets
 {
+    /// <summary>
+    /// Draw a small circle + keep the cursor on the same line. Advance cursor x position by GetTreeNodeToLabelSpacing(), same distance that TreeNode() uses
+    /// </summary>
     [GenerateNode(Category = "ImGui.Widgets")]
     internal partial class Bullet : Widget
     {

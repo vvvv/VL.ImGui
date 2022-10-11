@@ -1,8 +1,10 @@
-﻿using Stride.Core.Mathematics;
-using System.Reactive;
+﻿using System.Reactive;
 
 namespace VL.ImGui.Widgets
 {
+    /// <summary>
+    /// Square button with an arrow shape
+    /// </summary>
     [GenerateNode(Category = "ImGui.Widgets", Button = true, Tags = "bang")]
     internal partial class ArrowButton : ChannelWidget<Unit>
     {

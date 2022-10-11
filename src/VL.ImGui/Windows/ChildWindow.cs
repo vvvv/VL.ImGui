@@ -4,6 +4,9 @@ namespace VL.ImGui.Widgets
 {
     using ImGui = ImGuiNET.ImGui;
 
+    /// <summary>
+    /// Use child windows to begin into a self-contained independent scrolling/clipping regions within a host window. Child windows can embed their own child.
+    /// </summary>
     [GenerateNode(Category = "ImGui.Widgets", GenerateImmediate = false)]
     internal sealed partial class ChildWindow : Widget
     {
@@ -13,6 +16,13 @@ namespace VL.ImGui.Widgets
 
         public bool HasBorder { get; set; }
 
+        /// <summary>
+        /// For each independent axis of 'size': 
+        /// ==0.0f: use remaining host window size 
+        /// >0.0f: fixed size 
+        /// <0.0f: use remaining window size minus abs(size) 
+        /// Each axis can use a different mode, e.g. (0,400).
+        /// </summary>
         public Vector2 Size { get; set; }
 
         public ImGuiNET.ImGuiWindowFlags Flags { private get; set; }

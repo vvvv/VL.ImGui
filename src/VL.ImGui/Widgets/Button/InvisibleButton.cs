@@ -3,6 +3,9 @@ using System.Reactive;
 
 namespace VL.ImGui.Widgets
 {
+    /// <summary>
+    /// Flexible button behavior without the visuals, frequently useful to build custom behaviors using the public api (along with IsItemActive, IsItemHovered, etc.)
+    /// </summary>
     [GenerateNode(Category = "ImGui.Widgets", Button = true, IsStylable = false, Tags = "bang")]
     internal partial class InvisibleButton : ChannelWidget<Unit>
     {
