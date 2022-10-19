@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0261-d97a44c3ea" Version="0.128">
+<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0281-31b308d5a6" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -14,7 +14,7 @@
       </p:NodeReference>
       <Patch Id="RxrvDdUu4cvOBXbi4KngKc">
         <Canvas Id="PuJjSWeZNf5OSPyulV1tEs" CanvasType="Group">
-          <Node Bounds="223,538,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
+          <Node Bounds="407,573,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
@@ -32,7 +32,7 @@
             <Pin Id="VtCD3TojbCZNIE3ICe23l6" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="Fi9FymljmNXQYNmU2h76Xz" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="263,168,324,336" Id="CJWAEKFTfy8PKqvhNrMJje">
+          <Node Bounds="447,203,324,336" Id="CJWAEKFTfy8PKqvhNrMJje">
             <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.Skia.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui" />
@@ -40,7 +40,7 @@
             <Patch Id="ClaiKi9HfIFMoHF0Lraboh" ManuallySortedPins="true">
               <Patch Id="GURHtJFJ4PWPQh1dFyjdtf" Name="Create" ManuallySortedPins="true" />
               <Patch Id="PHRjUEsVsnKQEPIsG0cayk" Name="Update" ManuallySortedPins="true" />
-              <Pad Id="Px9hc6NsGCIOTXybF1XQji" Bounds="431,219,56,95" ShowValueBox="true" isIOBox="true">
+              <Pad Id="Px9hc6NsGCIOTXybF1XQji" Bounds="615,254,56,95" ShowValueBox="true" isIOBox="true">
                 <p:TypeAnnotation>
                   <Choice Kind="TypeFlag" Name="Spread" />
                   <p:TypeArguments>
@@ -57,7 +57,7 @@
                   <Item>Wrong</Item>
                 </p:Value>
               </Pad>
-              <Node Bounds="382,379,76,19" Id="UGQpLDcsJHuPrQopUmUiGA">
+              <Node Bounds="566,414,76,19" Id="UGQpLDcsJHuPrQopUmUiGA">
                 <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="RadioButtons" />
@@ -71,7 +71,7 @@
                 <Pin Id="CAnDT70Fv8FNxjUkzeFDg3" Name="Bang" Kind="OutputPin" />
                 <Pin Id="GiUuXPUhvKPMWttqqAc6Zu" Name="Value" Kind="OutputPin" />
               </Node>
-              <Node Bounds="317,295,53,19" Id="AjEkBekSgniQM7JLd4FJHC">
+              <Node Bounds="501,330,53,19" Id="AjEkBekSgniQM7JLd4FJHC">
                 <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Channel" />
@@ -80,7 +80,7 @@
                 <Pin Id="LEuctO0JDHULZCimr6NBTM" Name="Output" Kind="OutputPin" />
                 <Pin Id="Rr2bdnFddjZPPUMydfD2E4" Name="Value" Kind="OutputPin" />
               </Node>
-              <Node Bounds="277,219,45,19" Id="Na2zKu6SbfMMz8DzNB3qIA">
+              <Node Bounds="461,254,45,19" Id="Na2zKu6SbfMMz8DzNB3qIA">
                 <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="LFO" />
@@ -92,7 +92,7 @@
                 <Pin Id="KodvuMLGiHIN0Web66wOQD" Name="On New Cycle" Kind="OutputPin" />
                 <Pin Id="H0szNo6H7ZpQWvR5DnmeXN" Name="Cycles" Kind="OutputPin" />
               </Node>
-              <Node Bounds="317,259,39,19" Id="F5KGslI8YUVLjA17UbJRzd">
+              <Node Bounds="501,294,39,19" Id="F5KGslI8YUVLjA17UbJRzd">
                 <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="MOD" />
@@ -101,8 +101,8 @@
                 <Pin Id="Rir7If1lRqSMOALlfbShbf" Name="Input 2" Kind="InputPin" DefaultValue="5" />
                 <Pin Id="PyxmluF5hsXNOXtEhKHV4h" Name="Output" Kind="OutputPin" />
               </Node>
-              <Pad Id="U0o5EnYH3vlOludbxpFFD8" Comment="" Bounds="456,438,35,15" ShowValueBox="true" isIOBox="true" />
-              <Node Bounds="519,427,52,19" Id="ItLSibJOdnhPZZV9aEfzoc">
+              <Pad Id="U0o5EnYH3vlOludbxpFFD8" Comment="" Bounds="640,473,35,15" ShowValueBox="true" isIOBox="true" />
+              <Node Bounds="703,462,52,19" Id="ItLSibJOdnhPZZV9aEfzoc">
                 <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetSlice" />
@@ -113,13 +113,13 @@
                 <Pin Id="FMyMnVyiTwmOOz770cyYdn" Name="Index" Kind="InputPin" />
                 <Pin Id="P5noYZASxqGL9WMoJAz4pI" Name="Result" Kind="OutputPin" />
               </Node>
-              <Pad Id="Utl4wo8t219PUctrdCa8Tz" Comment="" Bounds="521,476,35,15" ShowValueBox="true" isIOBox="true" />
-              <Pad Id="UFAued2MxXQPk4YOa8VD7B" Comment="Period" Bounds="279,196,35,15" ShowValueBox="true" isIOBox="true" Value="2">
+              <Pad Id="Utl4wo8t219PUctrdCa8Tz" Comment="" Bounds="705,511,65,13" ShowValueBox="true" isIOBox="true" />
+              <Pad Id="UFAued2MxXQPk4YOa8VD7B" Comment="Period" Bounds="463,231,35,15" ShowValueBox="true" isIOBox="true" Value="2">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="U9yQxQiTBGJNWh7hn0HuYF" Comment="" Bounds="353,242,35,15" ShowValueBox="true" isIOBox="true" Value="5">
+              <Pad Id="U9yQxQiTBGJNWh7hn0HuYF" Comment="" Bounds="537,277,35,15" ShowValueBox="true" isIOBox="true" Value="5">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
                   <Choice Kind="TypeFlag" Name="Integer32" />
                 </p:TypeAnnotation>
@@ -129,6 +129,24 @@
             <Pin Id="Sft6JF88kd4Psz8VePlalM" Name="Use Skia Space" Kind="InputPin" />
             <Pin Id="SHMIDiq5mJrMLXDaJvcKeJ" Name="Output" Kind="OutputPin" />
           </Node>
+          <Pad Id="VPgHcB6vgVsL26yhGRtvXX" Bounds="116,209,245,106" ShowValueBox="true" isIOBox="true" Value="`RadioButtons` widget is an easy way to create radiobuttons out of a spread of strings.&#xD;&#xA;&#xD;&#xA;For more flexible solution, see:">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="MRloQiPudjTLZqQvKAinD8" Bounds="116,307,194,19" ShowValueBox="true" isIOBox="true" Value="HowTo RadioButtons Advanced">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="DOR8YfYVKNAOTpcsIcbHHK" Name="Create" />
         <Patch Id="RYcSdMgjOSHMTo1e9h0RjC" Name="Update" />
