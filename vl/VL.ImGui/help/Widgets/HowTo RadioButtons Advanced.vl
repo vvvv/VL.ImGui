@@ -205,12 +205,13 @@
               </Node>
             </Patch>
           </Node>
-          <Node Bounds="75,534,145,19" Id="EyEC5we6RHFNq4upum4Lkm">
+          <Node Bounds="57,510,165,19" Id="EyEC5we6RHFNq4upum4Lkm">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="C4EmbklGfKAQZtdYcCH8os" Name="Bounds" Kind="InputPin" DefaultValue="1160, 463, 616, 439" />
+            <Pin Id="C4EmbklGfKAQZtdYcCH8os" Name="Bounds" Kind="InputPin" DefaultValue="1260, 125, 286, 190" />
+            <Pin Id="NmnwC98xFtwP2oTce3Lah1" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FsT0gSE0lNuPNdRsd6SpOh" Name="Input" Kind="InputPin" />
             <Pin Id="NRxwLM9A8eCLtz2ebwAfnE" Name="Color" Kind="InputPin" />
             <Pin Id="AO4Ihr0SDPCLeL0aHX6bQc" Name="Clear" Kind="InputPin" />
