@@ -2,17 +2,15 @@
 
 namespace VL.ImGui.Widgets
 {
-    internal abstract class ChannelWidget<T> : Widget//, IDisposable
+    internal abstract class ChannelWidget<T> : Widget
     {
-        private Channel<T>? channel;
         private T? value;
-        //Channel<T> fallbackChannel = new Channel<T>();
 
-        public Channel<T>? Channel 
+        public Channel<T> Channel
         {
-            protected get => channel; // ?? fallbackChannel;
-            set { channel = value; }
-        }
+            protected get;
+            set;
+        } = DummyChannel<T>.Instance; // This is the VL default
 
         public bool Bang 
         { 
@@ -27,7 +25,7 @@ namespace VL.ImGui.Widgets
             {
                 this.value = value;
                 Bang = true;
-                if (Channel != null)
+                if (Channel.IsValid())
                     Channel.Value = value!;
             }
         }
@@ -35,14 +33,9 @@ namespace VL.ImGui.Widgets
         protected T? Update()
         {
             Bang = false;
-            if (channel != null)
-                value = channel.Value;
+            if (Channel.IsValid())
+                value = Channel.Value;
             return value;
         }
-
-        //public void Dispose()
-        //{
-        //    fallbackChannel.Dispose();
-        //}
     }
 }
