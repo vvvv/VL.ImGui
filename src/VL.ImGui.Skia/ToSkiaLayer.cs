@@ -293,7 +293,7 @@ namespace VL.ImGui
                                         canvas.SetMatrix(us.Transformation);
                                     }
                                 }
-                                else
+                                else if (drawCmd.ElemCount > 0)
                                 {
                                     var handle = GCHandle.FromIntPtr(drawCmd.TextureId);
                                     var paint = handle.Target as SKPaint ?? _fontPaint.Target;
