@@ -9,6 +9,7 @@ using Stride.Core.Mathematics;
 
 using MouseButtons = VL.Lib.IO.MouseButtons;
 using Keys = VL.Lib.IO.Keys;
+using System.Buffers;
 
 namespace VL.ImGui
 {
@@ -211,7 +212,6 @@ namespace VL.ImGui
         }
 
         // From https://github.com/google/skia/blob/main/tools/viewer/ImGuiLayer.cpp
-        // TODO: With net6 we can probably get rid of a lot of allocations in here
         private void Render(CallerInfo caller, ImDrawDataPtr drawData)
         {
             var canvas = caller.Canvas;
@@ -230,9 +230,17 @@ namespace VL.ImGui
                     // De-interleave all vertex data (sigh), convert to Skia types
                     //pos.Clear(); uv.Clear(); color.Clear();
                     var size = drawList.VtxBuffer.Size;
-                    var pos = new SKPoint[size];
-                    var uv = new SKPoint[size];
-                    var color = new SKColor[size];
+
+                    // Managed approach - allocates
+                    //var pos = new SKPoint[size];
+                    //var uv = new SKPoint[size];
+                    //var color = new SKColor[size];
+
+                    // Native approach - allocation free
+                    var pos = ArrayPool<SKPoint>.Shared.Rent(size);
+                    var uv = ArrayPool<SKPoint>.Shared.Rent(size);
+                    var color = ArrayPool<SKColor>.Shared.Rent(size);
+
                     for (int j = 0; j < size; ++j)
                     {
                         var vert = drawList.VtxBuffer[j];
@@ -242,7 +250,7 @@ namespace VL.ImGui
                     }
 
                     // ImGui colors are RGBA
-                    SKSwizzle.SwapRedBlue(MemoryMarshal.AsBytes(color.AsSpan()), MemoryMarshal.AsBytes(color.AsSpan()), color.Length);
+                    SKSwizzle.SwapRedBlue(MemoryMarshal.AsBytes(color.AsSpan()), MemoryMarshal.AsBytes(color.AsSpan()), size);
 
                     // Draw everything with canvas.drawVertices...
                     for (int j = 0; j < drawList.CmdBuffer.Size; ++j)
@@ -297,12 +305,30 @@ namespace VL.ImGui
                                 {
                                     var handle = GCHandle.FromIntPtr(drawCmd.TextureId);
                                     var paint = handle.Target as SKPaint ?? _fontPaint.Target;
+                                    if (paint is null)
+                                        continue;
 
-                                    var indices = new ushort[drawCmd.ElemCount];
-                                    for (int k = 0; k < indices.Length; k++)
-                                        indices[k] = drawList.IdxBuffer[indexOffset + k];
+                                    // Managed approach - we need to allocate arrays for each call
+                                    //var indices = new ushort[drawCmd.ElemCount];
+                                    //for (int k = 0; k < indices.Length; k++)
+                                    //    indices[k] = drawList.IdxBuffer[indexOffset + k];
 
-                                    canvas.DrawVertices(SKVertexMode.Triangles, pos, uv, color, SKBlendMode.Modulate, indices, paint);
+                                    //canvas.DrawVertices(SKVertexMode.Triangles, pos, uv, color, SKBlendMode.Modulate, indices, paint);
+
+                                    // Native approach - allocation free
+                                    unsafe
+                                    {
+                                        var indexPtr = (ushort*)drawList.IdxBuffer.Data.ToPointer() + drawCmd.IdxOffset;
+                                        fixed (SKPoint* pPos = pos)
+                                        fixed (SKPoint* pTex = uv)
+                                        fixed (SKColor* pColor = color)
+                                        {
+                                            var vertices = sk_vertices_make_copy(SKVertexMode.Triangles, size, pPos, pTex, (uint*)pColor, (int)drawCmd.ElemCount, indexPtr);
+                                            sk_canvas_draw_vertices(canvas.Handle, vertices, SKBlendMode.Modulate, paint.Handle);
+                                            sk_vertices_unref(vertices);
+                                            
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -311,12 +337,26 @@ namespace VL.ImGui
                             canvas.Restore();
                         }
                     }
+
+                    ArrayPool<SKPoint>.Shared.Return(pos);
+                    ArrayPool<SKPoint>.Shared.Return(uv);
+                    ArrayPool<SKColor>.Shared.Return(color);
                 }
             }
             finally
             {
                 canvas.Restore();
             }
+
+            // Taken from SkiaApi - allows us to draw the vertices without allocating
+            [DllImport("libSkiaSharp", CallingConvention = CallingConvention.Cdecl)]
+            static extern void sk_canvas_draw_vertices(IntPtr ccanvas, IntPtr vertices, SKBlendMode mode, IntPtr paint);
+
+            [DllImport("libSkiaSharp", CallingConvention = CallingConvention.Cdecl)]
+            unsafe static extern IntPtr sk_vertices_make_copy(SKVertexMode vmode, int vertexCount, SKPoint* positions, SKPoint* texs, uint* colors, int indexCount, ushort* indices);
+
+            [DllImport("libSkiaSharp", CallingConvention = CallingConvention.Cdecl)]
+            static extern void sk_vertices_unref(IntPtr cvertices);
         }
 
         public CallerInfo PushTransformation(CallerInfo caller, SKMatrix relative)
