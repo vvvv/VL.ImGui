@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0281-31b308d5a6" Version="0.128">
+<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0293-9d05d04232" Version="0.128">
   <Patch Id="FqV6a8uF6wBNEsSb65h9jq">
     <Canvas Id="CiUOvKtIpncPRBZwoQzisM" CanvasType="FullCategory">
       <Canvas Id="KTyfvxdYp7wLpquGu2GQq3" Name="ImGui" Position="183,154">
@@ -2347,9 +2347,9 @@
                     <Node Bounds="353,393,71,19" Id="V2MNIEGEoKCPQ6CH3nJNGP">
                       <p:NodeReference LastCategoryFullName="VL.Core.CompilationHelper" LastSymbolSource="VL.Core.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <Choice Kind="OperationCallFlag" Name="SafeDispose" />
+                        <Choice Kind="OperationCallFlag" Name="ShieldedDispose" />
                       </p:NodeReference>
-                      <Pin Id="OITcPakewC3Nw4xWkEiZbG" Name="Obj" Kind="InputPin" />
+                      <Pin Id="PzFN7syNQW4O5qcU476hdA" Name="X" Kind="InputPin" />
                     </Node>
                   </Patch>
                 </Node>
@@ -2360,9 +2360,9 @@
                 <Node Bounds="275,657,71,19" Id="JRYmqcTj5mWM6jBOxdNXJJ">
                   <p:NodeReference LastCategoryFullName="VL.Core.CompilationHelper" LastSymbolSource="VL.Core.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="OperationCallFlag" Name="SafeDispose" />
+                    <Choice Kind="OperationCallFlag" Name="ShieldedDispose" />
                   </p:NodeReference>
-                  <Pin Id="Pux9KhlsfUqNxN2L0bpu3B" Name="Obj" Kind="InputPin" />
+                  <Pin Id="LswZr8HTPzcPJB1gmkqBw7" Name="X" Kind="InputPin" />
                 </Node>
                 <Pad Id="S26c8lSJ86TNU2fErSlfEj" Bounds="696,372,325,306" ShowValueBox="true" isIOBox="true" Value="This is a general purpose way to instantiate/update and dispose of whatever the user patched inside a region. Think of this process as a simple lifetime manager of one instance of the users' patch inside the region.&#xD;&#xA;&#xD;&#xA;E.g. this process initializies all users' process nodes inside the region by calling CreateRegionPatch.&#xD;&#xA;&#xD;&#xA;If the user uses process nodes with white pins he might even end up with those being connected to the input border control points. &#xD;&#xA;&#xD;&#xA;We call CreateRegionPatch on Update once in the first frame - instead of on Create - so that we can feed the input border control point values. &#xD;&#xA;&#xD;&#xA;This way the user can actually make use of the border control points within &quot;Create&quot;.">
                   <p:TypeAnnotation>
@@ -2391,8 +2391,6 @@
               <Link Id="AiWKtjuoFbkMdNQVCsIaFK" Ids="R73YdTyI6PAPvoEKqCNt0g,BXhzRI5juN2OHUtdtSIaZu" />
               <Link Id="AYX6ndrg5bNPBwEUbHkFNS" Ids="QThVRfs32OkMeFISdISmQY,Cqq3Z9cRsqXPR50vu8XxJa" />
               <Link Id="Vf8Nqkw2WdcQc1EYp216FM" Ids="LmqNXqPRNGyN7HNNJUOmyY,QThVRfs32OkMeFISdISmQY" IsHidden="true" />
-              <Link Id="IYoTi0KShmBLayeZF2vWXz" Ids="D2em0MSCEPJNMbUDWuwHgO,Pux9KhlsfUqNxN2L0bpu3B" />
-              <Link Id="AyYnIR7jA3CNKnAWdpPZLv" Ids="VVWQFz93Ed6L2GFe9H8hvH,OITcPakewC3Nw4xWkEiZbG" />
               <ProcessDefinition Id="PRiEc3DsKdxPJE32CRJter" HasStateOut="true">
                 <Fragment Id="MZh7Z2JeHa8QUV7keNs84L" Patch="HAyCgJPqTrSLxSzEFgrC8e" Enabled="true" />
                 <Fragment Id="JpD0S0Ggi3RNaoQ8K5dhQB" Patch="EZOIUrXbRb8LouorVvvyhr" />
@@ -2424,7 +2422,9 @@
                 <Pin Id="LmqNXqPRNGyN7HNNJUOmyY" Name="Incoming Links" Kind="InputPin" />
                 <Pin Id="PxDuHnr2QJALMyTeKRwXVj" Name="Outputs" Kind="OutputPin" />
               </Patch>
-              <Patch Id="HQYOfeNCIekPWZXmegGUgt" Name="Dispose" ParticipatingElements="IYoTi0KShmBLayeZF2vWXz" />
+              <Patch Id="HQYOfeNCIekPWZXmegGUgt" Name="Dispose" ParticipatingElements="JRYmqcTj5mWM6jBOxdNXJJ" />
+              <Link Id="TOU5g5zC8kjM6HtPNjprRi" Ids="VVWQFz93Ed6L2GFe9H8hvH,PzFN7syNQW4O5qcU476hdA" />
+              <Link Id="HS8xRWKWfcXQR05zHHkG6Y" Ids="D2em0MSCEPJNMbUDWuwHgO,LswZr8HTPzcPJB1gmkqBw7" />
             </Patch>
           </Node>
         </Canvas>
@@ -2551,11 +2551,19 @@
                         </CategoryReference>
                       </p:NodeReference>
                       <ControlPoint Id="GvZhrxI78vtL8oEIIbj7rh" Bounds="356,328" Alignment="Top" />
+                      <Pin Id="H607dJmLYZrLZQ6VE60Y2K" Name="Context" Kind="InputPin" />
+                      <Pin Id="Kt1aFjcLJ5SPoUF74JkzoY" Name="Label" Kind="InputPin" />
+                      <Pin Id="GQyXLqrP6l5NjYKrnui4tA" Name="Column Count" Kind="InputPin" />
+                      <Pin Id="OaFlImFDFRgOGhGzZ3We3i" Name="Size" Kind="InputPin" />
+                      <Pin Id="KTv4APfk47tNQPTQG5eIZ9" Name="Inner Width" Kind="InputPin" />
+                      <Pin Id="NbPsgYHKkbSLw8wi1nuLih" Name="Style" Kind="InputPin" />
+                      <Pin Id="OYUazoQCXiGQdjkAWCYZK2" Name="Flags" Kind="InputPin" />
+                      <Pin Id="OrnoBKpICQPOQovPoa0zKh" Name="Context" Kind="OutputPin" />
                       <Patch Id="BAjw2W9fYy3PSe5IZvrXtp" ManuallySortedPins="true">
                         <Patch Id="MQbq1Ot6TGCNRi7L7gNgAY" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="GWiMhmMbiihQDqMPh9ParB" Name="Update" ManuallySortedPins="true" />
                         <Node Bounds="354,371,49,29" Id="CVrjsdAgapTLIQ66laAPIr">
-                          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll" LastDependency="VL.CoreLib.vl">
                             <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                             <FullNameCategoryReference ID="Primitive" />
                           </p:NodeReference>
@@ -2602,7 +2610,7 @@
                           </Patch>
                         </Node>
                         <Node Bounds="377,582,130,132" Id="M5swUkFWm4GPsKN0MvH9a8">
-                          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll" LastDependency="VL.CoreLib.vl">
                             <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                             <FullNameCategoryReference ID="Primitive" />
                           </p:NodeReference>
@@ -2636,14 +2644,6 @@
                           </Patch>
                         </Node>
                       </Patch>
-                      <Pin Id="H607dJmLYZrLZQ6VE60Y2K" Name="Context" Kind="InputPin" />
-                      <Pin Id="Kt1aFjcLJ5SPoUF74JkzoY" Name="Label" Kind="InputPin" />
-                      <Pin Id="GQyXLqrP6l5NjYKrnui4tA" Name="Column Count" Kind="InputPin" />
-                      <Pin Id="OaFlImFDFRgOGhGzZ3We3i" Name="Size" Kind="InputPin" />
-                      <Pin Id="KTv4APfk47tNQPTQG5eIZ9" Name="Inner Width" Kind="InputPin" />
-                      <Pin Id="NbPsgYHKkbSLw8wi1nuLih" Name="Style" Kind="InputPin" />
-                      <Pin Id="OYUazoQCXiGQdjkAWCYZK2" Name="Flags" Kind="InputPin" />
-                      <Pin Id="OrnoBKpICQPOQovPoa0zKh" Name="Context" Kind="OutputPin" />
                     </Node>
                   </Patch>
                 </Node>
@@ -2800,6 +2800,7 @@
                         <Choice Kind="OperationCallFlag" Name="Value" />
                       </p:NodeReference>
                       <Pin Id="QjffklvAaAWQBVci6Pv4TE" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="D4HD4icgCBIMWR04dpYlJZ" Name="Output" Kind="OutputPin" />
                       <Pin Id="Rd96MLzHfVdLSydjX5gnD6" Name="Value" Kind="OutputPin" />
                     </Node>
                   </Patch>
@@ -2934,6 +2935,7 @@
                         <Choice Kind="OperationCallFlag" Name="Value" />
                       </p:NodeReference>
                       <Pin Id="N4NMPflX71OLQptLgF7Yo8" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="UvL1hlEctATNnYq7GGfRye" Name="Output" Kind="OutputPin" />
                       <Pin Id="QSY4XveBTVqPnQIvUIeIr0" Name="Value" Kind="OutputPin" />
                     </Node>
                   </Patch>
@@ -3267,7 +3269,7 @@
                 <Pin Id="TSWiSeiJzQKPCG9TmhqwOz" Name="Output" Kind="OutputPin" />
               </Node>
               <Node Bounds="605,161,148,201" Id="GruAKyORxclLF4pTuyiyOz">
-                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="ApplicationRegion" Name="Delegate" />
                   <FullNameCategoryReference ID="Primitive" />
                 </p:NodeReference>
