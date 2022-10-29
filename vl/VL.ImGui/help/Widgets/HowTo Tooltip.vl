@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0263-df497fec92" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0293-8dae661881" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -360,13 +360,14 @@
                       <Node Bounds="381,769,66,19" Id="DY8dUqGW5F8PCIveMBf707">
                         <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.Skia.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                          <Choice Kind="ProcessNode" Name="SkiaWidget" />
                           <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
+                          <Choice Kind="ProcessAppFlag" Name="LayerWidget" />
                         </p:NodeReference>
                         <Pin Id="COvNpaTNG5aLT2RfgnMj5U" Name="Context" Kind="InputPin" />
                         <Pin Id="JYZSQK540k1PtsHO5auscX" Name="Layer" Kind="InputPin" />
                         <Pin Id="DPbBIaC7vlVNHZ5DPYELKY" Name="Size" Kind="InputPin" />
-                        <Pin Id="FoMu3rwHqGKMV8ItOn6Yly" Name="Space" Kind="InputPin" />
+                        <Pin Id="VOKjqUEuYnnO0u1W4N0uIY" Name="Clip" Kind="InputPin" />
+                        <Pin Id="C4mYdAuydFHL3nIzJCSvAh" Name="Show Helper" Kind="InputPin" />
                         <Pin Id="KFT910aO058ORWcyyYGNqQ" Name="Context" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="401,730,59,19" Id="Bw1RrWJmBSBMBoiAVAD1ot">

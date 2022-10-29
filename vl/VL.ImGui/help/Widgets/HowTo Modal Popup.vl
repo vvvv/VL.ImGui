@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0261-d97a44c3ea" Version="0.128">
+<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0293-8dae661881" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -253,6 +253,9 @@
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
+            <Pin Id="GxBC24vS73xP5oGNgjarHK" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="O3OY9fijTjZMns3hd4eqBz" Name="Use Skia Space" Kind="InputPin" />
+            <Pin Id="VhzAjRGcrzlPCmupzmZiOT" Name="Output" Kind="OutputPin" />
             <Patch Id="DKJi5H6kh5XNwMngClHHBr" ManuallySortedPins="true">
               <Patch Id="GLQfOpCjFJjMpcidB1kOlB" Name="Create" ManuallySortedPins="true" />
               <Patch Id="MqLCdlGEEBWQXAZcrD63aE" Name="Update" ParticipatingElements="GY6rst3pwnLM81kD2obFdp,CzS4vFfeq3qPVlyS1lfuPT,Bz0ukWlhzk5O7UtzwMDaKz,Bi8FQyDEYfWL9woxUCkA9C,Ine3c34s8O5NbOOrLKnwHZ,RirNBymtFLZLcQa3nuY3vH" ManuallySortedPins="true" />
@@ -312,15 +315,16 @@
                   <Patch Id="IWmXPlwFbJ1P1sMQMo90kt" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="PSw6JJWxRlOPqqsgSuUWkD" Name="Update" ParticipatingElements="Vh1dnoKLZJ1LcVHMAVjQdd,BtWiAiZaxAGLJubs7MoMmL" ManuallySortedPins="true" />
                   <Node Bounds="343,542,66,19" Id="SbGH523D5MiMOQ88Vtv2Wj">
-                    <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                    <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.Skia.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <Choice Kind="ProcessNode" Name="SkiaWidget" />
                       <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
+                      <Choice Kind="ProcessAppFlag" Name="LayerWidget" />
                     </p:NodeReference>
                     <Pin Id="IIMPuPGm8pXLJoMPwB1oKi" Name="Context" Kind="InputPin" />
                     <Pin Id="QpUCs6hpmZgO28VbWBB2Ku" Name="Layer" Kind="InputPin" />
                     <Pin Id="E4zF6ZmA5RGPeqAWSJ7yOm" Name="Size" Kind="InputPin" />
-                    <Pin Id="Pz0k0PJkzQSO53OKhM1y88" Name="Space" Kind="InputPin" />
+                    <Pin Id="M5uxTXqc2NmPwne0QBa20p" Name="Clip" Kind="InputPin" />
+                    <Pin Id="DPxlvRFUzjwLmHqC8dw7lI" Name="Show Helper" Kind="InputPin" />
                     <Pin Id="JCuGAzUJx9jNEo5yXXllWK" Name="Context" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="363,508,59,19" Id="Ugr3JQapOg3La0Kak1KRAH">
@@ -404,9 +408,6 @@
               </Pad>
               <Pad Id="KoKdwnzEXNcOpnveY2fUfC" Comment="Is Open" Bounds="491,713,35,35" ShowValueBox="true" isIOBox="true" />
             </Patch>
-            <Pin Id="GxBC24vS73xP5oGNgjarHK" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="O3OY9fijTjZMns3hd4eqBz" Name="Use Skia Space" Kind="InputPin" />
-            <Pin Id="VhzAjRGcrzlPCmupzmZiOT" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="IvY1venWyJZOpPHGv5Otqf" Bounds="189,100,347,64" ShowValueBox="true" isIOBox="true" Value="Modal Popups block normal mouse hovering detection (and therefore most mouse interactions) behind them. They can't be closed by clicking outside of them.">
             <p:TypeAnnotation>
