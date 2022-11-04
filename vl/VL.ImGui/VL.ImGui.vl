@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0293-9d05d04232" Version="0.128">
+<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0306-91ce546df3" Version="0.128">
   <Patch Id="FqV6a8uF6wBNEsSb65h9jq">
     <Canvas Id="CiUOvKtIpncPRBZwoQzisM" CanvasType="FullCategory">
       <Canvas Id="KTyfvxdYp7wLpquGu2GQq3" Name="ImGui" Position="183,154">
@@ -2345,11 +2345,12 @@
                       <Pin Id="KojrVnJ0WEmO32SHEqqKzS" Name="Initial Outputs" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="353,393,71,19" Id="V2MNIEGEoKCPQ6CH3nJNGP">
-                      <p:NodeReference LastCategoryFullName="VL.Core.CompilationHelper" LastSymbolSource="VL.Core.dll">
+                      <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastSymbolSource="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <Choice Kind="OperationCallFlag" Name="ShieldedDispose" />
+                        <Choice Kind="OperationCallFlag" Name="TryDispose (Instance)" />
                       </p:NodeReference>
-                      <Pin Id="PzFN7syNQW4O5qcU476hdA" Name="X" Kind="InputPin" />
+                      <Pin Id="PMHojeB3k7cQMdmFIcb3Te" Name="Input" Kind="InputPin" />
+                      <Pin Id="NyTq5oqt31aN47aeBM3zoF" Name="Success" Kind="OutputPin" />
                     </Node>
                   </Patch>
                 </Node>
@@ -2358,11 +2359,12 @@
                 <ControlPoint Id="QThVRfs32OkMeFISdISmQY" Bounds="584,507" />
                 <Pad Id="D2em0MSCEPJNMbUDWuwHgO" SlotId="BtDDrLxpduKPDs8v9jN6ro" Bounds="277,628" />
                 <Node Bounds="275,657,71,19" Id="JRYmqcTj5mWM6jBOxdNXJJ">
-                  <p:NodeReference LastCategoryFullName="VL.Core.CompilationHelper" LastSymbolSource="VL.Core.dll">
+                  <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastSymbolSource="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="OperationCallFlag" Name="ShieldedDispose" />
+                    <Choice Kind="OperationCallFlag" Name="TryDispose (Instance)" />
                   </p:NodeReference>
-                  <Pin Id="LswZr8HTPzcPJB1gmkqBw7" Name="X" Kind="InputPin" />
+                  <Pin Id="LokjVJ3UW3sLIROWzLxZrU" Name="Input" Kind="InputPin" />
+                  <Pin Id="So3dy7YWl2oPJOgxd621SF" Name="Success" Kind="OutputPin" />
                 </Node>
                 <Pad Id="S26c8lSJ86TNU2fErSlfEj" Bounds="696,372,325,306" ShowValueBox="true" isIOBox="true" Value="This is a general purpose way to instantiate/update and dispose of whatever the user patched inside a region. Think of this process as a simple lifetime manager of one instance of the users' patch inside the region.&#xD;&#xA;&#xD;&#xA;E.g. this process initializies all users' process nodes inside the region by calling CreateRegionPatch.&#xD;&#xA;&#xD;&#xA;If the user uses process nodes with white pins he might even end up with those being connected to the input border control points. &#xD;&#xA;&#xD;&#xA;We call CreateRegionPatch on Update once in the first frame - instead of on Create - so that we can feed the input border control point values. &#xD;&#xA;&#xD;&#xA;This way the user can actually make use of the border control points within &quot;Create&quot;.">
                   <p:TypeAnnotation>
@@ -2423,8 +2425,8 @@
                 <Pin Id="PxDuHnr2QJALMyTeKRwXVj" Name="Outputs" Kind="OutputPin" />
               </Patch>
               <Patch Id="HQYOfeNCIekPWZXmegGUgt" Name="Dispose" ParticipatingElements="JRYmqcTj5mWM6jBOxdNXJJ" />
-              <Link Id="TOU5g5zC8kjM6HtPNjprRi" Ids="VVWQFz93Ed6L2GFe9H8hvH,PzFN7syNQW4O5qcU476hdA" />
-              <Link Id="HS8xRWKWfcXQR05zHHkG6Y" Ids="D2em0MSCEPJNMbUDWuwHgO,LswZr8HTPzcPJB1gmkqBw7" />
+              <Link Id="NC2g7vP9n0xPKIKGhb2ol0" Ids="VVWQFz93Ed6L2GFe9H8hvH,PMHojeB3k7cQMdmFIcb3Te" />
+              <Link Id="IDMIYgKGY71NPvBJVEJzVX" Ids="D2em0MSCEPJNMbUDWuwHgO,LokjVJ3UW3sLIROWzLxZrU" />
             </Patch>
           </Node>
         </Canvas>
