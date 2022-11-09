@@ -57,10 +57,10 @@ namespace VL.ImGui.Windows
                 isOpen = ImGui.Begin(Name, Flags);
             }
 
-            IsOpenFlange.Value = isOpen;
-
             try
             {
+                IsOpenFlange.Value = isOpen;
+
                 if (isOpen)
                 {
                     context.Update(Content);
