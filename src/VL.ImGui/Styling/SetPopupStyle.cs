@@ -26,6 +26,11 @@ namespace VL.ImGui.Styling
         public Optional<Color4> Background { private get; set; }
 
         /// <summary>
+        /// Darken/colorize entire screen behind a modal window, when one is active
+        /// </summary>
+        public Optional<Color4> ModalDimBackground { private get; set; }
+
+        /// <summary>
         /// Radius of popup window corners rounding.
         /// </summary>
         public Optional<float> Rounding { private get; set; }
@@ -41,6 +46,11 @@ namespace VL.ImGui.Styling
             {
                 colorCount++;
                 ImGui.PushStyleColor(ImGuiCol.PopupBg, Background.Value.ToImGui());
+            }
+            if (ModalDimBackground.HasValue)
+            {
+                colorCount++;
+                ImGui.PushStyleColor(ImGuiCol.ModalWindowDimBg, ModalDimBackground.Value.ToImGui());
             }
             if (Rounding.HasValue)
             {
