@@ -32,14 +32,17 @@ namespace VL.ImGui.Widgets
 
         internal override void UpdateCore(Context context)
         {
-            var bounds = BoundsFlange.Update(Bounds);
+            var bounds = BoundsFlange.Update(Bounds, out bool boundsChanged);
             var isOpen = IsOpenFlange.Update(IsOpen, out bool hasChanged);
 
-            ImGui.SetNextWindowPos(bounds.TopLeft.FromHectoToImGui());
-            ImGui.SetNextWindowSize(bounds.Size.FromHectoToImGui());
+            if (boundsChanged)
+            {
+                ImGui.SetNextWindowPos(bounds.TopLeft.FromHectoToImGui());
+                ImGui.SetNextWindowSize(bounds.Size.FromHectoToImGui());
+            }
 
             if (isOpen && hasChanged && Label != null)
-                ImGui.OpenPopup(Label);
+                ImGui.OpenPopup(Label ?? string.Empty);
 
             isOpen = ImGui.BeginPopup(Label ?? string.Empty, Flags);
             IsOpenFlange.Value = isOpen;
