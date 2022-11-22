@@ -22,6 +22,14 @@ namespace VL.ImGui.Windows
         ChannelFlange<RectangleF> BoundsFlange = new ChannelFlange<RectangleF>(new RectangleF(0f, 0f, 1f, 1f));
 
         /// <summary>
+        /// Returns true if the Window is visible. Returns false if the close button is clicked.
+        /// </summary>
+        /// It is not a channel, because it can't be used to set visibility of the window.
+        /// https://github.com/ocornut/imgui/blob/5bb287494096461f90eb5d18135f7c4809efd2f5/imgui.h#L320
+        /// 
+        public bool isVisible { get; private set; } = false;
+
+        /// <summary>
         /// Returns true if the Window is open (not collapsed or clipped). Set to true to open the window.
         /// </summary>
         public Channel<bool>? IsOpen { private get; set; }
@@ -49,8 +57,9 @@ namespace VL.ImGui.Windows
 
             if (HasCloseButton)
             {
-                var closing = true;
-                isOpen = ImGui.Begin(Name, ref closing, Flags);
+                var visible = true;
+                isOpen = ImGui.Begin(Name, ref visible, Flags);
+                isVisible = visible; // close button might have been pressed
             }
             else
             {
