@@ -1,6 +1,7 @@
 ﻿using Stride.Core.Mathematics;
 using ImGuiNET;
 using VL.Lib.Reactive;
+using System.Reactive;
 
 namespace VL.ImGui.Windows
 {
@@ -13,21 +14,16 @@ namespace VL.ImGui.Windows
 
         public string Name { get; set; } = "Window";
 
-        public bool HasCloseButton { get; set; } = true;
+        /// <summary>
+        /// If set the window will have a close button which will push to the channel once clicked.
+        /// </summary>
+        public Channel<Unit> Closing { get; set; } = DummyChannel<Unit>.Instance;
 
         /// <summary>
         /// Bounds of the Window.
         /// </summary>
         public Channel<RectangleF>? Bounds { private get; set; }
         ChannelFlange<RectangleF> BoundsFlange = new ChannelFlange<RectangleF>(new RectangleF(0f, 0f, 1f, 1f));
-
-        /// <summary>
-        /// Returns true if the Window is visible. Returns false if the close button is clicked.
-        /// </summary>
-        /// It is not a channel, because it can't be used to set visibility of the window.
-        /// https://github.com/ocornut/imgui/blob/5bb287494096461f90eb5d18135f7c4809efd2f5/imgui.h#L320
-        /// 
-        public bool isVisible { get; private set; } = false;
 
         /// <summary>
         /// Returns true if the Window is open (not collapsed or clipped). Set to true to open the window.
@@ -55,11 +51,12 @@ namespace VL.ImGui.Windows
 
             ImGui.SetNextWindowCollapsed(!isOpen);
 
-            if (HasCloseButton)
+            if (Closing.IsValid())
             {
                 var visible = true;
                 isOpen = ImGui.Begin(Name, ref visible, Flags);
-                isVisible = visible; // close button might have been pressed
+                if (!visible)
+                    Closing.Value = default;
             }
             else
             {
