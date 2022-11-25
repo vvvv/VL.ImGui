@@ -1,32 +1,15 @@
-﻿using System.Reactive.Subjects;
-
-namespace VL.ImGui.Widgets
+﻿namespace VL.ImGui.Widgets
 {
     [GenerateNode(Category = "ImGui.Widgets.Experimental")]
-    internal partial class ObjectEditor : Widget
+    internal partial class ObjectEditor : ChannelWidget<object>
     {
-        object? _value;
-
-        public object? Value
-        {
-            get => ObservableValue.Value;
-            set
-            {
-                if (!Equals(value, _value))
-                {
-                    _value = value;
-                    ObservableValue.OnNext(value);
-                }
-            }
-        }
-
-        public BehaviorSubject<object?> ObservableValue { get; } = new BehaviorSubject<object?>(null);
+        public string? Label { private get; set; } = string.Empty;
 
         internal override void UpdateCore(Context context)
         {
-            var value = ObservableValue.Value;
-            if (ImGuiUtils.InputObject(string.Empty, ref value))
-                ObservableValue.OnNext(value);
+            var value = Update();
+            if (ImGuiUtils.InputObject(Label ?? string.Empty, ref value))
+                Value = value;
         }
     }
 }
