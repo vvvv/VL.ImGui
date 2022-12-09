@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="VE0gKHlEeg7NpX1K50ajs9" LanguageVersion="2022.5.0-0261-d97a44c3ea" Version="0.128">
+<Document xmlns:p="property" Id="VE0gKHlEeg7NpX1K50ajs9" LanguageVersion="2022.5.0-0406-6fdd6dd11c" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -19,7 +19,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1205, 204, 473, 316" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="899, 186, 472, 316" />
             <Pin Id="I4y2Yu3epUTO4TcD7zCPlg" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
@@ -307,7 +307,7 @@
             <Pin Id="IghSm2mkosFN4KfKc7cCX4" Name="Use Skia Space" Kind="InputPin" />
             <Pin Id="VhzAjRGcrzlPCmupzmZiOT" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="84,194,52,19" Id="MmvzfGdyUJPPdqXfPp8IKG">
+          <Node Bounds="69,194,52,19" Id="MmvzfGdyUJPPdqXfPp8IKG">
             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Dummy" />
@@ -317,7 +317,7 @@
             <Pin Id="EBF11BkxZGSLvou89fhrpN" Name="Size" Kind="InputPin" />
             <Pin Id="KLv9wXYyJbMPzehLogHVWV" Name="Context" Kind="OutputPin" />
           </Node>
-          <Node Bounds="84,294,80,80" Id="Mj3qH4xmeZeMGdxqtF1U4j">
+          <Node Bounds="69,294,80,80" Id="Mj3qH4xmeZeMGdxqtF1U4j">
             <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Table" />
@@ -335,7 +335,7 @@
             <Pin Id="A8Npig3NFluLUn7nY7y3nd" Name="Flags" Kind="InputPin" />
             <Pin Id="SRwSOde1NMPNU4u0xTLTW8" Name="Context" Kind="OutputPin" />
           </Node>
-          <Node Bounds="84,223,87,19" Id="U2lMLResTxAOvu7tIsLpz9">
+          <Node Bounds="69,223,87,19" Id="U2lMLResTxAOvu7tIsLpz9">
             <p:NodeReference LastCategoryFullName="ImGui.Styling" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="SetSpacingStyle" />
@@ -345,7 +345,7 @@
             <Pin Id="LJMzjAlukCgLJhE6LQrOcN" Name="Inner Spacing" Kind="InputPin" />
             <Pin Id="LcDAriOxt4oM3nCI8VRG7q" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="84,256,97,19" Id="BKvN45rVZGOOO85xCfOKCT">
+          <Node Bounds="69,256,97,19" Id="BKvN45rVZGOOO85xCfOKCT">
             <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="SetNextItemWidth" />
@@ -354,7 +354,16 @@
             <Pin Id="MD06tk1M0LeQY4YZA2DAuV" Name="Width" Kind="InputPin" />
             <Pin Id="NManB0wRtQDOPoQNdhd5rs" Name="Context" Kind="OutputPin" />
           </Node>
-          <Pad Id="HdlxVmXtsngOqrZZ725jnC" Bounds="72,169,155,19" ShowValueBox="true" isIOBox="true" Value="Also useful for Layoting:">
+          <Pad Id="HdlxVmXtsngOqrZZ725jnC" Bounds="57,169,155,19" ShowValueBox="true" isIOBox="true" Value="Also useful for Layoting:">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="HJDEH8Y9UVQN3PbRxWYVfu" Bounds="57,409,244,40" ShowValueBox="true" isIOBox="true" Value="See also:&#xD;&#xA;`HowTo Set Spacing Between Widgets`">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>

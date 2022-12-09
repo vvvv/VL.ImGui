@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="ABPEqb51Y9bOadCbSqdZrM" LanguageVersion="2022.5.0-0261-d97a44c3ea" Version="0.128">
+<Document xmlns:p="property" Id="ABPEqb51Y9bOadCbSqdZrM" LanguageVersion="2022.5.0-0406-6fdd6dd11c" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -14,7 +14,7 @@
       </p:NodeReference>
       <Patch Id="RxrvDdUu4cvOBXbi4KngKc">
         <Canvas Id="PuJjSWeZNf5OSPyulV1tEs" CanvasType="Group">
-          <Node Bounds="221,587,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
+          <Node Bounds="221,578,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
@@ -32,14 +32,14 @@
             <Pin Id="VtCD3TojbCZNIE3ICe23l6" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="Fi9FymljmNXQYNmU2h76Xz" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="261,172,351,378" Id="VQviOjn3HuxPNql0JZW8hb">
+          <Node Bounds="261,136,305,414" Id="VQviOjn3HuxPNql0JZW8hb">
             <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.Skia.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
             <Patch Id="TjXgOT8lc2RLNcNz1x97Yc" ManuallySortedPins="true">
               <Patch Id="HT3ARFV38RDPc41iCOomrp" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="A4Ctf8K6wgzNRKnjiveNaN" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="A4Ctf8K6wgzNRKnjiveNaN" Name="Update" ParticipatingElements="E4eERGy1rnrPHCnvDWuk5k,Sr179VxunYfOQrH6BaAJpn" ManuallySortedPins="true" />
               <Node Bounds="273,511,85,19" Id="D2r5nDGRUZ1N74krwgcWCq">
                 <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -112,8 +112,13 @@
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="PwDD6f3kPfhK9oeZhkrfq7" Comment="Size" Bounds="335,476,35,28" ShowValueBox="true" isIOBox="true" Value="3, 0.5">
-                <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="Stride.Core.Mathematics.dll">
+              <Pad Id="EJ7CSzXY7OrQRz7bEUuTmr" Comment="Padding" Bounds="433,164,35,28" ShowValueBox="true" isIOBox="true" Value="0.5, 0.1">
+                <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Vector2" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Pad Id="BXxl8AjhAbcOFRYCSqgSKB" Comment="Size" Bounds="335,476,35,28" ShowValueBox="true" isIOBox="true" Value="0, 0">
+                <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
               </Pad>
@@ -136,9 +141,10 @@
         <Link Id="FjYIEVrcH5qOQlPyleGWQe" Ids="QkfjIh7HyGwMecej71m0XB,C8Akza6qnHsN81fxFJH7L0" />
         <Link Id="UPsdgOhF4LbOkVEZVdNciX" Ids="Cpi4yAR4OmIMpmRHqe3lth,MHChlEH9VZWPA2luVrooHn" />
         <Link Id="CxPwXpgjv94PXZV49zQl8t" Ids="F7DbaQFhVwGM6FZXtA6NCt,BFdyHhGpVRcLxrTUggYDEo" />
-        <Link Id="EBKnLK7RBEjLhYB4Kxbkxl" Ids="PwDD6f3kPfhK9oeZhkrfq7,DvgcreWQftLNF7j7nxUjZT" />
         <Link Id="UJRe61fUu7QNlId0307RDl" Ids="AWvGEchXHBcP6i6UWFveXZ,D4xeQShhiEFPmFh2YvHBQG" />
         <Link Id="QNsWZEygf5aNG00wfk6KjQ" Ids="Tqs7P3Ak1h7Pu9WqXNaTnS,FEmprmZSMXGOZ6BLW3yl3J" />
+        <Link Id="E4eERGy1rnrPHCnvDWuk5k" Ids="EJ7CSzXY7OrQRz7bEUuTmr,E2C0gYTm1vUMI8ELyzwExv" />
+        <Link Id="Sr179VxunYfOQrH6BaAJpn" Ids="BXxl8AjhAbcOFRYCSqgSKB,DvgcreWQftLNF7j7nxUjZT" />
       </Patch>
     </Node>
   </Patch>

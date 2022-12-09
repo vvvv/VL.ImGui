@@ -9,7 +9,7 @@
 
         public float Offset { private get; set; }
 
-        public float Spacing { private get; set; }
+        public float Spacing { private get; set; } = -1f;
 
         internal override void UpdateCore(Context context)
         {
