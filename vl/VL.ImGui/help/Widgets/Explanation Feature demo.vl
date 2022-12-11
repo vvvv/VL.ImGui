@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0261-d97a44c3ea" Version="0.128">
+<Document xmlns:p="property" Id="GQQFKy5QFmuMChs5wf2z17" LanguageVersion="2022.5.0-0406-6fdd6dd11c" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -53,6 +53,7 @@
               </Node>
             </Patch>
             <Pin Id="I8yF32KOvPzP05a8sov7L1" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="U8NJbwJCEi8QF5dQCqk57e" Name="Add Fullscreen Window" Kind="InputPin" DefaultValue="False" />
             <Pin Id="KzKlxzSIBUyMxmxAk0g1er" Name="Use Skia Space" Kind="InputPin" />
             <Pin Id="QNpmDNb4yrCMapgFbJOU5O" Name="Output" Kind="OutputPin" />
           </Node>
