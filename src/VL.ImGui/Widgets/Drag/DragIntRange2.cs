@@ -22,7 +22,7 @@ namespace VL.ImGui.Widgets
             var value = Update();
 
             value.Split(out int from, out int to);
-            if (ImGuiNET.ImGui.DragIntRange2(Label ?? string.Empty, ref from, ref to, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
+            if (ImGuiNET.ImGui.DragIntRange2(Context.GetLabel(this, Label), ref from, ref to, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
                 Value = new Range<int>(from, to);
         }
     }

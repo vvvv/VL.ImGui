@@ -50,11 +50,11 @@ namespace VL.ImGui.Widgets
 
             if (HasCloseButton || flags != ImGuiNET.ImGuiTabItemFlags.None)
             {
-                isActive = ImGuiNET.ImGui.BeginTabItem(Label ?? string.Empty, ref isVisible, flags);
+                isActive = ImGuiNET.ImGui.BeginTabItem(Context.GetLabel(this, Label), ref isVisible, flags);
                 IsVisibleFlange.Value = isVisible; // close button might have been pressed
             }
             else
-                isActive = ImGuiNET.ImGui.BeginTabItem(Label ?? string.Empty);
+                isActive = ImGuiNET.ImGui.BeginTabItem(Context.GetLabel(this, Label));
 
             IsActiveFlange.Value = isActive;
 

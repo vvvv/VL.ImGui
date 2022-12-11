@@ -35,7 +35,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
 
-            IsOpen = ImGui.BeginChild(Label ?? string.Empty, Size.FromHectoToImGui(), HasBorder, Flags);
+            IsOpen = ImGui.BeginChild(Context.GetLabel(this, Label), Size.FromHectoToImGui(), HasBorder, Flags);
             
             try
             {

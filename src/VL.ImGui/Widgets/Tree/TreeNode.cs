@@ -27,7 +27,7 @@ namespace VL.ImGui.Widgets
 
             ImGuiNET.ImGui.SetNextItemOpen(isOpen);
 
-            isOpen = ImGuiNET.ImGui.TreeNodeEx(Label ?? string.Empty, Flags);
+            isOpen = ImGuiNET.ImGui.TreeNodeEx(Context.GetLabel(this, Label), Flags);
 
             IsOpenFlange.Value = isOpen;
 

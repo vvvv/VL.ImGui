@@ -18,7 +18,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var value = Update().ToImGui();
-            if (ImGuiNET.ImGui.InputFloat3(Label ?? string.Empty, ref value, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
+            if (ImGuiNET.ImGui.InputFloat3(Context.GetLabel(this, Label), ref value, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
                 Value = value.ToVL();
         }
     }

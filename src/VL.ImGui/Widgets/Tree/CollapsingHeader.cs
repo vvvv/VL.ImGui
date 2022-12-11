@@ -45,11 +45,11 @@ namespace VL.ImGui.Widgets
 
             if (HasCloseButton)
             {
-                isOpen = ImGuiNET.ImGui.CollapsingHeader(Label ?? string.Empty, ref isVisible, Flags);
+                isOpen = ImGuiNET.ImGui.CollapsingHeader(Context.GetLabel(this, Label), ref isVisible, Flags);
                 IsVisibleFlange.Value = isVisible; // close button might have been pressed
             }
             else
-                isOpen = ImGuiNET.ImGui.CollapsingHeader(Label ?? string.Empty, Flags);
+                isOpen = ImGuiNET.ImGui.CollapsingHeader(Context.GetLabel(this, Label), Flags);
 
             IsOpenFlange.Value = isOpen;
 

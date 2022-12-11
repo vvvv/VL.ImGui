@@ -15,7 +15,7 @@ namespace VL.ImGui.Widgets
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.ShowStyleSelector(Label ?? string.Empty);
+            ImGuiNET.ImGui.ShowStyleSelector(Context.GetLabel(this, Label));
         }
     }
 }

@@ -112,10 +112,11 @@ namespace VL.ImGui
                         ImGui.SetNextWindowPos(viewPort.WorkPos);
                         ImGui.SetNextWindowSize(viewPort.WorkSize);
 
-                        ImGui.Begin("Default ImGui Window", ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoResize | 
-                                                            ImGuiWindowFlags.NoBringToFrontOnFocus | ImGuiWindowFlags.NoNavFocus | 
-                                                            ImGuiWindowFlags.NoFocusOnAppearing | ImGuiWindowFlags.NoDecoration | 
-                                                            ImGuiWindowFlags.NoBackground);
+                        ImGui.Begin(Context.GetLabel(this, null), 
+                            ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoResize | 
+                            ImGuiWindowFlags.NoBringToFrontOnFocus | ImGuiWindowFlags.NoNavFocus | 
+                            ImGuiWindowFlags.NoFocusOnAppearing | ImGuiWindowFlags.NoDecoration | 
+                            ImGuiWindowFlags.NoBackground);
                     }
 
                     _context.SetDrawList(DrawList.Foreground);

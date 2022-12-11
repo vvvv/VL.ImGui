@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using VL.ImGui.Widgets;
 using VL.ImGui.Widgets.Primitives;
+using VL.Model;
 
 namespace VL.ImGui
 {
@@ -16,6 +18,12 @@ namespace VL.ImGui
 
     public class Context : IDisposable
     {
+        [ThreadStatic]
+        public static int WidgetCreationCounter;
+
+        [ThreadStatic]
+        static Dictionary<object, string> Labels = new Dictionary<object, string>();
+
         private readonly IntPtr _context;
         private readonly List<Widget> _widgetsToReset = new List<Widget>();
 
@@ -88,6 +96,19 @@ namespace VL.ImGui
         public void Dispose()
         {
             ImGui.DestroyContext(_context);
+        }
+
+        internal static string GetLabel(object widget, string? label)
+        {
+            if (!label.IsNullOrWhitespace())
+                return label;
+
+            if (Labels.TryGetValue(widget, out label))
+                return label;
+
+            label = $"##__<{++WidgetCreationCounter}>";
+            Labels.Add(widget, label);
+            return label;
         }
 
         public readonly struct Frame : IDisposable

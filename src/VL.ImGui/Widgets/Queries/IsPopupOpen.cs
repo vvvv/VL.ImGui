@@ -14,7 +14,7 @@
 
         internal override void UpdateCore(Context context)
         {
-            Value = ImGuiNET.ImGui.IsPopupOpen(Label ?? string.Empty, Flags);
+            Value = ImGuiNET.ImGui.IsPopupOpen(Context.GetLabel(this, Label), Flags);
         }
     }
 }

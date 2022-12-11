@@ -16,7 +16,7 @@
         internal override void UpdateCore(Context context)
         {
 
-            if (ImGuiNET.ImGui.BeginMenu(Label ?? string.Empty, Enabled))
+            if (ImGuiNET.ImGui.BeginMenu(Context.GetLabel(this, Label), Enabled))
             {
                 try
                 {

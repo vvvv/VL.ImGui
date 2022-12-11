@@ -17,7 +17,7 @@ namespace VL.ImGui.Widgets
         internal override void UpdateCore(Context context)
         {
             var value = Update() ?? string.Empty;
-            if (ImGuiNET.ImGui.InputTextMultiline(Label ?? string.Empty, ref value, (uint)MaxLength, Size.FromHectoToImGui(), Flags))
+            if (ImGuiNET.ImGui.InputTextMultiline(Context.GetLabel(this, Label), ref value, (uint)MaxLength, Size.FromHectoToImGui(), Flags))
                 Value = value;
         }
     }

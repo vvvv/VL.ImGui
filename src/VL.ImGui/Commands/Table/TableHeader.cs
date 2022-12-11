@@ -11,7 +11,7 @@
 
         internal override void UpdateCore(Context context)
         {
-            ImGuiNET.ImGui.TableHeader(Label ?? string.Empty);
+            ImGuiNET.ImGui.TableHeader(Context.GetLabel(this, Label));
         }
     }
 }

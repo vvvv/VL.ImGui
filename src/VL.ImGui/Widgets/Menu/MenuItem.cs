@@ -16,7 +16,7 @@
         internal override void UpdateCore(Context context)
         {
             var value = Update();
-            if (ImGuiNET.ImGui.MenuItem(Label ?? string.Empty, Shortcut, ref value, Enabled))
+            if (ImGuiNET.ImGui.MenuItem(Context.GetLabel(this, Label), Shortcut, ref value, Enabled))
                 Value = value;
         }
     }

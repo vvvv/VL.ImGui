@@ -11,7 +11,7 @@
 
         internal override void UpdateCore(Context context)
         {
-            if (ImGuiNET.ImGui.BeginTabBar(Label ?? string.Empty, Flags))
+            if (ImGuiNET.ImGui.BeginTabBar(Context.GetLabel(this, Label), Flags))
             {
                 try
                 {

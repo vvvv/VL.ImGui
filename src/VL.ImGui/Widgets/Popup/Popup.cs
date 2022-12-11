@@ -42,9 +42,9 @@ namespace VL.ImGui.Widgets
             }
 
             if (isOpen && hasChanged && Label != null)
-                ImGui.OpenPopup(Label ?? string.Empty);
+                ImGui.OpenPopup(Context.GetLabel(this, Label));
 
-            isOpen = ImGui.BeginPopup(Label ?? string.Empty, Flags);
+            isOpen = ImGui.BeginPopup(Context.GetLabel(this, Label), Flags);
             IsOpenFlange.Value = isOpen;
 
             if (isOpen)

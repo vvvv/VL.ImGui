@@ -23,7 +23,7 @@ namespace VL.ImGui.Widgets
             var value = Update();
 
             ref var x = ref value.X;
-            if (ImGuiNET.ImGui.DragInt4(Label ?? string.Empty, ref x, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
+            if (ImGuiNET.ImGui.DragInt4(Context.GetLabel(this, Label), ref x, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
                 Value = Unsafe.As<int, Int4>(ref x);
         }
     }

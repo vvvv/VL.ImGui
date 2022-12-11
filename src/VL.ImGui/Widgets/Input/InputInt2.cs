@@ -20,7 +20,7 @@ namespace VL.ImGui.Widgets
             var value = Update();
 
             ref var x = ref value.X;
-            if (ImGuiNET.ImGui.InputInt2(Label ?? string.Empty, ref x, Flags))
+            if (ImGuiNET.ImGui.InputInt2(Context.GetLabel(this, Label), ref x, Flags))
                 Value = Unsafe.As<int, Int2>(ref x);
         }
     }

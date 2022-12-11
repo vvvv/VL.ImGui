@@ -10,7 +10,7 @@
         internal override void UpdateCore(Context context)
         {
             var value = Update();
-            if (ImGuiNET.ImGui.RadioButton(Label ?? string.Empty, ref value, Index))
+            if (ImGuiNET.ImGui.RadioButton(Context.GetLabel(this, Label), ref value, Index))
                 Value = value;
         }
     }

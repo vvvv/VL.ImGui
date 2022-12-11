@@ -51,7 +51,7 @@ namespace VL.ImGui.Widgets
             }
 
             if (isOpen && hasChanged && Label != null)
-                ImGui.OpenPopup(Label ?? string.Empty);
+                ImGui.OpenPopup(Context.GetLabel(this, Label));
 
 
             if (HasCloseButton)
@@ -63,11 +63,11 @@ namespace VL.ImGui.Widgets
                 /// https://github.com/ocornut/imgui/blob/2d38bc99b3b0013952d3d390397297083b767972/imgui_demo.cpp
                 
                 var unusedOpen = true;
-                isOpen = ImGui.BeginPopupModal(Label ?? string.Empty, ref unusedOpen, Flags);
+                isOpen = ImGui.BeginPopupModal(Context.GetLabel(this, Label), ref unusedOpen, Flags);
             }
             else
             {
-                isOpen = ImGui.BeginPopupModal(Label ?? string.Empty);
+                isOpen = ImGui.BeginPopupModal(Context.GetLabel(this, Label));
             }
 
             IsOpenFlange.Value = isOpen;
