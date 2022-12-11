@@ -10,6 +10,7 @@ using Stride.Core.Mathematics;
 using MouseButtons = VL.Lib.IO.MouseButtons;
 using Keys = VL.Lib.IO.Keys;
 using System.Buffers;
+using System.Runtime.CompilerServices;
 
 namespace VL.ImGui
 {
@@ -188,15 +189,22 @@ namespace VL.ImGui
             }
         }
 
+        [ThreadStatic]
+        static ImGuiStyle? original;
+
         static unsafe void UpdateUIScaling(float scaling = 1f)
         {
             var style = ImGui.GetStyle();
-            style.ScaleAllSizes(scaling);
 
-            // From https://github.com/ocornut/imgui/discussions/3925
-            //ImGuiStyle* p = style;
-            //ImGuiStyle styleold = *p; // Backup colors
-            //var style = new ImGuiStyle(); // IMPORTANT: ScaleAllSizes will change the original size, so we should reset all style config
+            if (original is null)
+            {
+                original = *style.NativePtr;
+            }
+
+            var originalStyle = original.Value;
+            Unsafe.Copy(style, ref originalStyle);
+
+            //// From https://github.com/ocornut/imgui/discussions/3925
             //style.WindowBorderSize = 1.0f;
             //style.ChildBorderSize = 1.0f;
             //style.PopupBorderSize = 1.0f;
@@ -209,7 +217,8 @@ namespace VL.ImGui
             //style.ScrollbarRounding = 0.0f;
             //style.GrabRounding = 0.0f;
             //style.TabRounding = 0.0f;
-            //style.ScaleAllSizes(scale);
+
+            style.ScaleAllSizes(scaling);
         }
 
         // From https://github.com/google/skia/blob/main/tools/viewer/ImGuiLayer.cpp
