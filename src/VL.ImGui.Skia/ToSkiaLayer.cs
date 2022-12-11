@@ -58,14 +58,14 @@ namespace VL.ImGui
             {
                 _io = ImGui.GetIO();
                 _io.NativePtr->IniFilename = null;
+
+                _renderContext = RenderContext.ForCurrentThread();
+
+                _fontPaint = new Handle<SKPaint>(new SKPaint());
+
+                var scaling = VL.UI.Core.DIPHelpers.DIPFactor();
+                updateScaling(fontScaling: scaling, uiScaling: scaling);
             }
-
-            _renderContext = RenderContext.ForCurrentThread();
-
-            _fontPaint = new Handle<SKPaint>(new SKPaint());
-
-            var scaling = VL.UI.Core.DIPHelpers.DIPFactor(); 
-            updateScaling(fontScaling: scaling, uiScaling: scaling); 
         }
 
         public ILayer Update(Widget widget, bool dockingEnabled)
