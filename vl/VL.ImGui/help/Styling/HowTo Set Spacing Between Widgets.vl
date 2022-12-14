@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="TjDhKq6SbhHN3bx2vqrIEH" LanguageVersion="2022.5.0-0406-6fdd6dd11c" Version="0.128">
+<Document xmlns:p="property" Id="TjDhKq6SbhHN3bx2vqrIEH" LanguageVersion="2022.5.0-0415-9f84c137b4" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -14,7 +14,7 @@
       </p:NodeReference>
       <Patch Id="RxrvDdUu4cvOBXbi4KngKc">
         <Canvas Id="PuJjSWeZNf5OSPyulV1tEs" CanvasType="Group">
-          <Node Bounds="68,950,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
+          <Node Bounds="68,995,165,19" Id="FMXgMbAgSJqPjBIGChZQvH">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
@@ -32,14 +32,11 @@
             <Pin Id="VtCD3TojbCZNIE3ICe23l6" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="Fi9FymljmNXQYNmU2h76Xz" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="108,210,680,701" Id="LCPnwXHNcVWO6IRBPf5RED">
+          <Node Bounds="108,210,680,746" Id="LCPnwXHNcVWO6IRBPf5RED">
             <p:NodeReference LastCategoryFullName="Graphics.Skia.Layer" LastSymbolSource="VL.ImGui.Skia.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
-            <Pin Id="Mz2BF4OVqK8MNOy26J0W5v" Name="Docking Enabled" Kind="InputPin" />
-            <Pin Id="OzBGGREtl70MbaKGnb98lR" Name="Use Skia Space" Kind="InputPin" />
-            <Pin Id="OsJrjAUglZgQK3JlLpgP0M" Name="Output" Kind="OutputPin" />
             <Patch Id="II3XpwfZsTcNKAM0Shzz91" ManuallySortedPins="true">
               <Patch Id="ODPP6ACPw9fNnAbF7Sah3g" Name="Create" ManuallySortedPins="true" />
               <Patch Id="IFqnBhcZ6X7L332CXt9u2u" Name="Update" ParticipatingElements="PQi6pS4IhnPOZ3fCkjsNU1,JWZl6oP1pNxPPhaO9XL3Xj,PDlkIQ1pqKsPcCFcWm0E41,AFduz2ncMSqNzzxgYEfGHU,U3OkyTdsLCMO1SWL9bMz8t,A3378SC76kgOuagYJPzw6Z,C7OXUJEIuRKNRtewNNXeSG,CSQkDq7Hwz5MjqAJeln5O1,BVwIU0WUZfmMLallF3pqY2,TduB5thn7WKPs48MRASN7w,HPADjGUu0AoLkMCwOBrtt1,Rawiwon6biEMPHyHUP47Aj,A4oql3A8e7ELcqaU48bQ9L,EvLIANvh9toPOyodvacJOY" ManuallySortedPins="true" />
@@ -109,7 +106,7 @@
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pad>
-              <Node Bounds="183,556,385,335" Id="IXsIz3GAkKJNR09bojoDvP">
+              <Node Bounds="183,556,385,380" Id="IXsIz3GAkKJNR09bojoDvP">
                 <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl" LastDependency="VL.ImGui.Skia.vl">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="ChildWindow" />
@@ -124,8 +121,8 @@
                 <Pin Id="GtwLRROvjbwL2ZfAszdC2F" Name="Is Open" Kind="OutputPin" />
                 <Patch Id="F3as5nIdJ6jLLAZCM0IaPR" ManuallySortedPins="true">
                   <Patch Id="ThSCgm79dPvMFefUT19M4y" Name="Create" ManuallySortedPins="true" />
-                  <Patch Id="KgTBtzhotBrPNZawOxf8ta" Name="Update" ParticipatingElements="B9hnQiRlHUnPt6vKWMLGCp,FdLQSLEz4bTLykXPcwpRCh,ID2OQx7RStTOCPxRUSCpqw,BpV5o89RMkdQSbT0Knyaj0,JtiCEcUlb2vPXMeJVJcVA1,QjlcpGxdY2lNDD6l2t7xlp,VckcRQbpPJ5LssjoVUmteN,DrPIuTYZv8kL5rzEt0bT6E,ExX8G5FuGcrOxo3flpGzem" ManuallySortedPins="true" />
-                  <Node Bounds="195,705,85,19" Id="LQm2jwrkFHuO3YdHxN2BwR">
+                  <Patch Id="KgTBtzhotBrPNZawOxf8ta" Name="Update" ParticipatingElements="B9hnQiRlHUnPt6vKWMLGCp,FdLQSLEz4bTLykXPcwpRCh,ID2OQx7RStTOCPxRUSCpqw,BpV5o89RMkdQSbT0Knyaj0,JtiCEcUlb2vPXMeJVJcVA1,QjlcpGxdY2lNDD6l2t7xlp,VckcRQbpPJ5LssjoVUmteN,DrPIuTYZv8kL5rzEt0bT6E,ExX8G5FuGcrOxo3flpGzem,VNWMTPKHQ0nM9e5CZLNYrT" ManuallySortedPins="true" />
+                  <Node Bounds="195,750,85,19" Id="LQm2jwrkFHuO3YdHxN2BwR">
                     <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.Skia.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
@@ -139,7 +136,7 @@
                     <Pin Id="R7yrBdX750OOahRXA6sOJ0" Name="Context" Kind="OutputPin" />
                     <Pin Id="JZwC4RAxJcAQD1FtVGi7ar" Name="Bang" Kind="OutputPin" />
                   </Node>
-                  <Node Bounds="289,705,59,19" Id="TIIjYK8lWhcLpy8APGdkUV">
+                  <Node Bounds="289,750,59,19" Id="TIIjYK8lWhcLpy8APGdkUV">
                     <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.Skia.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessNode" Name="SameLine" />
@@ -149,7 +146,7 @@
                     <Pin Id="U38xKoHrXYFN8AhUjsUus0" Name="Spacing" Kind="InputPin" />
                     <Pin Id="GdJk3upO8ZpLNeovM3MA2B" Name="Context" Kind="OutputPin" />
                   </Node>
-                  <Node Bounds="363,704,85,19" Id="ERivKeA7lJbPvX2jZHqmS0">
+                  <Node Bounds="363,749,85,19" Id="ERivKeA7lJbPvX2jZHqmS0">
                     <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.Skia.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
@@ -163,7 +160,7 @@
                     <Pin Id="Qqv0YRjwuc2LWxLGrbhm6G" Name="Context" Kind="OutputPin" />
                     <Pin Id="G96uYYMdalXOzQiFUmDbA3" Name="Bang" Kind="OutputPin" />
                   </Node>
-                  <Node Bounds="195,791,85,19" Id="G0rZkTd6TUKOv7WxOWWqFZ">
+                  <Node Bounds="195,836,85,19" Id="G0rZkTd6TUKOv7WxOWWqFZ">
                     <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.Skia.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
@@ -177,7 +174,7 @@
                     <Pin Id="UXoCKyPltSwOMua1UNtv2Y" Name="Context" Kind="OutputPin" />
                     <Pin Id="HMKpL9pSAfeQFULPecwdrI" Name="Bang" Kind="OutputPin" />
                   </Node>
-                  <Node Bounds="195,852,145,19" Id="Er5i4G9Yt2qNqMLt8MNEE3">
+                  <Node Bounds="195,897,145,19" Id="Er5i4G9Yt2qNqMLt8MNEE3">
                     <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" LastDependency="VL.ImGui.Skia.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
@@ -195,22 +192,22 @@
                     <Pin Id="Odh4Wv0YqCIL3PQz5NFX59" Name="Bang" Kind="OutputPin" />
                     <Pin Id="F0mBmFA5BPIObFDZKvCiS6" Name="Value" Kind="OutputPin" />
                   </Node>
-                  <Pad Id="Rv3BrlVmNyxQV2QugcwtmD" Comment="Label" Bounds="237,673,44,15" ShowValueBox="true" isIOBox="true" Value="Button1">
+                  <Pad Id="Rv3BrlVmNyxQV2QugcwtmD" Comment="Label" Bounds="237,718,44,15" ShowValueBox="true" isIOBox="true" Value="Button1">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="TypeFlag" Name="String" />
                     </p:TypeAnnotation>
                   </Pad>
-                  <Pad Id="K4ViYWx7Xm9MbvJ355fbz4" Comment="Label" Bounds="405,676,49,15" ShowValueBox="true" isIOBox="true" Value="Button2">
+                  <Pad Id="K4ViYWx7Xm9MbvJ355fbz4" Comment="Label" Bounds="405,721,49,15" ShowValueBox="true" isIOBox="true" Value="Button2">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="TypeFlag" Name="String" />
                     </p:TypeAnnotation>
                   </Pad>
-                  <Pad Id="PXmGeRIVJUQOh5LsHHPO9L" Comment="Label" Bounds="237,764,49,15" ShowValueBox="true" isIOBox="true" Value="Button3">
+                  <Pad Id="PXmGeRIVJUQOh5LsHHPO9L" Comment="Label" Bounds="237,809,49,15" ShowValueBox="true" isIOBox="true" Value="Button3">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="TypeFlag" Name="String" />
                     </p:TypeAnnotation>
                   </Pad>
-                  <Pad Id="R02sm45KPulOV6YNb27KUR" Comment="Label" Bounds="237,835,35,15" ShowValueBox="true" isIOBox="true" Value="Slider">
+                  <Pad Id="R02sm45KPulOV6YNb27KUR" Comment="Label" Bounds="237,880,35,15" ShowValueBox="true" isIOBox="true" Value="Slider">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="TypeFlag" Name="String" />
                     </p:TypeAnnotation>
@@ -228,6 +225,11 @@
                   <Pad Id="CGX60pQqytILC7BQCV9Cg4" Comment="Text" Bounds="218,584,295,36" ShowValueBox="true" isIOBox="true" Value="To set spacing between several Widgets at once, pack them into a ChildWindow (eg.) and use the `SetSpacingStyle`.">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="TypeFlag" Name="String" />
+                    </p:TypeAnnotation>
+                  </Pad>
+                  <Pad Id="GVdmxrginHlM0bre9LwEMo" Comment="Spacing" Bounds="344,649,35,15" ShowValueBox="true" isIOBox="true" Value="-1">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
                     </p:TypeAnnotation>
                   </Pad>
                 </Patch>
@@ -281,9 +283,22 @@
                   <Choice Kind="TypeFlag" Name="Vector2" />
                 </p:TypeAnnotation>
               </Pad>
+              <Pad Id="T7IJahMisISOGmsXNbeVOt" Bounds="434,646,210,52" ShowValueBox="true" isIOBox="true" Value="&lt; `-1` is default, it means: use spacing defined upstream.">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:fontsize p:Type="Int32">9</p:fontsize>
+                  <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                </p:ValueBoxSettings>
+              </Pad>
             </Patch>
+            <Pin Id="Mz2BF4OVqK8MNOy26J0W5v" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="BhtG7gPiXmcMXcU7tcqiUW" Name="Add Fullscreen Window" Kind="InputPin" />
+            <Pin Id="OzBGGREtl70MbaKGnb98lR" Name="Use Skia Space" Kind="InputPin" />
+            <Pin Id="OsJrjAUglZgQK3JlLpgP0M" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="TSawWoy3roHMZGnKPD4xSi" Bounds="103,75,404,91" ShowValueBox="true" isIOBox="true" Value="Use 'Spacing' pin of the 'SameLine'.&#xD;&#xA;Or apply `SetSpacingStyle` to a region.">
+          <Pad Id="TSawWoy3roHMZGnKPD4xSi" Bounds="103,75,429,72" ShowValueBox="true" isIOBox="true" Value="Use 'Spacing' pin of the 'SameLine' node.&#xD;&#xA;Or apply `SetSpacingStyle` to a region.">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -324,6 +339,7 @@
         <Link Id="Rawiwon6biEMPHyHUP47Aj" Ids="V4OzIw8LQM3Pf0YugklRnU,FjJwALLwlggMuMsQY1FFvX" />
         <Link Id="A4oql3A8e7ELcqaU48bQ9L" Ids="NIi5aOoheARNYf03P6t4hs,LSTI397v0hjLiASY6lVwo4" />
         <Link Id="EvLIANvh9toPOyodvacJOY" Ids="FXub2Kv78OcODJRzXTFVck,IOVzrCkLzW5Mu5jF3C2AL4" />
+        <Link Id="VNWMTPKHQ0nM9e5CZLNYrT" Ids="GVdmxrginHlM0bre9LwEMo,U38xKoHrXYFN8AhUjsUus0" />
       </Patch>
     </Node>
   </Patch>
