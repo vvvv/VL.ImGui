@@ -119,12 +119,23 @@ namespace VL.ImGui
                             ImGuiWindowFlags.NoBackground);
                     }
 
+                    // Enable Docking
+                    if (DockingEnabled)
+                    {
+                        ImGui.DockSpaceOverViewport(); 
+                    }
+
                     _context.SetDrawList(DrawList.Foreground);
                     // ImGui.ShowDemoWindow();
                     _context.Update(_widget);
                 }
                 finally
                 {
+                    if (DockingEnabled)
+                    {
+                        ImGui.End();
+                    }
+
                     if (DefaultWindow)
                     {
                         ImGui.End();
