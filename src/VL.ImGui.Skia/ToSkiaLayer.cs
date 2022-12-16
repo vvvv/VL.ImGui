@@ -40,8 +40,6 @@ namespace VL.ImGui
 
         readonly ImGuiIOPtr _io;
 
-        Widget? _widget;
-        private bool DockingEnabled = false;
         public bool DefaultWindow = true;
 
         // OpenGLES rendering (https://github.com/dotnet/Silk.NET/tree/v2.15.0/src/OpenGL/Extensions/Silk.NET.OpenGL.Extensions.ImGui)
@@ -50,6 +48,10 @@ namespace VL.ImGui
         private readonly Handle<SKPaint> _fontPaint;
         float _fontScaling;
         float _uiScaling;
+
+        CallerInfo _lastCallerInfo;
+        ImDrawDataPtr _drawDataPtr;
+        bool _readyToBeDrawn;
 
         public unsafe ToSkiaLayer()
         {
@@ -70,8 +72,66 @@ namespace VL.ImGui
 
         public ILayer Update(Widget widget, bool dockingEnabled)
         {
-            DockingEnabled = dockingEnabled;
-            _widget = widget;
+            if (_lastCallerInfo is null)
+                return this;
+
+            using (_context.MakeCurrent())
+            {
+                var bounds = _lastCallerInfo.ViewportBounds;
+
+                _io.DisplaySize = new Vector2(bounds.Width, bounds.Height);
+
+                // Enable Docking
+                if (dockingEnabled)
+                    _io.ConfigFlags |= ImGuiConfigFlags.DockingEnable;
+
+                _context.NewFrame();
+                try
+                {
+                    if (DefaultWindow)
+                    {
+                        var viewPort = ImGui.GetMainViewport();
+                        ImGui.SetNextWindowPos(viewPort.WorkPos);
+                        ImGui.SetNextWindowSize(viewPort.WorkSize);
+
+                        ImGui.Begin(Context.GetLabel(this, null),
+                            ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoResize |
+                            ImGuiWindowFlags.NoBringToFrontOnFocus | ImGuiWindowFlags.NoNavFocus |
+                            ImGuiWindowFlags.NoFocusOnAppearing | ImGuiWindowFlags.NoDecoration |
+                            ImGuiWindowFlags.NoBackground);
+                    }
+
+                    // Enable Docking
+                    if (dockingEnabled)
+                    {
+                        ImGui.DockSpaceOverViewport();
+                    }
+
+                    _context.SetDrawList(DrawList.Foreground);
+                    // ImGui.ShowDemoWindow();
+                    _context.Update(widget);
+                }
+                finally
+                {
+                    if (dockingEnabled)
+                    {
+                        ImGui.End();
+                    }
+
+                    if (DefaultWindow)
+                    {
+                        ImGui.End();
+                    }
+
+                    // Render (builds mesh with texture coordinates)
+                    ImGui.Render();
+                }
+
+                // Render the mesh
+                _drawDataPtr = ImGui.GetDrawData();
+                _readyToBeDrawn = true;
+            }
+
             return this;
         }
 
@@ -92,63 +152,15 @@ namespace VL.ImGui
         public unsafe void Render(CallerInfo caller)
         {
             if (caller.IsTooltip)
-                return;
-
-            using (_context.MakeCurrent())
             {
-                var bounds = caller.ViewportBounds;
-                _io.DisplaySize = new Vector2(bounds.Width, bounds.Height);
-
-                // Enable Docking
-                if (DockingEnabled)
-                    _io.ConfigFlags |= ImGuiConfigFlags.DockingEnable;
-
-                _context.NewFrame();
-                try
-                {
-                    if (DefaultWindow)
-                    {
-                        var viewPort = ImGui.GetMainViewport();
-                        ImGui.SetNextWindowPos(viewPort.WorkPos);
-                        ImGui.SetNextWindowSize(viewPort.WorkSize);
-
-                        ImGui.Begin(Context.GetLabel(this, null), 
-                            ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoResize | 
-                            ImGuiWindowFlags.NoBringToFrontOnFocus | ImGuiWindowFlags.NoNavFocus | 
-                            ImGuiWindowFlags.NoFocusOnAppearing | ImGuiWindowFlags.NoDecoration | 
-                            ImGuiWindowFlags.NoBackground);
-                    }
-
-                    // Enable Docking
-                    if (DockingEnabled)
-                    {
-                        ImGui.DockSpaceOverViewport(); 
-                    }
-
-                    _context.SetDrawList(DrawList.Foreground);
-                    // ImGui.ShowDemoWindow();
-                    _context.Update(_widget);
-                }
-                finally
-                {
-                    if (DockingEnabled)
-                    {
-                        ImGui.End();
-                    }
-
-                    if (DefaultWindow)
-                    {
-                        ImGui.End();
-                    }
-
-                    // Render (builds mesh with texture coordinates)
-                    ImGui.Render();
-                }
-
-                // Render the mesh
-                var drawDataPtr = ImGui.GetDrawData();
-                Render(caller, drawDataPtr);
+                if (_readyToBeDrawn && _lastCallerInfo != null)
+                    Render(caller, _drawDataPtr);
+                return;
             }
+
+            _lastCallerInfo = caller;
+            if (_readyToBeDrawn)
+                Render(caller, _drawDataPtr);
         }
 
         static void BuildImFontAtlas(ImFontAtlasPtr atlas, Handle<SKPaint> paintHandle, float scaling = 1f)
@@ -232,7 +244,7 @@ namespace VL.ImGui
             try
             {
                 var us = PushTransformation(caller, SKMatrix.CreateScale(ImGuiConversion.FromImGuiScaling, ImGuiConversion.FromImGuiScaling));
-                canvas.SetMatrix(us.Transformation);
+                    canvas.SetMatrix(us.Transformation);
                 //updateScaling(us.Transformation.ScaleY);
 
                 for (int i = 0; i < drawData.CmdListsCount; ++i)
@@ -302,15 +314,15 @@ namespace VL.ImGui
                                     var tl = pos[rectIndex];
                                     var br = pos[rectIndex + 2];
                                     var imageClipRect = new SKRect(tl.X, tl.Y, br.X, br.Y);
-                                    
-                                    canvas.SetMatrix(caller.Transformation);
+
+                                        canvas.SetMatrix(caller.Transformation);
                                     try
                                     {
                                         _context.Layers[(int)idIndex].Render(caller);
                                     }
                                     finally
                                     {
-                                        canvas.SetMatrix(us.Transformation);
+                                            canvas.SetMatrix(us.Transformation);
                                     }
                                 }
                                 else if (drawCmd.ElemCount > 0)
@@ -573,6 +585,16 @@ namespace VL.ImGui
         }
 
         public RectangleF? Bounds => default;
+        //public RectangleF? Bounds
+        //{
+        //    get
+        //    {
+        //        if (_lastCallerInfo == null)
+        //            return new RectangleF(0, 0, 6, 6);
+        //        var _ = _lastCallerInfo.ViewportBounds;
+        //        return new RectangleF(0, 0, _.Width / 100, _.Height / 100);
+        //    }
+        //}
 
         public void Dispose()
         {
