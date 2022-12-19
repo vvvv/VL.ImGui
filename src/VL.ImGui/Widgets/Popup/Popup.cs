@@ -34,6 +34,7 @@ namespace VL.ImGui.Widgets
         {
             var bounds = BoundsFlange.Update(Bounds, out bool boundsChanged);
             var isOpen = IsOpenFlange.Update(IsOpen, out bool hasChanged);
+            var label = Context.GetLabel(this, Label);
 
             if (boundsChanged)
             {
@@ -41,24 +42,31 @@ namespace VL.ImGui.Widgets
                 ImGui.SetNextWindowSize(bounds.Size.FromHectoToImGui());
             }
 
-            if (isOpen && hasChanged && Label != null)
-                ImGui.OpenPopup(Context.GetLabel(this, Label));
-
-            isOpen = ImGui.BeginPopup(Context.GetLabel(this, Label), Flags);
-            IsOpenFlange.Value = isOpen;
+            if (hasChanged)
+            {
+                if (isOpen)
+                    ImGui.OpenPopup(label);
+                else
+                    ImGui.CloseCurrentPopup();
+            }
 
             if (isOpen)
             {
-                try
+                isOpen = ImGui.BeginPopup(label);
+
+                IsOpenFlange.Value = isOpen;
+                if (isOpen)
                 {
-                    context?.Update(Content);
-                }
-                finally
-                {
-                    ImGui.EndPopup();
+                    try
+                    {
+                        context?.Update(Content);
+                    }
+                    finally
+                    {
+                        ImGui.EndPopup();
+                    }
                 }
             }
-
         }
     }
 }

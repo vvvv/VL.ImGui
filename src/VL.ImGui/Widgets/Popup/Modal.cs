@@ -43,47 +43,53 @@ namespace VL.ImGui.Widgets
         {
             var bounds = BoundsFlange.Update(Bounds, out bool boundsChanged);
             var isOpen = IsOpenFlange.Update(IsOpen, out bool hasChanged);
-            
+            var label = Context.GetLabel(this, Label);
+
             if (boundsChanged)
             {
                 ImGui.SetNextWindowPos(bounds.TopLeft.FromHectoToImGui());
                 ImGui.SetNextWindowSize(bounds.Size.FromHectoToImGui());
             }
 
-            if (isOpen && hasChanged && Label != null)
-                ImGui.OpenPopup(Context.GetLabel(this, Label));
-
-
-            if (HasCloseButton)
+            if (hasChanged)
             {
-                // From Imgui Demo:
-                // ...Also demonstrate passing a bool* to BeginPopupModal(), this will create a regular close button which
-                // will close the popup. Note that the visibility state of popups is owned by imgui, so the input value
-                // of the bool actually doesn't matter here.
-                /// https://github.com/ocornut/imgui/blob/2d38bc99b3b0013952d3d390397297083b767972/imgui_demo.cpp
-                
-                var unusedOpen = true;
-                isOpen = ImGui.BeginPopupModal(Context.GetLabel(this, Label), ref unusedOpen, Flags);
+                if (isOpen)
+                    ImGui.OpenPopup(label);
+                else
+                    ImGui.CloseCurrentPopup();
             }
-            else
-            {
-                isOpen = ImGui.BeginPopupModal(Context.GetLabel(this, Label));
-            }
-
-            IsOpenFlange.Value = isOpen;
 
             if (isOpen)
-            {
-                try
+            {        
+                if (HasCloseButton)
                 {
-                    context?.Update(Content);
+                    // From Imgui Demo:
+                    // ...Also demonstrate passing a bool* to BeginPopupModal(), this will create a regular close button which
+                    // will close the popup. Note that the visibility state of popups is owned by imgui, so the input value
+                    // of the bool actually doesn't matter here.
+                    // https://github.com/ocornut/imgui/blob/2d38bc99b3b0013952d3d390397297083b767972/imgui_demo.cpp
+
+                    var unusedOpen = true;
+                    isOpen = ImGui.BeginPopupModal(label, ref unusedOpen, Flags);
                 }
-                finally
+                else
                 {
-                    ImGui.EndPopup();
+                    isOpen = ImGui.BeginPopupModal(label);
+                }
+
+                IsOpenFlange.Value = isOpen;
+                if (isOpen)
+                {
+                    try
+                    {
+                        context?.Update(Content);
+                    }
+                    finally
+                    {
+                        ImGui.EndPopup();
+                    }
                 }
             }
-
         }
     }
 }
