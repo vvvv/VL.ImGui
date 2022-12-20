@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0293-8dae661881" Version="0.128">
+<Document xmlns:p="property" Id="UYARZO1E8ZePoDYRG5YWRP" LanguageVersion="2022.5.0-0414-401adde02c" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -19,7 +19,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1210, 260, 374, 444" />
+            <Pin Id="HcZs7a62BLoPpXAtmDKTiA" Name="Bounds" Kind="InputPin" DefaultValue="1209, 260, 373, 444" />
             <Pin Id="RFO0WCwgClPLtuurXsd6KH" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="FEmprmZSMXGOZ6BLW3yl3J" Name="Input" Kind="InputPin" />
             <Pin Id="AjjEgsMjzN1LCY9f64wtrD" Name="Color" Kind="InputPin" />
@@ -44,7 +44,7 @@
             <Patch Id="SuybYogWhxaPH08JmAkbGD">
               <Canvas Id="GrB1QfQF3UhLsvs4yqc3hB" CanvasType="Group">
                 <Node Bounds="572,290,86,19" Id="BEcz3KVXSOCN2RAL0vjmay">
-                  <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="LinearSpread" />
                   </p:NodeReference>
@@ -53,7 +53,7 @@
                   <Pin Id="NOzw4OxMRZILug1bd3gLaX" Name="Alignment" Kind="InputPin" />
                   <Pin Id="Dl9TixGKCqrOlJULoK73Xs" Name="Phase" Kind="InputPin" />
                   <Pin Id="VVheI2JkTyoMg8ZOKul1dY" Name="Count" Kind="InputPin" DefaultValue="29">
-                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="TypeFlag" Name="Integer32" />
                     </p:TypeAnnotation>
                   </Pin>
@@ -73,7 +73,7 @@
                     <Patch Id="BnfctvokxsUOk93pMkWfVM" Name="Update" ManuallySortedPins="true" />
                     <Patch Id="DHDVxReyYg2OE1WnnMaW9H" Name="Dispose" ManuallySortedPins="true" />
                     <Node Bounds="607,439,68,19" Id="PV3q7VDfIw1MdMKbupmrsd">
-                      <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="VL.CoreLib.vl">
+                      <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="SineWave" />
                       </p:NodeReference>
@@ -81,7 +81,7 @@
                       <Pin Id="EEirlRPLRkTOsGCODiXjp1" Name="Output" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="573,505,46,19" Id="TDrG19B6dxbLC3FHyn1KKT">
-                      <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="VL.CoreLib.vl">
+                      <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="Vector (Join)" />
                         <CategoryReference Kind="Vector2Type" Name="Vector2" NeedsToBeDirectParent="true" />
@@ -91,7 +91,7 @@
                       <Pin Id="QhwLIX29MEDQUJs2MH4HYB" Name="Output" Kind="StateOutputPin" />
                     </Node>
                     <Node Bounds="607,402,25,19" Id="GxfGk8VTyBILRR7psYOz7y">
-                      <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="VL.CoreLib.vl">
+                      <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="+" />
                       </p:NodeReference>
@@ -100,7 +100,7 @@
                       <Pin Id="V55o25vcsIwOdxOJvbwbMC" Name="Output" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="607,472,25,19" Id="SnIrOgXTDrALEJljkbeCvk">
-                      <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="VL.CoreLib.vl">
+                      <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="*" />
                       </p:NodeReference>
@@ -128,7 +128,7 @@
                   </p:TypeAnnotation>
                 </Pad>
                 <Node Bounds="670,329,65,19" Id="BJdUDNv24ITOXDRKSKhuyC">
-                  <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="CoreLibBasics.vl" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="LFO" />
                   </p:NodeReference>
@@ -254,6 +254,7 @@
               <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
             <Pin Id="Un2TvKpw0KDP6Ga34vGEeP" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="SSOWNtNiOXdQFK530h2ebJ" Name="Add Fullscreen Window" Kind="InputPin" />
             <Pin Id="HPv4cEHgeHnN4FZkRFKSk2" Name="Use Skia Space" Kind="InputPin" />
             <Pin Id="IIXfxwkDw0ILXspNpAHNaY" Name="Output" Kind="OutputPin" />
             <Patch Id="AFHtfL1q0KzLUWBwraAwNZ" ManuallySortedPins="true">
@@ -366,7 +367,7 @@
                         <Pin Id="COvNpaTNG5aLT2RfgnMj5U" Name="Context" Kind="InputPin" />
                         <Pin Id="JYZSQK540k1PtsHO5auscX" Name="Layer" Kind="InputPin" />
                         <Pin Id="DPbBIaC7vlVNHZ5DPYELKY" Name="Size" Kind="InputPin" />
-                        <Pin Id="VOKjqUEuYnnO0u1W4N0uIY" Name="Clip" Kind="InputPin" />
+                        <Pin Id="TDivJLB1ZZLODaXNBkmXW9" Name="Space" Kind="InputPin" DefaultValue="Normalized" />
                         <Pin Id="C4mYdAuydFHL3nIzJCSvAh" Name="Show Helper" Kind="InputPin" />
                         <Pin Id="KFT910aO058ORWcyyYGNqQ" Name="Context" Kind="OutputPin" />
                       </Node>

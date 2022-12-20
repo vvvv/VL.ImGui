@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GDsqUyBTSwrMF4Ql3paTOI" LanguageVersion="2022.5.0-0265-da16ac749a" Version="0.128">
+<Document xmlns:p="property" Id="GDsqUyBTSwrMF4Ql3paTOI" LanguageVersion="2022.5.0-0414-401adde02c" Version="0.128">
   <Patch Id="K6jOtX5z4AOM2g6L5teo07">
     <Canvas Id="HuM0Neyl9P0P3djIwL4nYf" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -38,6 +38,7 @@
               <Choice Kind="ProcessAppFlag" Name="ImGui" />
             </p:NodeReference>
             <Pin Id="QpgLapI5zDxPOzGRPcwG5j" Name="Docking Enabled" Kind="InputPin" />
+            <Pin Id="VeODFKBmoaBMkcsVnoBSXR" Name="Add Fullscreen Window" Kind="InputPin" />
             <Pin Id="IyhkCnjfKNoMIcE8rlLyy9" Name="Use Skia Space" Kind="InputPin" DefaultValue="True" />
             <Pin Id="QcQXTQIKrE4Lctbv3yl4HS" Name="Output" Kind="OutputPin" />
             <Patch Id="OULFnoaA6CGM9ogOBcyw6g" ManuallySortedPins="true">
@@ -129,7 +130,7 @@
                         <Pin Id="Gc3ES8qmN8XQF1pn9nROFo" Name="Style" Kind="InputPin" />
                         <Pin Id="BvrPAXgNzVmPDr3MTugxCS" Name="Context" Kind="OutputPin" />
                       </Node>
-                      <Node Bounds="301,622,85,19" Id="OlY2SPWuKW1LranbAXS07t">
+                      <Node Bounds="301,622,26,19" Id="OlY2SPWuKW1LranbAXS07t">
                         <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.Skia.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="ProcessAppFlag" Name="LayerWidget" />
@@ -137,7 +138,7 @@
                         <Pin Id="MGXDp1VdPjGNDIFy0HExQP" Name="Context" Kind="InputPin" />
                         <Pin Id="QpMbTE5StLnLnPV2gyxdW7" Name="Layer" Kind="InputPin" />
                         <Pin Id="FDml95nEGycOIFRWcq5So0" Name="Size" Kind="InputPin" />
-                        <Pin Id="ILVEHCx9pUnPKDzPNnBXhq" Name="Clip" Kind="InputPin" DefaultValue="False" />
+                        <Pin Id="OJFgusgmGirOuyIhLTJmpa" Name="Space" Kind="InputPin" />
                         <Pin Id="LPYIBA2dJzTL90Bd5mReTO" Name="Show Helper" Kind="InputPin" DefaultValue="True" />
                         <Pin Id="ChdR3admMrVN21JI9N67Aq" Name="Context" Kind="OutputPin" />
                       </Node>
@@ -212,7 +213,7 @@
                     <Pin Id="MpIDda7McU1PUtjS1VyhA2" Name="Bang" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="633,549,45,19" Id="UdICDDx5iRBL6gFxvzuepP">
-                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <FullNameCategoryReference ID="Collections.Spread" />
                       <Choice Kind="OperationCallFlag" Name="Cons" />
