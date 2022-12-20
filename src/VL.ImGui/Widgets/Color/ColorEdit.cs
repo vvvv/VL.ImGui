@@ -1,8 +1,10 @@
 ﻿using Stride.Core.Mathematics;
+using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Category = "ImGui.Widgets", Tags = "rgba, hsv, hsl")]
+    [WidgetType(WidgetType.Default)]
     internal partial class ColorEdit : ChannelWidget<Color4>
     {
         public string? Label { get; set; }

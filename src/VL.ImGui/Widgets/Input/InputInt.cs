@@ -1,6 +1,9 @@
-﻿namespace VL.ImGui.Widgets
+﻿using VL.Core.EditorAttributes;
+
+namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Input (Int)", Category = "ImGui.Widgets", Tags = "number, updown")]
+    [WidgetType(WidgetType.Default)]
     internal partial class InputInt : ChannelWidget<int>
     {
 

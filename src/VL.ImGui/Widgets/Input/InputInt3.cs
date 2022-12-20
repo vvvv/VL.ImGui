@@ -1,9 +1,11 @@
 ﻿using Stride.Core.Mathematics;
 using System.Runtime.CompilerServices;
+using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Input (Int3)", Category = "ImGui.Widgets", Tags = "number, updown")]
+    [WidgetType(WidgetType.Default)]
     internal partial class InputInt3 : ChannelWidget<Int3>
     {
 

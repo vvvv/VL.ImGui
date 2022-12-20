@@ -1,8 +1,10 @@
 ﻿using Stride.Core.Mathematics;
+using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Input (String Multiline)", Category = "ImGui.Widgets", Tags = "edit, textfield")]
+    [WidgetType(WidgetType.Multiline)]
     internal partial class InputTextMultiline : ChannelWidget<string>
     {
 

@@ -5,10 +5,12 @@ using System.Reactive.Subjects;
 using System.Text;
 using VL.Core;
 using Stride.Core.Mathematics;
+using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Slider (Vector3)", Category = "ImGui.Widgets")]
+    [WidgetType(WidgetType.Slider)]
     internal partial class SliderVector3 : ChannelWidget<Vector3>
     {
         public string? Label { get; set; }

@@ -1,8 +1,10 @@
 ﻿using Stride.Core.Mathematics;
+using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Slider (Float Vertical)", Category = "ImGui.Widgets")]
+    [WidgetType(WidgetType.VerticalSlider)]
     internal partial class SliderFloatVertical : ChannelWidget<float>
     {
         public string? Label { get; set; }

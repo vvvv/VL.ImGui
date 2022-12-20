@@ -1,9 +1,11 @@
 ﻿using Stride.Core.Mathematics;
 using System.Runtime.CompilerServices;
+using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Drag (Int3)", Category = "ImGui.Widgets", Tags = "number")]
+    [WidgetType(WidgetType.Drag)]
     internal partial class DragInt3 : ChannelWidget<Int3>
     {
         public string? Label { get; set; }

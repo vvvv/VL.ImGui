@@ -1,9 +1,11 @@
 ﻿using Stride.Core.Mathematics;
 using System.Runtime.CompilerServices;
+using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Slider (Int2)", Category = "ImGui.Widgets")]
+    [WidgetType(WidgetType.Slider)]
     internal partial class SliderInt2 : ChannelWidget<Int2>
     {
         public string? Label { get; set; }

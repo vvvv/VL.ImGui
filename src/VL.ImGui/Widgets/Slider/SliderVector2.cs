@@ -1,8 +1,10 @@
 ﻿using Stride.Core.Mathematics;
+using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Slider (Vector2)", Category = "ImGui.Widgets")]
+    [WidgetType(WidgetType.Slider)]
     internal partial class SliderVector2 : ChannelWidget<Vector2>
     {
         public string? Label { get; set; }

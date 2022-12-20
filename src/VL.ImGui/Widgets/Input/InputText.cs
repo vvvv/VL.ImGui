@@ -1,6 +1,9 @@
-﻿namespace VL.ImGui.Widgets
+﻿using VL.Core.EditorAttributes;
+
+namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Input (String)", Category = "ImGui.Widgets", Tags = "edit, textfield")]
+    [WidgetType(WidgetType.Default)]
     internal partial class InputText : ChannelWidget<string>
     {
 

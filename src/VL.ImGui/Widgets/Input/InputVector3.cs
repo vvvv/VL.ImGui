@@ -1,8 +1,10 @@
 ﻿using Stride.Core.Mathematics;
+using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Input (Vector3)", Category = "ImGui.Widgets", Tags = "number, updown")]
+    [WidgetType(WidgetType.Default)]
     internal partial class InputVector3 : ChannelWidget<Vector3>
     {
 

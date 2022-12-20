@@ -1,6 +1,9 @@
-﻿namespace VL.ImGui.Widgets
+﻿using VL.Core.EditorAttributes;
+
+namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Drag (Float)", Category = "ImGui.Widgets", Tags = "number")]
+    [WidgetType(WidgetType.Drag)]
     internal partial class DragFloat : ChannelWidget<float>
     {
         public string? Label { get; set; }

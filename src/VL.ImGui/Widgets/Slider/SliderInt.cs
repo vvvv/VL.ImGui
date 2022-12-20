@@ -1,6 +1,9 @@
-﻿namespace VL.ImGui.Widgets
+﻿using VL.Core.EditorAttributes;
+
+namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Slider (Int)", Category = "ImGui.Widgets")]
+    [WidgetType(WidgetType.Slider)]
     internal partial class SliderInt : ChannelWidget<int>
     {
         public string? Label { get; set; }

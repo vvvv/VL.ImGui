@@ -1,8 +1,10 @@
-﻿using VL.Lib.Mathematics;
+﻿using VL.Core.EditorAttributes;
+using VL.Lib.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Drag (Float Range)", Category = "ImGui.Widgets", Tags = "number")]
+    [WidgetType(WidgetType.Drag)]
     internal partial class DragFloatRange2 : ChannelWidget<Range<float>>
     {
         public string? Label { get; set; }
