@@ -9,8 +9,7 @@ namespace VL.ImGui.Editors
     abstract class ListEditorBase<TList, T> : IObjectEditor, IDisposable
                 where TList : IReadOnlyList<T>
     {
-        private readonly List<IObjectEditor?> editors = new List<IObjectEditor?>();
-        private readonly CompositeDisposable subscriptions = new CompositeDisposable();
+        private readonly List<(IObjectEditor? editor, IDisposable ownership)> editors = new List<(IObjectEditor?, IDisposable)>();
         private readonly Channel<TList> channel;
         private readonly ObjectEditorContext editorContext;
         private readonly string label;
@@ -24,29 +23,44 @@ namespace VL.ImGui.Editors
 
         public void Dispose()
         {
-            subscriptions.Dispose();
+            foreach (var item in editors)
+                item.ownership.Dispose();
+            editors.Clear();
         }
 
         public void Draw(Context? context)
         {
-            if (channel.Value.Count == 0)
+            var list = channel.Value;
+            for (int i = editors.Count - 1; i >= list.Count; i--)
+            {
+                editors[i].ownership.Dispose();
+                editors.RemoveAt(i);
+            }
+
+            if (list.Count == 0)
                 return;
 
             if (ImGui.BeginListBox(label))
             {
-                var list = channel.Value;
                 for (int i = 0; i < list.Count; i++)
                 {
-                    var editor = editors.ElementAtOrDefault(i);
+                    var (editor, _) = editors.ElementAtOrDefault(i);
                     if (i >= editors.Count)
                     {
                         // Setup channel for item
                         var itemChannel = new Channel<T>();
                         var j = i;
-                        subscriptions.Add(channel.BindTwoWay(itemChannel, c => c[j], item => SetItem(channel.Value, j, item)));
+
+                        var ownership = new CompositeDisposable
+                        {
+                            channel.BindTwoWay(itemChannel, c => c[j], item => SetItem(channel.Value, j, item))
+                        };
 
                         editor = editorContext.Factory.CreateObjectEditor(itemChannel, editorContext);
-                        editors.Add(editor);
+                        if (editor is IDisposable disposable)
+                            ownership.Add(disposable);
+
+                        editors.Add((editor, ownership));
                     }
 
                     ImGui.PushID(i);

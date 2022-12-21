@@ -35,6 +35,9 @@ namespace VL.ImGui.Editors
                 return new ObjectEditorBasedOnChannelWidget<T>(widget);
             }
 
+            if (channel is Channel<object> objectChannel)
+                return new RuntimeObjectEditor(objectChannel, context);
+
             if (typeof(T).IsEnum)
                 return new EnumEditor<T>(channel, context);
 
