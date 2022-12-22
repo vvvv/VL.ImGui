@@ -10,9 +10,9 @@ namespace VL.ImGui.Widgets
 
         public float Speed { private get; set; } = 0.01f;
 
-        public double Min { private get; set; } = 0d;
+        public double Min { private get; set; }
 
-        public double Max { private get; set; } = 1d;
+        public double Max { private get; set; }
 
         /// <summary>
         /// Adjust format string to decorate the value with a prefix, a suffix, or adapt the editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs; "Biscuit: % .0f" -> Biscuit: 1; etc.

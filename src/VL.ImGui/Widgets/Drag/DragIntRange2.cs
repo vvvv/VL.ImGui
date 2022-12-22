@@ -11,9 +11,9 @@ namespace VL.ImGui.Widgets
 
         public int Speed { private get; set; } = 1;
 
-        public int Min { private get; set; } = 0;
+        public int Min { private get; set; }
 
-        public int Max { private get; set; } = 100;
+        public int Max { private get; set; }
 
         public string? Format { private get; set; }
 
