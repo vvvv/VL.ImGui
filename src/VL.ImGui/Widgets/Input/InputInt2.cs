@@ -5,7 +5,7 @@ using VL.Core.EditorAttributes;
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Input (Int2)", Category = "ImGui.Widgets", Tags = "number, updown")]
-    [WidgetType(WidgetType.Default)]
+    [WidgetType(WidgetType.Input)]
     internal partial class InputInt2 : ChannelWidget<Int2>
     {
 

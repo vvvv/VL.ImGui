@@ -3,7 +3,7 @@
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Input (Float64)", Category = "ImGui.Widgets.Advanced", Tags = "number, updown")]
-    [WidgetType(WidgetType.Default)]
+    [WidgetType(WidgetType.Input)]
     internal partial class InputFloat64 : ChannelWidget<double>
     {
 
