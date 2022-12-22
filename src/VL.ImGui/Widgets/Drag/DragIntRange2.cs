@@ -1,31 +1,22 @@
-﻿using VL.Core.EditorAttributes;
+﻿using ImGuiNET;
+using VL.Core.EditorAttributes;
 using VL.Lib.Mathematics;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Drag (Int Range)", Category = "ImGui.Widgets", Tags = "number")]
     [WidgetType(WidgetType.Drag)]
-    internal partial class DragIntRange2 : ChannelWidget<Range<int>>
+    internal partial class DragIntRange2 : DragWidget<Range<int>, int>
     {
-        public string? Label { get; set; }
-
-        public int Speed { private get; set; } = 1;
-
-        public int Min { private get; set; }
-
-        public int Max { private get; set; }
-
-        public string? Format { private get; set; }
-
-        public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
-
-        internal override void UpdateCore(Context context)
+        protected override bool Drag(string label, ref Range<int> value, float speed, int min, int max, string? format, ImGuiSliderFlags flags)
         {
-            var value = Update();
-
             value.Split(out int from, out int to);
-            if (ImGuiNET.ImGui.DragIntRange2(Context.GetLabel(this, Label), ref from, ref to, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Value = new Range<int>(from, to);
+            if (ImGuiNET.ImGui.DragIntRange2(label, ref from, ref to, speed, min, max, format, format, flags))
+            {
+                value = new Range<int>(from, to);
+                return true;
+            }
+            return false;
         }
     }
 }

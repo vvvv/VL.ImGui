@@ -1,31 +1,15 @@
-﻿using VL.Core.EditorAttributes;
+﻿using ImGuiNET;
+using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Drag (Float)", Category = "ImGui.Widgets", Tags = "number")]
     [WidgetType(WidgetType.Drag)]
-    internal partial class DragFloat : ChannelWidget<float>
+    internal partial class DragFloat : DragWidget<float, float>
     {
-        public string? Label { get; set; }
-
-        public float Speed { private get; set; } = 0.01f;
-
-        public float Min { private get; set; }
-
-        public float Max { private get; set; }
-
-        /// <summary>
-        /// Adjust format string to decorate the value with a prefix, a suffix, or adapt the editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs; "Biscuit: % .0f" -> Biscuit: 1; etc.
-        /// </summary>
-        public string? Format { private get; set; }
-
-        public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
-
-        internal override void UpdateCore(Context context)
+        protected override bool Drag(string label, ref float value, float speed, float min, float max, string? format, ImGuiSliderFlags flags)
         {
-            var value = Update();
-            if (ImGuiNET.ImGui.DragFloat(Context.GetLabel(this, Label), ref value, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Value = value;
+            return ImGuiNET.ImGui.DragFloat(label, ref value, speed, min, max, format, flags);
         }
     }
 }

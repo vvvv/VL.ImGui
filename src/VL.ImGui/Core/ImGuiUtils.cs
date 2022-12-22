@@ -193,22 +193,22 @@ namespace VL.ImGui
             }
         }
 
-        public static unsafe bool InputDouble(string label, ref double value, double step, double stepFast, string format, ImGuiInputTextFlags flags)
+        public static unsafe bool InputDouble(string label, ref double value, double step, double stepFast, string? format, ImGuiInputTextFlags flags)
         {
             return ImGui.InputScalar(label, ImGuiDataType.Double, new IntPtr(Unsafe.AsPointer(ref value)), new IntPtr(Unsafe.AsPointer(ref step)), new IntPtr(Unsafe.AsPointer(ref stepFast)), format, flags);
         }
 
-        public static unsafe bool DragDouble(string label, ref double value, float speed, double min, double max, string format, ImGuiSliderFlags flags)
+        public static unsafe bool DragDouble(string label, ref double value, float speed, double min, double max, string? format, ImGuiSliderFlags flags)
         {
             return ImGui.DragScalar(label, ImGuiDataType.Double, new IntPtr(Unsafe.AsPointer(ref value)), speed, new IntPtr(Unsafe.AsPointer(ref min)), new IntPtr(Unsafe.AsPointer(ref max)), format, flags);
         }
 
-        public static unsafe bool SliderDouble(string label, ref double value, double min, double max, string format, ImGuiSliderFlags flags)
+        public static unsafe bool SliderDouble(string label, ref double value, double min, double max, string? format, ImGuiSliderFlags flags)
         {
             return ImGui.SliderScalar(label, ImGuiDataType.Double, new IntPtr(Unsafe.AsPointer(ref value)), new IntPtr(Unsafe.AsPointer(ref min)), new IntPtr(Unsafe.AsPointer(ref max)), format, flags);
         }
 
-        public static unsafe bool VSliderDouble(string label, System.Numerics.Vector2 size, ref double value, double min, double max, string format, ImGuiSliderFlags flags)
+        public static unsafe bool VSliderDouble(string label, System.Numerics.Vector2 size, ref double value, double min, double max, string? format, ImGuiSliderFlags flags)
         {
             return ImGui.VSliderScalar(label, size, ImGuiDataType.Double, new IntPtr(Unsafe.AsPointer(ref value)), new IntPtr(Unsafe.AsPointer(ref min)), new IntPtr(Unsafe.AsPointer(ref max)), format, flags);
         }

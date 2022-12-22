@@ -1,32 +1,23 @@
-﻿using Stride.Core.Mathematics;
+﻿using ImGuiNET;
+using Stride.Core.Mathematics;
+using System.Runtime.CompilerServices;
 using VL.Core.EditorAttributes;
 
 namespace VL.ImGui.Widgets
 {
     [GenerateNode(Name = "Drag (Vector2)", Category = "ImGui.Widgets", Tags = "number")]
     [WidgetType(WidgetType.Drag)]
-    internal partial class DragVector2 : ChannelWidget<Vector2>
+    internal partial class DragVector2 : DragWidget<Vector2, float>
     {
-        public string? Label { get; set; }
-
-        public float Speed { private get; set; } = 0.01f;
-
-        public float Min { private get; set; }
-
-        public float Max { private get; set; }
-
-        /// <summary>
-        /// Adjust format string to decorate the value with a prefix, a suffix, or adapt the editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs; "Biscuit: % .0f" -> Biscuit: 1; etc.
-        /// </summary>
-        public string? Format { private get; set; }
-
-        public ImGuiNET.ImGuiSliderFlags Flags { private get; set; }
-
-        internal override void UpdateCore(Context context)
+        protected override bool Drag(string label, ref Vector2 value, float speed, float min, float max, string? format, ImGuiSliderFlags flags)
         {
-            var value = Update().ToImGui();
-            if (ImGuiNET.ImGui.DragFloat2(Context.GetLabel(this, Label), ref value, Speed, Min, Max, string.IsNullOrWhiteSpace(Format) ? null : Format, Flags))
-                Value = value.ToVL();
+            var x = value.ToImGui();
+            if (ImGuiNET.ImGui.DragFloat2(label, ref x, speed, min, max, format, flags))
+            {
+                value = x.ToVL();
+                return true;
+            }
+            return false;
         }
     }
 }

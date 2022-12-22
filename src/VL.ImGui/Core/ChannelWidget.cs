@@ -37,5 +37,10 @@ namespace VL.ImGui.Widgets
                 value = Channel.Value;
             return value;
         }
+
+        protected void SetValueWithoutNotifiying(T value)
+        {
+            this.value = value;
+        }
     }
 }
