@@ -81,7 +81,7 @@ namespace VL.ImGui.Editors
                     {
                         // Build new channel and bind to abstract channel
                         implementingChannel = Channel.CreateChannelOfType(currentType);
-                        channelSubscription.Disposable = channel.MergeSafe(implementingChannel.ChannelOfObject);
+                        channelSubscription.Disposable = channel.Merge(implementingChannel);
 
                         // Select new editor
                         currentEditor = factory.CreateObjectEditor(implementingChannel, editorContext);
