@@ -293,7 +293,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="PVlzrIWw6ZxOGI1lyTbXim" Name="Bounds" Kind="InputPin" DefaultValue="1102, 294, 616, 584" />
+            <Pin Id="PVlzrIWw6ZxOGI1lyTbXim" Name="Bounds" Kind="InputPin" DefaultValue="1147, 364, 616, 584" />
             <Pin Id="BqJsFi1uTMtODu1TvnTQc8" Name="Input" Kind="InputPin" />
             <Pin Id="R8aMlGKCRtMLq7qtK7fvgz" Name="Color" Kind="InputPin" />
             <Pin Id="QgTlcO4iwy3PRslweaG9ud" Name="Clear" Kind="InputPin" />
@@ -336,7 +336,7 @@
             </p:NodeReference>
             <Pin Id="NdRfxiurmG6MlkZYuEAMdI" Name="Name" Kind="InputPin" DefaultValue="A" />
             <Pin Id="BBPKLubhv9hPMmgKYSIkr6" Name="Address" Kind="InputPin" DefaultValue="Street 1" />
-            <Pin Id="OCyZr2jQCMsOUidRhOC7Ej" Name="Age" Kind="InputPin" />
+            <Pin Id="OCyZr2jQCMsOUidRhOC7Ej" Name="Age" Kind="InputPin" DefaultValue="13" />
             <Pin Id="SQCF8fuW4CjQKo3rjNv5ki" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="283,543,53,19" Id="OQg2mmCMmRXLpsU6FYK8gU">
@@ -349,7 +349,7 @@
             <Pin Id="PVymOPtrl4SOlxmULj74mb" Name="Output" Kind="OutputPin" />
             <Pin Id="IbmYzPBeeP0LDGvOYEemg1" Name="Value" Kind="OutputPin" />
           </Node>
-          <Node Bounds="352,497,25,19" Id="Cg1JXrCJOmpPErlj6A3hVL">
+          <Node Bounds="283,497,39,19" Id="Cg1JXrCJOmpPErlj6A3hVL">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="ClassType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -366,17 +366,11 @@
             </p:NodeReference>
             <Pin Id="Hazep8DfDBHPNkyROa5dGI" Name="Name" Kind="InputPin" DefaultValue="B" />
             <Pin Id="NpJOxXri2rMPzkP7ykqyW8" Name="Address" Kind="InputPin" DefaultValue="Street 2" />
-            <Pin Id="QjxEm9VnOZKM1fUCZGt9fM" Name="Age" Kind="InputPin" />
+            <Pin Id="QjxEm9VnOZKM1fUCZGt9fM" Name="Age" Kind="InputPin" DefaultValue="15" />
             <Pin Id="G8SzWO14IFgPOWmrwfVS3z" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Pad Id="VrjHYAN68T3O21yLVmjzWF" Bounds="285,499">
-            <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="Object" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="SGnUESXuJmpP98XIuZrXfN" Comment="" Bounds="439,613,275,152" ShowValueBox="true" isIOBox="true" />
         </Canvas>
-        <Patch Id="UW88hA2fqg7LZoNKtzr9zq" Name="Create" ParticipatingElements="Rjuj4OT94qtOKpP4gr2Ccv,BwR9cEO2vu6O6z7otV1ndc" />
+        <Patch Id="UW88hA2fqg7LZoNKtzr9zq" Name="Create" />
         <Patch Id="P3cyI65ToIFQbpXPQjmEuU" Name="Update" />
         <ProcessDefinition Id="F7VDIK9RQrbMIy4ZZLfaVu">
           <Fragment Id="LiPD2Cvp2IROmun94Qt0Ve" Patch="UW88hA2fqg7LZoNKtzr9zq" Enabled="true" />
@@ -387,9 +381,7 @@
         <Link Id="QeiMCdVg4iBLLf08wVIw8f" Ids="SQCF8fuW4CjQKo3rjNv5ki,QcrLXtWuztHPTwfMOunjoi" />
         <Link Id="VmhoeXekpNbPvmYoWhQHjA" Ids="PVymOPtrl4SOlxmULj74mb,RHBsZERTpi1L7R5Q7THC0x" />
         <Link Id="VZ2QLUwH5eTOmHzIRltq5q" Ids="G8SzWO14IFgPOWmrwfVS3z,G6fR6fhvD72Nt9nlIcm8TU" />
-        <Link Id="Rjuj4OT94qtOKpP4gr2Ccv" Ids="SQCF8fuW4CjQKo3rjNv5ki,VrjHYAN68T3O21yLVmjzWF" />
-        <Link Id="BwR9cEO2vu6O6z7otV1ndc" Ids="VrjHYAN68T3O21yLVmjzWF,NYeG3s7pXNbLcppHPOMj2W" />
-        <Link Id="FzflH3cpyXSQP0TITaEoIx" Ids="IbmYzPBeeP0LDGvOYEemg1,SGnUESXuJmpP98XIuZrXfN" />
+        <Link Id="Pc3GYWnHzpOLkhlYfi79XO" Ids="GcF8WRUDqEZL79Do4jZLR1,NYeG3s7pXNbLcppHPOMj2W" />
       </Patch>
     </Node>
   </Patch>
