@@ -27,8 +27,9 @@ namespace VL.ImGui.Editors
                 return (IObjectEditor?)Activator.CreateInstance(editorType, new object[] { channel, context, widgetClass });
             }
 
+            var typeInfo = TypeRegistry.Default.GetTypeInfo(staticType);
             if (staticType.IsAbstract || staticType == typeof(object))
-                return new AbstractObjectEditor(channel, context);
+                return new AbstractObjectEditor(channel, context, typeInfo);
 
             if (staticType.IsEnum)
             {
@@ -47,7 +48,6 @@ namespace VL.ImGui.Editors
             }
 
             {
-                var typeInfo = TypeRegistry.Default.GetTypeInfo(staticType);
                 var editorType = typeof(ObjectEditor<>).MakeGenericType(staticType);
                 return (IObjectEditor?)Activator.CreateInstance(editorType, new object[] { channel, context, typeInfo });
             }
