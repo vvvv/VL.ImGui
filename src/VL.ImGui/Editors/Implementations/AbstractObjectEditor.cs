@@ -153,15 +153,15 @@ namespace VL.ImGui.Editors
         {
             var clrType = typeInfo.ClrType;
             var typeRegistry = TypeRegistry.Default;
-            foreach (var type in clrType.Assembly.GetTypes())
+            foreach (var vlType in typeRegistry.RegisteredTypes)
             {
+                var type = vlType.ClrType;
                 if (type.IsAbstract || type.IsGenericTypeDefinition)
                     continue;
 
                 if (!clrType.IsAssignableFrom(type))
                     continue;
 
-                var vlType = typeRegistry.GetTypeInfo(type);
                 if (!vlType.IsPatched && !HasDefaultConstructor(vlType))
                     continue;
 
