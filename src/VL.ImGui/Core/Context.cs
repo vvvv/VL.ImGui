@@ -82,7 +82,7 @@ namespace VL.ImGui
 
             DrawListOffset = drawList switch
             {
-                DrawList.AtCursor => ImGui.GetWindowPos() + ImGui.GetCursorPos(),
+                DrawList.AtCursor => ImGui.GetWindowPos() + ImGui.GetCursorPos() - new System.Numerics.Vector2(ImGui.GetScrollX(), ImGui.GetScrollY()),
                 DrawList.Window => ImGui.GetWindowPos(),
                 DrawList.Foreground => default,
                 DrawList.Background => default,
