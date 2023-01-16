@@ -53,7 +53,7 @@ namespace VL.ImGui.Editors
 
                         var ownership = new CompositeDisposable
                         {
-                            channel.BindTwoWay(itemChannel, c => c[j], item => SetItem(channel.Value, j, item))
+                            channel.Merge(itemChannel, c => c[j], item => SetItem(channel.Value, j, item))
                         };
 
                         editor = editorContext.Factory.CreateObjectEditor(itemChannel, editorContext);

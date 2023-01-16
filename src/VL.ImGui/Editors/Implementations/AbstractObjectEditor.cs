@@ -40,7 +40,7 @@ namespace VL.ImGui.Editors
             }
 
             OnNext(channel.Object);
-            publicChannelSubscription = channel.ToObservable().Subscribe(OnNext);
+            publicChannelSubscription = channel.ToObservableOfObject().Subscribe(OnNext);
         }
 
         public void Dispose()
@@ -72,7 +72,7 @@ namespace VL.ImGui.Editors
                 privateChannel?.Dispose();
                 privateChannel = Channel.CreateChannelOfType(type);
                 privateChannel.Object = value;
-                privateChannelSubscription.Disposable = privateChannel.ToObservable().Subscribe(v =>
+                privateChannelSubscription.Disposable = privateChannel.ToObservableOfObject().Subscribe(v =>
                 {
                     // Push to upstream channel
                     PushValue(publicChannel, v);

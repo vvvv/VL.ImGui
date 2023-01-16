@@ -48,9 +48,9 @@ namespace VL.ImGui.Editors
                         // Setup channel
                         var propertyChannel = Channel.CreateChannelOfType(property.Type);
                         subscriptions.Add(
-                            channel.BindTwoWay(
+                            channel.Merge(
                                 propertyChannel.ChannelOfObject,
-                                v => property.GetValue((IVLObject)channel.Value),
+                                (object v) => property.GetValue((IVLObject)channel.Value),
                                 v => (T)property.WithValue((IVLObject)channel.Value, v)));
 
                         var attributes = property.GetAttributes<Attribute>().ToList();
