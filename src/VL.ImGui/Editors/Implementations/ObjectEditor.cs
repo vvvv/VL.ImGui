@@ -54,7 +54,9 @@ namespace VL.ImGui.Editors
                                 channel.Merge(
                                     propertyChannel.ChannelOfObject,
                                     (object v) => property.GetValue((IVLObject)channel.Value),
-                                    v => (T)property.WithValue((IVLObject)channel.Value, v)));
+                                    v => (T)property.WithValue((IVLObject)channel.Value, v), 
+                                    initialization: ChannelMergeInitialization.UseA,
+                                    pushEagerlyTo: ChannelSelection.ChannelA));
 
                             var attributes = property.GetAttributes<Attribute>().ToList();
                             propertyChannel.Attributes.Value = attributes;
