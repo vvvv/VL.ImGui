@@ -2,5 +2,5 @@
 
 namespace VL.ImGui.Editors
 {
-    public record ObjectEditorContext(IObjectEditorFactory Factory, IReadOnlyList<Attribute> Attributes, string? Label = null, bool ViewOnly = false);
+    public record ObjectEditorContext(IObjectEditorFactory Factory, string? Label = null, bool ViewOnly = false);
 }
