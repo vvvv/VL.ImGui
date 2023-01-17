@@ -1,4 +1,5 @@
 ﻿using System.Collections.Immutable;
+using System.ComponentModel;
 using System.Reactive.Disposables;
 using System.Reflection;
 using VL.Core;
@@ -45,18 +46,25 @@ namespace VL.ImGui.Editors
                 {
                     if (!editors.TryGetValue(property, out var editor))
                     {
-                        // Setup channel
-                        var propertyChannel = Channel.CreateChannelOfType(property.Type);
-                        subscriptions.Add(
-                            channel.Merge(
-                                propertyChannel.ChannelOfObject,
-                                (object v) => property.GetValue((IVLObject)channel.Value),
-                                v => (T)property.WithValue((IVLObject)channel.Value, v)));
+                        if (IsVisible(property))
+                        {
+                            // Setup channel
+                            var propertyChannel = Channel.CreateChannelOfType(property.Type);
+                            subscriptions.Add(
+                                channel.Merge(
+                                    propertyChannel.ChannelOfObject,
+                                    (object v) => property.GetValue((IVLObject)channel.Value),
+                                    v => (T)property.WithValue((IVLObject)channel.Value, v)));
 
-                        var attributes = property.GetAttributes<Attribute>().ToList();
-                        var label = attributes.OfType<LabelAttribute>().FirstOrDefault()?.Label ?? property.OriginalName;
-                        var contextForProperty = new ObjectEditorContext(factory, attributes, label);
-                        editor = editors[property] = factory.CreateObjectEditor(propertyChannel, contextForProperty);
+                            var attributes = property.GetAttributes<Attribute>().ToList();
+                            var label = attributes.OfType<LabelAttribute>().FirstOrDefault()?.Label ?? property.OriginalName;
+                            var contextForProperty = new ObjectEditorContext(factory, attributes, label);
+                            editor = editors[property] = factory.CreateObjectEditor(propertyChannel, contextForProperty);
+                        }
+                        else
+                        {
+                            editor = editors[property] = null;
+                        }
                     }
 
                     if (editor != null)
@@ -91,7 +99,13 @@ namespace VL.ImGui.Editors
             {
                 ImGui.TextUnformatted("NULL");
             }
-        }       
+        }
+
+        static bool IsVisible(IVLPropertyInfo property)
+        {
+            var browseable = property.GetAttributes<BrowsableAttribute>().FirstOrDefault();
+            return browseable is null || browseable.Browsable;
+        }
     }
 
 }
