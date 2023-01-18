@@ -4,6 +4,7 @@ using VL.Core;
 using VL.Lib.Reactive;
 using System.Collections.Immutable;
 using System.Reflection;
+using System.ComponentModel;
 
 namespace VL.ImGui.Editors
 {
@@ -173,9 +174,9 @@ namespace VL.ImGui.Editors
 
         static string GetLabel(IVLTypeInfo typeInfo)
         {
-            var labelAttribute = typeInfo.ClrType.GetCustomAttribute<LabelAttribute>();
+            var labelAttribute = typeInfo.ClrType.GetCustomAttribute<DisplayNameAttribute>();
             if (labelAttribute != null)
-                return labelAttribute.Label;
+                return labelAttribute.DisplayName;
             var displayAttribute = typeInfo.ClrType.GetCustomAttribute<Stride.Core.DisplayAttribute>();
             if (displayAttribute != null)
                 return displayAttribute.Name;
