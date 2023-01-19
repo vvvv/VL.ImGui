@@ -100,7 +100,7 @@ namespace VL.ImGui
 
         internal static string GetLabel(object widget, string? label)
         {
-            if (!label.IsNullOrWhitespace())
+            if (!string.IsNullOrWhiteSpace(label))
                 return label;
 
             if (Labels is null)
