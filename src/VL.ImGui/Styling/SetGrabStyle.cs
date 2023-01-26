@@ -26,7 +26,7 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<float> Rounding { private get; set; }
 
-        internal override void SetCore()
+        internal override void SetCore(Context context)
         {
             if (MinSize.HasValue)
             {

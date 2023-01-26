@@ -43,7 +43,7 @@ namespace VL.ImGui.Styling
         /// </summary>
         public Optional<Vector2> CellPadding { private get; set; }
 
-        internal override void SetCore()
+        internal override void SetCore(Context context)
         {
             if (HeaderBackground.HasValue)
             {

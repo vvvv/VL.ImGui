@@ -21,7 +21,7 @@ namespace VL.ImGui.Styling
         System.Numerics.Vector2 previousOffset;
         DrawList previousDrawList;
 
-        internal override void SetCore()
+        internal override void SetCore(Context context)
         {
             previousDrawList = Context.Current.DrawList;
             previousDrawListPtr = Context.Current.DrawListPtr;

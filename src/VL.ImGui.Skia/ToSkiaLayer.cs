@@ -10,10 +10,15 @@ using Stride.Core.Mathematics;
 using MouseButtons = VL.Lib.IO.MouseButtons;
 using Keys = VL.Lib.IO.Keys;
 using System.Buffers;
+using VL.Lib.Collections;
+using System.Drawing;
+using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace VL.ImGui
 {
     using ImGui = ImGuiNET.ImGui;
+    using RectangleF = Stride.Core.Mathematics.RectangleF;
     using Vector2 = System.Numerics.Vector2;
 
     public class ToSkiaLayer : IDisposable, ILayer
@@ -48,6 +53,7 @@ namespace VL.ImGui
         private readonly Handle<SKPaint> _fontPaint;
         float _fontScaling;
         float _uiScaling;
+        Spread<FontConfig> _fonts = Spread<FontConfig>.Empty;
 
         CallerInfo _lastCallerInfo;
         ImDrawDataPtr _drawDataPtr;
@@ -70,13 +76,19 @@ namespace VL.ImGui
             }
         }
 
-        public ILayer Update(Widget widget, bool dockingEnabled)
+        public ILayer Update(Widget widget, bool dockingEnabled, Spread<FontConfig> fonts)
         {
             if (_lastCallerInfo is null)
                 return this;
 
             using (_context.MakeCurrent())
             {
+                if (!_fonts.SequenceEqual(fonts))
+                {
+                    _fonts = fonts;
+                    BuildImFontAtlas(_io.Fonts, _fontPaint, _fontScaling, fonts);
+                }
+
                 var bounds = _lastCallerInfo.ViewportBounds;
 
                 _io.DisplaySize = new Vector2(bounds.Width, bounds.Height);
@@ -140,7 +152,7 @@ namespace VL.ImGui
             if (fontScaling != _fontScaling)
             {
                 _fontScaling = fontScaling;
-                BuildImFontAtlas(_io.Fonts, _fontPaint, fontScaling);
+                BuildImFontAtlas(_io.Fonts, _fontPaint, fontScaling, _fonts);
             }
             if (uiScaling != _uiScaling) 
             {
@@ -163,43 +175,105 @@ namespace VL.ImGui
                 Render(caller, _drawDataPtr);
         }
 
-        static void BuildImFontAtlas(ImFontAtlasPtr atlas, Handle<SKPaint> paintHandle, float scaling = 1f)
+        void BuildImFontAtlas(ImFontAtlasPtr atlas, Handle<SKPaint> paintHandle, float scaling, Spread<FontConfig> fonts)
         {
-            //atlas.AddFontDefault();
+            atlas.Clear();
+            _context.Fonts.Clear();
 
+            var anyFontLoaded = false;
             var fontsfolder = Environment.GetFolderPath(Environment.SpecialFolder.Fonts);
-            using var defaultTypeFace = SKTypeface.CreateDefault();
-            var names = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+
+            if (fonts.IsEmpty)
+                fonts = Spread.Create(FontConfig.Default);
+
+            // TODO: Platforms other than Windows!
+            using var g = Graphics.FromHwnd(IntPtr.Zero);
+            var hdc = g.GetHdc();
+            try
             {
-                defaultTypeFace.FamilyName.Replace(" ", ""),
-                //"arial",
-                //"tahoma"
-            };
-            foreach (var fontPath in Directory.GetFiles(fontsfolder, "*.ttf").Where(p => names.Contains(Path.GetFileNameWithoutExtension(p))))
-            {
-                ImFontConfig cfg = new ImFontConfig()
+                foreach (var font in fonts)
                 {
-                    SizePixels = 16f * scaling,
-                    FontDataOwnedByAtlas = 1,
-                    EllipsisChar = 0x0085,
-                    OversampleH = 1,
-                    OversampleV = 1,
-                    PixelSnapH = 1,
-                    GlyphOffset = new Vector2(0, 0),
-                    GlyphMaxAdvanceX = float.MaxValue,
-                    RasterizerMultiply = 1.0f
-                };
-                unsafe
-                {
-                    atlas.AddFontFromFileTTF(fontPath, cfg.SizePixels, &cfg);
+                    if (font is null)
+                        continue;
+
+                    var size = Math.Clamp(font.Size * 100 /* hecto pixel */ * scaling, 1, short.MaxValue);
+                    using var systemFont = new Font(font.FamilyName.Value, size, font.FontStyle, GraphicsUnit.Pixel);
+
+                    var hfont = systemFont.ToHfont();
+                    SelectObject(hdc, hfont);
+                    var bufferSize = GetFontData(hdc, 0, 0, null, 0);
+                    if (bufferSize == 0)
+                        continue;
+
+                    var buffer = new byte[bufferSize];
+                    GetFontData(hdc, 0, 0, buffer, bufferSize);
+
+                    //var name = font.FamilyName.Value.Replace(" ", "");
+                    //var fontPath = Directory.GetFiles(fontsfolder, "*.ttf")
+                    //    .FirstOrDefault(p => string.Equals(Path.GetFileNameWithoutExtension(p), name));
+                    //if (fontPath is null)
+                    //    continue;
+
+                    ImFontConfig cfg = new ImFontConfig()
+                    {
+                        SizePixels = size,
+                        FontDataOwnedByAtlas = 0,
+                        EllipsisChar = unchecked((ushort)-1),
+                        OversampleH = 1,
+                        OversampleV = 1,
+                        PixelSnapH = 1,
+                        GlyphOffset = new Vector2(0, 0),
+                        GlyphMaxAdvanceX = float.MaxValue,
+                        RasterizerMultiply = 1.0f
+                    };
+
+                    unsafe
+                    {
+                        //atlas.AddFontFromFileTTF(fontPath, cfg.SizePixels, &cfg);
+
+                        // Write name
+                        Span<byte> s = Encoding.Default.GetBytes(font.ToString());
+                        var dst = new Span<byte>(cfg.Name, 40);
+                        s.Slice(0, Math.Min(s.Length, dst.Length)).CopyTo(dst);
+
+                        fixed (byte* pBuffer = buffer)
+                        {
+                            var f = atlas.AddFontFromMemoryTTF(new IntPtr(pBuffer), buffer.Length, cfg.SizePixels, &cfg);
+                            if (f.NativePtr != null)
+                            {
+                                anyFontLoaded = true;
+                                _context.Fonts[font.Name] = f;
+                            }
+                        }
+
+                    }
                 }
+            }
+            finally
+            {
+                g.ReleaseHdc(hdc);
+            }
+
+            if (!anyFontLoaded)
+            {
+                atlas.AddFontDefault();
             }
 
             atlas.GetTexDataAsAlpha8(out IntPtr pixels, out var w, out var h);
+
+            if (w == 0)
+            {
+                // Something went wrong, load default font
+                atlas.Clear();
+                _context.Fonts.Clear();
+                atlas.AddFontDefault();
+                atlas.GetTexDataAsAlpha8(out pixels, out w, out h);
+            }
+
             var info = new SKImageInfo(w, h, SKColorType.Alpha8);
-            var pmap = new SKPixmap(info, pixels, info.RowBytes);
+            using var pmap = new SKPixmap(info, pixels, info.RowBytes);
             var localMatrix = SKMatrix.CreateScale(1.0f / w, 1.0f / h);
-            var fontImage = SKImage.FromPixels(pmap);
+            var fontImage = SKImage.FromPixelCopy(pmap);
             // makeShader(SkSamplingOptions(SkFilterMode::kLinear), localMatrix);
             var fontShader = fontImage.ToShader(SKShaderTileMode.Clamp, SKShaderTileMode.Clamp, localMatrix);
             var paint = paintHandle.Target;
@@ -209,6 +283,12 @@ namespace VL.ImGui
                 paint.Color = SKColors.White;
                 atlas.TexID = paintHandle.Ptr;
             }
+
+            [DllImport("gdi32.dll")]
+            static extern uint GetFontData(IntPtr hdc, uint dwTable, uint dwOffset, [Out] byte[] lpvBuffer, uint cbData);
+
+            [DllImport("gdi32.dll", EntryPoint = "SelectObject")]
+            static extern IntPtr SelectObject([In] IntPtr hdc, [In] IntPtr hgdiobj);
         }
 
         static unsafe void UpdateUIScaling(float scaling = 1f)

@@ -26,7 +26,7 @@ namespace VL.ImGui.Styling
 
         public Optional<Color4> Active { private get; set; }
 
-        internal override void SetCore()
+        internal override void SetCore(Context context)
         {
             if (Color.HasValue)
             {

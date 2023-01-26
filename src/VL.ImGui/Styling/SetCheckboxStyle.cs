@@ -18,7 +18,7 @@ namespace VL.ImGui.Styling
     {
         public Optional<Color4> Checkmark { private get; set; }
 
-        internal override void SetCore()
+        internal override void SetCore(Context context)
         {
             if (Checkmark.HasValue)
             {

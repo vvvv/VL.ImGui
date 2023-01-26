@@ -27,7 +27,7 @@
 //        /// </summary>
 //        public Optional<bool> AntiAliasedFill { private get; set; }
 
-//        internal override void SetCore()
+//        internal override void SetCore(Context context)
 //        {
 //            if (AntiAliasedLines.HasValue)
 //            {

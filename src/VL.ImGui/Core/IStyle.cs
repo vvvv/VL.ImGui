@@ -2,7 +2,7 @@
 {
     public interface IStyle
     {
-        void Set();
+        void Set(Context context);
 
         void Reset();
     }

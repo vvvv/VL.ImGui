@@ -9,12 +9,12 @@
         protected int colorCount;
         protected int valueCount;
         
-        public void Set()
+        public void Set(Context context)
         {
-            Input?.Set();
+            Input?.Set(context);
             colorCount = 0;
             valueCount = 0;
-            SetCore();
+            SetCore(context);
         }
 
         public virtual void Reset()
@@ -26,7 +26,7 @@
             Input?.Reset();
         }
 
-        internal abstract void SetCore();
+        internal abstract void SetCore(Context context);
 
 
         // not really used

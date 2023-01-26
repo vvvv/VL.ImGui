@@ -18,7 +18,7 @@ namespace VL.ImGui
             {
                 try
                 {
-                    Style?.Set();
+                    Style?.Set(context);
                     UpdateCore(context);
                 }
                 finally

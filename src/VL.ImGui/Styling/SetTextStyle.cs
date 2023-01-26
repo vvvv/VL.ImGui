@@ -16,14 +16,17 @@ namespace VL.ImGui.Styling
         Tags = "Color DisabledColor SelectedTextBg")]
     internal partial class SetTextStyle : StyleBase
     {
+        private bool fontPushed;
+
         public Optional<Color4> Color { private get; set; }
 
         public Optional<Color4> DisabledColor { private get; set; }
 
         public Optional<Color4> SelectedTextBackground { private get; set; }
 
+        public string? FontName { private get; set; }
 
-        internal override void SetCore()
+        internal override void SetCore(Context context)
         {
             if (Color.HasValue)
             {
@@ -40,6 +43,22 @@ namespace VL.ImGui.Styling
                 colorCount++;
                 ImGui.PushStyleColor(ImGuiCol.TextSelectedBg, SelectedTextBackground.Value.ToImGui());
             }
+            if (FontName != null && context.Fonts.TryGetValue(FontName, out var font))
+            {
+                ImGui.PushFont(font);
+                fontPushed = true;
+            }
+        }
+
+        public override void Reset()
+        {
+            if (fontPushed)
+            {
+                ImGui.PopFont();
+                fontPushed = false;
+            }
+
+            base.Reset();
         }
     }
 }

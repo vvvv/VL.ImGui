@@ -114,6 +114,8 @@ namespace VL.ImGui
             return label;
         }
 
+        internal readonly Dictionary<string, ImFontPtr> Fonts = new Dictionary<string, ImFontPtr>();
+
         public readonly struct Frame : IDisposable
         {
             readonly IntPtr previous;
