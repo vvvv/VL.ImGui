@@ -4513,17 +4513,6 @@
         </ProcessDefinition>
       </Patch>
     </Node>
-    <Pin Id="RjGqIa4XnyML4sN6lBGYHN" Name="Text" Kind="InputPin" Bounds="441,210" />
-    <Pin Id="J0V5Hb27cF4NVW2sXZqSQt" Name="Width" Kind="InputPin" Bounds="506,224" DefaultValue="100" />
-    <Pin Id="LTHtzo5PZrjLG5KRONXJVL" Name="Disabled" Kind="InputPin" Bounds="600,225" />
-    <Pin Id="APZcWGVgTL8OdyDleFSjIh" Name="Output" Kind="OutputPin" Bounds="451,392" />
-    <Pin Id="UkW3peq1zzwLIIGwMCYuT7" Name="Context" Kind="InputPin" Bounds="239,440" />
-    <Pin Id="QH5PrSc9YdKO6uxW3Ic0bO" Name="Region" Kind="InputPin">
-      <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
-        <Choice Kind="TypeFlag" Name="ICustomRegion" />
-      </p:TypeAnnotation>
-    </Pin>
-    <Pin Id="COXdbyOB14GOVao4fNznRc" Name="Context" Kind="OutputPin" Bounds="266,552" />
   </Patch>
   <NugetDependency Id="Vz3cwZrBJTGLAh6YbNZBCx" Location="VL.CoreLib" Version="2022.5.0-0242-g24c47d850a" />
   <PlatformDependency Id="PSyqO1CCWQcNb5qk90CsPv" Location="./lib/net6.0/VL.ImGui.dll" />
