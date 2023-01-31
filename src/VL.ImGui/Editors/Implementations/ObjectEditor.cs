@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Immutable;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Reactive.Disposables;
 using System.Reflection;
@@ -13,18 +14,18 @@ namespace VL.ImGui.Editors
 
     sealed class ObjectEditor<T> : IObjectEditor, IDisposable
     {
-        static readonly ConditionalWeakTable<IVLPropertyInfo, VLPropertyDescriptor> propertiesCache = new ConditionalWeakTable<IVLPropertyInfo, VLPropertyDescriptor>();
+        static Spread<IVLPropertyInfo>? s_propertyInfos;
+        static ImmutableArray<VLPropertyDescriptor> s_properties;
+
         readonly Dictionary<VLPropertyDescriptor, IObjectEditor?> editors = new Dictionary<VLPropertyDescriptor, IObjectEditor?>();
         readonly CompositeDisposable subscriptions = new CompositeDisposable();
         readonly Channel<T> channel;
         readonly IObjectEditorFactory factory;
-        readonly IVLTypeInfo typeInfo;
 
-        public ObjectEditor(Channel<T> channel, ObjectEditorContext editorContext, IVLTypeInfo typeInfo)
+        public ObjectEditor(Channel<T> channel, ObjectEditorContext editorContext)
         {
             this.channel = channel;
             this.factory = editorContext.Factory;
-            this.typeInfo = typeInfo;
         }
 
         public void Dispose()
@@ -40,12 +41,9 @@ namespace VL.ImGui.Editors
             if (context is null)
                 return;
 
-            var typeInfo = this.typeInfo;
             if (channel.Value is IVLObject instance)
             {
-                var properties = typeInfo.Properties.Select(GetDescriptor)
-                    .Where(d => d.IsBrowsable)
-                    .OrderBy(d => d.Order);
+                var properties = GetPropertyDescriptors(instance.Type);
                 foreach (var property in properties)
                 {
                     if (!editors.TryGetValue(property, out var editor))
@@ -99,9 +97,21 @@ namespace VL.ImGui.Editors
             }
         }
 
-        VLPropertyDescriptor GetDescriptor(IVLPropertyInfo property)
+        static ImmutableArray<VLPropertyDescriptor> GetPropertyDescriptors(IVLTypeInfo typeInfo)
         {
-            return propertiesCache.GetValue(property, p => new VLPropertyDescriptor(p));
+            var propertyInfos = typeInfo.Properties;
+            if (propertyInfos == s_propertyInfos)
+                return s_properties;
+
+            var properties = propertyInfos.Select(p => new VLPropertyDescriptor(p))
+                .Where(d => d.IsBrowsable)
+                .OrderBy(d => d.Order)
+                .ToImmutableArray();
+
+            s_propertyInfos = propertyInfos;
+            s_properties = properties;
+
+            return properties;
         }
 
         class VLPropertyDescriptor : PropertyDescriptor
@@ -187,6 +197,8 @@ namespace VL.ImGui.Editors
             {
                 return false;
             }
+
+            public override string ToString() => DisplayName;
         }
     }
 

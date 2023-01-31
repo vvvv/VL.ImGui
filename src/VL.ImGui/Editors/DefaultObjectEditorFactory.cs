@@ -49,7 +49,7 @@ namespace VL.ImGui.Editors
 
             {
                 var editorType = typeof(ObjectEditor<>).MakeGenericType(staticType);
-                return (IObjectEditor?)Activator.CreateInstance(editorType, new object[] { channel, context, typeInfo });
+                return (IObjectEditor?)Activator.CreateInstance(editorType, new object[] { channel, context });
             }
         }
 
