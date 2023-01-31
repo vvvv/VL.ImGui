@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0495-7dc732f1e1" Version="0.128">
+<Document xmlns:p="property" Id="HGwjAyY9WlcM6EHVoNooQR" LanguageVersion="2022.5.0-0530-gd9d3d42225" Version="0.128">
   <Patch Id="FqV6a8uF6wBNEsSb65h9jq">
     <Canvas Id="CiUOvKtIpncPRBZwoQzisM" CanvasType="FullCategory">
       <Canvas Id="KTyfvxdYp7wLpquGu2GQq3" Name="ImGui" Position="183,154">
@@ -19,14 +19,14 @@
 
 -->
           <Node Name="CollapsingHeader" Bounds="231,380" Id="N90vPSmLzrEOmc5g18ZmI2">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="NXPlnYPbvA5Nohk8vbTtfo">
               <Canvas Id="I5WvN8G113mP0CocCUC5jn" CanvasType="Group">
                 <ControlPoint Id="JRIXCuUFpV6L1goMb7QoTJ" Bounds="254,276" />
                 <Node Bounds="252,316,113,19" Id="Odw17Zzt7zVOSjxTffKXs7">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -34,7 +34,7 @@
                   <Pin Id="UqDvSc3yF48MDcV9y1soYZ" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="250,488,-17,19" Id="DKhADCtGYX7P90aPMUuNIL">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -48,7 +48,7 @@
                 <ControlPoint Id="O8cELFaxwqiLJulDfOR0ws" Bounds="528,307" />
                 <ControlPoint Id="OvfN0BcWWKPNQ2DScO3WBw" Bounds="600,578" />
                 <Node Bounds="550,415" Id="BEObo8MFFKxLG63kxk6XcQ">
-                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="CollapsingHeader" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
@@ -86,7 +86,7 @@
               <Patch Id="NzSyzPaBV3oLzJn07cNOIT" Name="Update" ManuallySortedPins="true">
                 <Pin Id="EVTPLcgvJDgOptia4JEYvK" Name="Context" Kind="InputPin" Bounds="239,440" />
                 <Pin Id="KwpKw6G1s6XNU4WShGdVER" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -125,14 +125,14 @@
 
 -->
           <Node Name="TreeNode" Bounds="231,415" Id="EjYpTTolO9NPsY4kl9ctGr">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="EYUQZwo4koNLI0wa250hhP">
               <Canvas Id="To5YTKwITXvLlnX2xtsFC7" CanvasType="Group">
                 <ControlPoint Id="M9fwM0cYFoAQcyKjMIYdb9" Bounds="254,276" />
                 <Node Bounds="252,316,113,19" Id="HnrzOZprQ1TPrNrJ58iFnz">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -140,7 +140,7 @@
                   <Pin Id="MU3wbBVXPslL20m3PAFUfw" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="250,488,-17,19" Id="O2ii3Q4a3tROquwzvJEHGU">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -153,7 +153,7 @@
                 <ControlPoint Id="LzwzVLFVmTLNOk9QZH1IzN" Bounds="223,434" />
                 <ControlPoint Id="VdnmhOzp113Nm1V3lQaRHR" Bounds="528,307" />
                 <Node Bounds="550,415" AutoConnect="true" Id="FWDb5xWK1DNOXJGSNDoWM6">
-                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                     <Choice Kind="ProcessNode" Name="TreeNode" />
@@ -194,7 +194,7 @@
               <Patch Id="VSQPO5QtpdnOFnSUtGecY8" Name="Update" ManuallySortedPins="true">
                 <Pin Id="BcBKZVEwIb8PJUKGdtWVbq" Name="Context" Kind="InputPin" Bounds="239,440" />
                 <Pin Id="G94AeGEKVytOxV7xXSy5E6" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -213,14 +213,14 @@
 
 -->
           <Node Name="TabBar" Bounds="231,454" Id="IUcxZd7L4MJLiHe3Rbg0SN">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="LDmh6nQ7PDQN7lVI8uTKnl">
               <Canvas Id="TSlmT5i26urPDzFVjH7CsZ" CanvasType="Group">
                 <ControlPoint Id="DcoKJD7u7mNLUghiG7e3aQ" Bounds="254,276" />
                 <Node Bounds="252,316,113,19" Id="JuedhKtKUUhNHxddsnBIvx">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -228,7 +228,7 @@
                   <Pin Id="EbNvEaDNbcTOm1p6MHwaoh" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="250,488,-17,19" Id="Q6itTiNlayaOywdDprHpbm">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -241,7 +241,7 @@
                 <ControlPoint Id="T5gjRzq92FcOJimN5spwAI" Bounds="223,434" />
                 <ControlPoint Id="TPTdtw5kVXzQQ5hnG5k2pZ" Bounds="418,272" />
                 <Node Bounds="390,374,65,19" AutoConnect="true" Id="LRRzujq24YOQJaug04pVIo">
-                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                     <Choice Kind="ProcessNode" Name="TabBar" />
@@ -274,7 +274,7 @@
               <Patch Id="C16BlHIQ8zkNE5ZrHT1yHF" Name="Update" ManuallySortedPins="true">
                 <Pin Id="D8C52qLbbVnNOZbWTI1HwZ" Name="Context" Kind="InputPin" Bounds="239,440" />
                 <Pin Id="Onn4aEqw3JbM5yNbCgFWJY" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -291,14 +291,14 @@
 
 -->
           <Node Name="TabItem" Bounds="231,489" Id="UoIDsj517RwMacpwR4u3AO">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="LhSsJdcnOgsMxOdTlhiZkA">
               <Canvas Id="KQulbYCZuMVNkk5PLU40ZO" CanvasType="Group">
                 <ControlPoint Id="ClXEpRphcRPM2Z2ah8DM8x" Bounds="254,276" />
                 <Node Bounds="252,316,113,19" Id="RusdUC9G2KjNuPYf2PgdjM">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -306,7 +306,7 @@
                   <Pin Id="Ny8KJ0HaHLhMNmRRxo6yag" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="250,488,-17,19" Id="PX9J3TcV2WeO8529tOInDO">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -319,7 +319,7 @@
                 <ControlPoint Id="OxLhJAGze66M0fFVjKpURY" Bounds="223,434" />
                 <ControlPoint Id="E3WdKxJFjKCQWXKapkfe8S" Bounds="409,272" />
                 <Node Bounds="390,374,65,19" AutoConnect="true" Id="FoqbTmvtdDQM9tWX5hINNa">
-                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                     <Choice Kind="ProcessNode" Name="TabItem" />
@@ -357,7 +357,7 @@
               <Patch Id="CZsookaWpd1MBpGHRjG3d1" Name="Update" ManuallySortedPins="true">
                 <Pin Id="SF4EilPbn4qPkOjapL1el3" Name="Context" Kind="InputPin" Bounds="239,440" />
                 <Pin Id="KUiwjpxqPsDPm12V9wnB7w" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -379,14 +379,14 @@
 
 -->
           <Node Name="Table" Bounds="456,211" Id="U87EehxIGc8QEAvDmd4EFM">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="AJvbC9uWUzILhTkFsQHx1W">
               <Canvas Id="N8m4Ah7ApQ0OXh3oQ8zHdm" CanvasType="Group">
                 <ControlPoint Id="HHDZ5S2dvrtMIwb0ytFjOX" Bounds="256,291" />
                 <Node Bounds="254,331,113,19" Id="GRNJYmn6r6rLTDeG84WNDc">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -394,7 +394,7 @@
                   <Pin Id="TL21hYpG2NsLW9Gm5aDRzx" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="234,395,125,19" AutoConnect="true" Id="CGaim4vUJFXOduqtI5bD3K">
-                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="TableCore" />
                   </p:NodeReference>
@@ -408,7 +408,7 @@
                   <Pin Id="C9yiH66g3iNMO7Q5yThmuV" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="196,455,81,19" Id="UEG8TddmSiIP03DaNw9Nx5">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -436,7 +436,7 @@
               <Patch Id="JlBV33LMvULLyZx4butUUL" Name="Create" />
               <Patch Id="EsTna0y87feO7MfW9E65uM" Name="Update" ManuallySortedPins="true">
                 <Pin Id="FUNSYHDHvjBOwdJiAPD3lx" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -459,14 +459,14 @@
 
 -->
           <Node Name="Group" Bounds="456,245" Id="BTzwhv56nKbPPdYzb2DF9g">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="LXUN9YNz9ihOcdx65P4Mzn">
               <Canvas Id="G8JXpSLjQtJQaf8LJRKt3B" CanvasType="Group">
                 <ControlPoint Id="OuFPJEtsL7oP4UKGnKqmfr" Bounds="613,150" />
                 <Node Bounds="611,176,113,19" Id="J0o4xwuXU8IMixOKah5qHJ">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -474,7 +474,7 @@
                   <Pin Id="BjTUVY5lYNbLpWP2NHNL0F" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="611,241,66,19" AutoConnect="true" Id="Vn2SZtjhgc2P9RGKcgJsVg">
-                  <p:NodeReference LastCategoryFullName="ReGui.Commands" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ReGui.Commands" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="Group" />
                     <CategoryReference Kind="Category" Name="Commands" NeedsToBeDirectParent="true">
@@ -486,7 +486,7 @@
                   <Pin Id="SwGnrHEjoyALMqqwkinR1A" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="573,324,81,19" Id="TABvGSO2tXQLnzzDME7jWU">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -515,7 +515,7 @@
                 <Pin Id="Nz6zMtuLt2bNPtWpmjdOc3" Name="Context" Kind="InputPin" />
                 <Pin Id="TRra6cWwLZtPnC8emNaBIp" Name="Style" Kind="InputPin" />
                 <Pin Id="BbvEIiiHVJfNjcDkXltf63" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -529,13 +529,13 @@
 
 -->
           <Node Name="MenuBar" Bounds="234,264" Id="CR0Ua1qJzJQN74G9dgPzDi">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="E9OvvQsjLRaQZzdAsBx1cV">
               <Canvas Id="DX0OvpgeSFdNfvUkhY8YSe" CanvasType="Group">
                 <Node Bounds="585,308,77,19" AutoConnect="true" Id="VkmabuN1SHtOydDpMjJow7">
-                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="MenuBar" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
@@ -548,7 +548,7 @@
                 </Node>
                 <ControlPoint Id="FC3BE9QdcP2PQQMTFwIk4f" Bounds="587,206" />
                 <Node Bounds="585,244,113,19" Id="EctuX8hCseZL24h7SUX9dg">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -556,7 +556,7 @@
                   <Pin Id="KHn3ETNsjqGN7rBnYE8Iry" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="548,370,81,19" Id="Qvk8ONleC1sPVSrQ9HGzXQ">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -585,7 +585,7 @@
                 <Pin Id="SM2sX0RDfz6OuaOSf3rOKZ" Name="Context" Kind="InputPin" />
                 <Pin Id="JdChOqjTe7wPdfHumxusD5" Name="Style" Kind="InputPin" />
                 <Pin Id="So8SXGjLahDLNFbAlPDesi" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -599,13 +599,13 @@
 
 -->
           <Node Name="Menu" Bounds="234,336" Id="I6ei7XVh4iEO0cbGSUs52E">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="BFEdkH20rykM06nTIQ9AUt">
               <Canvas Id="N17eVf2nOjMQdZ5SQecuop" CanvasType="Group">
                 <Node Bounds="585,292,56,19" AutoConnect="true" Id="R9KlrinbYyyLwCfRAunjnv">
-                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                     <Choice Kind="ProcessNode" Name="Menu" />
@@ -618,7 +618,7 @@
                 </Node>
                 <ControlPoint Id="Jd2cLBXgKdQLegL8Xx1y3J" Bounds="587,206" />
                 <Node Bounds="585,244,113,19" Id="PdmgNNfiXzMO5NJ9T6u56g">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -626,7 +626,7 @@
                   <Pin Id="Ac3MLvjMvYOLuWGJZV5dFo" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="510,344,81,19" Id="GaNcT0Xf2sONtHcPL4Ngme">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -653,7 +653,7 @@
               <Patch Id="GVqsdYg80AaLUbEBI5PNNh" Name="Create" />
               <Patch Id="F1h5qL3ebLLQKGuphb3AV4" Name="Update" ManuallySortedPins="true">
                 <Pin Id="VDRDfIQ77g7NEZDBn5F0xX" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -671,13 +671,13 @@
 
 -->
           <Node Name="Text (Multiline)" Bounds="231,526" Id="QdMDkqlAqpnM34Y1xBSRpw" Tags="label">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="GyIgZxlChm1NogFUybK1zD">
               <Canvas Id="D6f33e2Gl59PxC1sv9dXX2" CanvasType="Group">
                 <Node Bounds="556,364,69,86" Id="HZbMNWaYSbYLBOCbyv17dS">
-                  <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ImGui.Commands" LastDependency="VL.ImGui.vl">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="SetTextWrapPosition" />
                     <CategoryReference Kind="Category" Name="Commands" NeedsToBeDirectParent="true">
@@ -689,7 +689,7 @@
                     <Patch Id="Pm18PfVLpHZN5xfxaKm0Oh" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="Jzncg2DLNczOEYtvCuDKQ8" Name="Update" ManuallySortedPins="true" />
                     <Node Bounds="568,398,45,19" Id="UgAZXBHrvJmNxs1Xx8CtDT">
-                      <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                      <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="ProcessAppFlag" Name="Text" />
                         <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
@@ -748,14 +748,14 @@
 
 -->
           <Node Name="ChildWindow" Bounds="459,405" Id="EFS5Ap5TX0ANFPft4JhnN3">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="H46g3TY2orLMvg9wylUB98">
               <Canvas Id="FJCKA4cp2ECPOdVEfBcpit" CanvasType="Group">
                 <ControlPoint Id="UC9HG0bhyN4Lm7dirpM8fv" Bounds="553,199" />
                 <Node Bounds="551,245,113,19" Id="BCDRvnyBJsKL32rlsTkdpK">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -763,7 +763,7 @@
                   <Pin Id="M14bB4rVjtRLpAVSZE6rtS" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="555,315,105,19" AutoConnect="true" Id="GvUiGURP3DhM0XYAfL0vEj">
-                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="ChildWindow" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
@@ -778,7 +778,7 @@
                   <Pin Id="UP7lXnKtO7rPXmY1zcAqwp" Name="Is Open" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="453,374,81,19" Id="AKF7PYBi1ZhOVWf15kRqG0">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -806,7 +806,7 @@
               <Patch Id="BqTQ3Yae6H5MJRh2NpJccq" Name="Update" ManuallySortedPins="true">
                 <Pin Id="IwMx4MiUPKYNqWmCs0OfQV" Name="Context" Kind="InputPin" Bounds="239,440" />
                 <Pin Id="SjMehVjmXBIPn80ErNrjP9" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -826,14 +826,14 @@
 
 -->
           <Node Name="Popup" Bounds="231,564" Id="OrrDvZnsnnEOtXhQo9ZosA">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="P55jfTm5Jr7PNEx6B2ZlX6">
               <Canvas Id="FyfuFo7rzgeOKVx2pcwtLY" CanvasType="Group">
                 <ControlPoint Id="UQ6NNBDvJPrLc31M62mE0O" Bounds="405,264" />
                 <Node Bounds="403,304,113,19" Id="A1Lxrqnz1fbNud3byWORik">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -845,7 +845,7 @@
                 <ControlPoint Id="Sg8vwkwBE6wLzWwWOuWzvx" Bounds="710,261" />
                 <ControlPoint Id="Csof2GNW4hLLjddXEjXBp3" Bounds="609,442" />
                 <Node Bounds="507,366,85,19" AutoConnect="true" Id="L3kBuChsLoBP7X84UJWHHh">
-                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" OverloadStrategy="AllPinsThatAreNotCommon">
+                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastDependency="VL.ImGUI.Nodes" OverloadStrategy="AllPinsThatAreNotCommon">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="Popup" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
@@ -853,26 +853,26 @@
                     </CategoryReference>
                     <PinReference Kind="InputPin" Name="Label" />
                     <PinReference Kind="InputPin" Name="Label">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastDependency="System.Runtime.dll">
                         <Choice Kind="TypeFlag" Name="String" />
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="InputPin" Name="Bounds" />
                     <PinReference Kind="InputPin" Name="Bounds">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Reactive" LastSymbolSource="VL.Core.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Reactive" LastDependency="VL.Core.dll">
                         <Choice Kind="TypeFlag" Name="Channel" />
                         <p:TypeArguments>
-                          <TypeReference LastCategoryFullName="2D" LastSymbolSource="Stride.Core.Mathematics.dll">
+                          <TypeReference LastCategoryFullName="2D" LastDependency="Stride.Core.Mathematics.dll">
                             <Choice Kind="TypeFlag" Name="Rectangle" />
                           </TypeReference>
                         </p:TypeArguments>
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="InputPin" Name="Is Open">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Reactive" LastSymbolSource="VL.Core.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Reactive" LastDependency="VL.Core.dll">
                         <Choice Kind="TypeFlag" Name="Channel" />
                         <p:TypeArguments>
-                          <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
+                          <TypeReference LastCategoryFullName="Primitive" LastDependency="System.Runtime.dll">
                             <Choice Kind="TypeFlag" Name="Boolean" />
                           </TypeReference>
                         </p:TypeArguments>
@@ -880,24 +880,24 @@
                     </PinReference>
                     <PinReference Kind="OutputPin" Name="Is Open" />
                     <PinReference Kind="OutputPin" Name="Is Open">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastDependency="System.Runtime.dll">
                         <Choice Kind="TypeFlag" Name="Boolean" />
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="InputPin" Name="Flags" />
                     <PinReference Kind="InputPin" Name="Flags">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="ImGui.Flags" LastSymbolSource="ImGui.NET.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="ImGui.Flags" LastDependency="ImGui.NET.dll">
                         <Choice Kind="TypeFlag" Name="ImGuiWindowFlags" />
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="InputPin" Name="Style" />
                     <PinReference Kind="InputPin" Name="Style">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="VL.ImGui" LastSymbolSource="VL.ImGui.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="VL.ImGui" LastDependency="VL.ImGui.dll">
                         <Choice Kind="TypeFlag" Name="IStyle" />
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="OutputPin" Name="Output">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="VL.ImGui.Widgets" LastSymbolSource="VL.ImGui.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="VL.ImGui.Widgets" LastDependency="VL.ImGui.dll">
                         <Choice Kind="TypeFlag" Name="Popup" />
                       </p:DataTypeReference>
                     </PinReference>
@@ -913,7 +913,7 @@
                 </Node>
                 <ControlPoint Id="AzVt3uxsljCONRQeQwnAeb" Bounds="582,261" />
                 <Node Bounds="469,463,81,19" Id="DvjlnReAkXgMPpFdFMNDc9">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -945,7 +945,7 @@
               <Patch Id="H9NNvOUThfZPWQdMCVnZ4Y" Name="Create" />
               <Patch Id="GK7wISZIoKnPPYtE00kIVT" Name="Update" ManuallySortedPins="true">
                 <Pin Id="MtqbDNpK0rnNAIgIHjY0EV" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -971,14 +971,14 @@
 
 -->
           <Node Name="Popup (Modal)" Bounds="231,601" Id="JGtjBEEApdlMejuKHZrrax">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="SUrNSst9M8gQANyvL2TNMC">
               <Canvas Id="SiUt5e2xHaNLexqT1i55oo" CanvasType="Group">
                 <ControlPoint Id="JTG073AH1XzNBsCgkfDXUo" Bounds="405,264" />
                 <Node Bounds="403,304,113,19" Id="N04cCjHjqhuQDwglP5AGHC">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -990,37 +990,37 @@
                 <ControlPoint Id="GEUBAIs6GTqP83OwbwixCF" Bounds="710,261" />
                 <ControlPoint Id="MJvdRwcJXCzLOkeuJ3REju" Bounds="650,429" />
                 <Node Bounds="507,366,85,19" AutoConnect="true" Id="SkWRuSSgicaLoqyfFj0ZSS">
-                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes" OverloadStrategy="AllPinsThatAreNotCommon">
+                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastDependency="VL.ImGUI.Nodes" OverloadStrategy="AllPinsThatAreNotCommon">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="Modal" />
                     <PinReference Kind="InputPin" Name="Label" />
                     <PinReference Kind="InputPin" Name="Label">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastDependency="System.Runtime.dll">
                         <Choice Kind="TypeFlag" Name="String" />
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="InputPin" Name="Has Close Button" />
                     <PinReference Kind="InputPin" Name="Has Close Button">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastDependency="System.Runtime.dll">
                         <Choice Kind="TypeFlag" Name="Boolean" />
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="InputPin" Name="Bounds" />
                     <PinReference Kind="InputPin" Name="Bounds">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Reactive" LastSymbolSource="VL.Core.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Reactive" LastDependency="VL.Core.dll">
                         <Choice Kind="TypeFlag" Name="Channel" />
                         <p:TypeArguments>
-                          <TypeReference LastCategoryFullName="2D" LastSymbolSource="Stride.Core.Mathematics.dll">
+                          <TypeReference LastCategoryFullName="2D" LastDependency="Stride.Core.Mathematics.dll">
                             <Choice Kind="TypeFlag" Name="Rectangle" />
                           </TypeReference>
                         </p:TypeArguments>
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="InputPin" Name="Is Open">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Reactive" LastSymbolSource="VL.Core.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Reactive" LastDependency="VL.Core.dll">
                         <Choice Kind="TypeFlag" Name="Channel" />
                         <p:TypeArguments>
-                          <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
+                          <TypeReference LastCategoryFullName="Primitive" LastDependency="System.Runtime.dll">
                             <Choice Kind="TypeFlag" Name="Boolean" />
                           </TypeReference>
                         </p:TypeArguments>
@@ -1028,24 +1028,24 @@
                     </PinReference>
                     <PinReference Kind="OutputPin" Name="Is Open" />
                     <PinReference Kind="OutputPin" Name="Is Open">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastSymbolSource="System.Runtime.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastDependency="System.Runtime.dll">
                         <Choice Kind="TypeFlag" Name="Boolean" />
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="InputPin" Name="Flags" />
                     <PinReference Kind="InputPin" Name="Flags">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="ImGui.Flags" LastSymbolSource="ImGui.NET.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="ImGui.Flags" LastDependency="ImGui.NET.dll">
                         <Choice Kind="TypeFlag" Name="ImGuiWindowFlags" />
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="InputPin" Name="Style" />
                     <PinReference Kind="InputPin" Name="Style">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="VL.ImGui" LastSymbolSource="VL.ImGui.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="VL.ImGui" LastDependency="VL.ImGui.dll">
                         <Choice Kind="TypeFlag" Name="IStyle" />
                       </p:DataTypeReference>
                     </PinReference>
                     <PinReference Kind="OutputPin" Name="Output">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="VL.ImGui.Widgets" LastSymbolSource="VL.ImGui.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="VL.ImGui.Widgets" LastDependency="VL.ImGui.dll">
                         <Choice Kind="TypeFlag" Name="Modal" />
                       </p:DataTypeReference>
                     </PinReference>
@@ -1063,7 +1063,7 @@
                 <ControlPoint Id="UuwCqcApNFoMpCfl0NIb0J" Bounds="582,261" />
                 <ControlPoint Id="CEriHfCV61zNZbm579qf5X" Bounds="759,262" />
                 <Node Bounds="470,472,81,19" Id="NbqZg3NeqVGNDarnLWNJXA">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -1095,7 +1095,7 @@
               <Patch Id="RPsXgkWeWOeN01Se8fwszf" Name="Create" />
               <Patch Id="IzxrQZawhqdQBNAdGIXyI4" Name="Update" ManuallySortedPins="true">
                 <Pin Id="AJ3WV8LJ6JMNgF7gItC4Oz" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -1124,13 +1124,13 @@
 
 -->
           <Node Name="MainMenuBar" Bounds="234,302" Id="Cw2FZxDBFWTL9aiaIWX5BJ">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="RKaKE9YszUnLX2L41VadWG">
               <Canvas Id="DchBfer6NsPLea2KwnaI3O" CanvasType="Group">
                 <Node Bounds="585,292,99,19" AutoConnect="true" Id="MgBulWZ9MICLRFVxl4Dl9Y">
-                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="MainMenuBar" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
@@ -1143,7 +1143,7 @@
                 </Node>
                 <ControlPoint Id="VEZvPqXJN5bM2g06QoFIAy" Bounds="587,206" />
                 <Node Bounds="585,244,113,19" Id="JDsTfvzC3MKMp73hvpuMT5">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -1151,7 +1151,7 @@
                   <Pin Id="CPzs63upDlUP2HLA6UNa2A" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="546,371,81,19" Id="UxclkbOFhMDN8OSCJ08l7e">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -1180,7 +1180,7 @@
                 <Pin Id="QTs9kKpzLxGL9hyf8xe7EX" Name="Context" Kind="InputPin" />
                 <Pin Id="Gkdu701jG0nPUbdXhXCqWC" Name="Style" Kind="InputPin" />
                 <Pin Id="BCWnClg260RP7v4FCgfWOx" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -1194,14 +1194,14 @@
 
 -->
           <Node Name="Tooltip (Widget)" Bounds="231,637" Id="M3MwuQOA3Y6Pfi3eq7rWFy">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="EmxgtT13JblNLwdyWJNkR5">
               <Canvas Id="MB8WlMapQUUOG1bcV2rnWE" CanvasType="Group">
                 <ControlPoint Id="NgEIbUJph6rLqQZsyxYoQG" Bounds="405,264" />
                 <Node Bounds="403,304,113,19" Id="QPZDJ4sVWIlPgkeaipGwyx">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -1209,7 +1209,7 @@
                   <Pin Id="JN5ItQSVg1zNBDGPp8dSa2" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="365,443,81,19" Id="LyadOkHNCTYPvrFk17Oont">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -1221,7 +1221,7 @@
                 <ControlPoint Id="Fk88v2l6UWoO2uInlwL7gm" Bounds="340,521" />
                 <ControlPoint Id="CuWeMqsmH1JOmfIeQrIFhX" Bounds="338,389" />
                 <Node Bounds="403,358,49,19" AutoConnect="true" Id="Vpwdwx7W9YfPXjKJYi6Xci">
-                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="Tooltip" />
                   </p:NodeReference>
@@ -1246,7 +1246,7 @@
               <Patch Id="QDFR8eym8bYNywT8r3dGF6" Name="Update" ManuallySortedPins="true">
                 <Pin Id="RA7YuxadzefPIjQQS0B65B" Name="Context" Kind="InputPin" />
                 <Pin Id="FP1b2RjBfLTNN5TOFxuKZS" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -1262,14 +1262,14 @@
 
 -->
             <Node Name="Disabled" Bounds="430,304" Id="AZIHxq7yNnHQTq633cfyXt">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
                 <Choice Kind="ContainerDefinition" Name="Process" />
               </p:NodeReference>
               <Patch Id="AqvDbP4OQrqPP3Lmqi8WrC">
                 <Canvas Id="JHK1kP48z6qOreTRDhxMxY" CanvasType="Group">
                   <ControlPoint Id="EcB8YAm4OeuOPrzsSMa3mk" Bounds="405,264" />
                   <Node Bounds="403,304,113,19" Id="OsD3eAZYyn8QaknHhrv99F">
-                    <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                     </p:NodeReference>
@@ -1277,7 +1277,7 @@
                     <Pin Id="UVK4xLribiZQUTBd65UOVf" Name="Output" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="405,362,145,19" AutoConnect="true" Id="S2T5UYxhJ0JM2PaY673iqM">
-                    <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                    <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessNode" Name="Disabled" />
                       <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
@@ -1292,7 +1292,7 @@
                   <ControlPoint Id="V8XVnPcSeqQM0nRi5EiE3U" Bounds="549,257" />
                   <ControlPoint Id="TY4t6h6FlaPNEUa07KzY8d" Bounds="604,254" />
                   <Node Bounds="368,429,81,19" Id="CeINfyOrgiKLQB25HzdvFS">
-                    <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                    <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessNode" Name="RetainedMode" />
                     </p:NodeReference>
@@ -1316,7 +1316,7 @@
                 <Patch Id="DAUdJzDuKYpNUsB9Qr01Wp" Name="Create" />
                 <Patch Id="RGZt4fWcsrIMtr3vPaPZEQ" Name="Update" ManuallySortedPins="true">
                   <Pin Id="UuSZD9m97V0PMTzvUtwet3" Name="Region" Kind="InputPin">
-                    <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                    <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                       <Choice Kind="TypeFlag" Name="ICustomRegion" />
                     </p:TypeAnnotation>
                   </Pin>
@@ -1341,14 +1341,14 @@
 
 -->
           <Node Name="Window" Bounds="235,226" Id="QwFSMcany8NLc4VZeK5Qa6">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="Jvth9yDHjunNvUhVuxFiDW">
               <Canvas Id="QfOPbyQsTWCLxo3Dcdb6Yj" CanvasType="Group">
                 <ControlPoint Id="TcPzQurslfjMrMU3FbLb2i" Bounds="553,199" />
                 <Node Bounds="551,245,113,19" Id="UIfXrm8OEOLQWRwwFEfbq9">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -1356,7 +1356,7 @@
                   <Pin Id="FGB5IhKuIO3LjE9ObTDEuO" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="521,310,125,19" AutoConnect="true" Id="Fn5EIWSYodEOnBLXYFrTIP">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="WindowCore" />
                   </p:NodeReference>
@@ -1393,7 +1393,7 @@
                 <Pin Id="ExmjpURAOoUO6SWWBZCM5J" Name="Flags" Kind="InputPin" />
                 <Pin Id="NHS4lO8jV0sPfzbqE2Z0ON" Name="Style" Kind="InputPin" />
                 <Pin Id="KTCsEOsWwZvQEZz9d5foxG" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -1413,7 +1413,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Widgets" LastSymbolSource="VL.ImGui.dll">
+            <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Widgets" LastDependency="VL.ImGui.dll">
               <Choice Kind="TypeFlag" Name="StyleSnapshot" />
             </p:TypeAnnotation>
             <Patch Id="STmx7az0xk9PzJvUMgjhRv">
@@ -1436,13 +1436,13 @@
 
 -->
           <Node Name="FontConfig" Bounds="380,384" Id="QFaWlL3wvPdOrNgjcvicUp">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="GB2XhJBbeIJQWGB98DILZO">
               <Canvas Id="NmWFsgTwhrvPTgnjizy7JR" CanvasType="Group">
                 <Node Bounds="311,224,96,94" Id="OEnstRo3dcrMibotZXOlrh">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Primitive" />
                     <Choice Kind="ProcessStatefulRegion" Name="Cache" />
@@ -1454,7 +1454,7 @@
                     <Patch Id="JV4FZEw0uH9NFmJyrJPEyv" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="L0Xbz5nkLG7PiUwU6PLVdz" Name="Then" ManuallySortedPins="true" />
                     <Node Bounds="326,271,65,26" Id="VCfqhFT4ZkbNJGNg1C5FP1">
-                      <p:NodeReference LastCategoryFullName="VL.ImGui.FontConfig" LastSymbolSource="VL.ImGui.dll">
+                      <p:NodeReference LastCategoryFullName="VL.ImGui.FontConfig" LastDependency="VL.ImGui.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="AssemblyCategory" Name="FontConfig" />
                         <Choice Kind="OperationCallFlag" Name="Create" />
@@ -1515,13 +1515,13 @@
 
 -->
           <Node Name="SetNextWindowFullscreen" Bounds="443,302" Id="VGQKLU29idDO9DatEbWKRz">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="Lz2POPJhXBFMD6U272p3pZ">
               <Canvas Id="HQtL9aO7Qe7MgJR6oJgh0C" CanvasType="Group">
                 <Node Bounds="532,260,391,264" Id="TDOnbxHmr6pPf2jknlrCmK">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.dll">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="If" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -1533,7 +1533,7 @@
                     <Patch Id="Bkx0ah9LVVLLMF4xzS7wld" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="JtAgTumDV0XNhTh5J3O82S" Name="Then" ManuallySortedPins="true" />
                     <Node Bounds="544,285,94,19" Id="MStp8HWk5GIPcqLfZGddga">
-                      <p:NodeReference LastCategoryFullName="ImGui.Queries" LastSymbolSource="VL.ImGUI.Nodes">
+                      <p:NodeReference LastCategoryFullName="ImGui.Queries" LastDependency="VL.ImGUI.Nodes">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="ProcessAppFlag" Name="GetMainViewport" />
                         <CategoryReference Kind="Category" Name="Queries" NeedsToBeDirectParent="true">
@@ -1545,7 +1545,7 @@
                       <Pin Id="SrLZTN7yWAvNREk1vKFCnP" Name="Value" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="632,314,79,26" Id="FZiHBcA6pqJP0IX8VV958I">
-                      <p:NodeReference LastCategoryFullName="ImGuiNET.ImGuiViewportPtr" LastSymbolSource="ImGui.NET.dll">
+                      <p:NodeReference LastCategoryFullName="ImGuiNET.ImGuiViewportPtr" LastDependency="ImGui.NET.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="AssemblyCategory" Name="ImGuiViewportPtr" />
                         <Choice Kind="OperationCallFlag" Name="WorkPos" />
@@ -1555,7 +1555,7 @@
                       <Pin Id="AcdeuquNN7YMWrm8MsDW3L" Name="Work Pos" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="728,315,79,26" Id="JKFiaEe7lfoNHtx5J1jnVA">
-                      <p:NodeReference LastCategoryFullName="ImGuiNET.ImGuiViewportPtr" LastSymbolSource="ImGui.NET.dll">
+                      <p:NodeReference LastCategoryFullName="ImGuiNET.ImGuiViewportPtr" LastDependency="ImGui.NET.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="AssemblyCategory" Name="ImGuiViewportPtr" />
                         <Choice Kind="OperationCallFlag" Name="WorkSize" />
@@ -1565,7 +1565,7 @@
                       <Pin Id="BQeT18hAaOnP2aeqGk4el8" Name="Work Size" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="647,483,123,19" Id="JZyR5HSN6TrQUYUKgGNkDb">
-                      <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                      <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastDependency="VL.ImGUI.Nodes">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="ProcessNode" Name="SetNextWindowPosition" />
                       </p:NodeReference>
@@ -1575,11 +1575,11 @@
                       <Pin Id="Ex6r4mXdJYJN3ajK4VCUvM" Name="Context" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="706,358,77,26" Id="MrVAZQHeXZgPlAW0T2FIkR">
-                      <p:NodeReference LastCategoryFullName="VL.ImGui.ImGuiConversion" LastSymbolSource="VL.ImGui.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <p:NodeReference LastCategoryFullName="VL.ImGui.ImGuiConversion" LastDependency="VL.ImGui.dll" OverloadStrategy="AllPinsThatAreNotCommon">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="ToVLHecto" />
                         <PinReference Kind="InputPin" Name="Input">
-                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System.Numerics" LastSymbolSource="System.Numerics.Vectors.dll">
+                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System.Numerics" LastDependency="System.Numerics.Vectors.dll">
                             <Choice Kind="TypeFlag" Name="Vector2" />
                           </p:DataTypeReference>
                         </PinReference>
@@ -1588,11 +1588,11 @@
                       <Pin Id="ClzC0BPcSxyLcEXj4iM3cY" Name="Result" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="834,359,77,26" Id="BmGlr2AuLUtQYsK47ke0YH">
-                      <p:NodeReference LastCategoryFullName="VL.ImGui.ImGuiConversion" LastSymbolSource="VL.ImGui.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <p:NodeReference LastCategoryFullName="VL.ImGui.ImGuiConversion" LastDependency="VL.ImGui.dll" OverloadStrategy="AllPinsThatAreNotCommon">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="ToVLHecto" />
                         <PinReference Kind="InputPin" Name="Input">
-                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System.Numerics" LastSymbolSource="System.Numerics.Vectors.dll">
+                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System.Numerics" LastDependency="System.Numerics.Vectors.dll">
                             <Choice Kind="TypeFlag" Name="Vector2" />
                           </p:DataTypeReference>
                         </PinReference>
@@ -1601,7 +1601,7 @@
                       <Pin Id="TdGDs06VIuSL3JFy7G91ky" Name="Result" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="784,483,105,19" Id="KuVNxJtNrGcPg864UXXEDo">
-                      <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGUI.Nodes">
+                      <p:NodeReference LastCategoryFullName="ImGui.Commands" LastDependency="VL.ImGUI.Nodes">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="ProcessAppFlag" Name="SetNextWindowSize" />
                       </p:NodeReference>
@@ -1651,13 +1651,13 @@
 
 -->
           <Node Name="SetID" Bounds="445,371" Id="DfxhNELRZObLojVG1zUJt2">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="GJWQcSSpy5XOiJvAdbjHtQ">
               <Canvas Id="S2BnzNa2lIxN29uRQX2zSo" CanvasType="Group">
                 <Node Bounds="782,325,56,19" AutoConnect="true" Id="AglFq2ugn8BQLOvncOUS8F">
-                  <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Commands" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="SetIDCore" />
                   </p:NodeReference>
@@ -1667,7 +1667,7 @@
                 </Node>
                 <ControlPoint Id="Eh6G0ljS5WNOmbuvA5JvUq" Bounds="784,239" />
                 <Node Bounds="782,277,113,19" Id="RnhAPxunzhzL8JYChwZfX6">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -1675,7 +1675,7 @@
                   <Pin Id="KoeCpRqIHj4NTctjMZ2N5n" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="707,377,81,19" Id="RIhcMd8xxo1Nb6CiUfCZcV">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -1704,7 +1704,7 @@
                 <Pin Id="RfLJYehejcQLRu8kvq3cD8" Name="Context" Kind="InputPin" Bounds="239,440" />
                 <Pin Id="SOj87DiQf03Op7xZLJB2MU" Name="ID" Kind="InputPin" />
                 <Pin Id="P0MYKDkZYeHM36XehS0RM4" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -1718,13 +1718,13 @@
 
 -->
           <Node Name="SetTextWrapPosition" Bounds="443,336" Id="GSmcuBApNMYMnoPsYElGOL">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="H5lUT4DsZqnNXJpPsNzqJ1">
               <Canvas Id="Bb0TsYSHGoSP3KSvFfkRRq" CanvasType="Group">
                 <Node Bounds="280,426,131,19" AutoConnect="true" Id="PMDkRYDx4veM5Eh6p23S67">
-                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                     <Choice Kind="ProcessNode" Name="SetTextWrapPosition" />
@@ -1735,7 +1735,7 @@
                 </Node>
                 <ControlPoint Id="H9mlcWIplHKPk9zj5wcOfB" Bounds="282,340" />
                 <Node Bounds="280,380,113,19" Id="KEqcCxUM7IlPCJgU7gwXci">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -1743,7 +1743,7 @@
                   <Pin Id="JQeu55j6EsQLutaYpqFlE6" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="242,492,81,19" Id="PZ9CaEmU2TaPZlPf99AJF4">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -1766,7 +1766,7 @@
               <Patch Id="QWTy8DGsDXQN6OdOL0XgKP" Name="Update" ManuallySortedPins="true">
                 <Pin Id="VqnanUUOR1ZNVFyOvSNA4W" Name="Context" Kind="InputPin" />
                 <Pin Id="Lf53hITSkWGQNqh1AN349U" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -1786,13 +1786,13 @@
 
 -->
           <Node Name="SetItemWidth" Bounds="642,338" Id="RoWU9MBcYk5PDT3M2PUEjW">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="TcEpryAh1OcLvT5eK9I6El">
               <Canvas Id="B4CD8TcLnp2LcZFNGbe2D3" CanvasType="Group">
                 <Node Bounds="280,426,131,19" AutoConnect="true" Id="OstrIp4sy50MQBOCTgswmM">
-                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                     <Choice Kind="ProcessNode" Name="SetItemWidth" />
@@ -1803,7 +1803,7 @@
                 </Node>
                 <ControlPoint Id="J6XaeuLHLHqPZsFcgAvjSG" Bounds="345,346" />
                 <Node Bounds="343,386,113,19" Id="KXMln1WEfxVPjxbE6wwWWR">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -1811,7 +1811,7 @@
                   <Pin Id="HMbll8a6tCKQSOq96v1rZO" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="242,472,81,19" Id="IR3CHgdVhouPssRML7UnqZ">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -1834,7 +1834,7 @@
               <Patch Id="MsVQbWmGlCMQUMPB9v32is" Name="Update" ManuallySortedPins="true">
                 <Pin Id="Ho7OlkoKWxhMgSrDdbhdLk" Name="Context" Kind="InputPin" />
                 <Pin Id="Fk0FzvFGUzWOyQ2SsJVarR" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -1854,13 +1854,13 @@
 
 -->
           <Node Name="IndentUnindent" Bounds="793,340" Id="HxIzXlJLJRpQZj1jsKYuTM">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="QCjyvtXMIEHOGgHNzXfrAI">
               <Canvas Id="Mi4NSgeaFdlQFCcaAyaMqJ" CanvasType="Group">
                 <Node Bounds="342,427,131,19" AutoConnect="true" Id="PA6neo2MDFFNWVoUmNF1tN">
-                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ReGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true" />
                     <Choice Kind="ProcessNode" Name="IndentUnindent" />
@@ -1871,7 +1871,7 @@
                 </Node>
                 <ControlPoint Id="DWEWZaxWTfdPLXnBKZXO7p" Bounds="344,340" />
                 <Node Bounds="342,380,113,19" Id="RscFK8LDs3uN0N9c3P9itJ">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                   </p:NodeReference>
@@ -1879,7 +1879,7 @@
                   <Pin Id="NN6HpEgyjpYNPPg1veQDLq" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="304,501,81,19" Id="PDDEcr2ksPPMGEDEdCMRRo">
-                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                  <p:NodeReference LastCategoryFullName="ImGui.Immediate" LastDependency="VL.ImGUI.Nodes">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="RetainedMode" />
                   </p:NodeReference>
@@ -1902,7 +1902,7 @@
               <Patch Id="SFycToYtwTPMOyXeB4KRbh" Name="Update" ManuallySortedPins="true">
                 <Pin Id="HI9B1ufZ3iHOPWrpMY1QwX" Name="Context" Kind="InputPin" />
                 <Pin Id="ECpz3vv5XSNMcLO0qa4wjm" Name="Region" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                  <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                     <Choice Kind="TypeFlag" Name="ICustomRegion" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -1932,7 +1932,7 @@
               <p:HideCategory p:Type="Boolean">false</p:HideCategory>
               <Patch Id="P8CoI2yGijYPbWfemVqAX7">
                 <Node Bounds="508,270,66,19" AutoConnect="true" Id="PukUtSVlTUBPKw2jCzSpYL">
-                  <p:NodeReference LastCategoryFullName="ImGuiNET.ImGui" LastSymbolSource="ImGui.NET.dll">
+                  <p:NodeReference LastCategoryFullName="ImGuiNET.ImGui" LastDependency="ImGui.NET.dll">
                     <Choice Kind="OperationNode" Name="GetVersion" />
                     <FullNameCategoryReference ID="ImGuiNET.ImGui" />
                   </p:NodeReference>
@@ -1962,7 +1962,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiBackendFlags" />
               </p:TypeAnnotation>
               <Patch Id="Sf2FI9FUot5P30i8yCJ6zq">
@@ -1980,7 +1980,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiButtonFlags" />
               </p:TypeAnnotation>
               <Patch Id="OTR9eEFE34qLEZibPhzFe8">
@@ -1998,7 +1998,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiCol" />
               </p:TypeAnnotation>
               <Patch Id="BmVej94YNNONb13K2ID1aw">
@@ -2016,7 +2016,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiColorEditFlags" />
               </p:TypeAnnotation>
               <Patch Id="O16KdsOViLaPmjEiNUazqX">
@@ -2034,7 +2034,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiComboFlags" />
               </p:TypeAnnotation>
               <Patch Id="EtdqIeM79AoLk2AVnXENo3">
@@ -2052,7 +2052,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiCond" />
               </p:TypeAnnotation>
               <Patch Id="M8UfoIwSnwfQNDK3VRYs0q">
@@ -2070,7 +2070,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiConfigFlags" />
               </p:TypeAnnotation>
               <Patch Id="FdmW6T0SWp1MmRdajlTzbp">
@@ -2088,7 +2088,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiDataType" />
               </p:TypeAnnotation>
               <Patch Id="FxnenBRMnN5MqpCcaKDoqS">
@@ -2106,7 +2106,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiDir" />
               </p:TypeAnnotation>
               <Patch Id="OyZzl0co9GjOA3f2HjCNna">
@@ -2124,7 +2124,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiDockNodeFlags" />
               </p:TypeAnnotation>
               <Patch Id="D4e0Iy45DkFPnZ9HF3N2Jj">
@@ -2142,7 +2142,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiDragDropFlags" />
               </p:TypeAnnotation>
               <Patch Id="It7GoQdvRftOmyxsT6XQ9y">
@@ -2160,7 +2160,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiFocusedFlags" />
               </p:TypeAnnotation>
               <Patch Id="MCyLcAHx6D3OHoilrRa01L">
@@ -2178,7 +2178,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiHoveredFlags" />
               </p:TypeAnnotation>
               <Patch Id="EfcgxWy5qodNBPDTk3Xvyr">
@@ -2196,7 +2196,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiInputTextFlags" />
               </p:TypeAnnotation>
               <Patch Id="BQaeJYZZPpWNyzYDSkdXIm">
@@ -2214,7 +2214,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiWindowFlags" />
               </p:TypeAnnotation>
               <Patch Id="EKgwzamRouzMtENu2K0Hjn">
@@ -2232,7 +2232,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiTableColumnFlags" />
               </p:TypeAnnotation>
               <Patch Id="ThuqemQdhgvOEehySZSFel">
@@ -2250,7 +2250,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiTabBarFlags" />
               </p:TypeAnnotation>
               <Patch Id="T65ufZMH1BUNUs9KsegBox">
@@ -2268,7 +2268,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiTabItemFlags" />
               </p:TypeAnnotation>
               <Patch Id="E1uECE1ZTauPEfePLG3IcF">
@@ -2286,7 +2286,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiTableFlags" />
               </p:TypeAnnotation>
               <Patch Id="RPbeNolkUnQP3Z3Wft3ket">
@@ -2304,7 +2304,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImGuiTableRowFlags" />
               </p:TypeAnnotation>
               <Patch Id="NJM9H0Z9od5Pyn0Z2YEzH5">
@@ -2349,7 +2349,7 @@
                 <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastSymbolSource="ImGui.NET.dll">
+              <p:TypeAnnotation LastCategoryFullName="ImGuiNET" LastDependency="ImGui.NET.dll">
                 <Choice Kind="TypeFlag" Name="ImDrawListFlags" />
               </p:TypeAnnotation>
               <Patch Id="Eioqn72oo2YNpKnJ9YAv89">
@@ -2369,7 +2369,7 @@
                 <Choice Kind="ForwardDefinition" Name="Forward" />
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Editors" LastSymbolSource="VL.ImGui.dll">
+              <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Editors" LastDependency="VL.ImGui.dll">
                 <Choice Kind="TypeFlag" Name="IObjectEditor" />
               </p:TypeAnnotation>
               <Patch Id="QtcUZU3X6xMLCW5jas242B">
@@ -2387,7 +2387,7 @@
                 <Choice Kind="ForwardDefinition" Name="Forward" />
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Editors" LastSymbolSource="VL.ImGui.dll">
+              <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Editors" LastDependency="VL.ImGui.dll">
                 <Choice Kind="TypeFlag" Name="IObjectEditorFactory" />
               </p:TypeAnnotation>
               <Patch Id="K902F0BVcoDLP9grgowcAr">
@@ -2398,19 +2398,19 @@
 
 -->
                   <Node Name="CreateDefault (Internal)" Bounds="262,166,229,156" Id="PkZcJcWByq5QPTDIfOh3l3">
-                    <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                       <Choice Kind="OperationDefinition" Name="Operation" />
                     </p:NodeReference>
                     <Patch Id="QzPtNWqyEhtNAMEW1RL80N">
                       <ControlPoint Id="MzGz46JZyOQNJsypuAUBOh" Bounds="345,305" />
                       <Link Id="PueRZYtyGRSNuCSATfjpXp" Ids="MzGz46JZyOQNJsypuAUBOh,L4kOSojQMH0LkaFCVRwcyd" IsHidden="true" />
                       <Pin Id="L4kOSojQMH0LkaFCVRwcyd" Name="Output" Kind="OutputPin">
-                        <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                        <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                           <Choice Kind="TypeFlag" Name="IObjectEditorFactory" />
                         </p:TypeAnnotation>
                       </Pin>
                       <Node Bounds="343,186,136,85" Id="UWe6u2N9qcuOtQ8d9AqJzV">
-                        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                           <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                           <CategoryReference Kind="Category" Name="Primitive" />
                           <Choice Kind="OperationCallFlag" Name="SingleInstance" />
@@ -2422,7 +2422,7 @@
                           <Pin Id="U4ZjPW7wVypPdGOzGuCXCV" Name="Result" Kind="OutputPin" />
                           <ControlPoint Id="HTKuW5UDCj3MEirMNk7dGs" Bounds="359,264" />
                           <Node Bounds="355,209,112,26" Id="K2CndmxZ7dPPklkxahFcvP">
-                            <p:NodeReference LastCategoryFullName="ImGui.Editors.DefaultObjectEditorFactory" LastSymbolSource="VL.ImGui.vl">
+                            <p:NodeReference LastCategoryFullName="ImGui.Editors.ObjectEditorFactory" LastDependency="VL.ImGui.vl">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <CategoryReference Kind="ClassType" Name="ObjectEditorFactory" />
                               <Choice Kind="OperationCallFlag" Name="Create" />
@@ -2448,7 +2448,7 @@
 
 -->
             <Node Name="CreateObjectEditor (Adaptive)" Bounds="637,223,159,73" Id="C5T28A2QAvKQS5Fy1oIALH">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="OperationDefinition" Name="Operation" />
               </p:NodeReference>
               <Patch Id="PHzR4Ho9AZJPKm9fRwr3DK" IsGeneric="true" ExplicitTypeParameters="T">
@@ -2459,7 +2459,7 @@
                 <ControlPoint Id="Qs9wqfngKpdPrcRQTyM3U9" Bounds="651,279" />
                 <Link Id="PyRuccZejCfPkicquNXy5s" Ids="Qs9wqfngKpdPrcRQTyM3U9,AbSN3YjnzRqPfiTsOHvrIc" IsHidden="true" />
                 <Pin Id="SHX7ZiD2WUQNQMJXvfAZzF" Name="Channel" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="Reactive" LastSymbolSource="VL.CoreLib.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="Channel" />
                     <p:TypeArguments>
                       <TypeReference>
@@ -2469,12 +2469,12 @@
                   </p:TypeAnnotation>
                 </Pin>
                 <Pin Id="QVNb7h2eRWiLgClKjpv0vk" Name="Context" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                  <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                     <Choice Kind="TypeFlag" Name="ObjectEditorContext" />
                   </p:TypeAnnotation>
                 </Pin>
                 <Pin Id="AbSN3YjnzRqPfiTsOHvrIc" Name="Output" Kind="OutputPin">
-                  <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                  <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                     <Choice Kind="TypeFlag" Name="IObjectEditor" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -2486,18 +2486,18 @@
 
 -->
             <Node Name="AdaptiveObjectEditorFactory (Internal)" Bounds="914,232" Id="Cr6ckSn1DG7PrZ87zqj6rA">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="ClassDefinition" Name="Class" />
               </p:NodeReference>
               <p:Interfaces>
-                <TypeReference LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                <TypeReference LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                   <Choice Kind="MutableInterfaceType" Name="IObjectEditorFactory" />
                 </TypeReference>
               </p:Interfaces>
               <Patch Id="EwMs8U5vEbOLJqNIG0p4A7" IsGeneric="true" ExplicitTypeParameters="T">
                 <Canvas Id="PEjKW3loYh0Po6B0Fxs6Sl" CanvasType="Group">
                   <Node Bounds="558,275,102,19" Id="JgX2NhkY4kWN7IlLCIw5lT">
-                    <p:NodeReference LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="CreateObjectEditor" />
                     </p:NodeReference>
@@ -2509,7 +2509,7 @@
                   <ControlPoint Id="V5UoU4BKpP6Ltfgv5ORwGY" Bounds="647,210" />
                   <ControlPoint Id="UseaKoKUyY2PWDBGLGU7Tx" Bounds="560,348" />
                   <Pad Id="K9jxUZ7UFPiLBZNLINkBaO" Bounds="560,257">
-                    <p:TypeAnnotation>
+                    <p:TypeAnnotation LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="TypeFlag" Name="Channel" />
                       <p:TypeArguments>
                         <TypeReference>
@@ -2519,7 +2519,7 @@
                     </p:TypeAnnotation>
                   </Pad>
                   <Node Bounds="558,224,58,19" Id="ODs7HIqgxTDOg88pNrLtpA">
-                    <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="HardCast" />
                     </p:NodeReference>
@@ -2553,7 +2553,7 @@
 
 -->
             <Node Name="CreateAdaptiveObjectEditorFactory (Internal)" Bounds="1264,229,268,350" Id="NYepZAIs7zlMYp0QgkHoQt">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="OperationDefinition" Name="Operation" />
               </p:NodeReference>
               <Patch Id="K01h14WOb2fMvk6BCd2SgO">
@@ -2562,7 +2562,7 @@
                 <ControlPoint Id="JiHPX55B0LkLwmkAQELNzr" Bounds="1363,562" />
                 <Link Id="J68sQIc8zKoOl4QMcSUzWX" Ids="JiHPX55B0LkLwmkAQELNzr,DfRkUEr25L0P6y40lF1N9k" IsHidden="true" />
                 <Node Bounds="1324,273,92,26" Id="IDa5qbAzWQNLcAQHB13VG5">
-                  <p:NodeReference LastCategoryFullName="Reactive.Channel (Ungeneric)" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="Reactive.Channel (Ungeneric)" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Channel (Ungeneric)" />
                     <Choice Kind="OperationCallFlag" Name="ClrTypeOfValues" />
@@ -2572,7 +2572,7 @@
                   <Pin Id="VhLsaewwv69Oe1WUmEpEzO" Name="Clr Type Of Values" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="1345,310,71,26" Id="DLpmOeMbUibLDHWuwWB4mB">
-                  <p:NodeReference LastCategoryFullName="System.Reflection.IVLFactory" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="System.Reflection.IVLFactory" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="GetTypeInfo" />
                   </p:NodeReference>
@@ -2584,7 +2584,7 @@
                 <Link Id="PeyJBmwgn0XP7N3raHnxct" Ids="VhLsaewwv69Oe1WUmEpEzO,DUKJ1ZTCNN1Pm1RebbKGoW" />
                 <Link Id="EitJ6Fe17PdNRQ1YPr3Qvp" Ids="Nx1yIda6qFzMn67YfqwphH,RYm0DL27OAjLoKUrgdoTEq" />
                 <Node Bounds="1276,357,90,26" Id="ApCPlC0CxwyPswcTeyvHWA">
-                  <p:NodeReference LastCategoryFullName="System.Reflection.IVLFactory" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="System.Reflection.IVLFactory" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="MutableInterfaceType" Name="IVLFactory" />
                     <Choice Kind="OperationCallFlag" Name="GetTypeByName" />
@@ -2595,7 +2595,7 @@
                   <Pin Id="A5OIri1bi5BPbLZPAqEzfM" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="1295,398,71,26" Id="K2Sa5FJNkcpPeGEJLUgvmL">
-                  <p:NodeReference LastCategoryFullName="System.Reflection.IVLFactory" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="System.Reflection.IVLFactory" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="GetTypeInfo" />
                   </p:NodeReference>
@@ -2606,7 +2606,7 @@
                 </Node>
                 <Link Id="N5d7ok2ejNsPpgCNckRQ0t" Ids="A5OIri1bi5BPbLZPAqEzfM,K2ONlliwIOCO24OP8lB4lM" />
                 <Node Bounds="1361,439,125,26" Id="QWLn4kDxeyHOd7Uu1pa065">
-                  <p:NodeReference LastCategoryFullName="System.Reflection.IVLTypeInfo" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="System.Reflection.IVLTypeInfo" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="MakeGenericVLTypeInfo" />
                   </p:NodeReference>
@@ -2616,7 +2616,7 @@
                 </Node>
                 <Link Id="VwQSVnEGnNPOyWXFWUQ9Pq" Ids="Vx7n2oiIj5GNlFfq6p5WTW,Em7VnQlcxw4LcDOM7crsLi" />
                 <Node Bounds="1481,404,39,19" Id="FaDXn4uYXjKOH1A3VxjawS">
-                  <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Spread" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="Cons" />
@@ -2626,7 +2626,7 @@
                 </Node>
                 <Link Id="Ap4OC4JRz9uO2kwBXIfoML" Ids="G3g6oew4cmlM2IAYhWHuIi,OHii3Nh8vFNQayFBy60A0l" />
                 <Node Bounds="1361,484,83,26" Id="MsgQE0y6QRUPzzwBqmoVXB">
-                  <p:NodeReference LastCategoryFullName="System.Reflection.IVLTypeInfo" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="System.Reflection.IVLTypeInfo" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="MutableInterfaceType" Name="IVLTypeInfo" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="CreateInstance" />
@@ -2637,7 +2637,7 @@
                 </Node>
                 <Link Id="EFXEX2jOJSKOmlp1TtP0iE" Ids="RgE4UTj8GmMPvyQeYk9ZQf,JkAKKe6Z209M1mmdISUgA2" />
                 <Node Bounds="1361,523,58,19" Id="EPiq3hyELGAPO3U5Er1m3K">
-                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="HardCast" />
                   </p:NodeReference>
@@ -2648,12 +2648,12 @@
                 <Link Id="D95mrQe9JSIMPnPmhU4Xds" Ids="BPgG3QxSVwSLiZbligzqOn,PApLmex8HXrLFOfCPAodyl" />
                 <Link Id="MlzBnPgqMlOPC5ivMDDY4L" Ids="UADJ4IZaZnqNfDO6ap4SDJ,JiHPX55B0LkLwmkAQELNzr" />
                 <Pin Id="JkaBBBX4jF5MKFoJERPpQq" Name="Input" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="Reactive" LastSymbolSource="VL.CoreLib.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="Channel (Ungeneric)" />
                   </p:TypeAnnotation>
                 </Pin>
                 <Pin Id="DfRkUEr25L0P6y40lF1N9k" Name="Output" Kind="OutputPin">
-                  <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                  <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                     <Choice Kind="TypeFlag" Name="IObjectEditorFactory" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -2670,7 +2670,7 @@
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:NodeReference>
               <p:Interfaces>
-                <TypeReference LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                <TypeReference LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                   <Choice Kind="MutableInterfaceType" Name="IObjectEditorFactory" />
                 </TypeReference>
               </p:Interfaces>
@@ -2680,14 +2680,14 @@
                   <ControlPoint Id="SJQTI9ru8VmMmw4BPLDoOO" Bounds="566,245" />
                   <ControlPoint Id="LUVpu2hqUtSOXc4Nd6lUj0" Bounds="569,573" />
                   <Node Bounds="666,296,66,26" Id="AMfPSNOkhfiOSX3p5sDVPJ">
-                    <p:NodeReference LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="CreateDefaultObjectEditorFactory" />
                     </p:NodeReference>
                     <Pin Id="GOcKvKjYaUVLyjq6i7RhtO" Name="Output" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="457,398,147,134" Id="OalkqPQw2JhO2NHuWp2za7">
-                    <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <CategoryReference Kind="Category" Name="Primitive" />
                       <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
@@ -2703,7 +2703,7 @@
                       </Patch>
                       <Patch Id="RVPBDvcaCgzQKWWdVFL6SL" Name="Dispose" ManuallySortedPins="true" />
                       <Node Bounds="470,460,65,19" Id="DQgrmAL8chROHqQThUCWJF">
-                        <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.vl">
+                        <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="IsAssigned" />
                         </p:NodeReference>
@@ -2712,7 +2712,7 @@
                         <Pin Id="BMQej1wT849N8CrV2d8mwY" Name="Not Assigned" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="469,423,102,26" Id="Blaog8dVAfXLKcGrSvGOCn">
-                        <p:NodeReference LastCategoryFullName="ImGui.Editors.IObjectEditorFactory" LastSymbolSource="VL.ImGui.vl">
+                        <p:NodeReference LastCategoryFullName="ImGui.Editors.IObjectEditorFactory" LastDependency="VL.ImGui.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="MutableInterfaceType" Name="IObjectEditorFactory" />
                           <Choice Kind="OperationCallFlag" Name="CreateObjectEditor" />
@@ -2727,7 +2727,7 @@
                     </Patch>
                   </Node>
                   <Node Bounds="468,341,203,19" Id="NrXAD9rynzWPbCA3ssng8k">
-                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="ClassType" Name="Spread" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="Cons" />
@@ -2737,7 +2737,7 @@
                     <Pin Id="SrkE2pyKJIGMVzHWwAY33E" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="468,298,174,19" Id="ROsqfsk8y9cNznY2albLj9">
-                    <p:NodeReference LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="CreateAdaptiveObjectEditorFactory" />
                     </p:NodeReference>
@@ -2783,7 +2783,7 @@
                 <Choice Kind="ForwardDefinition" Name="Forward" />
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:NodeReference>
-              <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Editors" LastSymbolSource="VL.ImGui.dll">
+              <p:TypeAnnotation LastCategoryFullName="VL.ImGui.Editors" LastDependency="VL.ImGui.dll">
                 <Choice Kind="TypeFlag" Name="ObjectEditorContext" />
               </p:TypeAnnotation>
               <Patch Id="Jal8dwYB3oALdGijANUynO">
@@ -2797,13 +2797,13 @@
 
 -->
             <Node Name="ObjectEditor" Bounds="402,372" Id="Sl6sCYFwyqFQcYSm1ujZFy">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="ContainerDefinition" Name="Process" />
               </p:NodeReference>
               <Patch Id="OO94aRwby1lNfvAY4QxpO2">
                 <Canvas Id="DOPMsjaEQo3PZbEDyHmLhK" CanvasType="Group">
                   <Node Bounds="473,172,219,152" Id="VxnRwGiQRjvPr7swsE7xOg">
-                    <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <CategoryReference Kind="Category" Name="Primitive" />
                       <Choice Kind="ProcessStatefulRegion" Name="Cache" />
@@ -2819,7 +2819,7 @@
                       <Patch Id="AuHSnUk754pMWw99kfkuJo" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="GkoUPsq4KxkLKDA9PvQbZC" Name="Then" ManuallySortedPins="true" />
                       <Node Bounds="485,258,102,26" Id="GocE8B7yKNAQTnzxShs5Xi">
-                        <p:NodeReference LastCategoryFullName="ImGui.Editors.IObjectEditorFactory" LastSymbolSource="VL.ImGui.vl">
+                        <p:NodeReference LastCategoryFullName="ImGui.Editors.IObjectEditorFactory" LastDependency="VL.ImGui.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="MutableInterfaceType" Name="IObjectEditorFactory" />
                           <Choice Kind="OperationCallFlag" Name="CreateObjectEditor" />
@@ -2831,7 +2831,7 @@
                         <Pin Id="MXwFXM3IBBTNH00ePT11Zh" Name="Result" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="582,224,89,26" Id="OnCcFYLv0pYMbxNAPpzl9U">
-                        <p:NodeReference LastCategoryFullName="ImGui.Editors.ObjectEditorContext" LastSymbolSource="VL.ImGui.vl">
+                        <p:NodeReference LastCategoryFullName="ImGui.Editors.ObjectEditorContext" LastDependency="VL.ImGui.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="ClassType" Name="ObjectEditorContext" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
@@ -2842,7 +2842,7 @@
                         <Pin Id="JxnEoendIidLEJEGRi3LNb" Name="Output" Kind="StateOutputPin" />
                       </Node>
                       <Node Bounds="640,195,40,19" Id="QwH1u9ucLgBLSzsCrfd7u1">
-                        <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.vl">
+                        <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="NULL" />
                         </p:NodeReference>
@@ -2853,7 +2853,7 @@
                   <ControlPoint Id="KpiXYsld3tdQLP5Oja99Ac" Bounds="629,120" />
                   <ControlPoint Id="VYizyLOfgZ5N4YSvCeLL7E" Bounds="457,121" />
                   <Node Bounds="554,365,65,19" Id="H9yC0ojAhz0QXLMinSa0Jf">
-                    <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="IsAssigned" />
                     </p:NodeReference>
@@ -2862,7 +2862,7 @@
                     <Pin Id="Et8EUVWjh2ALnSEYDTSn1K" Name="Not Assigned" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="566,442,99,92" Id="Bp8435p42MYQX7pEGfJmDc">
-                    <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <CategoryReference Kind="Category" Name="Primitive" />
                       <Choice Kind="ApplicationStatefulRegion" Name="If" />
@@ -2872,7 +2872,7 @@
                       <Patch Id="HCKcTcuzuUpL4dqymWxfLi" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="Gc9y1ZurXNcMehmCGA16fz" Name="Then" ManuallySortedPins="true" />
                       <Node Bounds="566,482,63,26" Id="FgYPqEIa4JDMXv72uPnT7Q">
-                        <p:NodeReference LastCategoryFullName="ImGui.Editors.IObjectEditor" LastSymbolSource="VL.ImGui.vl">
+                        <p:NodeReference LastCategoryFullName="ImGui.Editors.IObjectEditor" LastDependency="VL.ImGui.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="MutableInterfaceType" Name="IObjectEditor" />
                           <Choice Kind="OperationCallFlag" Name="Draw" />
@@ -2911,7 +2911,7 @@
                   <Pin Id="K44wP9IP3BFOld8ZVpT89M" Name="Context" Kind="InputPin" Bounds="780,249" />
                   <Pin Id="Ocy5eGHjAbqQDPZ3Q2ZhHq" Name="Channel" Kind="InputPin" Bounds="494,97" />
                   <Pin Id="I7dpH7M8xDFOVcX6nmII2I" Name="Factory" Kind="InputPin" Bounds="404,103" Visibility="Optional">
-                    <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                    <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                       <Choice Kind="TypeFlag" Name="IObjectEditorFactory" />
                     </p:TypeAnnotation>
                   </Pin>
@@ -2936,7 +2936,7 @@
 
 -->
             <Node Name="CreateObjectEditor (Generic)" Bounds="638,388,152,89" Id="KBwYI69KXPLP9LW5S3nBE4">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="OperationDefinition" Name="Operation" />
               </p:NodeReference>
               <Patch Id="CkAshJGOEZYQCHhZqA3oRz" IsGeneric="true" ExplicitTypeParameters="T">
@@ -2944,7 +2944,7 @@
                 <ControlPoint Id="VFDLvnUogKCPqQCW0VJ7LH" Bounds="731,406" />
                 <ControlPoint Id="RwdkIbumAMQOpibea6dpkw" Bounds="652,460" />
                 <Pin Id="E0YwC3LPlw5N5ozdvofKD4" Name="Channel" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="Reactive" LastSymbolSource="VL.CoreLib.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="Channel" />
                     <p:TypeArguments>
                       <TypeReference>
@@ -2954,12 +2954,12 @@
                   </p:TypeAnnotation>
                 </Pin>
                 <Pin Id="OqjE0cH6pjCQCq9HiUY4ew" Name="Context" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                  <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                     <Choice Kind="TypeFlag" Name="ObjectEditorContext" />
                   </p:TypeAnnotation>
                 </Pin>
                 <Pin Id="Ksye8cFpx1iPESCAuZMyBd" Name="Output" Kind="OutputPin">
-                  <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastSymbolSource="VL.ImGui.vl">
+                  <p:TypeAnnotation LastCategoryFullName="ImGui.Editors" LastDependency="VL.ImGui.vl">
                     <Choice Kind="TypeFlag" Name="IObjectEditor" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -2967,7 +2967,7 @@
                 <Link Id="FQah6NcfYHJOUR942Ff6OL" Ids="OqjE0cH6pjCQCq9HiUY4ew,VFDLvnUogKCPqQCW0VJ7LH" IsHidden="true" />
                 <Link Id="SIL05p5RgfaLEO2aw5fABB" Ids="RwdkIbumAMQOpibea6dpkw,Ksye8cFpx1iPESCAuZMyBd" IsHidden="true" />
                 <Node Bounds="650,424,40,19" Id="FtLk76XLe2qP0wrC9eiI8S">
-                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="NULL" />
                   </p:NodeReference>
@@ -2989,7 +2989,7 @@
               <p:HideCategory p:Type="Boolean">true</p:HideCategory>
               <Patch Id="R7Gq2r8DHOBNzLtfnnTvNY">
                 <Node Bounds="1280,661,86,19" AutoConnect="true" Id="OAzKOp1rKTxNpsDH4nznos">
-                  <p:NodeReference LastCategoryFullName="VL.ImGui.Editors.DefaultObjectEditorFactory" LastSymbolSource="VL.ImGui.dll">
+                  <p:NodeReference LastCategoryFullName="VL.ImGui.Editors.DefaultObjectEditorFactory" LastDependency="VL.ImGui.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="DefaultObjectEditorFactory" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationNode" Name="Create" />
@@ -3024,7 +3024,7 @@
             <Patch Id="Uu7ffDKvTUUNYjH2upZp2m">
               <Canvas Id="UBSpmVkOYC5QaGiKcUXl02" CanvasType="Group">
                 <Node Bounds="496,612,90,26" Id="RvKJdNcMwxnPNTdKjCSUQD">
-                  <p:NodeReference LastCategoryFullName="VL.ICustomRegionPatch" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="VL.ICustomRegionPatch" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Update" />
                     <CategoryReference Kind="MutableInterfaceType" Name="ICustomRegionPatch" NeedsToBeDirectParent="true" />
@@ -3042,7 +3042,7 @@
                 <ControlPoint Id="DHdWiu8OFZdLS9R6DrznH5" Bounds="214,457" />
                 <ControlPoint Id="IxpfKvyxLBgPkLtVqJBc2F" Bounds="472,363" />
                 <Node Bounds="223,325,54,19" Id="KS3rq3EgIDLQE2O9DJrI1p">
-                  <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="OnOpen" />
                   </p:NodeReference>
@@ -3050,7 +3050,7 @@
                   <Pin Id="OvBYTsQuS6qOPdFhwZD5Lq" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="327,366,125,182" Id="UXLwVVtV2bZLRMY1uQSVan">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.dll">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="If" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -3062,7 +3062,7 @@
                     <Patch Id="FUrlsXbgzApPNGDau96m3i" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="JyrWe2PLneMMi83seFM338" Name="Then" ManuallySortedPins="true" />
                     <Node Bounds="339,492,101,26" Id="CmYOUvnstmpPu2z8TlsSDX">
-                      <p:NodeReference LastCategoryFullName="VL.ICustomRegion" LastSymbolSource="VL.CoreLib.vl">
+                      <p:NodeReference LastCategoryFullName="VL.ICustomRegion" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="CreateRegionPatch" />
                         <CategoryReference Kind="MutableInterfaceType" Name="ICustomRegion" NeedsToBeDirectParent="true" />
@@ -3075,7 +3075,7 @@
                       <Pin Id="KojrVnJ0WEmO32SHEqqKzS" Name="Initial Outputs" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="353,393,71,19" Id="V2MNIEGEoKCPQ6CH3nJNGP">
-                      <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastSymbolSource="VL.CoreLib.vl">
+                      <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="TryDispose (Instance)" />
                       </p:NodeReference>
@@ -3089,7 +3089,7 @@
                 <ControlPoint Id="QThVRfs32OkMeFISdISmQY" Bounds="584,507" />
                 <Pad Id="D2em0MSCEPJNMbUDWuwHgO" SlotId="BtDDrLxpduKPDs8v9jN6ro" Bounds="277,628" />
                 <Node Bounds="275,657,71,19" Id="JRYmqcTj5mWM6jBOxdNXJJ">
-                  <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="TryDispose (Instance)" />
                   </p:NodeReference>
@@ -3097,7 +3097,7 @@
                   <Pin Id="So3dy7YWl2oPJOgxd621SF" Name="Success" Kind="OutputPin" />
                 </Node>
                 <Pad Id="S26c8lSJ86TNU2fErSlfEj" Bounds="696,372,325,306" ShowValueBox="true" isIOBox="true" Value="This is a general purpose way to instantiate/update and dispose of whatever the user patched inside a region. Think of this process as a simple lifetime manager of one instance of the users' patch inside the region.&#xD;&#xA;&#xD;&#xA;E.g. this process initializies all users' process nodes inside the region by calling CreateRegionPatch.&#xD;&#xA;&#xD;&#xA;If the user uses process nodes with white pins he might even end up with those being connected to the input border control points. &#xD;&#xA;&#xD;&#xA;We call CreateRegionPatch on Update once in the first frame - instead of on Create - so that we can feed the input border control point values. &#xD;&#xA;&#xD;&#xA;This way the user can actually make use of the border control points within &quot;Create&quot;.">
-                  <p:TypeAnnotation>
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
                   <p:ValueBoxSettings>
@@ -3144,7 +3144,7 @@
                 </Pin>
                 <Pin Id="SUP7GxpXVuUNSrmPelUF0l" Name="Reset" Kind="InputPin" Bounds="360,267" />
                 <Pin Id="AJPisHOcnKiOadO8rMdQO9" Name="Inputs" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="Spread" />
                     <p:TypeArguments>
                       <TypeReference>
@@ -3178,7 +3178,7 @@
 
 -->
           <Node Name="Text (Multiline)" Bounds="231,175" Id="SxrSAwUN38GLmGdNMhLo88">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="QtlNczxHmXtQPztsVCCIe3">
@@ -3189,7 +3189,7 @@
                 <ControlPoint Id="RhBOjp8MNZKLeBlUB2XljV" Bounds="441,454" />
                 <ControlPoint Id="MnF9wDM4CEkNjPDVNRTwS2" Bounds="717,243" />
                 <Node Bounds="439,298,210,120" Id="TKxxGjYiEE3OVkzfPgYfMV">
-                  <p:NodeReference LastCategoryFullName="ReGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateMode" />
                   </p:NodeReference>
@@ -3199,7 +3199,7 @@
                     <Patch Id="DUlUEAu22RcPjrgCyU4Tmx" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="S8rQ7qFM6IHLejN74HCugP" Name="Update" ManuallySortedPins="true" />
                     <Node Bounds="548,318,89,80" Id="J0ZRjujrwAwM2Vy4H2rmYE">
-                      <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGui.vl">
+                      <p:NodeReference LastCategoryFullName="ImGui.Commands" LastDependency="VL.ImGui.vl">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <Choice Kind="ProcessAppFlag" Name="SetTextWrapPosition" />
                       </p:NodeReference>
@@ -3207,7 +3207,7 @@
                         <Patch Id="CnVYzzjicqtPmNsaymYPaD" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="BHDBNogRo7iLESSS7we4Rs" Name="Update" ManuallySortedPins="true" />
                         <Node Bounds="560,350,65,19" Id="UmifyGVBceQMuuV9Blv3uP">
-                          <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGUI.Nodes">
+                          <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGUI.Nodes">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="ProcessAppFlag" Name="Text" />
                             <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
@@ -3258,13 +3258,13 @@
 
 -->
           <Node Name="Table" Bounds="492,221" Id="OVkeRluYpH1L3hy5KdwSer">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="FWXiyT1ELcGOpA6g0bTH5Z">
               <Canvas Id="ESEdBmuwqBELDpqgrPyw5c" CanvasType="Group">
                 <Node Bounds="249,296,282,458" Id="RFE6rvLSbP9Nheb55Ikypr">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateMode" />
                   </p:NodeReference>
@@ -3275,7 +3275,7 @@
                     <Patch Id="P0v1YoaEH6hNJpshe9of1x" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="TY28zIWTohaQQrBIozCe5g" Name="Update" ManuallySortedPins="true" />
                     <Node Bounds="290,322,229,412" Id="CtQYWnLJYYVQQo8JBJnLVc">
-                      <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
+                      <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGui.vl">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <Choice Kind="ProcessAppFlag" Name="Table" />
                         <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
@@ -3295,7 +3295,7 @@
                         <Patch Id="MQbq1Ot6TGCNRi7L7gNgAY" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="GWiMhmMbiihQDqMPh9ParB" Name="Update" ManuallySortedPins="true" />
                         <Node Bounds="354,371,49,29" Id="CVrjsdAgapTLIQ66laAPIr">
-                          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.vl">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                             <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                             <FullNameCategoryReference ID="Primitive" />
                           </p:NodeReference>
@@ -3305,7 +3305,7 @@
                             <Patch Id="BsBY7PwUqR9Pe6ekD79AuJ" Name="Update" ManuallySortedPins="true" />
                             <Patch Id="KXO74LuZ7dZNeHhUPIGSlN" Name="Dispose" ManuallySortedPins="true" />
                             <Node Bounds="354,374,49,26" Id="D4iCZjwI441N03U3DbyrDH">
-                              <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastSymbolSource="VL.ImGui.dll">
+                              <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastDependency="VL.ImGui.dll">
                                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                 <CategoryReference Kind="AssemblyCategory" Name="Context" />
                                 <Choice Kind="OperationCallFlag" Name="Update" />
@@ -3320,7 +3320,7 @@
                           <ControlPoint Id="MVc3VAS7pv4PMqf4lcD7cu" Bounds="362,352" Alignment="Top" />
                         </Node>
                         <Node Bounds="370,478,124,80" Id="CInq84JoTbdOoe1N6vfUSs">
-                          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.dll">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                             <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                             <Choice Kind="ApplicationStatefulRegion" Name="If" />
                             <CategoryReference Kind="Category" Name="Primitive" />
@@ -3332,7 +3332,7 @@
                             <Patch Id="SpWDRIGmX1pMtXtxKniZ8m" Name="Create" ManuallySortedPins="true" />
                             <Patch Id="QryxDb0NR7HMKRKC09g9jq" Name="Then" ManuallySortedPins="true" />
                             <Node Bounds="385,508,97,19" Id="Cfxifovc3OwPhvUKU3pZ6A">
-                              <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                              <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastDependency="VL.ImGUI.Nodes">
                                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                 <Choice Kind="ProcessAppFlag" Name="TableHeadersRow" />
                               </p:NodeReference>
@@ -3342,7 +3342,7 @@
                           </Patch>
                         </Node>
                         <Node Bounds="377,582,130,132" Id="M5swUkFWm4GPsKN0MvH9a8">
-                          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.vl">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                             <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                             <FullNameCategoryReference ID="Primitive" />
                           </p:NodeReference>
@@ -3355,7 +3355,7 @@
                             <Patch Id="HOhPJfRvwdGLtDQAdZ5skt" Name="Update" ManuallySortedPins="true" />
                             <Patch Id="U3nzLpXPJ12MZduh6YDHY8" Name="Dispose" ManuallySortedPins="true" />
                             <Node Bounds="395,656,49,26" Id="LuB9Z62nBr1NZ2bcSjinHB">
-                              <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastSymbolSource="VL.ImGui.dll">
+                              <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastDependency="VL.ImGui.dll">
                                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                 <CategoryReference Kind="AssemblyCategory" Name="Context" />
                                 <Choice Kind="OperationCallFlag" Name="Update" />
@@ -3365,7 +3365,7 @@
                               <Pin Id="Ba7EJfZwy58MG1H5JVEvkw" Name="Output" Kind="StateOutputPin" />
                             </Node>
                             <Node Bounds="397,614,98,19" Id="F4oX1CnvV7wLfOiTnpdPPm">
-                              <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                              <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastDependency="VL.ImGUI.Nodes">
                                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                 <Choice Kind="ProcessAppFlag" Name="TableNextColumn" />
                               </p:NodeReference>
@@ -3382,7 +3382,7 @@
                 <ControlPoint Id="U2mcZ0i8nXbNgxO0bAsYNE" Bounds="241,790" />
                 <ControlPoint Id="Nxm4KtaCDkYMkrZe5kE6aX" Bounds="304,186" />
                 <Node Bounds="291,202,44,26" Id="ATAkQE5smAALITOvch50a9">
-                  <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
+                  <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Count" />
                     <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -3458,13 +3458,13 @@
 
 -->
           <Node Name="Popup" Bounds="495,265" Id="TNA5dad9ITfLgTVJhWFFd0">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="Alid4Qq5WGiPq0MSgyfwqv">
               <Canvas Id="NtSZKx30og7NFEFRmtylk8" CanvasType="Group">
                 <Node Bounds="381,274,281,337" Id="Kd7xtbRCvAzOKB6mNUVkLK">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateMode" />
                   </p:NodeReference>
@@ -3476,7 +3476,7 @@
                     <Patch Id="R0pVnc1CJlqON2fHIAUsjV" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="GO3YCDd4GEPPX24xJI7vVf" Name="Update" ManuallySortedPins="true" />
                     <Node Bounds="426,332,161,158" Id="EqTsJVVOTGMPC3ZMHtnNjj">
-                      <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
+                      <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGui.vl">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <Choice Kind="ProcessAppFlag" Name="Popup" />
                         <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
@@ -3496,7 +3496,7 @@
                         <Patch Id="Jy1bZAVnpLlLsAnfkmlCQA" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="GbxU3iWpmhTNinyPpyMvUE" Name="Update" ManuallySortedPins="true" />
                         <Node Bounds="538,407,37,19" Id="OfTuW5V2ZktOWr73WjZZpz">
-                          <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="VL.CoreLib.vl">
+                          <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="NOT" />
                             <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -3505,7 +3505,7 @@
                           <Pin Id="VJSBSJ6BDX3Pxc4CL0d3qL" Name="Output" Kind="StateOutputPin" />
                         </Node>
                         <Node Bounds="438,451,104,19" Id="KJmFk5F9wb0N7zHQnDJIpb">
-                          <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGUI.Nodes">
+                          <p:NodeReference LastCategoryFullName="ImGui.Commands" LastDependency="VL.ImGUI.Nodes">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="ProcessAppFlag" Name="CloseCurrentPopup" />
                           </p:NodeReference>
@@ -3514,7 +3514,7 @@
                           <Pin Id="DDtcMELvelpOsanN0vY1eE" Name="Context" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="438,379,49,26" Id="MW1RKsHYCERNjvyB5g3pjH">
-                          <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastSymbolSource="VL.ImGui.dll">
+                          <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastDependency="VL.ImGui.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="Context" />
                             <Choice Kind="OperationCallFlag" Name="Update" />
@@ -3526,7 +3526,7 @@
                       </Patch>
                     </Node>
                     <Node Bounds="605,297,45,26" Id="If7KUtqVth2QIOjm5IBORl">
-                      <p:NodeReference LastCategoryFullName="Reactive.Channel" LastSymbolSource="VL.CoreLib.vl">
+                      <p:NodeReference LastCategoryFullName="Reactive.Channel" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="RecordType" Name="Channel" />
                         <Choice Kind="OperationCallFlag" Name="Value" />
@@ -3592,13 +3592,13 @@
 
 -->
           <Node Name="Modal" Bounds="495,304" Id="MmwiYjzOMTaP22gNZn3lhv">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="Pa5oXX8QBEoQXRtSk53zo9">
               <Canvas Id="HG0yv7VJZGCPquHHLStnt0" CanvasType="Group">
                 <Node Bounds="381,274,281,337" Id="U3RTuPJQWwfOCuMy9nm0Mn">
-                  <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                  <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="ImmediateMode" />
                   </p:NodeReference>
@@ -3610,7 +3610,7 @@
                     <Patch Id="PI5KLYCXXTnPNzD2IIafm5" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="UXHKZhhumgqMG46JMCXBHH" Name="Update" ManuallySortedPins="true" />
                     <Node Bounds="426,332,161,158" Id="MHLOsbImtbbNEhlYozTPpY">
-                      <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
+                      <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGui.vl">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <Choice Kind="ProcessAppFlag" Name="Popup (Modal)" />
                         <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
@@ -3631,7 +3631,7 @@
                         <Patch Id="JbFE1Cpg45CNF03OZZwN05" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="IeS7lWolYfNPkDtMz6WPJD" Name="Update" ManuallySortedPins="true" />
                         <Node Bounds="538,407,37,19" Id="SVt7TBWy5KONbo7Jm1vGce">
-                          <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="VL.CoreLib.vl">
+                          <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="NOT" />
                             <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -3640,7 +3640,7 @@
                           <Pin Id="U3dUkrQKge7LxHWrLGwuv3" Name="Output" Kind="StateOutputPin" />
                         </Node>
                         <Node Bounds="438,451,104,19" Id="Mm3YUSpwnolN3jpcJvE2UL">
-                          <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGUI.Nodes">
+                          <p:NodeReference LastCategoryFullName="ImGui.Commands" LastDependency="VL.ImGUI.Nodes">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="ProcessAppFlag" Name="CloseCurrentPopup" />
                           </p:NodeReference>
@@ -3649,7 +3649,7 @@
                           <Pin Id="Rmts4dcKp08NWUUMZET1R5" Name="Context" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="438,379,49,26" Id="I1LDgIMVpxwPS9Vp909IJ2">
-                          <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastSymbolSource="VL.ImGui.dll">
+                          <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastDependency="VL.ImGui.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="Context" />
                             <Choice Kind="OperationCallFlag" Name="Update" />
@@ -3661,7 +3661,7 @@
                       </Patch>
                     </Node>
                     <Node Bounds="605,297,45,26" Id="M4blKC4xX2kN08LXJS9YVU">
-                      <p:NodeReference LastCategoryFullName="Reactive.Channel" LastSymbolSource="VL.CoreLib.vl">
+                      <p:NodeReference LastCategoryFullName="Reactive.Channel" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="RecordType" Name="Channel" />
                         <Choice Kind="OperationCallFlag" Name="Value" />
@@ -3741,14 +3741,14 @@
 
 -->
         <Node Name="SaveIniSettingsToDisk" Bounds="741,271" Id="DeYZTb9HYiyLZiFpGh70hu">
-          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
           <Patch Id="Sb4TSgZRxzcN9OChAnHv8z">
             <Canvas Id="O2I3h0bctCPNZ82f6yb7UA" CanvasType="Group">
               <ControlPoint Id="J4zfXfhe41MLOS3gCEdzO5" Bounds="484,255" />
               <Node Bounds="327,325,241,148" Id="M46KOT52gXwP8l4KB4Ekah">
-                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.dll">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ApplicationStatefulRegion" Name="If" />
                   <CategoryReference Kind="Category" Name="Primitive" />
@@ -3760,7 +3760,7 @@
                   <Patch Id="Dt5B7OitdbKOSKhpDeFSkt" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="MtUrPOyuZj9LJ81f0EEv38" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="416,345,140,108" Id="TmOd1TngTVSMpPaannKZKH">
-                    <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="ImmediateMode" />
                     </p:NodeReference>
@@ -3771,7 +3771,7 @@
                       <Patch Id="VycRxXQWqrDOLHaCt1PbcI" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="RcUpAJonRmpQZ8RlvlgEWj" Name="Update" ManuallySortedPins="true" />
                       <Node Bounds="428,414,116,19" Id="MqUnAaP4fvBLMkyfLeeFM6">
-                        <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                        <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastDependency="VL.ImGUI.Nodes">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="Category" Name="ImGui" />
                           <Choice Kind="ProcessNode" Name="SaveIniSettingsToDisk" />
@@ -3782,7 +3782,7 @@
                         <Pin Id="CCz7ICfTuQfOWy0PgpSovz" Name="Context" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="483,368,55,19" Id="QriZUg3nACYQOaH3ZOw1FF">
-                        <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="VL.CoreLib.vl">
+                        <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="ToString" />
                         </p:NodeReference>
@@ -3813,7 +3813,7 @@
             <Patch Id="ESXOcFdBCAZOBhpNHnuHmw" Name="Create" />
             <Patch Id="CO4m9HlmMfQMQxobYKhh7n" Name="Update">
               <Pin Id="VC82AeU1lYLNMnoO7tM0UA" Name="Filename" Kind="InputPin" Bounds="684,232">
-                <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="VL.CoreLib.vl">
+                <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="Path" />
                 </p:TypeAnnotation>
               </Pin>
@@ -3828,14 +3828,14 @@
 
 -->
         <Node Name="LoadIniSettingsFromDisk" Bounds="741,307" Id="G6y3qDt1z8yOCR4k0UIar2">
-          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
           <Patch Id="Htf3t4RtBovOcJy9A7FNTp">
             <Canvas Id="JMENu2C3eVWMED3ZrnkLy5" CanvasType="Group">
               <ControlPoint Id="NRwGzQKuSxrNiK3MbPXPgN" Bounds="907,179" />
               <Node Bounds="741,249,301,150" Id="J5lJaZlykljN7q7ZwPjm6Z">
-                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.dll">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ApplicationStatefulRegion" Name="If" />
                   <CategoryReference Kind="Category" Name="Primitive" />
@@ -3847,7 +3847,7 @@
                   <Patch Id="L5VlJcT6zkkMzanUicn48a" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="HFHI74sIrR7OFVFYlDI3Ic" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="830,268,207,110" Id="HYt0UPEfsROMIgRKPhSxVc">
-                    <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="ImmediateMode" />
                     </p:NodeReference>
@@ -3858,7 +3858,7 @@
                       <Patch Id="Hf1pkNxSBkuQPFMwKi3lKF" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="V3n8iuFZVTKLl7aQ6GbrEl" Name="Update" ManuallySortedPins="true" />
                       <Node Bounds="842,339,116,19" Id="S1D4y4xN8uMN49tgydL182">
-                        <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                        <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastDependency="VL.ImGUI.Nodes">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="Category" Name="ImGui" />
                           <Choice Kind="ProcessNode" Name="LoadIniSettingsFromDisk" />
@@ -3869,7 +3869,7 @@
                         <Pin Id="CYIQQLEHit5OSYcw9mdtpG" Name="Context" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="904,297,55,19" Id="COzLA6sqrtALPNnjPC3mvT">
-                        <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="VL.CoreLib.vl">
+                        <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="ToString" />
                         </p:NodeReference>
@@ -3877,7 +3877,7 @@
                         <Pin Id="SSSOrNnBSrSMGNbFsgIgt5" Name="Result" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="966,293,59,26" Id="KY6tvvVk4DYOCHnFvy7urF">
-                        <p:NodeReference LastCategoryFullName="IO.Path" LastSymbolSource="VL.CoreLib.vl">
+                        <p:NodeReference LastCategoryFullName="IO.Path" LastDependency="VL.CoreLib.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="FileExists" />
                         </p:NodeReference>
@@ -3921,7 +3921,7 @@
 
 -->
         <Node Name="ImmediateMode" Bounds="308,597" Id="KiPajkHQuimMZKsjxSMcII">
-          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
           <Patch Id="AdzuXShqzFCNtss3E69dVZ">
@@ -3929,7 +3929,7 @@
               <ControlPoint Id="UGNPZadS1C4LevzP8evlQa" Bounds="314,178" />
               <ControlPoint Id="KfKTDr3zo5bLwNlx5ygEZG" Bounds="313,288" />
               <Node Bounds="311,222" Id="TeAGA43BbWePcQM4fqivPY">
-                <p:NodeReference LastCategoryFullName="ReGui" LastSymbolSource="VL.ImGui.vl">
+                <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="ImmediateModeNode" />
                 </p:NodeReference>
@@ -3937,7 +3937,7 @@
                 <Pin Id="KtuPtgtXU2LP5zNJeZ1SId" Name="Output" Kind="OutputPin" />
               </Node>
               <Pad Id="DxhFfjYESb0QMnNqNqAXEl" Bounds="358,175,475,19" ShowValueBox="true" isIOBox="true" Value="&lt;&lt; configured in a way that the user doesn't get asked whether node or region">
-                <p:TypeAnnotation>
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
                 <p:ValueBoxSettings>
@@ -3947,7 +3947,7 @@
               </Pad>
               <ControlPoint Id="VGjZXYxympBLjJEOtuq04Y" Bounds="447,291" />
               <Node Bounds="445,259,39,19" Id="UYFSgqN1dYaQU188D7dndC">
-                <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
+                <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="Cons" />
                   <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -3964,7 +3964,7 @@
             <Patch Id="BvlCOkF5aqvLRmIKoye0Py" Name="Create" />
             <Patch Id="P5XrUZkBAsDQFDNgvg0puy" Name="Update">
               <Pin Id="N7N1pasn9Z9P1qkWKKp6gg" Name="Region" Kind="InputPin">
-                <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                   <Choice Kind="TypeFlag" Name="ICustomRegion" />
                 </p:TypeAnnotation>
               </Pin>
@@ -3985,14 +3985,14 @@
 
 -->
         <Node Name="ImmediateModeNode (Internal)" Bounds="306,648" Id="IXL98AdTYduOHjNbPMNFtU">
-          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
           <Patch Id="OsoJCUgtwWZNIaeWGa4CkX">
             <Canvas Id="JGODXQhPLVoPopSoXswdEb" CanvasType="Group">
               <ControlPoint Id="MtjFbZEPWMeMWNAXepcl56" Bounds="387,232" />
               <Node Bounds="584,404,120,19" Id="MJR8YX8HCS9OEP4uk7gsnD">
-                <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGUI.Nodes">
+                <p:NodeReference LastCategoryFullName="ImGui" LastDependency="VL.ImGUI.Nodes">
                   <Choice Kind="ProcessNode" Name="ImmediateModeWidget" />
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 </p:NodeReference>
@@ -4001,7 +4001,7 @@
                 <Pin Id="TSWiSeiJzQKPCG9TmhqwOz" Name="Output" Kind="OutputPin" />
               </Node>
               <Node Bounds="605,161,148,201" Id="GruAKyORxclLF4pTuyiyOz">
-                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.vl">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                   <Choice Kind="ApplicationRegion" Name="Delegate" />
                   <FullNameCategoryReference ID="Primitive" />
                 </p:NodeReference>
@@ -4010,7 +4010,7 @@
                   <Pin Id="R7jsLgUcmS3NjLZsoGh6dt" Name="Obj" Kind="InputPin" />
                   <ControlPoint Id="EKwRXqmn2RkNLkfH4N01HR" Bounds="686,179" />
                   <Node Bounds="684,243,39,19" Id="Ikg9NCOopzqLwMQQokAsFV">
-                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="Cons" />
                       <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -4019,7 +4019,7 @@
                     <Pin Id="NIbljpd03ErM637YRd9UGB" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="684,198,57,26" Id="Kj5J1VCHy3kNmg2oM1lExf">
-                    <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="AsObject" />
                     </p:NodeReference>
@@ -4027,7 +4027,7 @@
                     <Pin Id="JY2bauvmNMxMk7K87wFTGL" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="617,316,92,26" Id="H6aJyy5EjbFL1eHTH9THNE">
-                    <p:NodeReference LastCategoryFullName="VL.ICustomRegion" LastSymbolSource="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="VL.ICustomRegion" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="SetOutputValues" />
                       <CategoryReference Kind="MutableInterfaceType" Name="ICustomRegion" NeedsToBeDirectParent="true" />
@@ -4037,7 +4037,7 @@
                     <Pin Id="BFs8Bpx7TjlP1VkUaJpAqK" Name="Output" Kind="StateOutputPin" />
                   </Node>
                   <Node Bounds="621,275,88,26" Id="A7j60W6uBLlNKiP8XmP7Ye">
-                    <p:NodeReference LastCategoryFullName="ImGui.CustomRegionPatch" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ImGui.CustomRegionPatch" LastDependency="VL.ImGui.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="Update" />
                       <CategoryReference Kind="ClassType" Name="CustomRegionPatch" NeedsToBeDirectParent="true" />
@@ -4054,7 +4054,7 @@
               </Node>
               <ControlPoint Id="FwWzb6mZgJJQb6p0je0BGE" Bounds="586,457" />
               <Node Bounds="315,426,92,26" Id="DDy3NbEOmSnMqYze01VqM4">
-                <p:NodeReference LastCategoryFullName="VL.ICustomRegion" LastSymbolSource="VL.CoreLib.vl">
+                <p:NodeReference LastCategoryFullName="VL.ICustomRegion" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="SetOutputValues" />
                   <CategoryReference Kind="MutableInterfaceType" Name="ICustomRegion" NeedsToBeDirectParent="true" />
@@ -4065,7 +4065,7 @@
                 <Pin Id="VVN2zNJzhXZQMZKw1EHKGO" Name="Apply" Kind="InputPin" />
               </Node>
               <Node Bounds="401,372,91,19" Id="C5y6ShrHXY8O3kWHRhZrTu">
-                <p:NodeReference LastCategoryFullName="VL" LastSymbolSource="VL.CoreLib.vl">
+                <p:NodeReference LastCategoryFullName="VL" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <FullNameCategoryReference ID="VL" />
                   <Choice Kind="ProcessAppFlag" Name="InitializeOutputs" />
@@ -4076,7 +4076,7 @@
                 <Pin Id="BlQONYzB5xhO6BlLcHjz9p" Name="Output" Kind="OutputPin" />
               </Node>
               <Node Bounds="489,217,107,19" Id="IuAi1J4WG6vMqApnTPLLnG">
-                <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                <p:NodeReference LastCategoryFullName="ImGui" LastDependency="VL.ImGui.vl">
                   <Choice Kind="ProcessAppFlag" Name="CustomRegionPatch" />
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
@@ -4092,7 +4092,7 @@
             <Patch Id="UzI05CwVyuGPQYobWb5Wco" Name="Create" />
             <Patch Id="HYALuFDB7wtPviuIFxCtPN" Name="Update">
               <Pin Id="H4BHs6w4tZAM1nOiy2DvTn" Name="Region" Kind="InputPin">
-                <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastSymbolSource="VL.Core.dll">
+                <p:TypeAnnotation LastCategoryFullName="VL.Core.PublicAPI" LastDependency="VL.Core.dll">
                   <Choice Kind="TypeFlag" Name="ICustomRegion" />
                 </p:TypeAnnotation>
                 <p:NodeOrRegionChoice p:Assembly="VL.Core" p:Type="VL.Core.CustomRegion.NodeOrRegionChoice">Node</p:NodeOrRegionChoice>
@@ -4122,13 +4122,13 @@
 
 -->
         <Node Name="SaveIniSettingsToMemory" Bounds="741,343" Id="E78V3QHfchbLvAGNxmtfqR">
-          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
           <Patch Id="IFpbjm0NRjrODj58R2GnWY">
             <Canvas Id="G7excVj161kLaQkT6KV431" CanvasType="Group">
               <Node Bounds="327,325,241,148" Id="VWI6AZ507XALXlPakzYnKL">
-                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.dll">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ApplicationStatefulRegion" Name="If" />
                   <CategoryReference Kind="Category" Name="Primitive" />
@@ -4142,7 +4142,7 @@
                   <Patch Id="CtjD0nPvT1JMD2hhD5NUUn" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="AZH66MKCvlKLpkBGevgLEv" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="416,345,140,108" Id="AsdDjN6yq5eMIs3xpmITOk">
-                    <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="ImmediateMode" />
                     </p:NodeReference>
@@ -4154,7 +4154,7 @@
                       <Patch Id="BgIYLgacX7aNjf9vtYvk9r" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="TFLi6jN50qhO3usTtdNgyI" Name="Update" ManuallySortedPins="true" />
                       <Node Bounds="428,414,116,19" Id="PvvFPAEehh3OnmdxCtQJRF">
-                        <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGUI.Nodes">
+                        <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastDependency="VL.ImGUI.Nodes">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="Category" Name="ImGui" />
                           <Choice Kind="ProcessNode" Name="SaveIniSettingsToMemory" />
@@ -4208,13 +4208,13 @@
 
 -->
         <Node Name="LoadIniSettingsFromMemory" Bounds="741,379" Id="Clscc7KwuwrOWcWkD8L5Zd">
-          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
           <Patch Id="K7xExdpEEdfMxV39tIrj7G">
             <Canvas Id="UxPViZe3Ah6MazDQVXIM2o" CanvasType="Group">
               <Node Bounds="741,249,301,150" Id="IW7tUOCgxbgNRAhrSMcmzl">
-                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.dll">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ApplicationStatefulRegion" Name="If" />
                   <CategoryReference Kind="Category" Name="Primitive" />
@@ -4226,7 +4226,7 @@
                   <Patch Id="IUIfwGYCOxAMBHctU540td" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="TRGyMi2b8ZBQIsHuTMUpg7" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="830,268,173,110" Id="MlP4VtRljFDPKGQhASPV5a">
-                    <p:NodeReference LastCategoryFullName="ImGui" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="ImmediateMode" />
                     </p:NodeReference>
@@ -4237,7 +4237,7 @@
                       <Patch Id="VBoigY02LvqPgUCiU5UHGT" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="F40qktbh5JuP75fgWcU1rk" Name="Update" ManuallySortedPins="true" />
                       <Node Bounds="842,339,116,19" Id="CZACR1HnglBNTDXTQgaHjJ">
-                        <p:NodeReference LastCategoryFullName="ImGui.Commands" LastSymbolSource="VL.ImGUI.Nodes">
+                        <p:NodeReference LastCategoryFullName="ImGui.Commands" LastDependency="VL.ImGUI.Nodes">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="Category" Name="Commands" />
                           <Choice Kind="ProcessNode" Name="LoadIniSettingsFromMemory" />
@@ -4284,13 +4284,13 @@
 
 -->
         <Node Name="Window" Bounds="296,386" Id="UKY2zfW7sApO6UuwaOrcH4">
-          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
           <Patch Id="E6Dc2BrSyAEPRtyaIbvBHX">
             <Canvas Id="U6JnLHXnfqHQZNBnrqZaik" CanvasType="Group">
               <Node Bounds="225,231,568,484" Id="HFsCOA9PrwrPalKXVfCWG8">
-                <p:NodeReference LastCategoryFullName="ReGui" LastSymbolSource="VL.ImGui.vl">
+                <p:NodeReference LastCategoryFullName="ReGui" LastDependency="VL.ImGui.vl">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="ImmediateMode" />
                 </p:NodeReference>
@@ -4302,7 +4302,7 @@
                   <Patch Id="SYj5Ssb0HjbLV9r9vAU5hp" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="VAzLzPx4mMdP2PbpBcJQiw" Name="Update" ParticipatingElements="BRyrMePbdpQOu8XJWk0oAP" ManuallySortedPins="true" />
                   <Node Bounds="277,381,318,298" Id="UqImMVCcKKXNR4vsIdLqGm">
-                    <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGui.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="Window" />
                       <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
@@ -4314,7 +4314,7 @@
                       <Patch Id="JOfqzzmUaHGPwd5AqTxoCE" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="TTudqwvVviFNF5HYN7ZpXG" Name="Update" ManuallySortedPins="true" />
                       <Node Bounds="432,633,49,26" Id="NDkbYDVPPAQNYVxbapYyxf">
-                        <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastSymbolSource="VL.ImGui.dll">
+                        <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastDependency="VL.ImGui.dll">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="AssemblyCategory" Name="Context" />
                           <Choice Kind="OperationCallFlag" Name="Update" />
@@ -4324,7 +4324,7 @@
                         <Pin Id="Ih1fadgbC8wOOfZnVahbrk" Name="Output" Kind="StateOutputPin" />
                       </Node>
                       <Node Bounds="376,420,167,182" Id="GDFvYtXmw3QQV36RWd0V38">
-                        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.dll">
+                        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                           <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                           <Choice Kind="ApplicationStatefulRegion" Name="If" />
                           <CategoryReference Kind="Category" Name="Primitive" />
@@ -4336,15 +4336,18 @@
                           <Patch Id="BxMWRn4Uf32LPzcXNetniD" Name="Create" ManuallySortedPins="true" />
                           <Patch Id="L23yy1bQLY2LvUiH0nA3n0" Name="Then" ManuallySortedPins="true" />
                           <Node Bounds="432,448,141,126" Id="RfFpvhxFn4XOI3Zx1120la">
-                            <p:NodeReference LastCategoryFullName="ImGui.Widgets.Immediate" LastSymbolSource="VL.ImGui.vl">
+                            <p:NodeReference LastCategoryFullName="ImGui.Widgets" LastDependency="VL.ImGui.vl">
                               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                              <CategoryReference Kind="Category" Name="Widgets" NeedsToBeDirectParent="true">
+                                <p:OuterCategoryReference Kind="Category" Name="ImGui" NeedsToBeDirectParent="true" />
+                              </CategoryReference>
                               <Choice Kind="ProcessAppFlag" Name="MenuBar" />
                             </p:NodeReference>
                             <Patch Id="NONlLnCtaDPLNUaTdlpis4" ManuallySortedPins="true">
                               <Patch Id="KNNIOkM7cD4QKkiMpzNQ9X" Name="Create" ManuallySortedPins="true" />
                               <Patch Id="LPDwp2W7bcTP1HZHMyrSHg" Name="Update" ManuallySortedPins="true" />
                               <Node Bounds="484,468,75,86" Id="LSJXkJNuQylOOoGBbNSyI5">
-                                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin" LastDependency="VL.CoreLib.dll">
+                                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                                   <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                                   <CategoryReference Kind="Category" Name="Primitive" />
@@ -4355,7 +4358,7 @@
                                   <Patch Id="C0f7g7FTNRdNYeX4THUkN9" Name="Update" ManuallySortedPins="true" />
                                   <Patch Id="O9Jt3G8k6A7PzEMelYQMI5" Name="Dispose" ManuallySortedPins="true" />
                                   <Node Bounds="496,497,49,26" Id="LrTA2IgQBA9MxJKYJPKuNB">
-                                    <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastSymbolSource="VL.ImGui.dll">
+                                    <p:NodeReference LastCategoryFullName="VL.ImGui.Context" LastDependency="VL.ImGui.dll">
                                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                       <CategoryReference Kind="AssemblyCategory" Name="Context" />
                                       <Choice Kind="OperationCallFlag" Name="Update" />
@@ -4388,7 +4391,7 @@
                     <Pin Id="RDLW2t67ZVpOaEiS6NTP4A" Name="Is Open" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="275,267,133,19" Id="REgYWXuWIqoOhwwTEGR2Ti">
-                    <p:NodeReference LastCategoryFullName="ImGui.Commands.Immediate" LastSymbolSource="VL.ImGui.vl">
+                    <p:NodeReference LastCategoryFullName="ImGui.Commands" LastDependency="VL.ImGui.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="SetNextWindowFullscreen" />
                     </p:NodeReference>
@@ -4397,7 +4400,7 @@
                     <Pin Id="OvCDDv9IcgkPdxuackUx9q" Name="Context" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="633,277,34,19" Id="SlzEJOnPuAVPoZMHMiExaW">
-                    <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="Any" />
                       <CategoryReference Kind="MutableInterfaceType" Name="Sequence" NeedsToBeDirectParent="true" />
@@ -4406,7 +4409,7 @@
                     <Pin Id="LxuKrGAYfGfOSYV8aSYGK4" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="592,338,45,19" Id="DWGFKBgBYdHOYq2OEnOfAo">
-                    <p:NodeReference LastCategoryFullName="System.BitsAndBytes" LastSymbolSource="VL.CoreLib.vl">
+                    <p:NodeReference LastCategoryFullName="System.BitsAndBytes" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="|" />
                     </p:NodeReference>
@@ -4416,7 +4419,7 @@
                     <Pin Id="Egv3pEObxmHMlGNiTosA3K" Name="Apply" Kind="InputPin" />
                   </Node>
                   <Pad Id="M5NmfzUep1ZLYePKR3I7Ff" Comment="" Bounds="614,320,148,15" ShowValueBox="true" isIOBox="true" Value="MenuBar">
-                    <p:TypeAnnotation LastCategoryFullName="ImGui.Flags" LastSymbolSource="VL.ImGui.vl">
+                    <p:TypeAnnotation LastCategoryFullName="ImGui.Flags" LastDependency="VL.ImGui.vl">
                       <Choice Kind="TypeFlag" Name="ImGuiWindowFlags" />
                     </p:TypeAnnotation>
                   </Pad>
