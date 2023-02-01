@@ -183,7 +183,7 @@ namespace VL.ImGui
             var anyFontLoaded = false;
             var fontsfolder = Environment.GetFolderPath(Environment.SpecialFolder.Fonts);
 
-            if (fonts.IsEmpty)
+            if (fonts.IsEmpty && FontConfig.Default != null)
                 fonts = Spread.Create(FontConfig.Default);
 
             // TODO: Platforms other than Windows!

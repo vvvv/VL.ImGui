@@ -1,5 +1,4 @@
-﻿using SkiaSharp;
-using System.Drawing;
+﻿using System.Drawing;
 using VL.Lib.Text;
 
 namespace VL.ImGui
@@ -13,12 +12,15 @@ namespace VL.ImGui
     /// <param name="Name">An optional name to use for this configuration.</param>
     public record FontConfig(FontList FamilyName, FontStyle FontStyle = FontStyle.Regular, float Size = 0.16f, string Name = "")
     {
-        public static readonly FontConfig Default;
+        public static readonly FontConfig? Default;
 
         static FontConfig()
         {
-            using var defaultTypeFace = SKTypeface.CreateDefault();
-            Default = new FontConfig(new FontList(defaultTypeFace.FamilyName));
+            if (OperatingSystem.IsWindows())
+            {
+                using var defaultTypeFace = SystemFonts.DefaultFont;
+                Default = new FontConfig(new FontList(defaultTypeFace.FontFamily.Name));
+            }
         }
 
         public override string ToString() => !string.IsNullOrEmpty(Name) ? Name : $"{FamilyName} {FontStyle} {Size}";
