@@ -18,7 +18,7 @@ namespace VL.ImGui
         {
             if (OperatingSystem.IsWindows())
             {
-                using var defaultTypeFace = SystemFonts.DefaultFont;
+                using var defaultTypeFace = SystemFonts.MessageBoxFont ?? SystemFonts.DefaultFont;
                 Default = new FontConfig(new FontList(defaultTypeFace.FontFamily.Name));
             }
         }
