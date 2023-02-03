@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using VL.Lib.Collections;
 using VL.Lib.Text;
 
 namespace VL.ImGui
@@ -10,7 +11,13 @@ namespace VL.ImGui
     /// <param name="FontStyle">The font style.</param>
     /// <param name="Size">The size of the font in device independent hecto pixel (1 = 100 DIP).</param>
     /// <param name="Name">An optional name to use for this configuration.</param>
-    public record FontConfig(FontList FamilyName, FontStyle FontStyle = FontStyle.Regular, float Size = 0.16f, string Name = "")
+    /// <param name="GlyphRange">The glyph range.</param>
+    public record FontConfig(
+        FontList FamilyName, 
+        FontStyle FontStyle = FontStyle.Regular, 
+        float Size = 0.16f, 
+        string Name = "", 
+        GlyphRange GlyphRange = default)
     {
         public static readonly FontConfig? Default;
 

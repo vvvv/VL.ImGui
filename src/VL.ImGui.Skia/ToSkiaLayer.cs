@@ -238,7 +238,7 @@ namespace VL.ImGui
 
                         fixed (byte* pBuffer = buffer)
                         {
-                            var f = atlas.AddFontFromMemoryTTF(new IntPtr(pBuffer), buffer.Length, cfg.SizePixels, &cfg);
+                            var f = atlas.AddFontFromMemoryTTF(new IntPtr(pBuffer), buffer.Length, cfg.SizePixels, &cfg, GetGlypthRange(atlas, font.GlyphRange));
                             if (f.NativePtr != null)
                             {
                                 anyFontLoaded = true;
@@ -289,6 +289,22 @@ namespace VL.ImGui
 
             [DllImport("gdi32.dll", EntryPoint = "SelectObject")]
             static extern IntPtr SelectObject([In] IntPtr hdc, [In] IntPtr hgdiobj);
+
+            static IntPtr GetGlypthRange(ImFontAtlasPtr atlas, GlyphRange glyphRange)
+            {
+                return glyphRange switch
+                {
+                    GlyphRange.ChineseFull => atlas.GetGlyphRangesChineseFull(),
+                    GlyphRange.ChineseSimplifiedCommon => atlas.GetGlyphRangesChineseSimplifiedCommon(),
+                    GlyphRange.Cyrillic => atlas.GetGlyphRangesCyrillic(),
+                    GlyphRange.Greek => atlas.GetGlyphRangesGreek(),
+                    GlyphRange.Japanese => atlas.GetGlyphRangesJapanese(),
+                    GlyphRange.Korean => atlas.GetGlyphRangesKorean(),
+                    GlyphRange.Thai => atlas.GetGlyphRangesThai(),
+                    GlyphRange.Vietnamese => atlas.GetGlyphRangesVietnamese(),
+                    _ => atlas.GetGlyphRangesDefault()
+                };
+            }
         }
 
         static unsafe void UpdateUIScaling(float scaling = 1f)
