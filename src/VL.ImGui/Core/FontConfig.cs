@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using VL.Lib.Collections;
+﻿using SixLabors.Fonts;
 using VL.Lib.Text;
 
 namespace VL.ImGui
@@ -25,7 +24,7 @@ namespace VL.ImGui
         {
             if (OperatingSystem.IsWindows())
             {
-                using var defaultTypeFace = SystemFonts.MessageBoxFont ?? SystemFonts.DefaultFont;
+                using var defaultTypeFace = System.Drawing.SystemFonts.MessageBoxFont ?? System.Drawing.SystemFonts.DefaultFont;
                 Default = new FontConfig(new FontList(defaultTypeFace.FontFamily.Name));
             }
         }

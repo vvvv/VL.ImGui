@@ -1,19 +1,15 @@
-﻿using System;
-using VL.Lib.IO.Notifications;
+﻿using VL.Lib.IO.Notifications;
 using VL.Skia;
 using ImGuiNET;
-using System.Numerics;
 using SkiaSharp;
 using System.Runtime.InteropServices;
-using Stride.Core.Mathematics;
 
 using MouseButtons = VL.Lib.IO.MouseButtons;
 using Keys = VL.Lib.IO.Keys;
 using System.Buffers;
 using VL.Lib.Collections;
-using System.Drawing;
-using System.Runtime.CompilerServices;
 using System.Text;
+using SixLabors.Fonts;
 
 namespace VL.ImGui
 {
@@ -186,72 +182,42 @@ namespace VL.ImGui
             if (fonts.IsEmpty && FontConfig.Default != null)
                 fonts = Spread.Create(FontConfig.Default);
 
-            // TODO: Platforms other than Windows!
-            using var g = Graphics.FromHwnd(IntPtr.Zero);
-            var hdc = g.GetHdc();
-            try
+            foreach (var font in fonts)
             {
-                foreach (var font in fonts)
+                if (font is null)
+                    continue;
+
+                var size = Math.Clamp(font.Size * 100 /* hecto pixel */ * scaling, 1, short.MaxValue);
+
+                var family = SystemFonts.Families.FirstOrDefault(f => f.Name == font.FamilyName.Value);
+                var systemFont = family.CreateFont((float)(size * 0.75f) /* PT */, font.FontStyle);
+                if (!systemFont.TryGetPath(out var path))
+                    continue;
+
+                ImFontConfig cfg = new ImFontConfig()
                 {
-                    if (font is null)
-                        continue;
+                    SizePixels = size,
+                    FontDataOwnedByAtlas = 0,
+                    EllipsisChar = unchecked((ushort)-1),
+                    OversampleH = 1,
+                    OversampleV = 1,
+                    PixelSnapH = 1,
+                    GlyphOffset = new Vector2(0, 0),
+                    GlyphMaxAdvanceX = float.MaxValue,
+                    RasterizerMultiply = 1.0f
+                };
 
-                    var size = Math.Clamp(font.Size * 100 /* hecto pixel */ * scaling, 1, short.MaxValue);
-                    using var systemFont = new Font(font.FamilyName.Value, size, font.FontStyle, GraphicsUnit.Pixel);
+                unsafe
+                {
+                    // Write name
+                    Span<byte> s = Encoding.Default.GetBytes(font.ToString());
+                    var dst = new Span<byte>(cfg.Name, 40);
+                    s.Slice(0, Math.Min(s.Length, dst.Length)).CopyTo(dst);
 
-                    var hfont = systemFont.ToHfont();
-                    SelectObject(hdc, hfont);
-                    var bufferSize = GetFontData(hdc, 0, 0, null, 0);
-                    if (bufferSize == 0)
-                        continue;
-
-                    var buffer = new byte[bufferSize];
-                    GetFontData(hdc, 0, 0, buffer, bufferSize);
-
-                    //var name = font.FamilyName.Value.Replace(" ", "");
-                    //var fontPath = Directory.GetFiles(fontsfolder, "*.ttf")
-                    //    .FirstOrDefault(p => string.Equals(Path.GetFileNameWithoutExtension(p), name));
-                    //if (fontPath is null)
-                    //    continue;
-
-                    ImFontConfig cfg = new ImFontConfig()
-                    {
-                        SizePixels = size,
-                        FontDataOwnedByAtlas = 0,
-                        EllipsisChar = unchecked((ushort)-1),
-                        OversampleH = 1,
-                        OversampleV = 1,
-                        PixelSnapH = 1,
-                        GlyphOffset = new Vector2(0, 0),
-                        GlyphMaxAdvanceX = float.MaxValue,
-                        RasterizerMultiply = 1.0f
-                    };
-
-                    unsafe
-                    {
-                        //atlas.AddFontFromFileTTF(fontPath, cfg.SizePixels, &cfg);
-
-                        // Write name
-                        Span<byte> s = Encoding.Default.GetBytes(font.ToString());
-                        var dst = new Span<byte>(cfg.Name, 40);
-                        s.Slice(0, Math.Min(s.Length, dst.Length)).CopyTo(dst);
-
-                        fixed (byte* pBuffer = buffer)
-                        {
-                            var f = atlas.AddFontFromMemoryTTF(new IntPtr(pBuffer), buffer.Length, cfg.SizePixels, &cfg, GetGlypthRange(atlas, font.GlyphRange));
-                            if (f.NativePtr != null)
-                            {
-                                anyFontLoaded = true;
-                                _context.Fonts[font.Name] = f;
-                            }
-                        }
-
-                    }
+                    var f = atlas.AddFontFromFileTTF(path, cfg.SizePixels, &cfg, GetGlypthRange(atlas, font.GlyphRange));
+                    anyFontLoaded = true;
+                    _context.Fonts[font.Name] = f;
                 }
-            }
-            finally
-            {
-                g.ReleaseHdc(hdc);
             }
 
             if (!anyFontLoaded)
