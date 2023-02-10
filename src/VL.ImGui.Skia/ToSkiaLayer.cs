@@ -521,6 +521,9 @@ namespace VL.ImGui
                 else if (notification is TouchNotification touchNotification)
                 {
                     // ImGui has no notion of touch. If a sink sends us touch events let's translate them to mouse events.
+                    var _ = touchNotification.PositionInWorldSpace.FromHectoToImGui();
+                    _io.AddMousePosEvent(_.X, _.Y);
+
                     switch (touchNotification.Kind)
                     {
                         case TouchNotificationKind.TouchDown:
@@ -528,10 +531,6 @@ namespace VL.ImGui
                             break;
                         case TouchNotificationKind.TouchUp:
                             _io.AddMouseButtonEvent(0, down: false);
-                            break;
-                        case TouchNotificationKind.TouchMove:
-                            var _ = touchNotification.PositionInWorldSpace.FromHectoToImGui();
-                            _io.AddMousePosEvent(_.X, _.Y);
                             break;
                         default:
                             break;
