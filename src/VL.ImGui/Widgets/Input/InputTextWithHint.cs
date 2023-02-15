@@ -8,7 +8,7 @@
 
         public string? Hint { get; set; }
 
-        public int MaxLength { get; set; } = 100;
+        public int MaxLength { get; set; } = int.MaxValue;
 
         public ImGuiNET.ImGuiInputTextFlags Flags { private get; set; }
 

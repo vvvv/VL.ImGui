@@ -10,7 +10,7 @@ namespace VL.ImGui.Widgets
 
         public string? Label { get; set; }
 
-        public int MaxLength { get; set; } = 100;
+        public int MaxLength { get; set; } = int.MaxValue;
 
         public Vector2 Size { get; set; }
 
