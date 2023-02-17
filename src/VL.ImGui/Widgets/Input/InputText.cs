@@ -20,7 +20,7 @@ namespace VL.ImGui.Widgets
         {
             var value = Update() ?? string.Empty;
             if (ImGuiNET.ImGui.InputText(Context.GetLabel(this, Label), ref value, (uint)MaxLength, Flags) && value != lastframeValue)
-                Channel.EnsureValue(value);
+                Value = value;
             lastframeValue = value;
         }
     }
